@@ -1,6 +1,5 @@
 package com.elarian.sdk
 
-
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

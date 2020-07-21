@@ -1,13 +1,21 @@
 plugins {
-    kotlin("jvm") version "1.3.72"
+    application
+    kotlin("jvm")
 }
 
 repositories {
-    jcenter() 
+    jcenter()
 }
 
 dependencies {
-    implementation(kotlin("stdlib")) 
-    // project(":lib")
+    implementation(kotlin("stdlib"))
+    implementation(project(":lib"))
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+}
+
+application {
+    mainClassName = "com.elarian.example.AppKt"
+}
