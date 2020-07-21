@@ -44,8 +44,7 @@ repositories {
 }
 
 dependencies{
-  // Get all services
-  compile 'com.elarian:sdk:0.0.0'
+  implementation 'com.elarian:sdk:0.0.0'
 }
 ```
 
