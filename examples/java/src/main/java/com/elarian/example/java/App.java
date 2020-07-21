@@ -1,18 +1,41 @@
 package com.elarian.example.java;
 
 import com.elarian.hera.Elarian;
+import com.elarian.hera.proto.GrpcWebServiceGrpc;
 import com.elarian.hera.proto.GrpcWebServiceGrpc.GrpcWebServiceBlockingStub;
-import com.elarian.hera.proto.Web;
+import com.elarian.hera.proto.Web.*;
+import io.grpc.stub.StreamObserver;
 
 public class App {
-    public static void main(String[] args) {
-        GrpcWebServiceBlockingStub instance = Elarian.newInstance("77bcc4b83574b3626e5b4780169c1dd7d62ed76e4515edc3e584c21e4e89ce91", true);
-        Web.SendMessageRequest req =  Web.SendMessageRequest
+    public static void main(String[] args) throws InterruptedException {
+        GrpcWebServiceBlockingStub instance = Elarian.newInstance("test_api_key", true);
+
+        GetCustomerStateRequest req =  GetCustomerStateRequest
                 .newBuilder()
-                .setProductId("product-j90HNs")
-                .setAppId("app-j90HNs")
+                .setCustomerId("fake_id")
+                .setAppId("test_app")
                 .build();
-        Web.SendMessageReply res = instance.sendMessage(req);
-        System.out.println(res.toString());
+        GetCustomerStateReply res = instance.getCustomerState(req);
+        System.err.println(res.toString());
+
+        GrpcWebServiceGrpc.GrpcWebServiceStub asyncInstance = Elarian.newAsyncInstance("test_api_key", true);
+        asyncInstance.getCustomerState(req, new StreamObserver<GetCustomerStateReply>() {
+            @Override
+            public void onNext(GetCustomerStateReply value) {
+                System.err.println(value.toString());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                t.printStackTrace();
+            }
+
+            @Override
+            public void onCompleted() {
+
+            }
+        });
+
+        Thread.sleep(5000);
     }
 }

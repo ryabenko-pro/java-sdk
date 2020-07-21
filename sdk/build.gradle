@@ -9,10 +9,10 @@ String grpcVersion = "1.30.2"
 String protobufVersion = "3.12.2"
 
 dependencies {
-    implementation "io.grpc:grpc-stub:$grpcVersion"
-    implementation "io.grpc:grpc-netty-shaded:$grpcVersion"
-    implementation "io.grpc:grpc-protobuf:$grpcVersion"
-    implementation "com.google.protobuf:protobuf-java:$protobufVersion"
+    compile "io.grpc:grpc-stub:$grpcVersion"
+    compile "io.grpc:grpc-netty-shaded:$grpcVersion"
+    compile "io.grpc:grpc-protobuf:$grpcVersion"
+    compile "com.google.protobuf:protobuf-java:$protobufVersion"
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
     testImplementation("junit:junit:4.12")
 }

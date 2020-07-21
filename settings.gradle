@@ -4,9 +4,9 @@ include("android")
 
 Set<String> examples = new HashSet<String>()
 examples << 'java'
-//examples << 'kotlin'
+examples << 'kotlin'
 //examples << 'scala'
-// examples << "android"
+//examples << "android"
 
 examples.each { example ->
     include example

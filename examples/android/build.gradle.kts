@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
+    kotlin("android") version "1.3.72"
 }
 
 repositories {

@@ -13,5 +13,5 @@ dependencies {
 }
 
 application {
-    mainClassName = "com.elarian.example.AppKt"
+    mainClassName = "com.elarian.example.kotlin.AppKt"
 }

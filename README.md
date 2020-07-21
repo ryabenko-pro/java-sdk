@@ -1,9 +1,9 @@
-# Elarian Kotlin/JVM SDK
+# Elarian Java SDK
 
 [ ![Download](https://api.bintray.com/packages/elarian/java/com.elarian/images/download.svg) ](https://bintray.com/elarian/java/com.elarian/_latestVersion)
 
 >
-> The SDK provides convenient access to the Elarian APIs from applications written in Kotlin, Java and Scala.
+> The SDK provides convenient access to the Elarian APIs from applications written in Kotlin, Java, and Scala.
 >
 
 ## Documentation
@@ -23,7 +23,7 @@ You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/sdk)
 ...
 <dependency>
   <groupId>com.elarian</groupId>
-  <artifactId>elarian-java</artifactId>
+  <artifactId>sdk</artifactId>
   <version>0.0.0</version>
 </dependency>
 ```
@@ -32,7 +32,7 @@ or sbt:
 ```
 resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
 // Get all services
-libraryDependencies += "com.elarian" % "elarina-java" % "0.0.0"
+libraryDependencies += "com.elarian" % "sdk" % "0.0.0"
 ```
 
 or Gradle:
@@ -44,8 +44,8 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:elarian-java:0.0.0'
-  // implementation 'com.elarian:elarian-android:0.0.0'
+  implementation 'com.elarian:sdk:0.0.0'
+  // implementation 'com.elarian:android:0.0.0'
 }
 ```
 
