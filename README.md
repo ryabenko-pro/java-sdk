@@ -54,14 +54,13 @@ dependencies{
 The SDK needs to be initialized with your API key, which you get from the [dashboard](https://account.elarian.com).
 
 ```kotlin
-// Initialize
-val elarian = Elarian(apiKey = "ABCD", sandbox = true)
-
-
-// Send message
-val req = SendMessageReequest()
-val res = elarian.SendMessage(req)
-
+val elarian = Elarian.newInstance("test_api_key", true)
+val req = GetCustomerStateRequest
+        .newBuilder()
+        .setAppId("test_app")
+        .setCustomerId("fake")
+        .build()
+val res = elarian.getCustomerState(req)
 ```
 
 See [example](example/) for more usage examples.
