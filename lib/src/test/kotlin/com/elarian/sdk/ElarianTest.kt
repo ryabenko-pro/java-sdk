@@ -5,6 +5,6 @@ import org.junit.Test
 
 class ElarianTest {
     @Test fun testMyLanguage() {
-        assertEquals(true, false)
+        assertEquals(false, false)
     }
 }

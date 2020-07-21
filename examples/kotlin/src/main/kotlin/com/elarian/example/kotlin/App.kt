@@ -1,4 +1,4 @@
-package com.elarian.example
+package com.elarian.example.kotlin
 
 fun main() {
     print("Hello Test")

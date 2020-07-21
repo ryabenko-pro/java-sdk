@@ -8,7 +8,7 @@ import com.google.protobuf.gradle.protoc
 group = "com.elarian"
 version = "0.0.0"
 
-val grpcVersion = "1.30.0"
+val grpcVersion = "1.30.2"
 val protobufVersion = "3.12.2"
 val grpcKotlinVersion = "0.1.4"
 
@@ -34,9 +34,9 @@ dependencies {
     }
 
     // Android
-    // runtimeOnly("io.grpc:grpc-okhttp:$grpcVersion")
+    runtimeOnly("io.grpc:grpc-okhttp:$grpcVersion")
 
-    implementation("com.google.protobuf:protobuf-java:3.11.4")
+    api("com.google.protobuf:protobuf-java:3.11.4")
     testImplementation("junit:junit:4.12")
 }
 

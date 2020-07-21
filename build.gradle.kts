@@ -5,6 +5,9 @@ buildscript {
         mavenCentral()
         gradlePluginPortal()
     }
+    dependencies {
+        classpath("com.android.tools.build:gradle:3.6.3")
+    }
 }
 
 plugins {
