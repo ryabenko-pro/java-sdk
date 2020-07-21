@@ -23,7 +23,7 @@ You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/sdk)
 ...
 <dependency>
   <groupId>com.elarian</groupId>
-  <artifactId>sdk</artifactId>
+  <artifactId>elarian-java</artifactId>
   <version>0.0.0</version>
 </dependency>
 ```
@@ -32,7 +32,7 @@ or sbt:
 ```
 resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
 // Get all services
-libraryDependencies += "com.elarian" % "sdk" % "0.0.0"
+libraryDependencies += "com.elarian" % "elarina-java" % "0.0.0"
 ```
 
 or Gradle:
@@ -44,7 +44,8 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:sdk:0.0.0'
+  implementation 'com.elarian:elarian-java:0.0.0'
+  // implementation 'com.elarian:elarian-android:0.0.0'
 }
 ```
 

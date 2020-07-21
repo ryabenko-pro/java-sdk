@@ -3,13 +3,18 @@ plugins {
     kotlin("android")
 }
 
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
+
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7")
 
-    // implementation(project(":lib"))
-    // runtimeOnly("io.grpc:grpc-okhttp:$grpcVersion")
+    implementation(project(":android"))
 }
 
 android {

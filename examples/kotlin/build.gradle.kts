@@ -1,6 +1,6 @@
 plugins {
     application
-    kotlin("jvm")
+    kotlin("jvm") version "1.3.72"
 }
 
 repositories {
@@ -9,11 +9,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation(project(":lib"))
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
+    implementation(project(":sdk"))
 }
 
 application {

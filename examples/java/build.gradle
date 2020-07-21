@@ -1,14 +1,11 @@
-plugins {
-    application
-    java
-}
+apply plugin: 'application'
 
 repositories {
     jcenter()
 }
 
 dependencies {
-    implementation(project(":lib"))
+    implementation(project(":sdk"))
 }
 
 java {

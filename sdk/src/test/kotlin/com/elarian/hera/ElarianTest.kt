@@ -1,4 +1,4 @@
-package com.elarian.sdk
+package com.elarian.hera
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
