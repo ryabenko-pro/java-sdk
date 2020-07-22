@@ -100,8 +100,8 @@ publishing {
 }
 
 bintray {
-    dryRun = true
-    publish = true
+    dryRun = false
+    publish = false
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.key")
     publications = ['SDK']
@@ -112,7 +112,7 @@ bintray {
         vcsUrl = properties.getProperty("bintray.vcsUrl")
         licenses = ['MIT']
         version {
-            name = project.version
+            name = project.name
             desc = 'Official Elarian SDK'
             released  = new Date()
             attributes = ['maturity': 'Official']

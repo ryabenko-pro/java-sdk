@@ -27,14 +27,14 @@ android {
 }
 
 dependencies {
-    implementation "io.grpc:grpc-stub:$grpcVersion"
-    implementation "io.grpc:grpc-okhttp:$grpcVersion"
+    api "io.grpc:grpc-stub:$grpcVersion"
+    api "io.grpc:grpc-okhttp:$grpcVersion"
 
-    //implementation "io.grpc:grpc-protobuf-lite:$grpcVersion"
-    //implementation "com.google.protobuf:protobuf-javalite:$protobufVersion"
+    //api "io.grpc:grpc-protobuf-lite:$grpcVersion"
+    //api "com.google.protobuf:protobuf-javalite:$protobufVersion"
 
-    implementation "io.grpc:grpc-protobuf:$grpcVersion"
-    implementation "com.google.protobuf:protobuf-java:$protobufVersion"
+    api "io.grpc:grpc-protobuf:$grpcVersion"
+    api "com.google.protobuf:protobuf-java:$protobufVersion"
 
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
@@ -96,7 +96,7 @@ task findConventions {
 
 bintray {
     dryRun = false
-    publish = true
+    publish = false
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.key")
 
@@ -107,7 +107,7 @@ bintray {
         userOrg = properties.getProperty("bintray.organization")
         vcsUrl = properties.getProperty("bintray.vcsUrl")
         licenses = ['MIT']
-        labels = ['android', 'africastalking', 'sms', 'voice', 'ussd', 'airtime', 'payment']
+        labels = ['android', 'elarian', 'sms', 'voice', 'ussd', 'airtime', 'payment']
     }
 }
 
@@ -116,9 +116,9 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'Africa\'s Talking Android SDK'
+                name 'Elarian Android SDK'
                 groupId = properties.getProperty("bintray.groupId")
-                artifactId = 'client'
+                artifactId = 'android'
                 url properties.getProperty("bintray.vcsUrl")
                 licenses {
                     license {
@@ -129,12 +129,7 @@ install {
                     developer {
                         id 'aksalj'
                         name 'Salama AB'
-                        email 'aksalj@aksalj.com'
-                    }
-                    developer {
-                        id 'jaykayitare'
-                        name 'Jay Kayitare'
-                        email 'jaykayitare@gmail.com'
+                        email 'sbalekage@elarian.com'
                     }
                 }
                 scm {
