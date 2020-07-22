@@ -1,0 +1,20 @@
+plugins {
+    id 'scala'
+}
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation(project(":sdk"))
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+}
+
+application {
+    mainClassName = "com.elarian.example.scala.App"
+}

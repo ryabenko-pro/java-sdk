@@ -1,9 +1,15 @@
-group = "com.elarian"
-version = "0.0.0"
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+group properties.getProperty("bintray.groupId")
+version properties.getProperty("bintray.version")
 
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'com.google.protobuf'
+apply plugin: "maven-publish"
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 String grpcVersion = "1.30.2"
 String protobufVersion = "3.12.2"
@@ -19,6 +25,7 @@ dependencies {
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 protobuf {
@@ -37,9 +44,78 @@ protobuf {
     }
 }
 
+
+
 idea {
     module {
         sourceDirs.add(file("${buildDir}/generated/source/proto/main/grpc"))
         sourceDirs.add(file("${buildDir}/generated/source/proto/main/java"))
+    }
+}
+
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Africa\'s Talking SDK',
+                'Implementation-Version': version
+    }
+}
+
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = configurations.compile
+    options {
+        links "http://docs.oracle.com/javase/7/docs/api/"
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allJava
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+shadowJar {
+    classifier = null // Avoid classifiers for now...
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+publishing {
+    publications {
+        SDK(MavenPublication) {
+            artifact shadowJar
+            groupId properties.getProperty("bintray.groupId")
+            artifactId project.name
+            version project.version
+        }
+    }
+}
+
+bintray {
+    dryRun = true
+    publish = true
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.key")
+    publications = ['SDK']
+    pkg {
+        repo = properties.getProperty("bintray.repo")
+        name = properties.getProperty("bintray.package")
+        userOrg = properties.getProperty("bintray.organization")
+        vcsUrl = properties.getProperty("bintray.vcsUrl")
+        licenses = ['MIT']
+        version {
+            name = project.version
+            desc = 'Official Elarian SDK'
+            released  = new Date()
+            attributes = ['maturity': 'Official']
+        }
     }
 }

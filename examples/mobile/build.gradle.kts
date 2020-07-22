@@ -11,7 +11,7 @@ repositories {
 dependencies {
     implementation("androidx.appcompat:appcompat:1.1.0")
 
-    implementation(project(":sdk-android"))
+    implementation(project(":android"))
 }
 
 android {

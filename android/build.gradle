@@ -1,0 +1,148 @@
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.google.protobuf'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+group properties.getProperty("bintray.groupId")
+version properties.getProperty("bintray.version")
+
+String grpcVersion = "1.30.2"
+String protobufVersion = "3.12.2"
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        consumerProguardFiles "proguard-rules.txt"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions { abortOnError false }
+}
+
+dependencies {
+    implementation "io.grpc:grpc-stub:$grpcVersion"
+    implementation "io.grpc:grpc-okhttp:$grpcVersion"
+
+    //implementation "io.grpc:grpc-protobuf-lite:$grpcVersion"
+    //implementation "com.google.protobuf:protobuf-javalite:$protobufVersion"
+
+    implementation "io.grpc:grpc-protobuf:$grpcVersion"
+    implementation "com.google.protobuf:protobuf-java:$protobufVersion"
+
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
+}
+
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:$protobufVersion"
+    }
+    plugins {
+        javalite {
+            artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
+        }
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion"
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.plugins {
+                // javalite {}
+                java {}
+                grpc {
+                    // Options added to --grpc_out
+                    // option 'lite'
+                }
+            }
+        }
+    }
+
+    generatedFilesBaseDir = "$projectDir/build/generated/proto"
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+task findConventions {
+    doLast {
+        println project.getConvention()
+    }
+}
+
+
+bintray {
+    dryRun = false
+    publish = true
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.key")
+
+    configurations = ['archives'] //When uploading configuration files
+    pkg {
+        repo = properties.getProperty("bintray.repo")
+        name = properties.getProperty("bintray.package")
+        userOrg = properties.getProperty("bintray.organization")
+        vcsUrl = properties.getProperty("bintray.vcsUrl")
+        licenses = ['MIT']
+        labels = ['android', 'africastalking', 'sms', 'voice', 'ussd', 'airtime', 'payment']
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                name 'Africa\'s Talking Android SDK'
+                groupId = properties.getProperty("bintray.groupId")
+                artifactId = 'client'
+                url properties.getProperty("bintray.vcsUrl")
+                licenses {
+                    license {
+                        name 'MIT'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'aksalj'
+                        name 'Salama AB'
+                        email 'aksalj@aksalj.com'
+                    }
+                    developer {
+                        id 'jaykayitare'
+                        name 'Jay Kayitare'
+                        email 'jaykayitare@gmail.com'
+                    }
+                }
+                scm {
+                    connection properties.getProperty("bintray.vcsUrl")
+                    developerConnection properties.getProperty("bintray.vcsUrl")
+                    url properties.getProperty("bintray.vcsUrl")
+                }
+            }
+        }
+    }
+}
