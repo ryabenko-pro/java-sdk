@@ -55,7 +55,7 @@ dependencies{
 The SDK needs to be initialized with your API key, which you get from the [dashboard](https://account.elarian.com).
 
 ```kotlin
-// Kotlin
+// Kotlin/Scala
 val elarian = Elarian.newInstance("test_api_key", true)
 val req = GetCustomerStateRequest
         .newBuilder()

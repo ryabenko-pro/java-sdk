@@ -11,8 +11,8 @@ object App {
                 .newBuilder()
                 .setCustomerId("fake_id")
                 .setAppId("test_app")
-                .build();
+                .build()
         val res = instance.getCustomerState(req)
-        System.err.println(res.toString)
+        System.out.println(res.toString)
     }
 }
