@@ -1,12 +1,12 @@
 rootProject.name = "elarian"
 include("sdk")
-include("android")
+include("sdk-android")
 
 Set<String> examples = new HashSet<String>()
 examples << 'java'
 examples << 'kotlin'
 //examples << 'scala'
-//examples << "android"
+examples << "android"
 
 examples.each { example ->
     include example

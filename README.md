@@ -75,7 +75,7 @@ GetCustomerStateRequest req = GetCustomerStateRequest
 GetCustomerStateReply res = elarian.getCustomerState(req);
 ```
 
-See [example](example/) for more usage examples.
+See [examples](examples/) for more usage examples.
 
 ## Methods
 

@@ -1,6 +1,5 @@
 plugins {
     id("com.android.application")
-    kotlin("android") version "1.3.72"
 }
 
 repositories {
@@ -10,11 +9,9 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
     implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7")
 
-    implementation(project(":android"))
+    implementation(project(":sdk-android"))
 }
 
 android {
@@ -28,8 +25,6 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
-
-    sourceSets["main"].java.srcDir("src/main/kotlin")
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_7
