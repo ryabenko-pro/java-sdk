@@ -91,7 +91,7 @@ publishing {
         SDK(MavenPublication) {
             artifact shadowJar
             groupId properties.getProperty("bintray.groupId")
-            artifactId "java"
+            artifactId project.name
             version project.version
         }
     }

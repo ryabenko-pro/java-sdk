@@ -5,7 +5,7 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":sdk"))
+    implementation(project(":jvm"))
 }
 
 java {

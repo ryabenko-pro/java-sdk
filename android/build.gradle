@@ -1,7 +1,8 @@
 
+apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
 apply plugin: 'com.google.protobuf'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.kezong.fat-aar'
 apply plugin: 'com.jfrog.bintray'
 
 Properties properties = new Properties()
@@ -26,15 +27,17 @@ android {
     lintOptions { abortOnError false }
 }
 
+configurations.embed.transitive = true
+
 dependencies {
-    api "io.grpc:grpc-stub:$grpcVersion"
-    api "io.grpc:grpc-okhttp:$grpcVersion"
+    embed "io.grpc:grpc-stub:$grpcVersion"
+    embed "io.grpc:grpc-okhttp:$grpcVersion"
 
-    //api "io.grpc:grpc-protobuf-lite:$grpcVersion"
-    //api "com.google.protobuf:protobuf-javalite:$protobufVersion"
+    //embed "io.grpc:grpc-protobuf-lite:$grpcVersion"
+    //embed "com.google.protobuf:protobuf-javalite:$protobufVersion"
 
-    api "io.grpc:grpc-protobuf:$grpcVersion"
-    api "com.google.protobuf:protobuf-java:$protobufVersion"
+    embed "io.grpc:grpc-protobuf:$grpcVersion"
+    embed "com.google.protobuf:protobuf-java:$protobufVersion"
 
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
@@ -45,9 +48,9 @@ protobuf {
         artifact = "com.google.protobuf:protoc:$protobufVersion"
     }
     plugins {
-        javalite {
+        /*javalite {
             artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
-        }
+        }*/
         grpc {
             artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion"
         }
@@ -93,14 +96,13 @@ task findConventions {
     }
 }
 
-
 bintray {
     dryRun = false
     publish = true
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.key")
 
-    configurations = ['archives'] //When uploading configuration files
+    publications = ['release']
     pkg {
         repo = properties.getProperty("bintray.repo")
         name = properties.getProperty("bintray.package")
@@ -111,32 +113,14 @@ bintray {
     }
 }
 
-install {
-    repositories.mavenInstaller {
-        pom {
-            project {
-                packaging 'aar'
-                name 'Elarian Android SDK'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
                 groupId = properties.getProperty("bintray.groupId")
-                artifactId = 'android'
-                url properties.getProperty("bintray.vcsUrl")
-                licenses {
-                    license {
-                        name 'MIT'
-                    }
-                }
-                developers {
-                    developer {
-                        id 'aksalj'
-                        name 'Salama AB'
-                        email 'sbalekage@elarian.com'
-                    }
-                }
-                scm {
-                    connection properties.getProperty("bintray.vcsUrl")
-                    developerConnection properties.getProperty("bintray.vcsUrl")
-                    url properties.getProperty("bintray.vcsUrl")
-                }
+                artifactId = project.name
+                version = project.version
             }
         }
     }

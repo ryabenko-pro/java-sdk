@@ -1,5 +1,5 @@
 rootProject.name = "elarian"
-include("sdk")
+include("jvm")
 include("android")
 
 Set<String> examples = new HashSet<String>()
