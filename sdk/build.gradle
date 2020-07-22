@@ -44,8 +44,6 @@ protobuf {
     }
 }
 
-
-
 idea {
     module {
         sourceDirs.add(file("${buildDir}/generated/source/proto/main/grpc"))
@@ -56,7 +54,7 @@ idea {
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Africa\'s Talking SDK',
+        attributes 'Implementation-Title': 'Elarian SDK',
                 'Implementation-Version': version
     }
 }
@@ -93,7 +91,7 @@ publishing {
         SDK(MavenPublication) {
             artifact shadowJar
             groupId properties.getProperty("bintray.groupId")
-            artifactId project.name
+            artifactId "java"
             version project.version
         }
     }
@@ -101,7 +99,7 @@ publishing {
 
 bintray {
     dryRun = false
-    publish = false
+    publish = true
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.key")
     publications = ['SDK']
@@ -112,7 +110,7 @@ bintray {
         vcsUrl = properties.getProperty("bintray.vcsUrl")
         licenses = ['MIT']
         version {
-            name = project.name
+            name = project.version
             desc = 'Official Elarian SDK'
             released  = new Date()
             attributes = ['maturity': 'Official']

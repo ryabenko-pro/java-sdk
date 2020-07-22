@@ -96,7 +96,7 @@ task findConventions {
 
 bintray {
     dryRun = false
-    publish = false
+    publish = true
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.key")
 
@@ -107,7 +107,7 @@ bintray {
         userOrg = properties.getProperty("bintray.organization")
         vcsUrl = properties.getProperty("bintray.vcsUrl")
         licenses = ['MIT']
-        labels = ['android', 'elarian', 'sms', 'voice', 'ussd', 'airtime', 'payment']
+        labels = ['android', 'elarian', 'sms', 'telegram', 'whatsapp', 'voice', 'ussd', 'airtime', 'payment']
     }
 }
 

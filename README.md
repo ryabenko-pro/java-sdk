@@ -11,7 +11,7 @@ Take a look at the [API docs here](https://docs.elarian.com).
 
 ## Install
 
-You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/sdk) through Maven (from `http://dl.bintray.com/elarian/java`):
+You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/java) through Maven (from `http://dl.bintray.com/elarian/java`):
 ```xml
 <repositories>
    <repository>
@@ -23,7 +23,7 @@ You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/sdk)
 ...
 <dependency>
   <groupId>com.elarian</groupId>
-  <artifactId>sdk</artifactId>
+  <artifactId>java</artifactId>
   <version>0.0.0</version>
 </dependency>
 ```
@@ -32,7 +32,7 @@ or sbt:
 ```
 resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
 // Get all services
-libraryDependencies += "com.elarian" % "sdk" % "0.0.0"
+libraryDependencies += "com.elarian" % "java" % "0.0.0"
 ```
 
 or Gradle:
@@ -44,7 +44,8 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:sdk:0.0.0'
+  implementation 'com.elarian:java:0.0.0'
+  // Or if you're building for android
   // implementation 'com.elarian:android:0.0.0'
 }
 ```
@@ -79,37 +80,37 @@ See [examples](examples/) for more usage examples.
 
 ## Methods
 
-- `AuthToken()`: Generate auth token
+- `AuthToken()`
 
-- `GetCustomerState()`:
-- `AdoptCustomerState()`: 
+- `GetCustomerState()`
+- `AdoptCustomerState()`
 
-- `AddCustomerReminder()`:
-- `AddCustomerReminderByTag()`:
-- `CancelCustomerReminder()`:
-- `CancelCustomerReminderByTag()`:
+- `AddCustomerReminder()`
+- `AddCustomerReminderByTag()`
+- `CancelCustomerReminder()`
+- `CancelCustomerReminderByTag()`
   
-- `UpdateCustomerTag()`:
-- `DeleteCustomerTag()`:
+- `UpdateCustomerTag()`
+- `DeleteCustomerTag()`
 
-- `UpdateCustomerSecondaryId()`:
-- `DeleteCustomerSecondaryId()`:
+- `UpdateCustomerSecondaryId()`
+- `DeleteCustomerSecondaryId()`
 
-- `UpdateCustomerMetadata()`:
-- `DeleteCustomerMetadata ()`:
+- `UpdateCustomerMetadata()`
+- `DeleteCustomerMetadata ()`
 
-- `SendMessage()`: Sending a message to your customer
-- `SendMessageByTag()`: Sending a message to a group of customers using tags
-- `ReplyToMessage()`: Replying to a message from your customer
-- `MessagingConsent()`: Opting a customer in or out of receiving messages from your app
+- `SendMessage()`
+- `SendMessageByTag()`
+- `ReplyToMessage()`
+- `MessagingConsent()`
 
-- `SendPayment()`:
-- `CheckoutPayment()`:
+- `SendPayment()`
+- `CheckoutPayment()`
 
-- `MakeVoiceCall()`:
+- `MakeVoiceCall()`
   
-- `StreamNotifications()`:
-- `SendWebhookResponse()`:
+- `StreamNotifications()`
+- `SendWebhookResponse()`
 
 
 ## Development
