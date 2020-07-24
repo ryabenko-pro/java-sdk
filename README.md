@@ -112,15 +112,6 @@ See [examples](examples/) for more usage examples.
 - `StreamNotifications()`
 - `SendWebhookResponse()`
 
-
-## Development
-
-Run all tests:
-
-```bash
-$ ./gradlew test
-```
-
 ## Issues
 
 If you find a bug, please file an issue on [our issue tracker on GitHub](https://github.com/ElarianLtd/kotlin-sdk/issues).
