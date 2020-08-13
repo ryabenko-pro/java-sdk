@@ -25,51 +25,26 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions { abortOnError false }
+    sourceSets {
+        main.java.srcDirs += 'src/main/grpc'
+    }
 }
 
 configurations.embed.transitive = true
 
 dependencies {
-    embed "io.grpc:grpc-stub:$grpcVersion"
-    embed "io.grpc:grpc-okhttp:$grpcVersion"
+    compile "io.grpc:grpc-stub:$grpcVersion"
+    compile "io.grpc:grpc-okhttp:$grpcVersion"
 
-    //embed "io.grpc:grpc-protobuf-lite:$grpcVersion"
-    //embed "com.google.protobuf:protobuf-javalite:$protobufVersion"
+    //compile "io.grpc:grpc-protobuf-lite:$grpcVersion"
+    //compile "com.google.protobuf:protobuf-javalite:$protobufVersion"
 
-    embed "io.grpc:grpc-protobuf:$grpcVersion"
-    embed "com.google.protobuf:protobuf-java:$protobufVersion"
+    compile "io.grpc:grpc-protobuf:$grpcVersion"
+    compile "com.google.protobuf:protobuf-java:$protobufVersion"
 
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
 
-
-protobuf {
-    protoc {
-        artifact = "com.google.protobuf:protoc:$protobufVersion"
-    }
-    plugins {
-        /*javalite {
-            artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
-        }*/
-        grpc {
-            artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion"
-        }
-    }
-    generateProtoTasks {
-        all().each { task ->
-            task.plugins {
-                // javalite {}
-                java {}
-                grpc {
-                    // Options added to --grpc_out
-                    // option 'lite'
-                }
-            }
-        }
-    }
-
-    generatedFilesBaseDir = "$projectDir/build/generated/proto"
-}
 
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
