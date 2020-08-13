@@ -24,7 +24,7 @@ You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/java
 <dependency>
   <groupId>com.elarian</groupId>
   <artifactId>jvm</artifactId>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
 </dependency>
 ```
 or sbt:
@@ -32,7 +32,7 @@ or sbt:
 ```
 resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
 // Get all services
-libraryDependencies += "com.elarian" % "jvm" % "0.0.0"
+libraryDependencies += "com.elarian" % "jvm" % "0.0.1"
 ```
 
 or Gradle:
@@ -44,9 +44,9 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:jvm:0.0.0'
+  implementation 'com.elarian:jvm:0.0.1'
   // Or if you're building for android
-  // implementation 'com.elarian:android:0.0.0'
+  // implementation 'com.elarian:android:0.0.1'
 }
 ```
 
