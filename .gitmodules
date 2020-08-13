@@ -1,3 +1,0 @@
-[submodule "android/src/main/proto"]
-	path = android/src/main/proto
-	url = git@github.com:ElarianLtd/elarian-proto.git
