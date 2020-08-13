@@ -43,34 +43,6 @@ dependencies {
 }
 
 
-protobuf {
-    protoc {
-        artifact = "com.google.protobuf:protoc:$protobufVersion"
-    }
-    plugins {
-        /*javalite {
-            artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
-        }*/
-        grpc {
-            artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion"
-        }
-    }
-    generateProtoTasks {
-        all().each { task ->
-            task.plugins {
-                // javalite {}
-                java {}
-                grpc {
-                    // Options added to --grpc_out
-                    // option 'lite'
-                }
-            }
-        }
-    }
-
-    generatedFilesBaseDir = "$projectDir/build/generated/proto"
-}
-
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
