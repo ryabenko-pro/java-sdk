@@ -11,8 +11,8 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 group properties.getProperty("bintray.groupId")
 version properties.getProperty("bintray.version")
 
-String grpcVersion = "1.30.2"
-String protobufVersion = "3.12.2"
+String grpcVersion = "1.31.0"
+String protobufVersion = "3.12.4"
 
 android {
     compileSdkVersion 29
@@ -36,8 +36,8 @@ dependencies {
     compile "io.grpc:grpc-stub:$grpcVersion"
     compile "io.grpc:grpc-okhttp:$grpcVersion"
 
-    //compile "io.grpc:grpc-protobuf-lite:$grpcVersion"
-    //compile "com.google.protobuf:protobuf-javalite:$protobufVersion"
+    // compile "io.grpc:grpc-protobuf-lite:$grpcVersion"
+    // compile "com.google.protobuf:protobuf-javalite:$protobufVersion"
 
     compile "io.grpc:grpc-protobuf:$grpcVersion"
     compile "com.google.protobuf:protobuf-java:$protobufVersion"
