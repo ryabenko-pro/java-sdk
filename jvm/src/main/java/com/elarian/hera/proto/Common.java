@@ -81,6 +81,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -88,6 +90,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static MessagingChannel forNumber(int value) {
       switch (value) {
         case 0: return MESSAGING_CHANNEL_UNSPECIFIED;
@@ -114,6 +120,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -183,6 +193,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -190,6 +202,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static PaymentChannel forNumber(int value) {
       switch (value) {
         case 0: return PAYMENT_CHANNEL_UNSPECIFIED;
@@ -212,6 +228,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -281,6 +301,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -288,6 +310,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static VoiceChannel forNumber(int value) {
       switch (value) {
         case 0: return VOICE_CHANNEL_UNSPECIFIED;
@@ -310,6 +336,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -395,6 +425,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -402,6 +434,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static CustomerNumberProvider forNumber(int value) {
       switch (value) {
         case 0: return CUSTOMER_NUMBER_PROVIDER_UNSPECIFIED;
@@ -426,6 +462,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -535,6 +575,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -542,6 +584,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static MediaType forNumber(int value) {
       switch (value) {
         case 0: return MEDIA_TYPE_UNSPECIFIED;
@@ -569,6 +615,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -646,6 +696,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -653,6 +705,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static MessagingConsentAction forNumber(int value) {
       switch (value) {
         case 0: return MESSAGING_CONSENT_ACTION_UNSPECIFIED;
@@ -676,6 +732,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -785,6 +845,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -792,6 +854,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static MessagingConsentStatus forNumber(int value) {
       switch (value) {
         case 0: return MESSAGING_CONSENT_STATUS_UNSPECIFIED;
@@ -819,6 +885,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -896,6 +966,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -903,6 +975,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static MessagingSessionStatus forNumber(int value) {
       switch (value) {
         case 0: return MESSAGING_SESSION_STATUSN_UNSPECIFIED;
@@ -926,6 +1002,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1003,6 +1083,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -1010,6 +1092,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static CustomerEventDirection forNumber(int value) {
       switch (value) {
         case 0: return CUSTOMER_EVENT_DIRECTION_UNSPECIFIED;
@@ -1033,6 +1119,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1110,6 +1200,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -1117,6 +1209,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static CustomerRequestOrigin forNumber(int value) {
       switch (value) {
         case 0: return CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED;
@@ -1140,6 +1236,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1353,6 +1453,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -1360,6 +1462,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static MessageDeliveryStatus forNumber(int value) {
       switch (value) {
         case 0: return MESSAGE_DELIVERY_STATUS_UNSEPCIFIED;
@@ -1400,6 +1506,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1573,6 +1683,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -1580,6 +1692,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static VoiceCallHangupCause forNumber(int value) {
       switch (value) {
         case 0: return VOICE_CALL_HANGUP_CAUSE_UNSPECIFIED;
@@ -1615,6 +1731,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1708,6 +1828,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -1715,6 +1837,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static VoiceCallTransferState forNumber(int value) {
       switch (value) {
         case 0: return VOICE_CALL_TRANSFER_STATE_UNSPECIFIED;
@@ -1740,6 +1866,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -1953,6 +2083,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -1960,6 +2092,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static VoiceCallStatus forNumber(int value) {
       switch (value) {
         case 0: return VOICE_CALL_STATUS_UNSPECIFIED;
@@ -2000,6 +2136,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2213,6 +2353,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -2220,6 +2362,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static PaymentStatus forNumber(int value) {
       switch (value) {
         case 0: return PAYMENT_STATUS_UNSPECIFIED;
@@ -2260,6 +2406,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2337,6 +2487,8 @@ public final class Common {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -2344,6 +2496,10 @@ public final class Common {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static TextToSpeechVoice forNumber(int value) {
       switch (value) {
         case 0: return TEXT_TO_SPEECH_VOICE_UNSPECIFIED;
@@ -2367,6 +2523,10 @@ public final class Common {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -2407,23 +2567,26 @@ public final class Common {
 
     /**
      * <code>string currency_code = 1;</code>
+     * @return The currencyCode.
      */
     java.lang.String getCurrencyCode();
     /**
      * <code>string currency_code = 1;</code>
+     * @return The bytes for currencyCode.
      */
     com.google.protobuf.ByteString
         getCurrencyCodeBytes();
 
     /**
      * <code>double amount = 2;</code>
+     * @return The amount.
      */
     double getAmount();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.Cash}
    */
-  public  static final class Cash extends
+  public static final class Cash extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.Cash)
       CashOrBuilder {
@@ -2434,7 +2597,13 @@ public final class Common {
     }
     private Cash() {
       currencyCode_ = "";
-      amount_ = 0D;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Cash();
     }
 
     @java.lang.Override
@@ -2447,7 +2616,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2458,13 +2629,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -2474,6 +2638,13 @@ public final class Common {
             case 17: {
 
               amount_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -2493,6 +2664,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_Cash_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_Cash_fieldAccessorTable
@@ -2504,7 +2676,9 @@ public final class Common {
     private volatile java.lang.Object currencyCode_;
     /**
      * <code>string currency_code = 1;</code>
+     * @return The currencyCode.
      */
+    @java.lang.Override
     public java.lang.String getCurrencyCode() {
       java.lang.Object ref = currencyCode_;
       if (ref instanceof java.lang.String) {
@@ -2519,7 +2693,9 @@ public final class Common {
     }
     /**
      * <code>string currency_code = 1;</code>
+     * @return The bytes for currencyCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCurrencyCodeBytes() {
       java.lang.Object ref = currencyCode_;
@@ -2538,12 +2714,15 @@ public final class Common {
     private double amount_;
     /**
      * <code>double amount = 2;</code>
+     * @return The amount.
      */
+    @java.lang.Override
     public double getAmount() {
       return amount_;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -2553,6 +2732,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCurrencyCodeBytes().isEmpty()) {
@@ -2564,6 +2744,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -2591,15 +2772,13 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.Cash other = (com.elarian.hera.proto.Common.Cash) obj;
 
-      boolean result = true;
-      result = result && getCurrencyCode()
-          .equals(other.getCurrencyCode());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getAmount())
-          == java.lang.Double.doubleToLongBits(
-              other.getAmount()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCurrencyCode()
+          .equals(other.getCurrencyCode())) return false;
+      if (java.lang.Double.doubleToLongBits(getAmount())
+          != java.lang.Double.doubleToLongBits(
+              other.getAmount())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2689,6 +2868,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -2696,6 +2876,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.Cash prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -2719,6 +2900,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_Cash_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_Cash_fieldAccessorTable
@@ -2741,6 +2923,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         currencyCode_ = "";
@@ -2750,15 +2933,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_Cash_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.Cash getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.Cash.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.Cash build() {
         com.elarian.hera.proto.Common.Cash result = buildPartial();
         if (!result.isInitialized()) {
@@ -2767,6 +2953,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.Cash buildPartial() {
         com.elarian.hera.proto.Common.Cash result = new com.elarian.hera.proto.Common.Cash(this);
         result.currencyCode_ = currencyCode_;
@@ -2775,32 +2962,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.Cash) {
           return mergeFrom((com.elarian.hera.proto.Common.Cash)other);
@@ -2824,10 +3018,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2849,6 +3045,7 @@ public final class Common {
       private java.lang.Object currencyCode_ = "";
       /**
        * <code>string currency_code = 1;</code>
+       * @return The currencyCode.
        */
       public java.lang.String getCurrencyCode() {
         java.lang.Object ref = currencyCode_;
@@ -2864,6 +3061,7 @@ public final class Common {
       }
       /**
        * <code>string currency_code = 1;</code>
+       * @return The bytes for currencyCode.
        */
       public com.google.protobuf.ByteString
           getCurrencyCodeBytes() {
@@ -2880,6 +3078,8 @@ public final class Common {
       }
       /**
        * <code>string currency_code = 1;</code>
+       * @param value The currencyCode to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrencyCode(
           java.lang.String value) {
@@ -2893,6 +3093,7 @@ public final class Common {
       }
       /**
        * <code>string currency_code = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCurrencyCode() {
         
@@ -2902,6 +3103,8 @@ public final class Common {
       }
       /**
        * <code>string currency_code = 1;</code>
+       * @param value The bytes for currencyCode to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrencyCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -2918,12 +3121,16 @@ public final class Common {
       private double amount_ ;
       /**
        * <code>double amount = 2;</code>
+       * @return The amount.
        */
+      @java.lang.Override
       public double getAmount() {
         return amount_;
       }
       /**
        * <code>double amount = 2;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
        */
       public Builder setAmount(double value) {
         
@@ -2933,6 +3140,7 @@ public final class Common {
       }
       /**
        * <code>double amount = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAmount() {
         
@@ -2940,11 +3148,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2966,11 +3176,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<Cash>
         PARSER = new com.google.protobuf.AbstractParser<Cash>() {
+      @java.lang.Override
       public Cash parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Cash(input, extensionRegistry);
+        return new Cash(input, extensionRegistry);
       }
     };
 
@@ -2983,6 +3194,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2995,19 +3207,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+     * @return The enum numeric value on the wire for provider.
      */
     int getProviderValue();
     /**
      * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+     * @return The provider.
      */
     com.elarian.hera.proto.Common.CustomerNumberProvider getProvider();
 
     /**
      * <code>string number = 2;</code>
+     * @return The number.
      */
     java.lang.String getNumber();
     /**
      * <code>string number = 2;</code>
+     * @return The bytes for number.
      */
     com.google.protobuf.ByteString
         getNumberBytes();
@@ -3015,7 +3231,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.CustomerNumber}
    */
-  public  static final class CustomerNumber extends
+  public static final class CustomerNumber extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerNumber)
       CustomerNumberOrBuilder {
@@ -3030,6 +3246,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomerNumber();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3039,7 +3262,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3050,13 +3275,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -3067,6 +3285,13 @@ public final class Common {
               java.lang.String s = input.readStringRequireUtf8();
 
               number_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -3086,6 +3311,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerNumber_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerNumber_fieldAccessorTable
@@ -3097,14 +3323,17 @@ public final class Common {
     private int provider_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+     * @return The enum numeric value on the wire for provider.
      */
-    public int getProviderValue() {
+    @java.lang.Override public int getProviderValue() {
       return provider_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+     * @return The provider.
      */
-    public com.elarian.hera.proto.Common.CustomerNumberProvider getProvider() {
+    @java.lang.Override public com.elarian.hera.proto.Common.CustomerNumberProvider getProvider() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.CustomerNumberProvider result = com.elarian.hera.proto.Common.CustomerNumberProvider.valueOf(provider_);
       return result == null ? com.elarian.hera.proto.Common.CustomerNumberProvider.UNRECOGNIZED : result;
     }
@@ -3113,7 +3342,9 @@ public final class Common {
     private volatile java.lang.Object number_;
     /**
      * <code>string number = 2;</code>
+     * @return The number.
      */
+    @java.lang.Override
     public java.lang.String getNumber() {
       java.lang.Object ref = number_;
       if (ref instanceof java.lang.String) {
@@ -3128,7 +3359,9 @@ public final class Common {
     }
     /**
      * <code>string number = 2;</code>
+     * @return The bytes for number.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNumberBytes() {
       java.lang.Object ref = number_;
@@ -3144,6 +3377,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3153,6 +3387,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (provider_ != com.elarian.hera.proto.Common.CustomerNumberProvider.CUSTOMER_NUMBER_PROVIDER_UNSPECIFIED.getNumber()) {
@@ -3164,6 +3399,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3191,12 +3427,11 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.CustomerNumber other = (com.elarian.hera.proto.Common.CustomerNumber) obj;
 
-      boolean result = true;
-      result = result && provider_ == other.provider_;
-      result = result && getNumber()
-          .equals(other.getNumber());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (provider_ != other.provider_) return false;
+      if (!getNumber()
+          .equals(other.getNumber())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3285,6 +3520,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3292,6 +3528,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.CustomerNumber prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3315,6 +3552,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerNumber_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerNumber_fieldAccessorTable
@@ -3337,6 +3575,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         provider_ = 0;
@@ -3346,15 +3585,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerNumber_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerNumber getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerNumber build() {
         com.elarian.hera.proto.Common.CustomerNumber result = buildPartial();
         if (!result.isInitialized()) {
@@ -3363,6 +3605,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerNumber buildPartial() {
         com.elarian.hera.proto.Common.CustomerNumber result = new com.elarian.hera.proto.Common.CustomerNumber(this);
         result.provider_ = provider_;
@@ -3371,32 +3614,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.CustomerNumber) {
           return mergeFrom((com.elarian.hera.proto.Common.CustomerNumber)other);
@@ -3420,10 +3670,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3445,27 +3697,36 @@ public final class Common {
       private int provider_ = 0;
       /**
        * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+       * @return The enum numeric value on the wire for provider.
        */
-      public int getProviderValue() {
+      @java.lang.Override public int getProviderValue() {
         return provider_;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+       * @param value The enum numeric value on the wire for provider to set.
+       * @return This builder for chaining.
        */
       public Builder setProviderValue(int value) {
+        
         provider_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+       * @return The provider.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerNumberProvider getProvider() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.CustomerNumberProvider result = com.elarian.hera.proto.Common.CustomerNumberProvider.valueOf(provider_);
         return result == null ? com.elarian.hera.proto.Common.CustomerNumberProvider.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+       * @param value The provider to set.
+       * @return This builder for chaining.
        */
       public Builder setProvider(com.elarian.hera.proto.Common.CustomerNumberProvider value) {
         if (value == null) {
@@ -3478,6 +3739,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumberProvider provider = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProvider() {
         
@@ -3489,6 +3751,7 @@ public final class Common {
       private java.lang.Object number_ = "";
       /**
        * <code>string number = 2;</code>
+       * @return The number.
        */
       public java.lang.String getNumber() {
         java.lang.Object ref = number_;
@@ -3504,6 +3767,7 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @return The bytes for number.
        */
       public com.google.protobuf.ByteString
           getNumberBytes() {
@@ -3520,6 +3784,8 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
        */
       public Builder setNumber(
           java.lang.String value) {
@@ -3533,6 +3799,7 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNumber() {
         
@@ -3542,6 +3809,8 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
        */
       public Builder setNumberBytes(
           com.google.protobuf.ByteString value) {
@@ -3554,11 +3823,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -3580,11 +3851,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<CustomerNumber>
         PARSER = new com.google.protobuf.AbstractParser<CustomerNumber>() {
+      @java.lang.Override
       public CustomerNumber parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CustomerNumber(input, extensionRegistry);
+        return new CustomerNumber(input, extensionRegistry);
       }
     };
 
@@ -3597,6 +3869,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -3609,19 +3882,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
      */
     int getChannelValue();
     /**
      * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+     * @return The channel.
      */
     com.elarian.hera.proto.Common.MessagingChannel getChannel();
 
     /**
      * <code>string number = 2;</code>
+     * @return The number.
      */
     java.lang.String getNumber();
     /**
      * <code>string number = 2;</code>
+     * @return The bytes for number.
      */
     com.google.protobuf.ByteString
         getNumberBytes();
@@ -3629,7 +3906,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessagingChannelNumber}
    */
-  public  static final class MessagingChannelNumber extends
+  public static final class MessagingChannelNumber extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingChannelNumber)
       MessagingChannelNumberOrBuilder {
@@ -3644,6 +3921,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessagingChannelNumber();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3653,7 +3937,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3664,13 +3950,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -3681,6 +3960,13 @@ public final class Common {
               java.lang.String s = input.readStringRequireUtf8();
 
               number_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -3700,6 +3986,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelNumber_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelNumber_fieldAccessorTable
@@ -3711,14 +3998,17 @@ public final class Common {
     private int channel_;
     /**
      * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
      */
-    public int getChannelValue() {
+    @java.lang.Override public int getChannelValue() {
       return channel_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+     * @return The channel.
      */
-    public com.elarian.hera.proto.Common.MessagingChannel getChannel() {
+    @java.lang.Override public com.elarian.hera.proto.Common.MessagingChannel getChannel() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.MessagingChannel result = com.elarian.hera.proto.Common.MessagingChannel.valueOf(channel_);
       return result == null ? com.elarian.hera.proto.Common.MessagingChannel.UNRECOGNIZED : result;
     }
@@ -3727,7 +4017,9 @@ public final class Common {
     private volatile java.lang.Object number_;
     /**
      * <code>string number = 2;</code>
+     * @return The number.
      */
+    @java.lang.Override
     public java.lang.String getNumber() {
       java.lang.Object ref = number_;
       if (ref instanceof java.lang.String) {
@@ -3742,7 +4034,9 @@ public final class Common {
     }
     /**
      * <code>string number = 2;</code>
+     * @return The bytes for number.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNumberBytes() {
       java.lang.Object ref = number_;
@@ -3758,6 +4052,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3767,6 +4062,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (channel_ != com.elarian.hera.proto.Common.MessagingChannel.MESSAGING_CHANNEL_UNSPECIFIED.getNumber()) {
@@ -3778,6 +4074,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3805,12 +4102,11 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.MessagingChannelNumber other = (com.elarian.hera.proto.Common.MessagingChannelNumber) obj;
 
-      boolean result = true;
-      result = result && channel_ == other.channel_;
-      result = result && getNumber()
-          .equals(other.getNumber());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (channel_ != other.channel_) return false;
+      if (!getNumber()
+          .equals(other.getNumber())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3899,6 +4195,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -3906,6 +4203,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.MessagingChannelNumber prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -3929,6 +4227,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelNumber_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelNumber_fieldAccessorTable
@@ -3951,6 +4250,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         channel_ = 0;
@@ -3960,15 +4260,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelNumber_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannelNumber getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannelNumber build() {
         com.elarian.hera.proto.Common.MessagingChannelNumber result = buildPartial();
         if (!result.isInitialized()) {
@@ -3977,6 +4280,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannelNumber buildPartial() {
         com.elarian.hera.proto.Common.MessagingChannelNumber result = new com.elarian.hera.proto.Common.MessagingChannelNumber(this);
         result.channel_ = channel_;
@@ -3985,32 +4289,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.MessagingChannelNumber) {
           return mergeFrom((com.elarian.hera.proto.Common.MessagingChannelNumber)other);
@@ -4034,10 +4345,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4059,27 +4372,36 @@ public final class Common {
       private int channel_ = 0;
       /**
        * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+       * @return The enum numeric value on the wire for channel.
        */
-      public int getChannelValue() {
+      @java.lang.Override public int getChannelValue() {
         return channel_;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+       * @param value The enum numeric value on the wire for channel to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelValue(int value) {
+        
         channel_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+       * @return The channel.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannel getChannel() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.MessagingChannel result = com.elarian.hera.proto.Common.MessagingChannel.valueOf(channel_);
         return result == null ? com.elarian.hera.proto.Common.MessagingChannel.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+       * @param value The channel to set.
+       * @return This builder for chaining.
        */
       public Builder setChannel(com.elarian.hera.proto.Common.MessagingChannel value) {
         if (value == null) {
@@ -4092,6 +4414,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannel channel = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearChannel() {
         
@@ -4103,6 +4426,7 @@ public final class Common {
       private java.lang.Object number_ = "";
       /**
        * <code>string number = 2;</code>
+       * @return The number.
        */
       public java.lang.String getNumber() {
         java.lang.Object ref = number_;
@@ -4118,6 +4442,7 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @return The bytes for number.
        */
       public com.google.protobuf.ByteString
           getNumberBytes() {
@@ -4134,6 +4459,8 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
        */
       public Builder setNumber(
           java.lang.String value) {
@@ -4147,6 +4474,7 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNumber() {
         
@@ -4156,6 +4484,8 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
        */
       public Builder setNumberBytes(
           com.google.protobuf.ByteString value) {
@@ -4168,11 +4498,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4194,11 +4526,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<MessagingChannelNumber>
         PARSER = new com.google.protobuf.AbstractParser<MessagingChannelNumber>() {
+      @java.lang.Override
       public MessagingChannelNumber parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MessagingChannelNumber(input, extensionRegistry);
+        return new MessagingChannelNumber(input, extensionRegistry);
       }
     };
 
@@ -4211,6 +4544,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumber getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4223,19 +4557,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
      */
     int getChannelValue();
     /**
      * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+     * @return The channel.
      */
     com.elarian.hera.proto.Common.PaymentChannel getChannel();
 
     /**
      * <code>string number = 2;</code>
+     * @return The number.
      */
     java.lang.String getNumber();
     /**
      * <code>string number = 2;</code>
+     * @return The bytes for number.
      */
     com.google.protobuf.ByteString
         getNumberBytes();
@@ -4243,7 +4581,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.PaymentChannelNumber}
    */
-  public  static final class PaymentChannelNumber extends
+  public static final class PaymentChannelNumber extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentChannelNumber)
       PaymentChannelNumberOrBuilder {
@@ -4258,6 +4596,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentChannelNumber();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4267,7 +4612,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4278,13 +4625,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -4295,6 +4635,13 @@ public final class Common {
               java.lang.String s = input.readStringRequireUtf8();
 
               number_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -4314,6 +4661,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentChannelNumber_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentChannelNumber_fieldAccessorTable
@@ -4325,14 +4673,17 @@ public final class Common {
     private int channel_;
     /**
      * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
      */
-    public int getChannelValue() {
+    @java.lang.Override public int getChannelValue() {
       return channel_;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+     * @return The channel.
      */
-    public com.elarian.hera.proto.Common.PaymentChannel getChannel() {
+    @java.lang.Override public com.elarian.hera.proto.Common.PaymentChannel getChannel() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.PaymentChannel result = com.elarian.hera.proto.Common.PaymentChannel.valueOf(channel_);
       return result == null ? com.elarian.hera.proto.Common.PaymentChannel.UNRECOGNIZED : result;
     }
@@ -4341,7 +4692,9 @@ public final class Common {
     private volatile java.lang.Object number_;
     /**
      * <code>string number = 2;</code>
+     * @return The number.
      */
+    @java.lang.Override
     public java.lang.String getNumber() {
       java.lang.Object ref = number_;
       if (ref instanceof java.lang.String) {
@@ -4356,7 +4709,9 @@ public final class Common {
     }
     /**
      * <code>string number = 2;</code>
+     * @return The bytes for number.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNumberBytes() {
       java.lang.Object ref = number_;
@@ -4372,6 +4727,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4381,6 +4737,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (channel_ != com.elarian.hera.proto.Common.PaymentChannel.PAYMENT_CHANNEL_UNSPECIFIED.getNumber()) {
@@ -4392,6 +4749,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4419,12 +4777,11 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.PaymentChannelNumber other = (com.elarian.hera.proto.Common.PaymentChannelNumber) obj;
 
-      boolean result = true;
-      result = result && channel_ == other.channel_;
-      result = result && getNumber()
-          .equals(other.getNumber());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (channel_ != other.channel_) return false;
+      if (!getNumber()
+          .equals(other.getNumber())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4513,6 +4870,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -4520,6 +4878,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentChannelNumber prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4543,6 +4902,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentChannelNumber_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentChannelNumber_fieldAccessorTable
@@ -4565,6 +4925,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         channel_ = 0;
@@ -4574,15 +4935,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentChannelNumber_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentChannelNumber getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.PaymentChannelNumber.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentChannelNumber build() {
         com.elarian.hera.proto.Common.PaymentChannelNumber result = buildPartial();
         if (!result.isInitialized()) {
@@ -4591,6 +4955,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentChannelNumber buildPartial() {
         com.elarian.hera.proto.Common.PaymentChannelNumber result = new com.elarian.hera.proto.Common.PaymentChannelNumber(this);
         result.channel_ = channel_;
@@ -4599,32 +4964,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.PaymentChannelNumber) {
           return mergeFrom((com.elarian.hera.proto.Common.PaymentChannelNumber)other);
@@ -4648,10 +5020,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4673,27 +5047,36 @@ public final class Common {
       private int channel_ = 0;
       /**
        * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+       * @return The enum numeric value on the wire for channel.
        */
-      public int getChannelValue() {
+      @java.lang.Override public int getChannelValue() {
         return channel_;
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+       * @param value The enum numeric value on the wire for channel to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelValue(int value) {
+        
         channel_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+       * @return The channel.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentChannel getChannel() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.PaymentChannel result = com.elarian.hera.proto.Common.PaymentChannel.valueOf(channel_);
         return result == null ? com.elarian.hera.proto.Common.PaymentChannel.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+       * @param value The channel to set.
+       * @return This builder for chaining.
        */
       public Builder setChannel(com.elarian.hera.proto.Common.PaymentChannel value) {
         if (value == null) {
@@ -4706,6 +5089,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentChannel channel = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearChannel() {
         
@@ -4717,6 +5101,7 @@ public final class Common {
       private java.lang.Object number_ = "";
       /**
        * <code>string number = 2;</code>
+       * @return The number.
        */
       public java.lang.String getNumber() {
         java.lang.Object ref = number_;
@@ -4732,6 +5117,7 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @return The bytes for number.
        */
       public com.google.protobuf.ByteString
           getNumberBytes() {
@@ -4748,6 +5134,8 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
        */
       public Builder setNumber(
           java.lang.String value) {
@@ -4761,6 +5149,7 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNumber() {
         
@@ -4770,6 +5159,8 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
        */
       public Builder setNumberBytes(
           com.google.protobuf.ByteString value) {
@@ -4782,11 +5173,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -4808,11 +5201,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<PaymentChannelNumber>
         PARSER = new com.google.protobuf.AbstractParser<PaymentChannelNumber>() {
+      @java.lang.Override
       public PaymentChannelNumber parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PaymentChannelNumber(input, extensionRegistry);
+        return new PaymentChannelNumber(input, extensionRegistry);
       }
     };
 
@@ -4825,6 +5219,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentChannelNumber getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -4837,19 +5232,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
      */
     int getChannelValue();
     /**
      * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+     * @return The channel.
      */
     com.elarian.hera.proto.Common.VoiceChannel getChannel();
 
     /**
      * <code>string number = 2;</code>
+     * @return The number.
      */
     java.lang.String getNumber();
     /**
      * <code>string number = 2;</code>
+     * @return The bytes for number.
      */
     com.google.protobuf.ByteString
         getNumberBytes();
@@ -4857,7 +5256,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.VoiceChannelNumber}
    */
-  public  static final class VoiceChannelNumber extends
+  public static final class VoiceChannelNumber extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceChannelNumber)
       VoiceChannelNumberOrBuilder {
@@ -4872,6 +5271,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoiceChannelNumber();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4881,7 +5287,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4892,13 +5300,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -4909,6 +5310,13 @@ public final class Common {
               java.lang.String s = input.readStringRequireUtf8();
 
               number_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -4928,6 +5336,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceChannelNumber_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceChannelNumber_fieldAccessorTable
@@ -4939,14 +5348,17 @@ public final class Common {
     private int channel_;
     /**
      * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
      */
-    public int getChannelValue() {
+    @java.lang.Override public int getChannelValue() {
       return channel_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+     * @return The channel.
      */
-    public com.elarian.hera.proto.Common.VoiceChannel getChannel() {
+    @java.lang.Override public com.elarian.hera.proto.Common.VoiceChannel getChannel() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.VoiceChannel result = com.elarian.hera.proto.Common.VoiceChannel.valueOf(channel_);
       return result == null ? com.elarian.hera.proto.Common.VoiceChannel.UNRECOGNIZED : result;
     }
@@ -4955,7 +5367,9 @@ public final class Common {
     private volatile java.lang.Object number_;
     /**
      * <code>string number = 2;</code>
+     * @return The number.
      */
+    @java.lang.Override
     public java.lang.String getNumber() {
       java.lang.Object ref = number_;
       if (ref instanceof java.lang.String) {
@@ -4970,7 +5384,9 @@ public final class Common {
     }
     /**
      * <code>string number = 2;</code>
+     * @return The bytes for number.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNumberBytes() {
       java.lang.Object ref = number_;
@@ -4986,6 +5402,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4995,6 +5412,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (channel_ != com.elarian.hera.proto.Common.VoiceChannel.VOICE_CHANNEL_UNSPECIFIED.getNumber()) {
@@ -5006,6 +5424,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5033,12 +5452,11 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.VoiceChannelNumber other = (com.elarian.hera.proto.Common.VoiceChannelNumber) obj;
 
-      boolean result = true;
-      result = result && channel_ == other.channel_;
-      result = result && getNumber()
-          .equals(other.getNumber());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (channel_ != other.channel_) return false;
+      if (!getNumber()
+          .equals(other.getNumber())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5127,6 +5545,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5134,6 +5553,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.VoiceChannelNumber prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5157,6 +5577,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceChannelNumber_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceChannelNumber_fieldAccessorTable
@@ -5179,6 +5600,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         channel_ = 0;
@@ -5188,15 +5610,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceChannelNumber_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceChannelNumber getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceChannelNumber build() {
         com.elarian.hera.proto.Common.VoiceChannelNumber result = buildPartial();
         if (!result.isInitialized()) {
@@ -5205,6 +5630,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceChannelNumber buildPartial() {
         com.elarian.hera.proto.Common.VoiceChannelNumber result = new com.elarian.hera.proto.Common.VoiceChannelNumber(this);
         result.channel_ = channel_;
@@ -5213,32 +5639,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.VoiceChannelNumber) {
           return mergeFrom((com.elarian.hera.proto.Common.VoiceChannelNumber)other);
@@ -5262,10 +5695,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5287,27 +5722,36 @@ public final class Common {
       private int channel_ = 0;
       /**
        * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+       * @return The enum numeric value on the wire for channel.
        */
-      public int getChannelValue() {
+      @java.lang.Override public int getChannelValue() {
         return channel_;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+       * @param value The enum numeric value on the wire for channel to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelValue(int value) {
+        
         channel_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+       * @return The channel.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceChannel getChannel() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.VoiceChannel result = com.elarian.hera.proto.Common.VoiceChannel.valueOf(channel_);
         return result == null ? com.elarian.hera.proto.Common.VoiceChannel.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+       * @param value The channel to set.
+       * @return This builder for chaining.
        */
       public Builder setChannel(com.elarian.hera.proto.Common.VoiceChannel value) {
         if (value == null) {
@@ -5320,6 +5764,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceChannel channel = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearChannel() {
         
@@ -5331,6 +5776,7 @@ public final class Common {
       private java.lang.Object number_ = "";
       /**
        * <code>string number = 2;</code>
+       * @return The number.
        */
       public java.lang.String getNumber() {
         java.lang.Object ref = number_;
@@ -5346,6 +5792,7 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @return The bytes for number.
        */
       public com.google.protobuf.ByteString
           getNumberBytes() {
@@ -5362,6 +5809,8 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
        */
       public Builder setNumber(
           java.lang.String value) {
@@ -5375,6 +5824,7 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNumber() {
         
@@ -5384,6 +5834,8 @@ public final class Common {
       }
       /**
        * <code>string number = 2;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
        */
       public Builder setNumberBytes(
           com.google.protobuf.ByteString value) {
@@ -5396,11 +5848,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5422,11 +5876,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<VoiceChannelNumber>
         PARSER = new com.google.protobuf.AbstractParser<VoiceChannelNumber>() {
+      @java.lang.Override
       public VoiceChannelNumber parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new VoiceChannelNumber(input, extensionRegistry);
+        return new VoiceChannelNumber(input, extensionRegistry);
       }
     };
 
@@ -5439,6 +5894,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumber getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -5451,29 +5907,37 @@ public final class Common {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>repeated string params = 2;</code>
+     * @return A list containing the params.
      */
     java.util.List<java.lang.String>
         getParamsList();
     /**
      * <code>repeated string params = 2;</code>
+     * @return The count of params.
      */
     int getParamsCount();
     /**
      * <code>repeated string params = 2;</code>
+     * @param index The index of the element to return.
+     * @return The params at the given index.
      */
     java.lang.String getParams(int index);
     /**
      * <code>repeated string params = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the params at the given index.
      */
     com.google.protobuf.ByteString
         getParamsBytes(int index);
@@ -5481,7 +5945,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.TextMessageTemplate}
    */
-  public  static final class TextMessageTemplate extends
+  public static final class TextMessageTemplate extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.TextMessageTemplate)
       TextMessageTemplateOrBuilder {
@@ -5496,6 +5960,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextMessageTemplate();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5505,6 +5976,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5516,13 +5990,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -5531,11 +5998,18 @@ public final class Common {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 params_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               params_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -5546,7 +6020,7 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           params_ = params_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -5558,6 +6032,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageTemplate_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageTemplate_fieldAccessorTable
@@ -5565,12 +6040,13 @@ public final class Common {
               com.elarian.hera.proto.Common.TextMessageTemplate.class, com.elarian.hera.proto.Common.TextMessageTemplate.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -5585,7 +6061,9 @@ public final class Common {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -5604,6 +6082,7 @@ public final class Common {
     private com.google.protobuf.LazyStringList params_;
     /**
      * <code>repeated string params = 2;</code>
+     * @return A list containing the params.
      */
     public com.google.protobuf.ProtocolStringList
         getParamsList() {
@@ -5611,18 +6090,23 @@ public final class Common {
     }
     /**
      * <code>repeated string params = 2;</code>
+     * @return The count of params.
      */
     public int getParamsCount() {
       return params_.size();
     }
     /**
      * <code>repeated string params = 2;</code>
+     * @param index The index of the element to return.
+     * @return The params at the given index.
      */
     public java.lang.String getParams(int index) {
       return params_.get(index);
     }
     /**
      * <code>repeated string params = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the params at the given index.
      */
     public com.google.protobuf.ByteString
         getParamsBytes(int index) {
@@ -5630,6 +6114,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -5639,6 +6124,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getNameBytes().isEmpty()) {
@@ -5650,6 +6136,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -5681,13 +6168,12 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.TextMessageTemplate other = (com.elarian.hera.proto.Common.TextMessageTemplate) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getParamsList()
-          .equals(other.getParamsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getParamsList()
+          .equals(other.getParamsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5778,6 +6264,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -5785,6 +6272,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.TextMessageTemplate prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -5808,6 +6296,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageTemplate_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageTemplate_fieldAccessorTable
@@ -5830,24 +6319,28 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
 
         params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageTemplate_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextMessageTemplate getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.TextMessageTemplate.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextMessageTemplate build() {
         com.elarian.hera.proto.Common.TextMessageTemplate result = buildPartial();
         if (!result.isInitialized()) {
@@ -5856,47 +6349,53 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextMessageTemplate buildPartial() {
         com.elarian.hera.proto.Common.TextMessageTemplate result = new com.elarian.hera.proto.Common.TextMessageTemplate(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           params_ = params_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.params_ = params_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.TextMessageTemplate) {
           return mergeFrom((com.elarian.hera.proto.Common.TextMessageTemplate)other);
@@ -5915,7 +6414,7 @@ public final class Common {
         if (!other.params_.isEmpty()) {
           if (params_.isEmpty()) {
             params_ = other.params_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureParamsIsMutable();
             params_.addAll(other.params_);
@@ -5927,10 +6426,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5953,6 +6454,7 @@ public final class Common {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5968,6 +6470,7 @@ public final class Common {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5984,6 +6487,8 @@ public final class Common {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -5997,6 +6502,7 @@ public final class Common {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6006,6 +6512,8 @@ public final class Common {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6021,13 +6529,14 @@ public final class Common {
 
       private com.google.protobuf.LazyStringList params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureParamsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           params_ = new com.google.protobuf.LazyStringArrayList(params_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @return A list containing the params.
        */
       public com.google.protobuf.ProtocolStringList
           getParamsList() {
@@ -6035,18 +6544,23 @@ public final class Common {
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @return The count of params.
        */
       public int getParamsCount() {
         return params_.size();
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @param index The index of the element to return.
+       * @return The params at the given index.
        */
       public java.lang.String getParams(int index) {
         return params_.get(index);
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the params at the given index.
        */
       public com.google.protobuf.ByteString
           getParamsBytes(int index) {
@@ -6054,6 +6568,9 @@ public final class Common {
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The params to set.
+       * @return This builder for chaining.
        */
       public Builder setParams(
           int index, java.lang.String value) {
@@ -6067,6 +6584,8 @@ public final class Common {
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @param value The params to add.
+       * @return This builder for chaining.
        */
       public Builder addParams(
           java.lang.String value) {
@@ -6080,6 +6599,8 @@ public final class Common {
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @param values The params to add.
+       * @return This builder for chaining.
        */
       public Builder addAllParams(
           java.lang.Iterable<java.lang.String> values) {
@@ -6091,15 +6612,18 @@ public final class Common {
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearParams() {
         params_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string params = 2;</code>
+       * @param value The bytes of the params to add.
+       * @return This builder for chaining.
        */
       public Builder addParamsBytes(
           com.google.protobuf.ByteString value) {
@@ -6112,11 +6636,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6138,11 +6664,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<TextMessageTemplate>
         PARSER = new com.google.protobuf.AbstractParser<TextMessageTemplate>() {
+      @java.lang.Override
       public TextMessageTemplate parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new TextMessageTemplate(input, extensionRegistry);
+        return new TextMessageTemplate(input, extensionRegistry);
       }
     };
 
@@ -6155,6 +6682,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.TextMessageTemplate getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6167,10 +6695,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue text = 1;</code>
+     * @return Whether the text field is set.
      */
     boolean hasText();
     /**
      * <code>.google.protobuf.StringValue text = 1;</code>
+     * @return The text.
      */
     com.google.protobuf.StringValue getText();
     /**
@@ -6180,10 +6710,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 2;</code>
+     * @return Whether the template field is set.
      */
     boolean hasTemplate();
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 2;</code>
+     * @return The template.
      */
     com.elarian.hera.proto.Common.TextMessageTemplate getTemplate();
     /**
@@ -6194,7 +6726,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.TextMessageBody}
    */
-  public  static final class TextMessageBody extends
+  public static final class TextMessageBody extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.TextMessageBody)
       TextMessageBodyOrBuilder {
@@ -6207,6 +6739,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextMessageBody();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6216,7 +6755,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6227,13 +6768,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
               if (text_ != null) {
@@ -6260,6 +6794,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6277,6 +6818,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageBody_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageBody_fieldAccessorTable
@@ -6288,19 +6830,24 @@ public final class Common {
     private com.google.protobuf.StringValue text_;
     /**
      * <code>.google.protobuf.StringValue text = 1;</code>
+     * @return Whether the text field is set.
      */
+    @java.lang.Override
     public boolean hasText() {
       return text_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getText() {
       return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
     }
     /**
      * <code>.google.protobuf.StringValue text = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
       return getText();
     }
@@ -6309,24 +6856,30 @@ public final class Common {
     private com.elarian.hera.proto.Common.TextMessageTemplate template_;
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 2;</code>
+     * @return Whether the template field is set.
      */
+    @java.lang.Override
     public boolean hasTemplate() {
       return template_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 2;</code>
+     * @return The template.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.TextMessageTemplate getTemplate() {
       return template_ == null ? com.elarian.hera.proto.Common.TextMessageTemplate.getDefaultInstance() : template_;
     }
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.TextMessageTemplateOrBuilder getTemplateOrBuilder() {
       return getTemplate();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6336,6 +6889,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (text_ != null) {
@@ -6347,6 +6901,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6375,19 +6930,18 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.TextMessageBody other = (com.elarian.hera.proto.Common.TextMessageBody) obj;
 
-      boolean result = true;
-      result = result && (hasText() == other.hasText());
+      if (hasText() != other.hasText()) return false;
       if (hasText()) {
-        result = result && getText()
-            .equals(other.getText());
+        if (!getText()
+            .equals(other.getText())) return false;
       }
-      result = result && (hasTemplate() == other.hasTemplate());
+      if (hasTemplate() != other.hasTemplate()) return false;
       if (hasTemplate()) {
-        result = result && getTemplate()
-            .equals(other.getTemplate());
+        if (!getTemplate()
+            .equals(other.getTemplate())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6480,6 +7034,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -6487,6 +7042,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.TextMessageBody prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -6510,6 +7066,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageBody_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageBody_fieldAccessorTable
@@ -6532,6 +7089,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (textBuilder_ == null) {
@@ -6549,15 +7107,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_TextMessageBody_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextMessageBody getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.TextMessageBody.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextMessageBody build() {
         com.elarian.hera.proto.Common.TextMessageBody result = buildPartial();
         if (!result.isInitialized()) {
@@ -6566,6 +7127,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextMessageBody buildPartial() {
         com.elarian.hera.proto.Common.TextMessageBody result = new com.elarian.hera.proto.Common.TextMessageBody(this);
         if (textBuilder_ == null) {
@@ -6582,32 +7144,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.TextMessageBody) {
           return mergeFrom((com.elarian.hera.proto.Common.TextMessageBody)other);
@@ -6630,10 +7199,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6652,17 +7223,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue text_ = null;
+      private com.google.protobuf.StringValue text_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> textBuilder_;
       /**
        * <code>.google.protobuf.StringValue text = 1;</code>
+       * @return Whether the text field is set.
        */
       public boolean hasText() {
         return textBuilder_ != null || text_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue text = 1;</code>
+       * @return The text.
        */
       public com.google.protobuf.StringValue getText() {
         if (textBuilder_ == null) {
@@ -6769,17 +7342,19 @@ public final class Common {
         return textBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.TextMessageTemplate template_ = null;
+      private com.elarian.hera.proto.Common.TextMessageTemplate template_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.TextMessageTemplate, com.elarian.hera.proto.Common.TextMessageTemplate.Builder, com.elarian.hera.proto.Common.TextMessageTemplateOrBuilder> templateBuilder_;
       /**
        * <code>.com.elarian.hera.proto.TextMessageTemplate template = 2;</code>
+       * @return Whether the template field is set.
        */
       public boolean hasTemplate() {
         return templateBuilder_ != null || template_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.TextMessageTemplate template = 2;</code>
+       * @return The template.
        */
       public com.elarian.hera.proto.Common.TextMessageTemplate getTemplate() {
         if (templateBuilder_ == null) {
@@ -6885,11 +7460,13 @@ public final class Common {
         }
         return templateBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -6911,11 +7488,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<TextMessageBody>
         PARSER = new com.google.protobuf.AbstractParser<TextMessageBody>() {
+      @java.lang.Override
       public TextMessageBody parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new TextMessageBody(input, extensionRegistry);
+        return new TextMessageBody(input, extensionRegistry);
       }
     };
 
@@ -6928,6 +7506,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.TextMessageBody getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -6940,27 +7519,31 @@ public final class Common {
 
     /**
      * <code>string url = 1;</code>
+     * @return The url.
      */
     java.lang.String getUrl();
     /**
      * <code>string url = 1;</code>
+     * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
 
     /**
      * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+     * @return The enum numeric value on the wire for media.
      */
     int getMediaValue();
     /**
      * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+     * @return The media.
      */
     com.elarian.hera.proto.Common.MediaType getMedia();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MediaMessageBody}
    */
-  public  static final class MediaMessageBody extends
+  public static final class MediaMessageBody extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MediaMessageBody)
       MediaMessageBodyOrBuilder {
@@ -6975,6 +7558,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MediaMessageBody();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6984,7 +7574,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6995,13 +7587,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -7012,6 +7597,13 @@ public final class Common {
               int rawValue = input.readEnum();
 
               media_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -7031,6 +7623,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MediaMessageBody_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MediaMessageBody_fieldAccessorTable
@@ -7042,7 +7635,9 @@ public final class Common {
     private volatile java.lang.Object url_;
     /**
      * <code>string url = 1;</code>
+     * @return The url.
      */
+    @java.lang.Override
     public java.lang.String getUrl() {
       java.lang.Object ref = url_;
       if (ref instanceof java.lang.String) {
@@ -7057,7 +7652,9 @@ public final class Common {
     }
     /**
      * <code>string url = 1;</code>
+     * @return The bytes for url.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
       java.lang.Object ref = url_;
@@ -7076,19 +7673,23 @@ public final class Common {
     private int media_;
     /**
      * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+     * @return The enum numeric value on the wire for media.
      */
-    public int getMediaValue() {
+    @java.lang.Override public int getMediaValue() {
       return media_;
     }
     /**
      * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+     * @return The media.
      */
-    public com.elarian.hera.proto.Common.MediaType getMedia() {
+    @java.lang.Override public com.elarian.hera.proto.Common.MediaType getMedia() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.MediaType result = com.elarian.hera.proto.Common.MediaType.valueOf(media_);
       return result == null ? com.elarian.hera.proto.Common.MediaType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7098,6 +7699,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUrlBytes().isEmpty()) {
@@ -7109,6 +7711,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7136,12 +7739,11 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.MediaMessageBody other = (com.elarian.hera.proto.Common.MediaMessageBody) obj;
 
-      boolean result = true;
-      result = result && getUrl()
-          .equals(other.getUrl());
-      result = result && media_ == other.media_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (media_ != other.media_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7230,6 +7832,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7237,6 +7840,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.MediaMessageBody prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7260,6 +7864,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MediaMessageBody_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MediaMessageBody_fieldAccessorTable
@@ -7282,6 +7887,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         url_ = "";
@@ -7291,15 +7897,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MediaMessageBody_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MediaMessageBody getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.MediaMessageBody.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MediaMessageBody build() {
         com.elarian.hera.proto.Common.MediaMessageBody result = buildPartial();
         if (!result.isInitialized()) {
@@ -7308,6 +7917,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MediaMessageBody buildPartial() {
         com.elarian.hera.proto.Common.MediaMessageBody result = new com.elarian.hera.proto.Common.MediaMessageBody(this);
         result.url_ = url_;
@@ -7316,32 +7926,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.MediaMessageBody) {
           return mergeFrom((com.elarian.hera.proto.Common.MediaMessageBody)other);
@@ -7365,10 +7982,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7390,6 +8009,7 @@ public final class Common {
       private java.lang.Object url_ = "";
       /**
        * <code>string url = 1;</code>
+       * @return The url.
        */
       public java.lang.String getUrl() {
         java.lang.Object ref = url_;
@@ -7405,6 +8025,7 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
           getUrlBytes() {
@@ -7421,6 +8042,8 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrl(
           java.lang.String value) {
@@ -7434,6 +8057,7 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUrl() {
         
@@ -7443,6 +8067,8 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -7459,27 +8085,36 @@ public final class Common {
       private int media_ = 0;
       /**
        * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+       * @return The enum numeric value on the wire for media.
        */
-      public int getMediaValue() {
+      @java.lang.Override public int getMediaValue() {
         return media_;
       }
       /**
        * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+       * @param value The enum numeric value on the wire for media to set.
+       * @return This builder for chaining.
        */
       public Builder setMediaValue(int value) {
+        
         media_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+       * @return The media.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MediaType getMedia() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.MediaType result = com.elarian.hera.proto.Common.MediaType.valueOf(media_);
         return result == null ? com.elarian.hera.proto.Common.MediaType.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+       * @param value The media to set.
+       * @return This builder for chaining.
        */
       public Builder setMedia(com.elarian.hera.proto.Common.MediaType value) {
         if (value == null) {
@@ -7492,6 +8127,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.MediaType media = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMedia() {
         
@@ -7499,11 +8135,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -7525,11 +8163,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<MediaMessageBody>
         PARSER = new com.google.protobuf.AbstractParser<MediaMessageBody>() {
+      @java.lang.Override
       public MediaMessageBody parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MediaMessageBody(input, extensionRegistry);
+        return new MediaMessageBody(input, extensionRegistry);
       }
     };
 
@@ -7542,6 +8181,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MediaMessageBody getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -7554,18 +8194,20 @@ public final class Common {
 
     /**
      * <code>double latitude = 1;</code>
+     * @return The latitude.
      */
     double getLatitude();
 
     /**
      * <code>double longitude = 2;</code>
+     * @return The longitude.
      */
     double getLongitude();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.LocationMessageBody}
    */
-  public  static final class LocationMessageBody extends
+  public static final class LocationMessageBody extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.LocationMessageBody)
       LocationMessageBodyOrBuilder {
@@ -7575,8 +8217,13 @@ public final class Common {
       super(builder);
     }
     private LocationMessageBody() {
-      latitude_ = 0D;
-      longitude_ = 0D;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LocationMessageBody();
     }
 
     @java.lang.Override
@@ -7589,7 +8236,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7600,13 +8249,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 9: {
 
               latitude_ = input.readDouble();
@@ -7615,6 +8257,13 @@ public final class Common {
             case 17: {
 
               longitude_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -7634,6 +8283,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_LocationMessageBody_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_LocationMessageBody_fieldAccessorTable
@@ -7645,7 +8295,9 @@ public final class Common {
     private double latitude_;
     /**
      * <code>double latitude = 1;</code>
+     * @return The latitude.
      */
+    @java.lang.Override
     public double getLatitude() {
       return latitude_;
     }
@@ -7654,12 +8306,15 @@ public final class Common {
     private double longitude_;
     /**
      * <code>double longitude = 2;</code>
+     * @return The longitude.
      */
+    @java.lang.Override
     public double getLongitude() {
       return longitude_;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -7669,6 +8324,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (latitude_ != 0D) {
@@ -7680,6 +8336,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -7708,17 +8365,14 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.LocationMessageBody other = (com.elarian.hera.proto.Common.LocationMessageBody) obj;
 
-      boolean result = true;
-      result = result && (
-          java.lang.Double.doubleToLongBits(getLatitude())
-          == java.lang.Double.doubleToLongBits(
-              other.getLatitude()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getLongitude())
-          == java.lang.Double.doubleToLongBits(
-              other.getLongitude()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (java.lang.Double.doubleToLongBits(getLatitude())
+          != java.lang.Double.doubleToLongBits(
+              other.getLatitude())) return false;
+      if (java.lang.Double.doubleToLongBits(getLongitude())
+          != java.lang.Double.doubleToLongBits(
+              other.getLongitude())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7809,6 +8463,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -7816,6 +8471,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.LocationMessageBody prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -7839,6 +8495,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_LocationMessageBody_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_LocationMessageBody_fieldAccessorTable
@@ -7861,6 +8518,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         latitude_ = 0D;
@@ -7870,15 +8528,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_LocationMessageBody_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.LocationMessageBody getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.LocationMessageBody.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.LocationMessageBody build() {
         com.elarian.hera.proto.Common.LocationMessageBody result = buildPartial();
         if (!result.isInitialized()) {
@@ -7887,6 +8548,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.LocationMessageBody buildPartial() {
         com.elarian.hera.proto.Common.LocationMessageBody result = new com.elarian.hera.proto.Common.LocationMessageBody(this);
         result.latitude_ = latitude_;
@@ -7895,32 +8557,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.LocationMessageBody) {
           return mergeFrom((com.elarian.hera.proto.Common.LocationMessageBody)other);
@@ -7943,10 +8612,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7968,12 +8639,16 @@ public final class Common {
       private double latitude_ ;
       /**
        * <code>double latitude = 1;</code>
+       * @return The latitude.
        */
+      @java.lang.Override
       public double getLatitude() {
         return latitude_;
       }
       /**
        * <code>double latitude = 1;</code>
+       * @param value The latitude to set.
+       * @return This builder for chaining.
        */
       public Builder setLatitude(double value) {
         
@@ -7983,6 +8658,7 @@ public final class Common {
       }
       /**
        * <code>double latitude = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLatitude() {
         
@@ -7994,12 +8670,16 @@ public final class Common {
       private double longitude_ ;
       /**
        * <code>double longitude = 2;</code>
+       * @return The longitude.
        */
+      @java.lang.Override
       public double getLongitude() {
         return longitude_;
       }
       /**
        * <code>double longitude = 2;</code>
+       * @param value The longitude to set.
+       * @return This builder for chaining.
        */
       public Builder setLongitude(double value) {
         
@@ -8009,6 +8689,7 @@ public final class Common {
       }
       /**
        * <code>double longitude = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLongitude() {
         
@@ -8016,11 +8697,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -8042,11 +8725,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<LocationMessageBody>
         PARSER = new com.google.protobuf.AbstractParser<LocationMessageBody>() {
+      @java.lang.Override
       public LocationMessageBody parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new LocationMessageBody(input, extensionRegistry);
+        return new LocationMessageBody(input, extensionRegistry);
       }
     };
 
@@ -8059,6 +8743,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.LocationMessageBody getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -8071,10 +8756,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.TextMessageBody text = 1;</code>
+     * @return Whether the text field is set.
      */
     boolean hasText();
     /**
      * <code>.com.elarian.hera.proto.TextMessageBody text = 1;</code>
+     * @return The text.
      */
     com.elarian.hera.proto.Common.TextMessageBody getText();
     /**
@@ -8084,10 +8771,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.MediaMessageBody media = 2;</code>
+     * @return Whether the media field is set.
      */
     boolean hasMedia();
     /**
      * <code>.com.elarian.hera.proto.MediaMessageBody media = 2;</code>
+     * @return The media.
      */
     com.elarian.hera.proto.Common.MediaMessageBody getMedia();
     /**
@@ -8097,10 +8786,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
+     * @return Whether the location field is set.
      */
     boolean hasLocation();
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
+     * @return The location.
      */
     com.elarian.hera.proto.Common.LocationMessageBody getLocation();
     /**
@@ -8113,7 +8804,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.CustomerMessageBody}
    */
-  public  static final class CustomerMessageBody extends
+  public static final class CustomerMessageBody extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerMessageBody)
       CustomerMessageBodyOrBuilder {
@@ -8126,6 +8817,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomerMessageBody();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -8135,7 +8833,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8146,13 +8846,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.TextMessageBody.Builder subBuilder = null;
               if (entryCase_ == 1) {
@@ -8195,6 +8888,13 @@ public final class Common {
               entryCase_ = 3;
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -8212,6 +8912,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerMessageBody_fieldAccessorTable
@@ -8222,7 +8923,8 @@ public final class Common {
     private int entryCase_ = 0;
     private java.lang.Object entry_;
     public enum EntryCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       TEXT(1),
       MEDIA(2),
       LOCATION(3),
@@ -8232,6 +8934,8 @@ public final class Common {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8262,13 +8966,17 @@ public final class Common {
     public static final int TEXT_FIELD_NUMBER = 1;
     /**
      * <code>.com.elarian.hera.proto.TextMessageBody text = 1;</code>
+     * @return Whether the text field is set.
      */
+    @java.lang.Override
     public boolean hasText() {
       return entryCase_ == 1;
     }
     /**
      * <code>.com.elarian.hera.proto.TextMessageBody text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.TextMessageBody getText() {
       if (entryCase_ == 1) {
          return (com.elarian.hera.proto.Common.TextMessageBody) entry_;
@@ -8278,6 +8986,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.TextMessageBody text = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.TextMessageBodyOrBuilder getTextOrBuilder() {
       if (entryCase_ == 1) {
          return (com.elarian.hera.proto.Common.TextMessageBody) entry_;
@@ -8288,13 +8997,17 @@ public final class Common {
     public static final int MEDIA_FIELD_NUMBER = 2;
     /**
      * <code>.com.elarian.hera.proto.MediaMessageBody media = 2;</code>
+     * @return Whether the media field is set.
      */
+    @java.lang.Override
     public boolean hasMedia() {
       return entryCase_ == 2;
     }
     /**
      * <code>.com.elarian.hera.proto.MediaMessageBody media = 2;</code>
+     * @return The media.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MediaMessageBody getMedia() {
       if (entryCase_ == 2) {
          return (com.elarian.hera.proto.Common.MediaMessageBody) entry_;
@@ -8304,6 +9017,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.MediaMessageBody media = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder getMediaOrBuilder() {
       if (entryCase_ == 2) {
          return (com.elarian.hera.proto.Common.MediaMessageBody) entry_;
@@ -8314,13 +9028,17 @@ public final class Common {
     public static final int LOCATION_FIELD_NUMBER = 3;
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
+     * @return Whether the location field is set.
      */
+    @java.lang.Override
     public boolean hasLocation() {
       return entryCase_ == 3;
     }
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
+     * @return The location.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.LocationMessageBody getLocation() {
       if (entryCase_ == 3) {
          return (com.elarian.hera.proto.Common.LocationMessageBody) entry_;
@@ -8330,6 +9048,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.LocationMessageBodyOrBuilder getLocationOrBuilder() {
       if (entryCase_ == 3) {
          return (com.elarian.hera.proto.Common.LocationMessageBody) entry_;
@@ -8338,6 +9057,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -8347,6 +9067,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entryCase_ == 1) {
@@ -8361,6 +9082,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -8393,28 +9115,25 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.CustomerMessageBody other = (com.elarian.hera.proto.Common.CustomerMessageBody) obj;
 
-      boolean result = true;
-      result = result && getEntryCase().equals(
-          other.getEntryCase());
-      if (!result) return false;
+      if (!getEntryCase().equals(other.getEntryCase())) return false;
       switch (entryCase_) {
         case 1:
-          result = result && getText()
-              .equals(other.getText());
+          if (!getText()
+              .equals(other.getText())) return false;
           break;
         case 2:
-          result = result && getMedia()
-              .equals(other.getMedia());
+          if (!getMedia()
+              .equals(other.getMedia())) return false;
           break;
         case 3:
-          result = result && getLocation()
-              .equals(other.getLocation());
+          if (!getLocation()
+              .equals(other.getLocation())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8515,6 +9234,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -8522,6 +9242,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.CustomerMessageBody prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -8545,6 +9266,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerMessageBody_fieldAccessorTable
@@ -8567,6 +9289,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         entryCase_ = 0;
@@ -8574,15 +9297,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerMessageBody getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.CustomerMessageBody.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerMessageBody build() {
         com.elarian.hera.proto.Common.CustomerMessageBody result = buildPartial();
         if (!result.isInitialized()) {
@@ -8591,6 +9317,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerMessageBody buildPartial() {
         com.elarian.hera.proto.Common.CustomerMessageBody result = new com.elarian.hera.proto.Common.CustomerMessageBody(this);
         if (entryCase_ == 1) {
@@ -8619,32 +9346,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.CustomerMessageBody) {
           return mergeFrom((com.elarian.hera.proto.Common.CustomerMessageBody)other);
@@ -8678,10 +9412,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8719,13 +9455,17 @@ public final class Common {
           com.elarian.hera.proto.Common.TextMessageBody, com.elarian.hera.proto.Common.TextMessageBody.Builder, com.elarian.hera.proto.Common.TextMessageBodyOrBuilder> textBuilder_;
       /**
        * <code>.com.elarian.hera.proto.TextMessageBody text = 1;</code>
+       * @return Whether the text field is set.
        */
+      @java.lang.Override
       public boolean hasText() {
         return entryCase_ == 1;
       }
       /**
        * <code>.com.elarian.hera.proto.TextMessageBody text = 1;</code>
+       * @return The text.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextMessageBody getText() {
         if (textBuilder_ == null) {
           if (entryCase_ == 1) {
@@ -8819,6 +9559,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.TextMessageBody text = 1;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextMessageBodyOrBuilder getTextOrBuilder() {
         if ((entryCase_ == 1) && (textBuilder_ != null)) {
           return textBuilder_.getMessageOrBuilder();
@@ -8855,13 +9596,17 @@ public final class Common {
           com.elarian.hera.proto.Common.MediaMessageBody, com.elarian.hera.proto.Common.MediaMessageBody.Builder, com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder> mediaBuilder_;
       /**
        * <code>.com.elarian.hera.proto.MediaMessageBody media = 2;</code>
+       * @return Whether the media field is set.
        */
+      @java.lang.Override
       public boolean hasMedia() {
         return entryCase_ == 2;
       }
       /**
        * <code>.com.elarian.hera.proto.MediaMessageBody media = 2;</code>
+       * @return The media.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MediaMessageBody getMedia() {
         if (mediaBuilder_ == null) {
           if (entryCase_ == 2) {
@@ -8955,6 +9700,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.MediaMessageBody media = 2;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder getMediaOrBuilder() {
         if ((entryCase_ == 2) && (mediaBuilder_ != null)) {
           return mediaBuilder_.getMessageOrBuilder();
@@ -8991,13 +9737,17 @@ public final class Common {
           com.elarian.hera.proto.Common.LocationMessageBody, com.elarian.hera.proto.Common.LocationMessageBody.Builder, com.elarian.hera.proto.Common.LocationMessageBodyOrBuilder> locationBuilder_;
       /**
        * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
+       * @return Whether the location field is set.
        */
+      @java.lang.Override
       public boolean hasLocation() {
         return entryCase_ == 3;
       }
       /**
        * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
+       * @return The location.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.LocationMessageBody getLocation() {
         if (locationBuilder_ == null) {
           if (entryCase_ == 3) {
@@ -9091,6 +9841,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.LocationMessageBodyOrBuilder getLocationOrBuilder() {
         if ((entryCase_ == 3) && (locationBuilder_ != null)) {
           return locationBuilder_.getMessageOrBuilder();
@@ -9122,11 +9873,13 @@ public final class Common {
         onChanged();;
         return locationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -9148,11 +9901,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<CustomerMessageBody>
         PARSER = new com.google.protobuf.AbstractParser<CustomerMessageBody>() {
+      @java.lang.Override
       public CustomerMessageBody parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CustomerMessageBody(input, extensionRegistry);
+        return new CustomerMessageBody(input, extensionRegistry);
       }
     };
 
@@ -9165,6 +9919,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerMessageBody getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -9177,23 +9932,26 @@ public final class Common {
 
     /**
      * <code>string text = 1;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
 
     /**
      * <code>bool is_terminal = 2;</code>
+     * @return The isTerminal.
      */
     boolean getIsTerminal();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.UssdMenu}
    */
-  public  static final class UssdMenu extends
+  public static final class UssdMenu extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdMenu)
       UssdMenuOrBuilder {
@@ -9204,7 +9962,13 @@ public final class Common {
     }
     private UssdMenu() {
       text_ = "";
-      isTerminal_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UssdMenu();
     }
 
     @java.lang.Override
@@ -9217,7 +9981,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9228,13 +9994,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -9244,6 +10003,13 @@ public final class Common {
             case 16: {
 
               isTerminal_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -9263,6 +10029,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdMenu_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdMenu_fieldAccessorTable
@@ -9274,7 +10041,9 @@ public final class Common {
     private volatile java.lang.Object text_;
     /**
      * <code>string text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -9289,7 +10058,9 @@ public final class Common {
     }
     /**
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -9308,12 +10079,15 @@ public final class Common {
     private boolean isTerminal_;
     /**
      * <code>bool is_terminal = 2;</code>
+     * @return The isTerminal.
      */
+    @java.lang.Override
     public boolean getIsTerminal() {
       return isTerminal_;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -9323,6 +10097,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTextBytes().isEmpty()) {
@@ -9334,6 +10109,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -9361,13 +10137,12 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.UssdMenu other = (com.elarian.hera.proto.Common.UssdMenu) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && (getIsTerminal()
-          == other.getIsTerminal());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (getIsTerminal()
+          != other.getIsTerminal()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9457,6 +10232,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -9464,6 +10240,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.UssdMenu prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -9487,6 +10264,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdMenu_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdMenu_fieldAccessorTable
@@ -9509,6 +10287,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         text_ = "";
@@ -9518,15 +10297,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdMenu_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdMenu getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.UssdMenu.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdMenu build() {
         com.elarian.hera.proto.Common.UssdMenu result = buildPartial();
         if (!result.isInitialized()) {
@@ -9535,6 +10317,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdMenu buildPartial() {
         com.elarian.hera.proto.Common.UssdMenu result = new com.elarian.hera.proto.Common.UssdMenu(this);
         result.text_ = text_;
@@ -9543,32 +10326,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.UssdMenu) {
           return mergeFrom((com.elarian.hera.proto.Common.UssdMenu)other);
@@ -9592,10 +10382,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9617,6 +10409,7 @@ public final class Common {
       private java.lang.Object text_ = "";
       /**
        * <code>string text = 1;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -9632,6 +10425,7 @@ public final class Common {
       }
       /**
        * <code>string text = 1;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -9648,6 +10442,8 @@ public final class Common {
       }
       /**
        * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -9661,6 +10457,7 @@ public final class Common {
       }
       /**
        * <code>string text = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -9670,6 +10467,8 @@ public final class Common {
       }
       /**
        * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -9686,12 +10485,16 @@ public final class Common {
       private boolean isTerminal_ ;
       /**
        * <code>bool is_terminal = 2;</code>
+       * @return The isTerminal.
        */
+      @java.lang.Override
       public boolean getIsTerminal() {
         return isTerminal_;
       }
       /**
        * <code>bool is_terminal = 2;</code>
+       * @param value The isTerminal to set.
+       * @return This builder for chaining.
        */
       public Builder setIsTerminal(boolean value) {
         
@@ -9701,6 +10504,7 @@ public final class Common {
       }
       /**
        * <code>bool is_terminal = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIsTerminal() {
         
@@ -9708,11 +10512,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -9734,11 +10540,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<UssdMenu>
         PARSER = new com.google.protobuf.AbstractParser<UssdMenu>() {
+      @java.lang.Override
       public UssdMenu parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new UssdMenu(input, extensionRegistry);
+        return new UssdMenu(input, extensionRegistry);
       }
     };
 
@@ -9751,6 +10558,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdMenu getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -9763,10 +10571,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue input = 1;</code>
+     * @return Whether the input field is set.
      */
     boolean hasInput();
     /**
      * <code>.google.protobuf.StringValue input = 1;</code>
+     * @return The input.
      */
     com.google.protobuf.StringValue getInput();
     /**
@@ -9776,10 +10586,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.UssdMenu menu = 2;</code>
+     * @return Whether the menu field is set.
      */
     boolean hasMenu();
     /**
      * <code>.com.elarian.hera.proto.UssdMenu menu = 2;</code>
+     * @return The menu.
      */
     com.elarian.hera.proto.Common.UssdMenu getMenu();
     /**
@@ -9789,10 +10601,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return Whether the timestamp field is set.
      */
     boolean hasTimestamp();
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return The timestamp.
      */
     com.google.protobuf.Timestamp getTimestamp();
     /**
@@ -9803,7 +10617,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.UssdHop}
    */
-  public  static final class UssdHop extends
+  public static final class UssdHop extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdHop)
       UssdHopOrBuilder {
@@ -9816,6 +10630,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UssdHop();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -9825,7 +10646,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9836,13 +10659,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
               if (input_ != null) {
@@ -9882,6 +10698,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -9899,6 +10722,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdHop_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdHop_fieldAccessorTable
@@ -9910,19 +10734,24 @@ public final class Common {
     private com.google.protobuf.StringValue input_;
     /**
      * <code>.google.protobuf.StringValue input = 1;</code>
+     * @return Whether the input field is set.
      */
+    @java.lang.Override
     public boolean hasInput() {
       return input_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue input = 1;</code>
+     * @return The input.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getInput() {
       return input_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : input_;
     }
     /**
      * <code>.google.protobuf.StringValue input = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getInputOrBuilder() {
       return getInput();
     }
@@ -9931,19 +10760,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.UssdMenu menu_;
     /**
      * <code>.com.elarian.hera.proto.UssdMenu menu = 2;</code>
+     * @return Whether the menu field is set.
      */
+    @java.lang.Override
     public boolean hasMenu() {
       return menu_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.UssdMenu menu = 2;</code>
+     * @return The menu.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdMenu getMenu() {
       return menu_ == null ? com.elarian.hera.proto.Common.UssdMenu.getDefaultInstance() : menu_;
     }
     /**
      * <code>.com.elarian.hera.proto.UssdMenu menu = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdMenuOrBuilder getMenuOrBuilder() {
       return getMenu();
     }
@@ -9952,24 +10786,30 @@ public final class Common {
     private com.google.protobuf.Timestamp timestamp_;
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return Whether the timestamp field is set.
      */
+    @java.lang.Override
     public boolean hasTimestamp() {
       return timestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return The timestamp.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getTimestamp() {
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       return getTimestamp();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -9979,6 +10819,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (input_ != null) {
@@ -9993,6 +10834,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -10025,24 +10867,23 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.UssdHop other = (com.elarian.hera.proto.Common.UssdHop) obj;
 
-      boolean result = true;
-      result = result && (hasInput() == other.hasInput());
+      if (hasInput() != other.hasInput()) return false;
       if (hasInput()) {
-        result = result && getInput()
-            .equals(other.getInput());
+        if (!getInput()
+            .equals(other.getInput())) return false;
       }
-      result = result && (hasMenu() == other.hasMenu());
+      if (hasMenu() != other.hasMenu()) return false;
       if (hasMenu()) {
-        result = result && getMenu()
-            .equals(other.getMenu());
+        if (!getMenu()
+            .equals(other.getMenu())) return false;
       }
-      result = result && (hasTimestamp() == other.hasTimestamp());
+      if (hasTimestamp() != other.hasTimestamp()) return false;
       if (hasTimestamp()) {
-        result = result && getTimestamp()
-            .equals(other.getTimestamp());
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10139,6 +10980,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -10146,6 +10988,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.UssdHop prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -10169,6 +11012,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdHop_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdHop_fieldAccessorTable
@@ -10191,6 +11035,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (inputBuilder_ == null) {
@@ -10214,15 +11059,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdHop_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdHop getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.UssdHop.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdHop build() {
         com.elarian.hera.proto.Common.UssdHop result = buildPartial();
         if (!result.isInitialized()) {
@@ -10231,6 +11079,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdHop buildPartial() {
         com.elarian.hera.proto.Common.UssdHop result = new com.elarian.hera.proto.Common.UssdHop(this);
         if (inputBuilder_ == null) {
@@ -10252,32 +11101,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.UssdHop) {
           return mergeFrom((com.elarian.hera.proto.Common.UssdHop)other);
@@ -10303,10 +11159,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10325,17 +11183,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue input_ = null;
+      private com.google.protobuf.StringValue input_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> inputBuilder_;
       /**
        * <code>.google.protobuf.StringValue input = 1;</code>
+       * @return Whether the input field is set.
        */
       public boolean hasInput() {
         return inputBuilder_ != null || input_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue input = 1;</code>
+       * @return The input.
        */
       public com.google.protobuf.StringValue getInput() {
         if (inputBuilder_ == null) {
@@ -10442,17 +11302,19 @@ public final class Common {
         return inputBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.UssdMenu menu_ = null;
+      private com.elarian.hera.proto.Common.UssdMenu menu_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.UssdMenu, com.elarian.hera.proto.Common.UssdMenu.Builder, com.elarian.hera.proto.Common.UssdMenuOrBuilder> menuBuilder_;
       /**
        * <code>.com.elarian.hera.proto.UssdMenu menu = 2;</code>
+       * @return Whether the menu field is set.
        */
       public boolean hasMenu() {
         return menuBuilder_ != null || menu_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.UssdMenu menu = 2;</code>
+       * @return The menu.
        */
       public com.elarian.hera.proto.Common.UssdMenu getMenu() {
         if (menuBuilder_ == null) {
@@ -10559,17 +11421,19 @@ public final class Common {
         return menuBuilder_;
       }
 
-      private com.google.protobuf.Timestamp timestamp_ = null;
+      private com.google.protobuf.Timestamp timestamp_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * @return Whether the timestamp field is set.
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * @return The timestamp.
        */
       public com.google.protobuf.Timestamp getTimestamp() {
         if (timestampBuilder_ == null) {
@@ -10675,11 +11539,13 @@ public final class Common {
         }
         return timestampBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -10701,11 +11567,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<UssdHop>
         PARSER = new com.google.protobuf.AbstractParser<UssdHop>() {
+      @java.lang.Override
       public UssdHop parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new UssdHop(input, extensionRegistry);
+        return new UssdHop(input, extensionRegistry);
       }
     };
 
@@ -10718,6 +11585,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdHop getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -10730,19 +11598,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * @return The status.
      */
     com.elarian.hera.proto.Common.MessagingConsentStatus getStatus();
 
     /**
      * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
      * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -10753,7 +11625,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessagingConsentStateEntry}
    */
-  public  static final class MessagingConsentStateEntry extends
+  public static final class MessagingConsentStateEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingConsentStateEntry)
       MessagingConsentStateEntryOrBuilder {
@@ -10767,6 +11639,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessagingConsentStateEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -10776,7 +11655,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10787,13 +11668,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -10813,6 +11687,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -10830,6 +11711,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingConsentStateEntry_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingConsentStateEntry_fieldAccessorTable
@@ -10841,14 +11723,17 @@ public final class Common {
     private int status_;
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * @return The status.
      */
-    public com.elarian.hera.proto.Common.MessagingConsentStatus getStatus() {
+    @java.lang.Override public com.elarian.hera.proto.Common.MessagingConsentStatus getStatus() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.MessagingConsentStatus result = com.elarian.hera.proto.Common.MessagingConsentStatus.valueOf(status_);
       return result == null ? com.elarian.hera.proto.Common.MessagingConsentStatus.UNRECOGNIZED : result;
     }
@@ -10857,24 +11742,30 @@ public final class Common {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -10884,6 +11775,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (status_ != com.elarian.hera.proto.Common.MessagingConsentStatus.MESSAGING_CONSENT_STATUS_UNSPECIFIED.getNumber()) {
@@ -10895,6 +11787,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -10923,15 +11816,14 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.MessagingConsentStateEntry other = (com.elarian.hera.proto.Common.MessagingConsentStateEntry) obj;
 
-      boolean result = true;
-      result = result && status_ == other.status_;
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (status_ != other.status_) return false;
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11022,6 +11914,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -11029,6 +11922,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.MessagingConsentStateEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -11052,6 +11946,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingConsentStateEntry_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingConsentStateEntry_fieldAccessorTable
@@ -11074,6 +11969,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = 0;
@@ -11087,15 +11983,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingConsentStateEntry_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingConsentStateEntry getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.MessagingConsentStateEntry.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingConsentStateEntry build() {
         com.elarian.hera.proto.Common.MessagingConsentStateEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -11104,6 +12003,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingConsentStateEntry buildPartial() {
         com.elarian.hera.proto.Common.MessagingConsentStateEntry result = new com.elarian.hera.proto.Common.MessagingConsentStateEntry(this);
         result.status_ = status_;
@@ -11116,32 +12016,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.MessagingConsentStateEntry) {
           return mergeFrom((com.elarian.hera.proto.Common.MessagingConsentStateEntry)other);
@@ -11164,10 +12071,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11189,27 +12098,36 @@ public final class Common {
       private int status_ = 0;
       /**
        * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingConsentStatus getStatus() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.MessagingConsentStatus result = com.elarian.hera.proto.Common.MessagingConsentStatus.valueOf(status_);
         return result == null ? com.elarian.hera.proto.Common.MessagingConsentStatus.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(com.elarian.hera.proto.Common.MessagingConsentStatus value) {
         if (value == null) {
@@ -11222,6 +12140,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -11230,17 +12149,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 2;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -11346,11 +12267,13 @@ public final class Common {
         }
         return updatedAtBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -11372,11 +12295,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<MessagingConsentStateEntry>
         PARSER = new com.google.protobuf.AbstractParser<MessagingConsentStateEntry>() {
+      @java.lang.Override
       public MessagingConsentStateEntry parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MessagingConsentStateEntry(input, extensionRegistry);
+        return new MessagingConsentStateEntry(input, extensionRegistry);
       }
     };
 
@@ -11389,6 +12313,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingConsentStateEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -11401,10 +12326,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
@@ -11414,10 +12341,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
+     * @return Whether the expiration field is set.
      */
     boolean hasExpiration();
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
+     * @return The expiration.
      */
     com.google.protobuf.Timestamp getExpiration();
     /**
@@ -11428,7 +12357,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessagingSessionStateEntry}
    */
-  public  static final class MessagingSessionStateEntry extends
+  public static final class MessagingSessionStateEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingSessionStateEntry)
       MessagingSessionStateEntryOrBuilder {
@@ -11441,6 +12370,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessagingSessionStateEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -11450,7 +12386,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11461,13 +12399,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (startTime_ != null) {
@@ -11494,6 +12425,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11511,6 +12449,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingSessionStateEntry_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingSessionStateEntry_fieldAccessorTable
@@ -11522,19 +12461,24 @@ public final class Common {
     private com.google.protobuf.Timestamp startTime_;
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * @return Whether the startTime field is set.
      */
+    @java.lang.Override
     public boolean hasStartTime() {
       return startTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * @return The startTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getStartTime() {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
       return getStartTime();
     }
@@ -11543,24 +12487,30 @@ public final class Common {
     private com.google.protobuf.Timestamp expiration_;
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
+     * @return Whether the expiration field is set.
      */
+    @java.lang.Override
     public boolean hasExpiration() {
       return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
+     * @return The expiration.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getExpiration() {
       return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder() {
       return getExpiration();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -11570,6 +12520,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (startTime_ != null) {
@@ -11581,6 +12532,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -11609,19 +12561,18 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.MessagingSessionStateEntry other = (com.elarian.hera.proto.Common.MessagingSessionStateEntry) obj;
 
-      boolean result = true;
-      result = result && (hasStartTime() == other.hasStartTime());
+      if (hasStartTime() != other.hasStartTime()) return false;
       if (hasStartTime()) {
-        result = result && getStartTime()
-            .equals(other.getStartTime());
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
       }
-      result = result && (hasExpiration() == other.hasExpiration());
+      if (hasExpiration() != other.hasExpiration()) return false;
       if (hasExpiration()) {
-        result = result && getExpiration()
-            .equals(other.getExpiration());
+        if (!getExpiration()
+            .equals(other.getExpiration())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -11714,6 +12665,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -11721,6 +12673,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.MessagingSessionStateEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -11744,6 +12697,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingSessionStateEntry_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingSessionStateEntry_fieldAccessorTable
@@ -11766,6 +12720,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (startTimeBuilder_ == null) {
@@ -11783,15 +12738,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingSessionStateEntry_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingSessionStateEntry getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.MessagingSessionStateEntry.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingSessionStateEntry build() {
         com.elarian.hera.proto.Common.MessagingSessionStateEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -11800,6 +12758,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingSessionStateEntry buildPartial() {
         com.elarian.hera.proto.Common.MessagingSessionStateEntry result = new com.elarian.hera.proto.Common.MessagingSessionStateEntry(this);
         if (startTimeBuilder_ == null) {
@@ -11816,32 +12775,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.MessagingSessionStateEntry) {
           return mergeFrom((com.elarian.hera.proto.Common.MessagingSessionStateEntry)other);
@@ -11864,10 +12830,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11886,17 +12854,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.Timestamp startTime_ = null;
+      private com.google.protobuf.Timestamp startTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * @return The startTime.
        */
       public com.google.protobuf.Timestamp getStartTime() {
         if (startTimeBuilder_ == null) {
@@ -12003,17 +12973,19 @@ public final class Common {
         return startTimeBuilder_;
       }
 
-      private com.google.protobuf.Timestamp expiration_ = null;
+      private com.google.protobuf.Timestamp expiration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expirationBuilder_;
       /**
        * <code>.google.protobuf.Timestamp expiration = 2;</code>
+       * @return Whether the expiration field is set.
        */
       public boolean hasExpiration() {
         return expirationBuilder_ != null || expiration_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp expiration = 2;</code>
+       * @return The expiration.
        */
       public com.google.protobuf.Timestamp getExpiration() {
         if (expirationBuilder_ == null) {
@@ -12119,11 +13091,13 @@ public final class Common {
         }
         return expirationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -12145,11 +13119,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<MessagingSessionStateEntry>
         PARSER = new com.google.protobuf.AbstractParser<MessagingSessionStateEntry>() {
+      @java.lang.Override
       public MessagingSessionStateEntry parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MessagingSessionStateEntry(input, extensionRegistry);
+        return new MessagingSessionStateEntry(input, extensionRegistry);
       }
     };
 
@@ -12162,6 +13137,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingSessionStateEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -12174,10 +13150,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
     /**
@@ -12187,10 +13165,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
     /**
@@ -12200,10 +13180,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStateEntry consent_state = 3;</code>
+     * @return Whether the consentState field is set.
      */
     boolean hasConsentState();
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStateEntry consent_state = 3;</code>
+     * @return The consentState.
      */
     com.elarian.hera.proto.Common.MessagingConsentStateEntry getConsentState();
     /**
@@ -12213,10 +13195,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.MessagingSessionStateEntry active_session = 4;</code>
+     * @return Whether the activeSession field is set.
      */
     boolean hasActiveSession();
     /**
      * <code>.com.elarian.hera.proto.MessagingSessionStateEntry active_session = 4;</code>
+     * @return The activeSession.
      */
     com.elarian.hera.proto.Common.MessagingSessionStateEntry getActiveSession();
     /**
@@ -12227,7 +13211,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessagingChannelStateEntry}
    */
-  public  static final class MessagingChannelStateEntry extends
+  public static final class MessagingChannelStateEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingChannelStateEntry)
       MessagingChannelStateEntryOrBuilder {
@@ -12240,6 +13224,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessagingChannelStateEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -12249,7 +13240,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12260,13 +13253,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.CustomerNumber.Builder subBuilder = null;
               if (customerNumber_ != null) {
@@ -12319,6 +13305,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -12336,6 +13329,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelStateEntry_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelStateEntry_fieldAccessorTable
@@ -12347,19 +13341,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerNumber() {
       return customerNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
       return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumberOrBuilder() {
       return getCustomerNumber();
     }
@@ -12368,19 +13367,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
      */
+    @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumberOrBuilder getChannelNumberOrBuilder() {
       return getChannelNumber();
     }
@@ -12389,19 +13393,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.MessagingConsentStateEntry consentState_;
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStateEntry consent_state = 3;</code>
+     * @return Whether the consentState field is set.
      */
+    @java.lang.Override
     public boolean hasConsentState() {
       return consentState_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStateEntry consent_state = 3;</code>
+     * @return The consentState.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingConsentStateEntry getConsentState() {
       return consentState_ == null ? com.elarian.hera.proto.Common.MessagingConsentStateEntry.getDefaultInstance() : consentState_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingConsentStateEntry consent_state = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingConsentStateEntryOrBuilder getConsentStateOrBuilder() {
       return getConsentState();
     }
@@ -12410,24 +13419,30 @@ public final class Common {
     private com.elarian.hera.proto.Common.MessagingSessionStateEntry activeSession_;
     /**
      * <code>.com.elarian.hera.proto.MessagingSessionStateEntry active_session = 4;</code>
+     * @return Whether the activeSession field is set.
      */
+    @java.lang.Override
     public boolean hasActiveSession() {
       return activeSession_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingSessionStateEntry active_session = 4;</code>
+     * @return The activeSession.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingSessionStateEntry getActiveSession() {
       return activeSession_ == null ? com.elarian.hera.proto.Common.MessagingSessionStateEntry.getDefaultInstance() : activeSession_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingSessionStateEntry active_session = 4;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingSessionStateEntryOrBuilder getActiveSessionOrBuilder() {
       return getActiveSession();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -12437,6 +13452,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (customerNumber_ != null) {
@@ -12454,6 +13470,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -12490,29 +13507,28 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.MessagingChannelStateEntry other = (com.elarian.hera.proto.Common.MessagingChannelStateEntry) obj;
 
-      boolean result = true;
-      result = result && (hasCustomerNumber() == other.hasCustomerNumber());
+      if (hasCustomerNumber() != other.hasCustomerNumber()) return false;
       if (hasCustomerNumber()) {
-        result = result && getCustomerNumber()
-            .equals(other.getCustomerNumber());
+        if (!getCustomerNumber()
+            .equals(other.getCustomerNumber())) return false;
       }
-      result = result && (hasChannelNumber() == other.hasChannelNumber());
+      if (hasChannelNumber() != other.hasChannelNumber()) return false;
       if (hasChannelNumber()) {
-        result = result && getChannelNumber()
-            .equals(other.getChannelNumber());
+        if (!getChannelNumber()
+            .equals(other.getChannelNumber())) return false;
       }
-      result = result && (hasConsentState() == other.hasConsentState());
+      if (hasConsentState() != other.hasConsentState()) return false;
       if (hasConsentState()) {
-        result = result && getConsentState()
-            .equals(other.getConsentState());
+        if (!getConsentState()
+            .equals(other.getConsentState())) return false;
       }
-      result = result && (hasActiveSession() == other.hasActiveSession());
+      if (hasActiveSession() != other.hasActiveSession()) return false;
       if (hasActiveSession()) {
-        result = result && getActiveSession()
-            .equals(other.getActiveSession());
+        if (!getActiveSession()
+            .equals(other.getActiveSession())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -12613,6 +13629,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -12620,6 +13637,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.MessagingChannelStateEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -12643,6 +13661,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelStateEntry_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelStateEntry_fieldAccessorTable
@@ -12665,6 +13684,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (customerNumberBuilder_ == null) {
@@ -12694,15 +13714,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingChannelStateEntry_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannelStateEntry getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.MessagingChannelStateEntry.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannelStateEntry build() {
         com.elarian.hera.proto.Common.MessagingChannelStateEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -12711,6 +13734,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannelStateEntry buildPartial() {
         com.elarian.hera.proto.Common.MessagingChannelStateEntry result = new com.elarian.hera.proto.Common.MessagingChannelStateEntry(this);
         if (customerNumberBuilder_ == null) {
@@ -12737,32 +13761,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.MessagingChannelStateEntry) {
           return mergeFrom((com.elarian.hera.proto.Common.MessagingChannelStateEntry)other);
@@ -12791,10 +13822,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12813,17 +13846,19 @@ public final class Common {
         return this;
       }
 
-      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_ = null;
+      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder> customerNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       * @return Whether the customerNumber field is set.
        */
       public boolean hasCustomerNumber() {
         return customerNumberBuilder_ != null || customerNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       * @return The customerNumber.
        */
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         if (customerNumberBuilder_ == null) {
@@ -12930,17 +13965,19 @@ public final class Common {
         return customerNumberBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_ = null;
+      private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.MessagingChannelNumber, com.elarian.hera.proto.Common.MessagingChannelNumber.Builder, com.elarian.hera.proto.Common.MessagingChannelNumberOrBuilder> channelNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       * @return Whether the channelNumber field is set.
        */
       public boolean hasChannelNumber() {
         return channelNumberBuilder_ != null || channelNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       * @return The channelNumber.
        */
       public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
         if (channelNumberBuilder_ == null) {
@@ -13047,17 +14084,19 @@ public final class Common {
         return channelNumberBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.MessagingConsentStateEntry consentState_ = null;
+      private com.elarian.hera.proto.Common.MessagingConsentStateEntry consentState_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.MessagingConsentStateEntry, com.elarian.hera.proto.Common.MessagingConsentStateEntry.Builder, com.elarian.hera.proto.Common.MessagingConsentStateEntryOrBuilder> consentStateBuilder_;
       /**
        * <code>.com.elarian.hera.proto.MessagingConsentStateEntry consent_state = 3;</code>
+       * @return Whether the consentState field is set.
        */
       public boolean hasConsentState() {
         return consentStateBuilder_ != null || consentState_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingConsentStateEntry consent_state = 3;</code>
+       * @return The consentState.
        */
       public com.elarian.hera.proto.Common.MessagingConsentStateEntry getConsentState() {
         if (consentStateBuilder_ == null) {
@@ -13164,17 +14203,19 @@ public final class Common {
         return consentStateBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.MessagingSessionStateEntry activeSession_ = null;
+      private com.elarian.hera.proto.Common.MessagingSessionStateEntry activeSession_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.MessagingSessionStateEntry, com.elarian.hera.proto.Common.MessagingSessionStateEntry.Builder, com.elarian.hera.proto.Common.MessagingSessionStateEntryOrBuilder> activeSessionBuilder_;
       /**
        * <code>.com.elarian.hera.proto.MessagingSessionStateEntry active_session = 4;</code>
+       * @return Whether the activeSession field is set.
        */
       public boolean hasActiveSession() {
         return activeSessionBuilder_ != null || activeSession_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingSessionStateEntry active_session = 4;</code>
+       * @return The activeSession.
        */
       public com.elarian.hera.proto.Common.MessagingSessionStateEntry getActiveSession() {
         if (activeSessionBuilder_ == null) {
@@ -13280,11 +14321,13 @@ public final class Common {
         }
         return activeSessionBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -13306,11 +14349,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<MessagingChannelStateEntry>
         PARSER = new com.google.protobuf.AbstractParser<MessagingChannelStateEntry>() {
+      @java.lang.Override
       public MessagingChannelStateEntry parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MessagingChannelStateEntry(input, extensionRegistry);
+        return new MessagingChannelStateEntry(input, extensionRegistry);
       }
     };
 
@@ -13323,6 +14367,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelStateEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -13335,19 +14380,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The enum numeric value on the wire for direction.
      */
     int getDirectionValue();
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The direction.
      */
     com.elarian.hera.proto.Common.CustomerEventDirection getDirection();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
     /**
@@ -13357,10 +14406,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
+     * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
+     * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
     /**
@@ -13370,30 +14421,36 @@ public final class Common {
 
     /**
      * <code>string message_id = 4;</code>
+     * @return The messageId.
      */
     java.lang.String getMessageId();
     /**
      * <code>string message_id = 4;</code>
+     * @return The bytes for messageId.
      */
     com.google.protobuf.ByteString
         getMessageIdBytes();
 
     /**
      * <code>string product_id = 5;</code>
+     * @return The productId.
      */
     java.lang.String getProductId();
     /**
      * <code>string product_id = 5;</code>
+     * @return The bytes for productId.
      */
     com.google.protobuf.ByteString
         getProductIdBytes();
 
     /**
      * <code>.google.protobuf.StringValue text = 6;</code>
+     * @return Whether the text field is set.
      */
     boolean hasText();
     /**
      * <code>.google.protobuf.StringValue text = 6;</code>
+     * @return The text.
      */
     com.google.protobuf.StringValue getText();
     /**
@@ -13403,10 +14460,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 7;</code>
+     * @return Whether the template field is set.
      */
     boolean hasTemplate();
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 7;</code>
+     * @return The template.
      */
     com.elarian.hera.proto.Common.TextMessageTemplate getTemplate();
     /**
@@ -13440,10 +14499,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * @return Whether the location field is set.
      */
     boolean hasLocation();
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * @return The location.
      */
     com.elarian.hera.proto.Common.LocationMessageBody getLocation();
     /**
@@ -13453,10 +14514,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -13466,10 +14529,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -13479,17 +14544,19 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * @return The status.
      */
     com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessageStateEntry}
    */
-  public  static final class MessageStateEntry extends
+  public static final class MessageStateEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessageStateEntry)
       MessageStateEntryOrBuilder {
@@ -13507,6 +14574,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageStateEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -13516,6 +14590,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -13527,13 +14604,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -13605,9 +14675,9 @@ public final class Common {
               break;
             }
             case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 media_ = new java.util.ArrayList<com.elarian.hera.proto.Common.MediaMessageBody>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000001;
               }
               media_.add(
                   input.readMessage(com.elarian.hera.proto.Common.MediaMessageBody.parser(), extensionRegistry));
@@ -13658,6 +14728,13 @@ public final class Common {
               status_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -13666,7 +14743,7 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           media_ = java.util.Collections.unmodifiableList(media_);
         }
         this.unknownFields = unknownFields.build();
@@ -13678,6 +14755,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessageStateEntry_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessageStateEntry_fieldAccessorTable
@@ -13685,19 +14763,21 @@ public final class Common {
               com.elarian.hera.proto.Common.MessageStateEntry.class, com.elarian.hera.proto.Common.MessageStateEntry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DIRECTION_FIELD_NUMBER = 1;
     private int direction_;
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The enum numeric value on the wire for direction.
      */
-    public int getDirectionValue() {
+    @java.lang.Override public int getDirectionValue() {
       return direction_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The direction.
      */
-    public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+    @java.lang.Override public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.CustomerEventDirection result = com.elarian.hera.proto.Common.CustomerEventDirection.valueOf(direction_);
       return result == null ? com.elarian.hera.proto.Common.CustomerEventDirection.UNRECOGNIZED : result;
     }
@@ -13706,19 +14786,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return Whether the customerNumber field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerNumber() {
       return customerNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return The customerNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
       return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumberOrBuilder() {
       return getCustomerNumber();
     }
@@ -13727,19 +14812,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
+     * @return Whether the channelNumber field is set.
      */
+    @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
+     * @return The channelNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumberOrBuilder getChannelNumberOrBuilder() {
       return getChannelNumber();
     }
@@ -13748,7 +14838,9 @@ public final class Common {
     private volatile java.lang.Object messageId_;
     /**
      * <code>string message_id = 4;</code>
+     * @return The messageId.
      */
+    @java.lang.Override
     public java.lang.String getMessageId() {
       java.lang.Object ref = messageId_;
       if (ref instanceof java.lang.String) {
@@ -13763,7 +14855,9 @@ public final class Common {
     }
     /**
      * <code>string message_id = 4;</code>
+     * @return The bytes for messageId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMessageIdBytes() {
       java.lang.Object ref = messageId_;
@@ -13782,7 +14876,9 @@ public final class Common {
     private volatile java.lang.Object productId_;
     /**
      * <code>string product_id = 5;</code>
+     * @return The productId.
      */
+    @java.lang.Override
     public java.lang.String getProductId() {
       java.lang.Object ref = productId_;
       if (ref instanceof java.lang.String) {
@@ -13797,7 +14893,9 @@ public final class Common {
     }
     /**
      * <code>string product_id = 5;</code>
+     * @return The bytes for productId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getProductIdBytes() {
       java.lang.Object ref = productId_;
@@ -13816,19 +14914,24 @@ public final class Common {
     private com.google.protobuf.StringValue text_;
     /**
      * <code>.google.protobuf.StringValue text = 6;</code>
+     * @return Whether the text field is set.
      */
+    @java.lang.Override
     public boolean hasText() {
       return text_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue text = 6;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getText() {
       return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
     }
     /**
      * <code>.google.protobuf.StringValue text = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
       return getText();
     }
@@ -13837,19 +14940,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.TextMessageTemplate template_;
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 7;</code>
+     * @return Whether the template field is set.
      */
+    @java.lang.Override
     public boolean hasTemplate() {
       return template_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 7;</code>
+     * @return The template.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.TextMessageTemplate getTemplate() {
       return template_ == null ? com.elarian.hera.proto.Common.TextMessageTemplate.getDefaultInstance() : template_;
     }
     /**
      * <code>.com.elarian.hera.proto.TextMessageTemplate template = 7;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.TextMessageTemplateOrBuilder getTemplateOrBuilder() {
       return getTemplate();
     }
@@ -13859,12 +14967,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.MediaMessageBody> getMediaList() {
       return media_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder> 
         getMediaOrBuilderList() {
       return media_;
@@ -13872,18 +14982,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
      */
+    @java.lang.Override
     public int getMediaCount() {
       return media_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MediaMessageBody getMedia(int index) {
       return media_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder getMediaOrBuilder(
         int index) {
       return media_.get(index);
@@ -13893,19 +15006,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.LocationMessageBody location_;
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * @return Whether the location field is set.
      */
+    @java.lang.Override
     public boolean hasLocation() {
       return location_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * @return The location.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.LocationMessageBody getLocation() {
       return location_ == null ? com.elarian.hera.proto.Common.LocationMessageBody.getDefaultInstance() : location_;
     }
     /**
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.LocationMessageBodyOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
@@ -13914,19 +15032,24 @@ public final class Common {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -13935,19 +15058,24 @@ public final class Common {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
@@ -13956,19 +15084,23 @@ public final class Common {
     private int status_;
     /**
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * @return The status.
      */
-    public com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus() {
+    @java.lang.Override public com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.MessageDeliveryStatus result = com.elarian.hera.proto.Common.MessageDeliveryStatus.valueOf(status_);
       return result == null ? com.elarian.hera.proto.Common.MessageDeliveryStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -13978,6 +15110,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (direction_ != com.elarian.hera.proto.Common.CustomerEventDirection.CUSTOMER_EVENT_DIRECTION_UNSPECIFIED.getNumber()) {
@@ -14019,6 +15152,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -14085,52 +15219,51 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.MessageStateEntry other = (com.elarian.hera.proto.Common.MessageStateEntry) obj;
 
-      boolean result = true;
-      result = result && direction_ == other.direction_;
-      result = result && (hasCustomerNumber() == other.hasCustomerNumber());
+      if (direction_ != other.direction_) return false;
+      if (hasCustomerNumber() != other.hasCustomerNumber()) return false;
       if (hasCustomerNumber()) {
-        result = result && getCustomerNumber()
-            .equals(other.getCustomerNumber());
+        if (!getCustomerNumber()
+            .equals(other.getCustomerNumber())) return false;
       }
-      result = result && (hasChannelNumber() == other.hasChannelNumber());
+      if (hasChannelNumber() != other.hasChannelNumber()) return false;
       if (hasChannelNumber()) {
-        result = result && getChannelNumber()
-            .equals(other.getChannelNumber());
+        if (!getChannelNumber()
+            .equals(other.getChannelNumber())) return false;
       }
-      result = result && getMessageId()
-          .equals(other.getMessageId());
-      result = result && getProductId()
-          .equals(other.getProductId());
-      result = result && (hasText() == other.hasText());
+      if (!getMessageId()
+          .equals(other.getMessageId())) return false;
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (hasText() != other.hasText()) return false;
       if (hasText()) {
-        result = result && getText()
-            .equals(other.getText());
+        if (!getText()
+            .equals(other.getText())) return false;
       }
-      result = result && (hasTemplate() == other.hasTemplate());
+      if (hasTemplate() != other.hasTemplate()) return false;
       if (hasTemplate()) {
-        result = result && getTemplate()
-            .equals(other.getTemplate());
+        if (!getTemplate()
+            .equals(other.getTemplate())) return false;
       }
-      result = result && getMediaList()
-          .equals(other.getMediaList());
-      result = result && (hasLocation() == other.hasLocation());
+      if (!getMediaList()
+          .equals(other.getMediaList())) return false;
+      if (hasLocation() != other.hasLocation()) return false;
       if (hasLocation()) {
-        result = result && getLocation()
-            .equals(other.getLocation());
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
       }
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && status_ == other.status_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (status_ != other.status_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -14255,6 +15388,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -14262,6 +15396,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.MessageStateEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -14285,6 +15420,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessageStateEntry_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessageStateEntry_fieldAccessorTable
@@ -14308,6 +15444,7 @@ public final class Common {
           getMediaFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         direction_ = 0;
@@ -14342,7 +15479,7 @@ public final class Common {
         }
         if (mediaBuilder_ == null) {
           media_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           mediaBuilder_.clear();
         }
@@ -14369,15 +15506,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessageStateEntry_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessageStateEntry getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.MessageStateEntry.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessageStateEntry build() {
         com.elarian.hera.proto.Common.MessageStateEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -14386,10 +15526,10 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessageStateEntry buildPartial() {
         com.elarian.hera.proto.Common.MessageStateEntry result = new com.elarian.hera.proto.Common.MessageStateEntry(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.direction_ = direction_;
         if (customerNumberBuilder_ == null) {
           result.customerNumber_ = customerNumber_;
@@ -14414,9 +15554,9 @@ public final class Common {
           result.template_ = templateBuilder_.build();
         }
         if (mediaBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             media_ = java.util.Collections.unmodifiableList(media_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.media_ = media_;
         } else {
@@ -14438,37 +15578,43 @@ public final class Common {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
         result.status_ = status_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.MessageStateEntry) {
           return mergeFrom((com.elarian.hera.proto.Common.MessageStateEntry)other);
@@ -14507,7 +15653,7 @@ public final class Common {
           if (!other.media_.isEmpty()) {
             if (media_.isEmpty()) {
               media_ = other.media_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureMediaIsMutable();
               media_.addAll(other.media_);
@@ -14520,7 +15666,7 @@ public final class Common {
               mediaBuilder_.dispose();
               mediaBuilder_ = null;
               media_ = other.media_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000001);
               mediaBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getMediaFieldBuilder() : null;
@@ -14546,10 +15692,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14572,27 +15720,36 @@ public final class Common {
       private int direction_ = 0;
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return The enum numeric value on the wire for direction.
        */
-      public int getDirectionValue() {
+      @java.lang.Override public int getDirectionValue() {
         return direction_;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @param value The enum numeric value on the wire for direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirectionValue(int value) {
+        
         direction_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return The direction.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.CustomerEventDirection result = com.elarian.hera.proto.Common.CustomerEventDirection.valueOf(direction_);
         return result == null ? com.elarian.hera.proto.Common.CustomerEventDirection.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @param value The direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirection(com.elarian.hera.proto.Common.CustomerEventDirection value) {
         if (value == null) {
@@ -14605,6 +15762,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDirection() {
         
@@ -14613,17 +15771,19 @@ public final class Common {
         return this;
       }
 
-      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_ = null;
+      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder> customerNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+       * @return Whether the customerNumber field is set.
        */
       public boolean hasCustomerNumber() {
         return customerNumberBuilder_ != null || customerNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+       * @return The customerNumber.
        */
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         if (customerNumberBuilder_ == null) {
@@ -14730,17 +15890,19 @@ public final class Common {
         return customerNumberBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_ = null;
+      private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.MessagingChannelNumber, com.elarian.hera.proto.Common.MessagingChannelNumber.Builder, com.elarian.hera.proto.Common.MessagingChannelNumberOrBuilder> channelNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
+       * @return Whether the channelNumber field is set.
        */
       public boolean hasChannelNumber() {
         return channelNumberBuilder_ != null || channelNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
+       * @return The channelNumber.
        */
       public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
         if (channelNumberBuilder_ == null) {
@@ -14850,6 +16012,7 @@ public final class Common {
       private java.lang.Object messageId_ = "";
       /**
        * <code>string message_id = 4;</code>
+       * @return The messageId.
        */
       public java.lang.String getMessageId() {
         java.lang.Object ref = messageId_;
@@ -14865,6 +16028,7 @@ public final class Common {
       }
       /**
        * <code>string message_id = 4;</code>
+       * @return The bytes for messageId.
        */
       public com.google.protobuf.ByteString
           getMessageIdBytes() {
@@ -14881,6 +16045,8 @@ public final class Common {
       }
       /**
        * <code>string message_id = 4;</code>
+       * @param value The messageId to set.
+       * @return This builder for chaining.
        */
       public Builder setMessageId(
           java.lang.String value) {
@@ -14894,6 +16060,7 @@ public final class Common {
       }
       /**
        * <code>string message_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMessageId() {
         
@@ -14903,6 +16070,8 @@ public final class Common {
       }
       /**
        * <code>string message_id = 4;</code>
+       * @param value The bytes for messageId to set.
+       * @return This builder for chaining.
        */
       public Builder setMessageIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14919,6 +16088,7 @@ public final class Common {
       private java.lang.Object productId_ = "";
       /**
        * <code>string product_id = 5;</code>
+       * @return The productId.
        */
       public java.lang.String getProductId() {
         java.lang.Object ref = productId_;
@@ -14934,6 +16104,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
           getProductIdBytes() {
@@ -14950,6 +16121,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductId(
           java.lang.String value) {
@@ -14963,6 +16136,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductId() {
         
@@ -14972,6 +16146,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @param value The bytes for productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14985,17 +16161,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue text_ = null;
+      private com.google.protobuf.StringValue text_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> textBuilder_;
       /**
        * <code>.google.protobuf.StringValue text = 6;</code>
+       * @return Whether the text field is set.
        */
       public boolean hasText() {
         return textBuilder_ != null || text_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue text = 6;</code>
+       * @return The text.
        */
       public com.google.protobuf.StringValue getText() {
         if (textBuilder_ == null) {
@@ -15102,17 +16280,19 @@ public final class Common {
         return textBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.TextMessageTemplate template_ = null;
+      private com.elarian.hera.proto.Common.TextMessageTemplate template_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.TextMessageTemplate, com.elarian.hera.proto.Common.TextMessageTemplate.Builder, com.elarian.hera.proto.Common.TextMessageTemplateOrBuilder> templateBuilder_;
       /**
        * <code>.com.elarian.hera.proto.TextMessageTemplate template = 7;</code>
+       * @return Whether the template field is set.
        */
       public boolean hasTemplate() {
         return templateBuilder_ != null || template_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.TextMessageTemplate template = 7;</code>
+       * @return The template.
        */
       public com.elarian.hera.proto.Common.TextMessageTemplate getTemplate() {
         if (templateBuilder_ == null) {
@@ -15222,9 +16402,9 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.MediaMessageBody> media_ =
         java.util.Collections.emptyList();
       private void ensureMediaIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           media_ = new java.util.ArrayList<com.elarian.hera.proto.Common.MediaMessageBody>(media_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -15374,7 +16554,7 @@ public final class Common {
       public Builder clearMedia() {
         if (mediaBuilder_ == null) {
           media_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           mediaBuilder_.clear();
@@ -15451,7 +16631,7 @@ public final class Common {
           mediaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.MediaMessageBody, com.elarian.hera.proto.Common.MediaMessageBody.Builder, com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder>(
                   media_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           media_ = null;
@@ -15459,17 +16639,19 @@ public final class Common {
         return mediaBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.LocationMessageBody location_ = null;
+      private com.elarian.hera.proto.Common.LocationMessageBody location_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.LocationMessageBody, com.elarian.hera.proto.Common.LocationMessageBody.Builder, com.elarian.hera.proto.Common.LocationMessageBodyOrBuilder> locationBuilder_;
       /**
        * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+       * @return Whether the location field is set.
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+       * @return The location.
        */
       public com.elarian.hera.proto.Common.LocationMessageBody getLocation() {
         if (locationBuilder_ == null) {
@@ -15576,17 +16758,19 @@ public final class Common {
         return locationBuilder_;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -15693,17 +16877,19 @@ public final class Common {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -15813,27 +16999,36 @@ public final class Common {
       private int status_ = 0;
       /**
        * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
        * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.MessageDeliveryStatus result = com.elarian.hera.proto.Common.MessageDeliveryStatus.valueOf(status_);
         return result == null ? com.elarian.hera.proto.Common.MessageDeliveryStatus.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(com.elarian.hera.proto.Common.MessageDeliveryStatus value) {
         if (value == null) {
@@ -15846,6 +17041,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -15853,11 +17049,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -15879,11 +17077,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<MessageStateEntry>
         PARSER = new com.google.protobuf.AbstractParser<MessageStateEntry>() {
+      @java.lang.Override
       public MessageStateEntry parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MessageStateEntry(input, extensionRegistry);
+        return new MessageStateEntry(input, extensionRegistry);
       }
     };
 
@@ -15896,6 +17095,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessageStateEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -16005,7 +17205,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessagingState}
    */
-  public  static final class MessagingState extends
+  public static final class MessagingState extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingState)
       MessagingStateOrBuilder {
@@ -16022,6 +17222,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessagingState();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -16031,6 +17238,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -16042,15 +17252,8 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 channelState_ = new java.util.ArrayList<com.elarian.hera.proto.Common.MessagingChannelStateEntry>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -16059,7 +17262,7 @@ public final class Common {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 messages_ = new java.util.ArrayList<com.elarian.hera.proto.Common.MessageStateEntry>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -16068,7 +17271,7 @@ public final class Common {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -16077,12 +17280,19 @@ public final class Common {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 channelNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.MessagingChannelNumber>();
                 mutable_bitField0_ |= 0x00000008;
               }
               channelNumbers_.add(
                   input.readMessage(com.elarian.hera.proto.Common.MessagingChannelNumber.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -16093,16 +17303,16 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           channelState_ = java.util.Collections.unmodifiableList(channelState_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           messages_ = java.util.Collections.unmodifiableList(messages_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           channelNumbers_ = java.util.Collections.unmodifiableList(channelNumbers_);
         }
         this.unknownFields = unknownFields.build();
@@ -16114,6 +17324,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingState_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingState_fieldAccessorTable
@@ -16126,12 +17337,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelStateEntry channel_state = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.MessagingChannelStateEntry> getChannelStateList() {
       return channelState_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelStateEntry channel_state = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.MessagingChannelStateEntryOrBuilder> 
         getChannelStateOrBuilderList() {
       return channelState_;
@@ -16139,18 +17352,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelStateEntry channel_state = 1;</code>
      */
+    @java.lang.Override
     public int getChannelStateCount() {
       return channelState_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelStateEntry channel_state = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelStateEntry getChannelState(int index) {
       return channelState_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelStateEntry channel_state = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelStateEntryOrBuilder getChannelStateOrBuilder(
         int index) {
       return channelState_.get(index);
@@ -16161,12 +17377,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.MessageStateEntry messages = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.MessageStateEntry> getMessagesList() {
       return messages_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessageStateEntry messages = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.MessageStateEntryOrBuilder> 
         getMessagesOrBuilderList() {
       return messages_;
@@ -16174,18 +17392,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.MessageStateEntry messages = 2;</code>
      */
+    @java.lang.Override
     public int getMessagesCount() {
       return messages_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessageStateEntry messages = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessageStateEntry getMessages(int index) {
       return messages_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessageStateEntry messages = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessageStateEntryOrBuilder getMessagesOrBuilder(
         int index) {
       return messages_.get(index);
@@ -16196,12 +17417,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerNumber> getCustomerNumbersList() {
       return customerNumbers_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerNumberOrBuilder> 
         getCustomerNumbersOrBuilderList() {
       return customerNumbers_;
@@ -16209,18 +17432,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 3;</code>
      */
+    @java.lang.Override
     public int getCustomerNumbersCount() {
       return customerNumbers_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumbers(int index) {
       return customerNumbers_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumbersOrBuilder(
         int index) {
       return customerNumbers_.get(index);
@@ -16231,12 +17457,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelNumber channel_numbers = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.MessagingChannelNumber> getChannelNumbersList() {
       return channelNumbers_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelNumber channel_numbers = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.MessagingChannelNumberOrBuilder> 
         getChannelNumbersOrBuilderList() {
       return channelNumbers_;
@@ -16244,24 +17472,28 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelNumber channel_numbers = 4;</code>
      */
+    @java.lang.Override
     public int getChannelNumbersCount() {
       return channelNumbers_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelNumber channel_numbers = 4;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumbers(int index) {
       return channelNumbers_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.MessagingChannelNumber channel_numbers = 4;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumberOrBuilder getChannelNumbersOrBuilder(
         int index) {
       return channelNumbers_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -16271,6 +17503,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < channelState_.size(); i++) {
@@ -16288,6 +17521,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -16324,17 +17558,16 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.MessagingState other = (com.elarian.hera.proto.Common.MessagingState) obj;
 
-      boolean result = true;
-      result = result && getChannelStateList()
-          .equals(other.getChannelStateList());
-      result = result && getMessagesList()
-          .equals(other.getMessagesList());
-      result = result && getCustomerNumbersList()
-          .equals(other.getCustomerNumbersList());
-      result = result && getChannelNumbersList()
-          .equals(other.getChannelNumbersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getChannelStateList()
+          .equals(other.getChannelStateList())) return false;
+      if (!getMessagesList()
+          .equals(other.getMessagesList())) return false;
+      if (!getCustomerNumbersList()
+          .equals(other.getCustomerNumbersList())) return false;
+      if (!getChannelNumbersList()
+          .equals(other.getChannelNumbersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -16435,6 +17668,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -16442,6 +17676,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.MessagingState prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -16465,6 +17700,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingState_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingState_fieldAccessorTable
@@ -16491,6 +17727,7 @@ public final class Common {
           getChannelNumbersFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (channelStateBuilder_ == null) {
@@ -16520,15 +17757,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_MessagingState_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingState getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.MessagingState.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingState build() {
         com.elarian.hera.proto.Common.MessagingState result = buildPartial();
         if (!result.isInitialized()) {
@@ -16537,11 +17777,12 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingState buildPartial() {
         com.elarian.hera.proto.Common.MessagingState result = new com.elarian.hera.proto.Common.MessagingState(this);
         int from_bitField0_ = bitField0_;
         if (channelStateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             channelState_ = java.util.Collections.unmodifiableList(channelState_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -16550,7 +17791,7 @@ public final class Common {
           result.channelState_ = channelStateBuilder_.build();
         }
         if (messagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             messages_ = java.util.Collections.unmodifiableList(messages_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -16559,7 +17800,7 @@ public final class Common {
           result.messages_ = messagesBuilder_.build();
         }
         if (customerNumbersBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -16568,7 +17809,7 @@ public final class Common {
           result.customerNumbers_ = customerNumbersBuilder_.build();
         }
         if (channelNumbersBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             channelNumbers_ = java.util.Collections.unmodifiableList(channelNumbers_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -16580,32 +17821,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.MessagingState) {
           return mergeFrom((com.elarian.hera.proto.Common.MessagingState)other);
@@ -16726,10 +17974,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16752,7 +18002,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.MessagingChannelStateEntry> channelState_ =
         java.util.Collections.emptyList();
       private void ensureChannelStateIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           channelState_ = new java.util.ArrayList<com.elarian.hera.proto.Common.MessagingChannelStateEntry>(channelState_);
           bitField0_ |= 0x00000001;
          }
@@ -16981,7 +18231,7 @@ public final class Common {
           channelStateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.MessagingChannelStateEntry, com.elarian.hera.proto.Common.MessagingChannelStateEntry.Builder, com.elarian.hera.proto.Common.MessagingChannelStateEntryOrBuilder>(
                   channelState_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           channelState_ = null;
@@ -16992,7 +18242,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.MessageStateEntry> messages_ =
         java.util.Collections.emptyList();
       private void ensureMessagesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           messages_ = new java.util.ArrayList<com.elarian.hera.proto.Common.MessageStateEntry>(messages_);
           bitField0_ |= 0x00000002;
          }
@@ -17221,7 +18471,7 @@ public final class Common {
           messagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.MessageStateEntry, com.elarian.hera.proto.Common.MessageStateEntry.Builder, com.elarian.hera.proto.Common.MessageStateEntryOrBuilder>(
                   messages_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           messages_ = null;
@@ -17232,7 +18482,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.CustomerNumber> customerNumbers_ =
         java.util.Collections.emptyList();
       private void ensureCustomerNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>(customerNumbers_);
           bitField0_ |= 0x00000004;
          }
@@ -17461,7 +18711,7 @@ public final class Common {
           customerNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder>(
                   customerNumbers_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           customerNumbers_ = null;
@@ -17472,7 +18722,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.MessagingChannelNumber> channelNumbers_ =
         java.util.Collections.emptyList();
       private void ensureChannelNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           channelNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.MessagingChannelNumber>(channelNumbers_);
           bitField0_ |= 0x00000008;
          }
@@ -17701,18 +18951,20 @@ public final class Common {
           channelNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.MessagingChannelNumber, com.elarian.hera.proto.Common.MessagingChannelNumber.Builder, com.elarian.hera.proto.Common.MessagingChannelNumberOrBuilder>(
                   channelNumbers_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           channelNumbers_ = null;
         }
         return channelNumbersBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -17734,11 +18986,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<MessagingState>
         PARSER = new com.google.protobuf.AbstractParser<MessagingState>() {
+      @java.lang.Override
       public MessagingState parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MessagingState(input, extensionRegistry);
+        return new MessagingState(input, extensionRegistry);
       }
     };
 
@@ -17751,6 +19004,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -17763,10 +19017,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
     /**
@@ -17776,30 +19032,36 @@ public final class Common {
 
     /**
      * <code>string channel_number = 2;</code>
+     * @return The channelNumber.
      */
     java.lang.String getChannelNumber();
     /**
      * <code>string channel_number = 2;</code>
+     * @return The bytes for channelNumber.
      */
     com.google.protobuf.ByteString
         getChannelNumberBytes();
 
     /**
      * <code>string session_id = 3;</code>
+     * @return The sessionId.
      */
     java.lang.String getSessionId();
     /**
      * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
      */
     com.google.protobuf.ByteString
         getSessionIdBytes();
 
     /**
      * <code>string product_id = 4;</code>
+     * @return The productId.
      */
     java.lang.String getProductId();
     /**
      * <code>string product_id = 4;</code>
+     * @return The bytes for productId.
      */
     com.google.protobuf.ByteString
         getProductIdBytes();
@@ -17830,10 +19092,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -17843,10 +19107,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -17857,7 +19123,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.UssdSessionStateEntry}
    */
-  public  static final class UssdSessionStateEntry extends
+  public static final class UssdSessionStateEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdSessionStateEntry)
       UssdSessionStateEntryOrBuilder {
@@ -17874,6 +19140,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UssdSessionStateEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -17883,6 +19156,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -17894,13 +19170,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.CustomerNumber.Builder subBuilder = null;
               if (customerNumber_ != null) {
@@ -17933,9 +19202,9 @@ public final class Common {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 hops_ = new java.util.ArrayList<com.elarian.hera.proto.Common.UssdHop>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000001;
               }
               hops_.add(
                   input.readMessage(com.elarian.hera.proto.Common.UssdHop.parser(), extensionRegistry));
@@ -17967,6 +19236,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -17975,7 +19251,7 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           hops_ = java.util.Collections.unmodifiableList(hops_);
         }
         this.unknownFields = unknownFields.build();
@@ -17987,6 +19263,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdSessionStateEntry_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdSessionStateEntry_fieldAccessorTable
@@ -17994,24 +19271,28 @@ public final class Common {
               com.elarian.hera.proto.Common.UssdSessionStateEntry.class, com.elarian.hera.proto.Common.UssdSessionStateEntry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
     private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerNumber() {
       return customerNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
       return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumberOrBuilder() {
       return getCustomerNumber();
     }
@@ -18020,7 +19301,9 @@ public final class Common {
     private volatile java.lang.Object channelNumber_;
     /**
      * <code>string channel_number = 2;</code>
+     * @return The channelNumber.
      */
+    @java.lang.Override
     public java.lang.String getChannelNumber() {
       java.lang.Object ref = channelNumber_;
       if (ref instanceof java.lang.String) {
@@ -18035,7 +19318,9 @@ public final class Common {
     }
     /**
      * <code>string channel_number = 2;</code>
+     * @return The bytes for channelNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getChannelNumberBytes() {
       java.lang.Object ref = channelNumber_;
@@ -18054,7 +19339,9 @@ public final class Common {
     private volatile java.lang.Object sessionId_;
     /**
      * <code>string session_id = 3;</code>
+     * @return The sessionId.
      */
+    @java.lang.Override
     public java.lang.String getSessionId() {
       java.lang.Object ref = sessionId_;
       if (ref instanceof java.lang.String) {
@@ -18069,7 +19356,9 @@ public final class Common {
     }
     /**
      * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSessionIdBytes() {
       java.lang.Object ref = sessionId_;
@@ -18088,7 +19377,9 @@ public final class Common {
     private volatile java.lang.Object productId_;
     /**
      * <code>string product_id = 4;</code>
+     * @return The productId.
      */
+    @java.lang.Override
     public java.lang.String getProductId() {
       java.lang.Object ref = productId_;
       if (ref instanceof java.lang.String) {
@@ -18103,7 +19394,9 @@ public final class Common {
     }
     /**
      * <code>string product_id = 4;</code>
+     * @return The bytes for productId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getProductIdBytes() {
       java.lang.Object ref = productId_;
@@ -18123,12 +19416,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.UssdHop hops = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.UssdHop> getHopsList() {
       return hops_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.UssdHop hops = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.UssdHopOrBuilder> 
         getHopsOrBuilderList() {
       return hops_;
@@ -18136,18 +19431,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.UssdHop hops = 5;</code>
      */
+    @java.lang.Override
     public int getHopsCount() {
       return hops_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.UssdHop hops = 5;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdHop getHops(int index) {
       return hops_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.UssdHop hops = 5;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdHopOrBuilder getHopsOrBuilder(
         int index) {
       return hops_.get(index);
@@ -18157,19 +19455,24 @@ public final class Common {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -18178,24 +19481,30 @@ public final class Common {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -18205,6 +19514,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (customerNumber_ != null) {
@@ -18231,6 +19541,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -18276,32 +19587,31 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.UssdSessionStateEntry other = (com.elarian.hera.proto.Common.UssdSessionStateEntry) obj;
 
-      boolean result = true;
-      result = result && (hasCustomerNumber() == other.hasCustomerNumber());
+      if (hasCustomerNumber() != other.hasCustomerNumber()) return false;
       if (hasCustomerNumber()) {
-        result = result && getCustomerNumber()
-            .equals(other.getCustomerNumber());
+        if (!getCustomerNumber()
+            .equals(other.getCustomerNumber())) return false;
       }
-      result = result && getChannelNumber()
-          .equals(other.getChannelNumber());
-      result = result && getSessionId()
-          .equals(other.getSessionId());
-      result = result && getProductId()
-          .equals(other.getProductId());
-      result = result && getHopsList()
-          .equals(other.getHopsList());
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (!getChannelNumber()
+          .equals(other.getChannelNumber())) return false;
+      if (!getSessionId()
+          .equals(other.getSessionId())) return false;
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (!getHopsList()
+          .equals(other.getHopsList())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -18408,6 +19718,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -18415,6 +19726,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.UssdSessionStateEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -18438,6 +19750,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdSessionStateEntry_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdSessionStateEntry_fieldAccessorTable
@@ -18461,6 +19774,7 @@ public final class Common {
           getHopsFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (customerNumberBuilder_ == null) {
@@ -18477,7 +19791,7 @@ public final class Common {
 
         if (hopsBuilder_ == null) {
           hops_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           hopsBuilder_.clear();
         }
@@ -18496,15 +19810,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdSessionStateEntry_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdSessionStateEntry getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.UssdSessionStateEntry.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdSessionStateEntry build() {
         com.elarian.hera.proto.Common.UssdSessionStateEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -18513,10 +19830,10 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdSessionStateEntry buildPartial() {
         com.elarian.hera.proto.Common.UssdSessionStateEntry result = new com.elarian.hera.proto.Common.UssdSessionStateEntry(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (customerNumberBuilder_ == null) {
           result.customerNumber_ = customerNumber_;
         } else {
@@ -18526,9 +19843,9 @@ public final class Common {
         result.sessionId_ = sessionId_;
         result.productId_ = productId_;
         if (hopsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             hops_ = java.util.Collections.unmodifiableList(hops_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.hops_ = hops_;
         } else {
@@ -18544,37 +19861,43 @@ public final class Common {
         } else {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.UssdSessionStateEntry) {
           return mergeFrom((com.elarian.hera.proto.Common.UssdSessionStateEntry)other);
@@ -18605,7 +19928,7 @@ public final class Common {
           if (!other.hops_.isEmpty()) {
             if (hops_.isEmpty()) {
               hops_ = other.hops_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureHopsIsMutable();
               hops_.addAll(other.hops_);
@@ -18618,7 +19941,7 @@ public final class Common {
               hopsBuilder_.dispose();
               hopsBuilder_ = null;
               hops_ = other.hops_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
               hopsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHopsFieldBuilder() : null;
@@ -18638,10 +19961,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -18661,17 +19986,19 @@ public final class Common {
       }
       private int bitField0_;
 
-      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_ = null;
+      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder> customerNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       * @return Whether the customerNumber field is set.
        */
       public boolean hasCustomerNumber() {
         return customerNumberBuilder_ != null || customerNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       * @return The customerNumber.
        */
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         if (customerNumberBuilder_ == null) {
@@ -18781,6 +20108,7 @@ public final class Common {
       private java.lang.Object channelNumber_ = "";
       /**
        * <code>string channel_number = 2;</code>
+       * @return The channelNumber.
        */
       public java.lang.String getChannelNumber() {
         java.lang.Object ref = channelNumber_;
@@ -18796,6 +20124,7 @@ public final class Common {
       }
       /**
        * <code>string channel_number = 2;</code>
+       * @return The bytes for channelNumber.
        */
       public com.google.protobuf.ByteString
           getChannelNumberBytes() {
@@ -18812,6 +20141,8 @@ public final class Common {
       }
       /**
        * <code>string channel_number = 2;</code>
+       * @param value The channelNumber to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelNumber(
           java.lang.String value) {
@@ -18825,6 +20156,7 @@ public final class Common {
       }
       /**
        * <code>string channel_number = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearChannelNumber() {
         
@@ -18834,6 +20166,8 @@ public final class Common {
       }
       /**
        * <code>string channel_number = 2;</code>
+       * @param value The bytes for channelNumber to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelNumberBytes(
           com.google.protobuf.ByteString value) {
@@ -18850,6 +20184,7 @@ public final class Common {
       private java.lang.Object sessionId_ = "";
       /**
        * <code>string session_id = 3;</code>
+       * @return The sessionId.
        */
       public java.lang.String getSessionId() {
         java.lang.Object ref = sessionId_;
@@ -18865,6 +20200,7 @@ public final class Common {
       }
       /**
        * <code>string session_id = 3;</code>
+       * @return The bytes for sessionId.
        */
       public com.google.protobuf.ByteString
           getSessionIdBytes() {
@@ -18881,6 +20217,8 @@ public final class Common {
       }
       /**
        * <code>string session_id = 3;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
        */
       public Builder setSessionId(
           java.lang.String value) {
@@ -18894,6 +20232,7 @@ public final class Common {
       }
       /**
        * <code>string session_id = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSessionId() {
         
@@ -18903,6 +20242,8 @@ public final class Common {
       }
       /**
        * <code>string session_id = 3;</code>
+       * @param value The bytes for sessionId to set.
+       * @return This builder for chaining.
        */
       public Builder setSessionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18919,6 +20260,7 @@ public final class Common {
       private java.lang.Object productId_ = "";
       /**
        * <code>string product_id = 4;</code>
+       * @return The productId.
        */
       public java.lang.String getProductId() {
         java.lang.Object ref = productId_;
@@ -18934,6 +20276,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 4;</code>
+       * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
           getProductIdBytes() {
@@ -18950,6 +20293,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 4;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductId(
           java.lang.String value) {
@@ -18963,6 +20308,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductId() {
         
@@ -18972,6 +20318,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 4;</code>
+       * @param value The bytes for productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIdBytes(
           com.google.protobuf.ByteString value) {
@@ -18988,9 +20336,9 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.UssdHop> hops_ =
         java.util.Collections.emptyList();
       private void ensureHopsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           hops_ = new java.util.ArrayList<com.elarian.hera.proto.Common.UssdHop>(hops_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -19140,7 +20488,7 @@ public final class Common {
       public Builder clearHops() {
         if (hopsBuilder_ == null) {
           hops_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           hopsBuilder_.clear();
@@ -19217,7 +20565,7 @@ public final class Common {
           hopsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.UssdHop, com.elarian.hera.proto.Common.UssdHop.Builder, com.elarian.hera.proto.Common.UssdHopOrBuilder>(
                   hops_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           hops_ = null;
@@ -19225,17 +20573,19 @@ public final class Common {
         return hopsBuilder_;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -19342,17 +20692,19 @@ public final class Common {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -19458,11 +20810,13 @@ public final class Common {
         }
         return updatedAtBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -19484,11 +20838,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<UssdSessionStateEntry>
         PARSER = new com.google.protobuf.AbstractParser<UssdSessionStateEntry>() {
+      @java.lang.Override
       public UssdSessionStateEntry parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new UssdSessionStateEntry(input, extensionRegistry);
+        return new UssdSessionStateEntry(input, extensionRegistry);
       }
     };
 
@@ -19501,6 +20856,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdSessionStateEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -19561,19 +20917,25 @@ public final class Common {
 
     /**
      * <code>repeated string channel_numbers = 3;</code>
+     * @return A list containing the channelNumbers.
      */
     java.util.List<java.lang.String>
         getChannelNumbersList();
     /**
      * <code>repeated string channel_numbers = 3;</code>
+     * @return The count of channelNumbers.
      */
     int getChannelNumbersCount();
     /**
      * <code>repeated string channel_numbers = 3;</code>
+     * @param index The index of the element to return.
+     * @return The channelNumbers at the given index.
      */
     java.lang.String getChannelNumbers(int index);
     /**
      * <code>repeated string channel_numbers = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the channelNumbers at the given index.
      */
     com.google.protobuf.ByteString
         getChannelNumbersBytes(int index);
@@ -19581,7 +20943,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.UssdState}
    */
-  public  static final class UssdState extends
+  public static final class UssdState extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdState)
       UssdStateOrBuilder {
@@ -19597,6 +20959,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UssdState();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -19606,6 +20975,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -19617,15 +20989,8 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 sessions_ = new java.util.ArrayList<com.elarian.hera.proto.Common.UssdSessionStateEntry>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -19634,7 +20999,7 @@ public final class Common {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -19644,11 +21009,18 @@ public final class Common {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 channelNumbers_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
               }
               channelNumbers_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -19659,13 +21031,13 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           sessions_ = java.util.Collections.unmodifiableList(sessions_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           channelNumbers_ = channelNumbers_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -19677,6 +21049,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdState_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdState_fieldAccessorTable
@@ -19689,12 +21062,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.UssdSessionStateEntry sessions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.UssdSessionStateEntry> getSessionsList() {
       return sessions_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.UssdSessionStateEntry sessions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.UssdSessionStateEntryOrBuilder> 
         getSessionsOrBuilderList() {
       return sessions_;
@@ -19702,18 +21077,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.UssdSessionStateEntry sessions = 1;</code>
      */
+    @java.lang.Override
     public int getSessionsCount() {
       return sessions_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.UssdSessionStateEntry sessions = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdSessionStateEntry getSessions(int index) {
       return sessions_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.UssdSessionStateEntry sessions = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdSessionStateEntryOrBuilder getSessionsOrBuilder(
         int index) {
       return sessions_.get(index);
@@ -19724,12 +21102,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerNumber> getCustomerNumbersList() {
       return customerNumbers_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerNumberOrBuilder> 
         getCustomerNumbersOrBuilderList() {
       return customerNumbers_;
@@ -19737,18 +21117,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public int getCustomerNumbersCount() {
       return customerNumbers_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumbers(int index) {
       return customerNumbers_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumbersOrBuilder(
         int index) {
       return customerNumbers_.get(index);
@@ -19758,6 +21141,7 @@ public final class Common {
     private com.google.protobuf.LazyStringList channelNumbers_;
     /**
      * <code>repeated string channel_numbers = 3;</code>
+     * @return A list containing the channelNumbers.
      */
     public com.google.protobuf.ProtocolStringList
         getChannelNumbersList() {
@@ -19765,18 +21149,23 @@ public final class Common {
     }
     /**
      * <code>repeated string channel_numbers = 3;</code>
+     * @return The count of channelNumbers.
      */
     public int getChannelNumbersCount() {
       return channelNumbers_.size();
     }
     /**
      * <code>repeated string channel_numbers = 3;</code>
+     * @param index The index of the element to return.
+     * @return The channelNumbers at the given index.
      */
     public java.lang.String getChannelNumbers(int index) {
       return channelNumbers_.get(index);
     }
     /**
      * <code>repeated string channel_numbers = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the channelNumbers at the given index.
      */
     public com.google.protobuf.ByteString
         getChannelNumbersBytes(int index) {
@@ -19784,6 +21173,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -19793,6 +21183,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < sessions_.size(); i++) {
@@ -19807,6 +21198,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -19843,15 +21235,14 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.UssdState other = (com.elarian.hera.proto.Common.UssdState) obj;
 
-      boolean result = true;
-      result = result && getSessionsList()
-          .equals(other.getSessionsList());
-      result = result && getCustomerNumbersList()
-          .equals(other.getCustomerNumbersList());
-      result = result && getChannelNumbersList()
-          .equals(other.getChannelNumbersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSessionsList()
+          .equals(other.getSessionsList())) return false;
+      if (!getCustomerNumbersList()
+          .equals(other.getCustomerNumbersList())) return false;
+      if (!getChannelNumbersList()
+          .equals(other.getChannelNumbersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -19948,6 +21339,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -19955,6 +21347,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.UssdState prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -19978,6 +21371,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdState_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdState_fieldAccessorTable
@@ -20002,6 +21396,7 @@ public final class Common {
           getCustomerNumbersFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (sessionsBuilder_ == null) {
@@ -20021,15 +21416,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_UssdState_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdState getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.UssdState.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdState build() {
         com.elarian.hera.proto.Common.UssdState result = buildPartial();
         if (!result.isInitialized()) {
@@ -20038,11 +21436,12 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.UssdState buildPartial() {
         com.elarian.hera.proto.Common.UssdState result = new com.elarian.hera.proto.Common.UssdState(this);
         int from_bitField0_ = bitField0_;
         if (sessionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             sessions_ = java.util.Collections.unmodifiableList(sessions_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -20051,7 +21450,7 @@ public final class Common {
           result.sessions_ = sessionsBuilder_.build();
         }
         if (customerNumbersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -20059,7 +21458,7 @@ public final class Common {
         } else {
           result.customerNumbers_ = customerNumbersBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           channelNumbers_ = channelNumbers_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
@@ -20068,32 +21467,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.UssdState) {
           return mergeFrom((com.elarian.hera.proto.Common.UssdState)other);
@@ -20172,10 +21578,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -20198,7 +21606,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.UssdSessionStateEntry> sessions_ =
         java.util.Collections.emptyList();
       private void ensureSessionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           sessions_ = new java.util.ArrayList<com.elarian.hera.proto.Common.UssdSessionStateEntry>(sessions_);
           bitField0_ |= 0x00000001;
          }
@@ -20427,7 +21835,7 @@ public final class Common {
           sessionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.UssdSessionStateEntry, com.elarian.hera.proto.Common.UssdSessionStateEntry.Builder, com.elarian.hera.proto.Common.UssdSessionStateEntryOrBuilder>(
                   sessions_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           sessions_ = null;
@@ -20438,7 +21846,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.CustomerNumber> customerNumbers_ =
         java.util.Collections.emptyList();
       private void ensureCustomerNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>(customerNumbers_);
           bitField0_ |= 0x00000002;
          }
@@ -20667,7 +22075,7 @@ public final class Common {
           customerNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder>(
                   customerNumbers_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           customerNumbers_ = null;
@@ -20677,13 +22085,14 @@ public final class Common {
 
       private com.google.protobuf.LazyStringList channelNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureChannelNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           channelNumbers_ = new com.google.protobuf.LazyStringArrayList(channelNumbers_);
           bitField0_ |= 0x00000004;
          }
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @return A list containing the channelNumbers.
        */
       public com.google.protobuf.ProtocolStringList
           getChannelNumbersList() {
@@ -20691,18 +22100,23 @@ public final class Common {
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @return The count of channelNumbers.
        */
       public int getChannelNumbersCount() {
         return channelNumbers_.size();
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @param index The index of the element to return.
+       * @return The channelNumbers at the given index.
        */
       public java.lang.String getChannelNumbers(int index) {
         return channelNumbers_.get(index);
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the channelNumbers at the given index.
        */
       public com.google.protobuf.ByteString
           getChannelNumbersBytes(int index) {
@@ -20710,6 +22124,9 @@ public final class Common {
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The channelNumbers to set.
+       * @return This builder for chaining.
        */
       public Builder setChannelNumbers(
           int index, java.lang.String value) {
@@ -20723,6 +22140,8 @@ public final class Common {
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @param value The channelNumbers to add.
+       * @return This builder for chaining.
        */
       public Builder addChannelNumbers(
           java.lang.String value) {
@@ -20736,6 +22155,8 @@ public final class Common {
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @param values The channelNumbers to add.
+       * @return This builder for chaining.
        */
       public Builder addAllChannelNumbers(
           java.lang.Iterable<java.lang.String> values) {
@@ -20747,6 +22168,7 @@ public final class Common {
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearChannelNumbers() {
         channelNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -20756,6 +22178,8 @@ public final class Common {
       }
       /**
        * <code>repeated string channel_numbers = 3;</code>
+       * @param value The bytes of the channelNumbers to add.
+       * @return This builder for chaining.
        */
       public Builder addChannelNumbersBytes(
           com.google.protobuf.ByteString value) {
@@ -20768,11 +22192,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -20794,11 +22220,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<UssdState>
         PARSER = new com.google.protobuf.AbstractParser<UssdState>() {
+      @java.lang.Override
       public UssdState parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new UssdState(input, extensionRegistry);
+        return new UssdState(input, extensionRegistry);
       }
     };
 
@@ -20811,6 +22238,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.UssdState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -20823,19 +22251,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+     * @return The status.
      */
     com.elarian.hera.proto.Common.VoiceCallStatus getStatus();
 
     /**
      * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * @return Whether the callStartTime field is set.
      */
     boolean hasCallStartTime();
     /**
      * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * @return The callStartTime.
      */
     com.google.protobuf.StringValue getCallStartTime();
     /**
@@ -20845,19 +22277,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+     * @return The enum numeric value on the wire for hangupCause.
      */
     int getHangupCauseValue();
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+     * @return The hangupCause.
      */
     com.elarian.hera.proto.Common.VoiceCallHangupCause getHangupCause();
 
     /**
      * <code>.google.protobuf.StringValue dtmf_digits = 4;</code>
+     * @return Whether the dtmfDigits field is set.
      */
     boolean hasDtmfDigits();
     /**
      * <code>.google.protobuf.StringValue dtmf_digits = 4;</code>
+     * @return The dtmfDigits.
      */
     com.google.protobuf.StringValue getDtmfDigits();
     /**
@@ -20867,10 +22303,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
+     * @return Whether the dialDestinationNumber field is set.
      */
     boolean hasDialDestinationNumber();
     /**
      * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
+     * @return The dialDestinationNumber.
      */
     com.google.protobuf.StringValue getDialDestinationNumber();
     /**
@@ -20880,10 +22318,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue queue_name = 6;</code>
+     * @return Whether the queueName field is set.
      */
     boolean hasQueueName();
     /**
      * <code>.google.protobuf.StringValue queue_name = 6;</code>
+     * @return The queueName.
      */
     com.google.protobuf.StringValue getQueueName();
     /**
@@ -20893,10 +22333,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
+     * @return Whether the dequeuedToPhoneNumber field is set.
      */
     boolean hasDequeuedToPhoneNumber();
     /**
      * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
+     * @return The dequeuedToPhoneNumber.
      */
     com.google.protobuf.StringValue getDequeuedToPhoneNumber();
     /**
@@ -20906,10 +22348,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
+     * @return Whether the dequeuedToSessionId field is set.
      */
     boolean hasDequeuedToSessionId();
     /**
      * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
+     * @return The dequeuedToSessionId.
      */
     com.google.protobuf.StringValue getDequeuedToSessionId();
     /**
@@ -20919,10 +22363,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
+     * @return Whether the callTransferredToNumber field is set.
      */
     boolean hasCallTransferredToNumber();
     /**
      * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
+     * @return The callTransferredToNumber.
      */
     com.google.protobuf.StringValue getCallTransferredToNumber();
     /**
@@ -20932,28 +22378,34 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+     * @return The enum numeric value on the wire for callTransferState.
      */
     int getCallTransferStateValue();
     /**
      * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+     * @return The callTransferState.
      */
     com.elarian.hera.proto.Common.VoiceCallTransferState getCallTransferState();
 
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+     * @return The enum numeric value on the wire for callTransferHangupCause.
      */
     int getCallTransferHangupCauseValue();
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+     * @return The callTransferHangupCause.
      */
     com.elarian.hera.proto.Common.VoiceCallHangupCause getCallTransferHangupCause();
 
     /**
      * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * @return Whether the recordingUrl field is set.
      */
     boolean hasRecordingUrl();
     /**
      * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * @return The recordingUrl.
      */
     com.google.protobuf.StringValue getRecordingUrl();
     /**
@@ -20964,7 +22416,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.VoiceCallHopInput}
    */
-  public  static final class VoiceCallHopInput extends
+  public static final class VoiceCallHopInput extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallHopInput)
       VoiceCallHopInputOrBuilder {
@@ -20981,6 +22433,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoiceCallHopInput();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -20990,7 +22449,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -21001,13 +22462,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -21136,6 +22590,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -21153,6 +22614,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHopInput_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHopInput_fieldAccessorTable
@@ -21164,14 +22626,17 @@ public final class Common {
     private int status_;
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+     * @return The status.
      */
-    public com.elarian.hera.proto.Common.VoiceCallStatus getStatus() {
+    @java.lang.Override public com.elarian.hera.proto.Common.VoiceCallStatus getStatus() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.VoiceCallStatus result = com.elarian.hera.proto.Common.VoiceCallStatus.valueOf(status_);
       return result == null ? com.elarian.hera.proto.Common.VoiceCallStatus.UNRECOGNIZED : result;
     }
@@ -21180,19 +22645,24 @@ public final class Common {
     private com.google.protobuf.StringValue callStartTime_;
     /**
      * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * @return Whether the callStartTime field is set.
      */
+    @java.lang.Override
     public boolean hasCallStartTime() {
       return callStartTime_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * @return The callStartTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCallStartTime() {
       return callStartTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callStartTime_;
     }
     /**
      * <code>.google.protobuf.StringValue call_start_time = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCallStartTimeOrBuilder() {
       return getCallStartTime();
     }
@@ -21201,14 +22671,17 @@ public final class Common {
     private int hangupCause_;
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+     * @return The enum numeric value on the wire for hangupCause.
      */
-    public int getHangupCauseValue() {
+    @java.lang.Override public int getHangupCauseValue() {
       return hangupCause_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+     * @return The hangupCause.
      */
-    public com.elarian.hera.proto.Common.VoiceCallHangupCause getHangupCause() {
+    @java.lang.Override public com.elarian.hera.proto.Common.VoiceCallHangupCause getHangupCause() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.VoiceCallHangupCause result = com.elarian.hera.proto.Common.VoiceCallHangupCause.valueOf(hangupCause_);
       return result == null ? com.elarian.hera.proto.Common.VoiceCallHangupCause.UNRECOGNIZED : result;
     }
@@ -21217,19 +22690,24 @@ public final class Common {
     private com.google.protobuf.StringValue dtmfDigits_;
     /**
      * <code>.google.protobuf.StringValue dtmf_digits = 4;</code>
+     * @return Whether the dtmfDigits field is set.
      */
+    @java.lang.Override
     public boolean hasDtmfDigits() {
       return dtmfDigits_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue dtmf_digits = 4;</code>
+     * @return The dtmfDigits.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDtmfDigits() {
       return dtmfDigits_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dtmfDigits_;
     }
     /**
      * <code>.google.protobuf.StringValue dtmf_digits = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDtmfDigitsOrBuilder() {
       return getDtmfDigits();
     }
@@ -21238,19 +22716,24 @@ public final class Common {
     private com.google.protobuf.StringValue dialDestinationNumber_;
     /**
      * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
+     * @return Whether the dialDestinationNumber field is set.
      */
+    @java.lang.Override
     public boolean hasDialDestinationNumber() {
       return dialDestinationNumber_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
+     * @return The dialDestinationNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDialDestinationNumber() {
       return dialDestinationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dialDestinationNumber_;
     }
     /**
      * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDialDestinationNumberOrBuilder() {
       return getDialDestinationNumber();
     }
@@ -21259,19 +22742,24 @@ public final class Common {
     private com.google.protobuf.StringValue queueName_;
     /**
      * <code>.google.protobuf.StringValue queue_name = 6;</code>
+     * @return Whether the queueName field is set.
      */
+    @java.lang.Override
     public boolean hasQueueName() {
       return queueName_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue queue_name = 6;</code>
+     * @return The queueName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getQueueName() {
       return queueName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : queueName_;
     }
     /**
      * <code>.google.protobuf.StringValue queue_name = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getQueueNameOrBuilder() {
       return getQueueName();
     }
@@ -21280,19 +22768,24 @@ public final class Common {
     private com.google.protobuf.StringValue dequeuedToPhoneNumber_;
     /**
      * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
+     * @return Whether the dequeuedToPhoneNumber field is set.
      */
+    @java.lang.Override
     public boolean hasDequeuedToPhoneNumber() {
       return dequeuedToPhoneNumber_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
+     * @return The dequeuedToPhoneNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDequeuedToPhoneNumber() {
       return dequeuedToPhoneNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dequeuedToPhoneNumber_;
     }
     /**
      * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDequeuedToPhoneNumberOrBuilder() {
       return getDequeuedToPhoneNumber();
     }
@@ -21301,19 +22794,24 @@ public final class Common {
     private com.google.protobuf.StringValue dequeuedToSessionId_;
     /**
      * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
+     * @return Whether the dequeuedToSessionId field is set.
      */
+    @java.lang.Override
     public boolean hasDequeuedToSessionId() {
       return dequeuedToSessionId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
+     * @return The dequeuedToSessionId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDequeuedToSessionId() {
       return dequeuedToSessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dequeuedToSessionId_;
     }
     /**
      * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDequeuedToSessionIdOrBuilder() {
       return getDequeuedToSessionId();
     }
@@ -21322,19 +22820,24 @@ public final class Common {
     private com.google.protobuf.StringValue callTransferredToNumber_;
     /**
      * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
+     * @return Whether the callTransferredToNumber field is set.
      */
+    @java.lang.Override
     public boolean hasCallTransferredToNumber() {
       return callTransferredToNumber_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
+     * @return The callTransferredToNumber.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCallTransferredToNumber() {
       return callTransferredToNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callTransferredToNumber_;
     }
     /**
      * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCallTransferredToNumberOrBuilder() {
       return getCallTransferredToNumber();
     }
@@ -21343,14 +22846,17 @@ public final class Common {
     private int callTransferState_;
     /**
      * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+     * @return The enum numeric value on the wire for callTransferState.
      */
-    public int getCallTransferStateValue() {
+    @java.lang.Override public int getCallTransferStateValue() {
       return callTransferState_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+     * @return The callTransferState.
      */
-    public com.elarian.hera.proto.Common.VoiceCallTransferState getCallTransferState() {
+    @java.lang.Override public com.elarian.hera.proto.Common.VoiceCallTransferState getCallTransferState() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.VoiceCallTransferState result = com.elarian.hera.proto.Common.VoiceCallTransferState.valueOf(callTransferState_);
       return result == null ? com.elarian.hera.proto.Common.VoiceCallTransferState.UNRECOGNIZED : result;
     }
@@ -21359,14 +22865,17 @@ public final class Common {
     private int callTransferHangupCause_;
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+     * @return The enum numeric value on the wire for callTransferHangupCause.
      */
-    public int getCallTransferHangupCauseValue() {
+    @java.lang.Override public int getCallTransferHangupCauseValue() {
       return callTransferHangupCause_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+     * @return The callTransferHangupCause.
      */
-    public com.elarian.hera.proto.Common.VoiceCallHangupCause getCallTransferHangupCause() {
+    @java.lang.Override public com.elarian.hera.proto.Common.VoiceCallHangupCause getCallTransferHangupCause() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.VoiceCallHangupCause result = com.elarian.hera.proto.Common.VoiceCallHangupCause.valueOf(callTransferHangupCause_);
       return result == null ? com.elarian.hera.proto.Common.VoiceCallHangupCause.UNRECOGNIZED : result;
     }
@@ -21375,24 +22884,30 @@ public final class Common {
     private com.google.protobuf.StringValue recordingUrl_;
     /**
      * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * @return Whether the recordingUrl field is set.
      */
+    @java.lang.Override
     public boolean hasRecordingUrl() {
       return recordingUrl_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * @return The recordingUrl.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getRecordingUrl() {
       return recordingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : recordingUrl_;
     }
     /**
      * <code>.google.protobuf.StringValue recording_url = 12;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getRecordingUrlOrBuilder() {
       return getRecordingUrl();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -21402,6 +22917,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (status_ != com.elarian.hera.proto.Common.VoiceCallStatus.VOICE_CALL_STATUS_UNSPECIFIED.getNumber()) {
@@ -21443,6 +22959,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -21511,53 +23028,52 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.VoiceCallHopInput other = (com.elarian.hera.proto.Common.VoiceCallHopInput) obj;
 
-      boolean result = true;
-      result = result && status_ == other.status_;
-      result = result && (hasCallStartTime() == other.hasCallStartTime());
+      if (status_ != other.status_) return false;
+      if (hasCallStartTime() != other.hasCallStartTime()) return false;
       if (hasCallStartTime()) {
-        result = result && getCallStartTime()
-            .equals(other.getCallStartTime());
+        if (!getCallStartTime()
+            .equals(other.getCallStartTime())) return false;
       }
-      result = result && hangupCause_ == other.hangupCause_;
-      result = result && (hasDtmfDigits() == other.hasDtmfDigits());
+      if (hangupCause_ != other.hangupCause_) return false;
+      if (hasDtmfDigits() != other.hasDtmfDigits()) return false;
       if (hasDtmfDigits()) {
-        result = result && getDtmfDigits()
-            .equals(other.getDtmfDigits());
+        if (!getDtmfDigits()
+            .equals(other.getDtmfDigits())) return false;
       }
-      result = result && (hasDialDestinationNumber() == other.hasDialDestinationNumber());
+      if (hasDialDestinationNumber() != other.hasDialDestinationNumber()) return false;
       if (hasDialDestinationNumber()) {
-        result = result && getDialDestinationNumber()
-            .equals(other.getDialDestinationNumber());
+        if (!getDialDestinationNumber()
+            .equals(other.getDialDestinationNumber())) return false;
       }
-      result = result && (hasQueueName() == other.hasQueueName());
+      if (hasQueueName() != other.hasQueueName()) return false;
       if (hasQueueName()) {
-        result = result && getQueueName()
-            .equals(other.getQueueName());
+        if (!getQueueName()
+            .equals(other.getQueueName())) return false;
       }
-      result = result && (hasDequeuedToPhoneNumber() == other.hasDequeuedToPhoneNumber());
+      if (hasDequeuedToPhoneNumber() != other.hasDequeuedToPhoneNumber()) return false;
       if (hasDequeuedToPhoneNumber()) {
-        result = result && getDequeuedToPhoneNumber()
-            .equals(other.getDequeuedToPhoneNumber());
+        if (!getDequeuedToPhoneNumber()
+            .equals(other.getDequeuedToPhoneNumber())) return false;
       }
-      result = result && (hasDequeuedToSessionId() == other.hasDequeuedToSessionId());
+      if (hasDequeuedToSessionId() != other.hasDequeuedToSessionId()) return false;
       if (hasDequeuedToSessionId()) {
-        result = result && getDequeuedToSessionId()
-            .equals(other.getDequeuedToSessionId());
+        if (!getDequeuedToSessionId()
+            .equals(other.getDequeuedToSessionId())) return false;
       }
-      result = result && (hasCallTransferredToNumber() == other.hasCallTransferredToNumber());
+      if (hasCallTransferredToNumber() != other.hasCallTransferredToNumber()) return false;
       if (hasCallTransferredToNumber()) {
-        result = result && getCallTransferredToNumber()
-            .equals(other.getCallTransferredToNumber());
+        if (!getCallTransferredToNumber()
+            .equals(other.getCallTransferredToNumber())) return false;
       }
-      result = result && callTransferState_ == other.callTransferState_;
-      result = result && callTransferHangupCause_ == other.callTransferHangupCause_;
-      result = result && (hasRecordingUrl() == other.hasRecordingUrl());
+      if (callTransferState_ != other.callTransferState_) return false;
+      if (callTransferHangupCause_ != other.callTransferHangupCause_) return false;
+      if (hasRecordingUrl() != other.hasRecordingUrl()) return false;
       if (hasRecordingUrl()) {
-        result = result && getRecordingUrl()
-            .equals(other.getRecordingUrl());
+        if (!getRecordingUrl()
+            .equals(other.getRecordingUrl())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -21682,6 +23198,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -21689,6 +23206,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.VoiceCallHopInput prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -21712,6 +23230,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHopInput_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHopInput_fieldAccessorTable
@@ -21734,6 +23253,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         status_ = 0;
@@ -21795,15 +23315,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHopInput_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHopInput getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.VoiceCallHopInput.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHopInput build() {
         com.elarian.hera.proto.Common.VoiceCallHopInput result = buildPartial();
         if (!result.isInitialized()) {
@@ -21812,6 +23335,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHopInput buildPartial() {
         com.elarian.hera.proto.Common.VoiceCallHopInput result = new com.elarian.hera.proto.Common.VoiceCallHopInput(this);
         result.status_ = status_;
@@ -21862,32 +23386,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.VoiceCallHopInput) {
           return mergeFrom((com.elarian.hera.proto.Common.VoiceCallHopInput)other);
@@ -21940,10 +23471,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -21965,27 +23498,36 @@ public final class Common {
       private int status_ = 0;
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallStatus getStatus() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.VoiceCallStatus result = com.elarian.hera.proto.Common.VoiceCallStatus.valueOf(status_);
         return result == null ? com.elarian.hera.proto.Common.VoiceCallStatus.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(com.elarian.hera.proto.Common.VoiceCallStatus value) {
         if (value == null) {
@@ -21998,6 +23540,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -22006,17 +23549,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue callStartTime_ = null;
+      private com.google.protobuf.StringValue callStartTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> callStartTimeBuilder_;
       /**
        * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+       * @return Whether the callStartTime field is set.
        */
       public boolean hasCallStartTime() {
         return callStartTimeBuilder_ != null || callStartTime_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+       * @return The callStartTime.
        */
       public com.google.protobuf.StringValue getCallStartTime() {
         if (callStartTimeBuilder_ == null) {
@@ -22126,27 +23671,36 @@ public final class Common {
       private int hangupCause_ = 0;
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+       * @return The enum numeric value on the wire for hangupCause.
        */
-      public int getHangupCauseValue() {
+      @java.lang.Override public int getHangupCauseValue() {
         return hangupCause_;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+       * @param value The enum numeric value on the wire for hangupCause to set.
+       * @return This builder for chaining.
        */
       public Builder setHangupCauseValue(int value) {
+        
         hangupCause_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+       * @return The hangupCause.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHangupCause getHangupCause() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.VoiceCallHangupCause result = com.elarian.hera.proto.Common.VoiceCallHangupCause.valueOf(hangupCause_);
         return result == null ? com.elarian.hera.proto.Common.VoiceCallHangupCause.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+       * @param value The hangupCause to set.
+       * @return This builder for chaining.
        */
       public Builder setHangupCause(com.elarian.hera.proto.Common.VoiceCallHangupCause value) {
         if (value == null) {
@@ -22159,6 +23713,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHangupCause() {
         
@@ -22167,17 +23722,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue dtmfDigits_ = null;
+      private com.google.protobuf.StringValue dtmfDigits_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> dtmfDigitsBuilder_;
       /**
        * <code>.google.protobuf.StringValue dtmf_digits = 4;</code>
+       * @return Whether the dtmfDigits field is set.
        */
       public boolean hasDtmfDigits() {
         return dtmfDigitsBuilder_ != null || dtmfDigits_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue dtmf_digits = 4;</code>
+       * @return The dtmfDigits.
        */
       public com.google.protobuf.StringValue getDtmfDigits() {
         if (dtmfDigitsBuilder_ == null) {
@@ -22284,17 +23841,19 @@ public final class Common {
         return dtmfDigitsBuilder_;
       }
 
-      private com.google.protobuf.StringValue dialDestinationNumber_ = null;
+      private com.google.protobuf.StringValue dialDestinationNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> dialDestinationNumberBuilder_;
       /**
        * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
+       * @return Whether the dialDestinationNumber field is set.
        */
       public boolean hasDialDestinationNumber() {
         return dialDestinationNumberBuilder_ != null || dialDestinationNumber_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
+       * @return The dialDestinationNumber.
        */
       public com.google.protobuf.StringValue getDialDestinationNumber() {
         if (dialDestinationNumberBuilder_ == null) {
@@ -22401,17 +23960,19 @@ public final class Common {
         return dialDestinationNumberBuilder_;
       }
 
-      private com.google.protobuf.StringValue queueName_ = null;
+      private com.google.protobuf.StringValue queueName_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> queueNameBuilder_;
       /**
        * <code>.google.protobuf.StringValue queue_name = 6;</code>
+       * @return Whether the queueName field is set.
        */
       public boolean hasQueueName() {
         return queueNameBuilder_ != null || queueName_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue queue_name = 6;</code>
+       * @return The queueName.
        */
       public com.google.protobuf.StringValue getQueueName() {
         if (queueNameBuilder_ == null) {
@@ -22518,17 +24079,19 @@ public final class Common {
         return queueNameBuilder_;
       }
 
-      private com.google.protobuf.StringValue dequeuedToPhoneNumber_ = null;
+      private com.google.protobuf.StringValue dequeuedToPhoneNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> dequeuedToPhoneNumberBuilder_;
       /**
        * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
+       * @return Whether the dequeuedToPhoneNumber field is set.
        */
       public boolean hasDequeuedToPhoneNumber() {
         return dequeuedToPhoneNumberBuilder_ != null || dequeuedToPhoneNumber_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
+       * @return The dequeuedToPhoneNumber.
        */
       public com.google.protobuf.StringValue getDequeuedToPhoneNumber() {
         if (dequeuedToPhoneNumberBuilder_ == null) {
@@ -22635,17 +24198,19 @@ public final class Common {
         return dequeuedToPhoneNumberBuilder_;
       }
 
-      private com.google.protobuf.StringValue dequeuedToSessionId_ = null;
+      private com.google.protobuf.StringValue dequeuedToSessionId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> dequeuedToSessionIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
+       * @return Whether the dequeuedToSessionId field is set.
        */
       public boolean hasDequeuedToSessionId() {
         return dequeuedToSessionIdBuilder_ != null || dequeuedToSessionId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
+       * @return The dequeuedToSessionId.
        */
       public com.google.protobuf.StringValue getDequeuedToSessionId() {
         if (dequeuedToSessionIdBuilder_ == null) {
@@ -22752,17 +24317,19 @@ public final class Common {
         return dequeuedToSessionIdBuilder_;
       }
 
-      private com.google.protobuf.StringValue callTransferredToNumber_ = null;
+      private com.google.protobuf.StringValue callTransferredToNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> callTransferredToNumberBuilder_;
       /**
        * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
+       * @return Whether the callTransferredToNumber field is set.
        */
       public boolean hasCallTransferredToNumber() {
         return callTransferredToNumberBuilder_ != null || callTransferredToNumber_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
+       * @return The callTransferredToNumber.
        */
       public com.google.protobuf.StringValue getCallTransferredToNumber() {
         if (callTransferredToNumberBuilder_ == null) {
@@ -22872,27 +24439,36 @@ public final class Common {
       private int callTransferState_ = 0;
       /**
        * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+       * @return The enum numeric value on the wire for callTransferState.
        */
-      public int getCallTransferStateValue() {
+      @java.lang.Override public int getCallTransferStateValue() {
         return callTransferState_;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+       * @param value The enum numeric value on the wire for callTransferState to set.
+       * @return This builder for chaining.
        */
       public Builder setCallTransferStateValue(int value) {
+        
         callTransferState_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+       * @return The callTransferState.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallTransferState getCallTransferState() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.VoiceCallTransferState result = com.elarian.hera.proto.Common.VoiceCallTransferState.valueOf(callTransferState_);
         return result == null ? com.elarian.hera.proto.Common.VoiceCallTransferState.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+       * @param value The callTransferState to set.
+       * @return This builder for chaining.
        */
       public Builder setCallTransferState(com.elarian.hera.proto.Common.VoiceCallTransferState value) {
         if (value == null) {
@@ -22905,6 +24481,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCallTransferState() {
         
@@ -22916,27 +24493,36 @@ public final class Common {
       private int callTransferHangupCause_ = 0;
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+       * @return The enum numeric value on the wire for callTransferHangupCause.
        */
-      public int getCallTransferHangupCauseValue() {
+      @java.lang.Override public int getCallTransferHangupCauseValue() {
         return callTransferHangupCause_;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+       * @param value The enum numeric value on the wire for callTransferHangupCause to set.
+       * @return This builder for chaining.
        */
       public Builder setCallTransferHangupCauseValue(int value) {
+        
         callTransferHangupCause_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+       * @return The callTransferHangupCause.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHangupCause getCallTransferHangupCause() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.VoiceCallHangupCause result = com.elarian.hera.proto.Common.VoiceCallHangupCause.valueOf(callTransferHangupCause_);
         return result == null ? com.elarian.hera.proto.Common.VoiceCallHangupCause.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+       * @param value The callTransferHangupCause to set.
+       * @return This builder for chaining.
        */
       public Builder setCallTransferHangupCause(com.elarian.hera.proto.Common.VoiceCallHangupCause value) {
         if (value == null) {
@@ -22949,6 +24535,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCallTransferHangupCause() {
         
@@ -22957,17 +24544,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue recordingUrl_ = null;
+      private com.google.protobuf.StringValue recordingUrl_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> recordingUrlBuilder_;
       /**
        * <code>.google.protobuf.StringValue recording_url = 12;</code>
+       * @return Whether the recordingUrl field is set.
        */
       public boolean hasRecordingUrl() {
         return recordingUrlBuilder_ != null || recordingUrl_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue recording_url = 12;</code>
+       * @return The recordingUrl.
        */
       public com.google.protobuf.StringValue getRecordingUrl() {
         if (recordingUrlBuilder_ == null) {
@@ -23073,11 +24662,13 @@ public final class Common {
         }
         return recordingUrlBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -23099,11 +24690,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<VoiceCallHopInput>
         PARSER = new com.google.protobuf.AbstractParser<VoiceCallHopInput>() {
+      @java.lang.Override
       public VoiceCallHopInput parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new VoiceCallHopInput(input, extensionRegistry);
+        return new VoiceCallHopInput(input, extensionRegistry);
       }
     };
 
@@ -23116,6 +24708,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallHopInput getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -23128,10 +24721,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 1;</code>
+     * @return Whether the input field is set.
      */
     boolean hasInput();
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 1;</code>
+     * @return The input.
      */
     com.elarian.hera.proto.Common.VoiceCallHopInput getInput();
     /**
@@ -23165,10 +24760,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return Whether the timestamp field is set.
      */
     boolean hasTimestamp();
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return The timestamp.
      */
     com.google.protobuf.Timestamp getTimestamp();
     /**
@@ -23179,7 +24776,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.VoiceCallHop}
    */
-  public  static final class VoiceCallHop extends
+  public static final class VoiceCallHop extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallHop)
       VoiceCallHopOrBuilder {
@@ -23193,6 +24790,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoiceCallHop();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -23202,6 +24806,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -23213,13 +24820,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.VoiceCallHopInput.Builder subBuilder = null;
               if (input_ != null) {
@@ -23234,9 +24834,9 @@ public final class Common {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 actions_ = new java.util.ArrayList<com.elarian.hera.proto.Common.VoiceCallAction>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               actions_.add(
                   input.readMessage(com.elarian.hera.proto.Common.VoiceCallAction.parser(), extensionRegistry));
@@ -23255,6 +24855,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -23263,7 +24870,7 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           actions_ = java.util.Collections.unmodifiableList(actions_);
         }
         this.unknownFields = unknownFields.build();
@@ -23275,6 +24882,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHop_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHop_fieldAccessorTable
@@ -23282,24 +24890,28 @@ public final class Common {
               com.elarian.hera.proto.Common.VoiceCallHop.class, com.elarian.hera.proto.Common.VoiceCallHop.Builder.class);
     }
 
-    private int bitField0_;
     public static final int INPUT_FIELD_NUMBER = 1;
     private com.elarian.hera.proto.Common.VoiceCallHopInput input_;
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 1;</code>
+     * @return Whether the input field is set.
      */
+    @java.lang.Override
     public boolean hasInput() {
       return input_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 1;</code>
+     * @return The input.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallHopInput getInput() {
       return input_ == null ? com.elarian.hera.proto.Common.VoiceCallHopInput.getDefaultInstance() : input_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallHopInputOrBuilder getInputOrBuilder() {
       return getInput();
     }
@@ -23309,12 +24921,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.VoiceCallAction> getActionsList() {
       return actions_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.VoiceCallActionOrBuilder> 
         getActionsOrBuilderList() {
       return actions_;
@@ -23322,18 +24936,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 2;</code>
      */
+    @java.lang.Override
     public int getActionsCount() {
       return actions_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallAction getActions(int index) {
       return actions_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallActionOrBuilder getActionsOrBuilder(
         int index) {
       return actions_.get(index);
@@ -23343,24 +24960,30 @@ public final class Common {
     private com.google.protobuf.Timestamp timestamp_;
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return Whether the timestamp field is set.
      */
+    @java.lang.Override
     public boolean hasTimestamp() {
       return timestamp_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * @return The timestamp.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getTimestamp() {
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
     /**
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
       return getTimestamp();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -23370,6 +24993,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (input_ != null) {
@@ -23384,6 +25008,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -23416,21 +25041,20 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.VoiceCallHop other = (com.elarian.hera.proto.Common.VoiceCallHop) obj;
 
-      boolean result = true;
-      result = result && (hasInput() == other.hasInput());
+      if (hasInput() != other.hasInput()) return false;
       if (hasInput()) {
-        result = result && getInput()
-            .equals(other.getInput());
+        if (!getInput()
+            .equals(other.getInput())) return false;
       }
-      result = result && getActionsList()
-          .equals(other.getActionsList());
-      result = result && (hasTimestamp() == other.hasTimestamp());
+      if (!getActionsList()
+          .equals(other.getActionsList())) return false;
+      if (hasTimestamp() != other.hasTimestamp()) return false;
       if (hasTimestamp()) {
-        result = result && getTimestamp()
-            .equals(other.getTimestamp());
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -23527,6 +25151,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -23534,6 +25159,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.VoiceCallHop prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -23557,6 +25183,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHop_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHop_fieldAccessorTable
@@ -23580,6 +25207,7 @@ public final class Common {
           getActionsFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (inputBuilder_ == null) {
@@ -23590,7 +25218,7 @@ public final class Common {
         }
         if (actionsBuilder_ == null) {
           actions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           actionsBuilder_.clear();
         }
@@ -23603,15 +25231,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallHop_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHop getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.VoiceCallHop.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHop build() {
         com.elarian.hera.proto.Common.VoiceCallHop result = buildPartial();
         if (!result.isInitialized()) {
@@ -23620,19 +25251,19 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHop buildPartial() {
         com.elarian.hera.proto.Common.VoiceCallHop result = new com.elarian.hera.proto.Common.VoiceCallHop(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (inputBuilder_ == null) {
           result.input_ = input_;
         } else {
           result.input_ = inputBuilder_.build();
         }
         if (actionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             actions_ = java.util.Collections.unmodifiableList(actions_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.actions_ = actions_;
         } else {
@@ -23643,37 +25274,43 @@ public final class Common {
         } else {
           result.timestamp_ = timestampBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.VoiceCallHop) {
           return mergeFrom((com.elarian.hera.proto.Common.VoiceCallHop)other);
@@ -23692,7 +25329,7 @@ public final class Common {
           if (!other.actions_.isEmpty()) {
             if (actions_.isEmpty()) {
               actions_ = other.actions_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureActionsIsMutable();
               actions_.addAll(other.actions_);
@@ -23705,7 +25342,7 @@ public final class Common {
               actionsBuilder_.dispose();
               actionsBuilder_ = null;
               actions_ = other.actions_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               actionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getActionsFieldBuilder() : null;
@@ -23722,10 +25359,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -23745,17 +25384,19 @@ public final class Common {
       }
       private int bitField0_;
 
-      private com.elarian.hera.proto.Common.VoiceCallHopInput input_ = null;
+      private com.elarian.hera.proto.Common.VoiceCallHopInput input_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.VoiceCallHopInput, com.elarian.hera.proto.Common.VoiceCallHopInput.Builder, com.elarian.hera.proto.Common.VoiceCallHopInputOrBuilder> inputBuilder_;
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 1;</code>
+       * @return Whether the input field is set.
        */
       public boolean hasInput() {
         return inputBuilder_ != null || input_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 1;</code>
+       * @return The input.
        */
       public com.elarian.hera.proto.Common.VoiceCallHopInput getInput() {
         if (inputBuilder_ == null) {
@@ -23865,9 +25506,9 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.VoiceCallAction> actions_ =
         java.util.Collections.emptyList();
       private void ensureActionsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           actions_ = new java.util.ArrayList<com.elarian.hera.proto.Common.VoiceCallAction>(actions_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -24017,7 +25658,7 @@ public final class Common {
       public Builder clearActions() {
         if (actionsBuilder_ == null) {
           actions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           actionsBuilder_.clear();
@@ -24094,7 +25735,7 @@ public final class Common {
           actionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.VoiceCallAction, com.elarian.hera.proto.Common.VoiceCallAction.Builder, com.elarian.hera.proto.Common.VoiceCallActionOrBuilder>(
                   actions_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           actions_ = null;
@@ -24102,17 +25743,19 @@ public final class Common {
         return actionsBuilder_;
       }
 
-      private com.google.protobuf.Timestamp timestamp_ = null;
+      private com.google.protobuf.Timestamp timestamp_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * @return Whether the timestamp field is set.
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * @return The timestamp.
        */
       public com.google.protobuf.Timestamp getTimestamp() {
         if (timestampBuilder_ == null) {
@@ -24218,11 +25861,13 @@ public final class Common {
         }
         return timestampBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -24244,11 +25889,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<VoiceCallHop>
         PARSER = new com.google.protobuf.AbstractParser<VoiceCallHop>() {
+      @java.lang.Override
       public VoiceCallHop parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new VoiceCallHop(input, extensionRegistry);
+        return new VoiceCallHop(input, extensionRegistry);
       }
     };
 
@@ -24261,6 +25907,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallHop getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -24273,19 +25920,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The enum numeric value on the wire for direction.
      */
     int getDirectionValue();
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The direction.
      */
     com.elarian.hera.proto.Common.CustomerEventDirection getDirection();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
     /**
@@ -24295,10 +25946,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
+     * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
+     * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber();
     /**
@@ -24308,30 +25961,36 @@ public final class Common {
 
     /**
      * <code>string session_id = 4;</code>
+     * @return The sessionId.
      */
     java.lang.String getSessionId();
     /**
      * <code>string session_id = 4;</code>
+     * @return The bytes for sessionId.
      */
     com.google.protobuf.ByteString
         getSessionIdBytes();
 
     /**
      * <code>string product_id = 5;</code>
+     * @return The productId.
      */
     java.lang.String getProductId();
     /**
      * <code>string product_id = 5;</code>
+     * @return The bytes for productId.
      */
     com.google.protobuf.ByteString
         getProductIdBytes();
 
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+     * @return The status.
      */
     com.elarian.hera.proto.Common.VoiceCallStatus getStatus();
 
@@ -24361,10 +26020,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Duration duration = 8;</code>
+     * @return Whether the duration field is set.
      */
     boolean hasDuration();
     /**
      * <code>.google.protobuf.Duration duration = 8;</code>
+     * @return The duration.
      */
     com.google.protobuf.Duration getDuration();
     /**
@@ -24374,10 +26035,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * @return Whether the cost field is set.
      */
     boolean hasCost();
     /**
      * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * @return The cost.
      */
     com.elarian.hera.proto.Common.Cash getCost();
     /**
@@ -24387,10 +26050,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -24400,10 +26065,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -24414,7 +26081,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.VoiceCallStateEntry}
    */
-  public  static final class VoiceCallStateEntry extends
+  public static final class VoiceCallStateEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallStateEntry)
       VoiceCallStateEntryOrBuilder {
@@ -24432,6 +26099,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoiceCallStateEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -24441,6 +26115,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -24452,13 +26129,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -24510,9 +26180,9 @@ public final class Common {
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 hops_ = new java.util.ArrayList<com.elarian.hera.proto.Common.VoiceCallHop>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               hops_.add(
                   input.readMessage(com.elarian.hera.proto.Common.VoiceCallHop.parser(), extensionRegistry));
@@ -24570,6 +26240,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -24578,7 +26255,7 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           hops_ = java.util.Collections.unmodifiableList(hops_);
         }
         this.unknownFields = unknownFields.build();
@@ -24590,6 +26267,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallStateEntry_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallStateEntry_fieldAccessorTable
@@ -24597,19 +26275,21 @@ public final class Common {
               com.elarian.hera.proto.Common.VoiceCallStateEntry.class, com.elarian.hera.proto.Common.VoiceCallStateEntry.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DIRECTION_FIELD_NUMBER = 1;
     private int direction_;
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The enum numeric value on the wire for direction.
      */
-    public int getDirectionValue() {
+    @java.lang.Override public int getDirectionValue() {
       return direction_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The direction.
      */
-    public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+    @java.lang.Override public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.CustomerEventDirection result = com.elarian.hera.proto.Common.CustomerEventDirection.valueOf(direction_);
       return result == null ? com.elarian.hera.proto.Common.CustomerEventDirection.UNRECOGNIZED : result;
     }
@@ -24618,19 +26298,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return Whether the customerNumber field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerNumber() {
       return customerNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return The customerNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
       return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumberOrBuilder() {
       return getCustomerNumber();
     }
@@ -24639,19 +26324,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
+     * @return Whether the channelNumber field is set.
      */
+    @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
+     * @return The channelNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumberOrBuilder getChannelNumberOrBuilder() {
       return getChannelNumber();
     }
@@ -24660,7 +26350,9 @@ public final class Common {
     private volatile java.lang.Object sessionId_;
     /**
      * <code>string session_id = 4;</code>
+     * @return The sessionId.
      */
+    @java.lang.Override
     public java.lang.String getSessionId() {
       java.lang.Object ref = sessionId_;
       if (ref instanceof java.lang.String) {
@@ -24675,7 +26367,9 @@ public final class Common {
     }
     /**
      * <code>string session_id = 4;</code>
+     * @return The bytes for sessionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getSessionIdBytes() {
       java.lang.Object ref = sessionId_;
@@ -24694,7 +26388,9 @@ public final class Common {
     private volatile java.lang.Object productId_;
     /**
      * <code>string product_id = 5;</code>
+     * @return The productId.
      */
+    @java.lang.Override
     public java.lang.String getProductId() {
       java.lang.Object ref = productId_;
       if (ref instanceof java.lang.String) {
@@ -24709,7 +26405,9 @@ public final class Common {
     }
     /**
      * <code>string product_id = 5;</code>
+     * @return The bytes for productId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getProductIdBytes() {
       java.lang.Object ref = productId_;
@@ -24728,14 +26426,17 @@ public final class Common {
     private int status_;
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+     * @return The status.
      */
-    public com.elarian.hera.proto.Common.VoiceCallStatus getStatus() {
+    @java.lang.Override public com.elarian.hera.proto.Common.VoiceCallStatus getStatus() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.VoiceCallStatus result = com.elarian.hera.proto.Common.VoiceCallStatus.valueOf(status_);
       return result == null ? com.elarian.hera.proto.Common.VoiceCallStatus.UNRECOGNIZED : result;
     }
@@ -24745,12 +26446,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallHop hops = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.VoiceCallHop> getHopsList() {
       return hops_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallHop hops = 7;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.VoiceCallHopOrBuilder> 
         getHopsOrBuilderList() {
       return hops_;
@@ -24758,18 +26461,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallHop hops = 7;</code>
      */
+    @java.lang.Override
     public int getHopsCount() {
       return hops_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallHop hops = 7;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallHop getHops(int index) {
       return hops_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallHop hops = 7;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallHopOrBuilder getHopsOrBuilder(
         int index) {
       return hops_.get(index);
@@ -24779,19 +26485,24 @@ public final class Common {
     private com.google.protobuf.Duration duration_;
     /**
      * <code>.google.protobuf.Duration duration = 8;</code>
+     * @return Whether the duration field is set.
      */
+    @java.lang.Override
     public boolean hasDuration() {
       return duration_ != null;
     }
     /**
      * <code>.google.protobuf.Duration duration = 8;</code>
+     * @return The duration.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getDuration() {
       return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
     }
     /**
      * <code>.google.protobuf.Duration duration = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
       return getDuration();
     }
@@ -24800,19 +26511,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.Cash cost_;
     /**
      * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * @return Whether the cost field is set.
      */
+    @java.lang.Override
     public boolean hasCost() {
       return cost_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * @return The cost.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getCost() {
       return cost_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : cost_;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CashOrBuilder getCostOrBuilder() {
       return getCost();
     }
@@ -24821,19 +26537,24 @@ public final class Common {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -24842,24 +26563,30 @@ public final class Common {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -24869,6 +26596,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (direction_ != com.elarian.hera.proto.Common.CustomerEventDirection.CUSTOMER_EVENT_DIRECTION_UNSPECIFIED.getNumber()) {
@@ -24907,6 +26635,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -24969,47 +26698,46 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.VoiceCallStateEntry other = (com.elarian.hera.proto.Common.VoiceCallStateEntry) obj;
 
-      boolean result = true;
-      result = result && direction_ == other.direction_;
-      result = result && (hasCustomerNumber() == other.hasCustomerNumber());
+      if (direction_ != other.direction_) return false;
+      if (hasCustomerNumber() != other.hasCustomerNumber()) return false;
       if (hasCustomerNumber()) {
-        result = result && getCustomerNumber()
-            .equals(other.getCustomerNumber());
+        if (!getCustomerNumber()
+            .equals(other.getCustomerNumber())) return false;
       }
-      result = result && (hasChannelNumber() == other.hasChannelNumber());
+      if (hasChannelNumber() != other.hasChannelNumber()) return false;
       if (hasChannelNumber()) {
-        result = result && getChannelNumber()
-            .equals(other.getChannelNumber());
+        if (!getChannelNumber()
+            .equals(other.getChannelNumber())) return false;
       }
-      result = result && getSessionId()
-          .equals(other.getSessionId());
-      result = result && getProductId()
-          .equals(other.getProductId());
-      result = result && status_ == other.status_;
-      result = result && getHopsList()
-          .equals(other.getHopsList());
-      result = result && (hasDuration() == other.hasDuration());
+      if (!getSessionId()
+          .equals(other.getSessionId())) return false;
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (status_ != other.status_) return false;
+      if (!getHopsList()
+          .equals(other.getHopsList())) return false;
+      if (hasDuration() != other.hasDuration()) return false;
       if (hasDuration()) {
-        result = result && getDuration()
-            .equals(other.getDuration());
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
       }
-      result = result && (hasCost() == other.hasCost());
+      if (hasCost() != other.hasCost()) return false;
       if (hasCost()) {
-        result = result && getCost()
-            .equals(other.getCost());
+        if (!getCost()
+            .equals(other.getCost())) return false;
       }
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -25130,6 +26858,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -25137,6 +26866,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.VoiceCallStateEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -25160,6 +26890,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallStateEntry_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallStateEntry_fieldAccessorTable
@@ -25183,6 +26914,7 @@ public final class Common {
           getHopsFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         direction_ = 0;
@@ -25207,7 +26939,7 @@ public final class Common {
 
         if (hopsBuilder_ == null) {
           hops_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           hopsBuilder_.clear();
         }
@@ -25238,15 +26970,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallStateEntry_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallStateEntry getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.VoiceCallStateEntry.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallStateEntry build() {
         com.elarian.hera.proto.Common.VoiceCallStateEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -25255,10 +26990,10 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallStateEntry buildPartial() {
         com.elarian.hera.proto.Common.VoiceCallStateEntry result = new com.elarian.hera.proto.Common.VoiceCallStateEntry(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.direction_ = direction_;
         if (customerNumberBuilder_ == null) {
           result.customerNumber_ = customerNumber_;
@@ -25274,9 +27009,9 @@ public final class Common {
         result.productId_ = productId_;
         result.status_ = status_;
         if (hopsBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             hops_ = java.util.Collections.unmodifiableList(hops_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.hops_ = hops_;
         } else {
@@ -25302,37 +27037,43 @@ public final class Common {
         } else {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.VoiceCallStateEntry) {
           return mergeFrom((com.elarian.hera.proto.Common.VoiceCallStateEntry)other);
@@ -25368,7 +27109,7 @@ public final class Common {
           if (!other.hops_.isEmpty()) {
             if (hops_.isEmpty()) {
               hops_ = other.hops_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureHopsIsMutable();
               hops_.addAll(other.hops_);
@@ -25381,7 +27122,7 @@ public final class Common {
               hopsBuilder_.dispose();
               hopsBuilder_ = null;
               hops_ = other.hops_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000001);
               hopsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHopsFieldBuilder() : null;
@@ -25407,10 +27148,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -25433,27 +27176,36 @@ public final class Common {
       private int direction_ = 0;
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return The enum numeric value on the wire for direction.
        */
-      public int getDirectionValue() {
+      @java.lang.Override public int getDirectionValue() {
         return direction_;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @param value The enum numeric value on the wire for direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirectionValue(int value) {
+        
         direction_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return The direction.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.CustomerEventDirection result = com.elarian.hera.proto.Common.CustomerEventDirection.valueOf(direction_);
         return result == null ? com.elarian.hera.proto.Common.CustomerEventDirection.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @param value The direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirection(com.elarian.hera.proto.Common.CustomerEventDirection value) {
         if (value == null) {
@@ -25466,6 +27218,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDirection() {
         
@@ -25474,17 +27227,19 @@ public final class Common {
         return this;
       }
 
-      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_ = null;
+      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder> customerNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+       * @return Whether the customerNumber field is set.
        */
       public boolean hasCustomerNumber() {
         return customerNumberBuilder_ != null || customerNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+       * @return The customerNumber.
        */
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         if (customerNumberBuilder_ == null) {
@@ -25591,17 +27346,19 @@ public final class Common {
         return customerNumberBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_ = null;
+      private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.VoiceChannelNumber, com.elarian.hera.proto.Common.VoiceChannelNumber.Builder, com.elarian.hera.proto.Common.VoiceChannelNumberOrBuilder> channelNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
+       * @return Whether the channelNumber field is set.
        */
       public boolean hasChannelNumber() {
         return channelNumberBuilder_ != null || channelNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
+       * @return The channelNumber.
        */
       public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
         if (channelNumberBuilder_ == null) {
@@ -25711,6 +27468,7 @@ public final class Common {
       private java.lang.Object sessionId_ = "";
       /**
        * <code>string session_id = 4;</code>
+       * @return The sessionId.
        */
       public java.lang.String getSessionId() {
         java.lang.Object ref = sessionId_;
@@ -25726,6 +27484,7 @@ public final class Common {
       }
       /**
        * <code>string session_id = 4;</code>
+       * @return The bytes for sessionId.
        */
       public com.google.protobuf.ByteString
           getSessionIdBytes() {
@@ -25742,6 +27501,8 @@ public final class Common {
       }
       /**
        * <code>string session_id = 4;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
        */
       public Builder setSessionId(
           java.lang.String value) {
@@ -25755,6 +27516,7 @@ public final class Common {
       }
       /**
        * <code>string session_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSessionId() {
         
@@ -25764,6 +27526,8 @@ public final class Common {
       }
       /**
        * <code>string session_id = 4;</code>
+       * @param value The bytes for sessionId to set.
+       * @return This builder for chaining.
        */
       public Builder setSessionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25780,6 +27544,7 @@ public final class Common {
       private java.lang.Object productId_ = "";
       /**
        * <code>string product_id = 5;</code>
+       * @return The productId.
        */
       public java.lang.String getProductId() {
         java.lang.Object ref = productId_;
@@ -25795,6 +27560,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
           getProductIdBytes() {
@@ -25811,6 +27577,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductId(
           java.lang.String value) {
@@ -25824,6 +27592,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductId() {
         
@@ -25833,6 +27602,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @param value The bytes for productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIdBytes(
           com.google.protobuf.ByteString value) {
@@ -25849,27 +27620,36 @@ public final class Common {
       private int status_ = 0;
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallStatus getStatus() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.VoiceCallStatus result = com.elarian.hera.proto.Common.VoiceCallStatus.valueOf(status_);
         return result == null ? com.elarian.hera.proto.Common.VoiceCallStatus.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(com.elarian.hera.proto.Common.VoiceCallStatus value) {
         if (value == null) {
@@ -25882,6 +27662,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -25893,9 +27674,9 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.VoiceCallHop> hops_ =
         java.util.Collections.emptyList();
       private void ensureHopsIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           hops_ = new java.util.ArrayList<com.elarian.hera.proto.Common.VoiceCallHop>(hops_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -26045,7 +27826,7 @@ public final class Common {
       public Builder clearHops() {
         if (hopsBuilder_ == null) {
           hops_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           hopsBuilder_.clear();
@@ -26122,7 +27903,7 @@ public final class Common {
           hopsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.VoiceCallHop, com.elarian.hera.proto.Common.VoiceCallHop.Builder, com.elarian.hera.proto.Common.VoiceCallHopOrBuilder>(
                   hops_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           hops_ = null;
@@ -26130,17 +27911,19 @@ public final class Common {
         return hopsBuilder_;
       }
 
-      private com.google.protobuf.Duration duration_ = null;
+      private com.google.protobuf.Duration duration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
       /**
        * <code>.google.protobuf.Duration duration = 8;</code>
+       * @return Whether the duration field is set.
        */
       public boolean hasDuration() {
         return durationBuilder_ != null || duration_ != null;
       }
       /**
        * <code>.google.protobuf.Duration duration = 8;</code>
+       * @return The duration.
        */
       public com.google.protobuf.Duration getDuration() {
         if (durationBuilder_ == null) {
@@ -26247,17 +28030,19 @@ public final class Common {
         return durationBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.Cash cost_ = null;
+      private com.elarian.hera.proto.Common.Cash cost_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.Cash, com.elarian.hera.proto.Common.Cash.Builder, com.elarian.hera.proto.Common.CashOrBuilder> costBuilder_;
       /**
        * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+       * @return Whether the cost field is set.
        */
       public boolean hasCost() {
         return costBuilder_ != null || cost_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+       * @return The cost.
        */
       public com.elarian.hera.proto.Common.Cash getCost() {
         if (costBuilder_ == null) {
@@ -26364,17 +28149,19 @@ public final class Common {
         return costBuilder_;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -26481,17 +28268,19 @@ public final class Common {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -26597,11 +28386,13 @@ public final class Common {
         }
         return updatedAtBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -26623,11 +28414,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<VoiceCallStateEntry>
         PARSER = new com.google.protobuf.AbstractParser<VoiceCallStateEntry>() {
+      @java.lang.Override
       public VoiceCallStateEntry parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new VoiceCallStateEntry(input, extensionRegistry);
+        return new VoiceCallStateEntry(input, extensionRegistry);
       }
     };
 
@@ -26640,6 +28432,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallStateEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -26725,7 +28518,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.VoiceState}
    */
-  public  static final class VoiceState extends
+  public static final class VoiceState extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceState)
       VoiceStateOrBuilder {
@@ -26741,6 +28534,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoiceState();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -26750,6 +28550,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -26761,15 +28564,8 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 calls_ = new java.util.ArrayList<com.elarian.hera.proto.Common.VoiceCallStateEntry>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -26778,7 +28574,7 @@ public final class Common {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -26787,12 +28583,19 @@ public final class Common {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 channelNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.VoiceChannelNumber>();
                 mutable_bitField0_ |= 0x00000004;
               }
               channelNumbers_.add(
                   input.readMessage(com.elarian.hera.proto.Common.VoiceChannelNumber.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -26803,13 +28606,13 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           calls_ = java.util.Collections.unmodifiableList(calls_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           channelNumbers_ = java.util.Collections.unmodifiableList(channelNumbers_);
         }
         this.unknownFields = unknownFields.build();
@@ -26821,6 +28624,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceState_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceState_fieldAccessorTable
@@ -26833,12 +28637,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallStateEntry calls = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.VoiceCallStateEntry> getCallsList() {
       return calls_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallStateEntry calls = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.VoiceCallStateEntryOrBuilder> 
         getCallsOrBuilderList() {
       return calls_;
@@ -26846,18 +28652,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallStateEntry calls = 1;</code>
      */
+    @java.lang.Override
     public int getCallsCount() {
       return calls_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallStateEntry calls = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallStateEntry getCalls(int index) {
       return calls_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceCallStateEntry calls = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallStateEntryOrBuilder getCallsOrBuilder(
         int index) {
       return calls_.get(index);
@@ -26868,12 +28677,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerNumber> getCustomerNumbersList() {
       return customerNumbers_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerNumberOrBuilder> 
         getCustomerNumbersOrBuilderList() {
       return customerNumbers_;
@@ -26881,18 +28692,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public int getCustomerNumbersCount() {
       return customerNumbers_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumbers(int index) {
       return customerNumbers_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumbersOrBuilder(
         int index) {
       return customerNumbers_.get(index);
@@ -26903,12 +28717,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceChannelNumber channel_numbers = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.VoiceChannelNumber> getChannelNumbersList() {
       return channelNumbers_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceChannelNumber channel_numbers = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.VoiceChannelNumberOrBuilder> 
         getChannelNumbersOrBuilderList() {
       return channelNumbers_;
@@ -26916,24 +28732,28 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceChannelNumber channel_numbers = 3;</code>
      */
+    @java.lang.Override
     public int getChannelNumbersCount() {
       return channelNumbers_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceChannelNumber channel_numbers = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumbers(int index) {
       return channelNumbers_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.VoiceChannelNumber channel_numbers = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumberOrBuilder getChannelNumbersOrBuilder(
         int index) {
       return channelNumbers_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -26943,6 +28763,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < calls_.size(); i++) {
@@ -26957,6 +28778,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -26989,15 +28811,14 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.VoiceState other = (com.elarian.hera.proto.Common.VoiceState) obj;
 
-      boolean result = true;
-      result = result && getCallsList()
-          .equals(other.getCallsList());
-      result = result && getCustomerNumbersList()
-          .equals(other.getCustomerNumbersList());
-      result = result && getChannelNumbersList()
-          .equals(other.getChannelNumbersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCallsList()
+          .equals(other.getCallsList())) return false;
+      if (!getCustomerNumbersList()
+          .equals(other.getCustomerNumbersList())) return false;
+      if (!getChannelNumbersList()
+          .equals(other.getChannelNumbersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -27094,6 +28915,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -27101,6 +28923,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.VoiceState prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -27124,6 +28947,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceState_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceState_fieldAccessorTable
@@ -27149,6 +28973,7 @@ public final class Common {
           getChannelNumbersFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (callsBuilder_ == null) {
@@ -27172,15 +28997,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceState_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceState getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.VoiceState.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceState build() {
         com.elarian.hera.proto.Common.VoiceState result = buildPartial();
         if (!result.isInitialized()) {
@@ -27189,11 +29017,12 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceState buildPartial() {
         com.elarian.hera.proto.Common.VoiceState result = new com.elarian.hera.proto.Common.VoiceState(this);
         int from_bitField0_ = bitField0_;
         if (callsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             calls_ = java.util.Collections.unmodifiableList(calls_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -27202,7 +29031,7 @@ public final class Common {
           result.calls_ = callsBuilder_.build();
         }
         if (customerNumbersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -27211,7 +29040,7 @@ public final class Common {
           result.customerNumbers_ = customerNumbersBuilder_.build();
         }
         if (channelNumbersBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             channelNumbers_ = java.util.Collections.unmodifiableList(channelNumbers_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -27223,32 +29052,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.VoiceState) {
           return mergeFrom((com.elarian.hera.proto.Common.VoiceState)other);
@@ -27343,10 +29179,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -27369,7 +29207,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.VoiceCallStateEntry> calls_ =
         java.util.Collections.emptyList();
       private void ensureCallsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           calls_ = new java.util.ArrayList<com.elarian.hera.proto.Common.VoiceCallStateEntry>(calls_);
           bitField0_ |= 0x00000001;
          }
@@ -27598,7 +29436,7 @@ public final class Common {
           callsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.VoiceCallStateEntry, com.elarian.hera.proto.Common.VoiceCallStateEntry.Builder, com.elarian.hera.proto.Common.VoiceCallStateEntryOrBuilder>(
                   calls_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           calls_ = null;
@@ -27609,7 +29447,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.CustomerNumber> customerNumbers_ =
         java.util.Collections.emptyList();
       private void ensureCustomerNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>(customerNumbers_);
           bitField0_ |= 0x00000002;
          }
@@ -27838,7 +29676,7 @@ public final class Common {
           customerNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder>(
                   customerNumbers_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           customerNumbers_ = null;
@@ -27849,7 +29687,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.VoiceChannelNumber> channelNumbers_ =
         java.util.Collections.emptyList();
       private void ensureChannelNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           channelNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.VoiceChannelNumber>(channelNumbers_);
           bitField0_ |= 0x00000004;
          }
@@ -28078,18 +29916,20 @@ public final class Common {
           channelNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.VoiceChannelNumber, com.elarian.hera.proto.Common.VoiceChannelNumber.Builder, com.elarian.hera.proto.Common.VoiceChannelNumberOrBuilder>(
                   channelNumbers_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           channelNumbers_ = null;
         }
         return channelNumbersBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -28111,11 +29951,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<VoiceState>
         PARSER = new com.google.protobuf.AbstractParser<VoiceState>() {
+      @java.lang.Override
       public VoiceState parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new VoiceState(input, extensionRegistry);
+        return new VoiceState(input, extensionRegistry);
       }
     };
 
@@ -28128,6 +29969,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -28140,19 +29982,23 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The enum numeric value on the wire for direction.
      */
     int getDirectionValue();
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The direction.
      */
     com.elarian.hera.proto.Common.CustomerEventDirection getDirection();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
     /**
@@ -28162,10 +30008,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 3;</code>
+     * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 3;</code>
+     * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber();
     /**
@@ -28175,30 +30023,36 @@ public final class Common {
 
     /**
      * <code>string transaction_id = 4;</code>
+     * @return The transactionId.
      */
     java.lang.String getTransactionId();
     /**
      * <code>string transaction_id = 4;</code>
+     * @return The bytes for transactionId.
      */
     com.google.protobuf.ByteString
         getTransactionIdBytes();
 
     /**
      * <code>string product_id = 5;</code>
+     * @return The productId.
      */
     java.lang.String getProductId();
     /**
      * <code>string product_id = 5;</code>
+     * @return The bytes for productId.
      */
     com.google.protobuf.ByteString
         getProductIdBytes();
 
     /**
      * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * @return Whether the value field is set.
      */
     boolean hasValue();
     /**
      * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * @return The value.
      */
     com.elarian.hera.proto.Common.Cash getValue();
     /**
@@ -28208,10 +30062,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -28221,10 +30077,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -28234,17 +30092,19 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * @return The status.
      */
     com.elarian.hera.proto.Common.PaymentStatus getStatus();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.PaymentTransactionStateEntry}
    */
-  public  static final class PaymentTransactionStateEntry extends
+  public static final class PaymentTransactionStateEntry extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentTransactionStateEntry)
       PaymentTransactionStateEntryOrBuilder {
@@ -28261,6 +30121,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentTransactionStateEntry();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -28270,7 +30137,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -28281,13 +30150,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
               int rawValue = input.readEnum();
 
@@ -28377,6 +30239,13 @@ public final class Common {
               status_ = rawValue;
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -28394,6 +30263,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentTransactionStateEntry_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentTransactionStateEntry_fieldAccessorTable
@@ -28405,14 +30275,17 @@ public final class Common {
     private int direction_;
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The enum numeric value on the wire for direction.
      */
-    public int getDirectionValue() {
+    @java.lang.Override public int getDirectionValue() {
       return direction_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+     * @return The direction.
      */
-    public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+    @java.lang.Override public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.CustomerEventDirection result = com.elarian.hera.proto.Common.CustomerEventDirection.valueOf(direction_);
       return result == null ? com.elarian.hera.proto.Common.CustomerEventDirection.UNRECOGNIZED : result;
     }
@@ -28421,19 +30294,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return Whether the customerNumber field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerNumber() {
       return customerNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+     * @return The customerNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
       return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumberOrBuilder() {
       return getCustomerNumber();
     }
@@ -28442,19 +30320,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.PaymentChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 3;</code>
+     * @return Whether the channelNumber field is set.
      */
+    @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 3;</code>
+     * @return The channelNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.PaymentChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentChannelNumberOrBuilder getChannelNumberOrBuilder() {
       return getChannelNumber();
     }
@@ -28463,7 +30346,9 @@ public final class Common {
     private volatile java.lang.Object transactionId_;
     /**
      * <code>string transaction_id = 4;</code>
+     * @return The transactionId.
      */
+    @java.lang.Override
     public java.lang.String getTransactionId() {
       java.lang.Object ref = transactionId_;
       if (ref instanceof java.lang.String) {
@@ -28478,7 +30363,9 @@ public final class Common {
     }
     /**
      * <code>string transaction_id = 4;</code>
+     * @return The bytes for transactionId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTransactionIdBytes() {
       java.lang.Object ref = transactionId_;
@@ -28497,7 +30384,9 @@ public final class Common {
     private volatile java.lang.Object productId_;
     /**
      * <code>string product_id = 5;</code>
+     * @return The productId.
      */
+    @java.lang.Override
     public java.lang.String getProductId() {
       java.lang.Object ref = productId_;
       if (ref instanceof java.lang.String) {
@@ -28512,7 +30401,9 @@ public final class Common {
     }
     /**
      * <code>string product_id = 5;</code>
+     * @return The bytes for productId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getProductIdBytes() {
       java.lang.Object ref = productId_;
@@ -28531,19 +30422,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.Cash value_;
     /**
      * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * @return Whether the value field is set.
      */
+    @java.lang.Override
     public boolean hasValue() {
       return value_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * @return The value.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getValue() {
       return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash value = 6;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CashOrBuilder getValueOrBuilder() {
       return getValue();
     }
@@ -28552,19 +30448,24 @@ public final class Common {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -28573,19 +30474,24 @@ public final class Common {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 8;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
@@ -28594,19 +30500,23 @@ public final class Common {
     private int status_;
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * @return The status.
      */
-    public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+    @java.lang.Override public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.valueOf(status_);
       return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -28616,6 +30526,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (direction_ != com.elarian.hera.proto.Common.CustomerEventDirection.CUSTOMER_EVENT_DIRECTION_UNSPECIFIED.getNumber()) {
@@ -28648,6 +30559,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -28702,40 +30614,39 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.PaymentTransactionStateEntry other = (com.elarian.hera.proto.Common.PaymentTransactionStateEntry) obj;
 
-      boolean result = true;
-      result = result && direction_ == other.direction_;
-      result = result && (hasCustomerNumber() == other.hasCustomerNumber());
+      if (direction_ != other.direction_) return false;
+      if (hasCustomerNumber() != other.hasCustomerNumber()) return false;
       if (hasCustomerNumber()) {
-        result = result && getCustomerNumber()
-            .equals(other.getCustomerNumber());
+        if (!getCustomerNumber()
+            .equals(other.getCustomerNumber())) return false;
       }
-      result = result && (hasChannelNumber() == other.hasChannelNumber());
+      if (hasChannelNumber() != other.hasChannelNumber()) return false;
       if (hasChannelNumber()) {
-        result = result && getChannelNumber()
-            .equals(other.getChannelNumber());
+        if (!getChannelNumber()
+            .equals(other.getChannelNumber())) return false;
       }
-      result = result && getTransactionId()
-          .equals(other.getTransactionId());
-      result = result && getProductId()
-          .equals(other.getProductId());
-      result = result && (hasValue() == other.hasValue());
+      if (!getTransactionId()
+          .equals(other.getTransactionId())) return false;
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (hasValue() != other.hasValue()) return false;
       if (hasValue()) {
-        result = result && getValue()
-            .equals(other.getValue());
+        if (!getValue()
+            .equals(other.getValue())) return false;
       }
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && status_ == other.status_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (status_ != other.status_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -28848,6 +30759,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -28855,6 +30767,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentTransactionStateEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -28878,6 +30791,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentTransactionStateEntry_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentTransactionStateEntry_fieldAccessorTable
@@ -28900,6 +30814,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         direction_ = 0;
@@ -28943,15 +30858,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentTransactionStateEntry_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentTransactionStateEntry getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.PaymentTransactionStateEntry.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentTransactionStateEntry build() {
         com.elarian.hera.proto.Common.PaymentTransactionStateEntry result = buildPartial();
         if (!result.isInitialized()) {
@@ -28960,6 +30878,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentTransactionStateEntry buildPartial() {
         com.elarian.hera.proto.Common.PaymentTransactionStateEntry result = new com.elarian.hera.proto.Common.PaymentTransactionStateEntry(this);
         result.direction_ = direction_;
@@ -28995,32 +30914,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.PaymentTransactionStateEntry) {
           return mergeFrom((com.elarian.hera.proto.Common.PaymentTransactionStateEntry)other);
@@ -29066,10 +30992,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -29091,27 +31019,36 @@ public final class Common {
       private int direction_ = 0;
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return The enum numeric value on the wire for direction.
        */
-      public int getDirectionValue() {
+      @java.lang.Override public int getDirectionValue() {
         return direction_;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @param value The enum numeric value on the wire for direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirectionValue(int value) {
+        
         direction_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return The direction.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.CustomerEventDirection result = com.elarian.hera.proto.Common.CustomerEventDirection.valueOf(direction_);
         return result == null ? com.elarian.hera.proto.Common.CustomerEventDirection.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @param value The direction to set.
+       * @return This builder for chaining.
        */
       public Builder setDirection(com.elarian.hera.proto.Common.CustomerEventDirection value) {
         if (value == null) {
@@ -29124,6 +31061,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDirection() {
         
@@ -29132,17 +31070,19 @@ public final class Common {
         return this;
       }
 
-      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_ = null;
+      private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder> customerNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+       * @return Whether the customerNumber field is set.
        */
       public boolean hasCustomerNumber() {
         return customerNumberBuilder_ != null || customerNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
+       * @return The customerNumber.
        */
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         if (customerNumberBuilder_ == null) {
@@ -29249,17 +31189,19 @@ public final class Common {
         return customerNumberBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.PaymentChannelNumber channelNumber_ = null;
+      private com.elarian.hera.proto.Common.PaymentChannelNumber channelNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.PaymentChannelNumber, com.elarian.hera.proto.Common.PaymentChannelNumber.Builder, com.elarian.hera.proto.Common.PaymentChannelNumberOrBuilder> channelNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 3;</code>
+       * @return Whether the channelNumber field is set.
        */
       public boolean hasChannelNumber() {
         return channelNumberBuilder_ != null || channelNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 3;</code>
+       * @return The channelNumber.
        */
       public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber() {
         if (channelNumberBuilder_ == null) {
@@ -29369,6 +31311,7 @@ public final class Common {
       private java.lang.Object transactionId_ = "";
       /**
        * <code>string transaction_id = 4;</code>
+       * @return The transactionId.
        */
       public java.lang.String getTransactionId() {
         java.lang.Object ref = transactionId_;
@@ -29384,6 +31327,7 @@ public final class Common {
       }
       /**
        * <code>string transaction_id = 4;</code>
+       * @return The bytes for transactionId.
        */
       public com.google.protobuf.ByteString
           getTransactionIdBytes() {
@@ -29400,6 +31344,8 @@ public final class Common {
       }
       /**
        * <code>string transaction_id = 4;</code>
+       * @param value The transactionId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransactionId(
           java.lang.String value) {
@@ -29413,6 +31359,7 @@ public final class Common {
       }
       /**
        * <code>string transaction_id = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTransactionId() {
         
@@ -29422,6 +31369,8 @@ public final class Common {
       }
       /**
        * <code>string transaction_id = 4;</code>
+       * @param value The bytes for transactionId to set.
+       * @return This builder for chaining.
        */
       public Builder setTransactionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -29438,6 +31387,7 @@ public final class Common {
       private java.lang.Object productId_ = "";
       /**
        * <code>string product_id = 5;</code>
+       * @return The productId.
        */
       public java.lang.String getProductId() {
         java.lang.Object ref = productId_;
@@ -29453,6 +31403,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
           getProductIdBytes() {
@@ -29469,6 +31420,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductId(
           java.lang.String value) {
@@ -29482,6 +31435,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductId() {
         
@@ -29491,6 +31445,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 5;</code>
+       * @param value The bytes for productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIdBytes(
           com.google.protobuf.ByteString value) {
@@ -29504,17 +31460,19 @@ public final class Common {
         return this;
       }
 
-      private com.elarian.hera.proto.Common.Cash value_ = null;
+      private com.elarian.hera.proto.Common.Cash value_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.Cash, com.elarian.hera.proto.Common.Cash.Builder, com.elarian.hera.proto.Common.CashOrBuilder> valueBuilder_;
       /**
        * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * @return Whether the value field is set.
        */
       public boolean hasValue() {
         return valueBuilder_ != null || value_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * @return The value.
        */
       public com.elarian.hera.proto.Common.Cash getValue() {
         if (valueBuilder_ == null) {
@@ -29621,17 +31579,19 @@ public final class Common {
         return valueBuilder_;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -29738,17 +31698,19 @@ public final class Common {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -29858,27 +31820,36 @@ public final class Common {
       private int status_ = 0;
       /**
        * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public int getStatusValue() {
+      @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+       * @return The status.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.valueOf(status_);
         return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
        */
       public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
         if (value == null) {
@@ -29891,6 +31862,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
@@ -29898,11 +31870,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -29924,11 +31898,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<PaymentTransactionStateEntry>
         PARSER = new com.google.protobuf.AbstractParser<PaymentTransactionStateEntry>() {
+      @java.lang.Override
       public PaymentTransactionStateEntry parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PaymentTransactionStateEntry(input, extensionRegistry);
+        return new PaymentTransactionStateEntry(input, extensionRegistry);
       }
     };
 
@@ -29941,6 +31916,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentTransactionStateEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -30050,7 +32026,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.PaymentState}
    */
-  public  static final class PaymentState extends
+  public static final class PaymentState extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentState)
       PaymentStateOrBuilder {
@@ -30067,6 +32043,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentState();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -30076,6 +32059,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -30087,15 +32073,8 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -30104,7 +32083,7 @@ public final class Common {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 channelNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.PaymentChannelNumber>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -30113,7 +32092,7 @@ public final class Common {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 transactionLog_ = new java.util.ArrayList<com.elarian.hera.proto.Common.PaymentTransactionStateEntry>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -30122,12 +32101,19 @@ public final class Common {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 pendingTransactions_ = new java.util.ArrayList<com.elarian.hera.proto.Common.PaymentTransactionStateEntry>();
                 mutable_bitField0_ |= 0x00000008;
               }
               pendingTransactions_.add(
                   input.readMessage(com.elarian.hera.proto.Common.PaymentTransactionStateEntry.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -30138,16 +32124,16 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
         }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           channelNumbers_ = java.util.Collections.unmodifiableList(channelNumbers_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           transactionLog_ = java.util.Collections.unmodifiableList(transactionLog_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
           pendingTransactions_ = java.util.Collections.unmodifiableList(pendingTransactions_);
         }
         this.unknownFields = unknownFields.build();
@@ -30159,6 +32145,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentState_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentState_fieldAccessorTable
@@ -30171,12 +32158,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerNumber> getCustomerNumbersList() {
       return customerNumbers_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerNumberOrBuilder> 
         getCustomerNumbersOrBuilderList() {
       return customerNumbers_;
@@ -30184,18 +32173,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public int getCustomerNumbersCount() {
       return customerNumbers_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumbers(int index) {
       return customerNumbers_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumbersOrBuilder(
         int index) {
       return customerNumbers_.get(index);
@@ -30206,12 +32198,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentChannelNumber channel_numbers = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.PaymentChannelNumber> getChannelNumbersList() {
       return channelNumbers_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentChannelNumber channel_numbers = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.PaymentChannelNumberOrBuilder> 
         getChannelNumbersOrBuilderList() {
       return channelNumbers_;
@@ -30219,18 +32213,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentChannelNumber channel_numbers = 2;</code>
      */
+    @java.lang.Override
     public int getChannelNumbersCount() {
       return channelNumbers_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentChannelNumber channel_numbers = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumbers(int index) {
       return channelNumbers_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentChannelNumber channel_numbers = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentChannelNumberOrBuilder getChannelNumbersOrBuilder(
         int index) {
       return channelNumbers_.get(index);
@@ -30241,12 +32238,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> getTransactionLogList() {
       return transactionLog_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder> 
         getTransactionLogOrBuilderList() {
       return transactionLog_;
@@ -30254,18 +32253,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
      */
+    @java.lang.Override
     public int getTransactionLogCount() {
       return transactionLog_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentTransactionStateEntry getTransactionLog(int index) {
       return transactionLog_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder getTransactionLogOrBuilder(
         int index) {
       return transactionLog_.get(index);
@@ -30276,12 +32278,14 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> getPendingTransactionsList() {
       return pendingTransactions_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder> 
         getPendingTransactionsOrBuilderList() {
       return pendingTransactions_;
@@ -30289,24 +32293,28 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
      */
+    @java.lang.Override
     public int getPendingTransactionsCount() {
       return pendingTransactions_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentTransactionStateEntry getPendingTransactions(int index) {
       return pendingTransactions_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder getPendingTransactionsOrBuilder(
         int index) {
       return pendingTransactions_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -30316,6 +32324,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < customerNumbers_.size(); i++) {
@@ -30333,6 +32342,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -30369,17 +32379,16 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.PaymentState other = (com.elarian.hera.proto.Common.PaymentState) obj;
 
-      boolean result = true;
-      result = result && getCustomerNumbersList()
-          .equals(other.getCustomerNumbersList());
-      result = result && getChannelNumbersList()
-          .equals(other.getChannelNumbersList());
-      result = result && getTransactionLogList()
-          .equals(other.getTransactionLogList());
-      result = result && getPendingTransactionsList()
-          .equals(other.getPendingTransactionsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCustomerNumbersList()
+          .equals(other.getCustomerNumbersList())) return false;
+      if (!getChannelNumbersList()
+          .equals(other.getChannelNumbersList())) return false;
+      if (!getTransactionLogList()
+          .equals(other.getTransactionLogList())) return false;
+      if (!getPendingTransactionsList()
+          .equals(other.getPendingTransactionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -30480,6 +32489,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -30487,6 +32497,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentState prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -30510,6 +32521,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentState_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentState_fieldAccessorTable
@@ -30536,6 +32548,7 @@ public final class Common {
           getPendingTransactionsFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (customerNumbersBuilder_ == null) {
@@ -30565,15 +32578,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PaymentState_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentState getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.PaymentState.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentState build() {
         com.elarian.hera.proto.Common.PaymentState result = buildPartial();
         if (!result.isInitialized()) {
@@ -30582,11 +32598,12 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentState buildPartial() {
         com.elarian.hera.proto.Common.PaymentState result = new com.elarian.hera.proto.Common.PaymentState(this);
         int from_bitField0_ = bitField0_;
         if (customerNumbersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -30595,7 +32612,7 @@ public final class Common {
           result.customerNumbers_ = customerNumbersBuilder_.build();
         }
         if (channelNumbersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             channelNumbers_ = java.util.Collections.unmodifiableList(channelNumbers_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -30604,7 +32621,7 @@ public final class Common {
           result.channelNumbers_ = channelNumbersBuilder_.build();
         }
         if (transactionLogBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             transactionLog_ = java.util.Collections.unmodifiableList(transactionLog_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -30613,7 +32630,7 @@ public final class Common {
           result.transactionLog_ = transactionLogBuilder_.build();
         }
         if (pendingTransactionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             pendingTransactions_ = java.util.Collections.unmodifiableList(pendingTransactions_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -30625,32 +32642,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.PaymentState) {
           return mergeFrom((com.elarian.hera.proto.Common.PaymentState)other);
@@ -30771,10 +32795,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -30797,7 +32823,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.CustomerNumber> customerNumbers_ =
         java.util.Collections.emptyList();
       private void ensureCustomerNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>(customerNumbers_);
           bitField0_ |= 0x00000001;
          }
@@ -31026,7 +33052,7 @@ public final class Common {
           customerNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder>(
                   customerNumbers_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           customerNumbers_ = null;
@@ -31037,7 +33063,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.PaymentChannelNumber> channelNumbers_ =
         java.util.Collections.emptyList();
       private void ensureChannelNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           channelNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.PaymentChannelNumber>(channelNumbers_);
           bitField0_ |= 0x00000002;
          }
@@ -31266,7 +33292,7 @@ public final class Common {
           channelNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.PaymentChannelNumber, com.elarian.hera.proto.Common.PaymentChannelNumber.Builder, com.elarian.hera.proto.Common.PaymentChannelNumberOrBuilder>(
                   channelNumbers_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           channelNumbers_ = null;
@@ -31277,7 +33303,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> transactionLog_ =
         java.util.Collections.emptyList();
       private void ensureTransactionLogIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           transactionLog_ = new java.util.ArrayList<com.elarian.hera.proto.Common.PaymentTransactionStateEntry>(transactionLog_);
           bitField0_ |= 0x00000004;
          }
@@ -31506,7 +33532,7 @@ public final class Common {
           transactionLogBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.PaymentTransactionStateEntry, com.elarian.hera.proto.Common.PaymentTransactionStateEntry.Builder, com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder>(
                   transactionLog_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           transactionLog_ = null;
@@ -31517,7 +33543,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> pendingTransactions_ =
         java.util.Collections.emptyList();
       private void ensurePendingTransactionsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           pendingTransactions_ = new java.util.ArrayList<com.elarian.hera.proto.Common.PaymentTransactionStateEntry>(pendingTransactions_);
           bitField0_ |= 0x00000008;
          }
@@ -31746,18 +33772,20 @@ public final class Common {
           pendingTransactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.PaymentTransactionStateEntry, com.elarian.hera.proto.Common.PaymentTransactionStateEntry.Builder, com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder>(
                   pendingTransactions_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           pendingTransactions_ = null;
         }
         return pendingTransactionsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -31779,11 +33807,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<PaymentState>
         PARSER = new com.google.protobuf.AbstractParser<PaymentState>() {
+      @java.lang.Override
       public PaymentState parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PaymentState(input, extensionRegistry);
+        return new PaymentState(input, extensionRegistry);
       }
     };
 
@@ -31796,6 +33825,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -31808,20 +33838,24 @@ public final class Common {
 
     /**
      * <code>string key = 1;</code>
+     * @return The key.
      */
     java.lang.String getKey();
     /**
      * <code>string key = 1;</code>
+     * @return The bytes for key.
      */
     com.google.protobuf.ByteString
         getKeyBytes();
 
     /**
      * <code>.google.protobuf.StringValue value = 2;</code>
+     * @return Whether the value field is set.
      */
     boolean hasValue();
     /**
      * <code>.google.protobuf.StringValue value = 2;</code>
+     * @return The value.
      */
     com.google.protobuf.StringValue getValue();
     /**
@@ -31832,7 +33866,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.IndexMapping}
    */
-  public  static final class IndexMapping extends
+  public static final class IndexMapping extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.IndexMapping)
       IndexMappingOrBuilder {
@@ -31846,6 +33880,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IndexMapping();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -31855,7 +33896,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -31866,13 +33909,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -31892,6 +33928,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -31909,6 +33952,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_IndexMapping_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_IndexMapping_fieldAccessorTable
@@ -31920,7 +33964,9 @@ public final class Common {
     private volatile java.lang.Object key_;
     /**
      * <code>string key = 1;</code>
+     * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -31935,7 +33981,9 @@ public final class Common {
     }
     /**
      * <code>string key = 1;</code>
+     * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -31954,24 +34002,30 @@ public final class Common {
     private com.google.protobuf.StringValue value_;
     /**
      * <code>.google.protobuf.StringValue value = 2;</code>
+     * @return Whether the value field is set.
      */
+    @java.lang.Override
     public boolean hasValue() {
       return value_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue value = 2;</code>
+     * @return The value.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getValue() {
       return value_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : value_;
     }
     /**
      * <code>.google.protobuf.StringValue value = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getValueOrBuilder() {
       return getValue();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -31981,6 +34035,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getKeyBytes().isEmpty()) {
@@ -31992,6 +34047,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -32019,16 +34075,15 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.IndexMapping other = (com.elarian.hera.proto.Common.IndexMapping) obj;
 
-      boolean result = true;
-      result = result && getKey()
-          .equals(other.getKey());
-      result = result && (hasValue() == other.hasValue());
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (hasValue() != other.hasValue()) return false;
       if (hasValue()) {
-        result = result && getValue()
-            .equals(other.getValue());
+        if (!getValue()
+            .equals(other.getValue())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -32119,6 +34174,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -32126,6 +34182,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.IndexMapping prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -32149,6 +34206,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_IndexMapping_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_IndexMapping_fieldAccessorTable
@@ -32171,6 +34229,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         key_ = "";
@@ -32184,15 +34243,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_IndexMapping_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.IndexMapping getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.IndexMapping build() {
         com.elarian.hera.proto.Common.IndexMapping result = buildPartial();
         if (!result.isInitialized()) {
@@ -32201,6 +34263,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.IndexMapping buildPartial() {
         com.elarian.hera.proto.Common.IndexMapping result = new com.elarian.hera.proto.Common.IndexMapping(this);
         result.key_ = key_;
@@ -32213,32 +34276,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.IndexMapping) {
           return mergeFrom((com.elarian.hera.proto.Common.IndexMapping)other);
@@ -32262,10 +34332,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -32287,6 +34359,7 @@ public final class Common {
       private java.lang.Object key_ = "";
       /**
        * <code>string key = 1;</code>
+       * @return The key.
        */
       public java.lang.String getKey() {
         java.lang.Object ref = key_;
@@ -32302,6 +34375,7 @@ public final class Common {
       }
       /**
        * <code>string key = 1;</code>
+       * @return The bytes for key.
        */
       public com.google.protobuf.ByteString
           getKeyBytes() {
@@ -32318,6 +34392,8 @@ public final class Common {
       }
       /**
        * <code>string key = 1;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
        */
       public Builder setKey(
           java.lang.String value) {
@@ -32331,6 +34407,7 @@ public final class Common {
       }
       /**
        * <code>string key = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKey() {
         
@@ -32340,6 +34417,8 @@ public final class Common {
       }
       /**
        * <code>string key = 1;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -32353,17 +34432,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue value_ = null;
+      private com.google.protobuf.StringValue value_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> valueBuilder_;
       /**
        * <code>.google.protobuf.StringValue value = 2;</code>
+       * @return Whether the value field is set.
        */
       public boolean hasValue() {
         return valueBuilder_ != null || value_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue value = 2;</code>
+       * @return The value.
        */
       public com.google.protobuf.StringValue getValue() {
         if (valueBuilder_ == null) {
@@ -32469,11 +34550,13 @@ public final class Common {
         }
         return valueBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -32495,11 +34578,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<IndexMapping>
         PARSER = new com.google.protobuf.AbstractParser<IndexMapping>() {
+      @java.lang.Override
       public IndexMapping parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new IndexMapping(input, extensionRegistry);
+        return new IndexMapping(input, extensionRegistry);
       }
     };
 
@@ -32512,6 +34596,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.IndexMapping getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -32524,10 +34609,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping mapping = 1;</code>
+     * @return Whether the mapping field is set.
      */
     boolean hasMapping();
     /**
      * <code>.com.elarian.hera.proto.IndexMapping mapping = 1;</code>
+     * @return The mapping.
      */
     com.elarian.hera.proto.Common.IndexMapping getMapping();
     /**
@@ -32537,10 +34624,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
+     * @return Whether the expiration field is set.
      */
     boolean hasExpiration();
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
+     * @return The expiration.
      */
     com.google.protobuf.Timestamp getExpiration();
     /**
@@ -32551,7 +34640,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.CustomerIndex}
    */
-  public  static final class CustomerIndex extends
+  public static final class CustomerIndex extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerIndex)
       CustomerIndexOrBuilder {
@@ -32564,6 +34653,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomerIndex();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -32573,7 +34669,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -32584,13 +34682,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.IndexMapping.Builder subBuilder = null;
               if (mapping_ != null) {
@@ -32617,6 +34708,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -32634,6 +34732,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerIndex_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerIndex_fieldAccessorTable
@@ -32645,19 +34744,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.IndexMapping mapping_;
     /**
      * <code>.com.elarian.hera.proto.IndexMapping mapping = 1;</code>
+     * @return Whether the mapping field is set.
      */
+    @java.lang.Override
     public boolean hasMapping() {
       return mapping_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping mapping = 1;</code>
+     * @return The mapping.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.IndexMapping getMapping() {
       return mapping_ == null ? com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance() : mapping_;
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping mapping = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.IndexMappingOrBuilder getMappingOrBuilder() {
       return getMapping();
     }
@@ -32666,24 +34770,30 @@ public final class Common {
     private com.google.protobuf.Timestamp expiration_;
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
+     * @return Whether the expiration field is set.
      */
+    @java.lang.Override
     public boolean hasExpiration() {
       return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
+     * @return The expiration.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getExpiration() {
       return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder() {
       return getExpiration();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -32693,6 +34803,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (mapping_ != null) {
@@ -32704,6 +34815,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -32732,19 +34844,18 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.CustomerIndex other = (com.elarian.hera.proto.Common.CustomerIndex) obj;
 
-      boolean result = true;
-      result = result && (hasMapping() == other.hasMapping());
+      if (hasMapping() != other.hasMapping()) return false;
       if (hasMapping()) {
-        result = result && getMapping()
-            .equals(other.getMapping());
+        if (!getMapping()
+            .equals(other.getMapping())) return false;
       }
-      result = result && (hasExpiration() == other.hasExpiration());
+      if (hasExpiration() != other.hasExpiration()) return false;
       if (hasExpiration()) {
-        result = result && getExpiration()
-            .equals(other.getExpiration());
+        if (!getExpiration()
+            .equals(other.getExpiration())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -32837,6 +34948,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -32844,6 +34956,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.CustomerIndex prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -32867,6 +34980,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerIndex_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerIndex_fieldAccessorTable
@@ -32889,6 +35003,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (mappingBuilder_ == null) {
@@ -32906,15 +35021,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerIndex_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerIndex getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.CustomerIndex.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerIndex build() {
         com.elarian.hera.proto.Common.CustomerIndex result = buildPartial();
         if (!result.isInitialized()) {
@@ -32923,6 +35041,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerIndex buildPartial() {
         com.elarian.hera.proto.Common.CustomerIndex result = new com.elarian.hera.proto.Common.CustomerIndex(this);
         if (mappingBuilder_ == null) {
@@ -32939,32 +35058,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.CustomerIndex) {
           return mergeFrom((com.elarian.hera.proto.Common.CustomerIndex)other);
@@ -32987,10 +35113,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -33009,17 +35137,19 @@ public final class Common {
         return this;
       }
 
-      private com.elarian.hera.proto.Common.IndexMapping mapping_ = null;
+      private com.elarian.hera.proto.Common.IndexMapping mapping_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.IndexMapping, com.elarian.hera.proto.Common.IndexMapping.Builder, com.elarian.hera.proto.Common.IndexMappingOrBuilder> mappingBuilder_;
       /**
        * <code>.com.elarian.hera.proto.IndexMapping mapping = 1;</code>
+       * @return Whether the mapping field is set.
        */
       public boolean hasMapping() {
         return mappingBuilder_ != null || mapping_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping mapping = 1;</code>
+       * @return The mapping.
        */
       public com.elarian.hera.proto.Common.IndexMapping getMapping() {
         if (mappingBuilder_ == null) {
@@ -33126,17 +35256,19 @@ public final class Common {
         return mappingBuilder_;
       }
 
-      private com.google.protobuf.Timestamp expiration_ = null;
+      private com.google.protobuf.Timestamp expiration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expirationBuilder_;
       /**
        * <code>.google.protobuf.Timestamp expiration = 2;</code>
+       * @return Whether the expiration field is set.
        */
       public boolean hasExpiration() {
         return expirationBuilder_ != null || expiration_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp expiration = 2;</code>
+       * @return The expiration.
        */
       public com.google.protobuf.Timestamp getExpiration() {
         if (expirationBuilder_ == null) {
@@ -33242,11 +35374,13 @@ public final class Common {
         }
         return expirationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -33268,11 +35402,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<CustomerIndex>
         PARSER = new com.google.protobuf.AbstractParser<CustomerIndex>() {
+      @java.lang.Override
       public CustomerIndex parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CustomerIndex(input, extensionRegistry);
+        return new CustomerIndex(input, extensionRegistry);
       }
     };
 
@@ -33285,6 +35420,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerIndex getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -33297,30 +35433,36 @@ public final class Common {
 
     /**
      * <code>string product_id = 1;</code>
+     * @return The productId.
      */
     java.lang.String getProductId();
     /**
      * <code>string product_id = 1;</code>
+     * @return The bytes for productId.
      */
     com.google.protobuf.ByteString
         getProductIdBytes();
 
     /**
      * <code>string key = 2;</code>
+     * @return The key.
      */
     java.lang.String getKey();
     /**
      * <code>string key = 2;</code>
+     * @return The bytes for key.
      */
     com.google.protobuf.ByteString
         getKeyBytes();
 
     /**
      * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * @return Whether the expiration field is set.
      */
     boolean hasExpiration();
     /**
      * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * @return The expiration.
      */
     com.google.protobuf.Timestamp getExpiration();
     /**
@@ -33330,10 +35472,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue payload = 4;</code>
+     * @return Whether the payload field is set.
      */
     boolean hasPayload();
     /**
      * <code>.google.protobuf.StringValue payload = 4;</code>
+     * @return The payload.
      */
     com.google.protobuf.StringValue getPayload();
     /**
@@ -33344,7 +35488,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.CustomerReminder}
    */
-  public  static final class CustomerReminder extends
+  public static final class CustomerReminder extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerReminder)
       CustomerReminderOrBuilder {
@@ -33359,6 +35503,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomerReminder();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -33368,7 +35519,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -33379,13 +35532,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -33424,6 +35570,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -33441,6 +35594,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerReminder_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerReminder_fieldAccessorTable
@@ -33452,7 +35606,9 @@ public final class Common {
     private volatile java.lang.Object productId_;
     /**
      * <code>string product_id = 1;</code>
+     * @return The productId.
      */
+    @java.lang.Override
     public java.lang.String getProductId() {
       java.lang.Object ref = productId_;
       if (ref instanceof java.lang.String) {
@@ -33467,7 +35623,9 @@ public final class Common {
     }
     /**
      * <code>string product_id = 1;</code>
+     * @return The bytes for productId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getProductIdBytes() {
       java.lang.Object ref = productId_;
@@ -33486,7 +35644,9 @@ public final class Common {
     private volatile java.lang.Object key_;
     /**
      * <code>string key = 2;</code>
+     * @return The key.
      */
+    @java.lang.Override
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
@@ -33501,7 +35661,9 @@ public final class Common {
     }
     /**
      * <code>string key = 2;</code>
+     * @return The bytes for key.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getKeyBytes() {
       java.lang.Object ref = key_;
@@ -33520,19 +35682,24 @@ public final class Common {
     private com.google.protobuf.Timestamp expiration_;
     /**
      * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * @return Whether the expiration field is set.
      */
+    @java.lang.Override
     public boolean hasExpiration() {
       return expiration_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * @return The expiration.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getExpiration() {
       return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder() {
       return getExpiration();
     }
@@ -33541,24 +35708,30 @@ public final class Common {
     private com.google.protobuf.StringValue payload_;
     /**
      * <code>.google.protobuf.StringValue payload = 4;</code>
+     * @return Whether the payload field is set.
      */
+    @java.lang.Override
     public boolean hasPayload() {
       return payload_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue payload = 4;</code>
+     * @return The payload.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPayload() {
       return payload_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : payload_;
     }
     /**
      * <code>.google.protobuf.StringValue payload = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPayloadOrBuilder() {
       return getPayload();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -33568,6 +35741,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getProductIdBytes().isEmpty()) {
@@ -33585,6 +35759,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -33619,23 +35794,22 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.CustomerReminder other = (com.elarian.hera.proto.Common.CustomerReminder) obj;
 
-      boolean result = true;
-      result = result && getProductId()
-          .equals(other.getProductId());
-      result = result && getKey()
-          .equals(other.getKey());
-      result = result && (hasExpiration() == other.hasExpiration());
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (hasExpiration() != other.hasExpiration()) return false;
       if (hasExpiration()) {
-        result = result && getExpiration()
-            .equals(other.getExpiration());
+        if (!getExpiration()
+            .equals(other.getExpiration())) return false;
       }
-      result = result && (hasPayload() == other.hasPayload());
+      if (hasPayload() != other.hasPayload()) return false;
       if (hasPayload()) {
-        result = result && getPayload()
-            .equals(other.getPayload());
+        if (!getPayload()
+            .equals(other.getPayload())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -33732,6 +35906,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -33739,6 +35914,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.CustomerReminder prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -33762,6 +35938,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerReminder_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerReminder_fieldAccessorTable
@@ -33784,6 +35961,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         productId_ = "";
@@ -33805,15 +35983,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_CustomerReminder_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerReminder getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerReminder build() {
         com.elarian.hera.proto.Common.CustomerReminder result = buildPartial();
         if (!result.isInitialized()) {
@@ -33822,6 +36003,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerReminder buildPartial() {
         com.elarian.hera.proto.Common.CustomerReminder result = new com.elarian.hera.proto.Common.CustomerReminder(this);
         result.productId_ = productId_;
@@ -33840,32 +36022,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.CustomerReminder) {
           return mergeFrom((com.elarian.hera.proto.Common.CustomerReminder)other);
@@ -33896,10 +36085,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -33921,6 +36112,7 @@ public final class Common {
       private java.lang.Object productId_ = "";
       /**
        * <code>string product_id = 1;</code>
+       * @return The productId.
        */
       public java.lang.String getProductId() {
         java.lang.Object ref = productId_;
@@ -33936,6 +36128,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 1;</code>
+       * @return The bytes for productId.
        */
       public com.google.protobuf.ByteString
           getProductIdBytes() {
@@ -33952,6 +36145,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 1;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductId(
           java.lang.String value) {
@@ -33965,6 +36160,7 @@ public final class Common {
       }
       /**
        * <code>string product_id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProductId() {
         
@@ -33974,6 +36170,8 @@ public final class Common {
       }
       /**
        * <code>string product_id = 1;</code>
+       * @param value The bytes for productId to set.
+       * @return This builder for chaining.
        */
       public Builder setProductIdBytes(
           com.google.protobuf.ByteString value) {
@@ -33990,6 +36188,7 @@ public final class Common {
       private java.lang.Object key_ = "";
       /**
        * <code>string key = 2;</code>
+       * @return The key.
        */
       public java.lang.String getKey() {
         java.lang.Object ref = key_;
@@ -34005,6 +36204,7 @@ public final class Common {
       }
       /**
        * <code>string key = 2;</code>
+       * @return The bytes for key.
        */
       public com.google.protobuf.ByteString
           getKeyBytes() {
@@ -34021,6 +36221,8 @@ public final class Common {
       }
       /**
        * <code>string key = 2;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
        */
       public Builder setKey(
           java.lang.String value) {
@@ -34034,6 +36236,7 @@ public final class Common {
       }
       /**
        * <code>string key = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearKey() {
         
@@ -34043,6 +36246,8 @@ public final class Common {
       }
       /**
        * <code>string key = 2;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
        */
       public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -34056,17 +36261,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.Timestamp expiration_ = null;
+      private com.google.protobuf.Timestamp expiration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expirationBuilder_;
       /**
        * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * @return Whether the expiration field is set.
        */
       public boolean hasExpiration() {
         return expirationBuilder_ != null || expiration_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * @return The expiration.
        */
       public com.google.protobuf.Timestamp getExpiration() {
         if (expirationBuilder_ == null) {
@@ -34173,17 +36380,19 @@ public final class Common {
         return expirationBuilder_;
       }
 
-      private com.google.protobuf.StringValue payload_ = null;
+      private com.google.protobuf.StringValue payload_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> payloadBuilder_;
       /**
        * <code>.google.protobuf.StringValue payload = 4;</code>
+       * @return Whether the payload field is set.
        */
       public boolean hasPayload() {
         return payloadBuilder_ != null || payload_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue payload = 4;</code>
+       * @return The payload.
        */
       public com.google.protobuf.StringValue getPayload() {
         if (payloadBuilder_ == null) {
@@ -34289,11 +36498,13 @@ public final class Common {
         }
         return payloadBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -34315,11 +36526,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<CustomerReminder>
         PARSER = new com.google.protobuf.AbstractParser<CustomerReminder>() {
+      @java.lang.Override
       public CustomerReminder parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new CustomerReminder(input, extensionRegistry);
+        return new CustomerReminder(input, extensionRegistry);
       }
     };
 
@@ -34332,6 +36544,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerReminder getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -34344,32 +36557,37 @@ public final class Common {
 
     /**
      * <code>string text = 1;</code>
+     * @return The text.
      */
     java.lang.String getText();
     /**
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
     com.google.protobuf.ByteString
         getTextBytes();
 
     /**
      * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+     * @return The enum numeric value on the wire for voice.
      */
     int getVoiceValue();
     /**
      * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+     * @return The voice.
      */
     com.elarian.hera.proto.Common.TextToSpeechVoice getVoice();
 
     /**
      * <code>bool play_beep = 3;</code>
+     * @return The playBeep.
      */
     boolean getPlayBeep();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SayCallAction}
    */
-  public  static final class SayCallAction extends
+  public static final class SayCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.SayCallAction)
       SayCallActionOrBuilder {
@@ -34381,7 +36599,13 @@ public final class Common {
     private SayCallAction() {
       text_ = "";
       voice_ = 0;
-      playBeep_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SayCallAction();
     }
 
     @java.lang.Override
@@ -34394,7 +36618,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -34405,13 +36631,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -34427,6 +36646,13 @@ public final class Common {
             case 24: {
 
               playBeep_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -34446,6 +36672,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_SayCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_SayCallAction_fieldAccessorTable
@@ -34457,7 +36684,9 @@ public final class Common {
     private volatile java.lang.Object text_;
     /**
      * <code>string text = 1;</code>
+     * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
@@ -34472,7 +36701,9 @@ public final class Common {
     }
     /**
      * <code>string text = 1;</code>
+     * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
@@ -34491,14 +36722,17 @@ public final class Common {
     private int voice_;
     /**
      * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+     * @return The enum numeric value on the wire for voice.
      */
-    public int getVoiceValue() {
+    @java.lang.Override public int getVoiceValue() {
       return voice_;
     }
     /**
      * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+     * @return The voice.
      */
-    public com.elarian.hera.proto.Common.TextToSpeechVoice getVoice() {
+    @java.lang.Override public com.elarian.hera.proto.Common.TextToSpeechVoice getVoice() {
+      @SuppressWarnings("deprecation")
       com.elarian.hera.proto.Common.TextToSpeechVoice result = com.elarian.hera.proto.Common.TextToSpeechVoice.valueOf(voice_);
       return result == null ? com.elarian.hera.proto.Common.TextToSpeechVoice.UNRECOGNIZED : result;
     }
@@ -34507,12 +36741,15 @@ public final class Common {
     private boolean playBeep_;
     /**
      * <code>bool play_beep = 3;</code>
+     * @return The playBeep.
      */
+    @java.lang.Override
     public boolean getPlayBeep() {
       return playBeep_;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -34522,6 +36759,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getTextBytes().isEmpty()) {
@@ -34536,6 +36774,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -34567,14 +36806,13 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.SayCallAction other = (com.elarian.hera.proto.Common.SayCallAction) obj;
 
-      boolean result = true;
-      result = result && getText()
-          .equals(other.getText());
-      result = result && voice_ == other.voice_;
-      result = result && (getPlayBeep()
-          == other.getPlayBeep());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (voice_ != other.voice_) return false;
+      if (getPlayBeep()
+          != other.getPlayBeep()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -34666,6 +36904,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -34673,6 +36912,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.SayCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -34696,6 +36936,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_SayCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_SayCallAction_fieldAccessorTable
@@ -34718,6 +36959,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         text_ = "";
@@ -34729,15 +36971,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_SayCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.SayCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallAction build() {
         com.elarian.hera.proto.Common.SayCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -34746,6 +36991,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallAction buildPartial() {
         com.elarian.hera.proto.Common.SayCallAction result = new com.elarian.hera.proto.Common.SayCallAction(this);
         result.text_ = text_;
@@ -34755,32 +37001,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.SayCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.SayCallAction)other);
@@ -34807,10 +37060,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -34832,6 +37087,7 @@ public final class Common {
       private java.lang.Object text_ = "";
       /**
        * <code>string text = 1;</code>
+       * @return The text.
        */
       public java.lang.String getText() {
         java.lang.Object ref = text_;
@@ -34847,6 +37103,7 @@ public final class Common {
       }
       /**
        * <code>string text = 1;</code>
+       * @return The bytes for text.
        */
       public com.google.protobuf.ByteString
           getTextBytes() {
@@ -34863,6 +37120,8 @@ public final class Common {
       }
       /**
        * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
        */
       public Builder setText(
           java.lang.String value) {
@@ -34876,6 +37135,7 @@ public final class Common {
       }
       /**
        * <code>string text = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearText() {
         
@@ -34885,6 +37145,8 @@ public final class Common {
       }
       /**
        * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
@@ -34901,27 +37163,36 @@ public final class Common {
       private int voice_ = 0;
       /**
        * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+       * @return The enum numeric value on the wire for voice.
        */
-      public int getVoiceValue() {
+      @java.lang.Override public int getVoiceValue() {
         return voice_;
       }
       /**
        * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+       * @param value The enum numeric value on the wire for voice to set.
+       * @return This builder for chaining.
        */
       public Builder setVoiceValue(int value) {
+        
         voice_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+       * @return The voice.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.TextToSpeechVoice getVoice() {
+        @SuppressWarnings("deprecation")
         com.elarian.hera.proto.Common.TextToSpeechVoice result = com.elarian.hera.proto.Common.TextToSpeechVoice.valueOf(voice_);
         return result == null ? com.elarian.hera.proto.Common.TextToSpeechVoice.UNRECOGNIZED : result;
       }
       /**
        * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+       * @param value The voice to set.
+       * @return This builder for chaining.
        */
       public Builder setVoice(com.elarian.hera.proto.Common.TextToSpeechVoice value) {
         if (value == null) {
@@ -34934,6 +37205,7 @@ public final class Common {
       }
       /**
        * <code>.com.elarian.hera.proto.TextToSpeechVoice voice = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearVoice() {
         
@@ -34945,12 +37217,16 @@ public final class Common {
       private boolean playBeep_ ;
       /**
        * <code>bool play_beep = 3;</code>
+       * @return The playBeep.
        */
+      @java.lang.Override
       public boolean getPlayBeep() {
         return playBeep_;
       }
       /**
        * <code>bool play_beep = 3;</code>
+       * @param value The playBeep to set.
+       * @return This builder for chaining.
        */
       public Builder setPlayBeep(boolean value) {
         
@@ -34960,6 +37236,7 @@ public final class Common {
       }
       /**
        * <code>bool play_beep = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlayBeep() {
         
@@ -34967,11 +37244,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -34993,11 +37272,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<SayCallAction>
         PARSER = new com.google.protobuf.AbstractParser<SayCallAction>() {
+      @java.lang.Override
       public SayCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SayCallAction(input, extensionRegistry);
+        return new SayCallAction(input, extensionRegistry);
       }
     };
 
@@ -35010,6 +37290,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.SayCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -35022,10 +37303,12 @@ public final class Common {
 
     /**
      * <code>string url = 1;</code>
+     * @return The url.
      */
     java.lang.String getUrl();
     /**
      * <code>string url = 1;</code>
+     * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
@@ -35033,7 +37316,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.PlayCallAction}
    */
-  public  static final class PlayCallAction extends
+  public static final class PlayCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PlayCallAction)
       PlayCallActionOrBuilder {
@@ -35047,6 +37330,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PlayCallAction();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -35056,7 +37346,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -35067,17 +37359,17 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -35097,6 +37389,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PlayCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PlayCallAction_fieldAccessorTable
@@ -35108,7 +37401,9 @@ public final class Common {
     private volatile java.lang.Object url_;
     /**
      * <code>string url = 1;</code>
+     * @return The url.
      */
+    @java.lang.Override
     public java.lang.String getUrl() {
       java.lang.Object ref = url_;
       if (ref instanceof java.lang.String) {
@@ -35123,7 +37418,9 @@ public final class Common {
     }
     /**
      * <code>string url = 1;</code>
+     * @return The bytes for url.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
       java.lang.Object ref = url_;
@@ -35139,6 +37436,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -35148,6 +37446,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUrlBytes().isEmpty()) {
@@ -35156,6 +37455,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -35179,11 +37479,10 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.PlayCallAction other = (com.elarian.hera.proto.Common.PlayCallAction) obj;
 
-      boolean result = true;
-      result = result && getUrl()
-          .equals(other.getUrl());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -35270,6 +37569,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -35277,6 +37577,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.PlayCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -35300,6 +37601,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PlayCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PlayCallAction_fieldAccessorTable
@@ -35322,6 +37624,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         url_ = "";
@@ -35329,15 +37632,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PlayCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.PlayCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallAction build() {
         com.elarian.hera.proto.Common.PlayCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -35346,6 +37652,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallAction buildPartial() {
         com.elarian.hera.proto.Common.PlayCallAction result = new com.elarian.hera.proto.Common.PlayCallAction(this);
         result.url_ = url_;
@@ -35353,32 +37660,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.PlayCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.PlayCallAction)other);
@@ -35399,10 +37713,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -35424,6 +37740,7 @@ public final class Common {
       private java.lang.Object url_ = "";
       /**
        * <code>string url = 1;</code>
+       * @return The url.
        */
       public java.lang.String getUrl() {
         java.lang.Object ref = url_;
@@ -35439,6 +37756,7 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
           getUrlBytes() {
@@ -35455,6 +37773,8 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrl(
           java.lang.String value) {
@@ -35468,6 +37788,7 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUrl() {
         
@@ -35477,6 +37798,8 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -35489,11 +37812,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -35515,11 +37840,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<PlayCallAction>
         PARSER = new com.google.protobuf.AbstractParser<PlayCallAction>() {
+      @java.lang.Override
       public PlayCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PlayCallAction(input, extensionRegistry);
+        return new PlayCallAction(input, extensionRegistry);
       }
     };
 
@@ -35532,6 +37858,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PlayCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -35544,10 +37871,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return Whether the say field is set.
      */
     boolean hasSay();
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return The say.
      */
     com.elarian.hera.proto.Common.SayCallAction getSay();
     /**
@@ -35557,10 +37886,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return Whether the play field is set.
      */
     boolean hasPlay();
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return The play.
      */
     com.elarian.hera.proto.Common.PlayCallAction getPlay();
     /**
@@ -35570,10 +37901,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return Whether the timeout field is set.
      */
     boolean hasTimeout();
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return The timeout.
      */
     com.google.protobuf.Duration getTimeout();
     /**
@@ -35583,10 +37916,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 4;</code>
+     * @return Whether the finishOnKey field is set.
      */
     boolean hasFinishOnKey();
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 4;</code>
+     * @return The finishOnKey.
      */
     com.google.protobuf.StringValue getFinishOnKey();
     /**
@@ -35596,10 +37931,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Int32Value num_digits = 5;</code>
+     * @return Whether the numDigits field is set.
      */
     boolean hasNumDigits();
     /**
      * <code>.google.protobuf.Int32Value num_digits = 5;</code>
+     * @return The numDigits.
      */
     com.google.protobuf.Int32Value getNumDigits();
     /**
@@ -35612,7 +37949,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.GetDigitsCallAction}
    */
-  public  static final class GetDigitsCallAction extends
+  public static final class GetDigitsCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.GetDigitsCallAction)
       GetDigitsCallActionOrBuilder {
@@ -35625,6 +37962,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetDigitsCallAction();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -35634,7 +37978,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -35645,13 +37991,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.SayCallAction.Builder subBuilder = null;
               if (promptCase_ == 1) {
@@ -35719,6 +38058,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -35736,6 +38082,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetDigitsCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetDigitsCallAction_fieldAccessorTable
@@ -35746,7 +38093,8 @@ public final class Common {
     private int promptCase_ = 0;
     private java.lang.Object prompt_;
     public enum PromptCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SAY(1),
       PLAY(2),
       PROMPT_NOT_SET(0);
@@ -35755,6 +38103,8 @@ public final class Common {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -35784,13 +38134,17 @@ public final class Common {
     public static final int SAY_FIELD_NUMBER = 1;
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return Whether the say field is set.
      */
+    @java.lang.Override
     public boolean hasSay() {
       return promptCase_ == 1;
     }
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return The say.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.SayCallAction getSay() {
       if (promptCase_ == 1) {
          return (com.elarian.hera.proto.Common.SayCallAction) prompt_;
@@ -35800,6 +38154,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.SayCallActionOrBuilder getSayOrBuilder() {
       if (promptCase_ == 1) {
          return (com.elarian.hera.proto.Common.SayCallAction) prompt_;
@@ -35810,13 +38165,17 @@ public final class Common {
     public static final int PLAY_FIELD_NUMBER = 2;
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return Whether the play field is set.
      */
+    @java.lang.Override
     public boolean hasPlay() {
       return promptCase_ == 2;
     }
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return The play.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PlayCallAction getPlay() {
       if (promptCase_ == 2) {
          return (com.elarian.hera.proto.Common.PlayCallAction) prompt_;
@@ -35826,6 +38185,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PlayCallActionOrBuilder getPlayOrBuilder() {
       if (promptCase_ == 2) {
          return (com.elarian.hera.proto.Common.PlayCallAction) prompt_;
@@ -35837,19 +38197,24 @@ public final class Common {
     private com.google.protobuf.Duration timeout_;
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return Whether the timeout field is set.
      */
+    @java.lang.Override
     public boolean hasTimeout() {
       return timeout_ != null;
     }
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return The timeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getTimeout() {
       return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
     }
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
       return getTimeout();
     }
@@ -35858,19 +38223,24 @@ public final class Common {
     private com.google.protobuf.StringValue finishOnKey_;
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 4;</code>
+     * @return Whether the finishOnKey field is set.
      */
+    @java.lang.Override
     public boolean hasFinishOnKey() {
       return finishOnKey_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 4;</code>
+     * @return The finishOnKey.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getFinishOnKey() {
       return finishOnKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finishOnKey_;
     }
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getFinishOnKeyOrBuilder() {
       return getFinishOnKey();
     }
@@ -35879,24 +38249,30 @@ public final class Common {
     private com.google.protobuf.Int32Value numDigits_;
     /**
      * <code>.google.protobuf.Int32Value num_digits = 5;</code>
+     * @return Whether the numDigits field is set.
      */
+    @java.lang.Override
     public boolean hasNumDigits() {
       return numDigits_ != null;
     }
     /**
      * <code>.google.protobuf.Int32Value num_digits = 5;</code>
+     * @return The numDigits.
      */
+    @java.lang.Override
     public com.google.protobuf.Int32Value getNumDigits() {
       return numDigits_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : numDigits_;
     }
     /**
      * <code>.google.protobuf.Int32Value num_digits = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int32ValueOrBuilder getNumDigitsOrBuilder() {
       return getNumDigits();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -35906,6 +38282,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (promptCase_ == 1) {
@@ -35926,6 +38303,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -35966,39 +38344,36 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.GetDigitsCallAction other = (com.elarian.hera.proto.Common.GetDigitsCallAction) obj;
 
-      boolean result = true;
-      result = result && (hasTimeout() == other.hasTimeout());
+      if (hasTimeout() != other.hasTimeout()) return false;
       if (hasTimeout()) {
-        result = result && getTimeout()
-            .equals(other.getTimeout());
+        if (!getTimeout()
+            .equals(other.getTimeout())) return false;
       }
-      result = result && (hasFinishOnKey() == other.hasFinishOnKey());
+      if (hasFinishOnKey() != other.hasFinishOnKey()) return false;
       if (hasFinishOnKey()) {
-        result = result && getFinishOnKey()
-            .equals(other.getFinishOnKey());
+        if (!getFinishOnKey()
+            .equals(other.getFinishOnKey())) return false;
       }
-      result = result && (hasNumDigits() == other.hasNumDigits());
+      if (hasNumDigits() != other.hasNumDigits()) return false;
       if (hasNumDigits()) {
-        result = result && getNumDigits()
-            .equals(other.getNumDigits());
+        if (!getNumDigits()
+            .equals(other.getNumDigits())) return false;
       }
-      result = result && getPromptCase().equals(
-          other.getPromptCase());
-      if (!result) return false;
+      if (!getPromptCase().equals(other.getPromptCase())) return false;
       switch (promptCase_) {
         case 1:
-          result = result && getSay()
-              .equals(other.getSay());
+          if (!getSay()
+              .equals(other.getSay())) return false;
           break;
         case 2:
-          result = result && getPlay()
-              .equals(other.getPlay());
+          if (!getPlay()
+              .equals(other.getPlay())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -36107,6 +38482,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -36114,6 +38490,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.GetDigitsCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -36137,6 +38514,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetDigitsCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetDigitsCallAction_fieldAccessorTable
@@ -36159,6 +38537,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (timeoutBuilder_ == null) {
@@ -36184,15 +38563,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetDigitsCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetDigitsCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.GetDigitsCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetDigitsCallAction build() {
         com.elarian.hera.proto.Common.GetDigitsCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -36201,6 +38583,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetDigitsCallAction buildPartial() {
         com.elarian.hera.proto.Common.GetDigitsCallAction result = new com.elarian.hera.proto.Common.GetDigitsCallAction(this);
         if (promptCase_ == 1) {
@@ -36237,32 +38620,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.GetDigitsCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.GetDigitsCallAction)other);
@@ -36301,10 +38691,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -36342,13 +38734,17 @@ public final class Common {
           com.elarian.hera.proto.Common.SayCallAction, com.elarian.hera.proto.Common.SayCallAction.Builder, com.elarian.hera.proto.Common.SayCallActionOrBuilder> sayBuilder_;
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+       * @return Whether the say field is set.
        */
+      @java.lang.Override
       public boolean hasSay() {
         return promptCase_ == 1;
       }
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+       * @return The say.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallAction getSay() {
         if (sayBuilder_ == null) {
           if (promptCase_ == 1) {
@@ -36442,6 +38838,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallActionOrBuilder getSayOrBuilder() {
         if ((promptCase_ == 1) && (sayBuilder_ != null)) {
           return sayBuilder_.getMessageOrBuilder();
@@ -36478,13 +38875,17 @@ public final class Common {
           com.elarian.hera.proto.Common.PlayCallAction, com.elarian.hera.proto.Common.PlayCallAction.Builder, com.elarian.hera.proto.Common.PlayCallActionOrBuilder> playBuilder_;
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+       * @return Whether the play field is set.
        */
+      @java.lang.Override
       public boolean hasPlay() {
         return promptCase_ == 2;
       }
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+       * @return The play.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallAction getPlay() {
         if (playBuilder_ == null) {
           if (promptCase_ == 2) {
@@ -36578,6 +38979,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallActionOrBuilder getPlayOrBuilder() {
         if ((promptCase_ == 2) && (playBuilder_ != null)) {
           return playBuilder_.getMessageOrBuilder();
@@ -36610,17 +39012,19 @@ public final class Common {
         return playBuilder_;
       }
 
-      private com.google.protobuf.Duration timeout_ = null;
+      private com.google.protobuf.Duration timeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeoutBuilder_;
       /**
        * <code>.google.protobuf.Duration timeout = 3;</code>
+       * @return Whether the timeout field is set.
        */
       public boolean hasTimeout() {
         return timeoutBuilder_ != null || timeout_ != null;
       }
       /**
        * <code>.google.protobuf.Duration timeout = 3;</code>
+       * @return The timeout.
        */
       public com.google.protobuf.Duration getTimeout() {
         if (timeoutBuilder_ == null) {
@@ -36727,17 +39131,19 @@ public final class Common {
         return timeoutBuilder_;
       }
 
-      private com.google.protobuf.StringValue finishOnKey_ = null;
+      private com.google.protobuf.StringValue finishOnKey_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finishOnKeyBuilder_;
       /**
        * <code>.google.protobuf.StringValue finish_on_key = 4;</code>
+       * @return Whether the finishOnKey field is set.
        */
       public boolean hasFinishOnKey() {
         return finishOnKeyBuilder_ != null || finishOnKey_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue finish_on_key = 4;</code>
+       * @return The finishOnKey.
        */
       public com.google.protobuf.StringValue getFinishOnKey() {
         if (finishOnKeyBuilder_ == null) {
@@ -36844,17 +39250,19 @@ public final class Common {
         return finishOnKeyBuilder_;
       }
 
-      private com.google.protobuf.Int32Value numDigits_ = null;
+      private com.google.protobuf.Int32Value numDigits_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> numDigitsBuilder_;
       /**
        * <code>.google.protobuf.Int32Value num_digits = 5;</code>
+       * @return Whether the numDigits field is set.
        */
       public boolean hasNumDigits() {
         return numDigitsBuilder_ != null || numDigits_ != null;
       }
       /**
        * <code>.google.protobuf.Int32Value num_digits = 5;</code>
+       * @return The numDigits.
        */
       public com.google.protobuf.Int32Value getNumDigits() {
         if (numDigitsBuilder_ == null) {
@@ -36960,11 +39368,13 @@ public final class Common {
         }
         return numDigitsBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -36986,11 +39396,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<GetDigitsCallAction>
         PARSER = new com.google.protobuf.AbstractParser<GetDigitsCallAction>() {
+      @java.lang.Override
       public GetDigitsCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new GetDigitsCallAction(input, extensionRegistry);
+        return new GetDigitsCallAction(input, extensionRegistry);
       }
     };
 
@@ -37003,6 +39414,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.GetDigitsCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -37015,10 +39427,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return Whether the say field is set.
      */
     boolean hasSay();
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return The say.
      */
     com.elarian.hera.proto.Common.SayCallAction getSay();
     /**
@@ -37028,10 +39442,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return Whether the play field is set.
      */
     boolean hasPlay();
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return The play.
      */
     com.elarian.hera.proto.Common.PlayCallAction getPlay();
     /**
@@ -37041,10 +39457,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return Whether the timeout field is set.
      */
     boolean hasTimeout();
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return The timeout.
      */
     com.google.protobuf.Duration getTimeout();
     /**
@@ -37054,10 +39472,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Duration max_length = 4;</code>
+     * @return Whether the maxLength field is set.
      */
     boolean hasMaxLength();
     /**
      * <code>.google.protobuf.Duration max_length = 4;</code>
+     * @return The maxLength.
      */
     com.google.protobuf.Duration getMaxLength();
     /**
@@ -37067,10 +39487,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 5;</code>
+     * @return Whether the finishOnKey field is set.
      */
     boolean hasFinishOnKey();
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 5;</code>
+     * @return The finishOnKey.
      */
     com.google.protobuf.StringValue getFinishOnKey();
     /**
@@ -37080,11 +39502,13 @@ public final class Common {
 
     /**
      * <code>bool play_beep = 6;</code>
+     * @return The playBeep.
      */
     boolean getPlayBeep();
 
     /**
      * <code>bool trim_silence = 7;</code>
+     * @return The trimSilence.
      */
     boolean getTrimSilence();
 
@@ -37093,7 +39517,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.GetRecordingCallAction}
    */
-  public  static final class GetRecordingCallAction extends
+  public static final class GetRecordingCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.GetRecordingCallAction)
       GetRecordingCallActionOrBuilder {
@@ -37103,8 +39527,13 @@ public final class Common {
       super(builder);
     }
     private GetRecordingCallAction() {
-      playBeep_ = false;
-      trimSilence_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRecordingCallAction();
     }
 
     @java.lang.Override
@@ -37117,7 +39546,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -37128,13 +39559,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.SayCallAction.Builder subBuilder = null;
               if (promptCase_ == 1) {
@@ -37212,6 +39636,13 @@ public final class Common {
               trimSilence_ = input.readBool();
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -37229,6 +39660,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetRecordingCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetRecordingCallAction_fieldAccessorTable
@@ -37239,7 +39671,8 @@ public final class Common {
     private int promptCase_ = 0;
     private java.lang.Object prompt_;
     public enum PromptCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SAY(1),
       PLAY(2),
       PROMPT_NOT_SET(0);
@@ -37248,6 +39681,8 @@ public final class Common {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -37277,13 +39712,17 @@ public final class Common {
     public static final int SAY_FIELD_NUMBER = 1;
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return Whether the say field is set.
      */
+    @java.lang.Override
     public boolean hasSay() {
       return promptCase_ == 1;
     }
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return The say.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.SayCallAction getSay() {
       if (promptCase_ == 1) {
          return (com.elarian.hera.proto.Common.SayCallAction) prompt_;
@@ -37293,6 +39732,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.SayCallActionOrBuilder getSayOrBuilder() {
       if (promptCase_ == 1) {
          return (com.elarian.hera.proto.Common.SayCallAction) prompt_;
@@ -37303,13 +39743,17 @@ public final class Common {
     public static final int PLAY_FIELD_NUMBER = 2;
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return Whether the play field is set.
      */
+    @java.lang.Override
     public boolean hasPlay() {
       return promptCase_ == 2;
     }
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return The play.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PlayCallAction getPlay() {
       if (promptCase_ == 2) {
          return (com.elarian.hera.proto.Common.PlayCallAction) prompt_;
@@ -37319,6 +39763,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PlayCallActionOrBuilder getPlayOrBuilder() {
       if (promptCase_ == 2) {
          return (com.elarian.hera.proto.Common.PlayCallAction) prompt_;
@@ -37330,19 +39775,24 @@ public final class Common {
     private com.google.protobuf.Duration timeout_;
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return Whether the timeout field is set.
      */
+    @java.lang.Override
     public boolean hasTimeout() {
       return timeout_ != null;
     }
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
+     * @return The timeout.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getTimeout() {
       return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
     }
     /**
      * <code>.google.protobuf.Duration timeout = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
       return getTimeout();
     }
@@ -37351,19 +39801,24 @@ public final class Common {
     private com.google.protobuf.Duration maxLength_;
     /**
      * <code>.google.protobuf.Duration max_length = 4;</code>
+     * @return Whether the maxLength field is set.
      */
+    @java.lang.Override
     public boolean hasMaxLength() {
       return maxLength_ != null;
     }
     /**
      * <code>.google.protobuf.Duration max_length = 4;</code>
+     * @return The maxLength.
      */
+    @java.lang.Override
     public com.google.protobuf.Duration getMaxLength() {
       return maxLength_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxLength_;
     }
     /**
      * <code>.google.protobuf.Duration max_length = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getMaxLengthOrBuilder() {
       return getMaxLength();
     }
@@ -37372,19 +39827,24 @@ public final class Common {
     private com.google.protobuf.StringValue finishOnKey_;
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 5;</code>
+     * @return Whether the finishOnKey field is set.
      */
+    @java.lang.Override
     public boolean hasFinishOnKey() {
       return finishOnKey_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 5;</code>
+     * @return The finishOnKey.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getFinishOnKey() {
       return finishOnKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finishOnKey_;
     }
     /**
      * <code>.google.protobuf.StringValue finish_on_key = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getFinishOnKeyOrBuilder() {
       return getFinishOnKey();
     }
@@ -37393,7 +39853,9 @@ public final class Common {
     private boolean playBeep_;
     /**
      * <code>bool play_beep = 6;</code>
+     * @return The playBeep.
      */
+    @java.lang.Override
     public boolean getPlayBeep() {
       return playBeep_;
     }
@@ -37402,12 +39864,15 @@ public final class Common {
     private boolean trimSilence_;
     /**
      * <code>bool trim_silence = 7;</code>
+     * @return The trimSilence.
      */
+    @java.lang.Override
     public boolean getTrimSilence() {
       return trimSilence_;
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -37417,6 +39882,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (promptCase_ == 1) {
@@ -37443,6 +39909,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -37491,43 +39958,40 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.GetRecordingCallAction other = (com.elarian.hera.proto.Common.GetRecordingCallAction) obj;
 
-      boolean result = true;
-      result = result && (hasTimeout() == other.hasTimeout());
+      if (hasTimeout() != other.hasTimeout()) return false;
       if (hasTimeout()) {
-        result = result && getTimeout()
-            .equals(other.getTimeout());
+        if (!getTimeout()
+            .equals(other.getTimeout())) return false;
       }
-      result = result && (hasMaxLength() == other.hasMaxLength());
+      if (hasMaxLength() != other.hasMaxLength()) return false;
       if (hasMaxLength()) {
-        result = result && getMaxLength()
-            .equals(other.getMaxLength());
+        if (!getMaxLength()
+            .equals(other.getMaxLength())) return false;
       }
-      result = result && (hasFinishOnKey() == other.hasFinishOnKey());
+      if (hasFinishOnKey() != other.hasFinishOnKey()) return false;
       if (hasFinishOnKey()) {
-        result = result && getFinishOnKey()
-            .equals(other.getFinishOnKey());
+        if (!getFinishOnKey()
+            .equals(other.getFinishOnKey())) return false;
       }
-      result = result && (getPlayBeep()
-          == other.getPlayBeep());
-      result = result && (getTrimSilence()
-          == other.getTrimSilence());
-      result = result && getPromptCase().equals(
-          other.getPromptCase());
-      if (!result) return false;
+      if (getPlayBeep()
+          != other.getPlayBeep()) return false;
+      if (getTrimSilence()
+          != other.getTrimSilence()) return false;
+      if (!getPromptCase().equals(other.getPromptCase())) return false;
       switch (promptCase_) {
         case 1:
-          result = result && getSay()
-              .equals(other.getSay());
+          if (!getSay()
+              .equals(other.getSay())) return false;
           break;
         case 2:
-          result = result && getPlay()
-              .equals(other.getPlay());
+          if (!getPlay()
+              .equals(other.getPlay())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -37642,6 +40106,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -37649,6 +40114,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.GetRecordingCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -37672,6 +40138,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetRecordingCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetRecordingCallAction_fieldAccessorTable
@@ -37694,6 +40161,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (timeoutBuilder_ == null) {
@@ -37723,15 +40191,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_GetRecordingCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetRecordingCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.GetRecordingCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetRecordingCallAction build() {
         com.elarian.hera.proto.Common.GetRecordingCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -37740,6 +40211,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetRecordingCallAction buildPartial() {
         com.elarian.hera.proto.Common.GetRecordingCallAction result = new com.elarian.hera.proto.Common.GetRecordingCallAction(this);
         if (promptCase_ == 1) {
@@ -37778,32 +40250,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.GetRecordingCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.GetRecordingCallAction)other);
@@ -37848,10 +40327,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -37889,13 +40370,17 @@ public final class Common {
           com.elarian.hera.proto.Common.SayCallAction, com.elarian.hera.proto.Common.SayCallAction.Builder, com.elarian.hera.proto.Common.SayCallActionOrBuilder> sayBuilder_;
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+       * @return Whether the say field is set.
        */
+      @java.lang.Override
       public boolean hasSay() {
         return promptCase_ == 1;
       }
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+       * @return The say.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallAction getSay() {
         if (sayBuilder_ == null) {
           if (promptCase_ == 1) {
@@ -37989,6 +40474,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallActionOrBuilder getSayOrBuilder() {
         if ((promptCase_ == 1) && (sayBuilder_ != null)) {
           return sayBuilder_.getMessageOrBuilder();
@@ -38025,13 +40511,17 @@ public final class Common {
           com.elarian.hera.proto.Common.PlayCallAction, com.elarian.hera.proto.Common.PlayCallAction.Builder, com.elarian.hera.proto.Common.PlayCallActionOrBuilder> playBuilder_;
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+       * @return Whether the play field is set.
        */
+      @java.lang.Override
       public boolean hasPlay() {
         return promptCase_ == 2;
       }
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+       * @return The play.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallAction getPlay() {
         if (playBuilder_ == null) {
           if (promptCase_ == 2) {
@@ -38125,6 +40615,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallActionOrBuilder getPlayOrBuilder() {
         if ((promptCase_ == 2) && (playBuilder_ != null)) {
           return playBuilder_.getMessageOrBuilder();
@@ -38157,17 +40648,19 @@ public final class Common {
         return playBuilder_;
       }
 
-      private com.google.protobuf.Duration timeout_ = null;
+      private com.google.protobuf.Duration timeout_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeoutBuilder_;
       /**
        * <code>.google.protobuf.Duration timeout = 3;</code>
+       * @return Whether the timeout field is set.
        */
       public boolean hasTimeout() {
         return timeoutBuilder_ != null || timeout_ != null;
       }
       /**
        * <code>.google.protobuf.Duration timeout = 3;</code>
+       * @return The timeout.
        */
       public com.google.protobuf.Duration getTimeout() {
         if (timeoutBuilder_ == null) {
@@ -38274,17 +40767,19 @@ public final class Common {
         return timeoutBuilder_;
       }
 
-      private com.google.protobuf.Duration maxLength_ = null;
+      private com.google.protobuf.Duration maxLength_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxLengthBuilder_;
       /**
        * <code>.google.protobuf.Duration max_length = 4;</code>
+       * @return Whether the maxLength field is set.
        */
       public boolean hasMaxLength() {
         return maxLengthBuilder_ != null || maxLength_ != null;
       }
       /**
        * <code>.google.protobuf.Duration max_length = 4;</code>
+       * @return The maxLength.
        */
       public com.google.protobuf.Duration getMaxLength() {
         if (maxLengthBuilder_ == null) {
@@ -38391,17 +40886,19 @@ public final class Common {
         return maxLengthBuilder_;
       }
 
-      private com.google.protobuf.StringValue finishOnKey_ = null;
+      private com.google.protobuf.StringValue finishOnKey_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> finishOnKeyBuilder_;
       /**
        * <code>.google.protobuf.StringValue finish_on_key = 5;</code>
+       * @return Whether the finishOnKey field is set.
        */
       public boolean hasFinishOnKey() {
         return finishOnKeyBuilder_ != null || finishOnKey_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue finish_on_key = 5;</code>
+       * @return The finishOnKey.
        */
       public com.google.protobuf.StringValue getFinishOnKey() {
         if (finishOnKeyBuilder_ == null) {
@@ -38511,12 +41008,16 @@ public final class Common {
       private boolean playBeep_ ;
       /**
        * <code>bool play_beep = 6;</code>
+       * @return The playBeep.
        */
+      @java.lang.Override
       public boolean getPlayBeep() {
         return playBeep_;
       }
       /**
        * <code>bool play_beep = 6;</code>
+       * @param value The playBeep to set.
+       * @return This builder for chaining.
        */
       public Builder setPlayBeep(boolean value) {
         
@@ -38526,6 +41027,7 @@ public final class Common {
       }
       /**
        * <code>bool play_beep = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlayBeep() {
         
@@ -38537,12 +41039,16 @@ public final class Common {
       private boolean trimSilence_ ;
       /**
        * <code>bool trim_silence = 7;</code>
+       * @return The trimSilence.
        */
+      @java.lang.Override
       public boolean getTrimSilence() {
         return trimSilence_;
       }
       /**
        * <code>bool trim_silence = 7;</code>
+       * @param value The trimSilence to set.
+       * @return This builder for chaining.
        */
       public Builder setTrimSilence(boolean value) {
         
@@ -38552,6 +41058,7 @@ public final class Common {
       }
       /**
        * <code>bool trim_silence = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTrimSilence() {
         
@@ -38559,11 +41066,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -38585,11 +41094,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<GetRecordingCallAction>
         PARSER = new com.google.protobuf.AbstractParser<GetRecordingCallAction>() {
+      @java.lang.Override
       public GetRecordingCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new GetRecordingCallAction(input, extensionRegistry);
+        return new GetRecordingCallAction(input, extensionRegistry);
       }
     };
 
@@ -38602,6 +41112,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.GetRecordingCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -38615,7 +41126,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.RecordSessionCallAction}
    */
-  public  static final class RecordSessionCallAction extends
+  public static final class RecordSessionCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.RecordSessionCallAction)
       RecordSessionCallActionOrBuilder {
@@ -38628,6 +41139,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecordSessionCallAction();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -38637,6 +41155,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -38648,7 +41169,7 @@ public final class Common {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -38671,6 +41192,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RecordSessionCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RecordSessionCallAction_fieldAccessorTable
@@ -38679,6 +41201,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -38688,11 +41211,13 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -38713,9 +41238,8 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.RecordSessionCallAction other = (com.elarian.hera.proto.Common.RecordSessionCallAction) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -38800,6 +41324,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -38807,6 +41332,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.RecordSessionCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -38830,6 +41356,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RecordSessionCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RecordSessionCallAction_fieldAccessorTable
@@ -38852,20 +41379,24 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RecordSessionCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RecordSessionCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.RecordSessionCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RecordSessionCallAction build() {
         com.elarian.hera.proto.Common.RecordSessionCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -38874,38 +41405,46 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RecordSessionCallAction buildPartial() {
         com.elarian.hera.proto.Common.RecordSessionCallAction result = new com.elarian.hera.proto.Common.RecordSessionCallAction(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.RecordSessionCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.RecordSessionCallAction)other);
@@ -38922,10 +41461,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -38943,11 +41484,13 @@ public final class Common {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -38969,11 +41512,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<RecordSessionCallAction>
         PARSER = new com.google.protobuf.AbstractParser<RecordSessionCallAction>() {
+      @java.lang.Override
       public RecordSessionCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RecordSessionCallAction(input, extensionRegistry);
+        return new RecordSessionCallAction(input, extensionRegistry);
       }
     };
 
@@ -38986,6 +41530,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RecordSessionCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -39022,20 +41567,24 @@ public final class Common {
 
     /**
      * <code>bool record = 2;</code>
+     * @return The record.
      */
     boolean getRecord();
 
     /**
      * <code>bool sequential = 3;</code>
+     * @return The sequential.
      */
     boolean getSequential();
 
     /**
      * <code>.google.protobuf.StringValue ringback_tone = 4;</code>
+     * @return Whether the ringbackTone field is set.
      */
     boolean hasRingbackTone();
     /**
      * <code>.google.protobuf.StringValue ringback_tone = 4;</code>
+     * @return The ringbackTone.
      */
     com.google.protobuf.StringValue getRingbackTone();
     /**
@@ -39045,10 +41594,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue caller_id = 5;</code>
+     * @return Whether the callerId field is set.
      */
     boolean hasCallerId();
     /**
      * <code>.google.protobuf.StringValue caller_id = 5;</code>
+     * @return The callerId.
      */
     com.google.protobuf.StringValue getCallerId();
     /**
@@ -39058,10 +41609,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Int32Value max_duration = 6;</code>
+     * @return Whether the maxDuration field is set.
      */
     boolean hasMaxDuration();
     /**
      * <code>.google.protobuf.Int32Value max_duration = 6;</code>
+     * @return The maxDuration.
      */
     com.google.protobuf.Int32Value getMaxDuration();
     /**
@@ -39072,7 +41625,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.DialCallAction}
    */
-  public  static final class DialCallAction extends
+  public static final class DialCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.DialCallAction)
       DialCallActionOrBuilder {
@@ -39083,8 +41636,13 @@ public final class Common {
     }
     private DialCallAction() {
       customerNumbers_ = java.util.Collections.emptyList();
-      record_ = false;
-      sequential_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DialCallAction();
     }
 
     @java.lang.Override
@@ -39097,6 +41655,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -39108,15 +41669,8 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -39173,6 +41727,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -39181,7 +41742,7 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
         }
         this.unknownFields = unknownFields.build();
@@ -39193,6 +41754,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DialCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DialCallAction_fieldAccessorTable
@@ -39200,18 +41762,19 @@ public final class Common {
               com.elarian.hera.proto.Common.DialCallAction.class, com.elarian.hera.proto.Common.DialCallAction.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CUSTOMER_NUMBERS_FIELD_NUMBER = 1;
     private java.util.List<com.elarian.hera.proto.Common.CustomerNumber> customerNumbers_;
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerNumber> getCustomerNumbersList() {
       return customerNumbers_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerNumberOrBuilder> 
         getCustomerNumbersOrBuilderList() {
       return customerNumbers_;
@@ -39219,18 +41782,21 @@ public final class Common {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public int getCustomerNumbersCount() {
       return customerNumbers_.size();
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumbers(int index) {
       return customerNumbers_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerNumber customer_numbers = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumberOrBuilder getCustomerNumbersOrBuilder(
         int index) {
       return customerNumbers_.get(index);
@@ -39240,7 +41806,9 @@ public final class Common {
     private boolean record_;
     /**
      * <code>bool record = 2;</code>
+     * @return The record.
      */
+    @java.lang.Override
     public boolean getRecord() {
       return record_;
     }
@@ -39249,7 +41817,9 @@ public final class Common {
     private boolean sequential_;
     /**
      * <code>bool sequential = 3;</code>
+     * @return The sequential.
      */
+    @java.lang.Override
     public boolean getSequential() {
       return sequential_;
     }
@@ -39258,19 +41828,24 @@ public final class Common {
     private com.google.protobuf.StringValue ringbackTone_;
     /**
      * <code>.google.protobuf.StringValue ringback_tone = 4;</code>
+     * @return Whether the ringbackTone field is set.
      */
+    @java.lang.Override
     public boolean hasRingbackTone() {
       return ringbackTone_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue ringback_tone = 4;</code>
+     * @return The ringbackTone.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getRingbackTone() {
       return ringbackTone_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ringbackTone_;
     }
     /**
      * <code>.google.protobuf.StringValue ringback_tone = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getRingbackToneOrBuilder() {
       return getRingbackTone();
     }
@@ -39279,19 +41854,24 @@ public final class Common {
     private com.google.protobuf.StringValue callerId_;
     /**
      * <code>.google.protobuf.StringValue caller_id = 5;</code>
+     * @return Whether the callerId field is set.
      */
+    @java.lang.Override
     public boolean hasCallerId() {
       return callerId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue caller_id = 5;</code>
+     * @return The callerId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCallerId() {
       return callerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callerId_;
     }
     /**
      * <code>.google.protobuf.StringValue caller_id = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCallerIdOrBuilder() {
       return getCallerId();
     }
@@ -39300,24 +41880,30 @@ public final class Common {
     private com.google.protobuf.Int32Value maxDuration_;
     /**
      * <code>.google.protobuf.Int32Value max_duration = 6;</code>
+     * @return Whether the maxDuration field is set.
      */
+    @java.lang.Override
     public boolean hasMaxDuration() {
       return maxDuration_ != null;
     }
     /**
      * <code>.google.protobuf.Int32Value max_duration = 6;</code>
+     * @return The maxDuration.
      */
+    @java.lang.Override
     public com.google.protobuf.Int32Value getMaxDuration() {
       return maxDuration_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : maxDuration_;
     }
     /**
      * <code>.google.protobuf.Int32Value max_duration = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int32ValueOrBuilder getMaxDurationOrBuilder() {
       return getMaxDuration();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -39327,6 +41913,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < customerNumbers_.size(); i++) {
@@ -39350,6 +41937,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -39394,30 +41982,29 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.DialCallAction other = (com.elarian.hera.proto.Common.DialCallAction) obj;
 
-      boolean result = true;
-      result = result && getCustomerNumbersList()
-          .equals(other.getCustomerNumbersList());
-      result = result && (getRecord()
-          == other.getRecord());
-      result = result && (getSequential()
-          == other.getSequential());
-      result = result && (hasRingbackTone() == other.hasRingbackTone());
+      if (!getCustomerNumbersList()
+          .equals(other.getCustomerNumbersList())) return false;
+      if (getRecord()
+          != other.getRecord()) return false;
+      if (getSequential()
+          != other.getSequential()) return false;
+      if (hasRingbackTone() != other.hasRingbackTone()) return false;
       if (hasRingbackTone()) {
-        result = result && getRingbackTone()
-            .equals(other.getRingbackTone());
+        if (!getRingbackTone()
+            .equals(other.getRingbackTone())) return false;
       }
-      result = result && (hasCallerId() == other.hasCallerId());
+      if (hasCallerId() != other.hasCallerId()) return false;
       if (hasCallerId()) {
-        result = result && getCallerId()
-            .equals(other.getCallerId());
+        if (!getCallerId()
+            .equals(other.getCallerId())) return false;
       }
-      result = result && (hasMaxDuration() == other.hasMaxDuration());
+      if (hasMaxDuration() != other.hasMaxDuration()) return false;
       if (hasMaxDuration()) {
-        result = result && getMaxDuration()
-            .equals(other.getMaxDuration());
+        if (!getMaxDuration()
+            .equals(other.getMaxDuration())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -39524,6 +42111,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -39531,6 +42119,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.DialCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -39554,6 +42143,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DialCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DialCallAction_fieldAccessorTable
@@ -39577,6 +42167,7 @@ public final class Common {
           getCustomerNumbersFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (customerNumbersBuilder_ == null) {
@@ -39610,15 +42201,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DialCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DialCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.DialCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DialCallAction build() {
         com.elarian.hera.proto.Common.DialCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -39627,12 +42221,12 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DialCallAction buildPartial() {
         com.elarian.hera.proto.Common.DialCallAction result = new com.elarian.hera.proto.Common.DialCallAction(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (customerNumbersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             customerNumbers_ = java.util.Collections.unmodifiableList(customerNumbers_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -39657,37 +42251,43 @@ public final class Common {
         } else {
           result.maxDuration_ = maxDurationBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.DialCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.DialCallAction)other);
@@ -39745,10 +42345,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -39771,7 +42373,7 @@ public final class Common {
       private java.util.List<com.elarian.hera.proto.Common.CustomerNumber> customerNumbers_ =
         java.util.Collections.emptyList();
       private void ensureCustomerNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           customerNumbers_ = new java.util.ArrayList<com.elarian.hera.proto.Common.CustomerNumber>(customerNumbers_);
           bitField0_ |= 0x00000001;
          }
@@ -40000,7 +42602,7 @@ public final class Common {
           customerNumbersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.Common.CustomerNumber, com.elarian.hera.proto.Common.CustomerNumber.Builder, com.elarian.hera.proto.Common.CustomerNumberOrBuilder>(
                   customerNumbers_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           customerNumbers_ = null;
@@ -40011,12 +42613,16 @@ public final class Common {
       private boolean record_ ;
       /**
        * <code>bool record = 2;</code>
+       * @return The record.
        */
+      @java.lang.Override
       public boolean getRecord() {
         return record_;
       }
       /**
        * <code>bool record = 2;</code>
+       * @param value The record to set.
+       * @return This builder for chaining.
        */
       public Builder setRecord(boolean value) {
         
@@ -40026,6 +42632,7 @@ public final class Common {
       }
       /**
        * <code>bool record = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRecord() {
         
@@ -40037,12 +42644,16 @@ public final class Common {
       private boolean sequential_ ;
       /**
        * <code>bool sequential = 3;</code>
+       * @return The sequential.
        */
+      @java.lang.Override
       public boolean getSequential() {
         return sequential_;
       }
       /**
        * <code>bool sequential = 3;</code>
+       * @param value The sequential to set.
+       * @return This builder for chaining.
        */
       public Builder setSequential(boolean value) {
         
@@ -40052,6 +42663,7 @@ public final class Common {
       }
       /**
        * <code>bool sequential = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSequential() {
         
@@ -40060,17 +42672,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue ringbackTone_ = null;
+      private com.google.protobuf.StringValue ringbackTone_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ringbackToneBuilder_;
       /**
        * <code>.google.protobuf.StringValue ringback_tone = 4;</code>
+       * @return Whether the ringbackTone field is set.
        */
       public boolean hasRingbackTone() {
         return ringbackToneBuilder_ != null || ringbackTone_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue ringback_tone = 4;</code>
+       * @return The ringbackTone.
        */
       public com.google.protobuf.StringValue getRingbackTone() {
         if (ringbackToneBuilder_ == null) {
@@ -40177,17 +42791,19 @@ public final class Common {
         return ringbackToneBuilder_;
       }
 
-      private com.google.protobuf.StringValue callerId_ = null;
+      private com.google.protobuf.StringValue callerId_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> callerIdBuilder_;
       /**
        * <code>.google.protobuf.StringValue caller_id = 5;</code>
+       * @return Whether the callerId field is set.
        */
       public boolean hasCallerId() {
         return callerIdBuilder_ != null || callerId_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue caller_id = 5;</code>
+       * @return The callerId.
        */
       public com.google.protobuf.StringValue getCallerId() {
         if (callerIdBuilder_ == null) {
@@ -40294,17 +42910,19 @@ public final class Common {
         return callerIdBuilder_;
       }
 
-      private com.google.protobuf.Int32Value maxDuration_ = null;
+      private com.google.protobuf.Int32Value maxDuration_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> maxDurationBuilder_;
       /**
        * <code>.google.protobuf.Int32Value max_duration = 6;</code>
+       * @return Whether the maxDuration field is set.
        */
       public boolean hasMaxDuration() {
         return maxDurationBuilder_ != null || maxDuration_ != null;
       }
       /**
        * <code>.google.protobuf.Int32Value max_duration = 6;</code>
+       * @return The maxDuration.
        */
       public com.google.protobuf.Int32Value getMaxDuration() {
         if (maxDurationBuilder_ == null) {
@@ -40410,11 +43028,13 @@ public final class Common {
         }
         return maxDurationBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -40436,11 +43056,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<DialCallAction>
         PARSER = new com.google.protobuf.AbstractParser<DialCallAction>() {
+      @java.lang.Override
       public DialCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DialCallAction(input, extensionRegistry);
+        return new DialCallAction(input, extensionRegistry);
       }
     };
 
@@ -40453,6 +43074,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.DialCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -40465,10 +43087,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue hold_music = 1;</code>
+     * @return Whether the holdMusic field is set.
      */
     boolean hasHoldMusic();
     /**
      * <code>.google.protobuf.StringValue hold_music = 1;</code>
+     * @return The holdMusic.
      */
     com.google.protobuf.StringValue getHoldMusic();
     /**
@@ -40478,10 +43102,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.StringValue queue_name = 2;</code>
+     * @return Whether the queueName field is set.
      */
     boolean hasQueueName();
     /**
      * <code>.google.protobuf.StringValue queue_name = 2;</code>
+     * @return The queueName.
      */
     com.google.protobuf.StringValue getQueueName();
     /**
@@ -40492,7 +43118,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.EnqueueCallAction}
    */
-  public  static final class EnqueueCallAction extends
+  public static final class EnqueueCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.EnqueueCallAction)
       EnqueueCallActionOrBuilder {
@@ -40505,6 +43131,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnqueueCallAction();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -40514,7 +43147,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -40525,13 +43160,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
               if (holdMusic_ != null) {
@@ -40558,6 +43186,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -40575,6 +43210,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EnqueueCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EnqueueCallAction_fieldAccessorTable
@@ -40586,19 +43222,24 @@ public final class Common {
     private com.google.protobuf.StringValue holdMusic_;
     /**
      * <code>.google.protobuf.StringValue hold_music = 1;</code>
+     * @return Whether the holdMusic field is set.
      */
+    @java.lang.Override
     public boolean hasHoldMusic() {
       return holdMusic_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue hold_music = 1;</code>
+     * @return The holdMusic.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getHoldMusic() {
       return holdMusic_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : holdMusic_;
     }
     /**
      * <code>.google.protobuf.StringValue hold_music = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getHoldMusicOrBuilder() {
       return getHoldMusic();
     }
@@ -40607,24 +43248,30 @@ public final class Common {
     private com.google.protobuf.StringValue queueName_;
     /**
      * <code>.google.protobuf.StringValue queue_name = 2;</code>
+     * @return Whether the queueName field is set.
      */
+    @java.lang.Override
     public boolean hasQueueName() {
       return queueName_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue queue_name = 2;</code>
+     * @return The queueName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getQueueName() {
       return queueName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : queueName_;
     }
     /**
      * <code>.google.protobuf.StringValue queue_name = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getQueueNameOrBuilder() {
       return getQueueName();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -40634,6 +43281,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (holdMusic_ != null) {
@@ -40645,6 +43293,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -40673,19 +43322,18 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.EnqueueCallAction other = (com.elarian.hera.proto.Common.EnqueueCallAction) obj;
 
-      boolean result = true;
-      result = result && (hasHoldMusic() == other.hasHoldMusic());
+      if (hasHoldMusic() != other.hasHoldMusic()) return false;
       if (hasHoldMusic()) {
-        result = result && getHoldMusic()
-            .equals(other.getHoldMusic());
+        if (!getHoldMusic()
+            .equals(other.getHoldMusic())) return false;
       }
-      result = result && (hasQueueName() == other.hasQueueName());
+      if (hasQueueName() != other.hasQueueName()) return false;
       if (hasQueueName()) {
-        result = result && getQueueName()
-            .equals(other.getQueueName());
+        if (!getQueueName()
+            .equals(other.getQueueName())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -40778,6 +43426,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -40785,6 +43434,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.EnqueueCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -40808,6 +43458,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EnqueueCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EnqueueCallAction_fieldAccessorTable
@@ -40830,6 +43481,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (holdMusicBuilder_ == null) {
@@ -40847,15 +43499,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EnqueueCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.EnqueueCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.EnqueueCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.EnqueueCallAction build() {
         com.elarian.hera.proto.Common.EnqueueCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -40864,6 +43519,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.EnqueueCallAction buildPartial() {
         com.elarian.hera.proto.Common.EnqueueCallAction result = new com.elarian.hera.proto.Common.EnqueueCallAction(this);
         if (holdMusicBuilder_ == null) {
@@ -40880,32 +43536,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.EnqueueCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.EnqueueCallAction)other);
@@ -40928,10 +43591,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -40950,17 +43615,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue holdMusic_ = null;
+      private com.google.protobuf.StringValue holdMusic_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> holdMusicBuilder_;
       /**
        * <code>.google.protobuf.StringValue hold_music = 1;</code>
+       * @return Whether the holdMusic field is set.
        */
       public boolean hasHoldMusic() {
         return holdMusicBuilder_ != null || holdMusic_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue hold_music = 1;</code>
+       * @return The holdMusic.
        */
       public com.google.protobuf.StringValue getHoldMusic() {
         if (holdMusicBuilder_ == null) {
@@ -41067,17 +43734,19 @@ public final class Common {
         return holdMusicBuilder_;
       }
 
-      private com.google.protobuf.StringValue queueName_ = null;
+      private com.google.protobuf.StringValue queueName_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> queueNameBuilder_;
       /**
        * <code>.google.protobuf.StringValue queue_name = 2;</code>
+       * @return Whether the queueName field is set.
        */
       public boolean hasQueueName() {
         return queueNameBuilder_ != null || queueName_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue queue_name = 2;</code>
+       * @return The queueName.
        */
       public com.google.protobuf.StringValue getQueueName() {
         if (queueNameBuilder_ == null) {
@@ -41183,11 +43852,13 @@ public final class Common {
         }
         return queueNameBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -41209,11 +43880,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<EnqueueCallAction>
         PARSER = new com.google.protobuf.AbstractParser<EnqueueCallAction>() {
+      @java.lang.Override
       public EnqueueCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new EnqueueCallAction(input, extensionRegistry);
+        return new EnqueueCallAction(input, extensionRegistry);
       }
     };
 
@@ -41226,6 +43898,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.EnqueueCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -41238,10 +43911,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 1;</code>
+     * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 1;</code>
+     * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber();
     /**
@@ -41251,15 +43926,18 @@ public final class Common {
 
     /**
      * <code>bool record = 2;</code>
+     * @return The record.
      */
     boolean getRecord();
 
     /**
      * <code>.google.protobuf.StringValue queue_name = 3;</code>
+     * @return Whether the queueName field is set.
      */
     boolean hasQueueName();
     /**
      * <code>.google.protobuf.StringValue queue_name = 3;</code>
+     * @return The queueName.
      */
     com.google.protobuf.StringValue getQueueName();
     /**
@@ -41270,7 +43948,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.DequeueCallAction}
    */
-  public  static final class DequeueCallAction extends
+  public static final class DequeueCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.DequeueCallAction)
       DequeueCallActionOrBuilder {
@@ -41280,7 +43958,13 @@ public final class Common {
       super(builder);
     }
     private DequeueCallAction() {
-      record_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DequeueCallAction();
     }
 
     @java.lang.Override
@@ -41293,7 +43977,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -41304,13 +43990,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.VoiceChannelNumber.Builder subBuilder = null;
               if (channelNumber_ != null) {
@@ -41342,6 +44021,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -41359,6 +44045,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DequeueCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DequeueCallAction_fieldAccessorTable
@@ -41370,19 +44057,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 1;</code>
+     * @return Whether the channelNumber field is set.
      */
+    @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 1;</code>
+     * @return The channelNumber.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumberOrBuilder getChannelNumberOrBuilder() {
       return getChannelNumber();
     }
@@ -41391,7 +44083,9 @@ public final class Common {
     private boolean record_;
     /**
      * <code>bool record = 2;</code>
+     * @return The record.
      */
+    @java.lang.Override
     public boolean getRecord() {
       return record_;
     }
@@ -41400,24 +44094,30 @@ public final class Common {
     private com.google.protobuf.StringValue queueName_;
     /**
      * <code>.google.protobuf.StringValue queue_name = 3;</code>
+     * @return Whether the queueName field is set.
      */
+    @java.lang.Override
     public boolean hasQueueName() {
       return queueName_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue queue_name = 3;</code>
+     * @return The queueName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getQueueName() {
       return queueName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : queueName_;
     }
     /**
      * <code>.google.protobuf.StringValue queue_name = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getQueueNameOrBuilder() {
       return getQueueName();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -41427,6 +44127,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (channelNumber_ != null) {
@@ -41441,6 +44142,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -41473,21 +44175,20 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.DequeueCallAction other = (com.elarian.hera.proto.Common.DequeueCallAction) obj;
 
-      boolean result = true;
-      result = result && (hasChannelNumber() == other.hasChannelNumber());
+      if (hasChannelNumber() != other.hasChannelNumber()) return false;
       if (hasChannelNumber()) {
-        result = result && getChannelNumber()
-            .equals(other.getChannelNumber());
+        if (!getChannelNumber()
+            .equals(other.getChannelNumber())) return false;
       }
-      result = result && (getRecord()
-          == other.getRecord());
-      result = result && (hasQueueName() == other.hasQueueName());
+      if (getRecord()
+          != other.getRecord()) return false;
+      if (hasQueueName() != other.hasQueueName()) return false;
       if (hasQueueName()) {
-        result = result && getQueueName()
-            .equals(other.getQueueName());
+        if (!getQueueName()
+            .equals(other.getQueueName())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -41583,6 +44284,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -41590,6 +44292,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.DequeueCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -41613,6 +44316,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DequeueCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DequeueCallAction_fieldAccessorTable
@@ -41635,6 +44339,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (channelNumberBuilder_ == null) {
@@ -41654,15 +44359,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_DequeueCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DequeueCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.DequeueCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DequeueCallAction build() {
         com.elarian.hera.proto.Common.DequeueCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -41671,6 +44379,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DequeueCallAction buildPartial() {
         com.elarian.hera.proto.Common.DequeueCallAction result = new com.elarian.hera.proto.Common.DequeueCallAction(this);
         if (channelNumberBuilder_ == null) {
@@ -41688,32 +44397,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.DequeueCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.DequeueCallAction)other);
@@ -41739,10 +44455,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -41761,17 +44479,19 @@ public final class Common {
         return this;
       }
 
-      private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_ = null;
+      private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.VoiceChannelNumber, com.elarian.hera.proto.Common.VoiceChannelNumber.Builder, com.elarian.hera.proto.Common.VoiceChannelNumberOrBuilder> channelNumberBuilder_;
       /**
        * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 1;</code>
+       * @return Whether the channelNumber field is set.
        */
       public boolean hasChannelNumber() {
         return channelNumberBuilder_ != null || channelNumber_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 1;</code>
+       * @return The channelNumber.
        */
       public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
         if (channelNumberBuilder_ == null) {
@@ -41881,12 +44601,16 @@ public final class Common {
       private boolean record_ ;
       /**
        * <code>bool record = 2;</code>
+       * @return The record.
        */
+      @java.lang.Override
       public boolean getRecord() {
         return record_;
       }
       /**
        * <code>bool record = 2;</code>
+       * @param value The record to set.
+       * @return This builder for chaining.
        */
       public Builder setRecord(boolean value) {
         
@@ -41896,6 +44620,7 @@ public final class Common {
       }
       /**
        * <code>bool record = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRecord() {
         
@@ -41904,17 +44629,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.StringValue queueName_ = null;
+      private com.google.protobuf.StringValue queueName_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> queueNameBuilder_;
       /**
        * <code>.google.protobuf.StringValue queue_name = 3;</code>
+       * @return Whether the queueName field is set.
        */
       public boolean hasQueueName() {
         return queueNameBuilder_ != null || queueName_ != null;
       }
       /**
        * <code>.google.protobuf.StringValue queue_name = 3;</code>
+       * @return The queueName.
        */
       public com.google.protobuf.StringValue getQueueName() {
         if (queueNameBuilder_ == null) {
@@ -42020,11 +44747,13 @@ public final class Common {
         }
         return queueNameBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -42046,11 +44775,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<DequeueCallAction>
         PARSER = new com.google.protobuf.AbstractParser<DequeueCallAction>() {
+      @java.lang.Override
       public DequeueCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DequeueCallAction(input, extensionRegistry);
+        return new DequeueCallAction(input, extensionRegistry);
       }
     };
 
@@ -42063,6 +44793,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.DequeueCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -42076,7 +44807,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.RejectCallAction}
    */
-  public  static final class RejectCallAction extends
+  public static final class RejectCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.RejectCallAction)
       RejectCallActionOrBuilder {
@@ -42089,6 +44820,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RejectCallAction();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -42098,6 +44836,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -42109,7 +44850,7 @@ public final class Common {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -42132,6 +44873,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RejectCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RejectCallAction_fieldAccessorTable
@@ -42140,6 +44882,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -42149,11 +44892,13 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -42174,9 +44919,8 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.RejectCallAction other = (com.elarian.hera.proto.Common.RejectCallAction) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -42261,6 +45005,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -42268,6 +45013,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.RejectCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -42291,6 +45037,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RejectCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RejectCallAction_fieldAccessorTable
@@ -42313,20 +45060,24 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RejectCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RejectCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.RejectCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RejectCallAction build() {
         com.elarian.hera.proto.Common.RejectCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -42335,38 +45086,46 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RejectCallAction buildPartial() {
         com.elarian.hera.proto.Common.RejectCallAction result = new com.elarian.hera.proto.Common.RejectCallAction(this);
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.RejectCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.RejectCallAction)other);
@@ -42383,10 +45142,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -42404,11 +45165,13 @@ public final class Common {
         }
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -42430,11 +45193,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<RejectCallAction>
         PARSER = new com.google.protobuf.AbstractParser<RejectCallAction>() {
+      @java.lang.Override
       public RejectCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RejectCallAction(input, extensionRegistry);
+        return new RejectCallAction(input, extensionRegistry);
       }
     };
 
@@ -42447,6 +45211,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RejectCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -42459,10 +45224,12 @@ public final class Common {
 
     /**
      * <code>string url = 1;</code>
+     * @return The url.
      */
     java.lang.String getUrl();
     /**
      * <code>string url = 1;</code>
+     * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
@@ -42470,7 +45237,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.RedirectCallAction}
    */
-  public  static final class RedirectCallAction extends
+  public static final class RedirectCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.RedirectCallAction)
       RedirectCallActionOrBuilder {
@@ -42484,6 +45251,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RedirectCallAction();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -42493,7 +45267,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -42504,17 +45280,17 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -42534,6 +45310,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RedirectCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RedirectCallAction_fieldAccessorTable
@@ -42545,7 +45322,9 @@ public final class Common {
     private volatile java.lang.Object url_;
     /**
      * <code>string url = 1;</code>
+     * @return The url.
      */
+    @java.lang.Override
     public java.lang.String getUrl() {
       java.lang.Object ref = url_;
       if (ref instanceof java.lang.String) {
@@ -42560,7 +45339,9 @@ public final class Common {
     }
     /**
      * <code>string url = 1;</code>
+     * @return The bytes for url.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlBytes() {
       java.lang.Object ref = url_;
@@ -42576,6 +45357,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -42585,6 +45367,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUrlBytes().isEmpty()) {
@@ -42593,6 +45376,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -42616,11 +45400,10 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.RedirectCallAction other = (com.elarian.hera.proto.Common.RedirectCallAction) obj;
 
-      boolean result = true;
-      result = result && getUrl()
-          .equals(other.getUrl());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -42707,6 +45490,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -42714,6 +45498,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.RedirectCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -42737,6 +45522,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RedirectCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RedirectCallAction_fieldAccessorTable
@@ -42759,6 +45545,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         url_ = "";
@@ -42766,15 +45553,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_RedirectCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RedirectCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.RedirectCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RedirectCallAction build() {
         com.elarian.hera.proto.Common.RedirectCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -42783,6 +45573,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RedirectCallAction buildPartial() {
         com.elarian.hera.proto.Common.RedirectCallAction result = new com.elarian.hera.proto.Common.RedirectCallAction(this);
         result.url_ = url_;
@@ -42790,32 +45581,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.RedirectCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.RedirectCallAction)other);
@@ -42836,10 +45634,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -42861,6 +45661,7 @@ public final class Common {
       private java.lang.Object url_ = "";
       /**
        * <code>string url = 1;</code>
+       * @return The url.
        */
       public java.lang.String getUrl() {
         java.lang.Object ref = url_;
@@ -42876,6 +45677,7 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
           getUrlBytes() {
@@ -42892,6 +45694,8 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrl(
           java.lang.String value) {
@@ -42905,6 +45709,7 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearUrl() {
         
@@ -42914,6 +45719,8 @@ public final class Common {
       }
       /**
        * <code>string url = 1;</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -42926,11 +45733,13 @@ public final class Common {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -42952,11 +45761,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<RedirectCallAction>
         PARSER = new com.google.protobuf.AbstractParser<RedirectCallAction>() {
+      @java.lang.Override
       public RedirectCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RedirectCallAction(input, extensionRegistry);
+        return new RedirectCallAction(input, extensionRegistry);
       }
     };
 
@@ -42969,6 +45779,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RedirectCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -42981,10 +45792,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return Whether the say field is set.
      */
     boolean hasSay();
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return The say.
      */
     com.elarian.hera.proto.Common.SayCallAction getSay();
     /**
@@ -42994,10 +45807,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return Whether the play field is set.
      */
     boolean hasPlay();
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return The play.
      */
     com.elarian.hera.proto.Common.PlayCallAction getPlay();
     /**
@@ -43007,10 +45822,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.GetDigitsCallAction get_digits = 3;</code>
+     * @return Whether the getDigits field is set.
      */
     boolean hasGetDigits();
     /**
      * <code>.com.elarian.hera.proto.GetDigitsCallAction get_digits = 3;</code>
+     * @return The getDigits.
      */
     com.elarian.hera.proto.Common.GetDigitsCallAction getGetDigits();
     /**
@@ -43020,10 +45837,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.DialCallAction dial = 4;</code>
+     * @return Whether the dial field is set.
      */
     boolean hasDial();
     /**
      * <code>.com.elarian.hera.proto.DialCallAction dial = 4;</code>
+     * @return The dial.
      */
     com.elarian.hera.proto.Common.DialCallAction getDial();
     /**
@@ -43033,10 +45852,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.RecordSessionCallAction record_session = 5;</code>
+     * @return Whether the recordSession field is set.
      */
     boolean hasRecordSession();
     /**
      * <code>.com.elarian.hera.proto.RecordSessionCallAction record_session = 5;</code>
+     * @return The recordSession.
      */
     com.elarian.hera.proto.Common.RecordSessionCallAction getRecordSession();
     /**
@@ -43046,10 +45867,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.GetRecordingCallAction get_recording = 6;</code>
+     * @return Whether the getRecording field is set.
      */
     boolean hasGetRecording();
     /**
      * <code>.com.elarian.hera.proto.GetRecordingCallAction get_recording = 6;</code>
+     * @return The getRecording.
      */
     com.elarian.hera.proto.Common.GetRecordingCallAction getGetRecording();
     /**
@@ -43059,10 +45882,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.EnqueueCallAction enqueue = 7;</code>
+     * @return Whether the enqueue field is set.
      */
     boolean hasEnqueue();
     /**
      * <code>.com.elarian.hera.proto.EnqueueCallAction enqueue = 7;</code>
+     * @return The enqueue.
      */
     com.elarian.hera.proto.Common.EnqueueCallAction getEnqueue();
     /**
@@ -43072,10 +45897,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.DequeueCallAction dequeue = 8;</code>
+     * @return Whether the dequeue field is set.
      */
     boolean hasDequeue();
     /**
      * <code>.com.elarian.hera.proto.DequeueCallAction dequeue = 8;</code>
+     * @return The dequeue.
      */
     com.elarian.hera.proto.Common.DequeueCallAction getDequeue();
     /**
@@ -43085,10 +45912,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.RejectCallAction reject = 9;</code>
+     * @return Whether the reject field is set.
      */
     boolean hasReject();
     /**
      * <code>.com.elarian.hera.proto.RejectCallAction reject = 9;</code>
+     * @return The reject.
      */
     com.elarian.hera.proto.Common.RejectCallAction getReject();
     /**
@@ -43098,10 +45927,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.RedirectCallAction redirect = 10;</code>
+     * @return Whether the redirect field is set.
      */
     boolean hasRedirect();
     /**
      * <code>.com.elarian.hera.proto.RedirectCallAction redirect = 10;</code>
+     * @return The redirect.
      */
     com.elarian.hera.proto.Common.RedirectCallAction getRedirect();
     /**
@@ -43114,7 +45945,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.VoiceCallAction}
    */
-  public  static final class VoiceCallAction extends
+  public static final class VoiceCallAction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallAction)
       VoiceCallActionOrBuilder {
@@ -43127,6 +45958,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoiceCallAction();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -43136,7 +45974,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -43147,13 +45987,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.elarian.hera.proto.Common.SayCallAction.Builder subBuilder = null;
               if (entryCase_ == 1) {
@@ -43294,6 +46127,13 @@ public final class Common {
               entryCase_ = 10;
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -43311,6 +46151,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallAction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallAction_fieldAccessorTable
@@ -43321,7 +46162,8 @@ public final class Common {
     private int entryCase_ = 0;
     private java.lang.Object entry_;
     public enum EntryCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       SAY(1),
       PLAY(2),
       GET_DIGITS(3),
@@ -43338,6 +46180,8 @@ public final class Common {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -43375,13 +46219,17 @@ public final class Common {
     public static final int SAY_FIELD_NUMBER = 1;
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return Whether the say field is set.
      */
+    @java.lang.Override
     public boolean hasSay() {
       return entryCase_ == 1;
     }
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+     * @return The say.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.SayCallAction getSay() {
       if (entryCase_ == 1) {
          return (com.elarian.hera.proto.Common.SayCallAction) entry_;
@@ -43391,6 +46239,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.SayCallActionOrBuilder getSayOrBuilder() {
       if (entryCase_ == 1) {
          return (com.elarian.hera.proto.Common.SayCallAction) entry_;
@@ -43401,13 +46250,17 @@ public final class Common {
     public static final int PLAY_FIELD_NUMBER = 2;
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return Whether the play field is set.
      */
+    @java.lang.Override
     public boolean hasPlay() {
       return entryCase_ == 2;
     }
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+     * @return The play.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PlayCallAction getPlay() {
       if (entryCase_ == 2) {
          return (com.elarian.hera.proto.Common.PlayCallAction) entry_;
@@ -43417,6 +46270,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PlayCallActionOrBuilder getPlayOrBuilder() {
       if (entryCase_ == 2) {
          return (com.elarian.hera.proto.Common.PlayCallAction) entry_;
@@ -43427,13 +46281,17 @@ public final class Common {
     public static final int GET_DIGITS_FIELD_NUMBER = 3;
     /**
      * <code>.com.elarian.hera.proto.GetDigitsCallAction get_digits = 3;</code>
+     * @return Whether the getDigits field is set.
      */
+    @java.lang.Override
     public boolean hasGetDigits() {
       return entryCase_ == 3;
     }
     /**
      * <code>.com.elarian.hera.proto.GetDigitsCallAction get_digits = 3;</code>
+     * @return The getDigits.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.GetDigitsCallAction getGetDigits() {
       if (entryCase_ == 3) {
          return (com.elarian.hera.proto.Common.GetDigitsCallAction) entry_;
@@ -43443,6 +46301,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.GetDigitsCallAction get_digits = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.GetDigitsCallActionOrBuilder getGetDigitsOrBuilder() {
       if (entryCase_ == 3) {
          return (com.elarian.hera.proto.Common.GetDigitsCallAction) entry_;
@@ -43453,13 +46312,17 @@ public final class Common {
     public static final int DIAL_FIELD_NUMBER = 4;
     /**
      * <code>.com.elarian.hera.proto.DialCallAction dial = 4;</code>
+     * @return Whether the dial field is set.
      */
+    @java.lang.Override
     public boolean hasDial() {
       return entryCase_ == 4;
     }
     /**
      * <code>.com.elarian.hera.proto.DialCallAction dial = 4;</code>
+     * @return The dial.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.DialCallAction getDial() {
       if (entryCase_ == 4) {
          return (com.elarian.hera.proto.Common.DialCallAction) entry_;
@@ -43469,6 +46332,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.DialCallAction dial = 4;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.DialCallActionOrBuilder getDialOrBuilder() {
       if (entryCase_ == 4) {
          return (com.elarian.hera.proto.Common.DialCallAction) entry_;
@@ -43479,13 +46343,17 @@ public final class Common {
     public static final int RECORD_SESSION_FIELD_NUMBER = 5;
     /**
      * <code>.com.elarian.hera.proto.RecordSessionCallAction record_session = 5;</code>
+     * @return Whether the recordSession field is set.
      */
+    @java.lang.Override
     public boolean hasRecordSession() {
       return entryCase_ == 5;
     }
     /**
      * <code>.com.elarian.hera.proto.RecordSessionCallAction record_session = 5;</code>
+     * @return The recordSession.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RecordSessionCallAction getRecordSession() {
       if (entryCase_ == 5) {
          return (com.elarian.hera.proto.Common.RecordSessionCallAction) entry_;
@@ -43495,6 +46363,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.RecordSessionCallAction record_session = 5;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RecordSessionCallActionOrBuilder getRecordSessionOrBuilder() {
       if (entryCase_ == 5) {
          return (com.elarian.hera.proto.Common.RecordSessionCallAction) entry_;
@@ -43505,13 +46374,17 @@ public final class Common {
     public static final int GET_RECORDING_FIELD_NUMBER = 6;
     /**
      * <code>.com.elarian.hera.proto.GetRecordingCallAction get_recording = 6;</code>
+     * @return Whether the getRecording field is set.
      */
+    @java.lang.Override
     public boolean hasGetRecording() {
       return entryCase_ == 6;
     }
     /**
      * <code>.com.elarian.hera.proto.GetRecordingCallAction get_recording = 6;</code>
+     * @return The getRecording.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.GetRecordingCallAction getGetRecording() {
       if (entryCase_ == 6) {
          return (com.elarian.hera.proto.Common.GetRecordingCallAction) entry_;
@@ -43521,6 +46394,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.GetRecordingCallAction get_recording = 6;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.GetRecordingCallActionOrBuilder getGetRecordingOrBuilder() {
       if (entryCase_ == 6) {
          return (com.elarian.hera.proto.Common.GetRecordingCallAction) entry_;
@@ -43531,13 +46405,17 @@ public final class Common {
     public static final int ENQUEUE_FIELD_NUMBER = 7;
     /**
      * <code>.com.elarian.hera.proto.EnqueueCallAction enqueue = 7;</code>
+     * @return Whether the enqueue field is set.
      */
+    @java.lang.Override
     public boolean hasEnqueue() {
       return entryCase_ == 7;
     }
     /**
      * <code>.com.elarian.hera.proto.EnqueueCallAction enqueue = 7;</code>
+     * @return The enqueue.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.EnqueueCallAction getEnqueue() {
       if (entryCase_ == 7) {
          return (com.elarian.hera.proto.Common.EnqueueCallAction) entry_;
@@ -43547,6 +46425,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.EnqueueCallAction enqueue = 7;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.EnqueueCallActionOrBuilder getEnqueueOrBuilder() {
       if (entryCase_ == 7) {
          return (com.elarian.hera.proto.Common.EnqueueCallAction) entry_;
@@ -43557,13 +46436,17 @@ public final class Common {
     public static final int DEQUEUE_FIELD_NUMBER = 8;
     /**
      * <code>.com.elarian.hera.proto.DequeueCallAction dequeue = 8;</code>
+     * @return Whether the dequeue field is set.
      */
+    @java.lang.Override
     public boolean hasDequeue() {
       return entryCase_ == 8;
     }
     /**
      * <code>.com.elarian.hera.proto.DequeueCallAction dequeue = 8;</code>
+     * @return The dequeue.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.DequeueCallAction getDequeue() {
       if (entryCase_ == 8) {
          return (com.elarian.hera.proto.Common.DequeueCallAction) entry_;
@@ -43573,6 +46456,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.DequeueCallAction dequeue = 8;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.DequeueCallActionOrBuilder getDequeueOrBuilder() {
       if (entryCase_ == 8) {
          return (com.elarian.hera.proto.Common.DequeueCallAction) entry_;
@@ -43583,13 +46467,17 @@ public final class Common {
     public static final int REJECT_FIELD_NUMBER = 9;
     /**
      * <code>.com.elarian.hera.proto.RejectCallAction reject = 9;</code>
+     * @return Whether the reject field is set.
      */
+    @java.lang.Override
     public boolean hasReject() {
       return entryCase_ == 9;
     }
     /**
      * <code>.com.elarian.hera.proto.RejectCallAction reject = 9;</code>
+     * @return The reject.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RejectCallAction getReject() {
       if (entryCase_ == 9) {
          return (com.elarian.hera.proto.Common.RejectCallAction) entry_;
@@ -43599,6 +46487,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.RejectCallAction reject = 9;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RejectCallActionOrBuilder getRejectOrBuilder() {
       if (entryCase_ == 9) {
          return (com.elarian.hera.proto.Common.RejectCallAction) entry_;
@@ -43609,13 +46498,17 @@ public final class Common {
     public static final int REDIRECT_FIELD_NUMBER = 10;
     /**
      * <code>.com.elarian.hera.proto.RedirectCallAction redirect = 10;</code>
+     * @return Whether the redirect field is set.
      */
+    @java.lang.Override
     public boolean hasRedirect() {
       return entryCase_ == 10;
     }
     /**
      * <code>.com.elarian.hera.proto.RedirectCallAction redirect = 10;</code>
+     * @return The redirect.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RedirectCallAction getRedirect() {
       if (entryCase_ == 10) {
          return (com.elarian.hera.proto.Common.RedirectCallAction) entry_;
@@ -43625,6 +46518,7 @@ public final class Common {
     /**
      * <code>.com.elarian.hera.proto.RedirectCallAction redirect = 10;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.RedirectCallActionOrBuilder getRedirectOrBuilder() {
       if (entryCase_ == 10) {
          return (com.elarian.hera.proto.Common.RedirectCallAction) entry_;
@@ -43633,6 +46527,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -43642,6 +46537,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entryCase_ == 1) {
@@ -43677,6 +46573,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -43737,56 +46634,53 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.VoiceCallAction other = (com.elarian.hera.proto.Common.VoiceCallAction) obj;
 
-      boolean result = true;
-      result = result && getEntryCase().equals(
-          other.getEntryCase());
-      if (!result) return false;
+      if (!getEntryCase().equals(other.getEntryCase())) return false;
       switch (entryCase_) {
         case 1:
-          result = result && getSay()
-              .equals(other.getSay());
+          if (!getSay()
+              .equals(other.getSay())) return false;
           break;
         case 2:
-          result = result && getPlay()
-              .equals(other.getPlay());
+          if (!getPlay()
+              .equals(other.getPlay())) return false;
           break;
         case 3:
-          result = result && getGetDigits()
-              .equals(other.getGetDigits());
+          if (!getGetDigits()
+              .equals(other.getGetDigits())) return false;
           break;
         case 4:
-          result = result && getDial()
-              .equals(other.getDial());
+          if (!getDial()
+              .equals(other.getDial())) return false;
           break;
         case 5:
-          result = result && getRecordSession()
-              .equals(other.getRecordSession());
+          if (!getRecordSession()
+              .equals(other.getRecordSession())) return false;
           break;
         case 6:
-          result = result && getGetRecording()
-              .equals(other.getGetRecording());
+          if (!getGetRecording()
+              .equals(other.getGetRecording())) return false;
           break;
         case 7:
-          result = result && getEnqueue()
-              .equals(other.getEnqueue());
+          if (!getEnqueue()
+              .equals(other.getEnqueue())) return false;
           break;
         case 8:
-          result = result && getDequeue()
-              .equals(other.getDequeue());
+          if (!getDequeue()
+              .equals(other.getDequeue())) return false;
           break;
         case 9:
-          result = result && getReject()
-              .equals(other.getReject());
+          if (!getReject()
+              .equals(other.getReject())) return false;
           break;
         case 10:
-          result = result && getRedirect()
-              .equals(other.getRedirect());
+          if (!getRedirect()
+              .equals(other.getRedirect())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -43915,6 +46809,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -43922,6 +46817,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.VoiceCallAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -43945,6 +46841,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallAction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallAction_fieldAccessorTable
@@ -43967,6 +46864,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         entryCase_ = 0;
@@ -43974,15 +46872,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_VoiceCallAction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallAction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.VoiceCallAction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallAction build() {
         com.elarian.hera.proto.Common.VoiceCallAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -43991,6 +46892,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallAction buildPartial() {
         com.elarian.hera.proto.Common.VoiceCallAction result = new com.elarian.hera.proto.Common.VoiceCallAction(this);
         if (entryCase_ == 1) {
@@ -44068,32 +46970,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.VoiceCallAction) {
           return mergeFrom((com.elarian.hera.proto.Common.VoiceCallAction)other);
@@ -44155,10 +47064,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -44196,13 +47107,17 @@ public final class Common {
           com.elarian.hera.proto.Common.SayCallAction, com.elarian.hera.proto.Common.SayCallAction.Builder, com.elarian.hera.proto.Common.SayCallActionOrBuilder> sayBuilder_;
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+       * @return Whether the say field is set.
        */
+      @java.lang.Override
       public boolean hasSay() {
         return entryCase_ == 1;
       }
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
+       * @return The say.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallAction getSay() {
         if (sayBuilder_ == null) {
           if (entryCase_ == 1) {
@@ -44296,6 +47211,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.SayCallAction say = 1;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.SayCallActionOrBuilder getSayOrBuilder() {
         if ((entryCase_ == 1) && (sayBuilder_ != null)) {
           return sayBuilder_.getMessageOrBuilder();
@@ -44332,13 +47248,17 @@ public final class Common {
           com.elarian.hera.proto.Common.PlayCallAction, com.elarian.hera.proto.Common.PlayCallAction.Builder, com.elarian.hera.proto.Common.PlayCallActionOrBuilder> playBuilder_;
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+       * @return Whether the play field is set.
        */
+      @java.lang.Override
       public boolean hasPlay() {
         return entryCase_ == 2;
       }
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
+       * @return The play.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallAction getPlay() {
         if (playBuilder_ == null) {
           if (entryCase_ == 2) {
@@ -44432,6 +47352,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.PlayCallAction play = 2;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PlayCallActionOrBuilder getPlayOrBuilder() {
         if ((entryCase_ == 2) && (playBuilder_ != null)) {
           return playBuilder_.getMessageOrBuilder();
@@ -44468,13 +47389,17 @@ public final class Common {
           com.elarian.hera.proto.Common.GetDigitsCallAction, com.elarian.hera.proto.Common.GetDigitsCallAction.Builder, com.elarian.hera.proto.Common.GetDigitsCallActionOrBuilder> getDigitsBuilder_;
       /**
        * <code>.com.elarian.hera.proto.GetDigitsCallAction get_digits = 3;</code>
+       * @return Whether the getDigits field is set.
        */
+      @java.lang.Override
       public boolean hasGetDigits() {
         return entryCase_ == 3;
       }
       /**
        * <code>.com.elarian.hera.proto.GetDigitsCallAction get_digits = 3;</code>
+       * @return The getDigits.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetDigitsCallAction getGetDigits() {
         if (getDigitsBuilder_ == null) {
           if (entryCase_ == 3) {
@@ -44568,6 +47493,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.GetDigitsCallAction get_digits = 3;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetDigitsCallActionOrBuilder getGetDigitsOrBuilder() {
         if ((entryCase_ == 3) && (getDigitsBuilder_ != null)) {
           return getDigitsBuilder_.getMessageOrBuilder();
@@ -44604,13 +47530,17 @@ public final class Common {
           com.elarian.hera.proto.Common.DialCallAction, com.elarian.hera.proto.Common.DialCallAction.Builder, com.elarian.hera.proto.Common.DialCallActionOrBuilder> dialBuilder_;
       /**
        * <code>.com.elarian.hera.proto.DialCallAction dial = 4;</code>
+       * @return Whether the dial field is set.
        */
+      @java.lang.Override
       public boolean hasDial() {
         return entryCase_ == 4;
       }
       /**
        * <code>.com.elarian.hera.proto.DialCallAction dial = 4;</code>
+       * @return The dial.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DialCallAction getDial() {
         if (dialBuilder_ == null) {
           if (entryCase_ == 4) {
@@ -44704,6 +47634,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.DialCallAction dial = 4;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DialCallActionOrBuilder getDialOrBuilder() {
         if ((entryCase_ == 4) && (dialBuilder_ != null)) {
           return dialBuilder_.getMessageOrBuilder();
@@ -44740,13 +47671,17 @@ public final class Common {
           com.elarian.hera.proto.Common.RecordSessionCallAction, com.elarian.hera.proto.Common.RecordSessionCallAction.Builder, com.elarian.hera.proto.Common.RecordSessionCallActionOrBuilder> recordSessionBuilder_;
       /**
        * <code>.com.elarian.hera.proto.RecordSessionCallAction record_session = 5;</code>
+       * @return Whether the recordSession field is set.
        */
+      @java.lang.Override
       public boolean hasRecordSession() {
         return entryCase_ == 5;
       }
       /**
        * <code>.com.elarian.hera.proto.RecordSessionCallAction record_session = 5;</code>
+       * @return The recordSession.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RecordSessionCallAction getRecordSession() {
         if (recordSessionBuilder_ == null) {
           if (entryCase_ == 5) {
@@ -44840,6 +47775,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.RecordSessionCallAction record_session = 5;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RecordSessionCallActionOrBuilder getRecordSessionOrBuilder() {
         if ((entryCase_ == 5) && (recordSessionBuilder_ != null)) {
           return recordSessionBuilder_.getMessageOrBuilder();
@@ -44876,13 +47812,17 @@ public final class Common {
           com.elarian.hera.proto.Common.GetRecordingCallAction, com.elarian.hera.proto.Common.GetRecordingCallAction.Builder, com.elarian.hera.proto.Common.GetRecordingCallActionOrBuilder> getRecordingBuilder_;
       /**
        * <code>.com.elarian.hera.proto.GetRecordingCallAction get_recording = 6;</code>
+       * @return Whether the getRecording field is set.
        */
+      @java.lang.Override
       public boolean hasGetRecording() {
         return entryCase_ == 6;
       }
       /**
        * <code>.com.elarian.hera.proto.GetRecordingCallAction get_recording = 6;</code>
+       * @return The getRecording.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetRecordingCallAction getGetRecording() {
         if (getRecordingBuilder_ == null) {
           if (entryCase_ == 6) {
@@ -44976,6 +47916,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.GetRecordingCallAction get_recording = 6;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.GetRecordingCallActionOrBuilder getGetRecordingOrBuilder() {
         if ((entryCase_ == 6) && (getRecordingBuilder_ != null)) {
           return getRecordingBuilder_.getMessageOrBuilder();
@@ -45012,13 +47953,17 @@ public final class Common {
           com.elarian.hera.proto.Common.EnqueueCallAction, com.elarian.hera.proto.Common.EnqueueCallAction.Builder, com.elarian.hera.proto.Common.EnqueueCallActionOrBuilder> enqueueBuilder_;
       /**
        * <code>.com.elarian.hera.proto.EnqueueCallAction enqueue = 7;</code>
+       * @return Whether the enqueue field is set.
        */
+      @java.lang.Override
       public boolean hasEnqueue() {
         return entryCase_ == 7;
       }
       /**
        * <code>.com.elarian.hera.proto.EnqueueCallAction enqueue = 7;</code>
+       * @return The enqueue.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.EnqueueCallAction getEnqueue() {
         if (enqueueBuilder_ == null) {
           if (entryCase_ == 7) {
@@ -45112,6 +48057,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.EnqueueCallAction enqueue = 7;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.EnqueueCallActionOrBuilder getEnqueueOrBuilder() {
         if ((entryCase_ == 7) && (enqueueBuilder_ != null)) {
           return enqueueBuilder_.getMessageOrBuilder();
@@ -45148,13 +48094,17 @@ public final class Common {
           com.elarian.hera.proto.Common.DequeueCallAction, com.elarian.hera.proto.Common.DequeueCallAction.Builder, com.elarian.hera.proto.Common.DequeueCallActionOrBuilder> dequeueBuilder_;
       /**
        * <code>.com.elarian.hera.proto.DequeueCallAction dequeue = 8;</code>
+       * @return Whether the dequeue field is set.
        */
+      @java.lang.Override
       public boolean hasDequeue() {
         return entryCase_ == 8;
       }
       /**
        * <code>.com.elarian.hera.proto.DequeueCallAction dequeue = 8;</code>
+       * @return The dequeue.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DequeueCallAction getDequeue() {
         if (dequeueBuilder_ == null) {
           if (entryCase_ == 8) {
@@ -45248,6 +48198,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.DequeueCallAction dequeue = 8;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.DequeueCallActionOrBuilder getDequeueOrBuilder() {
         if ((entryCase_ == 8) && (dequeueBuilder_ != null)) {
           return dequeueBuilder_.getMessageOrBuilder();
@@ -45284,13 +48235,17 @@ public final class Common {
           com.elarian.hera.proto.Common.RejectCallAction, com.elarian.hera.proto.Common.RejectCallAction.Builder, com.elarian.hera.proto.Common.RejectCallActionOrBuilder> rejectBuilder_;
       /**
        * <code>.com.elarian.hera.proto.RejectCallAction reject = 9;</code>
+       * @return Whether the reject field is set.
        */
+      @java.lang.Override
       public boolean hasReject() {
         return entryCase_ == 9;
       }
       /**
        * <code>.com.elarian.hera.proto.RejectCallAction reject = 9;</code>
+       * @return The reject.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RejectCallAction getReject() {
         if (rejectBuilder_ == null) {
           if (entryCase_ == 9) {
@@ -45384,6 +48339,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.RejectCallAction reject = 9;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RejectCallActionOrBuilder getRejectOrBuilder() {
         if ((entryCase_ == 9) && (rejectBuilder_ != null)) {
           return rejectBuilder_.getMessageOrBuilder();
@@ -45420,13 +48376,17 @@ public final class Common {
           com.elarian.hera.proto.Common.RedirectCallAction, com.elarian.hera.proto.Common.RedirectCallAction.Builder, com.elarian.hera.proto.Common.RedirectCallActionOrBuilder> redirectBuilder_;
       /**
        * <code>.com.elarian.hera.proto.RedirectCallAction redirect = 10;</code>
+       * @return Whether the redirect field is set.
        */
+      @java.lang.Override
       public boolean hasRedirect() {
         return entryCase_ == 10;
       }
       /**
        * <code>.com.elarian.hera.proto.RedirectCallAction redirect = 10;</code>
+       * @return The redirect.
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RedirectCallAction getRedirect() {
         if (redirectBuilder_ == null) {
           if (entryCase_ == 10) {
@@ -45520,6 +48480,7 @@ public final class Common {
       /**
        * <code>.com.elarian.hera.proto.RedirectCallAction redirect = 10;</code>
        */
+      @java.lang.Override
       public com.elarian.hera.proto.Common.RedirectCallActionOrBuilder getRedirectOrBuilder() {
         if ((entryCase_ == 10) && (redirectBuilder_ != null)) {
           return redirectBuilder_.getMessageOrBuilder();
@@ -45551,11 +48512,13 @@ public final class Common {
         onChanged();;
         return redirectBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -45577,11 +48540,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<VoiceCallAction>
         PARSER = new com.google.protobuf.AbstractParser<VoiceCallAction>() {
+      @java.lang.Override
       public VoiceCallAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new VoiceCallAction(input, extensionRegistry);
+        return new VoiceCallAction(input, extensionRegistry);
       }
     };
 
@@ -45594,6 +48558,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -45606,10 +48571,12 @@ public final class Common {
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -45619,10 +48586,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     * @return Whether the value field is set.
      */
     boolean hasValue();
     /**
      * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     * @return The value.
      */
     com.elarian.hera.proto.Common.Cash getValue();
     /**
@@ -45632,10 +48601,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     * @return Whether the converted field is set.
      */
     boolean hasConverted();
     /**
      * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     * @return The converted.
      */
     com.elarian.hera.proto.Common.Cash getConverted();
     /**
@@ -45646,7 +48617,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.PendingWalletTransaction}
    */
-  public  static final class PendingWalletTransaction extends
+  public static final class PendingWalletTransaction extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PendingWalletTransaction)
       PendingWalletTransactionOrBuilder {
@@ -45659,6 +48630,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PendingWalletTransaction();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -45668,7 +48646,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -45679,13 +48659,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (createdAt_ != null) {
@@ -45725,6 +48698,13 @@ public final class Common {
 
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -45742,6 +48722,7 @@ public final class Common {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PendingWalletTransaction_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PendingWalletTransaction_fieldAccessorTable
@@ -45753,19 +48734,24 @@ public final class Common {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -45774,19 +48760,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.Cash value_;
     /**
      * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     * @return Whether the value field is set.
      */
+    @java.lang.Override
     public boolean hasValue() {
       return value_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     * @return The value.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getValue() {
       return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash value = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CashOrBuilder getValueOrBuilder() {
       return getValue();
     }
@@ -45795,24 +48786,30 @@ public final class Common {
     private com.elarian.hera.proto.Common.Cash converted_;
     /**
      * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     * @return Whether the converted field is set.
      */
+    @java.lang.Override
     public boolean hasConverted() {
       return converted_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     * @return The converted.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getConverted() {
       return converted_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : converted_;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CashOrBuilder getConvertedOrBuilder() {
       return getConverted();
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -45822,6 +48819,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (createdAt_ != null) {
@@ -45836,6 +48834,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -45868,24 +48867,23 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.PendingWalletTransaction other = (com.elarian.hera.proto.Common.PendingWalletTransaction) obj;
 
-      boolean result = true;
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasValue() == other.hasValue());
+      if (hasValue() != other.hasValue()) return false;
       if (hasValue()) {
-        result = result && getValue()
-            .equals(other.getValue());
+        if (!getValue()
+            .equals(other.getValue())) return false;
       }
-      result = result && (hasConverted() == other.hasConverted());
+      if (hasConverted() != other.hasConverted()) return false;
       if (hasConverted()) {
-        result = result && getConverted()
-            .equals(other.getConverted());
+        if (!getConverted()
+            .equals(other.getConverted())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -45982,6 +48980,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -45989,6 +48988,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.PendingWalletTransaction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -46012,6 +49012,7 @@ public final class Common {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PendingWalletTransaction_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PendingWalletTransaction_fieldAccessorTable
@@ -46034,6 +49035,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         if (createdAtBuilder_ == null) {
@@ -46057,15 +49059,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_PendingWalletTransaction_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PendingWalletTransaction getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.PendingWalletTransaction.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PendingWalletTransaction build() {
         com.elarian.hera.proto.Common.PendingWalletTransaction result = buildPartial();
         if (!result.isInitialized()) {
@@ -46074,6 +49079,7 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.PendingWalletTransaction buildPartial() {
         com.elarian.hera.proto.Common.PendingWalletTransaction result = new com.elarian.hera.proto.Common.PendingWalletTransaction(this);
         if (createdAtBuilder_ == null) {
@@ -46095,32 +49101,39 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.PendingWalletTransaction) {
           return mergeFrom((com.elarian.hera.proto.Common.PendingWalletTransaction)other);
@@ -46146,10 +49159,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -46168,17 +49183,19 @@ public final class Common {
         return this;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -46285,17 +49302,19 @@ public final class Common {
         return createdAtBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.Cash value_ = null;
+      private com.elarian.hera.proto.Common.Cash value_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.Cash, com.elarian.hera.proto.Common.Cash.Builder, com.elarian.hera.proto.Common.CashOrBuilder> valueBuilder_;
       /**
        * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+       * @return Whether the value field is set.
        */
       public boolean hasValue() {
         return valueBuilder_ != null || value_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+       * @return The value.
        */
       public com.elarian.hera.proto.Common.Cash getValue() {
         if (valueBuilder_ == null) {
@@ -46402,17 +49421,19 @@ public final class Common {
         return valueBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.Cash converted_ = null;
+      private com.elarian.hera.proto.Common.Cash converted_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.Cash, com.elarian.hera.proto.Common.Cash.Builder, com.elarian.hera.proto.Common.CashOrBuilder> convertedBuilder_;
       /**
        * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+       * @return Whether the converted field is set.
        */
       public boolean hasConverted() {
         return convertedBuilder_ != null || converted_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+       * @return The converted.
        */
       public com.elarian.hera.proto.Common.Cash getConverted() {
         if (convertedBuilder_ == null) {
@@ -46518,11 +49539,13 @@ public final class Common {
         }
         return convertedBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -46544,11 +49567,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<PendingWalletTransaction>
         PARSER = new com.google.protobuf.AbstractParser<PendingWalletTransaction>() {
+      @java.lang.Override
       public PendingWalletTransaction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PendingWalletTransaction(input, extensionRegistry);
+        return new PendingWalletTransaction(input, extensionRegistry);
       }
     };
 
@@ -46561,6 +49585,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.PendingWalletTransaction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -46573,20 +49598,24 @@ public final class Common {
 
     /**
      * <code>string currency_code = 1;</code>
+     * @return The currencyCode.
      */
     java.lang.String getCurrencyCode();
     /**
      * <code>string currency_code = 1;</code>
+     * @return The bytes for currencyCode.
      */
     com.google.protobuf.ByteString
         getCurrencyCodeBytes();
 
     /**
      * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     * @return Whether the available field is set.
      */
     boolean hasAvailable();
     /**
      * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     * @return The available.
      */
     com.elarian.hera.proto.Common.Cash getAvailable();
     /**
@@ -46596,10 +49625,12 @@ public final class Common {
 
     /**
      * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     * @return Whether the actual field is set.
      */
     boolean hasActual();
     /**
      * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     * @return The actual.
      */
     com.elarian.hera.proto.Common.Cash getActual();
     /**
@@ -46644,7 +49675,7 @@ public final class Common {
   /**
    * Protobuf type {@code com.elarian.hera.proto.WalletBalance}
    */
-  public  static final class WalletBalance extends
+  public static final class WalletBalance extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WalletBalance)
       WalletBalanceOrBuilder {
@@ -46658,6 +49689,13 @@ public final class Common {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WalletBalance();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -46667,6 +49705,9 @@ public final class Common {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -46678,13 +49719,6 @@ public final class Common {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -46718,16 +49752,23 @@ public final class Common {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 pending_ = com.google.protobuf.MapField.newMapField(
                     PendingDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction>
               pending__ = input.readMessage(
                   PendingDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               pending_.getMutableMap().put(
                   pending__.getKey(), pending__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -46748,6 +49789,7 @@ public final class Common {
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -46758,6 +49800,7 @@ public final class Common {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WalletBalance_fieldAccessorTable
@@ -46765,12 +49808,13 @@ public final class Common {
               com.elarian.hera.proto.Common.WalletBalance.class, com.elarian.hera.proto.Common.WalletBalance.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CURRENCY_CODE_FIELD_NUMBER = 1;
     private volatile java.lang.Object currencyCode_;
     /**
      * <code>string currency_code = 1;</code>
+     * @return The currencyCode.
      */
+    @java.lang.Override
     public java.lang.String getCurrencyCode() {
       java.lang.Object ref = currencyCode_;
       if (ref instanceof java.lang.String) {
@@ -46785,7 +49829,9 @@ public final class Common {
     }
     /**
      * <code>string currency_code = 1;</code>
+     * @return The bytes for currencyCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCurrencyCodeBytes() {
       java.lang.Object ref = currencyCode_;
@@ -46804,19 +49850,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.Cash available_;
     /**
      * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     * @return Whether the available field is set.
      */
+    @java.lang.Override
     public boolean hasAvailable() {
       return available_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     * @return The available.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getAvailable() {
       return available_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : available_;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash available = 2;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CashOrBuilder getAvailableOrBuilder() {
       return getAvailable();
     }
@@ -46825,19 +49876,24 @@ public final class Common {
     private com.elarian.hera.proto.Common.Cash actual_;
     /**
      * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     * @return Whether the actual field is set.
      */
+    @java.lang.Override
     public boolean hasActual() {
       return actual_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     * @return The actual.
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getActual() {
       return actual_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : actual_;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
      */
+    @java.lang.Override
     public com.elarian.hera.proto.Common.CashOrBuilder getActualOrBuilder() {
       return getActual();
     }
@@ -46872,6 +49928,7 @@ public final class Common {
      * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
      */
 
+    @java.lang.Override
     public boolean containsPending(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
@@ -46880,6 +49937,7 @@ public final class Common {
     /**
      * Use {@link #getPendingMap()} instead.
      */
+    @java.lang.Override
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> getPending() {
       return getPendingMap();
@@ -46887,6 +49945,7 @@ public final class Common {
     /**
      * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
      */
+    @java.lang.Override
 
     public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> getPendingMap() {
       return internalGetPending().getMap();
@@ -46894,6 +49953,7 @@ public final class Common {
     /**
      * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
      */
+    @java.lang.Override
 
     public com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrDefault(
         java.lang.String key,
@@ -46906,6 +49966,7 @@ public final class Common {
     /**
      * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
      */
+    @java.lang.Override
 
     public com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrThrow(
         java.lang.String key) {
@@ -46919,6 +49980,7 @@ public final class Common {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -46928,6 +49990,7 @@ public final class Common {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getCurrencyCodeBytes().isEmpty()) {
@@ -46948,6 +50011,7 @@ public final class Common {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -46989,23 +50053,22 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.WalletBalance other = (com.elarian.hera.proto.Common.WalletBalance) obj;
 
-      boolean result = true;
-      result = result && getCurrencyCode()
-          .equals(other.getCurrencyCode());
-      result = result && (hasAvailable() == other.hasAvailable());
+      if (!getCurrencyCode()
+          .equals(other.getCurrencyCode())) return false;
+      if (hasAvailable() != other.hasAvailable()) return false;
       if (hasAvailable()) {
-        result = result && getAvailable()
-            .equals(other.getAvailable());
+        if (!getAvailable()
+            .equals(other.getAvailable())) return false;
       }
-      result = result && (hasActual() == other.hasActual());
+      if (hasActual() != other.hasActual()) return false;
       if (hasActual()) {
-        result = result && getActual()
-            .equals(other.getActual());
+        if (!getActual()
+            .equals(other.getActual())) return false;
       }
-      result = result && internalGetPending().equals(
-          other.internalGetPending());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!internalGetPending().equals(
+          other.internalGetPending())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -47104,6 +50167,7 @@ public final class Common {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -47111,6 +50175,7 @@ public final class Common {
     public static Builder newBuilder(com.elarian.hera.proto.Common.WalletBalance prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -47156,6 +50221,7 @@ public final class Common {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WalletBalance_fieldAccessorTable
@@ -47178,6 +50244,7 @@ public final class Common {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         currencyCode_ = "";
@@ -47198,15 +50265,18 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WalletBalance_descriptor;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.WalletBalance getDefaultInstanceForType() {
         return com.elarian.hera.proto.Common.WalletBalance.getDefaultInstance();
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.WalletBalance build() {
         com.elarian.hera.proto.Common.WalletBalance result = buildPartial();
         if (!result.isInitialized()) {
@@ -47215,10 +50285,10 @@ public final class Common {
         return result;
       }
 
+      @java.lang.Override
       public com.elarian.hera.proto.Common.WalletBalance buildPartial() {
         com.elarian.hera.proto.Common.WalletBalance result = new com.elarian.hera.proto.Common.WalletBalance(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.currencyCode_ = currencyCode_;
         if (availableBuilder_ == null) {
           result.available_ = available_;
@@ -47232,37 +50302,43 @@ public final class Common {
         }
         result.pending_ = internalGetPending();
         result.pending_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.elarian.hera.proto.Common.WalletBalance) {
           return mergeFrom((com.elarian.hera.proto.Common.WalletBalance)other);
@@ -47291,10 +50367,12 @@ public final class Common {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -47317,6 +50395,7 @@ public final class Common {
       private java.lang.Object currencyCode_ = "";
       /**
        * <code>string currency_code = 1;</code>
+       * @return The currencyCode.
        */
       public java.lang.String getCurrencyCode() {
         java.lang.Object ref = currencyCode_;
@@ -47332,6 +50411,7 @@ public final class Common {
       }
       /**
        * <code>string currency_code = 1;</code>
+       * @return The bytes for currencyCode.
        */
       public com.google.protobuf.ByteString
           getCurrencyCodeBytes() {
@@ -47348,6 +50428,8 @@ public final class Common {
       }
       /**
        * <code>string currency_code = 1;</code>
+       * @param value The currencyCode to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrencyCode(
           java.lang.String value) {
@@ -47361,6 +50443,7 @@ public final class Common {
       }
       /**
        * <code>string currency_code = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCurrencyCode() {
         
@@ -47370,6 +50453,8 @@ public final class Common {
       }
       /**
        * <code>string currency_code = 1;</code>
+       * @param value The bytes for currencyCode to set.
+       * @return This builder for chaining.
        */
       public Builder setCurrencyCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -47383,17 +50468,19 @@ public final class Common {
         return this;
       }
 
-      private com.elarian.hera.proto.Common.Cash available_ = null;
+      private com.elarian.hera.proto.Common.Cash available_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.Cash, com.elarian.hera.proto.Common.Cash.Builder, com.elarian.hera.proto.Common.CashOrBuilder> availableBuilder_;
       /**
        * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+       * @return Whether the available field is set.
        */
       public boolean hasAvailable() {
         return availableBuilder_ != null || available_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+       * @return The available.
        */
       public com.elarian.hera.proto.Common.Cash getAvailable() {
         if (availableBuilder_ == null) {
@@ -47500,17 +50587,19 @@ public final class Common {
         return availableBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.Cash actual_ = null;
+      private com.elarian.hera.proto.Common.Cash actual_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Common.Cash, com.elarian.hera.proto.Common.Cash.Builder, com.elarian.hera.proto.Common.CashOrBuilder> actualBuilder_;
       /**
        * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+       * @return Whether the actual field is set.
        */
       public boolean hasActual() {
         return actualBuilder_ != null || actual_ != null;
       }
       /**
        * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+       * @return The actual.
        */
       public com.elarian.hera.proto.Common.Cash getActual() {
         if (actualBuilder_ == null) {
@@ -47647,6 +50736,7 @@ public final class Common {
        * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
        */
 
+      @java.lang.Override
       public boolean containsPending(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
@@ -47655,6 +50745,7 @@ public final class Common {
       /**
        * Use {@link #getPendingMap()} instead.
        */
+      @java.lang.Override
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> getPending() {
         return getPendingMap();
@@ -47662,6 +50753,7 @@ public final class Common {
       /**
        * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
        */
+      @java.lang.Override
 
       public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> getPendingMap() {
         return internalGetPending().getMap();
@@ -47669,6 +50761,7 @@ public final class Common {
       /**
        * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
        */
+      @java.lang.Override
 
       public com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrDefault(
           java.lang.String key,
@@ -47681,6 +50774,7 @@ public final class Common {
       /**
        * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
        */
+      @java.lang.Override
 
       public com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrThrow(
           java.lang.String key) {
@@ -47739,11 +50833,13 @@ public final class Common {
             .putAll(values);
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -47765,11 +50861,12 @@ public final class Common {
 
     private static final com.google.protobuf.Parser<WalletBalance>
         PARSER = new com.google.protobuf.AbstractParser<WalletBalance>() {
+      @java.lang.Override
       public WalletBalance parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new WalletBalance(input, extensionRegistry);
+        return new WalletBalance(input, extensionRegistry);
       }
     };
 
@@ -47782,6 +50879,7 @@ public final class Common {
       return PARSER;
     }
 
+    @java.lang.Override
     public com.elarian.hera.proto.Common.WalletBalance getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -48016,7 +51114,7 @@ public final class Common {
       "oto.CustomerNumberProvider\022\016\n\006number\030\002 \001" +
       "(\t\"c\n\026MessagingChannelNumber\0229\n\007channel\030" +
       "\001 \001(\0162(.com.elarian.hera.proto.Messaging" +
-      "Channel\022\016\n\006number\030\002 \001(\t\"_\n\024PaymentChanne",
+      "Channel\022\016\n\006number\030\002 \001(\t\"_\n\024PaymentChanne" +
       "lNumber\0227\n\007channel\030\001 \001(\0162&.com.elarian.h" +
       "era.proto.PaymentChannel\022\016\n\006number\030\002 \001(\t" +
       "\"[\n\022VoiceChannelNumber\0225\n\007channel\030\001 \001(\0162" +
@@ -48026,7 +51124,7 @@ public final class Common {
       "eBody\022*\n\004text\030\001 \001(\0132\034.google.protobuf.St" +
       "ringValue\022=\n\010template\030\002 \001(\0132+.com.elaria" +
       "n.hera.proto.TextMessageTemplate\"Q\n\020Medi" +
-      "aMessageBody\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001(\016",
+      "aMessageBody\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001(\016" +
       "2!.com.elarian.hera.proto.MediaType\":\n\023L" +
       "ocationMessageBody\022\020\n\010latitude\030\001 \001(\001\022\021\n\t" +
       "longitude\030\002 \001(\001\"\323\001\n\023CustomerMessageBody\022" +
@@ -48036,7 +51134,7 @@ public final class Common {
       "ocation\030\003 \001(\0132+.com.elarian.hera.proto.L" +
       "ocationMessageBodyH\000B\007\n\005entry\"-\n\010UssdMen" +
       "u\022\014\n\004text\030\001 \001(\t\022\023\n\013is_terminal\030\002 \001(\010\"\225\001\n" +
-      "\007UssdHop\022+\n\005input\030\001 \001(\0132\034.google.protobu",
+      "\007UssdHop\022+\n\005input\030\001 \001(\0132\034.google.protobu" +
       "f.StringValue\022.\n\004menu\030\002 \001(\0132 .com.elaria" +
       "n.hera.proto.UssdMenu\022-\n\ttimestamp\030\003 \001(\013" +
       "2\032.google.protobuf.Timestamp\"\214\001\n\032Messagi" +
@@ -48046,7 +51144,7 @@ public final class Common {
       "f.Timestamp\"|\n\032MessagingSessionStateEntr" +
       "y\022.\n\nstart_time\030\001 \001(\0132\032.google.protobuf." +
       "Timestamp\022.\n\nexpiration\030\002 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\"\274\002\n\032MessagingChannelSt",
+      "rotobuf.Timestamp\"\274\002\n\032MessagingChannelSt" +
       "ateEntry\022?\n\017customer_number\030\001 \001(\0132&.com." +
       "elarian.hera.proto.CustomerNumber\022F\n\016cha" +
       "nnel_number\030\002 \001(\0132..com.elarian.hera.pro" +
@@ -48056,7 +51154,7 @@ public final class Common {
       " \001(\01322.com.elarian.hera.proto.MessagingS" +
       "essionStateEntry\"\211\005\n\021MessageStateEntry\022A" +
       "\n\tdirection\030\001 \001(\0162..com.elarian.hera.pro" +
-      "to.CustomerEventDirection\022?\n\017customer_nu",
+      "to.CustomerEventDirection\022?\n\017customer_nu" +
       "mber\030\002 \001(\0132&.com.elarian.hera.proto.Cust" +
       "omerNumber\022F\n\016channel_number\030\003 \001(\0132..com" +
       ".elarian.hera.proto.MessagingChannelNumb" +
@@ -48066,7 +51164,7 @@ public final class Common {
       "era.proto.TextMessageTemplate\0227\n\005media\030\010" +
       " \003(\0132(.com.elarian.hera.proto.MediaMessa" +
       "geBody\022=\n\010location\030\t \001(\0132+.com.elarian.h" +
-      "era.proto.LocationMessageBody\022.\n\ncreated",
+      "era.proto.LocationMessageBody\022.\n\ncreated" +
       "_at\030\n \001(\0132\032.google.protobuf.Timestamp\022.\n" +
       "\nupdated_at\030\013 \001(\0132\032.google.protobuf.Time" +
       "stamp\022=\n\006status\030\014 \001(\0162-.com.elarian.hera" +
@@ -48076,7 +51174,7 @@ public final class Common {
       "ry\022;\n\010messages\030\002 \003(\0132).com.elarian.hera." +
       "proto.MessageStateEntry\022@\n\020customer_numb" +
       "ers\030\003 \003(\0132&.com.elarian.hera.proto.Custo" +
-      "merNumber\022G\n\017channel_numbers\030\004 \003(\0132..com",
+      "merNumber\022G\n\017channel_numbers\030\004 \003(\0132..com" +
       ".elarian.hera.proto.MessagingChannelNumb" +
       "er\"\247\002\n\025UssdSessionStateEntry\022?\n\017customer" +
       "_number\030\001 \001(\0132&.com.elarian.hera.proto.C" +
@@ -48086,7 +51184,7 @@ public final class Common {
       "dHop\022.\n\ncreated_at\030\006 \001(\0132\032.google.protob" +
       "uf.Timestamp\022.\n\nupdated_at\030\007 \001(\0132\032.googl" +
       "e.protobuf.Timestamp\"\247\001\n\tUssdState\022?\n\010se" +
-      "ssions\030\001 \003(\0132-.com.elarian.hera.proto.Us",
+      "ssions\030\001 \003(\0132-.com.elarian.hera.proto.Us" +
       "sdSessionStateEntry\022@\n\020customer_numbers\030" +
       "\002 \003(\0132&.com.elarian.hera.proto.CustomerN" +
       "umber\022\027\n\017channel_numbers\030\003 \003(\t\"\377\005\n\021Voice" +
@@ -48096,7 +51194,7 @@ public final class Common {
       "alue\022B\n\014hangup_cause\030\003 \001(\0162,.com.elarian" +
       ".hera.proto.VoiceCallHangupCause\0221\n\013dtmf" +
       "_digits\030\004 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022=\n\027dial_destination_number\030\005 \001(\0132\034.g",
+      "lue\022=\n\027dial_destination_number\030\005 \001(\0132\034.g" +
       "oogle.protobuf.StringValue\0220\n\nqueue_name" +
       "\030\006 \001(\0132\034.google.protobuf.StringValue\022>\n\030" +
       "dequeued_to_phone_number\030\007 \001(\0132\034.google." +
@@ -48106,7 +51204,7 @@ public final class Common {
       ".google.protobuf.StringValue\022K\n\023call_tra" +
       "nsfer_state\030\n \001(\0162..com.elarian.hera.pro" +
       "to.VoiceCallTransferState\022P\n\032call_transf" +
-      "er_hangup_cause\030\013 \001(\0162,.com.elarian.hera",
+      "er_hangup_cause\030\013 \001(\0162,.com.elarian.hera" +
       ".proto.VoiceCallHangupCause\0223\n\rrecording" +
       "_url\030\014 \001(\0132\034.google.protobuf.StringValue" +
       "\"\261\001\n\014VoiceCallHop\0228\n\005input\030\001 \001(\0132).com.e" +
@@ -48116,7 +51214,7 @@ public final class Common {
       "e.protobuf.Timestamp\"\253\004\n\023VoiceCallStateE" +
       "ntry\022A\n\tdirection\030\001 \001(\0162..com.elarian.he" +
       "ra.proto.CustomerEventDirection\022?\n\017custo" +
-      "mer_number\030\002 \001(\0132&.com.elarian.hera.prot",
+      "mer_number\030\002 \001(\0132&.com.elarian.hera.prot" +
       "o.CustomerNumber\022B\n\016channel_number\030\003 \001(\013" +
       "2*.com.elarian.hera.proto.VoiceChannelNu" +
       "mber\022\022\n\nsession_id\030\004 \001(\t\022\022\n\nproduct_id\030\005" +
@@ -48126,7 +51224,7 @@ public final class Common {
       "ation\030\010 \001(\0132\031.google.protobuf.Duration\022*" +
       "\n\004cost\030\t \001(\0132\034.com.elarian.hera.proto.Ca" +
       "sh\022.\n\ncreated_at\030\n \001(\0132\032.google.protobuf" +
-      ".Timestamp\022.\n\nupdated_at\030\013 \001(\0132\032.google.",
+      ".Timestamp\022.\n\nupdated_at\030\013 \001(\0132\032.google." +
       "protobuf.Timestamp\"\317\001\n\nVoiceState\022:\n\005cal" +
       "ls\030\001 \003(\0132+.com.elarian.hera.proto.VoiceC" +
       "allStateEntry\022@\n\020customer_numbers\030\002 \003(\0132" +
@@ -48136,7 +51234,7 @@ public final class Common {
       "TransactionStateEntry\022A\n\tdirection\030\001 \001(\016" +
       "2..com.elarian.hera.proto.CustomerEventD" +
       "irection\022?\n\017customer_number\030\002 \001(\0132&.com." +
-      "elarian.hera.proto.CustomerNumber\022D\n\016cha",
+      "elarian.hera.proto.CustomerNumber\022D\n\016cha" +
       "nnel_number\030\003 \001(\0132,.com.elarian.hera.pro" +
       "to.PaymentChannelNumber\022\026\n\016transaction_i" +
       "d\030\004 \001(\t\022\022\n\nproduct_id\030\005 \001(\t\022+\n\005value\030\006 \001" +
@@ -48146,7 +51244,7 @@ public final class Common {
       "imestamp\0225\n\006status\030\t \001(\0162%.com.elarian.h" +
       "era.proto.PaymentStatus\"\272\002\n\014PaymentState" +
       "\022@\n\020customer_numbers\030\001 \003(\0132&.com.elarian" +
-      ".hera.proto.CustomerNumber\022E\n\017channel_nu",
+      ".hera.proto.CustomerNumber\022E\n\017channel_nu" +
       "mbers\030\002 \003(\0132,.com.elarian.hera.proto.Pay" +
       "mentChannelNumber\022M\n\017transaction_log\030\003 \003" +
       "(\01324.com.elarian.hera.proto.PaymentTrans" +
@@ -48156,7 +51254,7 @@ public final class Common {
       "key\030\001 \001(\t\022+\n\005value\030\002 \001(\0132\034.google.protob" +
       "uf.StringValue\"v\n\rCustomerIndex\0225\n\007mappi" +
       "ng\030\001 \001(\0132$.com.elarian.hera.proto.IndexM" +
-      "apping\022.\n\nexpiration\030\002 \001(\0132\032.google.prot",
+      "apping\022.\n\nexpiration\030\002 \001(\0132\032.google.prot" +
       "obuf.Timestamp\"\222\001\n\020CustomerReminder\022\022\n\np" +
       "roduct_id\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\022.\n\nexpirati" +
       "on\030\003 \001(\0132\032.google.protobuf.Timestamp\022-\n\007" +
@@ -48166,7 +51264,7 @@ public final class Common {
       "oSpeechVoice\022\021\n\tplay_beep\030\003 \001(\010\"\035\n\016PlayC" +
       "allAction\022\013\n\003url\030\001 \001(\t\"\237\002\n\023GetDigitsCall" +
       "Action\0224\n\003say\030\001 \001(\0132%.com.elarian.hera.p" +
-      "roto.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com",
+      "roto.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com" +
       ".elarian.hera.proto.PlayCallActionH\000\022*\n\007" +
       "timeout\030\003 \001(\0132\031.google.protobuf.Duration" +
       "\0223\n\rfinish_on_key\030\004 \001(\0132\034.google.protobu" +
@@ -48176,7 +51274,7 @@ public final class Common {
       "larian.hera.proto.SayCallActionH\000\0226\n\004pla" +
       "y\030\002 \001(\0132&.com.elarian.hera.proto.PlayCal" +
       "lActionH\000\022*\n\007timeout\030\003 \001(\0132\031.google.prot" +
-      "obuf.Duration\022-\n\nmax_length\030\004 \001(\0132\031.goog",
+      "obuf.Duration\022-\n\nmax_length\030\004 \001(\0132\031.goog" +
       "le.protobuf.Duration\0223\n\rfinish_on_key\030\005 " +
       "\001(\0132\034.google.protobuf.StringValue\022\021\n\tpla" +
       "y_beep\030\006 \001(\010\022\024\n\014trim_silence\030\007 \001(\010B\010\n\006pr" +
@@ -48186,7 +51284,7 @@ public final class Common {
       "record\030\002 \001(\010\022\022\n\nsequential\030\003 \001(\010\0223\n\rring" +
       "back_tone\030\004 \001(\0132\034.google.protobuf.String" +
       "Value\022/\n\tcaller_id\030\005 \001(\0132\034.google.protob" +
-      "uf.StringValue\0221\n\014max_duration\030\006 \001(\0132\033.g",
+      "uf.StringValue\0221\n\014max_duration\030\006 \001(\0132\033.g" +
       "oogle.protobuf.Int32Value\"w\n\021EnqueueCall" +
       "Action\0220\n\nhold_music\030\001 \001(\0132\034.google.prot" +
       "obuf.StringValue\0220\n\nqueue_name\030\002 \001(\0132\034.g" +
@@ -48196,7 +51294,7 @@ public final class Common {
       "record\030\002 \001(\010\0220\n\nqueue_name\030\003 \001(\0132\034.googl" +
       "e.protobuf.StringValue\"\022\n\020RejectCallActi" +
       "on\"!\n\022RedirectCallAction\022\013\n\003url\030\001 \001(\t\"\217\005" +
-      "\n\017VoiceCallAction\0224\n\003say\030\001 \001(\0132%.com.ela",
+      "\n\017VoiceCallAction\0224\n\003say\030\001 \001(\0132%.com.ela" +
       "rian.hera.proto.SayCallActionH\000\0226\n\004play\030" +
       "\002 \001(\0132&.com.elarian.hera.proto.PlayCallA" +
       "ctionH\000\022A\n\nget_digits\030\003 \001(\0132+.com.elaria" +
@@ -48206,7 +51304,7 @@ public final class Common {
       ".elarian.hera.proto.RecordSessionCallAct" +
       "ionH\000\022G\n\rget_recording\030\006 \001(\0132..com.elari" +
       "an.hera.proto.GetRecordingCallActionH\000\022<" +
-      "\n\007enqueue\030\007 \001(\0132).com.elarian.hera.proto",
+      "\n\007enqueue\030\007 \001(\0132).com.elarian.hera.proto" +
       ".EnqueueCallActionH\000\022<\n\007dequeue\030\010 \001(\0132)." +
       "com.elarian.hera.proto.DequeueCallAction" +
       "H\000\022:\n\006reject\030\t \001(\0132(.com.elarian.hera.pr" +
@@ -48216,7 +51314,7 @@ public final class Common {
       "tion\022.\n\ncreated_at\030\001 \001(\0132\032.google.protob" +
       "uf.Timestamp\022+\n\005value\030\002 \001(\0132\034.com.elaria" +
       "n.hera.proto.Cash\022/\n\tconverted\030\003 \001(\0132\034.c" +
-      "om.elarian.hera.proto.Cash\"\254\002\n\rWalletBal",
+      "om.elarian.hera.proto.Cash\"\254\002\n\rWalletBal" +
       "ance\022\025\n\rcurrency_code\030\001 \001(\t\022/\n\tavailable" +
       "\030\002 \001(\0132\034.com.elarian.hera.proto.Cash\022,\n\006" +
       "actual\030\003 \001(\0132\034.com.elarian.hera.proto.Ca" +
@@ -48226,7 +51324,7 @@ public final class Common {
       "m.elarian.hera.proto.PendingWalletTransa" +
       "ction:\0028\001*\326\001\n\020MessagingChannel\022!\n\035MESSAG" +
       "ING_CHANNEL_UNSPECIFIED\020\000\022 \n\034MESSAGING_C" +
-      "HANNEL_GOOGLE_RCS\020\001\022\"\n\036MESSAGING_CHANNEL",
+      "HANNEL_GOOGLE_RCS\020\001\022\"\n\036MESSAGING_CHANNEL" +
       "_FB_MESSENGER\020\002\022\031\n\025MESSAGING_CHANNEL_SMS" +
       "\020\003\022\036\n\032MESSAGING_CHANNEL_TELEGRAM\020\004\022\036\n\032ME" +
       "SSAGING_CHANNEL_WHATSAPP\020\005*L\n\016PaymentCha" +
@@ -48236,7 +51334,7 @@ public final class Common {
       "_CHANNEL_TELCO\020\001*\264\001\n\026CustomerNumberProvi" +
       "der\022(\n$CUSTOMER_NUMBER_PROVIDER_UNSPECIF" +
       "IED\020\000\022%\n!CUSTOMER_NUMBER_PROVIDER_FACEBO" +
-      "OK\020\001\022\"\n\036CUSTOMER_NUMBER_PROVIDER_TELCO\020\002",
+      "OK\020\001\022\"\n\036CUSTOMER_NUMBER_PROVIDER_TELCO\020\002" +
       "\022%\n!CUSTOMER_NUMBER_PROVIDER_TELEGRAM\020\003*" +
       "\260\001\n\tMediaType\022\032\n\026MEDIA_TYPE_UNSPECIFIED\020" +
       "\000\022\024\n\020MEDIA_TYPE_IMAGE\020\001\022\024\n\020MEDIA_TYPE_AU" +
@@ -48246,7 +51344,7 @@ public final class Common {
       "ction\022(\n$MESSAGING_CONSENT_ACTION_UNSPEC" +
       "IFIED\020\000\022#\n\037MESSAGING_CONSENT_ACTION_OPT_" +
       "IN\020\001\022$\n MESSAGING_CONSENT_ACTION_OPT_OUT" +
-      "\020\002*\366\002\n\026MessagingConsentStatus\022(\n$MESSAGI",
+      "\020\002*\366\002\n\026MessagingConsentStatus\022(\n$MESSAGI" +
       "NG_CONSENT_STATUS_UNSPECIFIED\020\000\0220\n,MESSA" +
       "GING_CONSENT_STATUS_OPT_IN_REQUEST_SENT\020" +
       "e\022.\n)MESSAGING_CONSENT_STATUS_OPT_IN_COM" +
@@ -48256,7 +51354,7 @@ public final class Common {
       "AGING_CONSENT_STATUS_DECOMMISSIONED_CUST" +
       "OMER_ID\020\222\003\022/\n*MESSAGING_CONSENT_STATUS_A" +
       "PPLICATION_ERROR\020\365\003*\221\001\n\026MessagingSession" +
-      "Status\022)\n%MESSAGING_SESSION_STATUSN_UNSP",
+      "Status\022)\n%MESSAGING_SESSION_STATUSN_UNSP" +
       "ECIFIED\020\000\022$\n MESSAGING_SESSION_STATUSN_A" +
       "CTIVE\020d\022&\n!MESSAGING_SESSION_STATUSN_EXP" +
       "IRED\020\310\001*\217\001\n\026CustomerEventDirection\022(\n$CU" +
@@ -48266,7 +51364,7 @@ public final class Common {
       "stomerRequestOrigin\022\'\n#CUSTOMER_REQUEST_" +
       "ORIGIN_UNSPECIFIED\020\000\022\'\n#CUSTOMER_REQUEST" +
       "_ORIGIN_API_REQUEST\020\001\022(\n$CUSTOMER_REQUES" +
-      "T_ORIGIN_CUSTOMER_TAG\020\002*\237\007\n\025MessageDeliv",
+      "T_ORIGIN_CUSTOMER_TAG\020\002*\237\007\n\025MessageDeliv" +
       "eryStatus\022\'\n#MESSAGE_DELIVERY_STATUS_UNS" +
       "EPCIFIED\020\000\022 \n\034MESSAGE_DELIVERY_STATUS_SE" +
       "NT\020e\022&\n!MESSAGE_DELIVERY_STATUS_DELIVERE" +
@@ -48276,7 +51374,7 @@ public final class Common {
       "ESSAGE_DELIVERY_STATUS_NO_CONSENT\020\221\003\022*\n%" +
       "MESSAGE_DELIVERY_STATUS_NO_CAPABILITY\020\222\003" +
       "\022$\n\037MESSAGE_DELIVERY_STATUS_EXPIRED\020\223\003\0222" +
-      "\n-MESSAGE_DELIVERY_STATUS_ONLY_TEMPLATE_",
+      "\n-MESSAGE_DELIVERY_STATUS_ONLY_TEMPLATE_" +
       "ALLOWED\020\224\003\0223\n.MESSAGE_DELIVERY_STATUS_IN" +
       "VALID_CHANNEL_NUMBER\020\225\003\022*\n%MESSAGE_DELIV" +
       "ERY_STATUS_NOT_SUPPORTED\020\226\003\0228\n3MESSAGE_D" +
@@ -48286,7 +51384,7 @@ public final class Common {
       "US_DUPLICATE_REQUEST\020\231\003\022*\n%MESSAGE_DELIV" +
       "ERY_STATUS_TAG_NOT_FOUND\020\232\003\0226\n1MESSAGE_D" +
       "ELIVERY_STATUS_CUSTOMER_NUMBER_NOT_FOUND" +
-      "\020\233\003\0226\n1MESSAGE_DELIVERY_STATUS_DECOMMISS",
+      "\020\233\003\0226\n1MESSAGE_DELIVERY_STATUS_DECOMMISS" +
       "IONED_CUSTOMERID\020\234\003\022,\n\'MESSAGE_DELIVERY_" +
       "STATUS_INVALID_REQUEST\020\235\003\022.\n)MESSAGE_DEL" +
       "IVERY_STATUS_APPLICATION_ERROR\020\365\003*\311\005\n\024Vo" +
@@ -48296,7 +51394,7 @@ public final class Common {
       "L_HANGUP_CAUSE_USER_BUSY\020\021\022+\n\'VOICE_CALL" +
       "_HANGUP_CAUSE_NORMAL_CLEARING\020\020\022,\n(VOICE" +
       "_CALL_HANGUP_CAUSE_NO_USER_RESPONSE\020\022\022%\n" +
-      "!VOICE_CALL_HANGUP_CAUSE_NO_ANSWER\020\023\022-\n)",
+      "!VOICE_CALL_HANGUP_CAUSE_NO_ANSWER\020\023\022-\n)" +
       "VOICE_CALL_HANGUP_CAUSE_SUBSCRIBER_ABSEN" +
       "T\020\024\022)\n%VOICE_CALL_HANGUP_CAUSE_CALL_REJE" +
       "CTED\020\025\022.\n*VOICE_CALL_HANGUP_CAUSE_NORMAL" +
@@ -48306,7 +51404,7 @@ public final class Common {
       "0VOICE_CALL_HANGUP_CAUSE_RECOVERY_ON_TIM" +
       "ER_EXPIRE\020f\022.\n)VOICE_CALL_HANGUP_CAUSE_O" +
       "RIGINATOR_CANCEL\020\347\003\022&\n!VOICE_CALL_HANGUP" +
-      "_CAUSE_LOSE_RACE\020\366\003\0220\n+VOICE_CALL_HANGUP",
+      "_CAUSE_LOSE_RACE\020\366\003\0220\n+VOICE_CALL_HANGUP" +
       "_CAUSE_USER_NOT_REGISTERED\020\336\004*\363\001\n\026VoiceC" +
       "allTransferState\022)\n%VOICE_CALL_TRANSFER_" +
       "STATE_UNSPECIFIED\020\000\022$\n VOICE_CALL_TRANSF" +
@@ -48316,7 +51414,7 @@ public final class Common {
       "CALL_TRANSFER_STATE_CALLEE_HANGUP\020\004*\366\005\n\017" +
       "VoiceCallStatus\022!\n\035VOICE_CALL_STATUS_UNS" +
       "PECIFIED\020\000\022\034\n\030VOICE_CALL_STATUS_QUEUED\020d" +
-      "\022\036\n\032VOICE_CALL_STATUS_ANSWERED\020e\022\035\n\031VOIC",
+      "\022\036\n\032VOICE_CALL_STATUS_ANSWERED\020e\022\035\n\031VOIC" +
       "E_CALL_STATUS_RINGING\020f\022\035\n\030VOICE_CALL_ST" +
       "ATUS_ACTIVE\020\310\001\022\036\n\031VOICE_CALL_STATUS_DIAL" +
       "ING\020\311\001\022%\n VOICE_CALL_STATUS_DIAL_COMPLET" +
@@ -48326,7 +51424,7 @@ public final class Common {
       "ATUS_TRANSFERRED\020\316\001\022)\n$VOICE_CALL_STATUS" +
       "_TRANSFER_COMPLETED\020\317\001\022 \n\033VOICE_CALL_STA" +
       "TUS_COMPLETED\020\254\002\022*\n%VOICE_CALL_STATUS_IN" +
-      "SUFFICIENT_CREDIT\020\220\003\022#\n\036VOICE_CALL_STATU",
+      "SUFFICIENT_CREDIT\020\220\003\022#\n\036VOICE_CALL_STATU" +
       "S_NOT_ANSWERED\020\221\003\022+\n&VOICE_CALL_STATUS_I" +
       "NVALID_PHONE_NUMBER\020\222\003\0220\n+VOICE_CALL_STA" +
       "TUS_DESTINATION_NOT_SUPPORTED\020\223\003\0220\n+VOIC" +
@@ -48336,7 +51434,7 @@ public final class Common {
       "\rPaymentStatus\022\036\n\032PAYMENT_STATUS_UNSPECI" +
       "FIED\020\000\022\031\n\025PAYMENT_STATUS_QUEUED\020e\022\'\n#PAY" +
       "MENT_STATUS_PENDING_CONFIRMATION\020f\022%\n!PA" +
-      "YMENT_STATUS_PENDING_VALIDATION\020g\022\034\n\030PAY",
+      "YMENT_STATUS_PENDING_VALIDATION\020g\022\034\n\030PAY" +
       "MENT_STATUS_VALIDATED\020h\022#\n\036PAYMENT_STATU" +
       "S_INVALID_REQUEST\020\310\001\022!\n\034PAYMENT_STATUS_N" +
       "OT_SUPPORTED\020\311\001\022&\n!PAYMENT_STATUS_INSUFF" +
@@ -48346,7 +51444,7 @@ public final class Common {
       "EST\020\315\001\022\"\n\035PAYMENT_STATUS_INVALID_WALLET\020" +
       "\316\001\022.\n)PAYMENT_STATUS_DECOMMISSIONED_CUST" +
       "OMER_ID\020\253\002\022\033\n\026PAYMENT_STATUS_SUCCESS\020\254\002\022" +
-      " \n\033PAYMENT_STATUS_PASS_THROUGH\020\255\002\022\032\n\025PAY",
+      " \n\033PAYMENT_STATUS_PASS_THROUGH\020\255\002\022\032\n\025PAY" +
       "MENT_STATUS_FAILED\020\220\003\022\035\n\030PAYMENT_STATUS_" +
       "THROTTLED\020\221\003\022\033\n\026PAYMENT_STATUS_EXPIRED\020\222" +
       "\003\022\034\n\027PAYMENT_STATUS_REJECTED\020\223\003\022\034\n\027PAYME" +
@@ -48355,21 +51453,13 @@ public final class Common {
       "\022\035\n\031TEXT_TO_SPEECH_VOICE_MALE\020\001\022\037\n\033TEXT_" +
       "TO_SPEECH_VOICE_FEMALE\020\002b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_com_elarian_hera_proto_Cash_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_com_elarian_hera_proto_Cash_fieldAccessorTable = new
