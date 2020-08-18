@@ -36,14 +36,11 @@ android {
 configurations.embed.transitive = true
 
 dependencies {
-    compile "io.grpc:grpc-stub:$grpcVersion"
-    compile "io.grpc:grpc-okhttp:$grpcVersion"
+    api "io.grpc:grpc-stub:$grpcVersion"
+    api "io.grpc:grpc-okhttp:$grpcVersion"
 
-    // compile "io.grpc:grpc-protobuf-lite:$grpcVersion"
-    // compile "com.google.protobuf:protobuf-javalite:$protobufVersion"
-
-    compile "io.grpc:grpc-protobuf:$grpcVersion"
-    compile "com.google.protobuf:protobuf-java:$protobufVersion"
+    api "io.grpc:grpc-protobuf-lite:$grpcVersion"
+    api "com.google.protobuf:protobuf-javalite:$protobufVersion"
 
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
