@@ -1,7 +1,6 @@
 
 apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
-apply plugin: 'com.google.protobuf'
 apply plugin: 'com.kezong.fat-aar'
 apply plugin: 'com.jfrog.bintray'
 
@@ -11,8 +10,8 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 group properties.getProperty("bintray.groupId")
 version properties.getProperty("bintray.version")
 
-String grpcVersion = "1.30.2"
-String protobufVersion = "3.12.2"
+String grpcVersion = "1.31.0"
+String protobufVersion = "3.12.4"
 
 android {
     compileSdkVersion 29
@@ -28,19 +27,20 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/grpc'
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 configurations.embed.transitive = true
 
 dependencies {
-    compile "io.grpc:grpc-stub:$grpcVersion"
-    compile "io.grpc:grpc-okhttp:$grpcVersion"
+    api "io.grpc:grpc-stub:$grpcVersion"
+    api "io.grpc:grpc-okhttp:$grpcVersion"
 
-    //compile "io.grpc:grpc-protobuf-lite:$grpcVersion"
-    //compile "com.google.protobuf:protobuf-javalite:$protobufVersion"
-
-    compile "io.grpc:grpc-protobuf:$grpcVersion"
-    compile "com.google.protobuf:protobuf-java:$protobufVersion"
+    api "io.grpc:grpc-protobuf-lite:$grpcVersion"
+    api "com.google.protobuf:protobuf-javalite:$protobufVersion"
 
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }

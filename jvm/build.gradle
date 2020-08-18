@@ -9,8 +9,8 @@ apply plugin: "maven-publish"
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.johnrengelman.shadow'
 
-String grpcVersion = "1.30.2"
-String protobufVersion = "3.12.2"
+String grpcVersion = "1.31.0"
+String protobufVersion = "3.12.4"
 
 dependencies {
     compile "io.grpc:grpc-stub:$grpcVersion"
