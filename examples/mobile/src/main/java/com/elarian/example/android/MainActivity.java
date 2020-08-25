@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 output.setText("Initializing SDK...");
 
                 String authToken = "test_auth_token"; // Fetch auth token from your server...
-                GrpcWebServiceStub asyncInstance = Elarian.newAsyncInstance(authToken, true);
+                GrpcWebServiceStub asyncInstance = Elarian.newAsyncInstance(authToken);
 
                 output.setText("Fetching customer state...");
                 Web.GetCustomerStateRequest req =  Web.GetCustomerStateRequest

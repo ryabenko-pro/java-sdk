@@ -12,17 +12,11 @@ import io.grpc.stub.MetadataUtils;
 public final class Elarian {
 
     private static final int PORT = 443;
-    private static final String HOST_SANDBOX = "api.elarian.dev";
-    private static final String HOST_PRODUCTION = "api.elarian.com";
+    private static final String HOST = "api.elarian.dev";
 
-    private static Channel makeChannel(boolean sandbox) {
-        String host = HOST_PRODUCTION;
-        if (sandbox) {
-            host = HOST_SANDBOX;
-        }
-
+    private static Channel makeChannel() {
         return ManagedChannelBuilder
-                .forAddress(host, PORT)
+                .forAddress(HOST, PORT)
                 .userAgent("elarian-android-sdk/0.0.0")
                 .useTransportSecurity()
                 .build();
@@ -37,15 +31,15 @@ public final class Elarian {
         return metadata;
     }
 
-    public static GrpcWebServiceBlockingStub newInstance(String authToken, boolean sandbox) {
-        GrpcWebServiceBlockingStub stub = GrpcWebServiceGrpc.newBlockingStub(makeChannel(sandbox));
+    public static GrpcWebServiceBlockingStub newInstance(String authToken) {
+        GrpcWebServiceBlockingStub stub = GrpcWebServiceGrpc.newBlockingStub(makeChannel());
         stub = MetadataUtils.attachHeaders(stub, makeHeaders(authToken));
         return stub;
     }
 
 
-    public static GrpcWebServiceStub newAsyncInstance(String authToken, boolean sandbox) {
-        GrpcWebServiceStub stub = GrpcWebServiceGrpc.newStub(makeChannel(sandbox));
+    public static GrpcWebServiceStub newAsyncInstance(String authToken) {
+        GrpcWebServiceStub stub = GrpcWebServiceGrpc.newStub(makeChannel());
         stub = MetadataUtils.attachHeaders(stub, makeHeaders(authToken));
         return stub;
     }

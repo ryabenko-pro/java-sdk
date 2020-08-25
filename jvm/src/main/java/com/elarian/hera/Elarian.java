@@ -12,17 +12,11 @@ import io.grpc.stub.MetadataUtils;
 public final class Elarian {
 
     private static final int PORT = 443;
-    private static final String HOST_SANDBOX = "api.elarian.dev";
-    private static final String HOST_PRODUCTION = "api.elarian.com";
+    private static final String HOST = "api.elarian.dev";
 
-    private static Channel makeChannel(boolean sandbox) {
-        String host = HOST_PRODUCTION;
-        if (sandbox) {
-            host = HOST_SANDBOX;
-        }
-
+    private static Channel makeChannel() {
         return ManagedChannelBuilder
-                .forAddress(host, PORT)
+                .forAddress(HOST, PORT)
                 .userAgent("elarian-jvm-sdk/0.0.0")
                 .useTransportSecurity()
                 .build();
@@ -43,23 +37,23 @@ public final class Elarian {
         return metadata;
     }
 
-    private static GrpcWebServiceBlockingStub newInstance(String apiKey, String authToken, boolean sandbox) {
-        GrpcWebServiceBlockingStub stub = GrpcWebServiceGrpc.newBlockingStub(makeChannel(sandbox));
+    private static GrpcWebServiceBlockingStub newInstance(String apiKey, String authToken) {
+        GrpcWebServiceBlockingStub stub = GrpcWebServiceGrpc.newBlockingStub(makeChannel());
         stub = MetadataUtils.attachHeaders(stub, makeHeaders(apiKey, authToken));
         return stub;
     }
 
-    public static GrpcWebServiceBlockingStub newInstance(String apiKey, boolean sandbox) {
-        return newInstance(apiKey, null, sandbox);
+    public static GrpcWebServiceBlockingStub newInstance(String apiKey) {
+        return newInstance(apiKey, null);
     }
 
-    private static GrpcWebServiceStub newAsyncInstance(String apiKey, String authToken, boolean sandbox) {
-        GrpcWebServiceStub stub = GrpcWebServiceGrpc.newStub(makeChannel(sandbox));
+    private static GrpcWebServiceStub newAsyncInstance(String apiKey, String authToken) {
+        GrpcWebServiceStub stub = GrpcWebServiceGrpc.newStub(makeChannel());
         stub = MetadataUtils.attachHeaders(stub, makeHeaders(apiKey, authToken));
         return stub;
     }
 
-    public static GrpcWebServiceStub newAsyncInstance(String apiKey, boolean sandbox) {
-        return newAsyncInstance(apiKey, null, sandbox);
+    public static GrpcWebServiceStub newAsyncInstance(String apiKey) {
+        return newAsyncInstance(apiKey, null);
     }
 }

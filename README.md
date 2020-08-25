@@ -24,7 +24,7 @@ You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/java
 <dependency>
   <groupId>com.elarian</groupId>
   <artifactId>jvm</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
 </dependency>
 ```
 or sbt:
@@ -32,7 +32,7 @@ or sbt:
 ```
 resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
 // Get all services
-libraryDependencies += "com.elarian" % "jvm" % "0.0.2"
+libraryDependencies += "com.elarian" % "jvm" % "0.0.3"
 ```
 
 or Gradle:
@@ -44,9 +44,9 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:jvm:0.0.2'
+  implementation 'com.elarian:jvm:0.0.3'
   // Or if you're building for android
-  // implementation 'com.elarian:android:0.0.2'
+  // implementation 'com.elarian:android:0.0.3'
 }
 ```
 
@@ -56,7 +56,7 @@ The SDK needs to be initialized with your API key, which you get from the [dashb
 
 ```kotlin
 // Kotlin/Scala
-val elarian = Elarian.newInstance("test_api_key", true)
+val elarian = Elarian.newInstance("test_api_key")
 val req = GetCustomerStateRequest
         .newBuilder()
         .setAppId("test_app")
@@ -67,7 +67,7 @@ val res = elarian.getCustomerState(req)
 
 ```java
 // Java
-GrpcWebServiceBlockingStub elarian = Elarian.newInstance("test_api_key", true);
+GrpcWebServiceBlockingStub elarian = Elarian.newInstance("test_api_key");
 GetCustomerStateRequest req = GetCustomerStateRequest
         .newBuilder()
         .setAppId("test_app")
@@ -80,37 +80,37 @@ See [examples](examples/) for more usage examples.
 
 ## Methods
 
-- `AuthToken()`
+- `authToken()`
 
-- `GetCustomerState()`
-- `AdoptCustomerState()`
+- `getCustomerState()`
+- `adoptCustomerState()`
 
-- `AddCustomerReminder()`
-- `AddCustomerReminderByTag()`
-- `CancelCustomerReminder()`
-- `CancelCustomerReminderByTag()`
+- `addCustomerReminder()`
+- `addCustomerReminderByTag()`
+- `cancelCustomerReminder()`
+- `cancelCustomerReminderByTag()`
   
-- `UpdateCustomerTag()`
-- `DeleteCustomerTag()`
+- `updateCustomerTag()`
+- `deleteCustomerTag()`
 
-- `UpdateCustomerSecondaryId()`
-- `DeleteCustomerSecondaryId()`
+- `updateCustomerSecondaryId()`
+- `deleteCustomerSecondaryId()`
 
-- `UpdateCustomerMetadata()`
-- `DeleteCustomerMetadata ()`
+- `updateCustomerMetadata()`
+- `deleteCustomerMetadata ()`
 
-- `SendMessage()`
-- `SendMessageByTag()`
-- `ReplyToMessage()`
-- `MessagingConsent()`
+- `sendMessage()`
+- `sendMessageByTag()`
+- `replyToMessage()`
+- `messagingConsent()`
 
-- `SendPayment()`
-- `CheckoutPayment()`
+- `sendPayment()`
+- `checkoutPayment()`
 
-- `MakeVoiceCall()`
+- `makeVoiceCall()`
   
-- `StreamNotifications()`
-- `SendWebhookResponse()`
+- `streamNotifications()`
+- `sendWebhookResponse()`
 
 ## Issues
 

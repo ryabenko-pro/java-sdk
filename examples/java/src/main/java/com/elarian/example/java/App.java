@@ -6,7 +6,7 @@ import com.elarian.hera.proto.Web.*;
 
 public class App {
     public static void main(String[] args) throws InterruptedException {
-        GrpcWebServiceBlockingStub instance = Elarian.newInstance("test_api_key", true);
+        GrpcWebServiceBlockingStub instance = Elarian.newInstance("test_api_key");
 
         GetCustomerStateRequest req =  GetCustomerStateRequest
                 .newBuilder()
