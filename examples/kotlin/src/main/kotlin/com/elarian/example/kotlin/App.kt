@@ -1,18 +1,21 @@
 package com.elarian.example.kotlin
 
-import com.elarian.hera.proto.Web.GetCustomerStateRequest
+import com.elarian.hera.proto.Web.*
+import com.elarian.hera.proto.Common.*
 import com.elarian.hera.Elarian
 
 fun main() {
-    val apiKey = "77bcc4b83574b3626e5b4780169c1dd7d62ed76e4515edc3e584c21e4e89ce91"
-    val appId = "app-j90HNs"
-    val product = "product-j90HNs"
-
-    val elarian = Elarian.newInstance(apiKey)
+    val elarian = Elarian.newInstance("test_api_key")
     val req = GetCustomerStateRequest
             .newBuilder()
-            .setAppId(appId)
-            .setCustomerId("el_cst_67a6d10ccffa84ba2c017ae77c9e4d94")
+            .setAppId("test_app")
+            .setCustomerNumber(
+                    CustomerNumber
+                            .newBuilder()
+                            .setNumber("+254700000000")
+                            .setProvider(CustomerNumberProvider.CUSTOMER_NUMBER_PROVIDER_TELCO)
+                            .build()
+            )
             .build()
     val res = elarian.getCustomerState(req)
     print(res)
