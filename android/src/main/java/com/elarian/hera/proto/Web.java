@@ -13,16 +13,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.AuthTokenRequest}
@@ -33,52 +33,52 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AuthTokenRequest)
       AuthTokenRequestOrBuilder {
     private AuthTokenRequest() {
-      appId_ = "";
+      orgId_ = "";
     }
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -178,51 +178,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -242,7 +242,7 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "appId_",
+              "orgId_",
             };
             java.lang.String info =
                 "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
@@ -703,16 +703,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -737,6 +737,17 @@ public final class Web {
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
+     */
+    boolean hasSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+
     public com.elarian.hera.proto.Web.GetCustomerStateRequest.CustomerCase getCustomerCase();
   }
   /**
@@ -748,13 +759,14 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.GetCustomerStateRequest)
       GetCustomerStateRequestOrBuilder {
     private GetCustomerStateRequest() {
-      appId_ = "";
+      orgId_ = "";
     }
     private int customerCase_ = 0;
     private java.lang.Object customer_;
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -772,6 +784,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -793,50 +806,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -941,6 +954,56 @@ public final class Web {
      */
     private void clearCustomerNumber() {
       if (customerCase_ == 3) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
         customerCase_ = 0;
         customer_ = null;
       }
@@ -1054,51 +1117,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -1199,6 +1262,54 @@ public final class Web {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.GetCustomerStateRequest)
     }
     @java.lang.Override
@@ -1217,12 +1328,13 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
+              com.elarian.hera.proto.Common.IndexMapping.class,
             };
             java.lang.String info =
-                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000";
+                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -1741,69 +1853,115 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+     * <code>string customer_id = 1;</code>
+     * @return The customerId.
+     */
+    java.lang.String getCustomerId();
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The bytes for customerId.
+     */
+    com.google.protobuf.ByteString
+        getCustomerIdBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
      * @return Whether the messagingState field is set.
      */
     boolean hasMessagingState();
     /**
-     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
      * @return The messagingState.
      */
     com.elarian.hera.proto.Common.MessagingState getMessagingState();
 
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+     * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
      * @return Whether the ussdState field is set.
      */
     boolean hasUssdState();
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+     * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
      * @return The ussdState.
      */
     com.elarian.hera.proto.Common.UssdState getUssdState();
 
     /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+     * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
      * @return Whether the voiceState field is set.
      */
     boolean hasVoiceState();
     /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+     * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
      * @return The voiceState.
      */
     com.elarian.hera.proto.Common.VoiceState getVoiceState();
 
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
      * @return Whether the paymentState field is set.
      */
     boolean hasPaymentState();
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
      * @return The paymentState.
      */
     com.elarian.hera.proto.Common.PaymentState getPaymentState();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+    int getPaymentWalletsCount();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+    boolean containsPaymentWallets(
+        java.lang.String key);
+    /**
+     * Use {@link #getPaymentWalletsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState>
+    getPaymentWallets();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState>
+    getPaymentWalletsMap();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+
+    com.elarian.hera.proto.Common.PaymentWalletState getPaymentWalletsOrDefault(
+        java.lang.String key,
+        com.elarian.hera.proto.Common.PaymentWalletState defaultValue);
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+
+    com.elarian.hera.proto.Common.PaymentWalletState getPaymentWalletsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     java.util.List<com.elarian.hera.proto.Common.CustomerIndex> 
         getTagsList();
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     com.elarian.hera.proto.Common.CustomerIndex getTags(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     int getTagsCount();
 
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
     int getMetadataCount();
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
     boolean containsMetadata(
         java.lang.String key);
@@ -1811,38 +1969,38 @@ public final class Web {
      * Use {@link #getMetadataMap()} instead.
      */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
+    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
     getMetadata();
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
-    java.util.Map<java.lang.String, java.lang.String>
+    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
     getMetadataMap();
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
 
-    java.lang.String getMetadataOrDefault(
+    com.elarian.hera.proto.Common.DataMapValue getMetadataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        com.elarian.hera.proto.Common.DataMapValue defaultValue);
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
 
-    java.lang.String getMetadataOrThrow(
+    com.elarian.hera.proto.Common.DataMapValue getMetadataOrThrow(
         java.lang.String key);
 
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     java.util.List<com.elarian.hera.proto.Common.CustomerIndex> 
         getSecondaryIdsList();
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     com.elarian.hera.proto.Common.CustomerIndex getSecondaryIds(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     int getSecondaryIdsCount();
   }
@@ -1855,27 +2013,75 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerStateReplyData)
       CustomerStateReplyDataOrBuilder {
     private CustomerStateReplyData() {
+      customerId_ = "";
       tags_ = emptyProtobufList();
       secondaryIds_ = emptyProtobufList();
     }
-    public static final int MESSAGING_STATE_FIELD_NUMBER = 1;
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
+    private java.lang.String customerId_;
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The customerId.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerId() {
+      return customerId_;
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The bytes for customerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @param value The customerId to set.
+     */
+    private void setCustomerId(
+        java.lang.String value) {
+      value.getClass();
+  
+      customerId_ = value;
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     */
+    private void clearCustomerId() {
+      
+      customerId_ = getDefaultInstance().getCustomerId();
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @param value The bytes for customerId to set.
+     */
+    private void setCustomerIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      customerId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int MESSAGING_STATE_FIELD_NUMBER = 2;
     private com.elarian.hera.proto.Common.MessagingState messagingState_;
     /**
-     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
      */
     @java.lang.Override
     public boolean hasMessagingState() {
       return messagingState_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingState getMessagingState() {
       return messagingState_ == null ? com.elarian.hera.proto.Common.MessagingState.getDefaultInstance() : messagingState_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
      */
     private void setMessagingState(com.elarian.hera.proto.Common.MessagingState value) {
       value.getClass();
@@ -1883,7 +2089,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeMessagingState(com.elarian.hera.proto.Common.MessagingState value) {
@@ -1898,30 +2104,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
      */
     private void clearMessagingState() {  messagingState_ = null;
       
     }
 
-    public static final int USSD_STATE_FIELD_NUMBER = 2;
+    public static final int USSD_STATE_FIELD_NUMBER = 3;
     private com.elarian.hera.proto.Common.UssdState ussdState_;
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+     * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
      */
     @java.lang.Override
     public boolean hasUssdState() {
       return ussdState_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+     * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.UssdState getUssdState() {
       return ussdState_ == null ? com.elarian.hera.proto.Common.UssdState.getDefaultInstance() : ussdState_;
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+     * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
      */
     private void setUssdState(com.elarian.hera.proto.Common.UssdState value) {
       value.getClass();
@@ -1929,7 +2135,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+     * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeUssdState(com.elarian.hera.proto.Common.UssdState value) {
@@ -1944,30 +2150,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+     * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
      */
     private void clearUssdState() {  ussdState_ = null;
       
     }
 
-    public static final int VOICE_STATE_FIELD_NUMBER = 3;
+    public static final int VOICE_STATE_FIELD_NUMBER = 4;
     private com.elarian.hera.proto.Common.VoiceState voiceState_;
     /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+     * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
      */
     @java.lang.Override
     public boolean hasVoiceState() {
       return voiceState_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+     * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceState getVoiceState() {
       return voiceState_ == null ? com.elarian.hera.proto.Common.VoiceState.getDefaultInstance() : voiceState_;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+     * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
      */
     private void setVoiceState(com.elarian.hera.proto.Common.VoiceState value) {
       value.getClass();
@@ -1975,7 +2181,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+     * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeVoiceState(com.elarian.hera.proto.Common.VoiceState value) {
@@ -1990,30 +2196,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+     * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
      */
     private void clearVoiceState() {  voiceState_ = null;
       
     }
 
-    public static final int PAYMENT_STATE_FIELD_NUMBER = 4;
+    public static final int PAYMENT_STATE_FIELD_NUMBER = 5;
     private com.elarian.hera.proto.Common.PaymentState paymentState_;
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
      */
     @java.lang.Override
     public boolean hasPaymentState() {
       return paymentState_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.PaymentState getPaymentState() {
       return paymentState_ == null ? com.elarian.hera.proto.Common.PaymentState.getDefaultInstance() : paymentState_;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
      */
     private void setPaymentState(com.elarian.hera.proto.Common.PaymentState value) {
       value.getClass();
@@ -2021,7 +2227,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergePaymentState(com.elarian.hera.proto.Common.PaymentState value) {
@@ -2036,44 +2242,137 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
      */
     private void clearPaymentState() {  paymentState_ = null;
       
     }
 
-    public static final int TAGS_FIELD_NUMBER = 5;
+    public static final int PAYMENT_WALLETS_FIELD_NUMBER = 6;
+    private static final class PaymentWalletsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.elarian.hera.proto.Common.PaymentWalletState.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> paymentWallets_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState>
+    internalGetPaymentWallets() {
+      return paymentWallets_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState>
+    internalGetMutablePaymentWallets() {
+      if (!paymentWallets_.isMutable()) {
+        paymentWallets_ = paymentWallets_.mutableCopy();
+      }
+      return paymentWallets_;
+    }
+    @java.lang.Override
+
+    public int getPaymentWalletsCount() {
+      return internalGetPaymentWallets().size();
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+    @java.lang.Override
+
+    public boolean containsPaymentWallets(
+        java.lang.String key) {
+      key.getClass();
+      return internalGetPaymentWallets().containsKey(key);
+    }
+    /**
+     * Use {@link #getPaymentWalletsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> getPaymentWallets() {
+      return getPaymentWalletsMap();
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> getPaymentWalletsMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetPaymentWallets());
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+    @java.lang.Override
+
+    public com.elarian.hera.proto.Common.PaymentWalletState getPaymentWalletsOrDefault(
+        java.lang.String key,
+        com.elarian.hera.proto.Common.PaymentWalletState defaultValue) {
+      key.getClass();
+      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> map =
+          internalGetPaymentWallets();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+    @java.lang.Override
+
+    public com.elarian.hera.proto.Common.PaymentWalletState getPaymentWalletsOrThrow(
+        java.lang.String key) {
+      key.getClass();
+      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> map =
+          internalGetPaymentWallets();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+     */
+    private java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState>
+    getMutablePaymentWalletsMap() {
+      return internalGetMutablePaymentWallets();
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 7;
     private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.CustomerIndex> tags_;
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getTagsList() {
       return tags_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerIndexOrBuilder> 
         getTagsOrBuilderList() {
       return tags_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     @java.lang.Override
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerIndex getTags(int index) {
       return tags_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     public com.elarian.hera.proto.Common.CustomerIndexOrBuilder getTagsOrBuilder(
         int index) {
@@ -2088,7 +2387,7 @@ public final class Web {
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     private void setTags(
         int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -2097,7 +2396,7 @@ public final class Web {
       tags_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     private void addTags(com.elarian.hera.proto.Common.CustomerIndex value) {
       value.getClass();
@@ -2105,7 +2404,7 @@ public final class Web {
       tags_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     private void addTags(
         int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -2114,7 +2413,7 @@ public final class Web {
       tags_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     private void addAllTags(
         java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
@@ -2123,38 +2422,38 @@ public final class Web {
           values, tags_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     private void clearTags() {
       tags_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
      */
     private void removeTags(int index) {
       ensureTagsIsMutable();
       tags_.remove(index);
     }
 
-    public static final int METADATA_FIELD_NUMBER = 6;
+    public static final int METADATA_FIELD_NUMBER = 8;
     private static final class MetadataDefaultEntryHolder {
       static final com.google.protobuf.MapEntryLite<
-          java.lang.String, java.lang.String> defaultEntry =
+          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> defaultEntry =
               com.google.protobuf.MapEntryLite
-              .<java.lang.String, java.lang.String>newDefaultInstance(
+              .<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>newDefaultInstance(
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance());
     }
     private com.google.protobuf.MapFieldLite<
-        java.lang.String, java.lang.String> metadata_ =
+        java.lang.String, com.elarian.hera.proto.Common.DataMapValue> metadata_ =
             com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
     internalGetMetadata() {
       return metadata_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
     internalGetMutableMetadata() {
       if (!metadata_.isMutable()) {
         metadata_ = metadata_.mutableCopy();
@@ -2167,7 +2466,7 @@ public final class Web {
       return internalGetMetadata().size();
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
     @java.lang.Override
 
@@ -2181,40 +2480,40 @@ public final class Web {
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getMetadata() {
       return getMetadataMap();
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
     @java.lang.Override
 
-    public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getMetadataMap() {
       return java.util.Collections.unmodifiableMap(
           internalGetMetadata());
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
     @java.lang.Override
 
-    public java.lang.String getMetadataOrDefault(
+    public com.elarian.hera.proto.Common.DataMapValue getMetadataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        com.elarian.hera.proto.Common.DataMapValue defaultValue) {
       key.getClass();
-      java.util.Map<java.lang.String, java.lang.String> map =
+      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
           internalGetMetadata();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
     @java.lang.Override
 
-    public java.lang.String getMetadataOrThrow(
+    public com.elarian.hera.proto.Common.DataMapValue getMetadataOrThrow(
         java.lang.String key) {
       key.getClass();
-      java.util.Map<java.lang.String, java.lang.String> map =
+      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
           internalGetMetadata();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -2222,45 +2521,45 @@ public final class Web {
       return map.get(key);
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 6;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
      */
-    private java.util.Map<java.lang.String, java.lang.String>
+    private java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
     getMutableMetadataMap() {
       return internalGetMutableMetadata();
     }
 
-    public static final int SECONDARY_IDS_FIELD_NUMBER = 7;
+    public static final int SECONDARY_IDS_FIELD_NUMBER = 9;
     private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.CustomerIndex> secondaryIds_;
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getSecondaryIdsList() {
       return secondaryIds_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerIndexOrBuilder> 
         getSecondaryIdsOrBuilderList() {
       return secondaryIds_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     @java.lang.Override
     public int getSecondaryIdsCount() {
       return secondaryIds_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerIndex getSecondaryIds(int index) {
       return secondaryIds_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     public com.elarian.hera.proto.Common.CustomerIndexOrBuilder getSecondaryIdsOrBuilder(
         int index) {
@@ -2275,7 +2574,7 @@ public final class Web {
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     private void setSecondaryIds(
         int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -2284,7 +2583,7 @@ public final class Web {
       secondaryIds_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     private void addSecondaryIds(com.elarian.hera.proto.Common.CustomerIndex value) {
       value.getClass();
@@ -2292,7 +2591,7 @@ public final class Web {
       secondaryIds_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     private void addSecondaryIds(
         int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -2301,7 +2600,7 @@ public final class Web {
       secondaryIds_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     private void addAllSecondaryIds(
         java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
@@ -2310,13 +2609,13 @@ public final class Web {
           values, secondaryIds_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     private void clearSecondaryIds() {
       secondaryIds_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
      */
     private void removeSecondaryIds(int index) {
       ensureSecondaryIdsIsMutable();
@@ -2419,21 +2718,70 @@ public final class Web {
 
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+       * <code>string customer_id = 1;</code>
+       * @return The customerId.
+       */
+      @java.lang.Override
+      public java.lang.String getCustomerId() {
+        return instance.getCustomerId();
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @return The bytes for customerId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCustomerIdBytes() {
+        return instance.getCustomerIdBytes();
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @param value The customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerId() {
+        copyOnWrite();
+        instance.clearCustomerId();
+        return this;
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @param value The bytes for customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCustomerIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
        */
       @java.lang.Override
       public boolean hasMessagingState() {
         return instance.hasMessagingState();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingState getMessagingState() {
         return instance.getMessagingState();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
        */
       public Builder setMessagingState(com.elarian.hera.proto.Common.MessagingState value) {
         copyOnWrite();
@@ -2441,7 +2789,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
        */
       public Builder setMessagingState(
           com.elarian.hera.proto.Common.MessagingState.Builder builderForValue) {
@@ -2450,7 +2798,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
        */
       public Builder mergeMessagingState(com.elarian.hera.proto.Common.MessagingState value) {
         copyOnWrite();
@@ -2458,7 +2806,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingState messaging_state = 2;</code>
        */
       public Builder clearMessagingState() {  copyOnWrite();
         instance.clearMessagingState();
@@ -2466,21 +2814,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+       * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
        */
       @java.lang.Override
       public boolean hasUssdState() {
         return instance.hasUssdState();
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+       * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.UssdState getUssdState() {
         return instance.getUssdState();
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+       * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
        */
       public Builder setUssdState(com.elarian.hera.proto.Common.UssdState value) {
         copyOnWrite();
@@ -2488,7 +2836,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+       * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
        */
       public Builder setUssdState(
           com.elarian.hera.proto.Common.UssdState.Builder builderForValue) {
@@ -2497,7 +2845,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+       * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
        */
       public Builder mergeUssdState(com.elarian.hera.proto.Common.UssdState value) {
         copyOnWrite();
@@ -2505,7 +2853,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 2;</code>
+       * <code>.com.elarian.hera.proto.UssdState ussd_state = 3;</code>
        */
       public Builder clearUssdState() {  copyOnWrite();
         instance.clearUssdState();
@@ -2513,21 +2861,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+       * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
        */
       @java.lang.Override
       public boolean hasVoiceState() {
         return instance.hasVoiceState();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+       * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceState getVoiceState() {
         return instance.getVoiceState();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+       * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
        */
       public Builder setVoiceState(com.elarian.hera.proto.Common.VoiceState value) {
         copyOnWrite();
@@ -2535,7 +2883,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+       * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
        */
       public Builder setVoiceState(
           com.elarian.hera.proto.Common.VoiceState.Builder builderForValue) {
@@ -2544,7 +2892,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+       * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
        */
       public Builder mergeVoiceState(com.elarian.hera.proto.Common.VoiceState value) {
         copyOnWrite();
@@ -2552,7 +2900,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 3;</code>
+       * <code>.com.elarian.hera.proto.VoiceState voice_state = 4;</code>
        */
       public Builder clearVoiceState() {  copyOnWrite();
         instance.clearVoiceState();
@@ -2560,21 +2908,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
        */
       @java.lang.Override
       public boolean hasPaymentState() {
         return instance.hasPaymentState();
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.PaymentState getPaymentState() {
         return instance.getPaymentState();
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
        */
       public Builder setPaymentState(com.elarian.hera.proto.Common.PaymentState value) {
         copyOnWrite();
@@ -2582,7 +2930,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
        */
       public Builder setPaymentState(
           com.elarian.hera.proto.Common.PaymentState.Builder builderForValue) {
@@ -2591,7 +2939,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
        */
       public Builder mergePaymentState(com.elarian.hera.proto.Common.PaymentState value) {
         copyOnWrite();
@@ -2599,15 +2947,113 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 5;</code>
        */
       public Builder clearPaymentState() {  copyOnWrite();
         instance.clearPaymentState();
         return this;
       }
 
+      @java.lang.Override
+
+      public int getPaymentWalletsCount() {
+        return instance.getPaymentWalletsMap().size();
+      }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+       */
+      @java.lang.Override
+
+      public boolean containsPaymentWallets(
+          java.lang.String key) {
+        key.getClass();
+        return instance.getPaymentWalletsMap().containsKey(key);
+      }
+
+      public Builder clearPaymentWallets() {
+        copyOnWrite();
+        instance.getMutablePaymentWalletsMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+       */
+
+      public Builder removePaymentWallets(
+          java.lang.String key) {
+        key.getClass();
+        copyOnWrite();
+        instance.getMutablePaymentWalletsMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getPaymentWalletsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> getPaymentWallets() {
+        return getPaymentWalletsMap();
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> getPaymentWalletsMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getPaymentWalletsMap());
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+       */
+      @java.lang.Override
+
+      public com.elarian.hera.proto.Common.PaymentWalletState getPaymentWalletsOrDefault(
+          java.lang.String key,
+          com.elarian.hera.proto.Common.PaymentWalletState defaultValue) {
+        key.getClass();
+        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> map =
+            instance.getPaymentWalletsMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+       */
+      @java.lang.Override
+
+      public com.elarian.hera.proto.Common.PaymentWalletState getPaymentWalletsOrThrow(
+          java.lang.String key) {
+        key.getClass();
+        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> map =
+            instance.getPaymentWalletsMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+       */
+      public Builder putPaymentWallets(
+          java.lang.String key,
+          com.elarian.hera.proto.Common.PaymentWalletState value) {
+        key.getClass();
+        value.getClass();
+        copyOnWrite();
+        instance.getMutablePaymentWalletsMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PaymentWalletState&gt; payment_wallets = 6;</code>
+       */
+      public Builder putAllPaymentWallets(
+          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PaymentWalletState> values) {
+        copyOnWrite();
+        instance.getMutablePaymentWalletsMap().putAll(values);
+        return this;
+      }
+
+      /**
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       @java.lang.Override
       public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getTagsList() {
@@ -2615,20 +3061,20 @@ public final class Web {
             instance.getTagsList());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       @java.lang.Override
       public int getTagsCount() {
         return instance.getTagsCount();
       }/**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerIndex getTags(int index) {
         return instance.getTags(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder setTags(
           int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -2637,7 +3083,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder setTags(
           int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -2647,7 +3093,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder addTags(com.elarian.hera.proto.Common.CustomerIndex value) {
         copyOnWrite();
@@ -2655,7 +3101,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder addTags(
           int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -2664,7 +3110,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder addTags(
           com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -2673,7 +3119,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder addTags(
           int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -2683,7 +3129,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder addAllTags(
           java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
@@ -2692,7 +3138,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder clearTags() {
         copyOnWrite();
@@ -2700,7 +3146,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 7;</code>
        */
       public Builder removeTags(int index) {
         copyOnWrite();
@@ -2714,7 +3160,7 @@ public final class Web {
         return instance.getMetadataMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 6;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
        */
       @java.lang.Override
 
@@ -2730,7 +3176,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 6;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
        */
 
       public Builder removeMetadata(
@@ -2745,39 +3191,39 @@ public final class Web {
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getMetadata() {
         return getMetadataMap();
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 6;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getMetadataMap() {
         return java.util.Collections.unmodifiableMap(
             instance.getMetadataMap());
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 6;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
        */
       @java.lang.Override
 
-      public java.lang.String getMetadataOrDefault(
+      public com.elarian.hera.proto.Common.DataMapValue getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          com.elarian.hera.proto.Common.DataMapValue defaultValue) {
         key.getClass();
-        java.util.Map<java.lang.String, java.lang.String> map =
+        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
             instance.getMetadataMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 6;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
        */
       @java.lang.Override
 
-      public java.lang.String getMetadataOrThrow(
+      public com.elarian.hera.proto.Common.DataMapValue getMetadataOrThrow(
           java.lang.String key) {
         key.getClass();
-        java.util.Map<java.lang.String, java.lang.String> map =
+        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
             instance.getMetadataMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
@@ -2785,11 +3231,11 @@ public final class Web {
         return map.get(key);
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 6;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
        */
       public Builder putMetadata(
           java.lang.String key,
-          java.lang.String value) {
+          com.elarian.hera.proto.Common.DataMapValue value) {
         key.getClass();
         value.getClass();
         copyOnWrite();
@@ -2797,17 +3243,17 @@ public final class Web {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 6;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 8;</code>
        */
       public Builder putAllMetadata(
-          java.util.Map<java.lang.String, java.lang.String> values) {
+          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> values) {
         copyOnWrite();
         instance.getMutableMetadataMap().putAll(values);
         return this;
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       @java.lang.Override
       public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getSecondaryIdsList() {
@@ -2815,20 +3261,20 @@ public final class Web {
             instance.getSecondaryIdsList());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       @java.lang.Override
       public int getSecondaryIdsCount() {
         return instance.getSecondaryIdsCount();
       }/**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerIndex getSecondaryIds(int index) {
         return instance.getSecondaryIds(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder setSecondaryIds(
           int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -2837,7 +3283,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder setSecondaryIds(
           int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -2847,7 +3293,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder addSecondaryIds(com.elarian.hera.proto.Common.CustomerIndex value) {
         copyOnWrite();
@@ -2855,7 +3301,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder addSecondaryIds(
           int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -2864,7 +3310,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder addSecondaryIds(
           com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -2873,7 +3319,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder addSecondaryIds(
           int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -2883,7 +3329,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder addAllSecondaryIds(
           java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
@@ -2892,7 +3338,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder clearSecondaryIds() {
         copyOnWrite();
@@ -2900,7 +3346,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 7;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 9;</code>
        */
       public Builder removeSecondaryIds(int index) {
         copyOnWrite();
@@ -2924,10 +3370,13 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "customerId_",
               "messagingState_",
               "ussdState_",
               "voiceState_",
               "paymentState_",
+              "paymentWallets_",
+              PaymentWalletsDefaultEntryHolder.defaultEntry,
               "tags_",
               com.elarian.hera.proto.Common.CustomerIndex.class,
               "metadata_",
@@ -2936,8 +3385,8 @@ public final class Web {
               com.elarian.hera.proto.Common.CustomerIndex.class,
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0001\u0002\u0000\u0001\t\u0002\t\u0003" +
-                "\t\u0004\t\u0005\u001b\u00062\u0007\u001b";
+                "\u0000\t\u0000\u0000\u0001\t\t\u0002\u0002\u0000\u0001\u0208\u0002\t\u0003\t\u0004" +
+                "\t\u0005\t\u00062\u0007\u001b\b2\t\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -2997,16 +3446,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -3043,6 +3492,17 @@ public final class Web {
      */
     com.elarian.hera.proto.Common.CustomerNumber getOtherCustomerNumber();
 
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+     * @return Whether the otherSecondaryId field is set.
+     */
+    boolean hasOtherSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+     * @return The otherSecondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getOtherSecondaryId();
+
     public com.elarian.hera.proto.Web.AdoptCustomerStateRequest.OtherCustomerCase getOtherCustomerCase();
   }
   /**
@@ -3054,7 +3514,7 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AdoptCustomerStateRequest)
       AdoptCustomerStateRequestOrBuilder {
     private AdoptCustomerStateRequest() {
-      appId_ = "";
+      orgId_ = "";
       customerId_ = "";
     }
     private int otherCustomerCase_ = 0;
@@ -3062,6 +3522,7 @@ public final class Web {
     public enum OtherCustomerCase {
       OTHER_CUSTOMER_ID(3),
       OTHER_CUSTOMER_NUMBER(4),
+      OTHER_SECONDARY_ID(5),
       OTHERCUSTOMER_NOT_SET(0);
       private final int value;
       private OtherCustomerCase(int value) {
@@ -3079,6 +3540,7 @@ public final class Web {
         switch (value) {
           case 3: return OTHER_CUSTOMER_ID;
           case 4: return OTHER_CUSTOMER_NUMBER;
+          case 5: return OTHER_SECONDARY_ID;
           case 0: return OTHERCUSTOMER_NOT_SET;
           default: return null;
         }
@@ -3100,50 +3562,50 @@ public final class Web {
       otherCustomer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -3300,6 +3762,56 @@ public final class Web {
       }
     }
 
+    public static final int OTHER_SECONDARY_ID_FIELD_NUMBER = 5;
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+     */
+    @java.lang.Override
+    public boolean hasOtherSecondaryId() {
+      return otherCustomerCase_ == 5;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getOtherSecondaryId() {
+      if (otherCustomerCase_ == 5) {
+         return (com.elarian.hera.proto.Common.IndexMapping) otherCustomer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+     */
+    private void setOtherSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  otherCustomer_ = value;
+      otherCustomerCase_ = 5;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+     */
+    private void mergeOtherSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (otherCustomerCase_ == 5 &&
+          otherCustomer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        otherCustomer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) otherCustomer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        otherCustomer_ = value;
+      }
+      otherCustomerCase_ = 5;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+     */
+    private void clearOtherSecondaryId() {
+      if (otherCustomerCase_ == 5) {
+        otherCustomerCase_ = 0;
+        otherCustomer_ = null;
+      }
+    }
+
     public static com.elarian.hera.proto.Web.AdoptCustomerStateRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3408,51 +3920,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -3602,6 +4114,54 @@ public final class Web {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+       */
+      @java.lang.Override
+      public boolean hasOtherSecondaryId() {
+        return instance.hasOtherSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getOtherSecondaryId() {
+        return instance.getOtherSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+       */
+      public Builder setOtherSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setOtherSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+       */
+      public Builder setOtherSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setOtherSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+       */
+      public Builder mergeOtherSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeOtherSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 5;</code>
+       */
+      public Builder clearOtherSecondaryId() {
+        copyOnWrite();
+        instance.clearOtherSecondaryId();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AdoptCustomerStateRequest)
     }
     @java.lang.Override
@@ -3620,13 +4180,14 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "otherCustomer_",
               "otherCustomerCase_",
-              "appId_",
+              "orgId_",
               "customerId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
+              com.elarian.hera.proto.Common.IndexMapping.class,
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u023b\u0000\u0004<\u0000";
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u023b\u0000\u0004<\u0000\u0005<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3686,16 +4247,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -3721,6 +4282,17 @@ public final class Web {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
+     */
+    boolean hasSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+
+    /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 5;</code>
      * @return Whether the reminder field is set.
      */
@@ -3742,13 +4314,14 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AddCustomerReminderRequest)
       AddCustomerReminderRequestOrBuilder {
     private AddCustomerReminderRequest() {
-      appId_ = "";
+      orgId_ = "";
     }
     private int customerCase_ = 0;
     private java.lang.Object customer_;
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -3766,6 +4339,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -3787,50 +4361,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -3935,6 +4509,56 @@ public final class Web {
      */
     private void clearCustomerNumber() {
       if (customerCase_ == 3) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
         customerCase_ = 0;
         customer_ = null;
       }
@@ -4094,51 +4718,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -4240,6 +4864,54 @@ public final class Web {
       }
 
       /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
+      /**
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 5;</code>
        */
       @java.lang.Override
@@ -4304,13 +4976,14 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
+              com.elarian.hera.proto.Common.IndexMapping.class,
               "reminder_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0005\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u0005\t";
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4370,16 +5043,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 2;</code>
@@ -4412,52 +5085,52 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AddCustomerReminderTagRequest)
       AddCustomerReminderTagRequestOrBuilder {
     private AddCustomerReminderTagRequest() {
-      appId_ = "";
+      orgId_ = "";
     }
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -4649,51 +5322,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -4807,7 +5480,7 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "appId_",
+              "orgId_",
               "tag_",
               "reminder_",
             };
@@ -4873,16 +5546,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -4908,24 +5581,35 @@ public final class Web {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>string product_id = 4;</code>
-     * @return The productId.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
      */
-    java.lang.String getProductId();
+    boolean hasSecondaryId();
     /**
-     * <code>string product_id = 4;</code>
-     * @return The bytes for productId.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
      */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
 
     /**
-     * <code>string key = 5;</code>
+     * <code>string app_id = 5;</code>
+     * @return The appId.
+     */
+    java.lang.String getAppId();
+    /**
+     * <code>string app_id = 5;</code>
+     * @return The bytes for appId.
+     */
+    com.google.protobuf.ByteString
+        getAppIdBytes();
+
+    /**
+     * <code>string key = 6;</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
-     * <code>string key = 5;</code>
+     * <code>string key = 6;</code>
      * @return The bytes for key.
      */
     com.google.protobuf.ByteString
@@ -4942,8 +5626,8 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CancelCustomerReminderRequest)
       CancelCustomerReminderRequestOrBuilder {
     private CancelCustomerReminderRequest() {
+      orgId_ = "";
       appId_ = "";
-      productId_ = "";
       key_ = "";
     }
     private int customerCase_ = 0;
@@ -4951,6 +5635,7 @@ public final class Web {
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -4968,6 +5653,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -4989,50 +5675,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -5142,57 +5828,107 @@ public final class Web {
       }
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 4;
-    private java.lang.String productId_;
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
     /**
-     * <code>string product_id = 4;</code>
-     * @return The productId.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
     }
     /**
-     * <code>string product_id = 4;</code>
-     * @return The bytes for productId.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 5;
+    private java.lang.String appId_;
+    /**
+     * <code>string app_id = 5;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public java.lang.String getAppId() {
+      return appId_;
+    }
+    /**
+     * <code>string app_id = 5;</code>
+     * @return The bytes for appId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+        getAppIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string product_id = 4;</code>
-     * @param value The productId to set.
+     * <code>string app_id = 5;</code>
+     * @param value The appId to set.
      */
-    private void setProductId(
+    private void setAppId(
         java.lang.String value) {
       value.getClass();
   
-      productId_ = value;
+      appId_ = value;
     }
     /**
-     * <code>string product_id = 4;</code>
+     * <code>string app_id = 5;</code>
      */
-    private void clearProductId() {
+    private void clearAppId() {
       
-      productId_ = getDefaultInstance().getProductId();
+      appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string product_id = 4;</code>
-     * @param value The bytes for productId to set.
+     * <code>string app_id = 5;</code>
+     * @param value The bytes for appId to set.
      */
-    private void setProductIdBytes(
+    private void setAppIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+      appId_ = value.toStringUtf8();
       
     }
 
-    public static final int KEY_FIELD_NUMBER = 5;
+    public static final int KEY_FIELD_NUMBER = 6;
     private java.lang.String key_;
     /**
-     * <code>string key = 5;</code>
+     * <code>string key = 6;</code>
      * @return The key.
      */
     @java.lang.Override
@@ -5200,7 +5936,7 @@ public final class Web {
       return key_;
     }
     /**
-     * <code>string key = 5;</code>
+     * <code>string key = 6;</code>
      * @return The bytes for key.
      */
     @java.lang.Override
@@ -5209,7 +5945,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(key_);
     }
     /**
-     * <code>string key = 5;</code>
+     * <code>string key = 6;</code>
      * @param value The key to set.
      */
     private void setKey(
@@ -5219,14 +5955,14 @@ public final class Web {
       key_ = value;
     }
     /**
-     * <code>string key = 5;</code>
+     * <code>string key = 6;</code>
      */
     private void clearKey() {
       
       key_ = getDefaultInstance().getKey();
     }
     /**
-     * <code>string key = 5;</code>
+     * <code>string key = 6;</code>
      * @param value The bytes for key to set.
      */
     private void setKeyBytes(
@@ -5344,51 +6080,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -5490,56 +6226,104 @@ public final class Web {
       }
 
       /**
-       * <code>string product_id = 4;</code>
-       * @return The productId.
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
       }
       /**
-       * <code>string product_id = 4;</code>
-       * @return The bytes for productId.
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
       }
       /**
-       * <code>string product_id = 4;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
-      public Builder setProductId(
-          java.lang.String value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setSecondaryId(value);
         return this;
       }
       /**
-       * <code>string product_id = 4;</code>
-       * @return This builder for chaining.
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
-      public Builder clearProductId() {
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
         copyOnWrite();
-        instance.clearProductId();
+        instance.setSecondaryId(builderForValue.build());
         return this;
       }
       /**
-       * <code>string product_id = 4;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
         copyOnWrite();
-        instance.setProductIdBytes(value);
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
         return this;
       }
 
       /**
-       * <code>string key = 5;</code>
+       * <code>string app_id = 5;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public java.lang.String getAppId() {
+        return instance.getAppId();
+      }
+      /**
+       * <code>string app_id = 5;</code>
+       * @return The bytes for appId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAppIdBytes() {
+        return instance.getAppIdBytes();
+      }
+      /**
+       * <code>string app_id = 5;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAppId(value);
+        return this;
+      }
+      /**
+       * <code>string app_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        copyOnWrite();
+        instance.clearAppId();
+        return this;
+      }
+      /**
+       * <code>string app_id = 5;</code>
+       * @param value The bytes for appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAppIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string key = 6;</code>
        * @return The key.
        */
       @java.lang.Override
@@ -5547,7 +6331,7 @@ public final class Web {
         return instance.getKey();
       }
       /**
-       * <code>string key = 5;</code>
+       * <code>string key = 6;</code>
        * @return The bytes for key.
        */
       @java.lang.Override
@@ -5556,7 +6340,7 @@ public final class Web {
         return instance.getKeyBytes();
       }
       /**
-       * <code>string key = 5;</code>
+       * <code>string key = 6;</code>
        * @param value The key to set.
        * @return This builder for chaining.
        */
@@ -5567,7 +6351,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string key = 5;</code>
+       * <code>string key = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearKey() {
@@ -5576,7 +6360,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string key = 5;</code>
+       * <code>string key = 6;</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
        */
@@ -5605,14 +6389,15 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
-              "productId_",
+              com.elarian.hera.proto.Common.IndexMapping.class,
+              "appId_",
               "key_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u0004\u0208\u0005\u0208";
+                "\u0000\u0006\u0001\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005\u0208\u0006\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -5672,16 +6457,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 2;</code>
@@ -5695,16 +6480,16 @@ public final class Web {
     com.elarian.hera.proto.Common.IndexMapping getTag();
 
     /**
-     * <code>string product_id = 3;</code>
-     * @return The productId.
+     * <code>string app_id = 3;</code>
+     * @return The appId.
      */
-    java.lang.String getProductId();
+    java.lang.String getAppId();
     /**
-     * <code>string product_id = 3;</code>
-     * @return The bytes for productId.
+     * <code>string app_id = 3;</code>
+     * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
-        getProductIdBytes();
+        getAppIdBytes();
 
     /**
      * <code>string key = 4;</code>
@@ -5727,54 +6512,54 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CancelCustomerReminderTagRequest)
       CancelCustomerReminderTagRequestOrBuilder {
     private CancelCustomerReminderTagRequest() {
+      orgId_ = "";
       appId_ = "";
-      productId_ = "";
       key_ = "";
     }
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -5824,50 +6609,50 @@ public final class Web {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 3;
-    private java.lang.String productId_;
+    public static final int APP_ID_FIELD_NUMBER = 3;
+    private java.lang.String appId_;
     /**
-     * <code>string product_id = 3;</code>
-     * @return The productId.
+     * <code>string app_id = 3;</code>
+     * @return The appId.
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public java.lang.String getAppId() {
+      return appId_;
     }
     /**
-     * <code>string product_id = 3;</code>
-     * @return The bytes for productId.
+     * <code>string app_id = 3;</code>
+     * @return The bytes for appId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+        getAppIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string product_id = 3;</code>
-     * @param value The productId to set.
+     * <code>string app_id = 3;</code>
+     * @param value The appId to set.
      */
-    private void setProductId(
+    private void setAppId(
         java.lang.String value) {
       value.getClass();
   
-      productId_ = value;
+      appId_ = value;
     }
     /**
-     * <code>string product_id = 3;</code>
+     * <code>string app_id = 3;</code>
      */
-    private void clearProductId() {
+    private void clearAppId() {
       
-      productId_ = getDefaultInstance().getProductId();
+      appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string product_id = 3;</code>
-     * @param value The bytes for productId to set.
+     * <code>string app_id = 3;</code>
+     * @param value The bytes for appId to set.
      */
-    private void setProductIdBytes(
+    private void setAppIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+      appId_ = value.toStringUtf8();
       
     }
 
@@ -6014,51 +6799,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -6110,51 +6895,51 @@ public final class Web {
       }
 
       /**
-       * <code>string product_id = 3;</code>
-       * @return The productId.
+       * <code>string app_id = 3;</code>
+       * @return The appId.
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public java.lang.String getAppId() {
+        return instance.getAppId();
       }
       /**
-       * <code>string product_id = 3;</code>
-       * @return The bytes for productId.
+       * <code>string app_id = 3;</code>
+       * @return The bytes for appId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+          getAppIdBytes() {
+        return instance.getAppIdBytes();
       }
       /**
-       * <code>string product_id = 3;</code>
-       * @param value The productId to set.
+       * <code>string app_id = 3;</code>
+       * @param value The appId to set.
        * @return This builder for chaining.
        */
-      public Builder setProductId(
+      public Builder setAppId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setAppId(value);
         return this;
       }
       /**
-       * <code>string product_id = 3;</code>
+       * <code>string app_id = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearProductId() {
+      public Builder clearAppId() {
         copyOnWrite();
-        instance.clearProductId();
+        instance.clearAppId();
         return this;
       }
       /**
-       * <code>string product_id = 3;</code>
-       * @param value The bytes for productId to set.
+       * <code>string app_id = 3;</code>
+       * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
-      public Builder setProductIdBytes(
+      public Builder setAppIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setProductIdBytes(value);
+        instance.setAppIdBytes(value);
         return this;
       }
 
@@ -6223,9 +7008,9 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "appId_",
+              "orgId_",
               "tag_",
-              "productId_",
+              "appId_",
               "key_",
             };
             java.lang.String info =
@@ -6290,16 +7075,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -6325,16 +7110,27 @@ public final class Web {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
+     */
+    boolean hasSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+
+    /**
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     java.util.List<com.elarian.hera.proto.Common.CustomerIndex> 
         getTagsList();
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     com.elarian.hera.proto.Common.CustomerIndex getTags(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     int getTagsCount();
 
@@ -6349,7 +7145,7 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UpdateCustomerTagRequest)
       UpdateCustomerTagRequestOrBuilder {
     private UpdateCustomerTagRequest() {
-      appId_ = "";
+      orgId_ = "";
       tags_ = emptyProtobufList();
     }
     private int customerCase_ = 0;
@@ -6357,6 +7153,7 @@ public final class Web {
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -6374,6 +7171,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -6395,50 +7193,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -6548,38 +7346,88 @@ public final class Web {
       }
     }
 
-    public static final int TAGS_FIELD_NUMBER = 4;
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.CustomerIndex> tags_;
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getTagsList() {
       return tags_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerIndexOrBuilder> 
         getTagsOrBuilderList() {
       return tags_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     @java.lang.Override
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerIndex getTags(int index) {
       return tags_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     public com.elarian.hera.proto.Common.CustomerIndexOrBuilder getTagsOrBuilder(
         int index) {
@@ -6594,7 +7442,7 @@ public final class Web {
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     private void setTags(
         int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -6603,7 +7451,7 @@ public final class Web {
       tags_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     private void addTags(com.elarian.hera.proto.Common.CustomerIndex value) {
       value.getClass();
@@ -6611,7 +7459,7 @@ public final class Web {
       tags_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     private void addTags(
         int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -6620,7 +7468,7 @@ public final class Web {
       tags_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     private void addAllTags(
         java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
@@ -6629,13 +7477,13 @@ public final class Web {
           values, tags_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     private void clearTags() {
       tags_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
      */
     private void removeTags(int index) {
       ensureTagsIsMutable();
@@ -6750,51 +7598,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -6896,7 +7744,55 @@ public final class Web {
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
+      /**
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       @java.lang.Override
       public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getTagsList() {
@@ -6904,20 +7800,20 @@ public final class Web {
             instance.getTagsList());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       @java.lang.Override
       public int getTagsCount() {
         return instance.getTagsCount();
       }/**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerIndex getTags(int index) {
         return instance.getTags(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder setTags(
           int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -6926,7 +7822,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder setTags(
           int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -6936,7 +7832,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder addTags(com.elarian.hera.proto.Common.CustomerIndex value) {
         copyOnWrite();
@@ -6944,7 +7840,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder addTags(
           int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -6953,7 +7849,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder addTags(
           com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -6962,7 +7858,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder addTags(
           int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -6972,7 +7868,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder addAllTags(
           java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
@@ -6981,7 +7877,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder clearTags() {
         copyOnWrite();
@@ -6989,7 +7885,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex tags = 5;</code>
        */
       public Builder removeTags(int index) {
         copyOnWrite();
@@ -7015,14 +7911,15 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
+              com.elarian.hera.proto.Common.IndexMapping.class,
               "tags_",
               com.elarian.hera.proto.Common.CustomerIndex.class,
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u0004\u001b";
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -7082,16 +7979,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -7117,29 +8014,40 @@ public final class Web {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>repeated string tags = 4;</code>
-     * @return A list containing the tags.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
+     */
+    boolean hasSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+
+    /**
+     * <code>repeated string keys = 5;</code>
+     * @return A list containing the keys.
      */
     java.util.List<java.lang.String>
-        getTagsList();
+        getKeysList();
     /**
-     * <code>repeated string tags = 4;</code>
-     * @return The count of tags.
+     * <code>repeated string keys = 5;</code>
+     * @return The count of keys.
      */
-    int getTagsCount();
+    int getKeysCount();
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string keys = 5;</code>
      * @param index The index of the element to return.
-     * @return The tags at the given index.
+     * @return The keys at the given index.
      */
-    java.lang.String getTags(int index);
+    java.lang.String getKeys(int index);
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string keys = 5;</code>
      * @param index The index of the element to return.
-     * @return The tags at the given index.
+     * @return The keys at the given index.
      */
     com.google.protobuf.ByteString
-        getTagsBytes(int index);
+        getKeysBytes(int index);
 
     public com.elarian.hera.proto.Web.DeleteCustomerTagRequest.CustomerCase getCustomerCase();
   }
@@ -7152,14 +8060,15 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.DeleteCustomerTagRequest)
       DeleteCustomerTagRequestOrBuilder {
     private DeleteCustomerTagRequest() {
-      appId_ = "";
-      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      orgId_ = "";
+      keys_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int customerCase_ = 0;
     private java.lang.Object customer_;
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -7177,6 +8086,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -7198,50 +8108,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -7351,97 +8261,147 @@ public final class Web {
       }
     }
 
-    public static final int TAGS_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.ProtobufList<java.lang.String> tags_;
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
     /**
-     * <code>repeated string tags = 4;</code>
-     * @return A list containing the tags.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<java.lang.String> getTagsList() {
-      return tags_;
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
     }
     /**
-     * <code>repeated string tags = 4;</code>
-     * @return The count of tags.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
      */
     @java.lang.Override
-    public int getTagsCount() {
-      return tags_.size();
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int KEYS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> keys_;
+    /**
+     * <code>repeated string keys = 5;</code>
+     * @return A list containing the keys.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getKeysList() {
+      return keys_;
+    }
+    /**
+     * <code>repeated string keys = 5;</code>
+     * @return The count of keys.
+     */
+    @java.lang.Override
+    public int getKeysCount() {
+      return keys_.size();
+    }
+    /**
+     * <code>repeated string keys = 5;</code>
      * @param index The index of the element to return.
-     * @return The tags at the given index.
+     * @return The keys at the given index.
      */
     @java.lang.Override
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
+    public java.lang.String getKeys(int index) {
+      return keys_.get(index);
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string keys = 5;</code>
      * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
+     * @return The bytes of the keys at the given index.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
+        getKeysBytes(int index) {
       return com.google.protobuf.ByteString.copyFromUtf8(
-          tags_.get(index));
+          keys_.get(index));
     }
-    private void ensureTagsIsMutable() {
+    private void ensureKeysIsMutable() {
       com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
-          tags_;  if (!tmp.isModifiable()) {
-        tags_ =
+          keys_;  if (!tmp.isModifiable()) {
+        keys_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
        }
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string keys = 5;</code>
      * @param index The index to set the value at.
-     * @param value The tags to set.
+     * @param value The keys to set.
      */
-    private void setTags(
+    private void setKeys(
         int index, java.lang.String value) {
       value.getClass();
-  ensureTagsIsMutable();
-      tags_.set(index, value);
+  ensureKeysIsMutable();
+      keys_.set(index, value);
     }
     /**
-     * <code>repeated string tags = 4;</code>
-     * @param value The tags to add.
+     * <code>repeated string keys = 5;</code>
+     * @param value The keys to add.
      */
-    private void addTags(
+    private void addKeys(
         java.lang.String value) {
       value.getClass();
-  ensureTagsIsMutable();
-      tags_.add(value);
+  ensureKeysIsMutable();
+      keys_.add(value);
     }
     /**
-     * <code>repeated string tags = 4;</code>
-     * @param values The tags to add.
+     * <code>repeated string keys = 5;</code>
+     * @param values The keys to add.
      */
-    private void addAllTags(
+    private void addAllKeys(
         java.lang.Iterable<java.lang.String> values) {
-      ensureTagsIsMutable();
+      ensureKeysIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
-          values, tags_);
+          values, keys_);
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string keys = 5;</code>
      */
-    private void clearTags() {
-      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    private void clearKeys() {
+      keys_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     /**
-     * <code>repeated string tags = 4;</code>
-     * @param value The bytes of the tags to add.
+     * <code>repeated string keys = 5;</code>
+     * @param value The bytes of the keys to add.
      */
-    private void addTagsBytes(
+    private void addKeysBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      ensureTagsIsMutable();
-      tags_.add(value.toStringUtf8());
+      ensureKeysIsMutable();
+      keys_.add(value.toStringUtf8());
     }
 
     public static com.elarian.hera.proto.Web.DeleteCustomerTagRequest parseFrom(
@@ -7552,51 +8512,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -7698,94 +8658,142 @@ public final class Web {
       }
 
       /**
-       * <code>repeated string tags = 4;</code>
-       * @return A list containing the tags.
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
+      /**
+       * <code>repeated string keys = 5;</code>
+       * @return A list containing the keys.
        */
       @java.lang.Override
       public java.util.List<java.lang.String>
-          getTagsList() {
+          getKeysList() {
         return java.util.Collections.unmodifiableList(
-            instance.getTagsList());
+            instance.getKeysList());
       }
       /**
-       * <code>repeated string tags = 4;</code>
-       * @return The count of tags.
+       * <code>repeated string keys = 5;</code>
+       * @return The count of keys.
        */
       @java.lang.Override
-      public int getTagsCount() {
-        return instance.getTagsCount();
+      public int getKeysCount() {
+        return instance.getKeysCount();
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string keys = 5;</code>
        * @param index The index of the element to return.
-       * @return The tags at the given index.
+       * @return The keys at the given index.
        */
       @java.lang.Override
-      public java.lang.String getTags(int index) {
-        return instance.getTags(index);
+      public java.lang.String getKeys(int index) {
+        return instance.getKeys(index);
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string keys = 5;</code>
        * @param index The index of the value to return.
-       * @return The bytes of the tags at the given index.
+       * @return The bytes of the keys at the given index.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getTagsBytes(int index) {
-        return instance.getTagsBytes(index);
+          getKeysBytes(int index) {
+        return instance.getKeysBytes(index);
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string keys = 5;</code>
        * @param index The index to set the value at.
-       * @param value The tags to set.
+       * @param value The keys to set.
        * @return This builder for chaining.
        */
-      public Builder setTags(
+      public Builder setKeys(
           int index, java.lang.String value) {
         copyOnWrite();
-        instance.setTags(index, value);
+        instance.setKeys(index, value);
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
-       * @param value The tags to add.
+       * <code>repeated string keys = 5;</code>
+       * @param value The keys to add.
        * @return This builder for chaining.
        */
-      public Builder addTags(
+      public Builder addKeys(
           java.lang.String value) {
         copyOnWrite();
-        instance.addTags(value);
+        instance.addKeys(value);
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
-       * @param values The tags to add.
+       * <code>repeated string keys = 5;</code>
+       * @param values The keys to add.
        * @return This builder for chaining.
        */
-      public Builder addAllTags(
+      public Builder addAllKeys(
           java.lang.Iterable<java.lang.String> values) {
         copyOnWrite();
-        instance.addAllTags(values);
+        instance.addAllKeys(values);
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string keys = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTags() {
+      public Builder clearKeys() {
         copyOnWrite();
-        instance.clearTags();
+        instance.clearKeys();
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
-       * @param value The bytes of the tags to add.
+       * <code>repeated string keys = 5;</code>
+       * @param value The bytes of the keys to add.
        * @return This builder for chaining.
        */
-      public Builder addTagsBytes(
+      public Builder addKeysBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.addTagsBytes(value);
+        instance.addKeysBytes(value);
         return this;
       }
 
@@ -7807,13 +8815,14 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
-              "tags_",
+              com.elarian.hera.proto.Common.IndexMapping.class,
+              "keys_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u0004\u021a";
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -7873,16 +8882,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string appId = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string appId = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -7908,16 +8917,27 @@ public final class Web {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
+     */
+    boolean hasSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+
+    /**
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     java.util.List<com.elarian.hera.proto.Common.CustomerIndex> 
         getSecondaryIdsList();
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     com.elarian.hera.proto.Common.CustomerIndex getSecondaryIds(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     int getSecondaryIdsCount();
 
@@ -7932,7 +8952,7 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UpdateCustomerSecondaryIdRequest)
       UpdateCustomerSecondaryIdRequestOrBuilder {
     private UpdateCustomerSecondaryIdRequest() {
-      appId_ = "";
+      orgId_ = "";
       secondaryIds_ = emptyProtobufList();
     }
     private int customerCase_ = 0;
@@ -7940,6 +8960,7 @@ public final class Web {
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -7957,6 +8978,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -7978,50 +9000,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APPID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string appId = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string appId = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string appId = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string appId = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string appId = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -8131,38 +9153,88 @@ public final class Web {
       }
     }
 
-    public static final int SECONDARY_IDS_FIELD_NUMBER = 4;
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int SECONDARY_IDS_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.CustomerIndex> secondaryIds_;
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getSecondaryIdsList() {
       return secondaryIds_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     public java.util.List<? extends com.elarian.hera.proto.Common.CustomerIndexOrBuilder> 
         getSecondaryIdsOrBuilderList() {
       return secondaryIds_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     @java.lang.Override
     public int getSecondaryIdsCount() {
       return secondaryIds_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerIndex getSecondaryIds(int index) {
       return secondaryIds_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     public com.elarian.hera.proto.Common.CustomerIndexOrBuilder getSecondaryIdsOrBuilder(
         int index) {
@@ -8177,7 +9249,7 @@ public final class Web {
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     private void setSecondaryIds(
         int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -8186,7 +9258,7 @@ public final class Web {
       secondaryIds_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     private void addSecondaryIds(com.elarian.hera.proto.Common.CustomerIndex value) {
       value.getClass();
@@ -8194,7 +9266,7 @@ public final class Web {
       secondaryIds_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     private void addSecondaryIds(
         int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -8203,7 +9275,7 @@ public final class Web {
       secondaryIds_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     private void addAllSecondaryIds(
         java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
@@ -8212,13 +9284,13 @@ public final class Web {
           values, secondaryIds_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     private void clearSecondaryIds() {
       secondaryIds_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
      */
     private void removeSecondaryIds(int index) {
       ensureSecondaryIdsIsMutable();
@@ -8333,51 +9405,51 @@ public final class Web {
 
 
       /**
-       * <code>string appId = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string appId = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string appId = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string appId = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string appId = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -8479,7 +9551,55 @@ public final class Web {
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
+      /**
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       @java.lang.Override
       public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getSecondaryIdsList() {
@@ -8487,20 +9607,20 @@ public final class Web {
             instance.getSecondaryIdsList());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       @java.lang.Override
       public int getSecondaryIdsCount() {
         return instance.getSecondaryIdsCount();
       }/**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerIndex getSecondaryIds(int index) {
         return instance.getSecondaryIds(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder setSecondaryIds(
           int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -8509,7 +9629,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder setSecondaryIds(
           int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -8519,7 +9639,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder addSecondaryIds(com.elarian.hera.proto.Common.CustomerIndex value) {
         copyOnWrite();
@@ -8527,7 +9647,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder addSecondaryIds(
           int index, com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -8536,7 +9656,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder addSecondaryIds(
           com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -8545,7 +9665,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder addSecondaryIds(
           int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -8555,7 +9675,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder addAllSecondaryIds(
           java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
@@ -8564,7 +9684,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder clearSecondaryIds() {
         copyOnWrite();
@@ -8572,7 +9692,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.CustomerIndex secondary_ids = 5;</code>
        */
       public Builder removeSecondaryIds(int index) {
         copyOnWrite();
@@ -8598,14 +9718,15 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
+              com.elarian.hera.proto.Common.IndexMapping.class,
               "secondaryIds_",
               com.elarian.hera.proto.Common.CustomerIndex.class,
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u0004\u001b";
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -8665,16 +9786,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -8700,18 +9821,29 @@ public final class Web {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
+     */
+    boolean hasSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+
+    /**
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
     java.util.List<com.elarian.hera.proto.Common.IndexMapping> 
-        getSecondaryIdsList();
+        getMappingsList();
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryIds(int index);
+    com.elarian.hera.proto.Common.IndexMapping getMappings(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    int getSecondaryIdsCount();
+    int getMappingsCount();
 
     public com.elarian.hera.proto.Web.DeleteCustomerSecondaryIdRequest.CustomerCase getCustomerCase();
   }
@@ -8724,14 +9856,15 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.DeleteCustomerSecondaryIdRequest)
       DeleteCustomerSecondaryIdRequestOrBuilder {
     private DeleteCustomerSecondaryIdRequest() {
-      appId_ = "";
-      secondaryIds_ = emptyProtobufList();
+      orgId_ = "";
+      mappings_ = emptyProtobufList();
     }
     private int customerCase_ = 0;
     private java.lang.Object customer_;
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -8749,6 +9882,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -8770,50 +9904,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -8923,98 +10057,148 @@ public final class Web {
       }
     }
 
-    public static final int SECONDARY_IDS_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.IndexMapping> secondaryIds_;
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<com.elarian.hera.proto.Common.IndexMapping> getSecondaryIdsList() {
-      return secondaryIds_;
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int MAPPINGS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.IndexMapping> mappings_;
+    /**
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.elarian.hera.proto.Common.IndexMapping> getMappingsList() {
+      return mappings_;
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
     public java.util.List<? extends com.elarian.hera.proto.Common.IndexMappingOrBuilder> 
-        getSecondaryIdsOrBuilderList() {
-      return secondaryIds_;
+        getMappingsOrBuilderList() {
+      return mappings_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
     @java.lang.Override
-    public int getSecondaryIdsCount() {
-      return secondaryIds_.size();
+    public int getMappingsCount() {
+      return mappings_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryIds(int index) {
-      return secondaryIds_.get(index);
+    public com.elarian.hera.proto.Common.IndexMapping getMappings(int index) {
+      return mappings_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    public com.elarian.hera.proto.Common.IndexMappingOrBuilder getSecondaryIdsOrBuilder(
+    public com.elarian.hera.proto.Common.IndexMappingOrBuilder getMappingsOrBuilder(
         int index) {
-      return secondaryIds_.get(index);
+      return mappings_.get(index);
     }
-    private void ensureSecondaryIdsIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.IndexMapping> tmp = secondaryIds_;
+    private void ensureMappingsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.IndexMapping> tmp = mappings_;
       if (!tmp.isModifiable()) {
-        secondaryIds_ =
+        mappings_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
        }
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    private void setSecondaryIds(
+    private void setMappings(
         int index, com.elarian.hera.proto.Common.IndexMapping value) {
       value.getClass();
-  ensureSecondaryIdsIsMutable();
-      secondaryIds_.set(index, value);
+  ensureMappingsIsMutable();
+      mappings_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    private void addSecondaryIds(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void addMappings(com.elarian.hera.proto.Common.IndexMapping value) {
       value.getClass();
-  ensureSecondaryIdsIsMutable();
-      secondaryIds_.add(value);
+  ensureMappingsIsMutable();
+      mappings_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    private void addSecondaryIds(
+    private void addMappings(
         int index, com.elarian.hera.proto.Common.IndexMapping value) {
       value.getClass();
-  ensureSecondaryIdsIsMutable();
-      secondaryIds_.add(index, value);
+  ensureMappingsIsMutable();
+      mappings_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    private void addAllSecondaryIds(
+    private void addAllMappings(
         java.lang.Iterable<? extends com.elarian.hera.proto.Common.IndexMapping> values) {
-      ensureSecondaryIdsIsMutable();
+      ensureMappingsIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
-          values, secondaryIds_);
+          values, mappings_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    private void clearSecondaryIds() {
-      secondaryIds_ = emptyProtobufList();
+    private void clearMappings() {
+      mappings_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
      */
-    private void removeSecondaryIds(int index) {
-      ensureSecondaryIdsIsMutable();
-      secondaryIds_.remove(index);
+    private void removeMappings(int index) {
+      ensureMappingsIsMutable();
+      mappings_.remove(index);
     }
 
     public static com.elarian.hera.proto.Web.DeleteCustomerSecondaryIdRequest parseFrom(
@@ -9125,51 +10309,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -9271,104 +10455,152 @@ public final class Web {
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
       @java.lang.Override
-      public java.util.List<com.elarian.hera.proto.Common.IndexMapping> getSecondaryIdsList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getSecondaryIdsList());
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
       @java.lang.Override
-      public int getSecondaryIdsCount() {
-        return instance.getSecondaryIdsCount();
-      }/**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryIds(int index) {
-        return instance.getSecondaryIds(index);
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
-      public Builder setSecondaryIds(
-          int index, com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
         copyOnWrite();
-        instance.setSecondaryIds(index, value);
+        instance.setSecondaryId(value);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
-      public Builder setSecondaryIds(
-          int index, com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
-        copyOnWrite();
-        instance.setSecondaryIds(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
-       */
-      public Builder addSecondaryIds(com.elarian.hera.proto.Common.IndexMapping value) {
-        copyOnWrite();
-        instance.addSecondaryIds(value);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
-       */
-      public Builder addSecondaryIds(
-          int index, com.elarian.hera.proto.Common.IndexMapping value) {
-        copyOnWrite();
-        instance.addSecondaryIds(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
-       */
-      public Builder addSecondaryIds(
+      public Builder setSecondaryId(
           com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
         copyOnWrite();
-        instance.addSecondaryIds(builderForValue.build());
+        instance.setSecondaryId(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
        */
-      public Builder addSecondaryIds(
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
+      /**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.elarian.hera.proto.Common.IndexMapping> getMappingsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMappingsList());
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      @java.lang.Override
+      public int getMappingsCount() {
+        return instance.getMappingsCount();
+      }/**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getMappings(int index) {
+        return instance.getMappings(index);
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      public Builder setMappings(
+          int index, com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setMappings(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      public Builder setMappings(
           int index, com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
         copyOnWrite();
-        instance.addSecondaryIds(index,
+        instance.setMappings(index,
             builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
        */
-      public Builder addAllSecondaryIds(
+      public Builder addMappings(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.addMappings(value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      public Builder addMappings(
+          int index, com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.addMappings(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      public Builder addMappings(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.addMappings(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      public Builder addMappings(
+          int index, com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.addMappings(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
+       */
+      public Builder addAllMappings(
           java.lang.Iterable<? extends com.elarian.hera.proto.Common.IndexMapping> values) {
         copyOnWrite();
-        instance.addAllSecondaryIds(values);
+        instance.addAllMappings(values);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
        */
-      public Builder clearSecondaryIds() {
+      public Builder clearMappings() {
         copyOnWrite();
-        instance.clearSecondaryIds();
+        instance.clearMappings();
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.IndexMapping secondary_ids = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.IndexMapping mappings = 5;</code>
        */
-      public Builder removeSecondaryIds(int index) {
+      public Builder removeMappings(int index) {
         copyOnWrite();
-        instance.removeSecondaryIds(index);
+        instance.removeMappings(index);
         return this;
       }
 
@@ -9390,14 +10622,15 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
-              "secondaryIds_",
+              com.elarian.hera.proto.Common.IndexMapping.class,
+              "mappings_",
               com.elarian.hera.proto.Common.IndexMapping.class,
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u0004\u001b";
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -9452,21 +10685,21 @@ public final class Web {
     }
   }
 
-  public interface UpdateCustomerMetadataRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UpdateCustomerMetadataRequest)
+  public interface LeaseCustomerMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.LeaseCustomerMetadataRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -9492,57 +10725,48 @@ public final class Web {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
      */
-    int getMetadataCount();
+    boolean hasSecondaryId();
     /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
      */
-    boolean containsMetadata(
-        java.lang.String key);
-    /**
-     * Use {@link #getMetadataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getMetadata();
-    /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
-     */
-    java.util.Map<java.lang.String, java.lang.String>
-    getMetadataMap();
-    /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
-     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
 
-    java.lang.String getMetadataOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     * <code>string key = 5;</code>
+     * @return The key.
      */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 5;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
 
-    java.lang.String getMetadataOrThrow(
-        java.lang.String key);
-
-    public com.elarian.hera.proto.Web.UpdateCustomerMetadataRequest.CustomerCase getCustomerCase();
+    public com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest.CustomerCase getCustomerCase();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.UpdateCustomerMetadataRequest}
+   * Protobuf type {@code com.elarian.hera.proto.LeaseCustomerMetadataRequest}
    */
-  public  static final class UpdateCustomerMetadataRequest extends
+  public  static final class LeaseCustomerMetadataRequest extends
       com.google.protobuf.GeneratedMessageLite<
-          UpdateCustomerMetadataRequest, UpdateCustomerMetadataRequest.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UpdateCustomerMetadataRequest)
-      UpdateCustomerMetadataRequestOrBuilder {
-    private UpdateCustomerMetadataRequest() {
-      appId_ = "";
+          LeaseCustomerMetadataRequest, LeaseCustomerMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.LeaseCustomerMetadataRequest)
+      LeaseCustomerMetadataRequestOrBuilder {
+    private LeaseCustomerMetadataRequest() {
+      orgId_ = "";
+      key_ = "";
     }
     private int customerCase_ = 0;
     private java.lang.Object customer_;
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -9560,6 +10784,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -9581,50 +10806,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -9734,25 +10959,1461 @@ public final class Web {
       }
     }
 
-    public static final int METADATA_FIELD_NUMBER = 4;
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int KEY_FIELD_NUMBER = 5;
+    private java.lang.String key_;
+    /**
+     * <code>string key = 5;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      return key_;
+    }
+    /**
+     * <code>string key = 5;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(key_);
+    }
+    /**
+     * <code>string key = 5;</code>
+     * @param value The key to set.
+     */
+    private void setKey(
+        java.lang.String value) {
+      value.getClass();
+  
+      key_ = value;
+    }
+    /**
+     * <code>string key = 5;</code>
+     */
+    private void clearKey() {
+      
+      key_ = getDefaultInstance().getKey();
+    }
+    /**
+     * <code>string key = 5;</code>
+     * @param value The bytes for key to set.
+     */
+    private void setKeyBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      key_ = value.toStringUtf8();
+      
+    }
+
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.LeaseCustomerMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.LeaseCustomerMetadataRequest)
+        com.elarian.hera.proto.Web.LeaseCustomerMetadataRequestOrBuilder {
+      // Construct using com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public CustomerCase
+          getCustomerCase() {
+        return instance.getCustomerCase();
+      }
+
+      public Builder clearCustomer() {
+        copyOnWrite();
+        instance.clearCustomer();
+        return this;
+      }
+
+
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string customer_id = 2;</code>
+       * @return The customerId.
+       */
+      @java.lang.Override
+      public java.lang.String getCustomerId() {
+        return instance.getCustomerId();
+      }
+      /**
+       * <code>string customer_id = 2;</code>
+       * @return The bytes for customerId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCustomerIdBytes() {
+        return instance.getCustomerIdBytes();
+      }
+      /**
+       * <code>string customer_id = 2;</code>
+       * @param value The customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>string customer_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerId() {
+        copyOnWrite();
+        instance.clearCustomerId();
+        return this;
+      }
+      /**
+       * <code>string customer_id = 2;</code>
+       * @param value The bytes for customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCustomerIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+       */
+      public Builder clearCustomerNumber() {
+        copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
+      /**
+       * <code>string key = 5;</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public java.lang.String getKey() {
+        return instance.getKey();
+      }
+      /**
+       * <code>string key = 5;</code>
+       * @return The bytes for key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        return instance.getKeyBytes();
+      }
+      /**
+       * <code>string key = 5;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setKey(value);
+        return this;
+      }
+      /**
+       * <code>string key = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        copyOnWrite();
+        instance.clearKey();
+        return this;
+      }
+      /**
+       * <code>string key = 5;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setKeyBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.LeaseCustomerMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customer_",
+              "customerCase_",
+              "orgId_",
+              com.elarian.hera.proto.Common.CustomerNumber.class,
+              com.elarian.hera.proto.Common.IndexMapping.class,
+              "key_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.LeaseCustomerMetadataRequest)
+    private static final com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest DEFAULT_INSTANCE;
+    static {
+      LeaseCustomerMetadataRequest defaultInstance = new LeaseCustomerMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        LeaseCustomerMetadataRequest.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<LeaseCustomerMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<LeaseCustomerMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface LeaseCustomerMetadataReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.LeaseCustomerMetadataReply)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>bool status = 1;</code>
+     * @return The status.
+     */
+    boolean getStatus();
+
+    /**
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     * @return Whether the customerId field is set.
+     */
+    boolean hasCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     * @return The customerId.
+     */
+    com.google.protobuf.StringValue getCustomerId();
+
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+     * @return The value.
+     */
+    com.elarian.hera.proto.Common.DataMapValue getValue();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.LeaseCustomerMetadataReply}
+   */
+  public  static final class LeaseCustomerMetadataReply extends
+      com.google.protobuf.GeneratedMessageLite<
+          LeaseCustomerMetadataReply, LeaseCustomerMetadataReply.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.LeaseCustomerMetadataReply)
+      LeaseCustomerMetadataReplyOrBuilder {
+    private LeaseCustomerMetadataReply() {
+      description_ = "";
+    }
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private boolean status_;
+    /**
+     * <code>bool status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public boolean getStatus() {
+      return status_;
+    }
+    /**
+     * <code>bool status = 1;</code>
+     * @param value The status to set.
+     */
+    private void setStatus(boolean value) {
+      
+      status_ = value;
+    }
+    /**
+     * <code>bool status = 1;</code>
+     */
+    private void clearStatus() {
+      
+      status_ = false;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private java.lang.String description_;
+    /**
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      return description_;
+    }
+    /**
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <code>string description = 2;</code>
+     * @param value The description to set.
+     */
+    private void setDescription(
+        java.lang.String value) {
+      value.getClass();
+  
+      description_ = value;
+    }
+    /**
+     * <code>string description = 2;</code>
+     */
+    private void clearDescription() {
+      
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <code>string description = 2;</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+      
+    }
+
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue customerId_;
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerId() {
+      return customerId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getCustomerId() {
+      return customerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    private void setCustomerId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  customerId_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (customerId_ != null &&
+          customerId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        customerId_ =
+          com.google.protobuf.StringValue.newBuilder(customerId_).mergeFrom(value).buildPartial();
+      } else {
+        customerId_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    private void clearCustomerId() {  customerId_ = null;
+      
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.DataMapValue value_;
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.DataMapValue getValue() {
+      return value_ == null ? com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+     */
+    private void setValue(com.elarian.hera.proto.Common.DataMapValue value) {
+      value.getClass();
+  value_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeValue(com.elarian.hera.proto.Common.DataMapValue value) {
+      value.getClass();
+  if (value_ != null &&
+          value_ != com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance()) {
+        value_ =
+          com.elarian.hera.proto.Common.DataMapValue.newBuilder(value_).mergeFrom(value).buildPartial();
+      } else {
+        value_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+     */
+    private void clearValue() {  value_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Web.LeaseCustomerMetadataReply prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.LeaseCustomerMetadataReply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Web.LeaseCustomerMetadataReply, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.LeaseCustomerMetadataReply)
+        com.elarian.hera.proto.Web.LeaseCustomerMetadataReplyOrBuilder {
+      // Construct using com.elarian.hera.proto.Web.LeaseCustomerMetadataReply.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>bool status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public boolean getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>bool status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(boolean value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <code>bool status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
+        return this;
+      }
+
+      /**
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      @java.lang.Override
+      public java.lang.String getDescription() {
+        return instance.getDescription();
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        return instance.getDescriptionBytes();
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDescription(value);
+        return this;
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        copyOnWrite();
+        instance.clearDescription();
+        return this;
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerId() {
+        return instance.hasCustomerId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getCustomerId() {
+        return instance.getCustomerId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder setCustomerId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setCustomerId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder setCustomerId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder mergeCustomerId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder clearCustomerId() {  copyOnWrite();
+        instance.clearCustomerId();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return instance.hasValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.DataMapValue getValue() {
+        return instance.getValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+       */
+      public Builder setValue(com.elarian.hera.proto.Common.DataMapValue value) {
+        copyOnWrite();
+        instance.setValue(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+       */
+      public Builder setValue(
+          com.elarian.hera.proto.Common.DataMapValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setValue(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+       */
+      public Builder mergeValue(com.elarian.hera.proto.Common.DataMapValue value) {
+        copyOnWrite();
+        instance.mergeValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
+       */
+      public Builder clearValue() {  copyOnWrite();
+        instance.clearValue();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.LeaseCustomerMetadataReply)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Web.LeaseCustomerMetadataReply();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "status_",
+              "description_",
+              "customerId_",
+              "value_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0007\u0002\u0208" +
+                "\u0003\t\u0004\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Web.LeaseCustomerMetadataReply> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Web.LeaseCustomerMetadataReply.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Web.LeaseCustomerMetadataReply>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.LeaseCustomerMetadataReply)
+    private static final com.elarian.hera.proto.Web.LeaseCustomerMetadataReply DEFAULT_INSTANCE;
+    static {
+      LeaseCustomerMetadataReply defaultInstance = new LeaseCustomerMetadataReply();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        LeaseCustomerMetadataReply.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Web.LeaseCustomerMetadataReply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<LeaseCustomerMetadataReply> PARSER;
+
+    public static com.google.protobuf.Parser<LeaseCustomerMetadataReply> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateCustomerMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UpdateCustomerMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string customer_id = 2;</code>
+     * @return The customerId.
+     */
+    java.lang.String getCustomerId();
+    /**
+     * <code>string customer_id = 2;</code>
+     * @return The bytes for customerId.
+     */
+    com.google.protobuf.ByteString
+        getCustomerIdBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
+     */
+    boolean hasSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
+     */
+    int getMetadataCount();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
+     */
+    boolean containsMetadata(
+        java.lang.String key);
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
+    getMetadata();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
+     */
+    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
+    getMetadataMap();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
+     */
+
+    com.elarian.hera.proto.Common.DataMapValue getMetadataOrDefault(
+        java.lang.String key,
+        com.elarian.hera.proto.Common.DataMapValue defaultValue);
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
+     */
+
+    com.elarian.hera.proto.Common.DataMapValue getMetadataOrThrow(
+        java.lang.String key);
+
+    public com.elarian.hera.proto.Web.UpdateCustomerMetadataRequest.CustomerCase getCustomerCase();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.UpdateCustomerMetadataRequest}
+   */
+  public  static final class UpdateCustomerMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateCustomerMetadataRequest, UpdateCustomerMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UpdateCustomerMetadataRequest)
+      UpdateCustomerMetadataRequestOrBuilder {
+    private UpdateCustomerMetadataRequest() {
+      orgId_ = "";
+    }
+    private int customerCase_ = 0;
+    private java.lang.Object customer_;
+    public enum CustomerCase {
+      CUSTOMER_ID(2),
+      CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
+      CUSTOMER_NOT_SET(0);
+      private final int value;
+      private CustomerCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CustomerCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static CustomerCase forNumber(int value) {
+        switch (value) {
+          case 2: return CUSTOMER_ID;
+          case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
+          case 0: return CUSTOMER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public CustomerCase
+    getCustomerCase() {
+      return CustomerCase.forNumber(
+          customerCase_);
+    }
+
+    private void clearCustomer() {
+      customerCase_ = 0;
+      customer_ = null;
+    }
+
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 2;
+    /**
+     * <code>string customer_id = 2;</code>
+     * @return The customerId.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerId() {
+      java.lang.String ref = "";
+      if (customerCase_ == 2) {
+        ref = (java.lang.String) customer_;
+      }
+      return ref;
+    }
+    /**
+     * <code>string customer_id = 2;</code>
+     * @return The bytes for customerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerIdBytes() {
+      java.lang.String ref = "";
+      if (customerCase_ == 2) {
+        ref = (java.lang.String) customer_;
+      }
+      return com.google.protobuf.ByteString.copyFromUtf8(ref);
+    }
+    /**
+     * <code>string customer_id = 2;</code>
+     * @param value The customerId to set.
+     */
+    private void setCustomerId(
+        java.lang.String value) {
+      value.getClass();
+  customerCase_ = 2;
+      customer_ = value;
+    }
+    /**
+     * <code>string customer_id = 2;</code>
+     */
+    private void clearCustomerId() {
+      if (customerCase_ == 2) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+    /**
+     * <code>string customer_id = 2;</code>
+     * @param value The bytes for customerId to set.
+     */
+    private void setCustomerIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      customer_ = value.toStringUtf8();
+      customerCase_ = 2;
+    }
+
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 3;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerCase_ == 3;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      if (customerCase_ == 3) {
+         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+      }
+      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 3;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+     */
+    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  if (customerCase_ == 3 &&
+          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 3;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
+     */
+    private void clearCustomerNumber() {
+      if (customerCase_ == 3) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 5;
     private static final class MetadataDefaultEntryHolder {
       static final com.google.protobuf.MapEntryLite<
-          java.lang.String, java.lang.String> defaultEntry =
+          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> defaultEntry =
               com.google.protobuf.MapEntryLite
-              .<java.lang.String, java.lang.String>newDefaultInstance(
+              .<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>newDefaultInstance(
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance());
     }
     private com.google.protobuf.MapFieldLite<
-        java.lang.String, java.lang.String> metadata_ =
+        java.lang.String, com.elarian.hera.proto.Common.DataMapValue> metadata_ =
             com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
     internalGetMetadata() {
       return metadata_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
     internalGetMutableMetadata() {
       if (!metadata_.isMutable()) {
         metadata_ = metadata_.mutableCopy();
@@ -9765,7 +12426,7 @@ public final class Web {
       return internalGetMetadata().size();
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
      */
     @java.lang.Override
 
@@ -9779,40 +12440,40 @@ public final class Web {
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getMetadata() {
       return getMetadataMap();
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
      */
     @java.lang.Override
 
-    public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getMetadataMap() {
       return java.util.Collections.unmodifiableMap(
           internalGetMetadata());
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
      */
     @java.lang.Override
 
-    public java.lang.String getMetadataOrDefault(
+    public com.elarian.hera.proto.Common.DataMapValue getMetadataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        com.elarian.hera.proto.Common.DataMapValue defaultValue) {
       key.getClass();
-      java.util.Map<java.lang.String, java.lang.String> map =
+      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
           internalGetMetadata();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
      */
     @java.lang.Override
 
-    public java.lang.String getMetadataOrThrow(
+    public com.elarian.hera.proto.Common.DataMapValue getMetadataOrThrow(
         java.lang.String key) {
       key.getClass();
-      java.util.Map<java.lang.String, java.lang.String> map =
+      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
           internalGetMetadata();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -9820,9 +12481,9 @@ public final class Web {
       return map.get(key);
     }
     /**
-     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
      */
-    private java.util.Map<java.lang.String, java.lang.String>
+    private java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
     getMutableMetadataMap() {
       return internalGetMutableMetadata();
     }
@@ -9935,51 +12596,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -10080,13 +12741,61 @@ public final class Web {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
       @java.lang.Override
 
       public int getMetadataCount() {
         return instance.getMetadataMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
        */
       @java.lang.Override
 
@@ -10102,7 +12811,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
        */
 
       public Builder removeMetadata(
@@ -10117,39 +12826,39 @@ public final class Web {
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getMetadata() {
         return getMetadataMap();
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getMetadataMap() {
         return java.util.Collections.unmodifiableMap(
             instance.getMetadataMap());
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
        */
       @java.lang.Override
 
-      public java.lang.String getMetadataOrDefault(
+      public com.elarian.hera.proto.Common.DataMapValue getMetadataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          com.elarian.hera.proto.Common.DataMapValue defaultValue) {
         key.getClass();
-        java.util.Map<java.lang.String, java.lang.String> map =
+        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
             instance.getMetadataMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
        */
       @java.lang.Override
 
-      public java.lang.String getMetadataOrThrow(
+      public com.elarian.hera.proto.Common.DataMapValue getMetadataOrThrow(
           java.lang.String key) {
         key.getClass();
-        java.util.Map<java.lang.String, java.lang.String> map =
+        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
             instance.getMetadataMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
@@ -10157,11 +12866,11 @@ public final class Web {
         return map.get(key);
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
        */
       public Builder putMetadata(
           java.lang.String key,
-          java.lang.String value) {
+          com.elarian.hera.proto.Common.DataMapValue value) {
         key.getClass();
         value.getClass();
         copyOnWrite();
@@ -10169,10 +12878,10 @@ public final class Web {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; metadata = 5;</code>
        */
       public Builder putAllMetadata(
-          java.util.Map<java.lang.String, java.lang.String> values) {
+          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> values) {
         copyOnWrite();
         instance.getMutableMetadataMap().putAll(values);
         return this;
@@ -10196,14 +12905,15 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
+              com.elarian.hera.proto.Common.IndexMapping.class,
               "metadata_",
               MetadataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0001\u0000\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u00042";
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0001\u0000\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u00052";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -10263,16 +12973,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    java.lang.String getAppId();
+    java.lang.String getOrgId();
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     com.google.protobuf.ByteString
-        getAppIdBytes();
+        getOrgIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -10298,29 +13008,40 @@ public final class Web {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>repeated string metadata = 4;</code>
-     * @return A list containing the metadata.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return Whether the secondaryId field is set.
+     */
+    boolean hasSecondaryId();
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     * @return The secondaryId.
+     */
+    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+
+    /**
+     * <code>repeated string keys = 5;</code>
+     * @return A list containing the keys.
      */
     java.util.List<java.lang.String>
-        getMetadataList();
+        getKeysList();
     /**
-     * <code>repeated string metadata = 4;</code>
-     * @return The count of metadata.
+     * <code>repeated string keys = 5;</code>
+     * @return The count of keys.
      */
-    int getMetadataCount();
+    int getKeysCount();
     /**
-     * <code>repeated string metadata = 4;</code>
+     * <code>repeated string keys = 5;</code>
      * @param index The index of the element to return.
-     * @return The metadata at the given index.
+     * @return The keys at the given index.
      */
-    java.lang.String getMetadata(int index);
+    java.lang.String getKeys(int index);
     /**
-     * <code>repeated string metadata = 4;</code>
+     * <code>repeated string keys = 5;</code>
      * @param index The index of the element to return.
-     * @return The metadata at the given index.
+     * @return The keys at the given index.
      */
     com.google.protobuf.ByteString
-        getMetadataBytes(int index);
+        getKeysBytes(int index);
 
     public com.elarian.hera.proto.Web.DeleteCustomerMetadataRequest.CustomerCase getCustomerCase();
   }
@@ -10333,14 +13054,15 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.DeleteCustomerMetadataRequest)
       DeleteCustomerMetadataRequestOrBuilder {
     private DeleteCustomerMetadataRequest() {
-      appId_ = "";
-      metadata_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      orgId_ = "";
+      keys_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int customerCase_ = 0;
     private java.lang.Object customer_;
     public enum CustomerCase {
       CUSTOMER_ID(2),
       CUSTOMER_NUMBER(3),
+      SECONDARY_ID(4),
       CUSTOMER_NOT_SET(0);
       private final int value;
       private CustomerCase(int value) {
@@ -10358,6 +13080,7 @@ public final class Web {
         switch (value) {
           case 2: return CUSTOMER_ID;
           case 3: return CUSTOMER_NUMBER;
+          case 4: return SECONDARY_ID;
           case 0: return CUSTOMER_NOT_SET;
           default: return null;
         }
@@ -10379,50 +13102,50 @@ public final class Web {
       customer_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
      */
-    private void setAppId(
+    private void setOrgId(
         java.lang.String value) {
       value.getClass();
   
-      appId_ = value;
+      orgId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
      */
-    private void clearAppId() {
+    private void clearOrgId() {
       
-      appId_ = getDefaultInstance().getAppId();
+      orgId_ = getDefaultInstance().getOrgId();
     }
     /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
      */
-    private void setAppIdBytes(
+    private void setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
+      orgId_ = value.toStringUtf8();
       
     }
 
@@ -10532,97 +13255,147 @@ public final class Web {
       }
     }
 
-    public static final int METADATA_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.ProtobufList<java.lang.String> metadata_;
+    public static final int SECONDARY_ID_FIELD_NUMBER = 4;
     /**
-     * <code>repeated string metadata = 4;</code>
-     * @return A list containing the metadata.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<java.lang.String> getMetadataList() {
-      return metadata_;
+    public boolean hasSecondaryId() {
+      return customerCase_ == 4;
     }
     /**
-     * <code>repeated string metadata = 4;</code>
-     * @return The count of metadata.
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
      */
     @java.lang.Override
-    public int getMetadataCount() {
-      return metadata_.size();
+    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      if (customerCase_ == 4) {
+         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+      }
+      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
     }
     /**
-     * <code>repeated string metadata = 4;</code>
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  customer_ = value;
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      value.getClass();
+  if (customerCase_ == 4 &&
+          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        customer_ = value;
+      }
+      customerCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+     */
+    private void clearSecondaryId() {
+      if (customerCase_ == 4) {
+        customerCase_ = 0;
+        customer_ = null;
+      }
+    }
+
+    public static final int KEYS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> keys_;
+    /**
+     * <code>repeated string keys = 5;</code>
+     * @return A list containing the keys.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getKeysList() {
+      return keys_;
+    }
+    /**
+     * <code>repeated string keys = 5;</code>
+     * @return The count of keys.
+     */
+    @java.lang.Override
+    public int getKeysCount() {
+      return keys_.size();
+    }
+    /**
+     * <code>repeated string keys = 5;</code>
      * @param index The index of the element to return.
-     * @return The metadata at the given index.
+     * @return The keys at the given index.
      */
     @java.lang.Override
-    public java.lang.String getMetadata(int index) {
-      return metadata_.get(index);
+    public java.lang.String getKeys(int index) {
+      return keys_.get(index);
     }
     /**
-     * <code>repeated string metadata = 4;</code>
+     * <code>repeated string keys = 5;</code>
      * @param index The index of the value to return.
-     * @return The bytes of the metadata at the given index.
+     * @return The bytes of the keys at the given index.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getMetadataBytes(int index) {
+        getKeysBytes(int index) {
       return com.google.protobuf.ByteString.copyFromUtf8(
-          metadata_.get(index));
+          keys_.get(index));
     }
-    private void ensureMetadataIsMutable() {
+    private void ensureKeysIsMutable() {
       com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
-          metadata_;  if (!tmp.isModifiable()) {
-        metadata_ =
+          keys_;  if (!tmp.isModifiable()) {
+        keys_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
        }
     }
     /**
-     * <code>repeated string metadata = 4;</code>
+     * <code>repeated string keys = 5;</code>
      * @param index The index to set the value at.
-     * @param value The metadata to set.
+     * @param value The keys to set.
      */
-    private void setMetadata(
+    private void setKeys(
         int index, java.lang.String value) {
       value.getClass();
-  ensureMetadataIsMutable();
-      metadata_.set(index, value);
+  ensureKeysIsMutable();
+      keys_.set(index, value);
     }
     /**
-     * <code>repeated string metadata = 4;</code>
-     * @param value The metadata to add.
+     * <code>repeated string keys = 5;</code>
+     * @param value The keys to add.
      */
-    private void addMetadata(
+    private void addKeys(
         java.lang.String value) {
       value.getClass();
-  ensureMetadataIsMutable();
-      metadata_.add(value);
+  ensureKeysIsMutable();
+      keys_.add(value);
     }
     /**
-     * <code>repeated string metadata = 4;</code>
-     * @param values The metadata to add.
+     * <code>repeated string keys = 5;</code>
+     * @param values The keys to add.
      */
-    private void addAllMetadata(
+    private void addAllKeys(
         java.lang.Iterable<java.lang.String> values) {
-      ensureMetadataIsMutable();
+      ensureKeysIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
-          values, metadata_);
+          values, keys_);
     }
     /**
-     * <code>repeated string metadata = 4;</code>
+     * <code>repeated string keys = 5;</code>
      */
-    private void clearMetadata() {
-      metadata_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    private void clearKeys() {
+      keys_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     /**
-     * <code>repeated string metadata = 4;</code>
-     * @param value The bytes of the metadata to add.
+     * <code>repeated string keys = 5;</code>
+     * @param value The bytes of the keys to add.
      */
-    private void addMetadataBytes(
+    private void addKeysBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      ensureMetadataIsMutable();
-      metadata_.add(value.toStringUtf8());
+      ensureKeysIsMutable();
+      keys_.add(value.toStringUtf8());
     }
 
     public static com.elarian.hera.proto.Web.DeleteCustomerMetadataRequest parseFrom(
@@ -10733,51 +13506,51 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppId(
+      public Builder setOrgId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setAppId(value);
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAppId() {
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.clearAppId();
+        instance.clearOrgId();
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
        * @return This builder for chaining.
        */
-      public Builder setAppIdBytes(
+      public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setAppIdBytes(value);
+        instance.setOrgIdBytes(value);
         return this;
       }
 
@@ -10879,94 +13652,142 @@ public final class Web {
       }
 
       /**
-       * <code>repeated string metadata = 4;</code>
-       * @return A list containing the metadata.
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasSecondaryId() {
+        return instance.hasSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+        return instance.getSecondaryId();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.setSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder setSecondaryId(
+          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSecondaryId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+        copyOnWrite();
+        instance.mergeSecondaryId(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 4;</code>
+       */
+      public Builder clearSecondaryId() {
+        copyOnWrite();
+        instance.clearSecondaryId();
+        return this;
+      }
+
+      /**
+       * <code>repeated string keys = 5;</code>
+       * @return A list containing the keys.
        */
       @java.lang.Override
       public java.util.List<java.lang.String>
-          getMetadataList() {
+          getKeysList() {
         return java.util.Collections.unmodifiableList(
-            instance.getMetadataList());
+            instance.getKeysList());
       }
       /**
-       * <code>repeated string metadata = 4;</code>
-       * @return The count of metadata.
+       * <code>repeated string keys = 5;</code>
+       * @return The count of keys.
        */
       @java.lang.Override
-      public int getMetadataCount() {
-        return instance.getMetadataCount();
+      public int getKeysCount() {
+        return instance.getKeysCount();
       }
       /**
-       * <code>repeated string metadata = 4;</code>
+       * <code>repeated string keys = 5;</code>
        * @param index The index of the element to return.
-       * @return The metadata at the given index.
+       * @return The keys at the given index.
        */
       @java.lang.Override
-      public java.lang.String getMetadata(int index) {
-        return instance.getMetadata(index);
+      public java.lang.String getKeys(int index) {
+        return instance.getKeys(index);
       }
       /**
-       * <code>repeated string metadata = 4;</code>
+       * <code>repeated string keys = 5;</code>
        * @param index The index of the value to return.
-       * @return The bytes of the metadata at the given index.
+       * @return The bytes of the keys at the given index.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getMetadataBytes(int index) {
-        return instance.getMetadataBytes(index);
+          getKeysBytes(int index) {
+        return instance.getKeysBytes(index);
       }
       /**
-       * <code>repeated string metadata = 4;</code>
+       * <code>repeated string keys = 5;</code>
        * @param index The index to set the value at.
-       * @param value The metadata to set.
+       * @param value The keys to set.
        * @return This builder for chaining.
        */
-      public Builder setMetadata(
+      public Builder setKeys(
           int index, java.lang.String value) {
         copyOnWrite();
-        instance.setMetadata(index, value);
+        instance.setKeys(index, value);
         return this;
       }
       /**
-       * <code>repeated string metadata = 4;</code>
-       * @param value The metadata to add.
+       * <code>repeated string keys = 5;</code>
+       * @param value The keys to add.
        * @return This builder for chaining.
        */
-      public Builder addMetadata(
+      public Builder addKeys(
           java.lang.String value) {
         copyOnWrite();
-        instance.addMetadata(value);
+        instance.addKeys(value);
         return this;
       }
       /**
-       * <code>repeated string metadata = 4;</code>
-       * @param values The metadata to add.
+       * <code>repeated string keys = 5;</code>
+       * @param values The keys to add.
        * @return This builder for chaining.
        */
-      public Builder addAllMetadata(
+      public Builder addAllKeys(
           java.lang.Iterable<java.lang.String> values) {
         copyOnWrite();
-        instance.addAllMetadata(values);
+        instance.addAllKeys(values);
         return this;
       }
       /**
-       * <code>repeated string metadata = 4;</code>
+       * <code>repeated string keys = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMetadata() {
+      public Builder clearKeys() {
         copyOnWrite();
-        instance.clearMetadata();
+        instance.clearKeys();
         return this;
       }
       /**
-       * <code>repeated string metadata = 4;</code>
-       * @param value The bytes of the metadata to add.
+       * <code>repeated string keys = 5;</code>
+       * @param value The bytes of the keys to add.
        * @return This builder for chaining.
        */
-      public Builder addMetadataBytes(
+      public Builder addKeysBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.addMetadataBytes(value);
+        instance.addKeysBytes(value);
         return this;
       }
 
@@ -10988,13 +13809,14 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              "appId_",
+              "orgId_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
-              "metadata_",
+              com.elarian.hera.proto.Common.IndexMapping.class,
+              "keys_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u0004\u021a";
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u023b" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -11054,75 +13876,61 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
 
     /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customerId = 3;</code>
-     * @return The customerId.
-     */
-    java.lang.String getCustomerId();
-    /**
-     * <code>string customerId = 3;</code>
-     * @return The bytes for customerId.
-     */
-    com.google.protobuf.ByteString
-        getCustomerIdBytes();
-
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
      * @return Whether the body field is set.
      */
     boolean hasBody();
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
      * @return The body.
      */
     com.elarian.hera.proto.Common.CustomerMessageBody getBody();
-
-    public com.elarian.hera.proto.Web.SendMessageRequest.CustomerCase getCustomerCase();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SendMessageRequest}
@@ -11133,56 +13941,60 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.SendMessageRequest)
       SendMessageRequestOrBuilder {
     private SendMessageRequest() {
+      orgId_ = "";
       appId_ = "";
-      productId_ = "";
     }
-    private int customerCase_ = 0;
-    private java.lang.Object customer_;
-    public enum CustomerCase {
-      CUSTOMERID(3),
-      CUSTOMER_NUMBER(4),
-      CUSTOMER_NOT_SET(0);
-      private final int value;
-      private CustomerCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static CustomerCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static CustomerCase forNumber(int value) {
-        switch (value) {
-          case 3: return CUSTOMERID;
-          case 4: return CUSTOMER_NUMBER;
-          case 0: return CUSTOMER_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
     @java.lang.Override
-    public CustomerCase
-    getCustomerCase() {
-      return CustomerCase.forNumber(
-          customerCase_);
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
     }
 
-    private void clearCustomer() {
-      customerCase_ = 0;
-      customer_ = null;
-    }
-
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -11190,7 +14002,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -11199,7 +14011,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -11209,14 +14021,14 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
@@ -11226,177 +14038,70 @@ public final class Web {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 2;
-    private java.lang.String productId_;
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CUSTOMERID_FIELD_NUMBER = 3;
-    /**
-     * <code>string customerId = 3;</code>
-     * @return The customerId.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerId() {
-      java.lang.String ref = "";
-      if (customerCase_ == 3) {
-        ref = (java.lang.String) customer_;
-      }
-      return ref;
-    }
-    /**
-     * <code>string customerId = 3;</code>
-     * @return The bytes for customerId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      java.lang.String ref = "";
-      if (customerCase_ == 3) {
-        ref = (java.lang.String) customer_;
-      }
-      return com.google.protobuf.ByteString.copyFromUtf8(ref);
-    }
-    /**
-     * <code>string customerId = 3;</code>
-     * @param value The customerId to set.
-     */
-    private void setCustomerId(
-        java.lang.String value) {
-      value.getClass();
-  customerCase_ = 3;
-      customer_ = value;
-    }
-    /**
-     * <code>string customerId = 3;</code>
-     */
-    private void clearCustomerId() {
-      if (customerCase_ == 3) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
-    }
-    /**
-     * <code>string customerId = 3;</code>
-     * @param value The bytes for customerId to set.
-     */
-    private void setCustomerIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      customer_ = value.toStringUtf8();
-      customerCase_ = 3;
-    }
-
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 4;
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
     public boolean hasCustomerNumber() {
-      return customerCase_ == 4;
+      return customerNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      if (customerCase_ == 4) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
-      }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  customer_ = value;
-      customerCase_ = 4;
-    }
+  customerNumber_ = value;
+      
+      }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  if (customerCase_ == 4 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
-            .mergeFrom(value).buildPartial();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
-        customer_ = value;
+        customerNumber_ = value;
       }
-      customerCase_ = 4;
+      
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
-    private void clearCustomerNumber() {
-      if (customerCase_ == 4) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
     }
 
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 5;
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 4;
     private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     private void setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
       value.getClass();
@@ -11404,7 +14109,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
@@ -11419,30 +14124,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     private void clearChannelNumber() {  channelNumber_ = null;
       
     }
 
-    public static final int BODY_FIELD_NUMBER = 6;
+    public static final int BODY_FIELD_NUMBER = 5;
     private com.elarian.hera.proto.Common.CustomerMessageBody body_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
      */
     @java.lang.Override
     public boolean hasBody() {
       return body_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerMessageBody getBody() {
       return body_ == null ? com.elarian.hera.proto.Common.CustomerMessageBody.getDefaultInstance() : body_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
      */
     private void setBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
       value.getClass();
@@ -11450,7 +14155,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
@@ -11465,7 +14170,7 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
      */
     private void clearBody() {  body_ = null;
       
@@ -11565,21 +14270,58 @@ public final class Web {
         super(DEFAULT_INSTANCE);
       }
 
-      @java.lang.Override
-      public CustomerCase
-          getCustomerCase() {
-        return instance.getCustomerCase();
-      }
 
-      public Builder clearCustomer() {
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
         copyOnWrite();
-        instance.clearCustomer();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
 
-
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -11587,7 +14329,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -11596,7 +14338,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -11607,7 +14349,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -11616,7 +14358,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -11628,127 +14370,29 @@ public final class Web {
       }
 
       /**
-       * <code>string product_id = 2;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customerId = 3;</code>
-       * @return The customerId.
-       */
-      @java.lang.Override
-      public java.lang.String getCustomerId() {
-        return instance.getCustomerId();
-      }
-      /**
-       * <code>string customerId = 3;</code>
-       * @return The bytes for customerId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCustomerIdBytes() {
-        return instance.getCustomerIdBytes();
-      }
-      /**
-       * <code>string customerId = 3;</code>
-       * @param value The customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setCustomerId(value);
-        return this;
-      }
-      /**
-       * <code>string customerId = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomerId() {
-        copyOnWrite();
-        instance.clearCustomerId();
-        return this;
-      }
-      /**
-       * <code>string customerId = 3;</code>
-       * @param value The bytes for customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setCustomerIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       @java.lang.Override
       public boolean hasCustomerNumber() {
         return instance.hasCustomerNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
-      }
+        }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder setCustomerNumber(
           com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
@@ -11757,7 +14401,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
@@ -11765,30 +14409,29 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
-      public Builder clearCustomerNumber() {
-        copyOnWrite();
+      public Builder clearCustomerNumber() {  copyOnWrite();
         instance.clearCustomerNumber();
         return this;
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       @java.lang.Override
       public boolean hasChannelNumber() {
         return instance.hasChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       public Builder setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
         copyOnWrite();
@@ -11796,7 +14439,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       public Builder setChannelNumber(
           com.elarian.hera.proto.Common.MessagingChannelNumber.Builder builderForValue) {
@@ -11805,7 +14448,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       public Builder mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
         copyOnWrite();
@@ -11813,7 +14456,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       public Builder clearChannelNumber() {  copyOnWrite();
         instance.clearChannelNumber();
@@ -11821,21 +14464,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
        */
       @java.lang.Override
       public boolean hasBody() {
         return instance.hasBody();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerMessageBody getBody() {
         return instance.getBody();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
        */
       public Builder setBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
         copyOnWrite();
@@ -11843,7 +14486,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
        */
       public Builder setBody(
           com.elarian.hera.proto.Common.CustomerMessageBody.Builder builderForValue) {
@@ -11852,7 +14495,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
        */
       public Builder mergeBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
         copyOnWrite();
@@ -11860,7 +14503,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 5;</code>
        */
       public Builder clearBody() {  copyOnWrite();
         instance.clearBody();
@@ -11883,17 +14526,15 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "customer_",
-              "customerCase_",
+              "orgId_",
               "appId_",
-              "productId_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
+              "customerNumber_",
               "channelNumber_",
               "body_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0001\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u023b\u0000\u0004<\u0000\u0005\t\u0006\t";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t\u0004\t\u0005\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -11953,28 +14594,28 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
-
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 3;</code>
@@ -12018,13 +14659,60 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.SendMessageTagRequest)
       SendMessageTagRequestOrBuilder {
     private SendMessageTagRequest() {
+      orgId_ = "";
       appId_ = "";
-      productId_ = "";
     }
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -12032,7 +14720,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -12041,7 +14729,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -12051,67 +14739,20 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       appId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int PRODUCT_ID_FIELD_NUMBER = 2;
-    private java.lang.String productId_;
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
       
     }
 
@@ -12349,7 +14990,56 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -12357,7 +15047,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -12366,7 +15056,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -12377,7 +15067,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -12386,7 +15076,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -12394,55 +15084,6 @@ public final class Web {
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setAppIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string product_id = 2;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
         return this;
       }
 
@@ -12603,8 +15244,8 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
               "appId_",
-              "productId_",
               "tag_",
               "channelNumber_",
               "body_",
@@ -12671,28 +15312,28 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
-
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
 
     /**
      * <code>string customer_id = 3;</code>
@@ -12738,15 +15379,62 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReplyToMessageRequest)
       ReplyToMessageRequestOrBuilder {
     private ReplyToMessageRequest() {
+      orgId_ = "";
       appId_ = "";
-      productId_ = "";
       customerId_ = "";
       replyToMessageId_ = "";
     }
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -12754,7 +15442,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -12763,7 +15451,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -12773,67 +15461,20 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       appId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int PRODUCT_ID_FIELD_NUMBER = 2;
-    private java.lang.String productId_;
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
       
     }
 
@@ -13073,7 +15714,56 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -13081,7 +15771,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -13090,7 +15780,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -13101,7 +15791,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -13110,7 +15800,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -13118,55 +15808,6 @@ public final class Web {
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setAppIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string product_id = 2;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
         return this;
       }
 
@@ -13331,8 +15972,8 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
               "appId_",
-              "productId_",
               "customerId_",
               "replyToMessageId_",
               "body_",
@@ -14002,28 +16643,28 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
-
-    /**
-     * <code>string customer_id = 2;</code>
-     * @return The customerId.
-     */
-    java.lang.String getCustomerId();
-    /**
-     * <code>string customer_id = 2;</code>
-     * @return The bytes for customerId.
-     */
-    com.google.protobuf.ByteString
-        getCustomerIdBytes();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
@@ -14057,8 +16698,6 @@ public final class Web {
      * @return The action.
      */
     com.elarian.hera.proto.Common.MessagingConsentAction getAction();
-
-    public com.elarian.hera.proto.Web.MessagingConsentRequest.CustomerCase getCustomerCase();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessagingConsentRequest}
@@ -14069,55 +16708,60 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingConsentRequest)
       MessagingConsentRequestOrBuilder {
     private MessagingConsentRequest() {
+      orgId_ = "";
       appId_ = "";
     }
-    private int customerCase_ = 0;
-    private java.lang.Object customer_;
-    public enum CustomerCase {
-      CUSTOMER_ID(2),
-      CUSTOMER_NUMBER(3),
-      CUSTOMER_NOT_SET(0);
-      private final int value;
-      private CustomerCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static CustomerCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static CustomerCase forNumber(int value) {
-        switch (value) {
-          case 2: return CUSTOMER_ID;
-          case 3: return CUSTOMER_NUMBER;
-          case 0: return CUSTOMER_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
     @java.lang.Override
-    public CustomerCase
-    getCustomerCase() {
-      return CustomerCase.forNumber(
-          customerCase_);
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
     }
 
-    private void clearCustomer() {
-      customerCase_ = 0;
-      customer_ = null;
-    }
-
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -14125,7 +16769,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -14134,7 +16778,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -14144,14 +16788,14 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
@@ -14161,110 +16805,50 @@ public final class Web {
       
     }
 
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 2;
-    /**
-     * <code>string customer_id = 2;</code>
-     * @return The customerId.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerId() {
-      java.lang.String ref = "";
-      if (customerCase_ == 2) {
-        ref = (java.lang.String) customer_;
-      }
-      return ref;
-    }
-    /**
-     * <code>string customer_id = 2;</code>
-     * @return The bytes for customerId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      java.lang.String ref = "";
-      if (customerCase_ == 2) {
-        ref = (java.lang.String) customer_;
-      }
-      return com.google.protobuf.ByteString.copyFromUtf8(ref);
-    }
-    /**
-     * <code>string customer_id = 2;</code>
-     * @param value The customerId to set.
-     */
-    private void setCustomerId(
-        java.lang.String value) {
-      value.getClass();
-  customerCase_ = 2;
-      customer_ = value;
-    }
-    /**
-     * <code>string customer_id = 2;</code>
-     */
-    private void clearCustomerId() {
-      if (customerCase_ == 2) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
-    }
-    /**
-     * <code>string customer_id = 2;</code>
-     * @param value The bytes for customerId to set.
-     */
-    private void setCustomerIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      customer_ = value.toStringUtf8();
-      customerCase_ = 2;
-    }
-
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
     public boolean hasCustomerNumber() {
-      return customerCase_ == 3;
+      return customerNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
-      }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  customer_ = value;
-      customerCase_ = 3;
-    }
+  customerNumber_ = value;
+      
+      }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
-            .mergeFrom(value).buildPartial();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
-        customer_ = value;
+        customerNumber_ = value;
       }
-      customerCase_ = 3;
+      
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
-    private void clearCustomerNumber() {
-      if (customerCase_ == 3) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 4;
@@ -14449,21 +17033,58 @@ public final class Web {
         super(DEFAULT_INSTANCE);
       }
 
-      @java.lang.Override
-      public CustomerCase
-          getCustomerCase() {
-        return instance.getCustomerCase();
-      }
 
-      public Builder clearCustomer() {
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
         copyOnWrite();
-        instance.clearCustomer();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
 
-
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -14471,7 +17092,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -14480,7 +17101,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -14491,7 +17112,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -14500,7 +17121,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -14508,55 +17129,6 @@ public final class Web {
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setAppIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 2;</code>
-       * @return The customerId.
-       */
-      @java.lang.Override
-      public java.lang.String getCustomerId() {
-        return instance.getCustomerId();
-      }
-      /**
-       * <code>string customer_id = 2;</code>
-       * @return The bytes for customerId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCustomerIdBytes() {
-        return instance.getCustomerIdBytes();
-      }
-      /**
-       * <code>string customer_id = 2;</code>
-       * @param value The customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setCustomerId(value);
-        return this;
-      }
-      /**
-       * <code>string customer_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomerId() {
-        copyOnWrite();
-        instance.clearCustomerId();
-        return this;
-      }
-      /**
-       * <code>string customer_id = 2;</code>
-       * @param value The bytes for customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setCustomerIdBytes(value);
         return this;
       }
 
@@ -14581,7 +17153,7 @@ public final class Web {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
-      }
+        }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
@@ -14602,8 +17174,7 @@ public final class Web {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
-      public Builder clearCustomerNumber() {
-        copyOnWrite();
+      public Builder clearCustomerNumber() {  copyOnWrite();
         instance.clearCustomerNumber();
         return this;
       }
@@ -14717,16 +17288,15 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "customer_",
-              "customerCase_",
+              "orgId_",
               "appId_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
+              "customerNumber_",
               "channelNumber_",
               "action_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
-                "\u0000\u0003<\u0000\u0004\t\u0005\f";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t\u0004\t\u0005\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -15284,40 +17854,40 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
 
     /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
+     * <code>string purse_id = 3;</code>
+     * @return The purseId.
      */
-    java.lang.String getProductId();
+    java.lang.String getPurseId();
     /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
+     * <code>string purse_id = 3;</code>
+     * @return The bytes for purseId.
      */
     com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The customerId.
-     */
-    java.lang.String getCustomerId();
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The bytes for customerId.
-     */
-    com.google.protobuf.ByteString
-        getCustomerIdBytes();
+        getPurseIdBytes();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
@@ -15351,8 +17921,6 @@ public final class Web {
      * @return The value.
      */
     com.elarian.hera.proto.Common.Cash getValue();
-
-    public com.elarian.hera.proto.Web.SendPaymentRequest.CustomerCase getCustomerCase();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SendPaymentRequest}
@@ -15363,56 +17931,61 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.SendPaymentRequest)
       SendPaymentRequestOrBuilder {
     private SendPaymentRequest() {
+      orgId_ = "";
       appId_ = "";
-      productId_ = "";
+      purseId_ = "";
     }
-    private int customerCase_ = 0;
-    private java.lang.Object customer_;
-    public enum CustomerCase {
-      CUSTOMER_ID(3),
-      CUSTOMER_NUMBER(4),
-      CUSTOMER_NOT_SET(0);
-      private final int value;
-      private CustomerCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static CustomerCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static CustomerCase forNumber(int value) {
-        switch (value) {
-          case 3: return CUSTOMER_ID;
-          case 4: return CUSTOMER_NUMBER;
-          case 0: return CUSTOMER_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
     @java.lang.Override
-    public CustomerCase
-    getCustomerCase() {
-      return CustomerCase.forNumber(
-          customerCase_);
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
     }
 
-    private void clearCustomer() {
-      customerCase_ = 0;
-      customer_ = null;
-    }
-
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -15420,7 +17993,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -15429,7 +18002,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -15439,14 +18012,14 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
@@ -15456,157 +18029,97 @@ public final class Web {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 2;
-    private java.lang.String productId_;
+    public static final int PURSE_ID_FIELD_NUMBER = 3;
+    private java.lang.String purseId_;
     /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
+     * <code>string purse_id = 3;</code>
+     * @return The purseId.
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public java.lang.String getPurseId() {
+      return purseId_;
     }
     /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
+     * <code>string purse_id = 3;</code>
+     * @return The bytes for purseId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+        getPurseIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(purseId_);
     }
     /**
-     * <code>string product_id = 2;</code>
-     * @param value The productId to set.
+     * <code>string purse_id = 3;</code>
+     * @param value The purseId to set.
      */
-    private void setProductId(
+    private void setPurseId(
         java.lang.String value) {
       value.getClass();
   
-      productId_ = value;
+      purseId_ = value;
     }
     /**
-     * <code>string product_id = 2;</code>
+     * <code>string purse_id = 3;</code>
      */
-    private void clearProductId() {
+    private void clearPurseId() {
       
-      productId_ = getDefaultInstance().getProductId();
+      purseId_ = getDefaultInstance().getPurseId();
     }
     /**
-     * <code>string product_id = 2;</code>
-     * @param value The bytes for productId to set.
+     * <code>string purse_id = 3;</code>
+     * @param value The bytes for purseId to set.
      */
-    private void setProductIdBytes(
+    private void setPurseIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+      purseId_ = value.toStringUtf8();
       
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 3;
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The customerId.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerId() {
-      java.lang.String ref = "";
-      if (customerCase_ == 3) {
-        ref = (java.lang.String) customer_;
-      }
-      return ref;
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The bytes for customerId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      java.lang.String ref = "";
-      if (customerCase_ == 3) {
-        ref = (java.lang.String) customer_;
-      }
-      return com.google.protobuf.ByteString.copyFromUtf8(ref);
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @param value The customerId to set.
-     */
-    private void setCustomerId(
-        java.lang.String value) {
-      value.getClass();
-  customerCase_ = 3;
-      customer_ = value;
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     */
-    private void clearCustomerId() {
-      if (customerCase_ == 3) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @param value The bytes for customerId to set.
-     */
-    private void setCustomerIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      customer_ = value.toStringUtf8();
-      customerCase_ = 3;
     }
 
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.Override
     public boolean hasCustomerNumber() {
-      return customerCase_ == 4;
+      return customerNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      if (customerCase_ == 4) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
-      }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  customer_ = value;
-      customerCase_ = 4;
-    }
+  customerNumber_ = value;
+      
+      }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  if (customerCase_ == 4 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
-            .mergeFrom(value).buildPartial();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
-        customer_ = value;
+        customerNumber_ = value;
       }
-      customerCase_ = 4;
+      
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
-    private void clearCustomerNumber() {
-      if (customerCase_ == 4) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 5;
@@ -15795,21 +18308,58 @@ public final class Web {
         super(DEFAULT_INSTANCE);
       }
 
-      @java.lang.Override
-      public CustomerCase
-          getCustomerCase() {
-        return instance.getCustomerCase();
-      }
 
-      public Builder clearCustomer() {
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
         copyOnWrite();
-        instance.clearCustomer();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
 
-
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -15817,7 +18367,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -15826,7 +18376,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -15837,7 +18387,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -15846,7 +18396,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -15858,100 +18408,51 @@ public final class Web {
       }
 
       /**
-       * <code>string product_id = 2;</code>
-       * @return The productId.
+       * <code>string purse_id = 3;</code>
+       * @return The purseId.
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public java.lang.String getPurseId() {
+        return instance.getPurseId();
       }
       /**
-       * <code>string product_id = 2;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 3;</code>
-       * @return The customerId.
-       */
-      @java.lang.Override
-      public java.lang.String getCustomerId() {
-        return instance.getCustomerId();
-      }
-      /**
-       * <code>string customer_id = 3;</code>
-       * @return The bytes for customerId.
+       * <code>string purse_id = 3;</code>
+       * @return The bytes for purseId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getCustomerIdBytes() {
-        return instance.getCustomerIdBytes();
+          getPurseIdBytes() {
+        return instance.getPurseIdBytes();
       }
       /**
-       * <code>string customer_id = 3;</code>
-       * @param value The customerId to set.
+       * <code>string purse_id = 3;</code>
+       * @param value The purseId to set.
        * @return This builder for chaining.
        */
-      public Builder setCustomerId(
+      public Builder setPurseId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setCustomerId(value);
+        instance.setPurseId(value);
         return this;
       }
       /**
-       * <code>string customer_id = 3;</code>
+       * <code>string purse_id = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCustomerId() {
+      public Builder clearPurseId() {
         copyOnWrite();
-        instance.clearCustomerId();
+        instance.clearPurseId();
         return this;
       }
       /**
-       * <code>string customer_id = 3;</code>
-       * @param value The bytes for customerId to set.
+       * <code>string purse_id = 3;</code>
+       * @param value The bytes for purseId to set.
        * @return This builder for chaining.
        */
-      public Builder setCustomerIdBytes(
+      public Builder setPurseIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setCustomerIdBytes(value);
+        instance.setPurseIdBytes(value);
         return this;
       }
 
@@ -15976,7 +18477,7 @@ public final class Web {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
-      }
+        }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
@@ -15997,8 +18498,7 @@ public final class Web {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
-      public Builder clearCustomerNumber() {
-        copyOnWrite();
+      public Builder clearCustomerNumber() {  copyOnWrite();
         instance.clearCustomerNumber();
         return this;
       }
@@ -16113,17 +18613,16 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "customer_",
-              "customerCase_",
+              "orgId_",
               "appId_",
-              "productId_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
+              "purseId_",
+              "customerNumber_",
               "channelNumber_",
               "value_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0001\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u023b\u0000\u0004<\u0000\u0005\t\u0006\t";
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\t\u0005\t\u0006\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -16178,648 +18677,45 @@ public final class Web {
     }
   }
 
-  public interface SendPaymentReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.SendPaymentReply)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    int getStatusValue();
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-     * @return The status.
-     */
-    com.elarian.hera.proto.Common.PaymentStatus getStatus();
-
-    /**
-     * <code>string description = 2;</code>
-     * @return The description.
-     */
-    java.lang.String getDescription();
-    /**
-     * <code>string description = 2;</code>
-     * @return The bytes for description.
-     */
-    com.google.protobuf.ByteString
-        getDescriptionBytes();
-
-    /**
-     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-     * @return Whether the transactionId field is set.
-     */
-    boolean hasTransactionId();
-    /**
-     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-     * @return The transactionId.
-     */
-    com.google.protobuf.StringValue getTransactionId();
-
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     * @return Whether the customerId field is set.
-     */
-    boolean hasCustomerId();
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     * @return The customerId.
-     */
-    com.google.protobuf.StringValue getCustomerId();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.SendPaymentReply}
-   */
-  public  static final class SendPaymentReply extends
-      com.google.protobuf.GeneratedMessageLite<
-          SendPaymentReply, SendPaymentReply.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.SendPaymentReply)
-      SendPaymentReplyOrBuilder {
-    private SendPaymentReply() {
-      description_ = "";
-    }
-    public static final int STATUS_FIELD_NUMBER = 1;
-    private int status_;
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override
-    public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-     * @return The status.
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
-      com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-     * @param value The enum numeric value on the wire for status to set.
-     */
-    private void setStatusValue(int value) {
-        status_ = value;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-     * @param value The status to set.
-     */
-    private void setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
-      status_ = value.getNumber();
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-     */
-    private void clearStatus() {
-      
-      status_ = 0;
-    }
-
-    public static final int DESCRIPTION_FIELD_NUMBER = 2;
-    private java.lang.String description_;
-    /**
-     * <code>string description = 2;</code>
-     * @return The description.
-     */
-    @java.lang.Override
-    public java.lang.String getDescription() {
-      return description_;
-    }
-    /**
-     * <code>string description = 2;</code>
-     * @return The bytes for description.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDescriptionBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(description_);
-    }
-    /**
-     * <code>string description = 2;</code>
-     * @param value The description to set.
-     */
-    private void setDescription(
-        java.lang.String value) {
-      value.getClass();
-  
-      description_ = value;
-    }
-    /**
-     * <code>string description = 2;</code>
-     */
-    private void clearDescription() {
-      
-      description_ = getDefaultInstance().getDescription();
-    }
-    /**
-     * <code>string description = 2;</code>
-     * @param value The bytes for description to set.
-     */
-    private void setDescriptionBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      description_ = value.toStringUtf8();
-      
-    }
-
-    public static final int TRANSACTION_ID_FIELD_NUMBER = 3;
-    private com.google.protobuf.StringValue transactionId_;
-    /**
-     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasTransactionId() {
-      return transactionId_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getTransactionId() {
-      return transactionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : transactionId_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-     */
-    private void setTransactionId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  transactionId_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeTransactionId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (transactionId_ != null &&
-          transactionId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        transactionId_ =
-          com.google.protobuf.StringValue.newBuilder(transactionId_).mergeFrom(value).buildPartial();
-      } else {
-        transactionId_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-     */
-    private void clearTransactionId() {  transactionId_ = null;
-      
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue customerId_;
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    @java.lang.Override
-    public boolean hasCustomerId() {
-      return customerId_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getCustomerId() {
-      return customerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    private void setCustomerId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  customerId_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (customerId_ != null &&
-          customerId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        customerId_ =
-          com.google.protobuf.StringValue.newBuilder(customerId_).mergeFrom(value).buildPartial();
-      } else {
-        customerId_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    private void clearCustomerId() {  customerId_ = null;
-      
-    }
-
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Web.SendPaymentReply parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.Web.SendPaymentReply prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.SendPaymentReply}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.Web.SendPaymentReply, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.SendPaymentReply)
-        com.elarian.hera.proto.Web.SendPaymentReplyOrBuilder {
-      // Construct using com.elarian.hera.proto.Web.SendPaymentReply.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override
-      public int getStatusValue() {
-        return instance.getStatusValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        copyOnWrite();
-        instance.setStatusValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
-        return instance.getStatus();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
-        copyOnWrite();
-        instance.setStatus(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        copyOnWrite();
-        instance.clearStatus();
-        return this;
-      }
-
-      /**
-       * <code>string description = 2;</code>
-       * @return The description.
-       */
-      @java.lang.Override
-      public java.lang.String getDescription() {
-        return instance.getDescription();
-      }
-      /**
-       * <code>string description = 2;</code>
-       * @return The bytes for description.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getDescriptionBytes() {
-        return instance.getDescriptionBytes();
-      }
-      /**
-       * <code>string description = 2;</code>
-       * @param value The description to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDescription(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setDescription(value);
-        return this;
-      }
-      /**
-       * <code>string description = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDescription() {
-        copyOnWrite();
-        instance.clearDescription();
-        return this;
-      }
-      /**
-       * <code>string description = 2;</code>
-       * @param value The bytes for description to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDescriptionBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setDescriptionBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasTransactionId() {
-        return instance.hasTransactionId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getTransactionId() {
-        return instance.getTransactionId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-       */
-      public Builder setTransactionId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setTransactionId(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-       */
-      public Builder setTransactionId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setTransactionId(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-       */
-      public Builder mergeTransactionId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeTransactionId(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
-       */
-      public Builder clearTransactionId() {  copyOnWrite();
-        instance.clearTransactionId();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      @java.lang.Override
-      public boolean hasCustomerId() {
-        return instance.hasCustomerId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getCustomerId() {
-        return instance.getCustomerId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      public Builder setCustomerId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setCustomerId(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      public Builder setCustomerId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCustomerId(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      public Builder mergeCustomerId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeCustomerId(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      public Builder clearCustomerId() {  copyOnWrite();
-        instance.clearCustomerId();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.SendPaymentReply)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.Web.SendPaymentReply();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "status_",
-              "description_",
-              "transactionId_",
-              "customerId_",
-            };
-            java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\f\u0002\u0208" +
-                "\u0003\t\u0004\t";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.Web.SendPaymentReply> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.Web.SendPaymentReply.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Web.SendPaymentReply>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.SendPaymentReply)
-    private static final com.elarian.hera.proto.Web.SendPaymentReply DEFAULT_INSTANCE;
-    static {
-      SendPaymentReply defaultInstance = new SendPaymentReply();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        SendPaymentReply.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.Web.SendPaymentReply getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<SendPaymentReply> PARSER;
-
-    public static com.google.protobuf.Parser<SendPaymentReply> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
   public interface CheckoutPaymentRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CheckoutPaymentRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
 
     /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
+     * <code>string purse_id = 3;</code>
+     * @return The purseId.
      */
-    java.lang.String getProductId();
+    java.lang.String getPurseId();
     /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
+     * <code>string purse_id = 3;</code>
+     * @return The bytes for purseId.
      */
     com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The customerId.
-     */
-    java.lang.String getCustomerId();
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The bytes for customerId.
-     */
-    com.google.protobuf.ByteString
-        getCustomerIdBytes();
+        getPurseIdBytes();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
@@ -16853,8 +18749,6 @@ public final class Web {
      * @return The value.
      */
     com.elarian.hera.proto.Common.Cash getValue();
-
-    public com.elarian.hera.proto.Web.CheckoutPaymentRequest.CustomerCase getCustomerCase();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.CheckoutPaymentRequest}
@@ -16865,56 +18759,61 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CheckoutPaymentRequest)
       CheckoutPaymentRequestOrBuilder {
     private CheckoutPaymentRequest() {
+      orgId_ = "";
       appId_ = "";
-      productId_ = "";
+      purseId_ = "";
     }
-    private int customerCase_ = 0;
-    private java.lang.Object customer_;
-    public enum CustomerCase {
-      CUSTOMER_ID(3),
-      CUSTOMER_NUMBER(4),
-      CUSTOMER_NOT_SET(0);
-      private final int value;
-      private CustomerCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static CustomerCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static CustomerCase forNumber(int value) {
-        switch (value) {
-          case 3: return CUSTOMER_ID;
-          case 4: return CUSTOMER_NUMBER;
-          case 0: return CUSTOMER_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
     @java.lang.Override
-    public CustomerCase
-    getCustomerCase() {
-      return CustomerCase.forNumber(
-          customerCase_);
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
     }
 
-    private void clearCustomer() {
-      customerCase_ = 0;
-      customer_ = null;
-    }
-
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -16922,7 +18821,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -16931,7 +18830,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -16941,14 +18840,14 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
@@ -16958,157 +18857,97 @@ public final class Web {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 2;
-    private java.lang.String productId_;
+    public static final int PURSE_ID_FIELD_NUMBER = 3;
+    private java.lang.String purseId_;
     /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
+     * <code>string purse_id = 3;</code>
+     * @return The purseId.
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public java.lang.String getPurseId() {
+      return purseId_;
     }
     /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
+     * <code>string purse_id = 3;</code>
+     * @return The bytes for purseId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+        getPurseIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(purseId_);
     }
     /**
-     * <code>string product_id = 2;</code>
-     * @param value The productId to set.
+     * <code>string purse_id = 3;</code>
+     * @param value The purseId to set.
      */
-    private void setProductId(
+    private void setPurseId(
         java.lang.String value) {
       value.getClass();
   
-      productId_ = value;
+      purseId_ = value;
     }
     /**
-     * <code>string product_id = 2;</code>
+     * <code>string purse_id = 3;</code>
      */
-    private void clearProductId() {
+    private void clearPurseId() {
       
-      productId_ = getDefaultInstance().getProductId();
+      purseId_ = getDefaultInstance().getPurseId();
     }
     /**
-     * <code>string product_id = 2;</code>
-     * @param value The bytes for productId to set.
+     * <code>string purse_id = 3;</code>
+     * @param value The bytes for purseId to set.
      */
-    private void setProductIdBytes(
+    private void setPurseIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+      purseId_ = value.toStringUtf8();
       
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 3;
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The customerId.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerId() {
-      java.lang.String ref = "";
-      if (customerCase_ == 3) {
-        ref = (java.lang.String) customer_;
-      }
-      return ref;
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The bytes for customerId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      java.lang.String ref = "";
-      if (customerCase_ == 3) {
-        ref = (java.lang.String) customer_;
-      }
-      return com.google.protobuf.ByteString.copyFromUtf8(ref);
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @param value The customerId to set.
-     */
-    private void setCustomerId(
-        java.lang.String value) {
-      value.getClass();
-  customerCase_ = 3;
-      customer_ = value;
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     */
-    private void clearCustomerId() {
-      if (customerCase_ == 3) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @param value The bytes for customerId to set.
-     */
-    private void setCustomerIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      customer_ = value.toStringUtf8();
-      customerCase_ = 3;
     }
 
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.Override
     public boolean hasCustomerNumber() {
-      return customerCase_ == 4;
+      return customerNumber_ != null;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      if (customerCase_ == 4) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
-      }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  customer_ = value;
-      customerCase_ = 4;
-    }
+  customerNumber_ = value;
+      
+      }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  if (customerCase_ == 4 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
-            .mergeFrom(value).buildPartial();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
-        customer_ = value;
+        customerNumber_ = value;
       }
-      customerCase_ = 4;
+      
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
-    private void clearCustomerNumber() {
-      if (customerCase_ == 4) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 5;
@@ -17297,21 +19136,58 @@ public final class Web {
         super(DEFAULT_INSTANCE);
       }
 
-      @java.lang.Override
-      public CustomerCase
-          getCustomerCase() {
-        return instance.getCustomerCase();
-      }
 
-      public Builder clearCustomer() {
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
         copyOnWrite();
-        instance.clearCustomer();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
 
-
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -17319,7 +19195,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -17328,7 +19204,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -17339,7 +19215,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -17348,7 +19224,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -17360,100 +19236,51 @@ public final class Web {
       }
 
       /**
-       * <code>string product_id = 2;</code>
-       * @return The productId.
+       * <code>string purse_id = 3;</code>
+       * @return The purseId.
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public java.lang.String getPurseId() {
+        return instance.getPurseId();
       }
       /**
-       * <code>string product_id = 2;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 3;</code>
-       * @return The customerId.
-       */
-      @java.lang.Override
-      public java.lang.String getCustomerId() {
-        return instance.getCustomerId();
-      }
-      /**
-       * <code>string customer_id = 3;</code>
-       * @return The bytes for customerId.
+       * <code>string purse_id = 3;</code>
+       * @return The bytes for purseId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getCustomerIdBytes() {
-        return instance.getCustomerIdBytes();
+          getPurseIdBytes() {
+        return instance.getPurseIdBytes();
       }
       /**
-       * <code>string customer_id = 3;</code>
-       * @param value The customerId to set.
+       * <code>string purse_id = 3;</code>
+       * @param value The purseId to set.
        * @return This builder for chaining.
        */
-      public Builder setCustomerId(
+      public Builder setPurseId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setCustomerId(value);
+        instance.setPurseId(value);
         return this;
       }
       /**
-       * <code>string customer_id = 3;</code>
+       * <code>string purse_id = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCustomerId() {
+      public Builder clearPurseId() {
         copyOnWrite();
-        instance.clearCustomerId();
+        instance.clearPurseId();
         return this;
       }
       /**
-       * <code>string customer_id = 3;</code>
-       * @param value The bytes for customerId to set.
+       * <code>string purse_id = 3;</code>
+       * @param value The bytes for purseId to set.
        * @return This builder for chaining.
        */
-      public Builder setCustomerIdBytes(
+      public Builder setPurseIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setCustomerIdBytes(value);
+        instance.setPurseIdBytes(value);
         return this;
       }
 
@@ -17478,7 +19305,7 @@ public final class Web {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
-      }
+        }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
@@ -17499,8 +19326,7 @@ public final class Web {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
-      public Builder clearCustomerNumber() {
-        copyOnWrite();
+      public Builder clearCustomerNumber() {  copyOnWrite();
         instance.clearCustomerNumber();
         return this;
       }
@@ -17615,17 +19441,16 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "customer_",
-              "customerCase_",
+              "orgId_",
               "appId_",
-              "productId_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
+              "purseId_",
+              "customerNumber_",
               "channelNumber_",
               "value_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0001\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u023b\u0000\u0004<\u0000\u0005\t\u0006\t";
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\t\u0005\t\u0006\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -17680,8 +19505,936 @@ public final class Web {
     }
   }
 
-  public interface CheckoutPaymentReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CheckoutPaymentReply)
+  public interface CustomerWalletPaymentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CustomerWalletPaymentRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The appId.
+     */
+    java.lang.String getAppId();
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The bytes for appId.
+     */
+    com.google.protobuf.ByteString
+        getAppIdBytes();
+
+    /**
+     * <code>string wallet_id = 3;</code>
+     * @return The walletId.
+     */
+    java.lang.String getWalletId();
+    /**
+     * <code>string wallet_id = 3;</code>
+     * @return The bytes for walletId.
+     */
+    com.google.protobuf.ByteString
+        getWalletIdBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+     * @return The enum numeric value on the wire for side.
+     */
+    int getSideValue();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+     * @return The side.
+     */
+    com.elarian.hera.proto.Common.PaymentTransactionSide getSide();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+     * @return Whether the counterParty field is set.
+     */
+    boolean hasCounterParty();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+     * @return The counterParty.
+     */
+    com.elarian.hera.proto.Common.PaymentCounterParty getCounterParty();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+     * @return The value.
+     */
+    com.elarian.hera.proto.Common.Cash getValue();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.CustomerWalletPaymentRequest}
+   */
+  public  static final class CustomerWalletPaymentRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CustomerWalletPaymentRequest, CustomerWalletPaymentRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerWalletPaymentRequest)
+      CustomerWalletPaymentRequestOrBuilder {
+    private CustomerWalletPaymentRequest() {
+      orgId_ = "";
+      appId_ = "";
+      walletId_ = "";
+    }
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private java.lang.String appId_;
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public java.lang.String getAppId() {
+      return appId_;
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The bytes for appId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAppIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @param value The appId to set.
+     */
+    private void setAppId(
+        java.lang.String value) {
+      value.getClass();
+  
+      appId_ = value;
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     */
+    private void clearAppId() {
+      
+      appId_ = getDefaultInstance().getAppId();
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @param value The bytes for appId to set.
+     */
+    private void setAppIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      appId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int WALLET_ID_FIELD_NUMBER = 3;
+    private java.lang.String walletId_;
+    /**
+     * <code>string wallet_id = 3;</code>
+     * @return The walletId.
+     */
+    @java.lang.Override
+    public java.lang.String getWalletId() {
+      return walletId_;
+    }
+    /**
+     * <code>string wallet_id = 3;</code>
+     * @return The bytes for walletId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWalletIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(walletId_);
+    }
+    /**
+     * <code>string wallet_id = 3;</code>
+     * @param value The walletId to set.
+     */
+    private void setWalletId(
+        java.lang.String value) {
+      value.getClass();
+  
+      walletId_ = value;
+    }
+    /**
+     * <code>string wallet_id = 3;</code>
+     */
+    private void clearWalletId() {
+      
+      walletId_ = getDefaultInstance().getWalletId();
+    }
+    /**
+     * <code>string wallet_id = 3;</code>
+     * @param value The bytes for walletId to set.
+     */
+    private void setWalletIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      walletId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  customerNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     */
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
+    }
+
+    public static final int SIDE_FIELD_NUMBER = 5;
+    private int side_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+     * @return The enum numeric value on the wire for side.
+     */
+    @java.lang.Override
+    public int getSideValue() {
+      return side_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+     * @return The side.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentTransactionSide getSide() {
+      com.elarian.hera.proto.Common.PaymentTransactionSide result = com.elarian.hera.proto.Common.PaymentTransactionSide.forNumber(side_);
+      return result == null ? com.elarian.hera.proto.Common.PaymentTransactionSide.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+     * @param value The enum numeric value on the wire for side to set.
+     */
+    private void setSideValue(int value) {
+        side_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+     * @param value The side to set.
+     */
+    private void setSide(com.elarian.hera.proto.Common.PaymentTransactionSide value) {
+      side_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+     */
+    private void clearSide() {
+      
+      side_ = 0;
+    }
+
+    public static final int COUNTER_PARTY_FIELD_NUMBER = 6;
+    private com.elarian.hera.proto.Common.PaymentCounterParty counterParty_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+     */
+    @java.lang.Override
+    public boolean hasCounterParty() {
+      return counterParty_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentCounterParty getCounterParty() {
+      return counterParty_ == null ? com.elarian.hera.proto.Common.PaymentCounterParty.getDefaultInstance() : counterParty_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+     */
+    private void setCounterParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+      value.getClass();
+  counterParty_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCounterParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+      value.getClass();
+  if (counterParty_ != null &&
+          counterParty_ != com.elarian.hera.proto.Common.PaymentCounterParty.getDefaultInstance()) {
+        counterParty_ =
+          com.elarian.hera.proto.Common.PaymentCounterParty.newBuilder(counterParty_).mergeFrom(value).buildPartial();
+      } else {
+        counterParty_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+     */
+    private void clearCounterParty() {  counterParty_ = null;
+      
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 7;
+    private com.elarian.hera.proto.Common.Cash value_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.Cash getValue() {
+      return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+     */
+    private void setValue(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  value_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeValue(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  if (value_ != null &&
+          value_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
+        value_ =
+          com.elarian.hera.proto.Common.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
+      } else {
+        value_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+     */
+    private void clearValue() {  value_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Web.CustomerWalletPaymentRequest prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.CustomerWalletPaymentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Web.CustomerWalletPaymentRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.CustomerWalletPaymentRequest)
+        com.elarian.hera.proto.Web.CustomerWalletPaymentRequestOrBuilder {
+      // Construct using com.elarian.hera.proto.Web.CustomerWalletPaymentRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string app_id = 2;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public java.lang.String getAppId() {
+        return instance.getAppId();
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @return The bytes for appId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAppIdBytes() {
+        return instance.getAppIdBytes();
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAppId(value);
+        return this;
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        copyOnWrite();
+        instance.clearAppId();
+        return this;
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @param value The bytes for appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAppIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string wallet_id = 3;</code>
+       * @return The walletId.
+       */
+      @java.lang.Override
+      public java.lang.String getWalletId() {
+        return instance.getWalletId();
+      }
+      /**
+       * <code>string wallet_id = 3;</code>
+       * @return The bytes for walletId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getWalletIdBytes() {
+        return instance.getWalletIdBytes();
+      }
+      /**
+       * <code>string wallet_id = 3;</code>
+       * @param value The walletId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setWalletId(value);
+        return this;
+      }
+      /**
+       * <code>string wallet_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWalletId() {
+        copyOnWrite();
+        instance.clearWalletId();
+        return this;
+      }
+      /**
+       * <code>string wallet_id = 3;</code>
+       * @param value The bytes for walletId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setWalletIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+       * @return The enum numeric value on the wire for side.
+       */
+      @java.lang.Override
+      public int getSideValue() {
+        return instance.getSideValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+       * @param value The side to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSideValue(int value) {
+        copyOnWrite();
+        instance.setSideValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+       * @return The side.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentTransactionSide getSide() {
+        return instance.getSide();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+       * @param value The enum numeric value on the wire for side to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSide(com.elarian.hera.proto.Common.PaymentTransactionSide value) {
+        copyOnWrite();
+        instance.setSide(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSide() {
+        copyOnWrite();
+        instance.clearSide();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+       */
+      @java.lang.Override
+      public boolean hasCounterParty() {
+        return instance.hasCounterParty();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentCounterParty getCounterParty() {
+        return instance.getCounterParty();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+       */
+      public Builder setCounterParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+        copyOnWrite();
+        instance.setCounterParty(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+       */
+      public Builder setCounterParty(
+          com.elarian.hera.proto.Common.PaymentCounterParty.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCounterParty(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+       */
+      public Builder mergeCounterParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+        copyOnWrite();
+        instance.mergeCounterParty(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 6;</code>
+       */
+      public Builder clearCounterParty() {  copyOnWrite();
+        instance.clearCounterParty();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return instance.hasValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.Cash getValue() {
+        return instance.getValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+       */
+      public Builder setValue(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.setValue(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+       */
+      public Builder setValue(
+          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setValue(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+       */
+      public Builder mergeValue(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.mergeValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
+       */
+      public Builder clearValue() {  copyOnWrite();
+        instance.clearValue();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CustomerWalletPaymentRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Web.CustomerWalletPaymentRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
+              "appId_",
+              "walletId_",
+              "customerNumber_",
+              "side_",
+              "counterParty_",
+              "value_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\t\u0005\f\u0006\t\u0007\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Web.CustomerWalletPaymentRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Web.CustomerWalletPaymentRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Web.CustomerWalletPaymentRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.CustomerWalletPaymentRequest)
+    private static final com.elarian.hera.proto.Web.CustomerWalletPaymentRequest DEFAULT_INSTANCE;
+    static {
+      CustomerWalletPaymentRequest defaultInstance = new CustomerWalletPaymentRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CustomerWalletPaymentRequest.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Web.CustomerWalletPaymentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CustomerWalletPaymentRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CustomerWalletPaymentRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface InitiatePaymentReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.InitiatePaymentReply)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -17730,14 +20483,14 @@ public final class Web {
     com.google.protobuf.StringValue getCustomerId();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.CheckoutPaymentReply}
+   * Protobuf type {@code com.elarian.hera.proto.InitiatePaymentReply}
    */
-  public  static final class CheckoutPaymentReply extends
+  public  static final class InitiatePaymentReply extends
       com.google.protobuf.GeneratedMessageLite<
-          CheckoutPaymentReply, CheckoutPaymentReply.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CheckoutPaymentReply)
-      CheckoutPaymentReplyOrBuilder {
-    private CheckoutPaymentReply() {
+          InitiatePaymentReply, InitiatePaymentReply.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.InitiatePaymentReply)
+      InitiatePaymentReplyOrBuilder {
+    private InitiatePaymentReply() {
       description_ = "";
     }
     public static final int STATUS_FIELD_NUMBER = 1;
@@ -17921,73 +20674,73 @@ public final class Web {
       
     }
 
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(byte[] data)
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseDelimitedFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply parseFrom(
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17998,19 +20751,19 @@ public final class Web {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.Web.CheckoutPaymentReply prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.Web.InitiatePaymentReply prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.CheckoutPaymentReply}
+     * Protobuf type {@code com.elarian.hera.proto.InitiatePaymentReply}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.Web.CheckoutPaymentReply, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.CheckoutPaymentReply)
-        com.elarian.hera.proto.Web.CheckoutPaymentReplyOrBuilder {
-      // Construct using com.elarian.hera.proto.Web.CheckoutPaymentReply.newBuilder()
+          com.elarian.hera.proto.Web.InitiatePaymentReply, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.InitiatePaymentReply)
+        com.elarian.hera.proto.Web.InitiatePaymentReplyOrBuilder {
+      // Construct using com.elarian.hera.proto.Web.InitiatePaymentReply.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -18205,7 +20958,7 @@ public final class Web {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CheckoutPaymentReply)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.InitiatePaymentReply)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -18214,7 +20967,7 @@ public final class Web {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.Web.CheckoutPaymentReply();
+          return new com.elarian.hera.proto.Web.InitiatePaymentReply();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -18236,13 +20989,13 @@ public final class Web {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.Web.CheckoutPaymentReply> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.Web.InitiatePaymentReply> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.Web.CheckoutPaymentReply.class) {
+            synchronized (com.elarian.hera.proto.Web.InitiatePaymentReply.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Web.CheckoutPaymentReply>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Web.InitiatePaymentReply>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -18261,24 +21014,24 @@ public final class Web {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.CheckoutPaymentReply)
-    private static final com.elarian.hera.proto.Web.CheckoutPaymentReply DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.InitiatePaymentReply)
+    private static final com.elarian.hera.proto.Web.InitiatePaymentReply DEFAULT_INSTANCE;
     static {
-      CheckoutPaymentReply defaultInstance = new CheckoutPaymentReply();
+      InitiatePaymentReply defaultInstance = new InitiatePaymentReply();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        CheckoutPaymentReply.class, defaultInstance);
+        InitiatePaymentReply.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.Web.CheckoutPaymentReply getDefaultInstance() {
+    public static com.elarian.hera.proto.Web.InitiatePaymentReply getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<CheckoutPaymentReply> PARSER;
+    private static volatile com.google.protobuf.Parser<InitiatePaymentReply> PARSER;
 
-    public static com.google.protobuf.Parser<CheckoutPaymentReply> parser() {
+    public static com.google.protobuf.Parser<InitiatePaymentReply> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -18288,64 +21041,50 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
 
     /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The customerId.
-     */
-    java.lang.String getCustomerId();
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The bytes for customerId.
-     */
-    com.google.protobuf.ByteString
-        getCustomerIdBytes();
-
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
      * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
      * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber();
-
-    public com.elarian.hera.proto.Web.MakeVoiceCallRequest.CustomerCase getCustomerCase();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MakeVoiceCallRequest}
@@ -18356,56 +21095,60 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MakeVoiceCallRequest)
       MakeVoiceCallRequestOrBuilder {
     private MakeVoiceCallRequest() {
+      orgId_ = "";
       appId_ = "";
-      productId_ = "";
     }
-    private int customerCase_ = 0;
-    private java.lang.Object customer_;
-    public enum CustomerCase {
-      CUSTOMER_ID(3),
-      CUSTOMER_NUMBER(4),
-      CUSTOMER_NOT_SET(0);
-      private final int value;
-      private CustomerCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static CustomerCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static CustomerCase forNumber(int value) {
-        switch (value) {
-          case 3: return CUSTOMER_ID;
-          case 4: return CUSTOMER_NUMBER;
-          case 0: return CUSTOMER_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
     @java.lang.Override
-    public CustomerCase
-    getCustomerCase() {
-      return CustomerCase.forNumber(
-          customerCase_);
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
     }
 
-    private void clearCustomer() {
-      customerCase_ = 0;
-      customer_ = null;
-    }
-
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -18413,7 +21156,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -18422,7 +21165,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -18432,14 +21175,14 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
@@ -18449,177 +21192,70 @@ public final class Web {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 2;
-    private java.lang.String productId_;
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
-     * <code>string product_id = 2;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 2;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 3;
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The customerId.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerId() {
-      java.lang.String ref = "";
-      if (customerCase_ == 3) {
-        ref = (java.lang.String) customer_;
-      }
-      return ref;
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @return The bytes for customerId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      java.lang.String ref = "";
-      if (customerCase_ == 3) {
-        ref = (java.lang.String) customer_;
-      }
-      return com.google.protobuf.ByteString.copyFromUtf8(ref);
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @param value The customerId to set.
-     */
-    private void setCustomerId(
-        java.lang.String value) {
-      value.getClass();
-  customerCase_ = 3;
-      customer_ = value;
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     */
-    private void clearCustomerId() {
-      if (customerCase_ == 3) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
-    }
-    /**
-     * <code>string customer_id = 3;</code>
-     * @param value The bytes for customerId to set.
-     */
-    private void setCustomerIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      customer_ = value.toStringUtf8();
-      customerCase_ = 3;
-    }
-
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 4;
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
     public boolean hasCustomerNumber() {
-      return customerCase_ == 4;
+      return customerNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      if (customerCase_ == 4) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
-      }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  customer_ = value;
-      customerCase_ = 4;
-    }
+  customerNumber_ = value;
+      
+      }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  if (customerCase_ == 4 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
-            .mergeFrom(value).buildPartial();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
-        customer_ = value;
+        customerNumber_ = value;
       }
-      customerCase_ = 4;
+      
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
-    private void clearCustomerNumber() {
-      if (customerCase_ == 4) {
-        customerCase_ = 0;
-        customer_ = null;
-      }
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
     }
 
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 5;
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 4;
     private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_;
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
      */
     @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
      */
     private void setChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
       value.getClass();
@@ -18627,7 +21263,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
@@ -18642,7 +21278,7 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
      */
     private void clearChannelNumber() {  channelNumber_ = null;
       
@@ -18742,21 +21378,58 @@ public final class Web {
         super(DEFAULT_INSTANCE);
       }
 
-      @java.lang.Override
-      public CustomerCase
-          getCustomerCase() {
-        return instance.getCustomerCase();
-      }
 
-      public Builder clearCustomer() {
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
         copyOnWrite();
-        instance.clearCustomer();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
 
-
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -18764,7 +21437,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -18773,7 +21446,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -18784,7 +21457,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -18793,7 +21466,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -18805,127 +21478,29 @@ public final class Web {
       }
 
       /**
-       * <code>string product_id = 2;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 2;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 3;</code>
-       * @return The customerId.
-       */
-      @java.lang.Override
-      public java.lang.String getCustomerId() {
-        return instance.getCustomerId();
-      }
-      /**
-       * <code>string customer_id = 3;</code>
-       * @return The bytes for customerId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCustomerIdBytes() {
-        return instance.getCustomerIdBytes();
-      }
-      /**
-       * <code>string customer_id = 3;</code>
-       * @param value The customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setCustomerId(value);
-        return this;
-      }
-      /**
-       * <code>string customer_id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomerId() {
-        copyOnWrite();
-        instance.clearCustomerId();
-        return this;
-      }
-      /**
-       * <code>string customer_id = 3;</code>
-       * @param value The bytes for customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setCustomerIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       @java.lang.Override
       public boolean hasCustomerNumber() {
         return instance.hasCustomerNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
-      }
+        }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder setCustomerNumber(
           com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
@@ -18934,7 +21509,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
@@ -18942,30 +21517,29 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
-      public Builder clearCustomerNumber() {
-        copyOnWrite();
+      public Builder clearCustomerNumber() {  copyOnWrite();
         instance.clearCustomerNumber();
         return this;
       }
 
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
        */
       @java.lang.Override
       public boolean hasChannelNumber() {
         return instance.hasChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
        */
       public Builder setChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
         copyOnWrite();
@@ -18973,7 +21547,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
        */
       public Builder setChannelNumber(
           com.elarian.hera.proto.Common.VoiceChannelNumber.Builder builderForValue) {
@@ -18982,7 +21556,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
        */
       public Builder mergeChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
         copyOnWrite();
@@ -18990,7 +21564,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 5;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
        */
       public Builder clearChannelNumber() {  copyOnWrite();
         instance.clearChannelNumber();
@@ -19013,16 +21587,14 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "customer_",
-              "customerCase_",
+              "orgId_",
               "appId_",
-              "productId_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
+              "customerNumber_",
               "channelNumber_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u023b\u0000\u0004<\u0000\u0005\t";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t\u0004\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -19701,6 +22273,17 @@ public final class Web {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     * @return Whether the customerId field is set.
+     */
+    boolean hasCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     * @return The customerId.
+     */
+    com.google.protobuf.StringValue getCustomerId();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.UpdateCustomerStateReply}
@@ -19783,6 +22366,52 @@ public final class Web {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       description_ = value.toStringUtf8();
+      
+    }
+
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue customerId_;
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerId() {
+      return customerId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getCustomerId() {
+      return customerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    private void setCustomerId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  customerId_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (customerId_ != null &&
+          customerId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        customerId_ =
+          com.google.protobuf.StringValue.newBuilder(customerId_).mergeFrom(value).buildPartial();
+      } else {
+        customerId_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    private void clearCustomerId() {  customerId_ = null;
       
     }
 
@@ -19958,6 +22587,53 @@ public final class Web {
         return this;
       }
 
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerId() {
+        return instance.hasCustomerId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getCustomerId() {
+        return instance.getCustomerId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder setCustomerId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setCustomerId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder setCustomerId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder mergeCustomerId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder clearCustomerId() {  copyOnWrite();
+        instance.clearCustomerId();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.UpdateCustomerStateReply)
     }
     @java.lang.Override
@@ -19976,10 +22652,11 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "status_",
               "description_",
+              "customerId_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0007\u0002\u0208" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0007\u0002\u0208" +
+                "\u0003\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -20498,12 +23175,24 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
@@ -20518,12 +23207,60 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.StreamNotificationRequest)
       StreamNotificationRequestOrBuilder {
     private StreamNotificationRequest() {
+      orgId_ = "";
       appId_ = "";
     }
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -20531,7 +23268,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -20540,7 +23277,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -20550,14 +23287,14 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
@@ -20663,7 +23400,56 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -20671,7 +23457,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -20680,7 +23466,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -20691,7 +23477,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -20700,7 +23486,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -20727,10 +23513,12 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
               "appId_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -22101,58 +24889,46 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     java.lang.String getCustomerId();
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     com.google.protobuf.ByteString
         getCustomerIdBytes();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      * @return Whether the reminder field is set.
      */
     boolean hasReminder();
     /**
-     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      * @return The reminder.
      */
     com.elarian.hera.proto.Common.CustomerReminder getReminder();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
      * @return Whether the tag field is set.
      */
     boolean hasTag();
     /**
-     * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
      * @return The tag.
      */
     com.elarian.hera.proto.Common.CustomerIndex getTag();
 
     /**
-     * <code>.google.protobuf.StringValue work_id = 5;</code>
+     * <code>.google.protobuf.StringValue work_id = 4;</code>
      * @return Whether the workId field is set.
      */
     boolean hasWorkId();
     /**
-     * <code>.google.protobuf.StringValue work_id = 5;</code>
+     * <code>.google.protobuf.StringValue work_id = 4;</code>
      * @return The workId.
      */
     com.google.protobuf.StringValue getWorkId();
@@ -22166,60 +24942,12 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReminderNotification)
       ReminderNotificationOrBuilder {
     private ReminderNotification() {
-      productId_ = "";
       customerId_ = "";
     }
-    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
-    private java.lang.String productId_;
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 2;
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
     private java.lang.String customerId_;
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     @java.lang.Override
@@ -22227,7 +24955,7 @@ public final class Web {
       return customerId_;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     @java.lang.Override
@@ -22236,7 +24964,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The customerId to set.
      */
     private void setCustomerId(
@@ -22246,14 +24974,14 @@ public final class Web {
       customerId_ = value;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      */
     private void clearCustomerId() {
       
       customerId_ = getDefaultInstance().getCustomerId();
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The bytes for customerId to set.
      */
     private void setCustomerIdBytes(
@@ -22263,24 +24991,24 @@ public final class Web {
       
     }
 
-    public static final int REMINDER_FIELD_NUMBER = 3;
+    public static final int REMINDER_FIELD_NUMBER = 2;
     private com.elarian.hera.proto.Common.CustomerReminder reminder_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
     @java.lang.Override
     public boolean hasReminder() {
       return reminder_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerReminder getReminder() {
       return reminder_ == null ? com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance() : reminder_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
     private void setReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
       value.getClass();
@@ -22288,7 +25016,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
@@ -22303,30 +25031,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
     private void clearReminder() {  reminder_ = null;
       
     }
 
-    public static final int TAG_FIELD_NUMBER = 4;
+    public static final int TAG_FIELD_NUMBER = 3;
     private com.elarian.hera.proto.Common.CustomerIndex tag_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
      */
     @java.lang.Override
     public boolean hasTag() {
       return tag_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerIndex getTag() {
       return tag_ == null ? com.elarian.hera.proto.Common.CustomerIndex.getDefaultInstance() : tag_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
      */
     private void setTag(com.elarian.hera.proto.Common.CustomerIndex value) {
       value.getClass();
@@ -22334,7 +25062,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeTag(com.elarian.hera.proto.Common.CustomerIndex value) {
@@ -22349,30 +25077,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
      */
     private void clearTag() {  tag_ = null;
       
     }
 
-    public static final int WORK_ID_FIELD_NUMBER = 5;
+    public static final int WORK_ID_FIELD_NUMBER = 4;
     private com.google.protobuf.StringValue workId_;
     /**
-     * <code>.google.protobuf.StringValue work_id = 5;</code>
+     * <code>.google.protobuf.StringValue work_id = 4;</code>
      */
     @java.lang.Override
     public boolean hasWorkId() {
       return workId_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue work_id = 5;</code>
+     * <code>.google.protobuf.StringValue work_id = 4;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValue getWorkId() {
       return workId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : workId_;
     }
     /**
-     * <code>.google.protobuf.StringValue work_id = 5;</code>
+     * <code>.google.protobuf.StringValue work_id = 4;</code>
      */
     private void setWorkId(com.google.protobuf.StringValue value) {
       value.getClass();
@@ -22380,7 +25108,7 @@ public final class Web {
       
       }
     /**
-     * <code>.google.protobuf.StringValue work_id = 5;</code>
+     * <code>.google.protobuf.StringValue work_id = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeWorkId(com.google.protobuf.StringValue value) {
@@ -22395,7 +25123,7 @@ public final class Web {
       
     }
     /**
-     * <code>.google.protobuf.StringValue work_id = 5;</code>
+     * <code>.google.protobuf.StringValue work_id = 4;</code>
      */
     private void clearWorkId() {  workId_ = null;
       
@@ -22497,56 +25225,7 @@ public final class Web {
 
 
       /**
-       * <code>string product_id = 1;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The customerId.
        */
       @java.lang.Override
@@ -22554,7 +25233,7 @@ public final class Web {
         return instance.getCustomerId();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The bytes for customerId.
        */
       @java.lang.Override
@@ -22563,7 +25242,7 @@ public final class Web {
         return instance.getCustomerIdBytes();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The customerId to set.
        * @return This builder for chaining.
        */
@@ -22574,7 +25253,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerId() {
@@ -22583,7 +25262,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The bytes for customerId to set.
        * @return This builder for chaining.
        */
@@ -22595,21 +25274,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
       @java.lang.Override
       public boolean hasReminder() {
         return instance.hasReminder();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerReminder getReminder() {
         return instance.getReminder();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
       public Builder setReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
         copyOnWrite();
@@ -22617,7 +25296,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
       public Builder setReminder(
           com.elarian.hera.proto.Common.CustomerReminder.Builder builderForValue) {
@@ -22626,7 +25305,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
       public Builder mergeReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
         copyOnWrite();
@@ -22634,7 +25313,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
       public Builder clearReminder() {  copyOnWrite();
         instance.clearReminder();
@@ -22642,21 +25321,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
        */
       @java.lang.Override
       public boolean hasTag() {
         return instance.hasTag();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerIndex getTag() {
         return instance.getTag();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
        */
       public Builder setTag(com.elarian.hera.proto.Common.CustomerIndex value) {
         copyOnWrite();
@@ -22664,7 +25343,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
        */
       public Builder setTag(
           com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
@@ -22673,7 +25352,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
        */
       public Builder mergeTag(com.elarian.hera.proto.Common.CustomerIndex value) {
         copyOnWrite();
@@ -22681,7 +25360,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerIndex tag = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerIndex tag = 3;</code>
        */
       public Builder clearTag() {  copyOnWrite();
         instance.clearTag();
@@ -22689,21 +25368,21 @@ public final class Web {
       }
 
       /**
-       * <code>.google.protobuf.StringValue work_id = 5;</code>
+       * <code>.google.protobuf.StringValue work_id = 4;</code>
        */
       @java.lang.Override
       public boolean hasWorkId() {
         return instance.hasWorkId();
       }
       /**
-       * <code>.google.protobuf.StringValue work_id = 5;</code>
+       * <code>.google.protobuf.StringValue work_id = 4;</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValue getWorkId() {
         return instance.getWorkId();
       }
       /**
-       * <code>.google.protobuf.StringValue work_id = 5;</code>
+       * <code>.google.protobuf.StringValue work_id = 4;</code>
        */
       public Builder setWorkId(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -22711,7 +25390,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.google.protobuf.StringValue work_id = 5;</code>
+       * <code>.google.protobuf.StringValue work_id = 4;</code>
        */
       public Builder setWorkId(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -22720,7 +25399,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue work_id = 5;</code>
+       * <code>.google.protobuf.StringValue work_id = 4;</code>
        */
       public Builder mergeWorkId(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -22728,7 +25407,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue work_id = 5;</code>
+       * <code>.google.protobuf.StringValue work_id = 4;</code>
        */
       public Builder clearWorkId() {  copyOnWrite();
         instance.clearWorkId();
@@ -22751,15 +25430,14 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "productId_",
               "customerId_",
               "reminder_",
               "tag_",
               "workId_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\t\u0004\t\u0005\t";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -22819,95 +25497,83 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     java.lang.String getCustomerId();
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     com.google.protobuf.ByteString
         getCustomerIdBytes();
 
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @return The messageId.
      */
     java.lang.String getMessageId();
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @return The bytes for messageId.
      */
     com.google.protobuf.ByteString
         getMessageIdBytes();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
 
     /**
-     * <code>.google.protobuf.StringValue text = 7;</code>
+     * <code>.google.protobuf.StringValue text = 5;</code>
      * @return Whether the text field is set.
      */
     boolean hasText();
     /**
-     * <code>.google.protobuf.StringValue text = 7;</code>
+     * <code>.google.protobuf.StringValue text = 5;</code>
      * @return The text.
      */
     com.google.protobuf.StringValue getText();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     java.util.List<com.elarian.hera.proto.Common.MediaMessageBody> 
         getMediaList();
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     com.elarian.hera.proto.Common.MediaMessageBody getMedia(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     int getMediaCount();
 
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
      * @return Whether the location field is set.
      */
     boolean hasLocation();
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
      * @return The location.
      */
     com.elarian.hera.proto.Common.LocationMessageBody getLocation();
@@ -22921,62 +25587,14 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReceivedMessageNotification)
       ReceivedMessageNotificationOrBuilder {
     private ReceivedMessageNotification() {
-      productId_ = "";
       customerId_ = "";
       messageId_ = "";
       media_ = emptyProtobufList();
     }
-    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
-    private java.lang.String productId_;
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 2;
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
     private java.lang.String customerId_;
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     @java.lang.Override
@@ -22984,7 +25602,7 @@ public final class Web {
       return customerId_;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     @java.lang.Override
@@ -22993,7 +25611,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The customerId to set.
      */
     private void setCustomerId(
@@ -23003,14 +25621,14 @@ public final class Web {
       customerId_ = value;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      */
     private void clearCustomerId() {
       
       customerId_ = getDefaultInstance().getCustomerId();
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The bytes for customerId to set.
      */
     private void setCustomerIdBytes(
@@ -23020,10 +25638,10 @@ public final class Web {
       
     }
 
-    public static final int MESSAGE_ID_FIELD_NUMBER = 3;
+    public static final int MESSAGE_ID_FIELD_NUMBER = 2;
     private java.lang.String messageId_;
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @return The messageId.
      */
     @java.lang.Override
@@ -23031,7 +25649,7 @@ public final class Web {
       return messageId_;
     }
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @return The bytes for messageId.
      */
     @java.lang.Override
@@ -23040,7 +25658,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(messageId_);
     }
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @param value The messageId to set.
      */
     private void setMessageId(
@@ -23050,14 +25668,14 @@ public final class Web {
       messageId_ = value;
     }
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      */
     private void clearMessageId() {
       
       messageId_ = getDefaultInstance().getMessageId();
     }
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @param value The bytes for messageId to set.
      */
     private void setMessageIdBytes(
@@ -23067,24 +25685,24 @@ public final class Web {
       
     }
 
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 5;
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 3;
     private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
     public boolean hasCustomerNumber() {
       return customerNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
       return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
@@ -23092,7 +25710,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
@@ -23107,30 +25725,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     private void clearCustomerNumber() {  customerNumber_ = null;
       
     }
 
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 6;
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 4;
     private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     private void setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
       value.getClass();
@@ -23138,7 +25756,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
@@ -23153,30 +25771,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
      */
     private void clearChannelNumber() {  channelNumber_ = null;
       
     }
 
-    public static final int TEXT_FIELD_NUMBER = 7;
+    public static final int TEXT_FIELD_NUMBER = 5;
     private com.google.protobuf.StringValue text_;
     /**
-     * <code>.google.protobuf.StringValue text = 7;</code>
+     * <code>.google.protobuf.StringValue text = 5;</code>
      */
     @java.lang.Override
     public boolean hasText() {
       return text_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue text = 7;</code>
+     * <code>.google.protobuf.StringValue text = 5;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValue getText() {
       return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
     }
     /**
-     * <code>.google.protobuf.StringValue text = 7;</code>
+     * <code>.google.protobuf.StringValue text = 5;</code>
      */
     private void setText(com.google.protobuf.StringValue value) {
       value.getClass();
@@ -23184,7 +25802,7 @@ public final class Web {
       
       }
     /**
-     * <code>.google.protobuf.StringValue text = 7;</code>
+     * <code>.google.protobuf.StringValue text = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeText(com.google.protobuf.StringValue value) {
@@ -23199,44 +25817,44 @@ public final class Web {
       
     }
     /**
-     * <code>.google.protobuf.StringValue text = 7;</code>
+     * <code>.google.protobuf.StringValue text = 5;</code>
      */
     private void clearText() {  text_ = null;
       
     }
 
-    public static final int MEDIA_FIELD_NUMBER = 8;
+    public static final int MEDIA_FIELD_NUMBER = 6;
     private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.MediaMessageBody> media_;
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.MediaMessageBody> getMediaList() {
       return media_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     public java.util.List<? extends com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder> 
         getMediaOrBuilderList() {
       return media_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     @java.lang.Override
     public int getMediaCount() {
       return media_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.MediaMessageBody getMedia(int index) {
       return media_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     public com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder getMediaOrBuilder(
         int index) {
@@ -23251,7 +25869,7 @@ public final class Web {
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     private void setMedia(
         int index, com.elarian.hera.proto.Common.MediaMessageBody value) {
@@ -23260,7 +25878,7 @@ public final class Web {
       media_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     private void addMedia(com.elarian.hera.proto.Common.MediaMessageBody value) {
       value.getClass();
@@ -23268,7 +25886,7 @@ public final class Web {
       media_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     private void addMedia(
         int index, com.elarian.hera.proto.Common.MediaMessageBody value) {
@@ -23277,7 +25895,7 @@ public final class Web {
       media_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     private void addAllMedia(
         java.lang.Iterable<? extends com.elarian.hera.proto.Common.MediaMessageBody> values) {
@@ -23286,37 +25904,37 @@ public final class Web {
           values, media_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     private void clearMedia() {
       media_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
      */
     private void removeMedia(int index) {
       ensureMediaIsMutable();
       media_.remove(index);
     }
 
-    public static final int LOCATION_FIELD_NUMBER = 9;
+    public static final int LOCATION_FIELD_NUMBER = 7;
     private com.elarian.hera.proto.Common.LocationMessageBody location_;
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
      */
     @java.lang.Override
     public boolean hasLocation() {
       return location_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.LocationMessageBody getLocation() {
       return location_ == null ? com.elarian.hera.proto.Common.LocationMessageBody.getDefaultInstance() : location_;
     }
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
      */
     private void setLocation(com.elarian.hera.proto.Common.LocationMessageBody value) {
       value.getClass();
@@ -23324,7 +25942,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeLocation(com.elarian.hera.proto.Common.LocationMessageBody value) {
@@ -23339,7 +25957,7 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+     * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
      */
     private void clearLocation() {  location_ = null;
       
@@ -23441,56 +26059,7 @@ public final class Web {
 
 
       /**
-       * <code>string product_id = 1;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The customerId.
        */
       @java.lang.Override
@@ -23498,7 +26067,7 @@ public final class Web {
         return instance.getCustomerId();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The bytes for customerId.
        */
       @java.lang.Override
@@ -23507,7 +26076,7 @@ public final class Web {
         return instance.getCustomerIdBytes();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The customerId to set.
        * @return This builder for chaining.
        */
@@ -23518,7 +26087,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerId() {
@@ -23527,7 +26096,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The bytes for customerId to set.
        * @return This builder for chaining.
        */
@@ -23539,7 +26108,7 @@ public final class Web {
       }
 
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @return The messageId.
        */
       @java.lang.Override
@@ -23547,7 +26116,7 @@ public final class Web {
         return instance.getMessageId();
       }
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @return The bytes for messageId.
        */
       @java.lang.Override
@@ -23556,7 +26125,7 @@ public final class Web {
         return instance.getMessageIdBytes();
       }
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @param value The messageId to set.
        * @return This builder for chaining.
        */
@@ -23567,7 +26136,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearMessageId() {
@@ -23576,7 +26145,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @param value The bytes for messageId to set.
        * @return This builder for chaining.
        */
@@ -23588,21 +26157,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       @java.lang.Override
       public boolean hasCustomerNumber() {
         return instance.hasCustomerNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
@@ -23610,7 +26179,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder setCustomerNumber(
           com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
@@ -23619,7 +26188,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
@@ -23627,7 +26196,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder clearCustomerNumber() {  copyOnWrite();
         instance.clearCustomerNumber();
@@ -23635,21 +26204,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       @java.lang.Override
       public boolean hasChannelNumber() {
         return instance.hasChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       public Builder setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
         copyOnWrite();
@@ -23657,7 +26226,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       public Builder setChannelNumber(
           com.elarian.hera.proto.Common.MessagingChannelNumber.Builder builderForValue) {
@@ -23666,7 +26235,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       public Builder mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
         copyOnWrite();
@@ -23674,7 +26243,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;</code>
        */
       public Builder clearChannelNumber() {  copyOnWrite();
         instance.clearChannelNumber();
@@ -23682,21 +26251,21 @@ public final class Web {
       }
 
       /**
-       * <code>.google.protobuf.StringValue text = 7;</code>
+       * <code>.google.protobuf.StringValue text = 5;</code>
        */
       @java.lang.Override
       public boolean hasText() {
         return instance.hasText();
       }
       /**
-       * <code>.google.protobuf.StringValue text = 7;</code>
+       * <code>.google.protobuf.StringValue text = 5;</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValue getText() {
         return instance.getText();
       }
       /**
-       * <code>.google.protobuf.StringValue text = 7;</code>
+       * <code>.google.protobuf.StringValue text = 5;</code>
        */
       public Builder setText(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -23704,7 +26273,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.google.protobuf.StringValue text = 7;</code>
+       * <code>.google.protobuf.StringValue text = 5;</code>
        */
       public Builder setText(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -23713,7 +26282,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue text = 7;</code>
+       * <code>.google.protobuf.StringValue text = 5;</code>
        */
       public Builder mergeText(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -23721,7 +26290,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue text = 7;</code>
+       * <code>.google.protobuf.StringValue text = 5;</code>
        */
       public Builder clearText() {  copyOnWrite();
         instance.clearText();
@@ -23729,7 +26298,7 @@ public final class Web {
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       @java.lang.Override
       public java.util.List<com.elarian.hera.proto.Common.MediaMessageBody> getMediaList() {
@@ -23737,20 +26306,20 @@ public final class Web {
             instance.getMediaList());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       @java.lang.Override
       public int getMediaCount() {
         return instance.getMediaCount();
       }/**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.MediaMessageBody getMedia(int index) {
         return instance.getMedia(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder setMedia(
           int index, com.elarian.hera.proto.Common.MediaMessageBody value) {
@@ -23759,7 +26328,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder setMedia(
           int index, com.elarian.hera.proto.Common.MediaMessageBody.Builder builderForValue) {
@@ -23769,7 +26338,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder addMedia(com.elarian.hera.proto.Common.MediaMessageBody value) {
         copyOnWrite();
@@ -23777,7 +26346,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder addMedia(
           int index, com.elarian.hera.proto.Common.MediaMessageBody value) {
@@ -23786,7 +26355,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder addMedia(
           com.elarian.hera.proto.Common.MediaMessageBody.Builder builderForValue) {
@@ -23795,7 +26364,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder addMedia(
           int index, com.elarian.hera.proto.Common.MediaMessageBody.Builder builderForValue) {
@@ -23805,7 +26374,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder addAllMedia(
           java.lang.Iterable<? extends com.elarian.hera.proto.Common.MediaMessageBody> values) {
@@ -23814,7 +26383,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder clearMedia() {
         copyOnWrite();
@@ -23822,7 +26391,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 8;</code>
+       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 6;</code>
        */
       public Builder removeMedia(int index) {
         copyOnWrite();
@@ -23831,21 +26400,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+       * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
        */
       @java.lang.Override
       public boolean hasLocation() {
         return instance.hasLocation();
       }
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+       * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.LocationMessageBody getLocation() {
         return instance.getLocation();
       }
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+       * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
        */
       public Builder setLocation(com.elarian.hera.proto.Common.LocationMessageBody value) {
         copyOnWrite();
@@ -23853,7 +26422,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+       * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
        */
       public Builder setLocation(
           com.elarian.hera.proto.Common.LocationMessageBody.Builder builderForValue) {
@@ -23862,7 +26431,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+       * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
        */
       public Builder mergeLocation(com.elarian.hera.proto.Common.LocationMessageBody value) {
         copyOnWrite();
@@ -23870,7 +26439,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 9;</code>
+       * <code>.com.elarian.hera.proto.LocationMessageBody location = 7;</code>
        */
       public Builder clearLocation() {  copyOnWrite();
         instance.clearLocation();
@@ -23893,7 +26462,6 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "productId_",
               "customerId_",
               "messageId_",
               "customerNumber_",
@@ -23904,8 +26472,8 @@ public final class Web {
               "location_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0000\u0001\t\b\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
-                "\u0005\t\u0006\t\u0007\t\b\u001b\t\t";
+                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t\u0004\t\u0005\t\u0006\u001b\u0007\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -23965,48 +26533,36 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     java.lang.String getCustomerId();
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     com.google.protobuf.ByteString
         getCustomerIdBytes();
 
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @return The messageId.
      */
     java.lang.String getMessageId();
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @return The bytes for messageId.
      */
     com.google.protobuf.ByteString
         getMessageIdBytes();
 
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
      * @return The status.
      */
     com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus();
@@ -24020,61 +26576,13 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessageStatusNotification)
       MessageStatusNotificationOrBuilder {
     private MessageStatusNotification() {
-      productId_ = "";
       customerId_ = "";
       messageId_ = "";
     }
-    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
-    private java.lang.String productId_;
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 2;
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
     private java.lang.String customerId_;
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     @java.lang.Override
@@ -24082,7 +26590,7 @@ public final class Web {
       return customerId_;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     @java.lang.Override
@@ -24091,7 +26599,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The customerId to set.
      */
     private void setCustomerId(
@@ -24101,14 +26609,14 @@ public final class Web {
       customerId_ = value;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      */
     private void clearCustomerId() {
       
       customerId_ = getDefaultInstance().getCustomerId();
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The bytes for customerId to set.
      */
     private void setCustomerIdBytes(
@@ -24118,10 +26626,10 @@ public final class Web {
       
     }
 
-    public static final int MESSAGE_ID_FIELD_NUMBER = 3;
+    public static final int MESSAGE_ID_FIELD_NUMBER = 2;
     private java.lang.String messageId_;
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @return The messageId.
      */
     @java.lang.Override
@@ -24129,7 +26637,7 @@ public final class Web {
       return messageId_;
     }
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @return The bytes for messageId.
      */
     @java.lang.Override
@@ -24138,7 +26646,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(messageId_);
     }
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @param value The messageId to set.
      */
     private void setMessageId(
@@ -24148,14 +26656,14 @@ public final class Web {
       messageId_ = value;
     }
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      */
     private void clearMessageId() {
       
       messageId_ = getDefaultInstance().getMessageId();
     }
     /**
-     * <code>string message_id = 3;</code>
+     * <code>string message_id = 2;</code>
      * @param value The bytes for messageId to set.
      */
     private void setMessageIdBytes(
@@ -24165,10 +26673,10 @@ public final class Web {
       
     }
 
-    public static final int STATUS_FIELD_NUMBER = 4;
+    public static final int STATUS_FIELD_NUMBER = 3;
     private int status_;
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override
@@ -24176,7 +26684,7 @@ public final class Web {
       return status_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -24185,14 +26693,14 @@ public final class Web {
       return result == null ? com.elarian.hera.proto.Common.MessageDeliveryStatus.UNRECOGNIZED : result;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
      * @param value The enum numeric value on the wire for status to set.
      */
     private void setStatusValue(int value) {
         status_ = value;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
      * @param value The status to set.
      */
     private void setStatus(com.elarian.hera.proto.Common.MessageDeliveryStatus value) {
@@ -24200,7 +26708,7 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
      */
     private void clearStatus() {
       
@@ -24303,56 +26811,7 @@ public final class Web {
 
 
       /**
-       * <code>string product_id = 1;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The customerId.
        */
       @java.lang.Override
@@ -24360,7 +26819,7 @@ public final class Web {
         return instance.getCustomerId();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The bytes for customerId.
        */
       @java.lang.Override
@@ -24369,7 +26828,7 @@ public final class Web {
         return instance.getCustomerIdBytes();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The customerId to set.
        * @return This builder for chaining.
        */
@@ -24380,7 +26839,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerId() {
@@ -24389,7 +26848,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The bytes for customerId to set.
        * @return This builder for chaining.
        */
@@ -24401,7 +26860,7 @@ public final class Web {
       }
 
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @return The messageId.
        */
       @java.lang.Override
@@ -24409,7 +26868,7 @@ public final class Web {
         return instance.getMessageId();
       }
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @return The bytes for messageId.
        */
       @java.lang.Override
@@ -24418,7 +26877,7 @@ public final class Web {
         return instance.getMessageIdBytes();
       }
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @param value The messageId to set.
        * @return This builder for chaining.
        */
@@ -24429,7 +26888,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearMessageId() {
@@ -24438,7 +26897,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string message_id = 3;</code>
+       * <code>string message_id = 2;</code>
        * @param value The bytes for messageId to set.
        * @return This builder for chaining.
        */
@@ -24450,7 +26909,7 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override
@@ -24458,7 +26917,7 @@ public final class Web {
         return instance.getStatusValue();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -24468,7 +26927,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
        * @return The status.
        */
       @java.lang.Override
@@ -24476,7 +26935,7 @@ public final class Web {
         return instance.getStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -24486,7 +26945,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -24511,14 +26970,13 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "productId_",
               "customerId_",
               "messageId_",
               "status_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\f";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -24578,72 +27036,58 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     java.lang.String getCustomerId();
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     com.google.protobuf.ByteString
         getCustomerIdBytes();
 
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @return The sessionId.
      */
     java.lang.String getSessionId();
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @return The bytes for sessionId.
      */
     com.google.protobuf.ByteString
         getSessionIdBytes();
 
     /**
-     * <code>string channel_number = 4;</code>
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
      * @return The channelNumber.
      */
-    java.lang.String getChannelNumber();
-    /**
-     * <code>string channel_number = 4;</code>
-     * @return The bytes for channelNumber.
-     */
-    com.google.protobuf.ByteString
-        getChannelNumberBytes();
+    com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber();
 
     /**
-     * <code>string customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      * @return The customerNumber.
      */
-    java.lang.String getCustomerNumber();
-    /**
-     * <code>string customer_number = 5;</code>
-     * @return The bytes for customerNumber.
-     */
-    com.google.protobuf.ByteString
-        getCustomerNumberBytes();
+    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>.google.protobuf.StringValue input = 6;</code>
+     * <code>.google.protobuf.StringValue input = 5;</code>
      * @return Whether the input field is set.
      */
     boolean hasInput();
     /**
-     * <code>.google.protobuf.StringValue input = 6;</code>
+     * <code>.google.protobuf.StringValue input = 5;</code>
      * @return The input.
      */
     com.google.protobuf.StringValue getInput();
@@ -24657,63 +27101,13 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdSessionNotification)
       UssdSessionNotificationOrBuilder {
     private UssdSessionNotification() {
-      productId_ = "";
       customerId_ = "";
       sessionId_ = "";
-      channelNumber_ = "";
-      customerNumber_ = "";
     }
-    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
-    private java.lang.String productId_;
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 2;
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
     private java.lang.String customerId_;
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     @java.lang.Override
@@ -24721,7 +27115,7 @@ public final class Web {
       return customerId_;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     @java.lang.Override
@@ -24730,7 +27124,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The customerId to set.
      */
     private void setCustomerId(
@@ -24740,14 +27134,14 @@ public final class Web {
       customerId_ = value;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      */
     private void clearCustomerId() {
       
       customerId_ = getDefaultInstance().getCustomerId();
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The bytes for customerId to set.
      */
     private void setCustomerIdBytes(
@@ -24757,10 +27151,10 @@ public final class Web {
       
     }
 
-    public static final int SESSION_ID_FIELD_NUMBER = 3;
+    public static final int SESSION_ID_FIELD_NUMBER = 2;
     private java.lang.String sessionId_;
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @return The sessionId.
      */
     @java.lang.Override
@@ -24768,7 +27162,7 @@ public final class Web {
       return sessionId_;
     }
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @return The bytes for sessionId.
      */
     @java.lang.Override
@@ -24777,7 +27171,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
     }
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @param value The sessionId to set.
      */
     private void setSessionId(
@@ -24787,14 +27181,14 @@ public final class Web {
       sessionId_ = value;
     }
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      */
     private void clearSessionId() {
       
       sessionId_ = getDefaultInstance().getSessionId();
     }
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @param value The bytes for sessionId to set.
      */
     private void setSessionIdBytes(
@@ -24804,118 +27198,116 @@ public final class Web {
       
     }
 
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 4;
-    private java.lang.String channelNumber_;
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.Common.UssdChannelNumber channelNumber_;
     /**
-     * <code>string channel_number = 4;</code>
-     * @return The channelNumber.
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
      */
     @java.lang.Override
-    public java.lang.String getChannelNumber() {
-      return channelNumber_;
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
     }
     /**
-     * <code>string channel_number = 4;</code>
-     * @return The bytes for channelNumber.
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getChannelNumberBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(channelNumber_);
+    public com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.Common.UssdChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
-     * <code>string channel_number = 4;</code>
-     * @param value The channelNumber to set.
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
      */
-    private void setChannelNumber(
-        java.lang.String value) {
+    private void setChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
       value.getClass();
-  
-      channelNumber_ = value;
-    }
-    /**
-     * <code>string channel_number = 4;</code>
-     */
-    private void clearChannelNumber() {
+  channelNumber_ = value;
       
-      channelNumber_ = getDefaultInstance().getChannelNumber();
+      }
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.Common.UssdChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.Common.UssdChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
     }
     /**
-     * <code>string channel_number = 4;</code>
-     * @param value The bytes for channelNumber to set.
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
      */
-    private void setChannelNumberBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      channelNumber_ = value.toStringUtf8();
+    private void clearChannelNumber() {  channelNumber_ = null;
       
     }
 
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 5;
-    private java.lang.String customerNumber_;
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
-     * <code>string customer_number = 5;</code>
-     * @return The customerNumber.
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.Override
-    public java.lang.String getCustomerNumber() {
-      return customerNumber_;
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
     }
     /**
-     * <code>string customer_number = 5;</code>
-     * @return The bytes for customerNumber.
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerNumberBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(customerNumber_);
+    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
-     * <code>string customer_number = 5;</code>
-     * @param value The customerNumber to set.
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
-    private void setCustomerNumber(
-        java.lang.String value) {
+    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
-  
-      customerNumber_ = value;
-    }
-    /**
-     * <code>string customer_number = 5;</code>
-     */
-    private void clearCustomerNumber() {
+  customerNumber_ = value;
       
-      customerNumber_ = getDefaultInstance().getCustomerNumber();
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
     }
     /**
-     * <code>string customer_number = 5;</code>
-     * @param value The bytes for customerNumber to set.
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
-    private void setCustomerNumberBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      customerNumber_ = value.toStringUtf8();
+    private void clearCustomerNumber() {  customerNumber_ = null;
       
     }
 
-    public static final int INPUT_FIELD_NUMBER = 6;
+    public static final int INPUT_FIELD_NUMBER = 5;
     private com.google.protobuf.StringValue input_;
     /**
-     * <code>.google.protobuf.StringValue input = 6;</code>
+     * <code>.google.protobuf.StringValue input = 5;</code>
      */
     @java.lang.Override
     public boolean hasInput() {
       return input_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue input = 6;</code>
+     * <code>.google.protobuf.StringValue input = 5;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValue getInput() {
       return input_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : input_;
     }
     /**
-     * <code>.google.protobuf.StringValue input = 6;</code>
+     * <code>.google.protobuf.StringValue input = 5;</code>
      */
     private void setInput(com.google.protobuf.StringValue value) {
       value.getClass();
@@ -24923,7 +27315,7 @@ public final class Web {
       
       }
     /**
-     * <code>.google.protobuf.StringValue input = 6;</code>
+     * <code>.google.protobuf.StringValue input = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeInput(com.google.protobuf.StringValue value) {
@@ -24938,7 +27330,7 @@ public final class Web {
       
     }
     /**
-     * <code>.google.protobuf.StringValue input = 6;</code>
+     * <code>.google.protobuf.StringValue input = 5;</code>
      */
     private void clearInput() {  input_ = null;
       
@@ -25040,56 +27432,7 @@ public final class Web {
 
 
       /**
-       * <code>string product_id = 1;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The customerId.
        */
       @java.lang.Override
@@ -25097,7 +27440,7 @@ public final class Web {
         return instance.getCustomerId();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The bytes for customerId.
        */
       @java.lang.Override
@@ -25106,7 +27449,7 @@ public final class Web {
         return instance.getCustomerIdBytes();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The customerId to set.
        * @return This builder for chaining.
        */
@@ -25117,7 +27460,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerId() {
@@ -25126,7 +27469,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The bytes for customerId to set.
        * @return This builder for chaining.
        */
@@ -25138,7 +27481,7 @@ public final class Web {
       }
 
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @return The sessionId.
        */
       @java.lang.Override
@@ -25146,7 +27489,7 @@ public final class Web {
         return instance.getSessionId();
       }
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @return The bytes for sessionId.
        */
       @java.lang.Override
@@ -25155,7 +27498,7 @@ public final class Web {
         return instance.getSessionIdBytes();
       }
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @param value The sessionId to set.
        * @return This builder for chaining.
        */
@@ -25166,7 +27509,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
@@ -25175,7 +27518,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @param value The bytes for sessionId to set.
        * @return This builder for chaining.
        */
@@ -25187,119 +27530,115 @@ public final class Web {
       }
 
       /**
-       * <code>string channel_number = 4;</code>
-       * @return The channelNumber.
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
        */
       @java.lang.Override
-      public java.lang.String getChannelNumber() {
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
-       * <code>string channel_number = 4;</code>
-       * @return The bytes for channelNumber.
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
        */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getChannelNumberBytes() {
-        return instance.getChannelNumberBytes();
-      }
-      /**
-       * <code>string channel_number = 4;</code>
-       * @param value The channelNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChannelNumber(
-          java.lang.String value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.Common.UssdChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
       }
       /**
-       * <code>string channel_number = 4;</code>
-       * @return This builder for chaining.
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
        */
-      public Builder clearChannelNumber() {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
         copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 3;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
         instance.clearChannelNumber();
         return this;
       }
-      /**
-       * <code>string channel_number = 4;</code>
-       * @param value The bytes for channelNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChannelNumberBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setChannelNumberBytes(value);
-        return this;
-      }
 
       /**
-       * <code>string customer_number = 5;</code>
-       * @return The customerNumber.
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
       @java.lang.Override
-      public java.lang.String getCustomerNumber() {
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
-       * <code>string customer_number = 5;</code>
-       * @return The bytes for customerNumber.
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCustomerNumberBytes() {
-        return instance.getCustomerNumberBytes();
-      }
-      /**
-       * <code>string customer_number = 5;</code>
-       * @param value The customerNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerNumber(
-          java.lang.String value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
-      }
+        }
       /**
-       * <code>string customer_number = 5;</code>
-       * @return This builder for chaining.
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
-      public Builder clearCustomerNumber() {
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
-        instance.clearCustomerNumber();
+        instance.setCustomerNumber(builderForValue.build());
         return this;
       }
       /**
-       * <code>string customer_number = 5;</code>
-       * @param value The bytes for customerNumber to set.
-       * @return This builder for chaining.
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
-      public Builder setCustomerNumberBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
-        instance.setCustomerNumberBytes(value);
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
         return this;
       }
 
       /**
-       * <code>.google.protobuf.StringValue input = 6;</code>
+       * <code>.google.protobuf.StringValue input = 5;</code>
        */
       @java.lang.Override
       public boolean hasInput() {
         return instance.hasInput();
       }
       /**
-       * <code>.google.protobuf.StringValue input = 6;</code>
+       * <code>.google.protobuf.StringValue input = 5;</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValue getInput() {
         return instance.getInput();
       }
       /**
-       * <code>.google.protobuf.StringValue input = 6;</code>
+       * <code>.google.protobuf.StringValue input = 5;</code>
        */
       public Builder setInput(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -25307,7 +27646,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.google.protobuf.StringValue input = 6;</code>
+       * <code>.google.protobuf.StringValue input = 5;</code>
        */
       public Builder setInput(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -25316,7 +27655,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue input = 6;</code>
+       * <code>.google.protobuf.StringValue input = 5;</code>
        */
       public Builder mergeInput(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -25324,7 +27663,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue input = 6;</code>
+       * <code>.google.protobuf.StringValue input = 5;</code>
        */
       public Builder clearInput() {  copyOnWrite();
         instance.clearInput();
@@ -25347,7 +27686,6 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "productId_",
               "customerId_",
               "sessionId_",
               "channelNumber_",
@@ -25355,8 +27693,8 @@ public final class Web {
               "input_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u0208\u0006\t";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t\u0004\t\u0005\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -25416,103 +27754,91 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    java.lang.String getProductId();
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
-
-    /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     java.lang.String getCustomerId();
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     com.google.protobuf.ByteString
         getCustomerIdBytes();
 
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @return The sessionId.
      */
     java.lang.String getSessionId();
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @return The bytes for sessionId.
      */
     com.google.protobuf.ByteString
         getSessionIdBytes();
 
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
      * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
      * @return The channelNumber.
      */
     com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      * @return Whether the customerNumber field is set.
      */
     boolean hasCustomerNumber();
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      * @return The customerNumber.
      */
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
      * @return The enum numeric value on the wire for direction.
      */
     int getDirectionValue();
     /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
      * @return The direction.
      */
     com.elarian.hera.proto.Common.CustomerEventDirection getDirection();
 
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
      * @return Whether the input field is set.
      */
     boolean hasInput();
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
      * @return The input.
      */
     com.elarian.hera.proto.Common.VoiceCallHopInput getInput();
 
     /**
-     * <code>.google.protobuf.Duration duration = 8;</code>
+     * <code>.google.protobuf.Duration duration = 7;</code>
      * @return Whether the duration field is set.
      */
     boolean hasDuration();
     /**
-     * <code>.google.protobuf.Duration duration = 8;</code>
+     * <code>.google.protobuf.Duration duration = 7;</code>
      * @return The duration.
      */
     com.google.protobuf.Duration getDuration();
 
     /**
-     * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
      * @return Whether the cost field is set.
      */
     boolean hasCost();
     /**
-     * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
      * @return The cost.
      */
     com.elarian.hera.proto.Common.Cash getCost();
@@ -25526,61 +27852,13 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallNotification)
       VoiceCallNotificationOrBuilder {
     private VoiceCallNotification() {
-      productId_ = "";
       customerId_ = "";
       sessionId_ = "";
     }
-    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
-    private java.lang.String productId_;
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
-     */
-    @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The productId to set.
-     */
-    private void setProductId(
-        java.lang.String value) {
-      value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     */
-    private void clearProductId() {
-      
-      productId_ = getDefaultInstance().getProductId();
-    }
-    /**
-     * <code>string product_id = 1;</code>
-     * @param value The bytes for productId to set.
-     */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 2;
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
     private java.lang.String customerId_;
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The customerId.
      */
     @java.lang.Override
@@ -25588,7 +27866,7 @@ public final class Web {
       return customerId_;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @return The bytes for customerId.
      */
     @java.lang.Override
@@ -25597,7 +27875,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The customerId to set.
      */
     private void setCustomerId(
@@ -25607,14 +27885,14 @@ public final class Web {
       customerId_ = value;
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      */
     private void clearCustomerId() {
       
       customerId_ = getDefaultInstance().getCustomerId();
     }
     /**
-     * <code>string customer_id = 2;</code>
+     * <code>string customer_id = 1;</code>
      * @param value The bytes for customerId to set.
      */
     private void setCustomerIdBytes(
@@ -25624,10 +27902,10 @@ public final class Web {
       
     }
 
-    public static final int SESSION_ID_FIELD_NUMBER = 3;
+    public static final int SESSION_ID_FIELD_NUMBER = 2;
     private java.lang.String sessionId_;
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @return The sessionId.
      */
     @java.lang.Override
@@ -25635,7 +27913,7 @@ public final class Web {
       return sessionId_;
     }
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @return The bytes for sessionId.
      */
     @java.lang.Override
@@ -25644,7 +27922,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
     }
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @param value The sessionId to set.
      */
     private void setSessionId(
@@ -25654,14 +27932,14 @@ public final class Web {
       sessionId_ = value;
     }
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      */
     private void clearSessionId() {
       
       sessionId_ = getDefaultInstance().getSessionId();
     }
     /**
-     * <code>string session_id = 3;</code>
+     * <code>string session_id = 2;</code>
      * @param value The bytes for sessionId to set.
      */
     private void setSessionIdBytes(
@@ -25671,24 +27949,24 @@ public final class Web {
       
     }
 
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 4;
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 3;
     private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_;
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
      */
     @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
       return channelNumber_ == null ? com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
      */
     private void setChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
       value.getClass();
@@ -25696,7 +27974,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
@@ -25711,30 +27989,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
      */
     private void clearChannelNumber() {  channelNumber_ = null;
       
     }
 
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 5;
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 4;
     private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.Override
     public boolean hasCustomerNumber() {
       return customerNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
       return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
       value.getClass();
@@ -25742,7 +28020,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
@@ -25757,16 +28035,16 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
      */
     private void clearCustomerNumber() {  customerNumber_ = null;
       
     }
 
-    public static final int DIRECTION_FIELD_NUMBER = 6;
+    public static final int DIRECTION_FIELD_NUMBER = 5;
     private int direction_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
      * @return The enum numeric value on the wire for direction.
      */
     @java.lang.Override
@@ -25774,7 +28052,7 @@ public final class Web {
       return direction_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
      * @return The direction.
      */
     @java.lang.Override
@@ -25783,14 +28061,14 @@ public final class Web {
       return result == null ? com.elarian.hera.proto.Common.CustomerEventDirection.UNRECOGNIZED : result;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
      * @param value The enum numeric value on the wire for direction to set.
      */
     private void setDirectionValue(int value) {
         direction_ = value;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
      * @param value The direction to set.
      */
     private void setDirection(com.elarian.hera.proto.Common.CustomerEventDirection value) {
@@ -25798,31 +28076,31 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
      */
     private void clearDirection() {
       
       direction_ = 0;
     }
 
-    public static final int INPUT_FIELD_NUMBER = 7;
+    public static final int INPUT_FIELD_NUMBER = 6;
     private com.elarian.hera.proto.Common.VoiceCallHopInput input_;
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
      */
     @java.lang.Override
     public boolean hasInput() {
       return input_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallHopInput getInput() {
       return input_ == null ? com.elarian.hera.proto.Common.VoiceCallHopInput.getDefaultInstance() : input_;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
      */
     private void setInput(com.elarian.hera.proto.Common.VoiceCallHopInput value) {
       value.getClass();
@@ -25830,7 +28108,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeInput(com.elarian.hera.proto.Common.VoiceCallHopInput value) {
@@ -25845,30 +28123,30 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
      */
     private void clearInput() {  input_ = null;
       
     }
 
-    public static final int DURATION_FIELD_NUMBER = 8;
+    public static final int DURATION_FIELD_NUMBER = 7;
     private com.google.protobuf.Duration duration_;
     /**
-     * <code>.google.protobuf.Duration duration = 8;</code>
+     * <code>.google.protobuf.Duration duration = 7;</code>
      */
     @java.lang.Override
     public boolean hasDuration() {
       return duration_ != null;
     }
     /**
-     * <code>.google.protobuf.Duration duration = 8;</code>
+     * <code>.google.protobuf.Duration duration = 7;</code>
      */
     @java.lang.Override
     public com.google.protobuf.Duration getDuration() {
       return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
     }
     /**
-     * <code>.google.protobuf.Duration duration = 8;</code>
+     * <code>.google.protobuf.Duration duration = 7;</code>
      */
     private void setDuration(com.google.protobuf.Duration value) {
       value.getClass();
@@ -25876,7 +28154,7 @@ public final class Web {
       
       }
     /**
-     * <code>.google.protobuf.Duration duration = 8;</code>
+     * <code>.google.protobuf.Duration duration = 7;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeDuration(com.google.protobuf.Duration value) {
@@ -25891,30 +28169,30 @@ public final class Web {
       
     }
     /**
-     * <code>.google.protobuf.Duration duration = 8;</code>
+     * <code>.google.protobuf.Duration duration = 7;</code>
      */
     private void clearDuration() {  duration_ = null;
       
     }
 
-    public static final int COST_FIELD_NUMBER = 9;
+    public static final int COST_FIELD_NUMBER = 8;
     private com.elarian.hera.proto.Common.Cash cost_;
     /**
-     * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
      */
     @java.lang.Override
     public boolean hasCost() {
       return cost_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getCost() {
       return cost_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : cost_;
     }
     /**
-     * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
      */
     private void setCost(com.elarian.hera.proto.Common.Cash value) {
       value.getClass();
@@ -25922,7 +28200,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCost(com.elarian.hera.proto.Common.Cash value) {
@@ -25937,7 +28215,7 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
      */
     private void clearCost() {  cost_ = null;
       
@@ -26039,56 +28317,7 @@ public final class Web {
 
 
       /**
-       * <code>string product_id = 1;</code>
-       * @return The productId.
-       */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setProductId(value);
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProductId() {
-        copyOnWrite();
-        instance.clearProductId();
-        return this;
-      }
-      /**
-       * <code>string product_id = 1;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The customerId.
        */
       @java.lang.Override
@@ -26096,7 +28325,7 @@ public final class Web {
         return instance.getCustomerId();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return The bytes for customerId.
        */
       @java.lang.Override
@@ -26105,7 +28334,7 @@ public final class Web {
         return instance.getCustomerIdBytes();
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The customerId to set.
        * @return This builder for chaining.
        */
@@ -26116,7 +28345,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerId() {
@@ -26125,7 +28354,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string customer_id = 2;</code>
+       * <code>string customer_id = 1;</code>
        * @param value The bytes for customerId to set.
        * @return This builder for chaining.
        */
@@ -26137,7 +28366,7 @@ public final class Web {
       }
 
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @return The sessionId.
        */
       @java.lang.Override
@@ -26145,7 +28374,7 @@ public final class Web {
         return instance.getSessionId();
       }
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @return The bytes for sessionId.
        */
       @java.lang.Override
@@ -26154,7 +28383,7 @@ public final class Web {
         return instance.getSessionIdBytes();
       }
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @param value The sessionId to set.
        * @return This builder for chaining.
        */
@@ -26165,7 +28394,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
@@ -26174,7 +28403,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string session_id = 3;</code>
+       * <code>string session_id = 2;</code>
        * @param value The bytes for sessionId to set.
        * @return This builder for chaining.
        */
@@ -26186,21 +28415,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
        */
       @java.lang.Override
       public boolean hasChannelNumber() {
         return instance.hasChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
        */
       public Builder setChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
         copyOnWrite();
@@ -26208,7 +28437,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
        */
       public Builder setChannelNumber(
           com.elarian.hera.proto.Common.VoiceChannelNumber.Builder builderForValue) {
@@ -26217,7 +28446,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
        */
       public Builder mergeChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
         copyOnWrite();
@@ -26225,7 +28454,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 4;</code>
+       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 3;</code>
        */
       public Builder clearChannelNumber() {  copyOnWrite();
         instance.clearChannelNumber();
@@ -26233,21 +28462,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
       @java.lang.Override
       public boolean hasCustomerNumber() {
         return instance.hasCustomerNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
       public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
@@ -26255,7 +28484,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
       public Builder setCustomerNumber(
           com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
@@ -26264,7 +28493,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
       public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
         copyOnWrite();
@@ -26272,7 +28501,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 5;</code>
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 4;</code>
        */
       public Builder clearCustomerNumber() {  copyOnWrite();
         instance.clearCustomerNumber();
@@ -26280,7 +28509,7 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
        * @return The enum numeric value on the wire for direction.
        */
       @java.lang.Override
@@ -26288,7 +28517,7 @@ public final class Web {
         return instance.getDirectionValue();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
        * @param value The direction to set.
        * @return This builder for chaining.
        */
@@ -26298,7 +28527,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
        * @return The direction.
        */
       @java.lang.Override
@@ -26306,7 +28535,7 @@ public final class Web {
         return instance.getDirection();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
        * @param value The enum numeric value on the wire for direction to set.
        * @return This builder for chaining.
        */
@@ -26316,7 +28545,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 6;</code>
+       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearDirection() {
@@ -26326,21 +28555,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
        */
       @java.lang.Override
       public boolean hasInput() {
         return instance.hasInput();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallHopInput getInput() {
         return instance.getInput();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
        */
       public Builder setInput(com.elarian.hera.proto.Common.VoiceCallHopInput value) {
         copyOnWrite();
@@ -26348,7 +28577,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
        */
       public Builder setInput(
           com.elarian.hera.proto.Common.VoiceCallHopInput.Builder builderForValue) {
@@ -26357,7 +28586,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
        */
       public Builder mergeInput(com.elarian.hera.proto.Common.VoiceCallHopInput value) {
         copyOnWrite();
@@ -26365,7 +28594,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 7;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 6;</code>
        */
       public Builder clearInput() {  copyOnWrite();
         instance.clearInput();
@@ -26373,21 +28602,21 @@ public final class Web {
       }
 
       /**
-       * <code>.google.protobuf.Duration duration = 8;</code>
+       * <code>.google.protobuf.Duration duration = 7;</code>
        */
       @java.lang.Override
       public boolean hasDuration() {
         return instance.hasDuration();
       }
       /**
-       * <code>.google.protobuf.Duration duration = 8;</code>
+       * <code>.google.protobuf.Duration duration = 7;</code>
        */
       @java.lang.Override
       public com.google.protobuf.Duration getDuration() {
         return instance.getDuration();
       }
       /**
-       * <code>.google.protobuf.Duration duration = 8;</code>
+       * <code>.google.protobuf.Duration duration = 7;</code>
        */
       public Builder setDuration(com.google.protobuf.Duration value) {
         copyOnWrite();
@@ -26395,7 +28624,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.google.protobuf.Duration duration = 8;</code>
+       * <code>.google.protobuf.Duration duration = 7;</code>
        */
       public Builder setDuration(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -26404,7 +28633,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration duration = 8;</code>
+       * <code>.google.protobuf.Duration duration = 7;</code>
        */
       public Builder mergeDuration(com.google.protobuf.Duration value) {
         copyOnWrite();
@@ -26412,7 +28641,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration duration = 8;</code>
+       * <code>.google.protobuf.Duration duration = 7;</code>
        */
       public Builder clearDuration() {  copyOnWrite();
         instance.clearDuration();
@@ -26420,21 +28649,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
        */
       @java.lang.Override
       public boolean hasCost() {
         return instance.hasCost();
       }
       /**
-       * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.Cash getCost() {
         return instance.getCost();
       }
       /**
-       * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
        */
       public Builder setCost(com.elarian.hera.proto.Common.Cash value) {
         copyOnWrite();
@@ -26442,7 +28671,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
        */
       public Builder setCost(
           com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
@@ -26451,7 +28680,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
        */
       public Builder mergeCost(com.elarian.hera.proto.Common.Cash value) {
         copyOnWrite();
@@ -26459,7 +28688,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.Cash cost = 9;</code>
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
        */
       public Builder clearCost() {  copyOnWrite();
         instance.clearCost();
@@ -26482,7 +28711,6 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "productId_",
               "customerId_",
               "sessionId_",
               "channelNumber_",
@@ -26493,8 +28721,8 @@ public final class Web {
               "cost_",
             };
             java.lang.String info =
-                "\u0000\t\u0000\u0000\u0001\t\t\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
-                "\u0004\t\u0005\t\u0006\f\u0007\t\b\t\t\t";
+                "\u0000\b\u0000\u0000\u0001\b\b\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\t" +
+                "\u0004\t\u0005\f\u0006\t\u0007\t\b\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -26554,16 +28782,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
+     * <code>string purse_id = 1;</code>
+     * @return The purseId.
      */
-    java.lang.String getProductId();
+    java.lang.String getPurseId();
     /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
+     * <code>string purse_id = 1;</code>
+     * @return The bytes for purseId.
      */
     com.google.protobuf.ByteString
-        getProductIdBytes();
+        getPurseIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -26642,54 +28870,54 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReceivedPaymentNotification)
       ReceivedPaymentNotificationOrBuilder {
     private ReceivedPaymentNotification() {
-      productId_ = "";
+      purseId_ = "";
       customerId_ = "";
       transactionId_ = "";
     }
-    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
-    private java.lang.String productId_;
+    public static final int PURSE_ID_FIELD_NUMBER = 1;
+    private java.lang.String purseId_;
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
+     * <code>string purse_id = 1;</code>
+     * @return The purseId.
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public java.lang.String getPurseId() {
+      return purseId_;
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
+     * <code>string purse_id = 1;</code>
+     * @return The bytes for purseId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+        getPurseIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(purseId_);
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @param value The productId to set.
+     * <code>string purse_id = 1;</code>
+     * @param value The purseId to set.
      */
-    private void setProductId(
+    private void setPurseId(
         java.lang.String value) {
       value.getClass();
   
-      productId_ = value;
+      purseId_ = value;
     }
     /**
-     * <code>string product_id = 1;</code>
+     * <code>string purse_id = 1;</code>
      */
-    private void clearProductId() {
+    private void clearPurseId() {
       
-      productId_ = getDefaultInstance().getProductId();
+      purseId_ = getDefaultInstance().getPurseId();
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @param value The bytes for productId to set.
+     * <code>string purse_id = 1;</code>
+     * @param value The bytes for purseId to set.
      */
-    private void setProductIdBytes(
+    private void setPurseIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+      purseId_ = value.toStringUtf8();
       
     }
 
@@ -27063,51 +29291,51 @@ public final class Web {
 
 
       /**
-       * <code>string product_id = 1;</code>
-       * @return The productId.
+       * <code>string purse_id = 1;</code>
+       * @return The purseId.
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public java.lang.String getPurseId() {
+        return instance.getPurseId();
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
+       * <code>string purse_id = 1;</code>
+       * @return The bytes for purseId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+          getPurseIdBytes() {
+        return instance.getPurseIdBytes();
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @param value The productId to set.
+       * <code>string purse_id = 1;</code>
+       * @param value The purseId to set.
        * @return This builder for chaining.
        */
-      public Builder setProductId(
+      public Builder setPurseId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setPurseId(value);
         return this;
       }
       /**
-       * <code>string product_id = 1;</code>
+       * <code>string purse_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearProductId() {
+      public Builder clearPurseId() {
         copyOnWrite();
-        instance.clearProductId();
+        instance.clearPurseId();
         return this;
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @param value The bytes for productId to set.
+       * <code>string purse_id = 1;</code>
+       * @param value The bytes for purseId to set.
        * @return This builder for chaining.
        */
-      public Builder setProductIdBytes(
+      public Builder setPurseIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setProductIdBytes(value);
+        instance.setPurseIdBytes(value);
         return this;
       }
 
@@ -27412,7 +29640,7 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "productId_",
+              "purseId_",
               "customerId_",
               "transactionId_",
               "customerNumber_",
@@ -27482,16 +29710,16 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
+     * <code>string purse_id = 1;</code>
+     * @return The purseId.
      */
-    java.lang.String getProductId();
+    java.lang.String getPurseId();
     /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
+     * <code>string purse_id = 1;</code>
+     * @return The bytes for purseId.
      */
     com.google.protobuf.ByteString
-        getProductIdBytes();
+        getPurseIdBytes();
 
     /**
      * <code>string customer_id = 2;</code>
@@ -27537,54 +29765,54 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentStatusNotification)
       PaymentStatusNotificationOrBuilder {
     private PaymentStatusNotification() {
-      productId_ = "";
+      purseId_ = "";
       customerId_ = "";
       transactionId_ = "";
     }
-    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
-    private java.lang.String productId_;
+    public static final int PURSE_ID_FIELD_NUMBER = 1;
+    private java.lang.String purseId_;
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
+     * <code>string purse_id = 1;</code>
+     * @return The purseId.
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public java.lang.String getPurseId() {
+      return purseId_;
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
+     * <code>string purse_id = 1;</code>
+     * @return The bytes for purseId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+        getPurseIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(purseId_);
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @param value The productId to set.
+     * <code>string purse_id = 1;</code>
+     * @param value The purseId to set.
      */
-    private void setProductId(
+    private void setPurseId(
         java.lang.String value) {
       value.getClass();
   
-      productId_ = value;
+      purseId_ = value;
     }
     /**
-     * <code>string product_id = 1;</code>
+     * <code>string purse_id = 1;</code>
      */
-    private void clearProductId() {
+    private void clearPurseId() {
       
-      productId_ = getDefaultInstance().getProductId();
+      purseId_ = getDefaultInstance().getPurseId();
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @param value The bytes for productId to set.
+     * <code>string purse_id = 1;</code>
+     * @param value The bytes for purseId to set.
      */
-    private void setProductIdBytes(
+    private void setPurseIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+      purseId_ = value.toStringUtf8();
       
     }
 
@@ -27820,51 +30048,51 @@ public final class Web {
 
 
       /**
-       * <code>string product_id = 1;</code>
-       * @return The productId.
+       * <code>string purse_id = 1;</code>
+       * @return The purseId.
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public java.lang.String getPurseId() {
+        return instance.getPurseId();
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
+       * <code>string purse_id = 1;</code>
+       * @return The bytes for purseId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+          getPurseIdBytes() {
+        return instance.getPurseIdBytes();
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @param value The productId to set.
+       * <code>string purse_id = 1;</code>
+       * @param value The purseId to set.
        * @return This builder for chaining.
        */
-      public Builder setProductId(
+      public Builder setPurseId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setPurseId(value);
         return this;
       }
       /**
-       * <code>string product_id = 1;</code>
+       * <code>string purse_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearProductId() {
+      public Builder clearPurseId() {
         copyOnWrite();
-        instance.clearProductId();
+        instance.clearPurseId();
         return this;
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @param value The bytes for productId to set.
+       * <code>string purse_id = 1;</code>
+       * @param value The bytes for purseId to set.
        * @return This builder for chaining.
        */
-      public Builder setProductIdBytes(
+      public Builder setPurseIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setProductIdBytes(value);
+        instance.setPurseIdBytes(value);
         return this;
       }
 
@@ -28028,7 +30256,7 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "productId_",
+              "purseId_",
               "customerId_",
               "transactionId_",
               "status_",
@@ -28090,131 +30318,767 @@ public final class Web {
     }
   }
 
+  public interface WalletPaymentStatusNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WalletPaymentStatusNotification)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string wallet_id = 1;</code>
+     * @return The walletId.
+     */
+    java.lang.String getWalletId();
+    /**
+     * <code>string wallet_id = 1;</code>
+     * @return The bytes for walletId.
+     */
+    com.google.protobuf.ByteString
+        getWalletIdBytes();
+
+    /**
+     * <code>string customer_id = 2;</code>
+     * @return The customerId.
+     */
+    java.lang.String getCustomerId();
+    /**
+     * <code>string customer_id = 2;</code>
+     * @return The bytes for customerId.
+     */
+    com.google.protobuf.ByteString
+        getCustomerIdBytes();
+
+    /**
+     * <code>string transaction_id = 3;</code>
+     * @return The transactionId.
+     */
+    java.lang.String getTransactionId();
+    /**
+     * <code>string transaction_id = 3;</code>
+     * @return The bytes for transactionId.
+     */
+    com.google.protobuf.ByteString
+        getTransactionIdBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @return The status.
+     */
+    com.elarian.hera.proto.Common.PaymentStatus getStatus();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.WalletPaymentStatusNotification}
+   */
+  public  static final class WalletPaymentStatusNotification extends
+      com.google.protobuf.GeneratedMessageLite<
+          WalletPaymentStatusNotification, WalletPaymentStatusNotification.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WalletPaymentStatusNotification)
+      WalletPaymentStatusNotificationOrBuilder {
+    private WalletPaymentStatusNotification() {
+      walletId_ = "";
+      customerId_ = "";
+      transactionId_ = "";
+    }
+    public static final int WALLET_ID_FIELD_NUMBER = 1;
+    private java.lang.String walletId_;
+    /**
+     * <code>string wallet_id = 1;</code>
+     * @return The walletId.
+     */
+    @java.lang.Override
+    public java.lang.String getWalletId() {
+      return walletId_;
+    }
+    /**
+     * <code>string wallet_id = 1;</code>
+     * @return The bytes for walletId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWalletIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(walletId_);
+    }
+    /**
+     * <code>string wallet_id = 1;</code>
+     * @param value The walletId to set.
+     */
+    private void setWalletId(
+        java.lang.String value) {
+      value.getClass();
+  
+      walletId_ = value;
+    }
+    /**
+     * <code>string wallet_id = 1;</code>
+     */
+    private void clearWalletId() {
+      
+      walletId_ = getDefaultInstance().getWalletId();
+    }
+    /**
+     * <code>string wallet_id = 1;</code>
+     * @param value The bytes for walletId to set.
+     */
+    private void setWalletIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      walletId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 2;
+    private java.lang.String customerId_;
+    /**
+     * <code>string customer_id = 2;</code>
+     * @return The customerId.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerId() {
+      return customerId_;
+    }
+    /**
+     * <code>string customer_id = 2;</code>
+     * @return The bytes for customerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
+    }
+    /**
+     * <code>string customer_id = 2;</code>
+     * @param value The customerId to set.
+     */
+    private void setCustomerId(
+        java.lang.String value) {
+      value.getClass();
+  
+      customerId_ = value;
+    }
+    /**
+     * <code>string customer_id = 2;</code>
+     */
+    private void clearCustomerId() {
+      
+      customerId_ = getDefaultInstance().getCustomerId();
+    }
+    /**
+     * <code>string customer_id = 2;</code>
+     * @param value The bytes for customerId to set.
+     */
+    private void setCustomerIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      customerId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int TRANSACTION_ID_FIELD_NUMBER = 3;
+    private java.lang.String transactionId_;
+    /**
+     * <code>string transaction_id = 3;</code>
+     * @return The transactionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTransactionId() {
+      return transactionId_;
+    }
+    /**
+     * <code>string transaction_id = 3;</code>
+     * @return The bytes for transactionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransactionIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(transactionId_);
+    }
+    /**
+     * <code>string transaction_id = 3;</code>
+     * @param value The transactionId to set.
+     */
+    private void setTransactionId(
+        java.lang.String value) {
+      value.getClass();
+  
+      transactionId_ = value;
+    }
+    /**
+     * <code>string transaction_id = 3;</code>
+     */
+    private void clearTransactionId() {
+      
+      transactionId_ = getDefaultInstance().getTransactionId();
+    }
+    /**
+     * <code>string transaction_id = 3;</code>
+     * @param value The bytes for transactionId to set.
+     */
+    private void setTransactionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      transactionId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 4;
+    private int status_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+      com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @param value The enum numeric value on the wire for status to set.
+     */
+    private void setStatusValue(int value) {
+        status_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @param value The status to set.
+     */
+    private void setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+      status_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     */
+    private void clearStatus() {
+      
+      status_ = 0;
+    }
+
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Web.WalletPaymentStatusNotification prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.WalletPaymentStatusNotification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Web.WalletPaymentStatusNotification, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WalletPaymentStatusNotification)
+        com.elarian.hera.proto.Web.WalletPaymentStatusNotificationOrBuilder {
+      // Construct using com.elarian.hera.proto.Web.WalletPaymentStatusNotification.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string wallet_id = 1;</code>
+       * @return The walletId.
+       */
+      @java.lang.Override
+      public java.lang.String getWalletId() {
+        return instance.getWalletId();
+      }
+      /**
+       * <code>string wallet_id = 1;</code>
+       * @return The bytes for walletId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getWalletIdBytes() {
+        return instance.getWalletIdBytes();
+      }
+      /**
+       * <code>string wallet_id = 1;</code>
+       * @param value The walletId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setWalletId(value);
+        return this;
+      }
+      /**
+       * <code>string wallet_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWalletId() {
+        copyOnWrite();
+        instance.clearWalletId();
+        return this;
+      }
+      /**
+       * <code>string wallet_id = 1;</code>
+       * @param value The bytes for walletId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setWalletIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string customer_id = 2;</code>
+       * @return The customerId.
+       */
+      @java.lang.Override
+      public java.lang.String getCustomerId() {
+        return instance.getCustomerId();
+      }
+      /**
+       * <code>string customer_id = 2;</code>
+       * @return The bytes for customerId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCustomerIdBytes() {
+        return instance.getCustomerIdBytes();
+      }
+      /**
+       * <code>string customer_id = 2;</code>
+       * @param value The customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>string customer_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerId() {
+        copyOnWrite();
+        instance.clearCustomerId();
+        return this;
+      }
+      /**
+       * <code>string customer_id = 2;</code>
+       * @param value The bytes for customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCustomerIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string transaction_id = 3;</code>
+       * @return The transactionId.
+       */
+      @java.lang.Override
+      public java.lang.String getTransactionId() {
+        return instance.getTransactionId();
+      }
+      /**
+       * <code>string transaction_id = 3;</code>
+       * @return The bytes for transactionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTransactionIdBytes() {
+        return instance.getTransactionIdBytes();
+      }
+      /**
+       * <code>string transaction_id = 3;</code>
+       * @param value The transactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setTransactionId(value);
+        return this;
+      }
+      /**
+       * <code>string transaction_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionId() {
+        copyOnWrite();
+        instance.clearTransactionId();
+        return this;
+      }
+      /**
+       * <code>string transaction_id = 3;</code>
+       * @param value The bytes for transactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setTransactionIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        copyOnWrite();
+        instance.setStatusValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WalletPaymentStatusNotification)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Web.WalletPaymentStatusNotification();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "walletId_",
+              "customerId_",
+              "transactionId_",
+              "status_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Web.WalletPaymentStatusNotification> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Web.WalletPaymentStatusNotification.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Web.WalletPaymentStatusNotification>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WalletPaymentStatusNotification)
+    private static final com.elarian.hera.proto.Web.WalletPaymentStatusNotification DEFAULT_INSTANCE;
+    static {
+      WalletPaymentStatusNotification defaultInstance = new WalletPaymentStatusNotification();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        WalletPaymentStatusNotification.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Web.WalletPaymentStatusNotification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<WalletPaymentStatusNotification> PARSER;
+
+    public static com.google.protobuf.Parser<WalletPaymentStatusNotification> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface WebhookRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebhookRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
 
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      * @return Whether the timestamp field is set.
      */
     boolean hasTimestamp();
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      * @return The timestamp.
      */
     com.google.protobuf.Timestamp getTimestamp();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
      * @return Whether the messagingConsentStatus field is set.
      */
     boolean hasMessagingConsentStatus();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
      * @return The messagingConsentStatus.
      */
     com.elarian.hera.proto.Web.MessagingConsentStatusNotification getMessagingConsentStatus();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
      * @return Whether the messagingSessionStatus field is set.
      */
     boolean hasMessagingSessionStatus();
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
      * @return The messagingSessionStatus.
      */
     com.elarian.hera.proto.Web.MessagingSessionStatusNotification getMessagingSessionStatus();
 
     /**
-     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
      * @return Whether the reminder field is set.
      */
     boolean hasReminder();
     /**
-     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
      * @return The reminder.
      */
     com.elarian.hera.proto.Web.ReminderNotification getReminder();
 
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
      * @return Whether the receivedMessage field is set.
      */
     boolean hasReceivedMessage();
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
      * @return The receivedMessage.
      */
     com.elarian.hera.proto.Web.ReceivedMessageNotification getReceivedMessage();
 
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
      * @return Whether the messageStatus field is set.
      */
     boolean hasMessageStatus();
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
      * @return The messageStatus.
      */
     com.elarian.hera.proto.Web.MessageStatusNotification getMessageStatus();
 
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
      * @return Whether the ussdSession field is set.
      */
     boolean hasUssdSession();
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
      * @return The ussdSession.
      */
     com.elarian.hera.proto.Web.UssdSessionNotification getUssdSession();
 
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
      * @return Whether the voiceCall field is set.
      */
     boolean hasVoiceCall();
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
      * @return The voiceCall.
      */
     com.elarian.hera.proto.Web.VoiceCallNotification getVoiceCall();
 
     /**
-     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
      * @return Whether the receivedPayment field is set.
      */
     boolean hasReceivedPayment();
     /**
-     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
      * @return The receivedPayment.
      */
     com.elarian.hera.proto.Web.ReceivedPaymentNotification getReceivedPayment();
 
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
      * @return Whether the paymentStatus field is set.
      */
     boolean hasPaymentStatus();
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
      * @return The paymentStatus.
      */
     com.elarian.hera.proto.Web.PaymentStatusNotification getPaymentStatus();
+
+    /**
+     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+     * @return Whether the walletPaymentStatus field is set.
+     */
+    boolean hasWalletPaymentStatus();
+    /**
+     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+     * @return The walletPaymentStatus.
+     */
+    com.elarian.hera.proto.Web.WalletPaymentStatusNotification getWalletPaymentStatus();
 
     public com.elarian.hera.proto.Web.WebhookRequest.EntryCase getEntryCase();
   }
@@ -28227,20 +31091,22 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebhookRequest)
       WebhookRequestOrBuilder {
     private WebhookRequest() {
+      orgId_ = "";
       appId_ = "";
     }
     private int entryCase_ = 0;
     private java.lang.Object entry_;
     public enum EntryCase {
-      MESSAGING_CONSENT_STATUS(3),
-      MESSAGING_SESSION_STATUS(4),
-      REMINDER(5),
-      RECEIVED_MESSAGE(6),
-      MESSAGE_STATUS(7),
-      USSD_SESSION(8),
-      VOICE_CALL(9),
-      RECEIVED_PAYMENT(10),
-      PAYMENT_STATUS(11),
+      MESSAGING_CONSENT_STATUS(4),
+      MESSAGING_SESSION_STATUS(5),
+      REMINDER(6),
+      RECEIVED_MESSAGE(7),
+      MESSAGE_STATUS(8),
+      USSD_SESSION(9),
+      VOICE_CALL(10),
+      RECEIVED_PAYMENT(11),
+      PAYMENT_STATUS(12),
+      WALLET_PAYMENT_STATUS(13),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -28256,15 +31122,16 @@ public final class Web {
 
       public static EntryCase forNumber(int value) {
         switch (value) {
-          case 3: return MESSAGING_CONSENT_STATUS;
-          case 4: return MESSAGING_SESSION_STATUS;
-          case 5: return REMINDER;
-          case 6: return RECEIVED_MESSAGE;
-          case 7: return MESSAGE_STATUS;
-          case 8: return USSD_SESSION;
-          case 9: return VOICE_CALL;
-          case 10: return RECEIVED_PAYMENT;
-          case 11: return PAYMENT_STATUS;
+          case 4: return MESSAGING_CONSENT_STATUS;
+          case 5: return MESSAGING_SESSION_STATUS;
+          case 6: return REMINDER;
+          case 7: return RECEIVED_MESSAGE;
+          case 8: return MESSAGE_STATUS;
+          case 9: return USSD_SESSION;
+          case 10: return VOICE_CALL;
+          case 11: return RECEIVED_PAYMENT;
+          case 12: return PAYMENT_STATUS;
+          case 13: return WALLET_PAYMENT_STATUS;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -28286,10 +31153,57 @@ public final class Web {
       entry_ = null;
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -28297,7 +31211,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -28306,7 +31220,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -28316,14 +31230,14 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
@@ -28333,24 +31247,24 @@ public final class Web {
       
     }
 
-    public static final int TIMESTAMP_FIELD_NUMBER = 2;
+    public static final int TIMESTAMP_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp timestamp_;
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     @java.lang.Override
     public boolean hasTimestamp() {
       return timestamp_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTimestamp() {
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     private void setTimestamp(com.google.protobuf.Timestamp value) {
       value.getClass();
@@ -28358,7 +31272,7 @@ public final class Web {
       
       }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeTimestamp(com.google.protobuf.Timestamp value) {
@@ -28373,457 +31287,507 @@ public final class Web {
       
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     private void clearTimestamp() {  timestamp_ = null;
       
     }
 
-    public static final int MESSAGING_CONSENT_STATUS_FIELD_NUMBER = 3;
+    public static final int MESSAGING_CONSENT_STATUS_FIELD_NUMBER = 4;
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
      */
     @java.lang.Override
     public boolean hasMessagingConsentStatus() {
-      return entryCase_ == 3;
+      return entryCase_ == 4;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.MessagingConsentStatusNotification getMessagingConsentStatus() {
-      if (entryCase_ == 3) {
+      if (entryCase_ == 4) {
          return (com.elarian.hera.proto.Web.MessagingConsentStatusNotification) entry_;
       }
       return com.elarian.hera.proto.Web.MessagingConsentStatusNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
      */
     private void setMessagingConsentStatus(com.elarian.hera.proto.Web.MessagingConsentStatusNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 3;
+      entryCase_ = 4;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
      */
     private void mergeMessagingConsentStatus(com.elarian.hera.proto.Web.MessagingConsentStatusNotification value) {
       value.getClass();
-  if (entryCase_ == 3 &&
+  if (entryCase_ == 4 &&
           entry_ != com.elarian.hera.proto.Web.MessagingConsentStatusNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.MessagingConsentStatusNotification.newBuilder((com.elarian.hera.proto.Web.MessagingConsentStatusNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 3;
+      entryCase_ = 4;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
      */
     private void clearMessagingConsentStatus() {
-      if (entryCase_ == 3) {
+      if (entryCase_ == 4) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int MESSAGING_SESSION_STATUS_FIELD_NUMBER = 4;
+    public static final int MESSAGING_SESSION_STATUS_FIELD_NUMBER = 5;
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
      */
     @java.lang.Override
     public boolean hasMessagingSessionStatus() {
-      return entryCase_ == 4;
+      return entryCase_ == 5;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.MessagingSessionStatusNotification getMessagingSessionStatus() {
-      if (entryCase_ == 4) {
+      if (entryCase_ == 5) {
          return (com.elarian.hera.proto.Web.MessagingSessionStatusNotification) entry_;
       }
       return com.elarian.hera.proto.Web.MessagingSessionStatusNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
      */
     private void setMessagingSessionStatus(com.elarian.hera.proto.Web.MessagingSessionStatusNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 4;
+      entryCase_ = 5;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
      */
     private void mergeMessagingSessionStatus(com.elarian.hera.proto.Web.MessagingSessionStatusNotification value) {
       value.getClass();
-  if (entryCase_ == 4 &&
+  if (entryCase_ == 5 &&
           entry_ != com.elarian.hera.proto.Web.MessagingSessionStatusNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.MessagingSessionStatusNotification.newBuilder((com.elarian.hera.proto.Web.MessagingSessionStatusNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 4;
+      entryCase_ = 5;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
      */
     private void clearMessagingSessionStatus() {
-      if (entryCase_ == 4) {
+      if (entryCase_ == 5) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int REMINDER_FIELD_NUMBER = 5;
+    public static final int REMINDER_FIELD_NUMBER = 6;
     /**
-     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
      */
     @java.lang.Override
     public boolean hasReminder() {
-      return entryCase_ == 5;
+      return entryCase_ == 6;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.ReminderNotification getReminder() {
-      if (entryCase_ == 5) {
+      if (entryCase_ == 6) {
          return (com.elarian.hera.proto.Web.ReminderNotification) entry_;
       }
       return com.elarian.hera.proto.Web.ReminderNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
      */
     private void setReminder(com.elarian.hera.proto.Web.ReminderNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 5;
+      entryCase_ = 6;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
      */
     private void mergeReminder(com.elarian.hera.proto.Web.ReminderNotification value) {
       value.getClass();
-  if (entryCase_ == 5 &&
+  if (entryCase_ == 6 &&
           entry_ != com.elarian.hera.proto.Web.ReminderNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.ReminderNotification.newBuilder((com.elarian.hera.proto.Web.ReminderNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 5;
+      entryCase_ = 6;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
      */
     private void clearReminder() {
-      if (entryCase_ == 5) {
+      if (entryCase_ == 6) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int RECEIVED_MESSAGE_FIELD_NUMBER = 6;
+    public static final int RECEIVED_MESSAGE_FIELD_NUMBER = 7;
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
      */
     @java.lang.Override
     public boolean hasReceivedMessage() {
-      return entryCase_ == 6;
+      return entryCase_ == 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.ReceivedMessageNotification getReceivedMessage() {
-      if (entryCase_ == 6) {
+      if (entryCase_ == 7) {
          return (com.elarian.hera.proto.Web.ReceivedMessageNotification) entry_;
       }
       return com.elarian.hera.proto.Web.ReceivedMessageNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
      */
     private void setReceivedMessage(com.elarian.hera.proto.Web.ReceivedMessageNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 6;
+      entryCase_ = 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
      */
     private void mergeReceivedMessage(com.elarian.hera.proto.Web.ReceivedMessageNotification value) {
       value.getClass();
-  if (entryCase_ == 6 &&
+  if (entryCase_ == 7 &&
           entry_ != com.elarian.hera.proto.Web.ReceivedMessageNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.ReceivedMessageNotification.newBuilder((com.elarian.hera.proto.Web.ReceivedMessageNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 6;
+      entryCase_ = 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
      */
     private void clearReceivedMessage() {
-      if (entryCase_ == 6) {
+      if (entryCase_ == 7) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int MESSAGE_STATUS_FIELD_NUMBER = 7;
+    public static final int MESSAGE_STATUS_FIELD_NUMBER = 8;
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
      */
     @java.lang.Override
     public boolean hasMessageStatus() {
-      return entryCase_ == 7;
+      return entryCase_ == 8;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.MessageStatusNotification getMessageStatus() {
-      if (entryCase_ == 7) {
+      if (entryCase_ == 8) {
          return (com.elarian.hera.proto.Web.MessageStatusNotification) entry_;
       }
       return com.elarian.hera.proto.Web.MessageStatusNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
      */
     private void setMessageStatus(com.elarian.hera.proto.Web.MessageStatusNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 7;
+      entryCase_ = 8;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
      */
     private void mergeMessageStatus(com.elarian.hera.proto.Web.MessageStatusNotification value) {
       value.getClass();
-  if (entryCase_ == 7 &&
+  if (entryCase_ == 8 &&
           entry_ != com.elarian.hera.proto.Web.MessageStatusNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.MessageStatusNotification.newBuilder((com.elarian.hera.proto.Web.MessageStatusNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 7;
+      entryCase_ = 8;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
      */
     private void clearMessageStatus() {
-      if (entryCase_ == 7) {
+      if (entryCase_ == 8) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int USSD_SESSION_FIELD_NUMBER = 8;
+    public static final int USSD_SESSION_FIELD_NUMBER = 9;
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
      */
     @java.lang.Override
     public boolean hasUssdSession() {
-      return entryCase_ == 8;
+      return entryCase_ == 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.UssdSessionNotification getUssdSession() {
-      if (entryCase_ == 8) {
+      if (entryCase_ == 9) {
          return (com.elarian.hera.proto.Web.UssdSessionNotification) entry_;
       }
       return com.elarian.hera.proto.Web.UssdSessionNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
      */
     private void setUssdSession(com.elarian.hera.proto.Web.UssdSessionNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 8;
+      entryCase_ = 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
      */
     private void mergeUssdSession(com.elarian.hera.proto.Web.UssdSessionNotification value) {
       value.getClass();
-  if (entryCase_ == 8 &&
+  if (entryCase_ == 9 &&
           entry_ != com.elarian.hera.proto.Web.UssdSessionNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.UssdSessionNotification.newBuilder((com.elarian.hera.proto.Web.UssdSessionNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 8;
+      entryCase_ = 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
      */
     private void clearUssdSession() {
-      if (entryCase_ == 8) {
+      if (entryCase_ == 9) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int VOICE_CALL_FIELD_NUMBER = 9;
+    public static final int VOICE_CALL_FIELD_NUMBER = 10;
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
      */
     @java.lang.Override
     public boolean hasVoiceCall() {
-      return entryCase_ == 9;
+      return entryCase_ == 10;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.VoiceCallNotification getVoiceCall() {
-      if (entryCase_ == 9) {
+      if (entryCase_ == 10) {
          return (com.elarian.hera.proto.Web.VoiceCallNotification) entry_;
       }
       return com.elarian.hera.proto.Web.VoiceCallNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
      */
     private void setVoiceCall(com.elarian.hera.proto.Web.VoiceCallNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 9;
+      entryCase_ = 10;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
      */
     private void mergeVoiceCall(com.elarian.hera.proto.Web.VoiceCallNotification value) {
       value.getClass();
-  if (entryCase_ == 9 &&
+  if (entryCase_ == 10 &&
           entry_ != com.elarian.hera.proto.Web.VoiceCallNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.VoiceCallNotification.newBuilder((com.elarian.hera.proto.Web.VoiceCallNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 9;
+      entryCase_ = 10;
     }
     /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
      */
     private void clearVoiceCall() {
-      if (entryCase_ == 9) {
+      if (entryCase_ == 10) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int RECEIVED_PAYMENT_FIELD_NUMBER = 10;
+    public static final int RECEIVED_PAYMENT_FIELD_NUMBER = 11;
     /**
-     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
      */
     @java.lang.Override
     public boolean hasReceivedPayment() {
-      return entryCase_ == 10;
+      return entryCase_ == 11;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.ReceivedPaymentNotification getReceivedPayment() {
-      if (entryCase_ == 10) {
+      if (entryCase_ == 11) {
          return (com.elarian.hera.proto.Web.ReceivedPaymentNotification) entry_;
       }
       return com.elarian.hera.proto.Web.ReceivedPaymentNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
      */
     private void setReceivedPayment(com.elarian.hera.proto.Web.ReceivedPaymentNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 10;
+      entryCase_ = 11;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
      */
     private void mergeReceivedPayment(com.elarian.hera.proto.Web.ReceivedPaymentNotification value) {
       value.getClass();
-  if (entryCase_ == 10 &&
+  if (entryCase_ == 11 &&
           entry_ != com.elarian.hera.proto.Web.ReceivedPaymentNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.ReceivedPaymentNotification.newBuilder((com.elarian.hera.proto.Web.ReceivedPaymentNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 10;
+      entryCase_ = 11;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+     * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
      */
     private void clearReceivedPayment() {
-      if (entryCase_ == 10) {
+      if (entryCase_ == 11) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int PAYMENT_STATUS_FIELD_NUMBER = 11;
+    public static final int PAYMENT_STATUS_FIELD_NUMBER = 12;
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
      */
     @java.lang.Override
     public boolean hasPaymentStatus() {
-      return entryCase_ == 11;
+      return entryCase_ == 12;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Web.PaymentStatusNotification getPaymentStatus() {
-      if (entryCase_ == 11) {
+      if (entryCase_ == 12) {
          return (com.elarian.hera.proto.Web.PaymentStatusNotification) entry_;
       }
       return com.elarian.hera.proto.Web.PaymentStatusNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
      */
     private void setPaymentStatus(com.elarian.hera.proto.Web.PaymentStatusNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 11;
+      entryCase_ = 12;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
      */
     private void mergePaymentStatus(com.elarian.hera.proto.Web.PaymentStatusNotification value) {
       value.getClass();
-  if (entryCase_ == 11 &&
+  if (entryCase_ == 12 &&
           entry_ != com.elarian.hera.proto.Web.PaymentStatusNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.Web.PaymentStatusNotification.newBuilder((com.elarian.hera.proto.Web.PaymentStatusNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 11;
+      entryCase_ = 12;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
      */
     private void clearPaymentStatus() {
-      if (entryCase_ == 11) {
+      if (entryCase_ == 12) {
+        entryCase_ = 0;
+        entry_ = null;
+      }
+    }
+
+    public static final int WALLET_PAYMENT_STATUS_FIELD_NUMBER = 13;
+    /**
+     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+     */
+    @java.lang.Override
+    public boolean hasWalletPaymentStatus() {
+      return entryCase_ == 13;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Web.WalletPaymentStatusNotification getWalletPaymentStatus() {
+      if (entryCase_ == 13) {
+         return (com.elarian.hera.proto.Web.WalletPaymentStatusNotification) entry_;
+      }
+      return com.elarian.hera.proto.Web.WalletPaymentStatusNotification.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+     */
+    private void setWalletPaymentStatus(com.elarian.hera.proto.Web.WalletPaymentStatusNotification value) {
+      value.getClass();
+  entry_ = value;
+      entryCase_ = 13;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+     */
+    private void mergeWalletPaymentStatus(com.elarian.hera.proto.Web.WalletPaymentStatusNotification value) {
+      value.getClass();
+  if (entryCase_ == 13 &&
+          entry_ != com.elarian.hera.proto.Web.WalletPaymentStatusNotification.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.Web.WalletPaymentStatusNotification.newBuilder((com.elarian.hera.proto.Web.WalletPaymentStatusNotification) entry_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        entry_ = value;
+      }
+      entryCase_ = 13;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+     */
+    private void clearWalletPaymentStatus() {
+      if (entryCase_ == 13) {
         entryCase_ = 0;
         entry_ = null;
       }
@@ -28937,7 +31901,56 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -28945,7 +31958,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -28954,7 +31967,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -28965,7 +31978,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -28974,7 +31987,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -28986,21 +31999,21 @@ public final class Web {
       }
 
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       @java.lang.Override
       public boolean hasTimestamp() {
         return instance.hasTimestamp();
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       @java.lang.Override
       public com.google.protobuf.Timestamp getTimestamp() {
         return instance.getTimestamp();
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public Builder setTimestamp(com.google.protobuf.Timestamp value) {
         copyOnWrite();
@@ -29008,7 +32021,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public Builder setTimestamp(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -29017,7 +32030,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
         copyOnWrite();
@@ -29025,7 +32038,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 2;</code>
+       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public Builder clearTimestamp() {  copyOnWrite();
         instance.clearTimestamp();
@@ -29033,21 +32046,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
        */
       @java.lang.Override
       public boolean hasMessagingConsentStatus() {
         return instance.hasMessagingConsentStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.MessagingConsentStatusNotification getMessagingConsentStatus() {
         return instance.getMessagingConsentStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
        */
       public Builder setMessagingConsentStatus(com.elarian.hera.proto.Web.MessagingConsentStatusNotification value) {
         copyOnWrite();
@@ -29055,7 +32068,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
        */
       public Builder setMessagingConsentStatus(
           com.elarian.hera.proto.Web.MessagingConsentStatusNotification.Builder builderForValue) {
@@ -29064,7 +32077,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
        */
       public Builder mergeMessagingConsentStatus(com.elarian.hera.proto.Web.MessagingConsentStatusNotification value) {
         copyOnWrite();
@@ -29072,7 +32085,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 3;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 4;</code>
        */
       public Builder clearMessagingConsentStatus() {
         copyOnWrite();
@@ -29081,21 +32094,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
        */
       @java.lang.Override
       public boolean hasMessagingSessionStatus() {
         return instance.hasMessagingSessionStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.MessagingSessionStatusNotification getMessagingSessionStatus() {
         return instance.getMessagingSessionStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
        */
       public Builder setMessagingSessionStatus(com.elarian.hera.proto.Web.MessagingSessionStatusNotification value) {
         copyOnWrite();
@@ -29103,7 +32116,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
        */
       public Builder setMessagingSessionStatus(
           com.elarian.hera.proto.Web.MessagingSessionStatusNotification.Builder builderForValue) {
@@ -29112,7 +32125,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
        */
       public Builder mergeMessagingSessionStatus(com.elarian.hera.proto.Web.MessagingSessionStatusNotification value) {
         copyOnWrite();
@@ -29120,7 +32133,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 4;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 5;</code>
        */
       public Builder clearMessagingSessionStatus() {
         copyOnWrite();
@@ -29129,21 +32142,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
        */
       @java.lang.Override
       public boolean hasReminder() {
         return instance.hasReminder();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.ReminderNotification getReminder() {
         return instance.getReminder();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
        */
       public Builder setReminder(com.elarian.hera.proto.Web.ReminderNotification value) {
         copyOnWrite();
@@ -29151,7 +32164,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
        */
       public Builder setReminder(
           com.elarian.hera.proto.Web.ReminderNotification.Builder builderForValue) {
@@ -29160,7 +32173,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
        */
       public Builder mergeReminder(com.elarian.hera.proto.Web.ReminderNotification value) {
         copyOnWrite();
@@ -29168,7 +32181,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.ReminderNotification reminder = 6;</code>
        */
       public Builder clearReminder() {
         copyOnWrite();
@@ -29177,21 +32190,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
        */
       @java.lang.Override
       public boolean hasReceivedMessage() {
         return instance.hasReceivedMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.ReceivedMessageNotification getReceivedMessage() {
         return instance.getReceivedMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
        */
       public Builder setReceivedMessage(com.elarian.hera.proto.Web.ReceivedMessageNotification value) {
         copyOnWrite();
@@ -29199,7 +32212,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
        */
       public Builder setReceivedMessage(
           com.elarian.hera.proto.Web.ReceivedMessageNotification.Builder builderForValue) {
@@ -29208,7 +32221,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
        */
       public Builder mergeReceivedMessage(com.elarian.hera.proto.Web.ReceivedMessageNotification value) {
         copyOnWrite();
@@ -29216,7 +32229,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 6;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 7;</code>
        */
       public Builder clearReceivedMessage() {
         copyOnWrite();
@@ -29225,21 +32238,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
        */
       @java.lang.Override
       public boolean hasMessageStatus() {
         return instance.hasMessageStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.MessageStatusNotification getMessageStatus() {
         return instance.getMessageStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
        */
       public Builder setMessageStatus(com.elarian.hera.proto.Web.MessageStatusNotification value) {
         copyOnWrite();
@@ -29247,7 +32260,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
        */
       public Builder setMessageStatus(
           com.elarian.hera.proto.Web.MessageStatusNotification.Builder builderForValue) {
@@ -29256,7 +32269,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
        */
       public Builder mergeMessageStatus(com.elarian.hera.proto.Web.MessageStatusNotification value) {
         copyOnWrite();
@@ -29264,7 +32277,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 8;</code>
        */
       public Builder clearMessageStatus() {
         copyOnWrite();
@@ -29273,21 +32286,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
        */
       @java.lang.Override
       public boolean hasUssdSession() {
         return instance.hasUssdSession();
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.UssdSessionNotification getUssdSession() {
         return instance.getUssdSession();
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
        */
       public Builder setUssdSession(com.elarian.hera.proto.Web.UssdSessionNotification value) {
         copyOnWrite();
@@ -29295,7 +32308,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
        */
       public Builder setUssdSession(
           com.elarian.hera.proto.Web.UssdSessionNotification.Builder builderForValue) {
@@ -29304,7 +32317,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
        */
       public Builder mergeUssdSession(com.elarian.hera.proto.Web.UssdSessionNotification value) {
         copyOnWrite();
@@ -29312,7 +32325,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 8;</code>
+       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 9;</code>
        */
       public Builder clearUssdSession() {
         copyOnWrite();
@@ -29321,21 +32334,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
        */
       @java.lang.Override
       public boolean hasVoiceCall() {
         return instance.hasVoiceCall();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.VoiceCallNotification getVoiceCall() {
         return instance.getVoiceCall();
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
        */
       public Builder setVoiceCall(com.elarian.hera.proto.Web.VoiceCallNotification value) {
         copyOnWrite();
@@ -29343,7 +32356,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
        */
       public Builder setVoiceCall(
           com.elarian.hera.proto.Web.VoiceCallNotification.Builder builderForValue) {
@@ -29352,7 +32365,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
        */
       public Builder mergeVoiceCall(com.elarian.hera.proto.Web.VoiceCallNotification value) {
         copyOnWrite();
@@ -29360,7 +32373,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 9;</code>
+       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 10;</code>
        */
       public Builder clearVoiceCall() {
         copyOnWrite();
@@ -29369,21 +32382,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
        */
       @java.lang.Override
       public boolean hasReceivedPayment() {
         return instance.hasReceivedPayment();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.ReceivedPaymentNotification getReceivedPayment() {
         return instance.getReceivedPayment();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
        */
       public Builder setReceivedPayment(com.elarian.hera.proto.Web.ReceivedPaymentNotification value) {
         copyOnWrite();
@@ -29391,7 +32404,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
        */
       public Builder setReceivedPayment(
           com.elarian.hera.proto.Web.ReceivedPaymentNotification.Builder builderForValue) {
@@ -29400,7 +32413,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
        */
       public Builder mergeReceivedPayment(com.elarian.hera.proto.Web.ReceivedPaymentNotification value) {
         copyOnWrite();
@@ -29408,7 +32421,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 10;</code>
+       * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 11;</code>
        */
       public Builder clearReceivedPayment() {
         copyOnWrite();
@@ -29417,21 +32430,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
        */
       @java.lang.Override
       public boolean hasPaymentStatus() {
         return instance.hasPaymentStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Web.PaymentStatusNotification getPaymentStatus() {
         return instance.getPaymentStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
        */
       public Builder setPaymentStatus(com.elarian.hera.proto.Web.PaymentStatusNotification value) {
         copyOnWrite();
@@ -29439,7 +32452,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
        */
       public Builder setPaymentStatus(
           com.elarian.hera.proto.Web.PaymentStatusNotification.Builder builderForValue) {
@@ -29448,7 +32461,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
        */
       public Builder mergePaymentStatus(com.elarian.hera.proto.Web.PaymentStatusNotification value) {
         copyOnWrite();
@@ -29456,11 +32469,59 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 11;</code>
+       * <code>.com.elarian.hera.proto.PaymentStatusNotification payment_status = 12;</code>
        */
       public Builder clearPaymentStatus() {
         copyOnWrite();
         instance.clearPaymentStatus();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+       */
+      @java.lang.Override
+      public boolean hasWalletPaymentStatus() {
+        return instance.hasWalletPaymentStatus();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Web.WalletPaymentStatusNotification getWalletPaymentStatus() {
+        return instance.getWalletPaymentStatus();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+       */
+      public Builder setWalletPaymentStatus(com.elarian.hera.proto.Web.WalletPaymentStatusNotification value) {
+        copyOnWrite();
+        instance.setWalletPaymentStatus(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+       */
+      public Builder setWalletPaymentStatus(
+          com.elarian.hera.proto.Web.WalletPaymentStatusNotification.Builder builderForValue) {
+        copyOnWrite();
+        instance.setWalletPaymentStatus(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+       */
+      public Builder mergeWalletPaymentStatus(com.elarian.hera.proto.Web.WalletPaymentStatusNotification value) {
+        copyOnWrite();
+        instance.mergeWalletPaymentStatus(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 13;</code>
+       */
+      public Builder clearWalletPaymentStatus() {
+        copyOnWrite();
+        instance.clearWalletPaymentStatus();
         return this;
       }
 
@@ -29482,6 +32543,7 @@ public final class Web {
             java.lang.Object[] objects = new java.lang.Object[] {
               "entry_",
               "entryCase_",
+              "orgId_",
               "appId_",
               "timestamp_",
               com.elarian.hera.proto.Web.MessagingConsentStatusNotification.class,
@@ -29493,11 +32555,12 @@ public final class Web {
               com.elarian.hera.proto.Web.VoiceCallNotification.class,
               com.elarian.hera.proto.Web.ReceivedPaymentNotification.class,
               com.elarian.hera.proto.Web.PaymentStatusNotification.class,
+              com.elarian.hera.proto.Web.WalletPaymentStatusNotification.class,
             };
             java.lang.String info =
-                "\u0000\u000b\u0001\u0000\u0001\u000b\u000b\u0000\u0000\u0000\u0001\u0208\u0002\t" +
-                "\u0003<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000\t<\u0000" +
-                "\n<\u0000\u000b<\u0000";
+                "\u0000\r\u0001\u0000\u0001\r\r\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\t" +
+                "\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000\t<\u0000\n<\u0000\u000b" +
+                "<\u0000\f<\u0000\r<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -29557,51 +32620,63 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     java.lang.String getAppId();
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
         getAppIdBytes();
 
     /**
-     * <code>string session_id = 2;</code>
+     * <code>string session_id = 3;</code>
      * @return The sessionId.
      */
     java.lang.String getSessionId();
     /**
-     * <code>string session_id = 2;</code>
+     * <code>string session_id = 3;</code>
      * @return The bytes for sessionId.
      */
     com.google.protobuf.ByteString
         getSessionIdBytes();
 
     /**
-     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
      * @return Whether the ussdMenu field is set.
      */
     boolean hasUssdMenu();
     /**
-     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
      * @return The ussdMenu.
      */
     com.elarian.hera.proto.Common.UssdMenu getUssdMenu();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     java.util.List<com.elarian.hera.proto.Common.VoiceCallAction> 
         getVoiceCallActionsList();
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     com.elarian.hera.proto.Common.VoiceCallAction getVoiceCallActions(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     int getVoiceCallActionsCount();
   }
@@ -29614,14 +32689,62 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebhookResponse)
       WebhookResponseOrBuilder {
     private WebhookResponse() {
+      orgId_ = "";
       appId_ = "";
       sessionId_ = "";
       voiceCallActions_ = emptyProtobufList();
     }
-    public static final int APP_ID_FIELD_NUMBER = 1;
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
     private java.lang.String appId_;
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The appId.
      */
     @java.lang.Override
@@ -29629,7 +32752,7 @@ public final class Web {
       return appId_;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @return The bytes for appId.
      */
     @java.lang.Override
@@ -29638,7 +32761,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The appId to set.
      */
     private void setAppId(
@@ -29648,14 +32771,14 @@ public final class Web {
       appId_ = value;
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      */
     private void clearAppId() {
       
       appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string app_id = 1;</code>
+     * <code>string app_id = 2;</code>
      * @param value The bytes for appId to set.
      */
     private void setAppIdBytes(
@@ -29665,10 +32788,10 @@ public final class Web {
       
     }
 
-    public static final int SESSION_ID_FIELD_NUMBER = 2;
+    public static final int SESSION_ID_FIELD_NUMBER = 3;
     private java.lang.String sessionId_;
     /**
-     * <code>string session_id = 2;</code>
+     * <code>string session_id = 3;</code>
      * @return The sessionId.
      */
     @java.lang.Override
@@ -29676,7 +32799,7 @@ public final class Web {
       return sessionId_;
     }
     /**
-     * <code>string session_id = 2;</code>
+     * <code>string session_id = 3;</code>
      * @return The bytes for sessionId.
      */
     @java.lang.Override
@@ -29685,7 +32808,7 @@ public final class Web {
       return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
     }
     /**
-     * <code>string session_id = 2;</code>
+     * <code>string session_id = 3;</code>
      * @param value The sessionId to set.
      */
     private void setSessionId(
@@ -29695,14 +32818,14 @@ public final class Web {
       sessionId_ = value;
     }
     /**
-     * <code>string session_id = 2;</code>
+     * <code>string session_id = 3;</code>
      */
     private void clearSessionId() {
       
       sessionId_ = getDefaultInstance().getSessionId();
     }
     /**
-     * <code>string session_id = 2;</code>
+     * <code>string session_id = 3;</code>
      * @param value The bytes for sessionId to set.
      */
     private void setSessionIdBytes(
@@ -29712,24 +32835,24 @@ public final class Web {
       
     }
 
-    public static final int USSD_MENU_FIELD_NUMBER = 3;
+    public static final int USSD_MENU_FIELD_NUMBER = 4;
     private com.elarian.hera.proto.Common.UssdMenu ussdMenu_;
     /**
-     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
      */
     @java.lang.Override
     public boolean hasUssdMenu() {
       return ussdMenu_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.UssdMenu getUssdMenu() {
       return ussdMenu_ == null ? com.elarian.hera.proto.Common.UssdMenu.getDefaultInstance() : ussdMenu_;
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
      */
     private void setUssdMenu(com.elarian.hera.proto.Common.UssdMenu value) {
       value.getClass();
@@ -29737,7 +32860,7 @@ public final class Web {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeUssdMenu(com.elarian.hera.proto.Common.UssdMenu value) {
@@ -29752,44 +32875,44 @@ public final class Web {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+     * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
      */
     private void clearUssdMenu() {  ussdMenu_ = null;
       
     }
 
-    public static final int VOICE_CALL_ACTIONS_FIELD_NUMBER = 4;
+    public static final int VOICE_CALL_ACTIONS_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.VoiceCallAction> voiceCallActions_;
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     @java.lang.Override
     public java.util.List<com.elarian.hera.proto.Common.VoiceCallAction> getVoiceCallActionsList() {
       return voiceCallActions_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     public java.util.List<? extends com.elarian.hera.proto.Common.VoiceCallActionOrBuilder> 
         getVoiceCallActionsOrBuilderList() {
       return voiceCallActions_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     @java.lang.Override
     public int getVoiceCallActionsCount() {
       return voiceCallActions_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.VoiceCallAction getVoiceCallActions(int index) {
       return voiceCallActions_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     public com.elarian.hera.proto.Common.VoiceCallActionOrBuilder getVoiceCallActionsOrBuilder(
         int index) {
@@ -29804,7 +32927,7 @@ public final class Web {
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     private void setVoiceCallActions(
         int index, com.elarian.hera.proto.Common.VoiceCallAction value) {
@@ -29813,7 +32936,7 @@ public final class Web {
       voiceCallActions_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     private void addVoiceCallActions(com.elarian.hera.proto.Common.VoiceCallAction value) {
       value.getClass();
@@ -29821,7 +32944,7 @@ public final class Web {
       voiceCallActions_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     private void addVoiceCallActions(
         int index, com.elarian.hera.proto.Common.VoiceCallAction value) {
@@ -29830,7 +32953,7 @@ public final class Web {
       voiceCallActions_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     private void addAllVoiceCallActions(
         java.lang.Iterable<? extends com.elarian.hera.proto.Common.VoiceCallAction> values) {
@@ -29839,13 +32962,13 @@ public final class Web {
           values, voiceCallActions_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     private void clearVoiceCallActions() {
       voiceCallActions_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
      */
     private void removeVoiceCallActions(int index) {
       ensureVoiceCallActionsIsMutable();
@@ -29948,7 +33071,56 @@ public final class Web {
 
 
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgId(value);
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        copyOnWrite();
+        instance.clearOrgId();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string app_id = 2;</code>
        * @return The appId.
        */
       @java.lang.Override
@@ -29956,7 +33128,7 @@ public final class Web {
         return instance.getAppId();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return The bytes for appId.
        */
       @java.lang.Override
@@ -29965,7 +33137,7 @@ public final class Web {
         return instance.getAppIdBytes();
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The appId to set.
        * @return This builder for chaining.
        */
@@ -29976,7 +33148,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppId() {
@@ -29985,7 +33157,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string app_id = 1;</code>
+       * <code>string app_id = 2;</code>
        * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
@@ -29997,7 +33169,7 @@ public final class Web {
       }
 
       /**
-       * <code>string session_id = 2;</code>
+       * <code>string session_id = 3;</code>
        * @return The sessionId.
        */
       @java.lang.Override
@@ -30005,7 +33177,7 @@ public final class Web {
         return instance.getSessionId();
       }
       /**
-       * <code>string session_id = 2;</code>
+       * <code>string session_id = 3;</code>
        * @return The bytes for sessionId.
        */
       @java.lang.Override
@@ -30014,7 +33186,7 @@ public final class Web {
         return instance.getSessionIdBytes();
       }
       /**
-       * <code>string session_id = 2;</code>
+       * <code>string session_id = 3;</code>
        * @param value The sessionId to set.
        * @return This builder for chaining.
        */
@@ -30025,7 +33197,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string session_id = 2;</code>
+       * <code>string session_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
@@ -30034,7 +33206,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>string session_id = 2;</code>
+       * <code>string session_id = 3;</code>
        * @param value The bytes for sessionId to set.
        * @return This builder for chaining.
        */
@@ -30046,21 +33218,21 @@ public final class Web {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
        */
       @java.lang.Override
       public boolean hasUssdMenu() {
         return instance.hasUssdMenu();
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.UssdMenu getUssdMenu() {
         return instance.getUssdMenu();
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
        */
       public Builder setUssdMenu(com.elarian.hera.proto.Common.UssdMenu value) {
         copyOnWrite();
@@ -30068,7 +33240,7 @@ public final class Web {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
        */
       public Builder setUssdMenu(
           com.elarian.hera.proto.Common.UssdMenu.Builder builderForValue) {
@@ -30077,7 +33249,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
        */
       public Builder mergeUssdMenu(com.elarian.hera.proto.Common.UssdMenu value) {
         copyOnWrite();
@@ -30085,7 +33257,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 3;</code>
+       * <code>.com.elarian.hera.proto.UssdMenu ussd_menu = 4;</code>
        */
       public Builder clearUssdMenu() {  copyOnWrite();
         instance.clearUssdMenu();
@@ -30093,7 +33265,7 @@ public final class Web {
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       @java.lang.Override
       public java.util.List<com.elarian.hera.proto.Common.VoiceCallAction> getVoiceCallActionsList() {
@@ -30101,20 +33273,20 @@ public final class Web {
             instance.getVoiceCallActionsList());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       @java.lang.Override
       public int getVoiceCallActionsCount() {
         return instance.getVoiceCallActionsCount();
       }/**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.VoiceCallAction getVoiceCallActions(int index) {
         return instance.getVoiceCallActions(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder setVoiceCallActions(
           int index, com.elarian.hera.proto.Common.VoiceCallAction value) {
@@ -30123,7 +33295,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder setVoiceCallActions(
           int index, com.elarian.hera.proto.Common.VoiceCallAction.Builder builderForValue) {
@@ -30133,7 +33305,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder addVoiceCallActions(com.elarian.hera.proto.Common.VoiceCallAction value) {
         copyOnWrite();
@@ -30141,7 +33313,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder addVoiceCallActions(
           int index, com.elarian.hera.proto.Common.VoiceCallAction value) {
@@ -30150,7 +33322,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder addVoiceCallActions(
           com.elarian.hera.proto.Common.VoiceCallAction.Builder builderForValue) {
@@ -30159,7 +33331,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder addVoiceCallActions(
           int index, com.elarian.hera.proto.Common.VoiceCallAction.Builder builderForValue) {
@@ -30169,7 +33341,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder addAllVoiceCallActions(
           java.lang.Iterable<? extends com.elarian.hera.proto.Common.VoiceCallAction> values) {
@@ -30178,7 +33350,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder clearVoiceCallActions() {
         copyOnWrite();
@@ -30186,7 +33358,7 @@ public final class Web {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.VoiceCallAction voice_call_actions = 5;</code>
        */
       public Builder removeVoiceCallActions(int index) {
         copyOnWrite();
@@ -30210,6 +33382,7 @@ public final class Web {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
               "appId_",
               "sessionId_",
               "ussdMenu_",
@@ -30217,8 +33390,8 @@ public final class Web {
               com.elarian.hera.proto.Common.VoiceCallAction.class,
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\t\u0004\u001b";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\t\u0005\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
