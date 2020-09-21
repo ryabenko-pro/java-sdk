@@ -10,7 +10,7 @@ object App {
         val req =  GetCustomerStateRequest
                 .newBuilder()
                 .setCustomerId("fake_id")
-                .setAppId("test_app")
+                .setOrgId("test_org")
                 .build()
         val res = instance.getCustomerState(req)
         System.out.println(res.toString)

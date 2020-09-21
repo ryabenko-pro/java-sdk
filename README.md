@@ -24,7 +24,7 @@ You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/java
 <dependency>
   <groupId>com.elarian</groupId>
   <artifactId>jvm</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
 </dependency>
 ```
 or sbt:
@@ -32,7 +32,7 @@ or sbt:
 ```
 resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
 // Get all services
-libraryDependencies += "com.elarian" % "jvm" % "0.0.3"
+libraryDependencies += "com.elarian" % "jvm" % "0.0.4"
 ```
 
 or Gradle:
@@ -44,9 +44,9 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:jvm:0.0.3'
+  implementation 'com.elarian:jvm:0.0.4'
   // Or if you're building for android
-  // implementation 'com.elarian:android:0.0.3'
+  // implementation 'com.elarian:android:0.0.4'
 }
 ```
 
@@ -80,37 +80,41 @@ See [examples](examples/) for more usage examples.
 
 ## Methods
 
-- `authToken()`
+```
+authToken(AuthTokenRequest) -> AuthTokenReply
 
-- `getCustomerState()`
-- `adoptCustomerState()`
+getCustomerState(GetCustomerStateRequest) -> GetCustomerStateReply
+adoptCustomerState(AdoptCustomerStateRequest) -> UpdateCustomerStateReply
 
-- `addCustomerReminder()`
-- `addCustomerReminderByTag()`
-- `cancelCustomerReminder()`
-- `cancelCustomerReminderByTag()`
-  
-- `updateCustomerTag()`
-- `deleteCustomerTag()`
+addCustomerReminder(AddCustomerReminderRequest) -> UpdateCustomerStateReply
+addCustomerReminderByTag(AddCustomerReminderTagRequest) -> TagCommandReply
+cancelCustomerReminder(CancelCustomerReminderRequest) -> UpdateCustomerStateReply
+cancelCustomerReminderByTag(CancelCustomerReminderTagRequest) -> TagCommandReply
 
-- `updateCustomerSecondaryId()`
-- `deleteCustomerSecondaryId()`
+updateCustomerTag(UpdateCustomerTagRequest) -> UpdateCustomerStateReply
+deleteCustomerTag(DeleteCustomerTagRequest) -> UpdateCustomerStateReply
 
-- `updateCustomerMetadata()`
-- `deleteCustomerMetadata ()`
+updateCustomerSecondaryId(UpdateCustomerSecondaryIdRequest) -> UpdateCustomerStateReply
+deleteCustomerSecondaryId(DeleteCustomerSecondaryIdRequest) -> UpdateCustomerStateReply
 
-- `sendMessage()`
-- `sendMessageByTag()`
-- `replyToMessage()`
-- `messagingConsent()`
+leaseCustomerMetadata(LeaseCustomerMetadataRequest) -> LeaseCustomerMetadataReply
+updateCustomerMetadata(UpdateCustomerMetadataRequest) -> UpdateCustomerStateReply
+deleteCustomerMetadata(DeleteCustomerMetadataRequest) -> UpdateCustomerStateReply
 
-- `sendPayment()`
-- `checkoutPayment()`
+sendMessage(SendMessageRequest) -> SendMessageReply
+sendMessageByTag(SendMessageTagRequest) -> TagCommandReply
+replyToMessage(ReplyToMessageRequest) -> SendMessageReply
+messagingConsent(MessagingConsentRequest) -> MessagingConsentReply
 
-- `makeVoiceCall()`
-  
-- `streamNotifications()`
-- `sendWebhookResponse()`
+sendPayment(SendPaymentRequest) -> InitiatePaymentReply
+checkoutPayment(CheckoutPaymentRequest) -> InitiatePaymentReply
+customerWalletPayment(CustomerWalletPaymentRequest) -> InitiatePaymentReply
+
+makeVoiceCall(MakeVoiceCallRequest) -> MakeVoiceCallReply
+
+streamNotifications(StreamNotificationRequest) -> WebhookRequest
+sendWebhookResponse(WebhookResponse) -> WebhookResponseReply
+```
 
 ## Issues
 

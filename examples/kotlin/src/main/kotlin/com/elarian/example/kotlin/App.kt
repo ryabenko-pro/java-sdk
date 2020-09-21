@@ -8,7 +8,7 @@ fun main() {
     val elarian = Elarian.newInstance("test_api_key")
     val req = GetCustomerStateRequest
             .newBuilder()
-            .setAppId("test_app")
+            .setOrgId("test_org")
             .setCustomerNumber(
                     CustomerNumber
                             .newBuilder()

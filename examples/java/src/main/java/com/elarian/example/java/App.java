@@ -11,7 +11,7 @@ public class App {
         GetCustomerStateRequest req =  GetCustomerStateRequest
                 .newBuilder()
                 .setCustomerId("fake_id")
-                .setAppId("test_app")
+                .setOrgId("test_org")
                 .build();
         GetCustomerStateReply res = instance.getCustomerState(req);
         System.out.println(res.toString());
