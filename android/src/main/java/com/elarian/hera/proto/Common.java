@@ -223,6 +223,95 @@ public final class Common {
   }
 
   /**
+   * Protobuf enum {@code com.elarian.hera.proto.UssdChannel}
+   */
+  public enum UssdChannel
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>USSD_CHANNEL_UNSPECIFIED = 0;</code>
+     */
+    USSD_CHANNEL_UNSPECIFIED(0),
+    /**
+     * <code>USSD_CHANNEL_TELCO = 1;</code>
+     */
+    USSD_CHANNEL_TELCO(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>USSD_CHANNEL_UNSPECIFIED = 0;</code>
+     */
+    public static final int USSD_CHANNEL_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>USSD_CHANNEL_TELCO = 1;</code>
+     */
+    public static final int USSD_CHANNEL_TELCO_VALUE = 1;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UssdChannel valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static UssdChannel forNumber(int value) {
+      switch (value) {
+        case 0: return USSD_CHANNEL_UNSPECIFIED;
+        case 1: return USSD_CHANNEL_TELCO;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UssdChannel>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UssdChannel> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UssdChannel>() {
+            @java.lang.Override
+            public UssdChannel findValueByNumber(int number) {
+              return UssdChannel.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return UssdChannelVerifier.INSTANCE;
+    }
+
+    private static final class UssdChannelVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new UssdChannelVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return UssdChannel.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private UssdChannel(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.UssdChannel)
+  }
+
+  /**
    * Protobuf enum {@code com.elarian.hera.proto.VoiceChannel}
    */
   public enum VoiceChannel
@@ -1536,122 +1625,6 @@ public final class Common {
   }
 
   /**
-   * Protobuf enum {@code com.elarian.hera.proto.VoiceCallTransferState}
-   */
-  public enum VoiceCallTransferState
-      implements com.google.protobuf.Internal.EnumLite {
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_UNSPECIFIED = 0;</code>
-     */
-    VOICE_CALL_TRANSFER_STATE_UNSPECIFIED(0),
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_ACTIVE = 1;</code>
-     */
-    VOICE_CALL_TRANSFER_STATE_ACTIVE(1),
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_ACTIVE_COMPLETED = 2;</code>
-     */
-    VOICE_CALL_TRANSFER_STATE_ACTIVE_COMPLETED(2),
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_CALLER_HANGUP = 3;</code>
-     */
-    VOICE_CALL_TRANSFER_STATE_CALLER_HANGUP(3),
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_CALLEE_HANGUP = 4;</code>
-     */
-    VOICE_CALL_TRANSFER_STATE_CALLEE_HANGUP(4),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_UNSPECIFIED = 0;</code>
-     */
-    public static final int VOICE_CALL_TRANSFER_STATE_UNSPECIFIED_VALUE = 0;
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_ACTIVE = 1;</code>
-     */
-    public static final int VOICE_CALL_TRANSFER_STATE_ACTIVE_VALUE = 1;
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_ACTIVE_COMPLETED = 2;</code>
-     */
-    public static final int VOICE_CALL_TRANSFER_STATE_ACTIVE_COMPLETED_VALUE = 2;
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_CALLER_HANGUP = 3;</code>
-     */
-    public static final int VOICE_CALL_TRANSFER_STATE_CALLER_HANGUP_VALUE = 3;
-    /**
-     * <code>VOICE_CALL_TRANSFER_STATE_CALLEE_HANGUP = 4;</code>
-     */
-    public static final int VOICE_CALL_TRANSFER_STATE_CALLEE_HANGUP_VALUE = 4;
-
-
-    @java.lang.Override
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static VoiceCallTransferState valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static VoiceCallTransferState forNumber(int value) {
-      switch (value) {
-        case 0: return VOICE_CALL_TRANSFER_STATE_UNSPECIFIED;
-        case 1: return VOICE_CALL_TRANSFER_STATE_ACTIVE;
-        case 2: return VOICE_CALL_TRANSFER_STATE_ACTIVE_COMPLETED;
-        case 3: return VOICE_CALL_TRANSFER_STATE_CALLER_HANGUP;
-        case 4: return VOICE_CALL_TRANSFER_STATE_CALLEE_HANGUP;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<VoiceCallTransferState>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        VoiceCallTransferState> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<VoiceCallTransferState>() {
-            @java.lang.Override
-            public VoiceCallTransferState findValueByNumber(int number) {
-              return VoiceCallTransferState.forNumber(number);
-            }
-          };
-
-    public static com.google.protobuf.Internal.EnumVerifier 
-        internalGetVerifier() {
-      return VoiceCallTransferStateVerifier.INSTANCE;
-    }
-
-    private static final class VoiceCallTransferStateVerifier implements 
-         com.google.protobuf.Internal.EnumVerifier { 
-            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new VoiceCallTransferStateVerifier();
-            @java.lang.Override
-            public boolean isInRange(int number) {
-              return VoiceCallTransferState.forNumber(number) != null;
-            }
-          };
-
-    private final int value;
-
-    private VoiceCallTransferState(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.VoiceCallTransferState)
-  }
-
-  /**
    * Protobuf enum {@code com.elarian.hera.proto.VoiceCallStatus}
    */
   public enum VoiceCallStatus
@@ -1952,9 +1925,13 @@ public final class Common {
      */
     PAYMENT_STATUS_DUPLICATE_REQUEST(205),
     /**
-     * <code>PAYMENT_STATUS_INVALID_WALLET = 206;</code>
+     * <code>PAYMENT_STATUS_INVALID_PURSE = 206;</code>
      */
-    PAYMENT_STATUS_INVALID_WALLET(206),
+    PAYMENT_STATUS_INVALID_PURSE(206),
+    /**
+     * <code>PAYMENT_STATUS_INVALID_WALLET = 207;</code>
+     */
+    PAYMENT_STATUS_INVALID_WALLET(207),
     /**
      * <code>PAYMENT_STATUS_DECOMMISSIONED_CUSTOMER_ID = 299;</code>
      */
@@ -2035,9 +2012,13 @@ public final class Common {
      */
     public static final int PAYMENT_STATUS_DUPLICATE_REQUEST_VALUE = 205;
     /**
-     * <code>PAYMENT_STATUS_INVALID_WALLET = 206;</code>
+     * <code>PAYMENT_STATUS_INVALID_PURSE = 206;</code>
      */
-    public static final int PAYMENT_STATUS_INVALID_WALLET_VALUE = 206;
+    public static final int PAYMENT_STATUS_INVALID_PURSE_VALUE = 206;
+    /**
+     * <code>PAYMENT_STATUS_INVALID_WALLET = 207;</code>
+     */
+    public static final int PAYMENT_STATUS_INVALID_WALLET_VALUE = 207;
     /**
      * <code>PAYMENT_STATUS_DECOMMISSIONED_CUSTOMER_ID = 299;</code>
      */
@@ -2104,7 +2085,8 @@ public final class Common {
         case 203: return PAYMENT_STATUS_APPLICATION_ERROR;
         case 204: return PAYMENT_STATUS_NOT_ALLOWED;
         case 205: return PAYMENT_STATUS_DUPLICATE_REQUEST;
-        case 206: return PAYMENT_STATUS_INVALID_WALLET;
+        case 206: return PAYMENT_STATUS_INVALID_PURSE;
+        case 207: return PAYMENT_STATUS_INVALID_WALLET;
         case 299: return PAYMENT_STATUS_DECOMMISSIONED_CUSTOMER_ID;
         case 300: return PAYMENT_STATUS_SUCCESS;
         case 301: return PAYMENT_STATUS_PASS_THROUGH;
@@ -2151,6 +2133,202 @@ public final class Common {
     }
 
     // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.PaymentStatus)
+  }
+
+  /**
+   * Protobuf enum {@code com.elarian.hera.proto.PaymentAccountType}
+   */
+  public enum PaymentAccountType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>PAYMENT_ACCOUNT_TYPE_UNSPECIFIED = 0;</code>
+     */
+    PAYMENT_ACCOUNT_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>PAYMENT_ACCOUNT_TYPE_PURSE = 1;</code>
+     */
+    PAYMENT_ACCOUNT_TYPE_PURSE(1),
+    /**
+     * <code>PAYMENT_ACCOUNT_TYPE_WALLET = 2;</code>
+     */
+    PAYMENT_ACCOUNT_TYPE_WALLET(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PAYMENT_ACCOUNT_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int PAYMENT_ACCOUNT_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>PAYMENT_ACCOUNT_TYPE_PURSE = 1;</code>
+     */
+    public static final int PAYMENT_ACCOUNT_TYPE_PURSE_VALUE = 1;
+    /**
+     * <code>PAYMENT_ACCOUNT_TYPE_WALLET = 2;</code>
+     */
+    public static final int PAYMENT_ACCOUNT_TYPE_WALLET_VALUE = 2;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PaymentAccountType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static PaymentAccountType forNumber(int value) {
+      switch (value) {
+        case 0: return PAYMENT_ACCOUNT_TYPE_UNSPECIFIED;
+        case 1: return PAYMENT_ACCOUNT_TYPE_PURSE;
+        case 2: return PAYMENT_ACCOUNT_TYPE_WALLET;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PaymentAccountType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PaymentAccountType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PaymentAccountType>() {
+            @java.lang.Override
+            public PaymentAccountType findValueByNumber(int number) {
+              return PaymentAccountType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return PaymentAccountTypeVerifier.INSTANCE;
+    }
+
+    private static final class PaymentAccountTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new PaymentAccountTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return PaymentAccountType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private PaymentAccountType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.PaymentAccountType)
+  }
+
+  /**
+   * Protobuf enum {@code com.elarian.hera.proto.PaymentTransactionSide}
+   */
+  public enum PaymentTransactionSide
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>PAYMENT_TRANSACTION_SIDE_UNSPECIFIED = 0;</code>
+     */
+    PAYMENT_TRANSACTION_SIDE_UNSPECIFIED(0),
+    /**
+     * <code>PAYMENT_TRANSACTION_SIDE_CREDIT = 1;</code>
+     */
+    PAYMENT_TRANSACTION_SIDE_CREDIT(1),
+    /**
+     * <code>PAYMENT_TRANSACTION_SIDE_DEBIT = 2;</code>
+     */
+    PAYMENT_TRANSACTION_SIDE_DEBIT(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PAYMENT_TRANSACTION_SIDE_UNSPECIFIED = 0;</code>
+     */
+    public static final int PAYMENT_TRANSACTION_SIDE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>PAYMENT_TRANSACTION_SIDE_CREDIT = 1;</code>
+     */
+    public static final int PAYMENT_TRANSACTION_SIDE_CREDIT_VALUE = 1;
+    /**
+     * <code>PAYMENT_TRANSACTION_SIDE_DEBIT = 2;</code>
+     */
+    public static final int PAYMENT_TRANSACTION_SIDE_DEBIT_VALUE = 2;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PaymentTransactionSide valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static PaymentTransactionSide forNumber(int value) {
+      switch (value) {
+        case 0: return PAYMENT_TRANSACTION_SIDE_UNSPECIFIED;
+        case 1: return PAYMENT_TRANSACTION_SIDE_CREDIT;
+        case 2: return PAYMENT_TRANSACTION_SIDE_DEBIT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PaymentTransactionSide>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PaymentTransactionSide> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PaymentTransactionSide>() {
+            @java.lang.Override
+            public PaymentTransactionSide findValueByNumber(int number) {
+              return PaymentTransactionSide.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return PaymentTransactionSideVerifier.INSTANCE;
+    }
+
+    private static final class PaymentTransactionSideVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new PaymentTransactionSideVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return PaymentTransactionSide.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private PaymentTransactionSide(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.PaymentTransactionSide)
   }
 
   /**
@@ -2631,6 +2809,17 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getNumberBytes();
+
+    /**
+     * <code>.google.protobuf.StringValue partition = 3;</code>
+     * @return Whether the partition field is set.
+     */
+    boolean hasPartition();
+    /**
+     * <code>.google.protobuf.StringValue partition = 3;</code>
+     * @return The partition.
+     */
+    com.google.protobuf.StringValue getPartition();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.CustomerNumber}
@@ -2729,6 +2918,52 @@ public final class Common {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       number_ = value.toStringUtf8();
+      
+    }
+
+    public static final int PARTITION_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue partition_;
+    /**
+     * <code>.google.protobuf.StringValue partition = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasPartition() {
+      return partition_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue partition = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getPartition() {
+      return partition_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : partition_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue partition = 3;</code>
+     */
+    private void setPartition(com.google.protobuf.StringValue value) {
+      value.getClass();
+  partition_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue partition = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePartition(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (partition_ != null &&
+          partition_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        partition_ =
+          com.google.protobuf.StringValue.newBuilder(partition_).mergeFrom(value).buildPartial();
+      } else {
+        partition_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue partition = 3;</code>
+     */
+    private void clearPartition() {  partition_ = null;
       
     }
 
@@ -2922,6 +3157,53 @@ public final class Common {
         return this;
       }
 
+      /**
+       * <code>.google.protobuf.StringValue partition = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasPartition() {
+        return instance.hasPartition();
+      }
+      /**
+       * <code>.google.protobuf.StringValue partition = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getPartition() {
+        return instance.getPartition();
+      }
+      /**
+       * <code>.google.protobuf.StringValue partition = 3;</code>
+       */
+      public Builder setPartition(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setPartition(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue partition = 3;</code>
+       */
+      public Builder setPartition(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPartition(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue partition = 3;</code>
+       */
+      public Builder mergePartition(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergePartition(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue partition = 3;</code>
+       */
+      public Builder clearPartition() {  copyOnWrite();
+        instance.clearPartition();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CustomerNumber)
     }
     @java.lang.Override
@@ -2940,10 +3222,11 @@ public final class Common {
             java.lang.Object[] objects = new java.lang.Object[] {
               "provider_",
               "number_",
+              "partition_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\u0208" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\f\u0002\u0208" +
+                "\u0003\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3387,6 +3670,399 @@ public final class Common {
     private static volatile com.google.protobuf.Parser<MessagingChannelNumber> PARSER;
 
     public static com.google.protobuf.Parser<MessagingChannelNumber> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UssdChannelNumberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UssdChannelNumber)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
+     */
+    int getChannelValue();
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+     * @return The channel.
+     */
+    com.elarian.hera.proto.Common.UssdChannel getChannel();
+
+    /**
+     * <code>string number = 2;</code>
+     * @return The number.
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>string number = 2;</code>
+     * @return The bytes for number.
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.UssdChannelNumber}
+   */
+  public  static final class UssdChannelNumber extends
+      com.google.protobuf.GeneratedMessageLite<
+          UssdChannelNumber, UssdChannelNumber.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdChannelNumber)
+      UssdChannelNumberOrBuilder {
+    private UssdChannelNumber() {
+      number_ = "";
+    }
+    public static final int CHANNEL_FIELD_NUMBER = 1;
+    private int channel_;
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
+     */
+    @java.lang.Override
+    public int getChannelValue() {
+      return channel_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+     * @return The channel.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.UssdChannel getChannel() {
+      com.elarian.hera.proto.Common.UssdChannel result = com.elarian.hera.proto.Common.UssdChannel.forNumber(channel_);
+      return result == null ? com.elarian.hera.proto.Common.UssdChannel.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+     * @param value The enum numeric value on the wire for channel to set.
+     */
+    private void setChannelValue(int value) {
+        channel_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+     * @param value The channel to set.
+     */
+    private void setChannel(com.elarian.hera.proto.Common.UssdChannel value) {
+      channel_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+     */
+    private void clearChannel() {
+      
+      channel_ = 0;
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 2;
+    private java.lang.String number_;
+    /**
+     * <code>string number = 2;</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public java.lang.String getNumber() {
+      return number_;
+    }
+    /**
+     * <code>string number = 2;</code>
+     * @return The bytes for number.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(number_);
+    }
+    /**
+     * <code>string number = 2;</code>
+     * @param value The number to set.
+     */
+    private void setNumber(
+        java.lang.String value) {
+      value.getClass();
+  
+      number_ = value;
+    }
+    /**
+     * <code>string number = 2;</code>
+     */
+    private void clearNumber() {
+      
+      number_ = getDefaultInstance().getNumber();
+    }
+    /**
+     * <code>string number = 2;</code>
+     * @param value The bytes for number to set.
+     */
+    private void setNumberBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      number_ = value.toStringUtf8();
+      
+    }
+
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.UssdChannelNumber parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.UssdChannelNumber prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.UssdChannelNumber}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.UssdChannelNumber, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.UssdChannelNumber)
+        com.elarian.hera.proto.Common.UssdChannelNumberOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.UssdChannelNumber.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+       * @return The enum numeric value on the wire for channel.
+       */
+      @java.lang.Override
+      public int getChannelValue() {
+        return instance.getChannelValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+       * @param value The channel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelValue(int value) {
+        copyOnWrite();
+        instance.setChannelValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+       * @return The channel.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.UssdChannel getChannel() {
+        return instance.getChannel();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+       * @param value The enum numeric value on the wire for channel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannel(com.elarian.hera.proto.Common.UssdChannel value) {
+        copyOnWrite();
+        instance.setChannel(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannel channel = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannel() {
+        copyOnWrite();
+        instance.clearChannel();
+        return this;
+      }
+
+      /**
+       * <code>string number = 2;</code>
+       * @return The number.
+       */
+      @java.lang.Override
+      public java.lang.String getNumber() {
+        return instance.getNumber();
+      }
+      /**
+       * <code>string number = 2;</code>
+       * @return The bytes for number.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        return instance.getNumberBytes();
+      }
+      /**
+       * <code>string number = 2;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNumber(value);
+        return this;
+      }
+      /**
+       * <code>string number = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        copyOnWrite();
+        instance.clearNumber();
+        return this;
+      }
+      /**
+       * <code>string number = 2;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNumberBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.UssdChannelNumber)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.UssdChannelNumber();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "channel_",
+              "number_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.UssdChannelNumber> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.UssdChannelNumber.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.UssdChannelNumber>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.UssdChannelNumber)
+    private static final com.elarian.hera.proto.Common.UssdChannelNumber DEFAULT_INSTANCE;
+    static {
+      UssdChannelNumber defaultInstance = new UssdChannelNumber();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UssdChannelNumber.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.UssdChannelNumber getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UssdChannelNumber> PARSER;
+
+    public static com.google.protobuf.Parser<UssdChannelNumber> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -6727,15 +7403,15 @@ public final class Common {
     com.elarian.hera.proto.Common.UssdMenu getMenu();
 
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
-     * @return Whether the timestamp field is set.
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
-    boolean hasTimestamp();
+    boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
-     * @return The timestamp.
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
-    com.google.protobuf.Timestamp getTimestamp();
+    com.google.protobuf.Timestamp getCreatedAt();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.UssdHop}
@@ -6839,49 +7515,49 @@ public final class Common {
       
     }
 
-    public static final int TIMESTAMP_FIELD_NUMBER = 3;
-    private com.google.protobuf.Timestamp timestamp_;
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
-    public boolean hasTimestamp() {
-      return timestamp_ != null;
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getTimestamp() {
-      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
-    private void setTimestamp(com.google.protobuf.Timestamp value) {
+    private void setCreatedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
-  timestamp_ = value;
+  createdAt_ = value;
       
       }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeTimestamp(com.google.protobuf.Timestamp value) {
+    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
-  if (timestamp_ != null &&
-          timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-        timestamp_ =
-          com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+  if (createdAt_ != null &&
+          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdAt_ =
+          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
       } else {
-        timestamp_ = value;
+        createdAt_ = value;
       }
       
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
-    private void clearTimestamp() {  timestamp_ = null;
+    private void clearCreatedAt() {  createdAt_ = null;
       
     }
 
@@ -7075,49 +7751,49 @@ public final class Common {
       }
 
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       @java.lang.Override
-      public boolean hasTimestamp() {
-        return instance.hasTimestamp();
+      public boolean hasCreatedAt() {
+        return instance.hasCreatedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.Timestamp getTimestamp() {
-        return instance.getTimestamp();
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        return instance.getCreatedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
-      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.setTimestamp(value);
+        instance.setCreatedAt(value);
         return this;
         }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
-      public Builder setTimestamp(
+      public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
         copyOnWrite();
-        instance.setTimestamp(builderForValue.build());
+        instance.setCreatedAt(builderForValue.build());
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
-      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.mergeTimestamp(value);
+        instance.mergeCreatedAt(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
-      public Builder clearTimestamp() {  copyOnWrite();
-        instance.clearTimestamp();
+      public Builder clearCreatedAt() {  copyOnWrite();
+        instance.clearCreatedAt();
         return this;
       }
 
@@ -7139,7 +7815,7 @@ public final class Common {
             java.lang.Object[] objects = new java.lang.Object[] {
               "input_",
               "menu_",
-              "timestamp_",
+              "createdAt_",
             };
             java.lang.String info =
                 "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
@@ -7194,6 +7870,430 @@ public final class Common {
     private static volatile com.google.protobuf.Parser<UssdHop> PARSER;
 
     public static com.google.protobuf.Parser<UssdHop> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DataMapValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.DataMapValue)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string string_val = 2;</code>
+     * @return The stringVal.
+     */
+    java.lang.String getStringVal();
+    /**
+     * <code>string string_val = 2;</code>
+     * @return The bytes for stringVal.
+     */
+    com.google.protobuf.ByteString
+        getStringValBytes();
+
+    /**
+     * <code>bytes bytes_val = 3;</code>
+     * @return The bytesVal.
+     */
+    com.google.protobuf.ByteString getBytesVal();
+
+    public com.elarian.hera.proto.Common.DataMapValue.ValueCase getValueCase();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.DataMapValue}
+   */
+  public  static final class DataMapValue extends
+      com.google.protobuf.GeneratedMessageLite<
+          DataMapValue, DataMapValue.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.DataMapValue)
+      DataMapValueOrBuilder {
+    private DataMapValue() {
+    }
+    private int valueCase_ = 0;
+    private java.lang.Object value_;
+    public enum ValueCase {
+      STRING_VAL(2),
+      BYTES_VAL(3),
+      VALUE_NOT_SET(0);
+      private final int value;
+      private ValueCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ValueCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ValueCase forNumber(int value) {
+        switch (value) {
+          case 2: return STRING_VAL;
+          case 3: return BYTES_VAL;
+          case 0: return VALUE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public ValueCase
+    getValueCase() {
+      return ValueCase.forNumber(
+          valueCase_);
+    }
+
+    private void clearValue() {
+      valueCase_ = 0;
+      value_ = null;
+    }
+
+    public static final int STRING_VAL_FIELD_NUMBER = 2;
+    /**
+     * <code>string string_val = 2;</code>
+     * @return The stringVal.
+     */
+    @java.lang.Override
+    public java.lang.String getStringVal() {
+      java.lang.String ref = "";
+      if (valueCase_ == 2) {
+        ref = (java.lang.String) value_;
+      }
+      return ref;
+    }
+    /**
+     * <code>string string_val = 2;</code>
+     * @return The bytes for stringVal.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStringValBytes() {
+      java.lang.String ref = "";
+      if (valueCase_ == 2) {
+        ref = (java.lang.String) value_;
+      }
+      return com.google.protobuf.ByteString.copyFromUtf8(ref);
+    }
+    /**
+     * <code>string string_val = 2;</code>
+     * @param value The stringVal to set.
+     */
+    private void setStringVal(
+        java.lang.String value) {
+      value.getClass();
+  valueCase_ = 2;
+      value_ = value;
+    }
+    /**
+     * <code>string string_val = 2;</code>
+     */
+    private void clearStringVal() {
+      if (valueCase_ == 2) {
+        valueCase_ = 0;
+        value_ = null;
+      }
+    }
+    /**
+     * <code>string string_val = 2;</code>
+     * @param value The bytes for stringVal to set.
+     */
+    private void setStringValBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      value_ = value.toStringUtf8();
+      valueCase_ = 2;
+    }
+
+    public static final int BYTES_VAL_FIELD_NUMBER = 3;
+    /**
+     * <code>bytes bytes_val = 3;</code>
+     * @return The bytesVal.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBytesVal() {
+      if (valueCase_ == 3) {
+        return (com.google.protobuf.ByteString) value_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+    /**
+     * <code>bytes bytes_val = 3;</code>
+     * @param value The bytesVal to set.
+     */
+    private void setBytesVal(com.google.protobuf.ByteString value) {
+      value.getClass();
+  valueCase_ = 3;
+      value_ = value;
+    }
+    /**
+     * <code>bytes bytes_val = 3;</code>
+     */
+    private void clearBytesVal() {
+      if (valueCase_ == 3) {
+        valueCase_ = 0;
+        value_ = null;
+      }
+    }
+
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.DataMapValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.DataMapValue prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.DataMapValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.DataMapValue, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.DataMapValue)
+        com.elarian.hera.proto.Common.DataMapValueOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.DataMapValue.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public ValueCase
+          getValueCase() {
+        return instance.getValueCase();
+      }
+
+      public Builder clearValue() {
+        copyOnWrite();
+        instance.clearValue();
+        return this;
+      }
+
+
+      /**
+       * <code>string string_val = 2;</code>
+       * @return The stringVal.
+       */
+      @java.lang.Override
+      public java.lang.String getStringVal() {
+        return instance.getStringVal();
+      }
+      /**
+       * <code>string string_val = 2;</code>
+       * @return The bytes for stringVal.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getStringValBytes() {
+        return instance.getStringValBytes();
+      }
+      /**
+       * <code>string string_val = 2;</code>
+       * @param value The stringVal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStringVal(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setStringVal(value);
+        return this;
+      }
+      /**
+       * <code>string string_val = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStringVal() {
+        copyOnWrite();
+        instance.clearStringVal();
+        return this;
+      }
+      /**
+       * <code>string string_val = 2;</code>
+       * @param value The bytes for stringVal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStringValBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setStringValBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>bytes bytes_val = 3;</code>
+       * @return The bytesVal.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBytesVal() {
+        return instance.getBytesVal();
+      }
+      /**
+       * <code>bytes bytes_val = 3;</code>
+       * @param value The bytesVal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBytesVal(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBytesVal(value);
+        return this;
+      }
+      /**
+       * <code>bytes bytes_val = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBytesVal() {
+        copyOnWrite();
+        instance.clearBytesVal();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.DataMapValue)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.DataMapValue();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "value_",
+              "valueCase_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0002\u0003\u0002\u0000\u0000\u0000\u0002\u023b\u0000\u0003" +
+                "=\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.DataMapValue> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.DataMapValue.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.DataMapValue>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.DataMapValue)
+    private static final com.elarian.hera.proto.Common.DataMapValue DEFAULT_INSTANCE;
+    static {
+      DataMapValue defaultInstance = new DataMapValue();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DataMapValue.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.DataMapValue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DataMapValue> PARSER;
+
+    public static com.google.protobuf.Parser<DataMapValue> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -7590,15 +8690,15 @@ public final class Common {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
-     * @return Whether the startTime field is set.
+     * <code>.google.protobuf.Timestamp started_at = 1;</code>
+     * @return Whether the startedAt field is set.
      */
-    boolean hasStartTime();
+    boolean hasStartedAt();
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
-     * @return The startTime.
+     * <code>.google.protobuf.Timestamp started_at = 1;</code>
+     * @return The startedAt.
      */
-    com.google.protobuf.Timestamp getStartTime();
+    com.google.protobuf.Timestamp getStartedAt();
 
     /**
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
@@ -7621,49 +8721,49 @@ public final class Common {
       MessagingSessionStateEntryOrBuilder {
     private MessagingSessionStateEntry() {
     }
-    public static final int START_TIME_FIELD_NUMBER = 1;
-    private com.google.protobuf.Timestamp startTime_;
+    public static final int STARTED_AT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp startedAt_;
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp started_at = 1;</code>
      */
     @java.lang.Override
-    public boolean hasStartTime() {
-      return startTime_ != null;
+    public boolean hasStartedAt() {
+      return startedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp started_at = 1;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getStartTime() {
-      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    public com.google.protobuf.Timestamp getStartedAt() {
+      return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp started_at = 1;</code>
      */
-    private void setStartTime(com.google.protobuf.Timestamp value) {
+    private void setStartedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
-  startTime_ = value;
+  startedAt_ = value;
       
       }
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp started_at = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeStartTime(com.google.protobuf.Timestamp value) {
+    private void mergeStartedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
-  if (startTime_ != null &&
-          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-        startTime_ =
-          com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+  if (startedAt_ != null &&
+          startedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(startedAt_).mergeFrom(value).buildPartial();
       } else {
-        startTime_ = value;
+        startedAt_ = value;
       }
       
     }
     /**
-     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp started_at = 1;</code>
      */
-    private void clearStartTime() {  startTime_ = null;
+    private void clearStartedAt() {  startedAt_ = null;
       
     }
 
@@ -7809,49 +8909,49 @@ public final class Common {
 
 
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp started_at = 1;</code>
        */
       @java.lang.Override
-      public boolean hasStartTime() {
-        return instance.hasStartTime();
+      public boolean hasStartedAt() {
+        return instance.hasStartedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp started_at = 1;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.Timestamp getStartTime() {
-        return instance.getStartTime();
+      public com.google.protobuf.Timestamp getStartedAt() {
+        return instance.getStartedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp started_at = 1;</code>
        */
-      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+      public Builder setStartedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.setStartTime(value);
+        instance.setStartedAt(value);
         return this;
         }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp started_at = 1;</code>
        */
-      public Builder setStartTime(
+      public Builder setStartedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
         copyOnWrite();
-        instance.setStartTime(builderForValue.build());
+        instance.setStartedAt(builderForValue.build());
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp started_at = 1;</code>
        */
-      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+      public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.mergeStartTime(value);
+        instance.mergeStartedAt(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp started_at = 1;</code>
        */
-      public Builder clearStartTime() {  copyOnWrite();
-        instance.clearStartTime();
+      public Builder clearStartedAt() {  copyOnWrite();
+        instance.clearStartedAt();
         return this;
       }
 
@@ -7918,7 +9018,7 @@ public final class Common {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "startTime_",
+              "startedAt_",
               "expiration_",
             };
             java.lang.String info =
@@ -8630,16 +9730,15 @@ public final class Common {
         getMessageIdBytes();
 
     /**
-     * <code>string product_id = 5;</code>
-     * @return The productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     * @return Whether the appId field is set.
      */
-    java.lang.String getProductId();
+    boolean hasAppId();
     /**
-     * <code>string product_id = 5;</code>
-     * @return The bytes for productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     * @return The appId.
      */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
+    com.google.protobuf.StringValue getAppId();
 
     /**
      * <code>.google.protobuf.StringValue text = 6;</code>
@@ -8731,7 +9830,6 @@ public final class Common {
       MessageStateEntryOrBuilder {
     private MessageStateEntry() {
       messageId_ = "";
-      productId_ = "";
       media_ = emptyProtobufList();
     }
     public static final int DIRECTION_FIELD_NUMBER = 1;
@@ -8915,50 +10013,49 @@ public final class Common {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 5;
-    private java.lang.String productId_;
+    public static final int APP_ID_FIELD_NUMBER = 5;
+    private com.google.protobuf.StringValue appId_;
     /**
-     * <code>string product_id = 5;</code>
-     * @return The productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public boolean hasAppId() {
+      return appId_ != null;
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @return The bytes for productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+    public com.google.protobuf.StringValue getAppId() {
+      return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @param value The productId to set.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
-    private void setProductId(
-        java.lang.String value) {
+    private void setAppId(com.google.protobuf.StringValue value) {
       value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 5;</code>
-     */
-    private void clearProductId() {
+  appId_ = value;
       
-      productId_ = getDefaultInstance().getProductId();
+      }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAppId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (appId_ != null &&
+          appId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        appId_ =
+          com.google.protobuf.StringValue.newBuilder(appId_).mergeFrom(value).buildPartial();
+      } else {
+        appId_ = value;
+      }
+      
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @param value The bytes for productId to set.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+    private void clearAppId() {  appId_ = null;
       
     }
 
@@ -9613,51 +10710,49 @@ public final class Common {
       }
 
       /**
-       * <code>string product_id = 5;</code>
-       * @return The productId.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public boolean hasAppId() {
+        return instance.hasAppId();
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @return The bytes for productId.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+      public com.google.protobuf.StringValue getAppId() {
+        return instance.getAppId();
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder setProductId(
-          java.lang.String value) {
+      public Builder setAppId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setAppId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
+       */
+      public Builder setAppId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAppId(builderForValue.build());
         return this;
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder clearProductId() {
+      public Builder mergeAppId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.clearProductId();
+        instance.mergeAppId(value);
         return this;
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
+      public Builder clearAppId() {  copyOnWrite();
+        instance.clearAppId();
         return this;
       }
 
@@ -10064,7 +11159,7 @@ public final class Common {
               "customerNumber_",
               "channelNumber_",
               "messageId_",
-              "productId_",
+              "appId_",
               "text_",
               "template_",
               "media_",
@@ -10076,7 +11171,7 @@ public final class Common {
             };
             java.lang.String info =
                 "\u0000\f\u0000\u0000\u0001\f\f\u0000\u0001\u0000\u0001\f\u0002\t\u0003\t\u0004\u0208" +
-                "\u0005\u0208\u0006\t\u0007\t\b\u001b\t\t\n\t\u000b\t\f\f";
+                "\u0005\t\u0006\t\u0007\t\b\u001b\t\t\n\t\u000b\t\f\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -11182,16 +12277,15 @@ public final class Common {
     com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>string channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
      * @return The channelNumber.
      */
-    java.lang.String getChannelNumber();
-    /**
-     * <code>string channel_number = 2;</code>
-     * @return The bytes for channelNumber.
-     */
-    com.google.protobuf.ByteString
-        getChannelNumberBytes();
+    com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber();
 
     /**
      * <code>string session_id = 3;</code>
@@ -11206,16 +12300,15 @@ public final class Common {
         getSessionIdBytes();
 
     /**
-     * <code>string product_id = 4;</code>
-     * @return The productId.
+     * <code>.google.protobuf.StringValue app_id = 4;</code>
+     * @return Whether the appId field is set.
      */
-    java.lang.String getProductId();
+    boolean hasAppId();
     /**
-     * <code>string product_id = 4;</code>
-     * @return The bytes for productId.
+     * <code>.google.protobuf.StringValue app_id = 4;</code>
+     * @return The appId.
      */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
+    com.google.protobuf.StringValue getAppId();
 
     /**
      * <code>repeated .com.elarian.hera.proto.UssdHop hops = 5;</code>
@@ -11262,9 +12355,7 @@ public final class Common {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdSessionStateEntry)
       UssdSessionStateEntryOrBuilder {
     private UssdSessionStateEntry() {
-      channelNumber_ = "";
       sessionId_ = "";
-      productId_ = "";
       hops_ = emptyProtobufList();
     }
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
@@ -11314,49 +12405,48 @@ public final class Common {
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private java.lang.String channelNumber_;
+    private com.elarian.hera.proto.Common.UssdChannelNumber channelNumber_;
     /**
-     * <code>string channel_number = 2;</code>
-     * @return The channelNumber.
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
-    public java.lang.String getChannelNumber() {
-      return channelNumber_;
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
     }
     /**
-     * <code>string channel_number = 2;</code>
-     * @return The bytes for channelNumber.
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getChannelNumberBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(channelNumber_);
+    public com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.Common.UssdChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
-     * <code>string channel_number = 2;</code>
-     * @param value The channelNumber to set.
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
      */
-    private void setChannelNumber(
-        java.lang.String value) {
+    private void setChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
       value.getClass();
-  
-      channelNumber_ = value;
-    }
-    /**
-     * <code>string channel_number = 2;</code>
-     */
-    private void clearChannelNumber() {
+  channelNumber_ = value;
       
-      channelNumber_ = getDefaultInstance().getChannelNumber();
+      }
+    /**
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.Common.UssdChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.Common.UssdChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
     }
     /**
-     * <code>string channel_number = 2;</code>
-     * @param value The bytes for channelNumber to set.
+     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
      */
-    private void setChannelNumberBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      channelNumber_ = value.toStringUtf8();
+    private void clearChannelNumber() {  channelNumber_ = null;
       
     }
 
@@ -11407,50 +12497,49 @@ public final class Common {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 4;
-    private java.lang.String productId_;
+    public static final int APP_ID_FIELD_NUMBER = 4;
+    private com.google.protobuf.StringValue appId_;
     /**
-     * <code>string product_id = 4;</code>
-     * @return The productId.
+     * <code>.google.protobuf.StringValue app_id = 4;</code>
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public boolean hasAppId() {
+      return appId_ != null;
     }
     /**
-     * <code>string product_id = 4;</code>
-     * @return The bytes for productId.
+     * <code>.google.protobuf.StringValue app_id = 4;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+    public com.google.protobuf.StringValue getAppId() {
+      return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
     }
     /**
-     * <code>string product_id = 4;</code>
-     * @param value The productId to set.
+     * <code>.google.protobuf.StringValue app_id = 4;</code>
      */
-    private void setProductId(
-        java.lang.String value) {
+    private void setAppId(com.google.protobuf.StringValue value) {
       value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 4;</code>
-     */
-    private void clearProductId() {
+  appId_ = value;
       
-      productId_ = getDefaultInstance().getProductId();
+      }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAppId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (appId_ != null &&
+          appId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        appId_ =
+          com.google.protobuf.StringValue.newBuilder(appId_).mergeFrom(value).buildPartial();
+      } else {
+        appId_ = value;
+      }
+      
     }
     /**
-     * <code>string product_id = 4;</code>
-     * @param value The bytes for productId to set.
+     * <code>.google.protobuf.StringValue app_id = 4;</code>
      */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+    private void clearAppId() {  appId_ = null;
       
     }
 
@@ -11783,51 +12872,49 @@ public final class Common {
       }
 
       /**
-       * <code>string channel_number = 2;</code>
-       * @return The channelNumber.
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
        */
       @java.lang.Override
-      public java.lang.String getChannelNumber() {
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
-       * <code>string channel_number = 2;</code>
-       * @return The bytes for channelNumber.
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
        */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getChannelNumberBytes() {
-        return instance.getChannelNumberBytes();
-      }
-      /**
-       * <code>string channel_number = 2;</code>
-       * @param value The channelNumber to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChannelNumber(
-          java.lang.String value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
-      }
+        }
       /**
-       * <code>string channel_number = 2;</code>
-       * @return This builder for chaining.
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
        */
-      public Builder clearChannelNumber() {
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.Common.UssdChannelNumber.Builder builderForValue) {
         copyOnWrite();
-        instance.clearChannelNumber();
+        instance.setChannelNumber(builderForValue.build());
         return this;
       }
       /**
-       * <code>string channel_number = 2;</code>
-       * @param value The bytes for channelNumber to set.
-       * @return This builder for chaining.
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
        */
-      public Builder setChannelNumberBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
         copyOnWrite();
-        instance.setChannelNumberBytes(value);
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
         return this;
       }
 
@@ -11881,51 +12968,49 @@ public final class Common {
       }
 
       /**
-       * <code>string product_id = 4;</code>
-       * @return The productId.
+       * <code>.google.protobuf.StringValue app_id = 4;</code>
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public boolean hasAppId() {
+        return instance.hasAppId();
       }
       /**
-       * <code>string product_id = 4;</code>
-       * @return The bytes for productId.
+       * <code>.google.protobuf.StringValue app_id = 4;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+      public com.google.protobuf.StringValue getAppId() {
+        return instance.getAppId();
       }
       /**
-       * <code>string product_id = 4;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 4;</code>
        */
-      public Builder setProductId(
-          java.lang.String value) {
+      public Builder setAppId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setAppId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 4;</code>
+       */
+      public Builder setAppId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAppId(builderForValue.build());
         return this;
       }
       /**
-       * <code>string product_id = 4;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 4;</code>
        */
-      public Builder clearProductId() {
+      public Builder mergeAppId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.clearProductId();
+        instance.mergeAppId(value);
         return this;
       }
       /**
-       * <code>string product_id = 4;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 4;</code>
        */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
+      public Builder clearAppId() {  copyOnWrite();
+        instance.clearAppId();
         return this;
       }
 
@@ -12144,15 +13229,15 @@ public final class Common {
               "customerNumber_",
               "channelNumber_",
               "sessionId_",
-              "productId_",
+              "appId_",
               "hops_",
               com.elarian.hera.proto.Common.UssdHop.class,
               "createdAt_",
               "updatedAt_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0001\u0000\u0001\t\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u001b\u0006\t\u0007\t";
+                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0001\u0000\u0001\t\u0002\t\u0003" +
+                "\u0208\u0004\t\u0005\u001b\u0006\t\u0007\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -12240,29 +13325,18 @@ public final class Common {
     int getCustomerNumbersCount();
 
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @return A list containing the channelNumbers.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
-    java.util.List<java.lang.String>
+    java.util.List<com.elarian.hera.proto.Common.UssdChannelNumber> 
         getChannelNumbersList();
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @return The count of channelNumbers.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
+     */
+    com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumbers(int index);
+    /**
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
     int getChannelNumbersCount();
-    /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @param index The index of the element to return.
-     * @return The channelNumbers at the given index.
-     */
-    java.lang.String getChannelNumbers(int index);
-    /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @param index The index of the element to return.
-     * @return The channelNumbers at the given index.
-     */
-    com.google.protobuf.ByteString
-        getChannelNumbersBytes(int index);
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.UssdState}
@@ -12275,7 +13349,7 @@ public final class Common {
     private UssdState() {
       sessions_ = emptyProtobufList();
       customerNumbers_ = emptyProtobufList();
-      channelNumbers_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      channelNumbers_ = emptyProtobufList();
     }
     public static final int SESSIONS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.UssdSessionStateEntry> sessions_;
@@ -12466,96 +13540,97 @@ public final class Common {
     }
 
     public static final int CHANNEL_NUMBERS_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.ProtobufList<java.lang.String> channelNumbers_;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.UssdChannelNumber> channelNumbers_;
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @return A list containing the channelNumbers.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<java.lang.String> getChannelNumbersList() {
+    public java.util.List<com.elarian.hera.proto.Common.UssdChannelNumber> getChannelNumbersList() {
       return channelNumbers_;
     }
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @return The count of channelNumbers.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
+     */
+    public java.util.List<? extends com.elarian.hera.proto.Common.UssdChannelNumberOrBuilder> 
+        getChannelNumbersOrBuilderList() {
+      return channelNumbers_;
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
     @java.lang.Override
     public int getChannelNumbersCount() {
       return channelNumbers_.size();
     }
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @param index The index of the element to return.
-     * @return The channelNumbers at the given index.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
     @java.lang.Override
-    public java.lang.String getChannelNumbers(int index) {
+    public com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumbers(int index) {
       return channelNumbers_.get(index);
     }
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the channelNumbers at the given index.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getChannelNumbersBytes(int index) {
-      return com.google.protobuf.ByteString.copyFromUtf8(
-          channelNumbers_.get(index));
+    public com.elarian.hera.proto.Common.UssdChannelNumberOrBuilder getChannelNumbersOrBuilder(
+        int index) {
+      return channelNumbers_.get(index);
     }
     private void ensureChannelNumbersIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
-          channelNumbers_;  if (!tmp.isModifiable()) {
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.UssdChannelNumber> tmp = channelNumbers_;
+      if (!tmp.isModifiable()) {
         channelNumbers_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
        }
     }
+
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @param index The index to set the value at.
-     * @param value The channelNumbers to set.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
     private void setChannelNumbers(
-        int index, java.lang.String value) {
+        int index, com.elarian.hera.proto.Common.UssdChannelNumber value) {
       value.getClass();
   ensureChannelNumbersIsMutable();
       channelNumbers_.set(index, value);
     }
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @param value The channelNumbers to add.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
-    private void addChannelNumbers(
-        java.lang.String value) {
+    private void addChannelNumbers(com.elarian.hera.proto.Common.UssdChannelNumber value) {
       value.getClass();
   ensureChannelNumbersIsMutable();
       channelNumbers_.add(value);
     }
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @param values The channelNumbers to add.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
+     */
+    private void addChannelNumbers(
+        int index, com.elarian.hera.proto.Common.UssdChannelNumber value) {
+      value.getClass();
+  ensureChannelNumbersIsMutable();
+      channelNumbers_.add(index, value);
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
     private void addAllChannelNumbers(
-        java.lang.Iterable<java.lang.String> values) {
+        java.lang.Iterable<? extends com.elarian.hera.proto.Common.UssdChannelNumber> values) {
       ensureChannelNumbersIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, channelNumbers_);
     }
     /**
-     * <code>repeated string channel_numbers = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
     private void clearChannelNumbers() {
-      channelNumbers_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      channelNumbers_ = emptyProtobufList();
     }
     /**
-     * <code>repeated string channel_numbers = 3;</code>
-     * @param value The bytes of the channelNumbers to add.
+     * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
      */
-    private void addChannelNumbersBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
+    private void removeChannelNumbers(int index) {
       ensureChannelNumbersIsMutable();
-      channelNumbers_.add(value.toStringUtf8());
+      channelNumbers_.remove(index);
     }
 
     public static com.elarian.hera.proto.Common.UssdState parseFrom(
@@ -12858,79 +13933,92 @@ public final class Common {
       }
 
       /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @return A list containing the channelNumbers.
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
        */
       @java.lang.Override
-      public java.util.List<java.lang.String>
-          getChannelNumbersList() {
+      public java.util.List<com.elarian.hera.proto.Common.UssdChannelNumber> getChannelNumbersList() {
         return java.util.Collections.unmodifiableList(
             instance.getChannelNumbersList());
       }
       /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @return The count of channelNumbers.
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
        */
       @java.lang.Override
       public int getChannelNumbersCount() {
         return instance.getChannelNumbersCount();
-      }
-      /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @param index The index of the element to return.
-       * @return The channelNumbers at the given index.
+      }/**
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
        */
       @java.lang.Override
-      public java.lang.String getChannelNumbers(int index) {
+      public com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumbers(int index) {
         return instance.getChannelNumbers(index);
       }
       /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the channelNumbers at the given index.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getChannelNumbersBytes(int index) {
-        return instance.getChannelNumbersBytes(index);
-      }
-      /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @param index The index to set the value at.
-       * @param value The channelNumbers to set.
-       * @return This builder for chaining.
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
        */
       public Builder setChannelNumbers(
-          int index, java.lang.String value) {
+          int index, com.elarian.hera.proto.Common.UssdChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumbers(index, value);
         return this;
       }
       /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @param value The channelNumbers to add.
-       * @return This builder for chaining.
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
        */
-      public Builder addChannelNumbers(
-          java.lang.String value) {
+      public Builder setChannelNumbers(
+          int index, com.elarian.hera.proto.Common.UssdChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumbers(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
+       */
+      public Builder addChannelNumbers(com.elarian.hera.proto.Common.UssdChannelNumber value) {
         copyOnWrite();
         instance.addChannelNumbers(value);
         return this;
       }
       /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @param values The channelNumbers to add.
-       * @return This builder for chaining.
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
+       */
+      public Builder addChannelNumbers(
+          int index, com.elarian.hera.proto.Common.UssdChannelNumber value) {
+        copyOnWrite();
+        instance.addChannelNumbers(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
+       */
+      public Builder addChannelNumbers(
+          com.elarian.hera.proto.Common.UssdChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.addChannelNumbers(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
+       */
+      public Builder addChannelNumbers(
+          int index, com.elarian.hera.proto.Common.UssdChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.addChannelNumbers(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
        */
       public Builder addAllChannelNumbers(
-          java.lang.Iterable<java.lang.String> values) {
+          java.lang.Iterable<? extends com.elarian.hera.proto.Common.UssdChannelNumber> values) {
         copyOnWrite();
         instance.addAllChannelNumbers(values);
         return this;
       }
       /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @return This builder for chaining.
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
        */
       public Builder clearChannelNumbers() {
         copyOnWrite();
@@ -12938,14 +14026,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string channel_numbers = 3;</code>
-       * @param value The bytes of the channelNumbers to add.
-       * @return This builder for chaining.
+       * <code>repeated .com.elarian.hera.proto.UssdChannelNumber channel_numbers = 3;</code>
        */
-      public Builder addChannelNumbersBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder removeChannelNumbers(int index) {
         copyOnWrite();
-        instance.addChannelNumbersBytes(value);
+        instance.removeChannelNumbers(index);
         return this;
       }
 
@@ -12970,10 +14055,11 @@ public final class Common {
               "customerNumbers_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
               "channelNumbers_",
+              com.elarian.hera.proto.Common.UssdChannelNumber.class,
             };
             java.lang.String info =
                 "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0003\u0000\u0001\u001b\u0002\u001b" +
-                "\u0003\u021a";
+                "\u0003\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -13028,6 +14114,1217 @@ public final class Common {
     }
   }
 
+  public interface VoiceCallDialInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.VoiceCallDialInput)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string destination_number = 1;</code>
+     * @return The destinationNumber.
+     */
+    java.lang.String getDestinationNumber();
+    /**
+     * <code>string destination_number = 1;</code>
+     * @return The bytes for destinationNumber.
+     */
+    com.google.protobuf.ByteString
+        getDestinationNumberBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     * @return Whether the startedAt field is set.
+     */
+    boolean hasStartedAt();
+    /**
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     * @return The startedAt.
+     */
+    com.google.protobuf.Timestamp getStartedAt();
+
+    /**
+     * <code>.google.protobuf.Duration duration = 3;</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 3;</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.VoiceCallDialInput}
+   */
+  public  static final class VoiceCallDialInput extends
+      com.google.protobuf.GeneratedMessageLite<
+          VoiceCallDialInput, VoiceCallDialInput.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallDialInput)
+      VoiceCallDialInputOrBuilder {
+    private VoiceCallDialInput() {
+      destinationNumber_ = "";
+    }
+    public static final int DESTINATION_NUMBER_FIELD_NUMBER = 1;
+    private java.lang.String destinationNumber_;
+    /**
+     * <code>string destination_number = 1;</code>
+     * @return The destinationNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationNumber() {
+      return destinationNumber_;
+    }
+    /**
+     * <code>string destination_number = 1;</code>
+     * @return The bytes for destinationNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationNumberBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(destinationNumber_);
+    }
+    /**
+     * <code>string destination_number = 1;</code>
+     * @param value The destinationNumber to set.
+     */
+    private void setDestinationNumber(
+        java.lang.String value) {
+      value.getClass();
+  
+      destinationNumber_ = value;
+    }
+    /**
+     * <code>string destination_number = 1;</code>
+     */
+    private void clearDestinationNumber() {
+      
+      destinationNumber_ = getDefaultInstance().getDestinationNumber();
+    }
+    /**
+     * <code>string destination_number = 1;</code>
+     * @param value The bytes for destinationNumber to set.
+     */
+    private void setDestinationNumberBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      destinationNumber_ = value.toStringUtf8();
+      
+    }
+
+    public static final int STARTED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp startedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasStartedAt() {
+      return startedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartedAt() {
+      return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     */
+    private void setStartedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  startedAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStartedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (startedAt_ != null &&
+          startedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(startedAt_).mergeFrom(value).buildPartial();
+      } else {
+        startedAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     */
+    private void clearStartedAt() {  startedAt_ = null;
+      
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <code>.google.protobuf.Duration duration = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3;</code>
+     */
+    private void setDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  duration_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Duration duration = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (duration_ != null &&
+          duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        duration_ =
+          com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+      } else {
+        duration_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3;</code>
+     */
+    private void clearDuration() {  duration_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.VoiceCallDialInput prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.VoiceCallDialInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.VoiceCallDialInput, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.VoiceCallDialInput)
+        com.elarian.hera.proto.Common.VoiceCallDialInputOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.VoiceCallDialInput.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string destination_number = 1;</code>
+       * @return The destinationNumber.
+       */
+      @java.lang.Override
+      public java.lang.String getDestinationNumber() {
+        return instance.getDestinationNumber();
+      }
+      /**
+       * <code>string destination_number = 1;</code>
+       * @return The bytes for destinationNumber.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDestinationNumberBytes() {
+        return instance.getDestinationNumberBytes();
+      }
+      /**
+       * <code>string destination_number = 1;</code>
+       * @param value The destinationNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationNumber(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDestinationNumber(value);
+        return this;
+      }
+      /**
+       * <code>string destination_number = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationNumber() {
+        copyOnWrite();
+        instance.clearDestinationNumber();
+        return this;
+      }
+      /**
+       * <code>string destination_number = 1;</code>
+       * @param value The bytes for destinationNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationNumberBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDestinationNumberBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasStartedAt() {
+        return instance.hasStartedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getStartedAt() {
+        return instance.getStartedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
+       */
+      public Builder setStartedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setStartedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
+       */
+      public Builder setStartedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setStartedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
+       */
+      public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeStartedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
+       */
+      public Builder clearStartedAt() {  copyOnWrite();
+        instance.clearStartedAt();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Duration duration = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasDuration() {
+        return instance.hasDuration();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getDuration() {
+        return instance.getDuration();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3;</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setDuration(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Duration duration = 3;</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDuration(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3;</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeDuration(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3;</code>
+       */
+      public Builder clearDuration() {  copyOnWrite();
+        instance.clearDuration();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.VoiceCallDialInput)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.VoiceCallDialInput();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "destinationNumber_",
+              "startedAt_",
+              "duration_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.VoiceCallDialInput> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.VoiceCallDialInput.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.VoiceCallDialInput>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.VoiceCallDialInput)
+    private static final com.elarian.hera.proto.Common.VoiceCallDialInput DEFAULT_INSTANCE;
+    static {
+      VoiceCallDialInput defaultInstance = new VoiceCallDialInput();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        VoiceCallDialInput.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.VoiceCallDialInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<VoiceCallDialInput> PARSER;
+
+    public static com.google.protobuf.Parser<VoiceCallDialInput> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface VoiceCallQueueInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.VoiceCallQueueInput)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+     * @return Whether the enqueuedAt field is set.
+     */
+    boolean hasEnqueuedAt();
+    /**
+     * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+     * @return The enqueuedAt.
+     */
+    com.google.protobuf.Timestamp getEnqueuedAt();
+
+    /**
+     * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+     * @return Whether the dequeuedAt field is set.
+     */
+    boolean hasDequeuedAt();
+    /**
+     * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+     * @return The dequeuedAt.
+     */
+    com.google.protobuf.Timestamp getDequeuedAt();
+
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+     * @return Whether the dequeuedToNumber field is set.
+     */
+    boolean hasDequeuedToNumber();
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+     * @return The dequeuedToNumber.
+     */
+    com.google.protobuf.StringValue getDequeuedToNumber();
+
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+     * @return Whether the dequeuedToSessionId field is set.
+     */
+    boolean hasDequeuedToSessionId();
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+     * @return The dequeuedToSessionId.
+     */
+    com.google.protobuf.StringValue getDequeuedToSessionId();
+
+    /**
+     * <code>.google.protobuf.Duration queue_duration = 5;</code>
+     * @return Whether the queueDuration field is set.
+     */
+    boolean hasQueueDuration();
+    /**
+     * <code>.google.protobuf.Duration queue_duration = 5;</code>
+     * @return The queueDuration.
+     */
+    com.google.protobuf.Duration getQueueDuration();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.VoiceCallQueueInput}
+   */
+  public  static final class VoiceCallQueueInput extends
+      com.google.protobuf.GeneratedMessageLite<
+          VoiceCallQueueInput, VoiceCallQueueInput.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallQueueInput)
+      VoiceCallQueueInputOrBuilder {
+    private VoiceCallQueueInput() {
+    }
+    public static final int ENQUEUED_AT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp enqueuedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasEnqueuedAt() {
+      return enqueuedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEnqueuedAt() {
+      return enqueuedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : enqueuedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+     */
+    private void setEnqueuedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  enqueuedAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEnqueuedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (enqueuedAt_ != null &&
+          enqueuedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        enqueuedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(enqueuedAt_).mergeFrom(value).buildPartial();
+      } else {
+        enqueuedAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+     */
+    private void clearEnqueuedAt() {  enqueuedAt_ = null;
+      
+    }
+
+    public static final int DEQUEUED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp dequeuedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasDequeuedAt() {
+      return dequeuedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDequeuedAt() {
+      return dequeuedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dequeuedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+     */
+    private void setDequeuedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  dequeuedAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDequeuedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (dequeuedAt_ != null &&
+          dequeuedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        dequeuedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(dequeuedAt_).mergeFrom(value).buildPartial();
+      } else {
+        dequeuedAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+     */
+    private void clearDequeuedAt() {  dequeuedAt_ = null;
+      
+    }
+
+    public static final int DEQUEUED_TO_NUMBER_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue dequeuedToNumber_;
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasDequeuedToNumber() {
+      return dequeuedToNumber_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDequeuedToNumber() {
+      return dequeuedToNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dequeuedToNumber_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+     */
+    private void setDequeuedToNumber(com.google.protobuf.StringValue value) {
+      value.getClass();
+  dequeuedToNumber_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDequeuedToNumber(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (dequeuedToNumber_ != null &&
+          dequeuedToNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        dequeuedToNumber_ =
+          com.google.protobuf.StringValue.newBuilder(dequeuedToNumber_).mergeFrom(value).buildPartial();
+      } else {
+        dequeuedToNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+     */
+    private void clearDequeuedToNumber() {  dequeuedToNumber_ = null;
+      
+    }
+
+    public static final int DEQUEUED_TO_SESSIONID_FIELD_NUMBER = 4;
+    private com.google.protobuf.StringValue dequeuedToSessionId_;
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasDequeuedToSessionId() {
+      return dequeuedToSessionId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDequeuedToSessionId() {
+      return dequeuedToSessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dequeuedToSessionId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+     */
+    private void setDequeuedToSessionId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  dequeuedToSessionId_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDequeuedToSessionId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (dequeuedToSessionId_ != null &&
+          dequeuedToSessionId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        dequeuedToSessionId_ =
+          com.google.protobuf.StringValue.newBuilder(dequeuedToSessionId_).mergeFrom(value).buildPartial();
+      } else {
+        dequeuedToSessionId_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+     */
+    private void clearDequeuedToSessionId() {  dequeuedToSessionId_ = null;
+      
+    }
+
+    public static final int QUEUE_DURATION_FIELD_NUMBER = 5;
+    private com.google.protobuf.Duration queueDuration_;
+    /**
+     * <code>.google.protobuf.Duration queue_duration = 5;</code>
+     */
+    @java.lang.Override
+    public boolean hasQueueDuration() {
+      return queueDuration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration queue_duration = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getQueueDuration() {
+      return queueDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : queueDuration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration queue_duration = 5;</code>
+     */
+    private void setQueueDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  queueDuration_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Duration queue_duration = 5;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeQueueDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (queueDuration_ != null &&
+          queueDuration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        queueDuration_ =
+          com.google.protobuf.Duration.newBuilder(queueDuration_).mergeFrom(value).buildPartial();
+      } else {
+        queueDuration_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Duration queue_duration = 5;</code>
+     */
+    private void clearQueueDuration() {  queueDuration_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.VoiceCallQueueInput prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.VoiceCallQueueInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.VoiceCallQueueInput, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.VoiceCallQueueInput)
+        com.elarian.hera.proto.Common.VoiceCallQueueInputOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.VoiceCallQueueInput.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasEnqueuedAt() {
+        return instance.hasEnqueuedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getEnqueuedAt() {
+        return instance.getEnqueuedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+       */
+      public Builder setEnqueuedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setEnqueuedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+       */
+      public Builder setEnqueuedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEnqueuedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+       */
+      public Builder mergeEnqueuedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeEnqueuedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp enqueued_at = 1;</code>
+       */
+      public Builder clearEnqueuedAt() {  copyOnWrite();
+        instance.clearEnqueuedAt();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasDequeuedAt() {
+        return instance.hasDequeuedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getDequeuedAt() {
+        return instance.getDequeuedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+       */
+      public Builder setDequeuedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setDequeuedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+       */
+      public Builder setDequeuedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDequeuedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+       */
+      public Builder mergeDequeuedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeDequeuedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp dequeued_at = 2;</code>
+       */
+      public Builder clearDequeuedAt() {  copyOnWrite();
+        instance.clearDequeuedAt();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasDequeuedToNumber() {
+        return instance.hasDequeuedToNumber();
+      }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getDequeuedToNumber() {
+        return instance.getDequeuedToNumber();
+      }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+       */
+      public Builder setDequeuedToNumber(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setDequeuedToNumber(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+       */
+      public Builder setDequeuedToNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDequeuedToNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+       */
+      public Builder mergeDequeuedToNumber(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeDequeuedToNumber(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_number = 3;</code>
+       */
+      public Builder clearDequeuedToNumber() {  copyOnWrite();
+        instance.clearDequeuedToNumber();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasDequeuedToSessionId() {
+        return instance.hasDequeuedToSessionId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getDequeuedToSessionId() {
+        return instance.getDequeuedToSessionId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+       */
+      public Builder setDequeuedToSessionId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setDequeuedToSessionId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+       */
+      public Builder setDequeuedToSessionId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDequeuedToSessionId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+       */
+      public Builder mergeDequeuedToSessionId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeDequeuedToSessionId(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue dequeued_to_sessionId = 4;</code>
+       */
+      public Builder clearDequeuedToSessionId() {  copyOnWrite();
+        instance.clearDequeuedToSessionId();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Duration queue_duration = 5;</code>
+       */
+      @java.lang.Override
+      public boolean hasQueueDuration() {
+        return instance.hasQueueDuration();
+      }
+      /**
+       * <code>.google.protobuf.Duration queue_duration = 5;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getQueueDuration() {
+        return instance.getQueueDuration();
+      }
+      /**
+       * <code>.google.protobuf.Duration queue_duration = 5;</code>
+       */
+      public Builder setQueueDuration(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setQueueDuration(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Duration queue_duration = 5;</code>
+       */
+      public Builder setQueueDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setQueueDuration(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration queue_duration = 5;</code>
+       */
+      public Builder mergeQueueDuration(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeQueueDuration(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration queue_duration = 5;</code>
+       */
+      public Builder clearQueueDuration() {  copyOnWrite();
+        instance.clearQueueDuration();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.VoiceCallQueueInput)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.VoiceCallQueueInput();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "enqueuedAt_",
+              "dequeuedAt_",
+              "dequeuedToNumber_",
+              "dequeuedToSessionId_",
+              "queueDuration_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\t\u0004\t\u0005\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.VoiceCallQueueInput> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.VoiceCallQueueInput.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.VoiceCallQueueInput>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.VoiceCallQueueInput)
+    private static final com.elarian.hera.proto.Common.VoiceCallQueueInput DEFAULT_INSTANCE;
+    static {
+      VoiceCallQueueInput defaultInstance = new VoiceCallQueueInput();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        VoiceCallQueueInput.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.VoiceCallQueueInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<VoiceCallQueueInput> PARSER;
+
+    public static com.google.protobuf.Parser<VoiceCallQueueInput> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface VoiceCallHopInputOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.VoiceCallHopInput)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -13044,15 +15341,15 @@ public final class Common {
     com.elarian.hera.proto.Common.VoiceCallStatus getStatus();
 
     /**
-     * <code>.google.protobuf.StringValue call_start_time = 2;</code>
-     * @return Whether the callStartTime field is set.
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     * @return Whether the startedAt field is set.
      */
-    boolean hasCallStartTime();
+    boolean hasStartedAt();
     /**
-     * <code>.google.protobuf.StringValue call_start_time = 2;</code>
-     * @return The callStartTime.
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
+     * @return The startedAt.
      */
-    com.google.protobuf.StringValue getCallStartTime();
+    com.google.protobuf.Timestamp getStartedAt();
 
     /**
      * <code>.com.elarian.hera.proto.VoiceCallHangupCause hangup_cause = 3;</code>
@@ -13077,92 +15374,37 @@ public final class Common {
     com.google.protobuf.StringValue getDtmfDigits();
 
     /**
-     * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-     * @return Whether the dialDestinationNumber field is set.
-     */
-    boolean hasDialDestinationNumber();
-    /**
-     * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-     * @return The dialDestinationNumber.
-     */
-    com.google.protobuf.StringValue getDialDestinationNumber();
-
-    /**
-     * <code>.google.protobuf.StringValue queue_name = 6;</code>
-     * @return Whether the queueName field is set.
-     */
-    boolean hasQueueName();
-    /**
-     * <code>.google.protobuf.StringValue queue_name = 6;</code>
-     * @return The queueName.
-     */
-    com.google.protobuf.StringValue getQueueName();
-
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-     * @return Whether the dequeuedToPhoneNumber field is set.
-     */
-    boolean hasDequeuedToPhoneNumber();
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-     * @return The dequeuedToPhoneNumber.
-     */
-    com.google.protobuf.StringValue getDequeuedToPhoneNumber();
-
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-     * @return Whether the dequeuedToSessionId field is set.
-     */
-    boolean hasDequeuedToSessionId();
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-     * @return The dequeuedToSessionId.
-     */
-    com.google.protobuf.StringValue getDequeuedToSessionId();
-
-    /**
-     * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-     * @return Whether the callTransferredToNumber field is set.
-     */
-    boolean hasCallTransferredToNumber();
-    /**
-     * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-     * @return The callTransferredToNumber.
-     */
-    com.google.protobuf.StringValue getCallTransferredToNumber();
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-     * @return The enum numeric value on the wire for callTransferState.
-     */
-    int getCallTransferStateValue();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-     * @return The callTransferState.
-     */
-    com.elarian.hera.proto.Common.VoiceCallTransferState getCallTransferState();
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-     * @return The enum numeric value on the wire for callTransferHangupCause.
-     */
-    int getCallTransferHangupCauseValue();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-     * @return The callTransferHangupCause.
-     */
-    com.elarian.hera.proto.Common.VoiceCallHangupCause getCallTransferHangupCause();
-
-    /**
-     * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * <code>.google.protobuf.StringValue recording_url = 5;</code>
      * @return Whether the recordingUrl field is set.
      */
     boolean hasRecordingUrl();
     /**
-     * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * <code>.google.protobuf.StringValue recording_url = 5;</code>
      * @return The recordingUrl.
      */
     com.google.protobuf.StringValue getRecordingUrl();
+
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+     * @return Whether the dialData field is set.
+     */
+    boolean hasDialData();
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+     * @return The dialData.
+     */
+    com.elarian.hera.proto.Common.VoiceCallDialInput getDialData();
+
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+     * @return Whether the queueData field is set.
+     */
+    boolean hasQueueData();
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+     * @return The queueData.
+     */
+    com.elarian.hera.proto.Common.VoiceCallQueueInput getQueueData();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.VoiceCallHopInput}
@@ -13216,49 +15458,49 @@ public final class Common {
       status_ = 0;
     }
 
-    public static final int CALL_START_TIME_FIELD_NUMBER = 2;
-    private com.google.protobuf.StringValue callStartTime_;
+    public static final int STARTED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp startedAt_;
     /**
-     * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
      */
     @java.lang.Override
-    public boolean hasCallStartTime() {
-      return callStartTime_ != null;
+    public boolean hasStartedAt() {
+      return startedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.StringValue getCallStartTime() {
-      return callStartTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callStartTime_;
+    public com.google.protobuf.Timestamp getStartedAt() {
+      return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
     }
     /**
-     * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
      */
-    private void setCallStartTime(com.google.protobuf.StringValue value) {
+    private void setStartedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
-  callStartTime_ = value;
+  startedAt_ = value;
       
       }
     /**
-     * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCallStartTime(com.google.protobuf.StringValue value) {
+    private void mergeStartedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
-  if (callStartTime_ != null &&
-          callStartTime_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        callStartTime_ =
-          com.google.protobuf.StringValue.newBuilder(callStartTime_).mergeFrom(value).buildPartial();
+  if (startedAt_ != null &&
+          startedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(startedAt_).mergeFrom(value).buildPartial();
       } else {
-        callStartTime_ = value;
+        startedAt_ = value;
       }
       
     }
     /**
-     * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+     * <code>.google.protobuf.Timestamp started_at = 2;</code>
      */
-    private void clearCallStartTime() {  callStartTime_ = null;
+    private void clearStartedAt() {  startedAt_ = null;
       
     }
 
@@ -13350,338 +15592,24 @@ public final class Common {
       
     }
 
-    public static final int DIAL_DESTINATION_NUMBER_FIELD_NUMBER = 5;
-    private com.google.protobuf.StringValue dialDestinationNumber_;
-    /**
-     * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-     */
-    @java.lang.Override
-    public boolean hasDialDestinationNumber() {
-      return dialDestinationNumber_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getDialDestinationNumber() {
-      return dialDestinationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dialDestinationNumber_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-     */
-    private void setDialDestinationNumber(com.google.protobuf.StringValue value) {
-      value.getClass();
-  dialDestinationNumber_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeDialDestinationNumber(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (dialDestinationNumber_ != null &&
-          dialDestinationNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        dialDestinationNumber_ =
-          com.google.protobuf.StringValue.newBuilder(dialDestinationNumber_).mergeFrom(value).buildPartial();
-      } else {
-        dialDestinationNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-     */
-    private void clearDialDestinationNumber() {  dialDestinationNumber_ = null;
-      
-    }
-
-    public static final int QUEUE_NAME_FIELD_NUMBER = 6;
-    private com.google.protobuf.StringValue queueName_;
-    /**
-     * <code>.google.protobuf.StringValue queue_name = 6;</code>
-     */
-    @java.lang.Override
-    public boolean hasQueueName() {
-      return queueName_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue queue_name = 6;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getQueueName() {
-      return queueName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : queueName_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue queue_name = 6;</code>
-     */
-    private void setQueueName(com.google.protobuf.StringValue value) {
-      value.getClass();
-  queueName_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue queue_name = 6;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeQueueName(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (queueName_ != null &&
-          queueName_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        queueName_ =
-          com.google.protobuf.StringValue.newBuilder(queueName_).mergeFrom(value).buildPartial();
-      } else {
-        queueName_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue queue_name = 6;</code>
-     */
-    private void clearQueueName() {  queueName_ = null;
-      
-    }
-
-    public static final int DEQUEUED_TO_PHONE_NUMBER_FIELD_NUMBER = 7;
-    private com.google.protobuf.StringValue dequeuedToPhoneNumber_;
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-     */
-    @java.lang.Override
-    public boolean hasDequeuedToPhoneNumber() {
-      return dequeuedToPhoneNumber_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getDequeuedToPhoneNumber() {
-      return dequeuedToPhoneNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dequeuedToPhoneNumber_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-     */
-    private void setDequeuedToPhoneNumber(com.google.protobuf.StringValue value) {
-      value.getClass();
-  dequeuedToPhoneNumber_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeDequeuedToPhoneNumber(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (dequeuedToPhoneNumber_ != null &&
-          dequeuedToPhoneNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        dequeuedToPhoneNumber_ =
-          com.google.protobuf.StringValue.newBuilder(dequeuedToPhoneNumber_).mergeFrom(value).buildPartial();
-      } else {
-        dequeuedToPhoneNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-     */
-    private void clearDequeuedToPhoneNumber() {  dequeuedToPhoneNumber_ = null;
-      
-    }
-
-    public static final int DEQUEUED_TO_SESSION_ID_FIELD_NUMBER = 8;
-    private com.google.protobuf.StringValue dequeuedToSessionId_;
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-     */
-    @java.lang.Override
-    public boolean hasDequeuedToSessionId() {
-      return dequeuedToSessionId_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getDequeuedToSessionId() {
-      return dequeuedToSessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dequeuedToSessionId_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-     */
-    private void setDequeuedToSessionId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  dequeuedToSessionId_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeDequeuedToSessionId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (dequeuedToSessionId_ != null &&
-          dequeuedToSessionId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        dequeuedToSessionId_ =
-          com.google.protobuf.StringValue.newBuilder(dequeuedToSessionId_).mergeFrom(value).buildPartial();
-      } else {
-        dequeuedToSessionId_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-     */
-    private void clearDequeuedToSessionId() {  dequeuedToSessionId_ = null;
-      
-    }
-
-    public static final int CALL_TRANSFERRED_TO_NUMBER_FIELD_NUMBER = 9;
-    private com.google.protobuf.StringValue callTransferredToNumber_;
-    /**
-     * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-     */
-    @java.lang.Override
-    public boolean hasCallTransferredToNumber() {
-      return callTransferredToNumber_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getCallTransferredToNumber() {
-      return callTransferredToNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callTransferredToNumber_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-     */
-    private void setCallTransferredToNumber(com.google.protobuf.StringValue value) {
-      value.getClass();
-  callTransferredToNumber_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCallTransferredToNumber(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (callTransferredToNumber_ != null &&
-          callTransferredToNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        callTransferredToNumber_ =
-          com.google.protobuf.StringValue.newBuilder(callTransferredToNumber_).mergeFrom(value).buildPartial();
-      } else {
-        callTransferredToNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-     */
-    private void clearCallTransferredToNumber() {  callTransferredToNumber_ = null;
-      
-    }
-
-    public static final int CALL_TRANSFER_STATE_FIELD_NUMBER = 10;
-    private int callTransferState_;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-     * @return The enum numeric value on the wire for callTransferState.
-     */
-    @java.lang.Override
-    public int getCallTransferStateValue() {
-      return callTransferState_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-     * @return The callTransferState.
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.VoiceCallTransferState getCallTransferState() {
-      com.elarian.hera.proto.Common.VoiceCallTransferState result = com.elarian.hera.proto.Common.VoiceCallTransferState.forNumber(callTransferState_);
-      return result == null ? com.elarian.hera.proto.Common.VoiceCallTransferState.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-     * @param value The enum numeric value on the wire for callTransferState to set.
-     */
-    private void setCallTransferStateValue(int value) {
-        callTransferState_ = value;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-     * @param value The callTransferState to set.
-     */
-    private void setCallTransferState(com.elarian.hera.proto.Common.VoiceCallTransferState value) {
-      callTransferState_ = value.getNumber();
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-     */
-    private void clearCallTransferState() {
-      
-      callTransferState_ = 0;
-    }
-
-    public static final int CALL_TRANSFER_HANGUP_CAUSE_FIELD_NUMBER = 11;
-    private int callTransferHangupCause_;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-     * @return The enum numeric value on the wire for callTransferHangupCause.
-     */
-    @java.lang.Override
-    public int getCallTransferHangupCauseValue() {
-      return callTransferHangupCause_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-     * @return The callTransferHangupCause.
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.VoiceCallHangupCause getCallTransferHangupCause() {
-      com.elarian.hera.proto.Common.VoiceCallHangupCause result = com.elarian.hera.proto.Common.VoiceCallHangupCause.forNumber(callTransferHangupCause_);
-      return result == null ? com.elarian.hera.proto.Common.VoiceCallHangupCause.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-     * @param value The enum numeric value on the wire for callTransferHangupCause to set.
-     */
-    private void setCallTransferHangupCauseValue(int value) {
-        callTransferHangupCause_ = value;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-     * @param value The callTransferHangupCause to set.
-     */
-    private void setCallTransferHangupCause(com.elarian.hera.proto.Common.VoiceCallHangupCause value) {
-      callTransferHangupCause_ = value.getNumber();
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-     */
-    private void clearCallTransferHangupCause() {
-      
-      callTransferHangupCause_ = 0;
-    }
-
-    public static final int RECORDING_URL_FIELD_NUMBER = 12;
+    public static final int RECORDING_URL_FIELD_NUMBER = 5;
     private com.google.protobuf.StringValue recordingUrl_;
     /**
-     * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * <code>.google.protobuf.StringValue recording_url = 5;</code>
      */
     @java.lang.Override
     public boolean hasRecordingUrl() {
       return recordingUrl_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * <code>.google.protobuf.StringValue recording_url = 5;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValue getRecordingUrl() {
       return recordingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : recordingUrl_;
     }
     /**
-     * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * <code>.google.protobuf.StringValue recording_url = 5;</code>
      */
     private void setRecordingUrl(com.google.protobuf.StringValue value) {
       value.getClass();
@@ -13689,7 +15617,7 @@ public final class Common {
       
       }
     /**
-     * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * <code>.google.protobuf.StringValue recording_url = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeRecordingUrl(com.google.protobuf.StringValue value) {
@@ -13704,9 +15632,101 @@ public final class Common {
       
     }
     /**
-     * <code>.google.protobuf.StringValue recording_url = 12;</code>
+     * <code>.google.protobuf.StringValue recording_url = 5;</code>
      */
     private void clearRecordingUrl() {  recordingUrl_ = null;
+      
+    }
+
+    public static final int DIAL_DATA_FIELD_NUMBER = 6;
+    private com.elarian.hera.proto.Common.VoiceCallDialInput dialData_;
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+     */
+    @java.lang.Override
+    public boolean hasDialData() {
+      return dialData_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.VoiceCallDialInput getDialData() {
+      return dialData_ == null ? com.elarian.hera.proto.Common.VoiceCallDialInput.getDefaultInstance() : dialData_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+     */
+    private void setDialData(com.elarian.hera.proto.Common.VoiceCallDialInput value) {
+      value.getClass();
+  dialData_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDialData(com.elarian.hera.proto.Common.VoiceCallDialInput value) {
+      value.getClass();
+  if (dialData_ != null &&
+          dialData_ != com.elarian.hera.proto.Common.VoiceCallDialInput.getDefaultInstance()) {
+        dialData_ =
+          com.elarian.hera.proto.Common.VoiceCallDialInput.newBuilder(dialData_).mergeFrom(value).buildPartial();
+      } else {
+        dialData_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+     */
+    private void clearDialData() {  dialData_ = null;
+      
+    }
+
+    public static final int QUEUE_DATA_FIELD_NUMBER = 7;
+    private com.elarian.hera.proto.Common.VoiceCallQueueInput queueData_;
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+     */
+    @java.lang.Override
+    public boolean hasQueueData() {
+      return queueData_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.VoiceCallQueueInput getQueueData() {
+      return queueData_ == null ? com.elarian.hera.proto.Common.VoiceCallQueueInput.getDefaultInstance() : queueData_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+     */
+    private void setQueueData(com.elarian.hera.proto.Common.VoiceCallQueueInput value) {
+      value.getClass();
+  queueData_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeQueueData(com.elarian.hera.proto.Common.VoiceCallQueueInput value) {
+      value.getClass();
+  if (queueData_ != null &&
+          queueData_ != com.elarian.hera.proto.Common.VoiceCallQueueInput.getDefaultInstance()) {
+        queueData_ =
+          com.elarian.hera.proto.Common.VoiceCallQueueInput.newBuilder(queueData_).mergeFrom(value).buildPartial();
+      } else {
+        queueData_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+     */
+    private void clearQueueData() {  queueData_ = null;
       
     }
 
@@ -13852,49 +15872,49 @@ public final class Common {
       }
 
       /**
-       * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
        */
       @java.lang.Override
-      public boolean hasCallStartTime() {
-        return instance.hasCallStartTime();
+      public boolean hasStartedAt() {
+        return instance.hasStartedAt();
       }
       /**
-       * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.StringValue getCallStartTime() {
-        return instance.getCallStartTime();
+      public com.google.protobuf.Timestamp getStartedAt() {
+        return instance.getStartedAt();
       }
       /**
-       * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
        */
-      public Builder setCallStartTime(com.google.protobuf.StringValue value) {
+      public Builder setStartedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.setCallStartTime(value);
+        instance.setStartedAt(value);
         return this;
         }
       /**
-       * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
        */
-      public Builder setCallStartTime(
-          com.google.protobuf.StringValue.Builder builderForValue) {
+      public Builder setStartedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
         copyOnWrite();
-        instance.setCallStartTime(builderForValue.build());
+        instance.setStartedAt(builderForValue.build());
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
        */
-      public Builder mergeCallStartTime(com.google.protobuf.StringValue value) {
+      public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.mergeCallStartTime(value);
+        instance.mergeStartedAt(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue call_start_time = 2;</code>
+       * <code>.google.protobuf.Timestamp started_at = 2;</code>
        */
-      public Builder clearCallStartTime() {  copyOnWrite();
-        instance.clearCallStartTime();
+      public Builder clearStartedAt() {  copyOnWrite();
+        instance.clearStartedAt();
         return this;
       }
 
@@ -13992,348 +16012,21 @@ public final class Common {
       }
 
       /**
-       * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-       */
-      @java.lang.Override
-      public boolean hasDialDestinationNumber() {
-        return instance.hasDialDestinationNumber();
-      }
-      /**
-       * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getDialDestinationNumber() {
-        return instance.getDialDestinationNumber();
-      }
-      /**
-       * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-       */
-      public Builder setDialDestinationNumber(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setDialDestinationNumber(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-       */
-      public Builder setDialDestinationNumber(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setDialDestinationNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-       */
-      public Builder mergeDialDestinationNumber(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeDialDestinationNumber(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue dial_destination_number = 5;</code>
-       */
-      public Builder clearDialDestinationNumber() {  copyOnWrite();
-        instance.clearDialDestinationNumber();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue queue_name = 6;</code>
-       */
-      @java.lang.Override
-      public boolean hasQueueName() {
-        return instance.hasQueueName();
-      }
-      /**
-       * <code>.google.protobuf.StringValue queue_name = 6;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getQueueName() {
-        return instance.getQueueName();
-      }
-      /**
-       * <code>.google.protobuf.StringValue queue_name = 6;</code>
-       */
-      public Builder setQueueName(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setQueueName(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue queue_name = 6;</code>
-       */
-      public Builder setQueueName(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setQueueName(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue queue_name = 6;</code>
-       */
-      public Builder mergeQueueName(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeQueueName(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue queue_name = 6;</code>
-       */
-      public Builder clearQueueName() {  copyOnWrite();
-        instance.clearQueueName();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-       */
-      @java.lang.Override
-      public boolean hasDequeuedToPhoneNumber() {
-        return instance.hasDequeuedToPhoneNumber();
-      }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getDequeuedToPhoneNumber() {
-        return instance.getDequeuedToPhoneNumber();
-      }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-       */
-      public Builder setDequeuedToPhoneNumber(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setDequeuedToPhoneNumber(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-       */
-      public Builder setDequeuedToPhoneNumber(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setDequeuedToPhoneNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-       */
-      public Builder mergeDequeuedToPhoneNumber(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeDequeuedToPhoneNumber(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_phone_number = 7;</code>
-       */
-      public Builder clearDequeuedToPhoneNumber() {  copyOnWrite();
-        instance.clearDequeuedToPhoneNumber();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-       */
-      @java.lang.Override
-      public boolean hasDequeuedToSessionId() {
-        return instance.hasDequeuedToSessionId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getDequeuedToSessionId() {
-        return instance.getDequeuedToSessionId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-       */
-      public Builder setDequeuedToSessionId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setDequeuedToSessionId(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-       */
-      public Builder setDequeuedToSessionId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setDequeuedToSessionId(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-       */
-      public Builder mergeDequeuedToSessionId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeDequeuedToSessionId(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue dequeued_to_session_id = 8;</code>
-       */
-      public Builder clearDequeuedToSessionId() {  copyOnWrite();
-        instance.clearDequeuedToSessionId();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-       */
-      @java.lang.Override
-      public boolean hasCallTransferredToNumber() {
-        return instance.hasCallTransferredToNumber();
-      }
-      /**
-       * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getCallTransferredToNumber() {
-        return instance.getCallTransferredToNumber();
-      }
-      /**
-       * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-       */
-      public Builder setCallTransferredToNumber(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setCallTransferredToNumber(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-       */
-      public Builder setCallTransferredToNumber(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCallTransferredToNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-       */
-      public Builder mergeCallTransferredToNumber(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeCallTransferredToNumber(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue call_transferred_to_number = 9;</code>
-       */
-      public Builder clearCallTransferredToNumber() {  copyOnWrite();
-        instance.clearCallTransferredToNumber();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-       * @return The enum numeric value on the wire for callTransferState.
-       */
-      @java.lang.Override
-      public int getCallTransferStateValue() {
-        return instance.getCallTransferStateValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-       * @param value The callTransferState to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallTransferStateValue(int value) {
-        copyOnWrite();
-        instance.setCallTransferStateValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-       * @return The callTransferState.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.VoiceCallTransferState getCallTransferState() {
-        return instance.getCallTransferState();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-       * @param value The enum numeric value on the wire for callTransferState to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallTransferState(com.elarian.hera.proto.Common.VoiceCallTransferState value) {
-        copyOnWrite();
-        instance.setCallTransferState(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallTransferState call_transfer_state = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCallTransferState() {
-        copyOnWrite();
-        instance.clearCallTransferState();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-       * @return The enum numeric value on the wire for callTransferHangupCause.
-       */
-      @java.lang.Override
-      public int getCallTransferHangupCauseValue() {
-        return instance.getCallTransferHangupCauseValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-       * @param value The callTransferHangupCause to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallTransferHangupCauseValue(int value) {
-        copyOnWrite();
-        instance.setCallTransferHangupCauseValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-       * @return The callTransferHangupCause.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.VoiceCallHangupCause getCallTransferHangupCause() {
-        return instance.getCallTransferHangupCause();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-       * @param value The enum numeric value on the wire for callTransferHangupCause to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCallTransferHangupCause(com.elarian.hera.proto.Common.VoiceCallHangupCause value) {
-        copyOnWrite();
-        instance.setCallTransferHangupCause(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHangupCause call_transfer_hangup_cause = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCallTransferHangupCause() {
-        copyOnWrite();
-        instance.clearCallTransferHangupCause();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue recording_url = 12;</code>
+       * <code>.google.protobuf.StringValue recording_url = 5;</code>
        */
       @java.lang.Override
       public boolean hasRecordingUrl() {
         return instance.hasRecordingUrl();
       }
       /**
-       * <code>.google.protobuf.StringValue recording_url = 12;</code>
+       * <code>.google.protobuf.StringValue recording_url = 5;</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValue getRecordingUrl() {
         return instance.getRecordingUrl();
       }
       /**
-       * <code>.google.protobuf.StringValue recording_url = 12;</code>
+       * <code>.google.protobuf.StringValue recording_url = 5;</code>
        */
       public Builder setRecordingUrl(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -14341,7 +16034,7 @@ public final class Common {
         return this;
         }
       /**
-       * <code>.google.protobuf.StringValue recording_url = 12;</code>
+       * <code>.google.protobuf.StringValue recording_url = 5;</code>
        */
       public Builder setRecordingUrl(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -14350,7 +16043,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue recording_url = 12;</code>
+       * <code>.google.protobuf.StringValue recording_url = 5;</code>
        */
       public Builder mergeRecordingUrl(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -14358,10 +16051,104 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue recording_url = 12;</code>
+       * <code>.google.protobuf.StringValue recording_url = 5;</code>
        */
       public Builder clearRecordingUrl() {  copyOnWrite();
         instance.clearRecordingUrl();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+       */
+      @java.lang.Override
+      public boolean hasDialData() {
+        return instance.hasDialData();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.VoiceCallDialInput getDialData() {
+        return instance.getDialData();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+       */
+      public Builder setDialData(com.elarian.hera.proto.Common.VoiceCallDialInput value) {
+        copyOnWrite();
+        instance.setDialData(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+       */
+      public Builder setDialData(
+          com.elarian.hera.proto.Common.VoiceCallDialInput.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDialData(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+       */
+      public Builder mergeDialData(com.elarian.hera.proto.Common.VoiceCallDialInput value) {
+        copyOnWrite();
+        instance.mergeDialData(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallDialInput dial_data = 6;</code>
+       */
+      public Builder clearDialData() {  copyOnWrite();
+        instance.clearDialData();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+       */
+      @java.lang.Override
+      public boolean hasQueueData() {
+        return instance.hasQueueData();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.VoiceCallQueueInput getQueueData() {
+        return instance.getQueueData();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+       */
+      public Builder setQueueData(com.elarian.hera.proto.Common.VoiceCallQueueInput value) {
+        copyOnWrite();
+        instance.setQueueData(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+       */
+      public Builder setQueueData(
+          com.elarian.hera.proto.Common.VoiceCallQueueInput.Builder builderForValue) {
+        copyOnWrite();
+        instance.setQueueData(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+       */
+      public Builder mergeQueueData(com.elarian.hera.proto.Common.VoiceCallQueueInput value) {
+        copyOnWrite();
+        instance.mergeQueueData(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.VoiceCallQueueInput queue_data = 7;</code>
+       */
+      public Builder clearQueueData() {  copyOnWrite();
+        instance.clearQueueData();
         return this;
       }
 
@@ -14382,21 +16169,16 @@ public final class Common {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "status_",
-              "callStartTime_",
+              "startedAt_",
               "hangupCause_",
               "dtmfDigits_",
-              "dialDestinationNumber_",
-              "queueName_",
-              "dequeuedToPhoneNumber_",
-              "dequeuedToSessionId_",
-              "callTransferredToNumber_",
-              "callTransferState_",
-              "callTransferHangupCause_",
               "recordingUrl_",
+              "dialData_",
+              "queueData_",
             };
             java.lang.String info =
-                "\u0000\f\u0000\u0000\u0001\f\f\u0000\u0000\u0000\u0001\f\u0002\t\u0003\f\u0004\t" +
-                "\u0005\t\u0006\t\u0007\t\b\t\t\t\n\f\u000b\f\f\t";
+                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0000\u0000\u0001\f\u0002\t\u0003" +
+                "\f\u0004\t\u0005\t\u0006\t\u0007\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -14481,15 +16263,15 @@ public final class Common {
     int getActionsCount();
 
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
-     * @return Whether the timestamp field is set.
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
      */
-    boolean hasTimestamp();
+    boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
-     * @return The timestamp.
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
      */
-    com.google.protobuf.Timestamp getTimestamp();
+    com.google.protobuf.Timestamp getCreatedAt();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.VoiceCallHop}
@@ -14642,49 +16424,49 @@ public final class Common {
       actions_.remove(index);
     }
 
-    public static final int TIMESTAMP_FIELD_NUMBER = 3;
-    private com.google.protobuf.Timestamp timestamp_;
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
-    public boolean hasTimestamp() {
-      return timestamp_ != null;
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getTimestamp() {
-      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
-    private void setTimestamp(com.google.protobuf.Timestamp value) {
+    private void setCreatedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
-  timestamp_ = value;
+  createdAt_ = value;
       
       }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeTimestamp(com.google.protobuf.Timestamp value) {
+    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
-  if (timestamp_ != null &&
-          timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-        timestamp_ =
-          com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+  if (createdAt_ != null &&
+          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdAt_ =
+          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
       } else {
-        timestamp_ = value;
+        createdAt_ = value;
       }
       
     }
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
-    private void clearTimestamp() {  timestamp_ = null;
+    private void clearCreatedAt() {  createdAt_ = null;
       
     }
 
@@ -14933,49 +16715,49 @@ public final class Common {
       }
 
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       @java.lang.Override
-      public boolean hasTimestamp() {
-        return instance.hasTimestamp();
+      public boolean hasCreatedAt() {
+        return instance.hasCreatedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.Timestamp getTimestamp() {
-        return instance.getTimestamp();
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        return instance.getCreatedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
-      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.setTimestamp(value);
+        instance.setCreatedAt(value);
         return this;
         }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
-      public Builder setTimestamp(
+      public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
         copyOnWrite();
-        instance.setTimestamp(builderForValue.build());
+        instance.setCreatedAt(builderForValue.build());
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
-      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.mergeTimestamp(value);
+        instance.mergeCreatedAt(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 3;</code>
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
-      public Builder clearTimestamp() {  copyOnWrite();
-        instance.clearTimestamp();
+      public Builder clearCreatedAt() {  copyOnWrite();
+        instance.clearCreatedAt();
         return this;
       }
 
@@ -14998,7 +16780,7 @@ public final class Common {
               "input_",
               "actions_",
               com.elarian.hera.proto.Common.VoiceCallAction.class,
-              "timestamp_",
+              "createdAt_",
             };
             java.lang.String info =
                 "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\t\u0002\u001b" +
@@ -15107,16 +16889,15 @@ public final class Common {
         getSessionIdBytes();
 
     /**
-     * <code>string product_id = 5;</code>
-     * @return The productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     * @return Whether the appId field is set.
      */
-    java.lang.String getProductId();
+    boolean hasAppId();
     /**
-     * <code>string product_id = 5;</code>
-     * @return The bytes for productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     * @return The appId.
      */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
+    com.google.protobuf.StringValue getAppId();
 
     /**
      * <code>.com.elarian.hera.proto.VoiceCallStatus status = 6;</code>
@@ -15197,7 +16978,6 @@ public final class Common {
       VoiceCallStateEntryOrBuilder {
     private VoiceCallStateEntry() {
       sessionId_ = "";
-      productId_ = "";
       hops_ = emptyProtobufList();
     }
     public static final int DIRECTION_FIELD_NUMBER = 1;
@@ -15381,50 +17161,49 @@ public final class Common {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 5;
-    private java.lang.String productId_;
+    public static final int APP_ID_FIELD_NUMBER = 5;
+    private com.google.protobuf.StringValue appId_;
     /**
-     * <code>string product_id = 5;</code>
-     * @return The productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public boolean hasAppId() {
+      return appId_ != null;
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @return The bytes for productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+    public com.google.protobuf.StringValue getAppId() {
+      return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @param value The productId to set.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
-    private void setProductId(
-        java.lang.String value) {
+    private void setAppId(com.google.protobuf.StringValue value) {
       value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 5;</code>
-     */
-    private void clearProductId() {
+  appId_ = value;
       
-      productId_ = getDefaultInstance().getProductId();
+      }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAppId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (appId_ != null &&
+          appId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        appId_ =
+          com.google.protobuf.StringValue.newBuilder(appId_).mergeFrom(value).buildPartial();
+      } else {
+        appId_ = value;
+      }
+      
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @param value The bytes for productId to set.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+    private void clearAppId() {  appId_ = null;
       
     }
 
@@ -16033,51 +17812,49 @@ public final class Common {
       }
 
       /**
-       * <code>string product_id = 5;</code>
-       * @return The productId.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public boolean hasAppId() {
+        return instance.hasAppId();
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @return The bytes for productId.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+      public com.google.protobuf.StringValue getAppId() {
+        return instance.getAppId();
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder setProductId(
-          java.lang.String value) {
+      public Builder setAppId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setAppId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
+       */
+      public Builder setAppId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAppId(builderForValue.build());
         return this;
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder clearProductId() {
+      public Builder mergeAppId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.clearProductId();
+        instance.mergeAppId(value);
         return this;
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
+      public Builder clearAppId() {  copyOnWrite();
+        instance.clearAppId();
         return this;
       }
 
@@ -16437,7 +18214,7 @@ public final class Common {
               "customerNumber_",
               "channelNumber_",
               "sessionId_",
-              "productId_",
+              "appId_",
               "status_",
               "hops_",
               com.elarian.hera.proto.Common.VoiceCallHop.class,
@@ -16448,7 +18225,7 @@ public final class Common {
             };
             java.lang.String info =
                 "\u0000\u000b\u0000\u0000\u0001\u000b\u000b\u0000\u0001\u0000\u0001\f\u0002\t\u0003" +
-                "\t\u0004\u0208\u0005\u0208\u0006\f\u0007\u001b\b\t\t\t\n\t\u000b\t";
+                "\t\u0004\u0208\u0005\t\u0006\f\u0007\u001b\b\t\t\t\n\t\u000b\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -17325,8 +19102,8 @@ public final class Common {
     }
   }
 
-  public interface PaymentTransactionStateEntryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentTransactionStateEntry)
+  public interface PaymentTransactionStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentTransactionState)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -17375,72 +19152,83 @@ public final class Common {
         getTransactionIdBytes();
 
     /**
-     * <code>string product_id = 5;</code>
-     * @return The productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     * @return Whether the appId field is set.
      */
-    java.lang.String getProductId();
+    boolean hasAppId();
     /**
-     * <code>string product_id = 5;</code>
-     * @return The bytes for productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     * @return The appId.
      */
-    com.google.protobuf.ByteString
-        getProductIdBytes();
+    com.google.protobuf.StringValue getAppId();
 
     /**
-     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * <code>string purse_id = 6;</code>
+     * @return The purseId.
+     */
+    java.lang.String getPurseId();
+    /**
+     * <code>string purse_id = 6;</code>
+     * @return The bytes for purseId.
+     */
+    com.google.protobuf.ByteString
+        getPurseIdBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
      * @return Whether the value field is set.
      */
     boolean hasValue();
     /**
-     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
      * @return The value.
      */
     com.elarian.hera.proto.Common.Cash getValue();
 
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Timestamp created_at = 8;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Timestamp created_at = 8;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
 
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
 
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
      * @return The status.
      */
     com.elarian.hera.proto.Common.PaymentStatus getStatus();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.PaymentTransactionStateEntry}
+   * Protobuf type {@code com.elarian.hera.proto.PaymentTransactionState}
    */
-  public  static final class PaymentTransactionStateEntry extends
+  public  static final class PaymentTransactionState extends
       com.google.protobuf.GeneratedMessageLite<
-          PaymentTransactionStateEntry, PaymentTransactionStateEntry.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentTransactionStateEntry)
-      PaymentTransactionStateEntryOrBuilder {
-    private PaymentTransactionStateEntry() {
+          PaymentTransactionState, PaymentTransactionState.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentTransactionState)
+      PaymentTransactionStateOrBuilder {
+    private PaymentTransactionState() {
       transactionId_ = "";
-      productId_ = "";
+      purseId_ = "";
     }
     public static final int DIRECTION_FIELD_NUMBER = 1;
     private int direction_;
@@ -17623,71 +19411,117 @@ public final class Common {
       
     }
 
-    public static final int PRODUCT_ID_FIELD_NUMBER = 5;
-    private java.lang.String productId_;
+    public static final int APP_ID_FIELD_NUMBER = 5;
+    private com.google.protobuf.StringValue appId_;
     /**
-     * <code>string product_id = 5;</code>
-     * @return The productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public boolean hasAppId() {
+      return appId_ != null;
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @return The bytes for productId.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+    public com.google.protobuf.StringValue getAppId() {
+      return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @param value The productId to set.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
-    private void setProductId(
-        java.lang.String value) {
+    private void setAppId(com.google.protobuf.StringValue value) {
       value.getClass();
-  
-      productId_ = value;
-    }
-    /**
-     * <code>string product_id = 5;</code>
-     */
-    private void clearProductId() {
+  appId_ = value;
       
-      productId_ = getDefaultInstance().getProductId();
+      }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAppId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (appId_ != null &&
+          appId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        appId_ =
+          com.google.protobuf.StringValue.newBuilder(appId_).mergeFrom(value).buildPartial();
+      } else {
+        appId_ = value;
+      }
+      
     }
     /**
-     * <code>string product_id = 5;</code>
-     * @param value The bytes for productId to set.
+     * <code>.google.protobuf.StringValue app_id = 5;</code>
      */
-    private void setProductIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+    private void clearAppId() {  appId_ = null;
       
     }
 
-    public static final int VALUE_FIELD_NUMBER = 6;
+    public static final int PURSE_ID_FIELD_NUMBER = 6;
+    private java.lang.String purseId_;
+    /**
+     * <code>string purse_id = 6;</code>
+     * @return The purseId.
+     */
+    @java.lang.Override
+    public java.lang.String getPurseId() {
+      return purseId_;
+    }
+    /**
+     * <code>string purse_id = 6;</code>
+     * @return The bytes for purseId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPurseIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(purseId_);
+    }
+    /**
+     * <code>string purse_id = 6;</code>
+     * @param value The purseId to set.
+     */
+    private void setPurseId(
+        java.lang.String value) {
+      value.getClass();
+  
+      purseId_ = value;
+    }
+    /**
+     * <code>string purse_id = 6;</code>
+     */
+    private void clearPurseId() {
+      
+      purseId_ = getDefaultInstance().getPurseId();
+    }
+    /**
+     * <code>string purse_id = 6;</code>
+     * @param value The bytes for purseId to set.
+     */
+    private void setPurseIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      purseId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 7;
     private com.elarian.hera.proto.Common.Cash value_;
     /**
-     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
      */
     @java.lang.Override
     public boolean hasValue() {
       return value_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.Common.Cash getValue() {
       return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
     }
     /**
-     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
      */
     private void setValue(com.elarian.hera.proto.Common.Cash value) {
       value.getClass();
@@ -17695,7 +19529,7 @@ public final class Common {
       
       }
     /**
-     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeValue(com.elarian.hera.proto.Common.Cash value) {
@@ -17710,30 +19544,30 @@ public final class Common {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * <code>.com.elarian.hera.proto.Cash value = 7;</code>
      */
     private void clearValue() {  value_ = null;
       
     }
 
-    public static final int CREATED_AT_FIELD_NUMBER = 7;
+    public static final int CREATED_AT_FIELD_NUMBER = 8;
     private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Timestamp created_at = 8;</code>
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Timestamp created_at = 8;</code>
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Timestamp created_at = 8;</code>
      */
     private void setCreatedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
@@ -17741,7 +19575,7 @@ public final class Common {
       
       }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Timestamp created_at = 8;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -17756,30 +19590,30 @@ public final class Common {
       
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * <code>.google.protobuf.Timestamp created_at = 8;</code>
      */
     private void clearCreatedAt() {  createdAt_ = null;
       
     }
 
-    public static final int UPDATED_AT_FIELD_NUMBER = 8;
+    public static final int UPDATED_AT_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     private void setUpdatedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
@@ -17787,7 +19621,7 @@ public final class Common {
       
       }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -17802,16 +19636,16 @@ public final class Common {
       
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     private void clearUpdatedAt() {  updatedAt_ = null;
       
     }
 
-    public static final int STATUS_FIELD_NUMBER = 9;
+    public static final int STATUS_FIELD_NUMBER = 10;
     private int status_;
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override
@@ -17819,7 +19653,7 @@ public final class Common {
       return status_;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -17828,14 +19662,14 @@ public final class Common {
       return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
      * @param value The enum numeric value on the wire for status to set.
      */
     private void setStatusValue(int value) {
         status_ = value;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
      * @param value The status to set.
      */
     private void setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
@@ -17843,80 +19677,80 @@ public final class Common {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
      */
     private void clearStatus() {
       
       status_ = 0;
     }
 
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(byte[] data)
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseDelimitedFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry parseFrom(
+    public static com.elarian.hera.proto.Common.PaymentTransactionState parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17927,19 +19761,19 @@ public final class Common {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentTransactionStateEntry prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentTransactionState prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.PaymentTransactionStateEntry}
+     * Protobuf type {@code com.elarian.hera.proto.PaymentTransactionState}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.Common.PaymentTransactionStateEntry, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentTransactionStateEntry)
-        com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder {
-      // Construct using com.elarian.hera.proto.Common.PaymentTransactionStateEntry.newBuilder()
+          com.elarian.hera.proto.Common.PaymentTransactionState, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentTransactionState)
+        com.elarian.hera.proto.Common.PaymentTransactionStateOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentTransactionState.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -18135,70 +19969,117 @@ public final class Common {
       }
 
       /**
-       * <code>string product_id = 5;</code>
-       * @return The productId.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public boolean hasAppId() {
+        return instance.hasAppId();
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @return The bytes for productId.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+      public com.google.protobuf.StringValue getAppId() {
+        return instance.getAppId();
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @param value The productId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder setProductId(
-          java.lang.String value) {
+      public Builder setAppId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setAppId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
+       */
+      public Builder setAppId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAppId(builderForValue.build());
         return this;
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder clearProductId() {
+      public Builder mergeAppId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.clearProductId();
+        instance.mergeAppId(value);
         return this;
       }
       /**
-       * <code>string product_id = 5;</code>
-       * @param value The bytes for productId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 5;</code>
        */
-      public Builder setProductIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setProductIdBytes(value);
+      public Builder clearAppId() {  copyOnWrite();
+        instance.clearAppId();
         return this;
       }
 
       /**
-       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * <code>string purse_id = 6;</code>
+       * @return The purseId.
+       */
+      @java.lang.Override
+      public java.lang.String getPurseId() {
+        return instance.getPurseId();
+      }
+      /**
+       * <code>string purse_id = 6;</code>
+       * @return The bytes for purseId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPurseIdBytes() {
+        return instance.getPurseIdBytes();
+      }
+      /**
+       * <code>string purse_id = 6;</code>
+       * @param value The purseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurseId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPurseId(value);
+        return this;
+      }
+      /**
+       * <code>string purse_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPurseId() {
+        copyOnWrite();
+        instance.clearPurseId();
+        return this;
+      }
+      /**
+       * <code>string purse_id = 6;</code>
+       * @param value The bytes for purseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurseIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPurseIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
        */
       @java.lang.Override
       public boolean hasValue() {
         return instance.hasValue();
       }
       /**
-       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.Common.Cash getValue() {
         return instance.getValue();
       }
       /**
-       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
        */
       public Builder setValue(com.elarian.hera.proto.Common.Cash value) {
         copyOnWrite();
@@ -18206,7 +20087,7 @@ public final class Common {
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
        */
       public Builder setValue(
           com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
@@ -18215,7 +20096,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
        */
       public Builder mergeValue(com.elarian.hera.proto.Common.Cash value) {
         copyOnWrite();
@@ -18223,10 +20104,3970 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * <code>.com.elarian.hera.proto.Cash value = 7;</code>
        */
       public Builder clearValue() {  copyOnWrite();
         instance.clearValue();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 8;</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedAt() {
+        return instance.hasCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 8;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        return instance.getCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 8;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 8;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 8;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 8;</code>
+       */
+      public Builder clearCreatedAt() {  copyOnWrite();
+        instance.clearCreatedAt();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 9;</code>
+       */
+      @java.lang.Override
+      public boolean hasUpdatedAt() {
+        return instance.hasUpdatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 9;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        return instance.getUpdatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 9;</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setUpdatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 9;</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUpdatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 9;</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeUpdatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 9;</code>
+       */
+      public Builder clearUpdatedAt() {  copyOnWrite();
+        instance.clearUpdatedAt();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        copyOnWrite();
+        instance.setStatusValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentTransactionState)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PaymentTransactionState();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "direction_",
+              "customerNumber_",
+              "channelNumber_",
+              "transactionId_",
+              "appId_",
+              "purseId_",
+              "value_",
+              "createdAt_",
+              "updatedAt_",
+              "status_",
+            };
+            java.lang.String info =
+                "\u0000\n\u0000\u0000\u0001\n\n\u0000\u0000\u0000\u0001\f\u0002\t\u0003\t\u0004\u0208" +
+                "\u0005\t\u0006\u0208\u0007\t\b\t\t\t\n\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentTransactionState> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PaymentTransactionState.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentTransactionState>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentTransactionState)
+    private static final com.elarian.hera.proto.Common.PaymentTransactionState DEFAULT_INSTANCE;
+    static {
+      PaymentTransactionState defaultInstance = new PaymentTransactionState();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentTransactionState.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentTransactionState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentTransactionState> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentTransactionState> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PendingPaymentTransactionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PendingPaymentTransaction)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     * @return The value.
+     */
+    com.elarian.hera.proto.Common.Cash getValue();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     * @return Whether the converted field is set.
+     */
+    boolean hasConverted();
+    /**
+     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     * @return The converted.
+     */
+    com.elarian.hera.proto.Common.Cash getConverted();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PendingPaymentTransaction}
+   */
+  public  static final class PendingPaymentTransaction extends
+      com.google.protobuf.GeneratedMessageLite<
+          PendingPaymentTransaction, PendingPaymentTransaction.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PendingPaymentTransaction)
+      PendingPaymentTransactionOrBuilder {
+    private PendingPaymentTransaction() {
+    }
+    public static final int CREATED_AT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     */
+    private void setCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  createdAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (createdAt_ != null &&
+          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdAt_ =
+          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+      } else {
+        createdAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 1;</code>
+     */
+    private void clearCreatedAt() {  createdAt_ = null;
+      
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.Common.Cash value_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.Cash getValue() {
+      return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     */
+    private void setValue(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  value_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeValue(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  if (value_ != null &&
+          value_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
+        value_ =
+          com.elarian.hera.proto.Common.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
+      } else {
+        value_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+     */
+    private void clearValue() {  value_ = null;
+      
+    }
+
+    public static final int CONVERTED_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.Common.Cash converted_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasConverted() {
+      return converted_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.Cash getConverted() {
+      return converted_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : converted_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     */
+    private void setConverted(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  converted_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConverted(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  if (converted_ != null &&
+          converted_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
+        converted_ =
+          com.elarian.hera.proto.Common.Cash.newBuilder(converted_).mergeFrom(value).buildPartial();
+      } else {
+        converted_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+     */
+    private void clearConverted() {  converted_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PendingPaymentTransaction prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PendingPaymentTransaction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PendingPaymentTransaction, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PendingPaymentTransaction)
+        com.elarian.hera.proto.Common.PendingPaymentTransactionOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PendingPaymentTransaction.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedAt() {
+        return instance.hasCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        return instance.getCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 1;</code>
+       */
+      public Builder clearCreatedAt() {  copyOnWrite();
+        instance.clearCreatedAt();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return instance.hasValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.Cash getValue() {
+        return instance.getValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+       */
+      public Builder setValue(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.setValue(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+       */
+      public Builder setValue(
+          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setValue(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+       */
+      public Builder mergeValue(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.mergeValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
+       */
+      public Builder clearValue() {  copyOnWrite();
+        instance.clearValue();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasConverted() {
+        return instance.hasConverted();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.Cash getConverted() {
+        return instance.getConverted();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+       */
+      public Builder setConverted(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.setConverted(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+       */
+      public Builder setConverted(
+          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setConverted(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+       */
+      public Builder mergeConverted(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.mergeConverted(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
+       */
+      public Builder clearConverted() {  copyOnWrite();
+        instance.clearConverted();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PendingPaymentTransaction)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PendingPaymentTransaction();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "createdAt_",
+              "value_",
+              "converted_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PendingPaymentTransaction> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PendingPaymentTransaction.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PendingPaymentTransaction>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PendingPaymentTransaction)
+    private static final com.elarian.hera.proto.Common.PendingPaymentTransaction DEFAULT_INSTANCE;
+    static {
+      PendingPaymentTransaction defaultInstance = new PendingPaymentTransaction();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PendingPaymentTransaction.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PendingPaymentTransaction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PendingPaymentTransaction> PARSER;
+
+    public static com.google.protobuf.Parser<PendingPaymentTransaction> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PaymentBalanceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentBalance)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string currency_code = 1;</code>
+     * @return The currencyCode.
+     */
+    java.lang.String getCurrencyCode();
+    /**
+     * <code>string currency_code = 1;</code>
+     * @return The bytes for currencyCode.
+     */
+    com.google.protobuf.ByteString
+        getCurrencyCodeBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     * @return Whether the available field is set.
+     */
+    boolean hasAvailable();
+    /**
+     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     * @return The available.
+     */
+    com.elarian.hera.proto.Common.Cash getAvailable();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     * @return Whether the actual field is set.
+     */
+    boolean hasActual();
+    /**
+     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     * @return The actual.
+     */
+    com.elarian.hera.proto.Common.Cash getActual();
+
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+    int getPendingCount();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+    boolean containsPending(
+        java.lang.String key);
+    /**
+     * Use {@link #getPendingMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction>
+    getPending();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction>
+    getPendingMap();
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+
+    com.elarian.hera.proto.Common.PendingPaymentTransaction getPendingOrDefault(
+        java.lang.String key,
+        com.elarian.hera.proto.Common.PendingPaymentTransaction defaultValue);
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+
+    com.elarian.hera.proto.Common.PendingPaymentTransaction getPendingOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PaymentBalance}
+   */
+  public  static final class PaymentBalance extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentBalance, PaymentBalance.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentBalance)
+      PaymentBalanceOrBuilder {
+    private PaymentBalance() {
+      currencyCode_ = "";
+    }
+    public static final int CURRENCY_CODE_FIELD_NUMBER = 1;
+    private java.lang.String currencyCode_;
+    /**
+     * <code>string currency_code = 1;</code>
+     * @return The currencyCode.
+     */
+    @java.lang.Override
+    public java.lang.String getCurrencyCode() {
+      return currencyCode_;
+    }
+    /**
+     * <code>string currency_code = 1;</code>
+     * @return The bytes for currencyCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCurrencyCodeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(currencyCode_);
+    }
+    /**
+     * <code>string currency_code = 1;</code>
+     * @param value The currencyCode to set.
+     */
+    private void setCurrencyCode(
+        java.lang.String value) {
+      value.getClass();
+  
+      currencyCode_ = value;
+    }
+    /**
+     * <code>string currency_code = 1;</code>
+     */
+    private void clearCurrencyCode() {
+      
+      currencyCode_ = getDefaultInstance().getCurrencyCode();
+    }
+    /**
+     * <code>string currency_code = 1;</code>
+     * @param value The bytes for currencyCode to set.
+     */
+    private void setCurrencyCodeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      currencyCode_ = value.toStringUtf8();
+      
+    }
+
+    public static final int AVAILABLE_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.Common.Cash available_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasAvailable() {
+      return available_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.Cash getAvailable() {
+      return available_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : available_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     */
+    private void setAvailable(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  available_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAvailable(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  if (available_ != null &&
+          available_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
+        available_ =
+          com.elarian.hera.proto.Common.Cash.newBuilder(available_).mergeFrom(value).buildPartial();
+      } else {
+        available_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+     */
+    private void clearAvailable() {  available_ = null;
+      
+    }
+
+    public static final int ACTUAL_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.Common.Cash actual_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasActual() {
+      return actual_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.Cash getActual() {
+      return actual_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : actual_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     */
+    private void setActual(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  actual_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeActual(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  if (actual_ != null &&
+          actual_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
+        actual_ =
+          com.elarian.hera.proto.Common.Cash.newBuilder(actual_).mergeFrom(value).buildPartial();
+      } else {
+        actual_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+     */
+    private void clearActual() {  actual_ = null;
+      
+    }
+
+    public static final int PENDING_FIELD_NUMBER = 4;
+    private static final class PendingDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.elarian.hera.proto.Common.PendingPaymentTransaction.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> pending_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction>
+    internalGetPending() {
+      return pending_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction>
+    internalGetMutablePending() {
+      if (!pending_.isMutable()) {
+        pending_ = pending_.mutableCopy();
+      }
+      return pending_;
+    }
+    @java.lang.Override
+
+    public int getPendingCount() {
+      return internalGetPending().size();
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+    @java.lang.Override
+
+    public boolean containsPending(
+        java.lang.String key) {
+      key.getClass();
+      return internalGetPending().containsKey(key);
+    }
+    /**
+     * Use {@link #getPendingMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> getPending() {
+      return getPendingMap();
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> getPendingMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetPending());
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+    @java.lang.Override
+
+    public com.elarian.hera.proto.Common.PendingPaymentTransaction getPendingOrDefault(
+        java.lang.String key,
+        com.elarian.hera.proto.Common.PendingPaymentTransaction defaultValue) {
+      key.getClass();
+      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> map =
+          internalGetPending();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+    @java.lang.Override
+
+    public com.elarian.hera.proto.Common.PendingPaymentTransaction getPendingOrThrow(
+        java.lang.String key) {
+      key.getClass();
+      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> map =
+          internalGetPending();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+     */
+    private java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction>
+    getMutablePendingMap() {
+      return internalGetMutablePending();
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentBalance parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentBalance prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PaymentBalance}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PaymentBalance, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentBalance)
+        com.elarian.hera.proto.Common.PaymentBalanceOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentBalance.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string currency_code = 1;</code>
+       * @return The currencyCode.
+       */
+      @java.lang.Override
+      public java.lang.String getCurrencyCode() {
+        return instance.getCurrencyCode();
+      }
+      /**
+       * <code>string currency_code = 1;</code>
+       * @return The bytes for currencyCode.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCurrencyCodeBytes() {
+        return instance.getCurrencyCodeBytes();
+      }
+      /**
+       * <code>string currency_code = 1;</code>
+       * @param value The currencyCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrencyCode(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCurrencyCode(value);
+        return this;
+      }
+      /**
+       * <code>string currency_code = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrencyCode() {
+        copyOnWrite();
+        instance.clearCurrencyCode();
+        return this;
+      }
+      /**
+       * <code>string currency_code = 1;</code>
+       * @param value The bytes for currencyCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrencyCodeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCurrencyCodeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasAvailable() {
+        return instance.hasAvailable();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.Cash getAvailable() {
+        return instance.getAvailable();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+       */
+      public Builder setAvailable(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.setAvailable(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+       */
+      public Builder setAvailable(
+          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAvailable(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+       */
+      public Builder mergeAvailable(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.mergeAvailable(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
+       */
+      public Builder clearAvailable() {  copyOnWrite();
+        instance.clearAvailable();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasActual() {
+        return instance.hasActual();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.Cash getActual() {
+        return instance.getActual();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+       */
+      public Builder setActual(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.setActual(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+       */
+      public Builder setActual(
+          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setActual(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+       */
+      public Builder mergeActual(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.mergeActual(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
+       */
+      public Builder clearActual() {  copyOnWrite();
+        instance.clearActual();
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getPendingCount() {
+        return instance.getPendingMap().size();
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+       */
+      @java.lang.Override
+
+      public boolean containsPending(
+          java.lang.String key) {
+        key.getClass();
+        return instance.getPendingMap().containsKey(key);
+      }
+
+      public Builder clearPending() {
+        copyOnWrite();
+        instance.getMutablePendingMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+       */
+
+      public Builder removePending(
+          java.lang.String key) {
+        key.getClass();
+        copyOnWrite();
+        instance.getMutablePendingMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getPendingMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> getPending() {
+        return getPendingMap();
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> getPendingMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getPendingMap());
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+       */
+      @java.lang.Override
+
+      public com.elarian.hera.proto.Common.PendingPaymentTransaction getPendingOrDefault(
+          java.lang.String key,
+          com.elarian.hera.proto.Common.PendingPaymentTransaction defaultValue) {
+        key.getClass();
+        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> map =
+            instance.getPendingMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+       */
+      @java.lang.Override
+
+      public com.elarian.hera.proto.Common.PendingPaymentTransaction getPendingOrThrow(
+          java.lang.String key) {
+        key.getClass();
+        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> map =
+            instance.getPendingMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+       */
+      public Builder putPending(
+          java.lang.String key,
+          com.elarian.hera.proto.Common.PendingPaymentTransaction value) {
+        key.getClass();
+        value.getClass();
+        copyOnWrite();
+        instance.getMutablePendingMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .com.elarian.hera.proto.PendingPaymentTransaction&gt; pending = 4;</code>
+       */
+      public Builder putAllPending(
+          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingPaymentTransaction> values) {
+        copyOnWrite();
+        instance.getMutablePendingMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentBalance)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PaymentBalance();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "currencyCode_",
+              "available_",
+              "actual_",
+              "pending_",
+              PendingDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0001\u0000\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u00042";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentBalance> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PaymentBalance.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentBalance>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentBalance)
+    private static final com.elarian.hera.proto.Common.PaymentBalance DEFAULT_INSTANCE;
+    static {
+      PaymentBalance defaultInstance = new PaymentBalance();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentBalance.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentBalance getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentBalance> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentBalance> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PaymentPurseCounterPartyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentPurseCounterParty)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string purse_id = 1;</code>
+     * @return The purseId.
+     */
+    java.lang.String getPurseId();
+    /**
+     * <code>string purse_id = 1;</code>
+     * @return The bytes for purseId.
+     */
+    com.google.protobuf.ByteString
+        getPurseIdBytes();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PaymentPurseCounterParty}
+   */
+  public  static final class PaymentPurseCounterParty extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentPurseCounterParty, PaymentPurseCounterParty.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentPurseCounterParty)
+      PaymentPurseCounterPartyOrBuilder {
+    private PaymentPurseCounterParty() {
+      purseId_ = "";
+    }
+    public static final int PURSE_ID_FIELD_NUMBER = 1;
+    private java.lang.String purseId_;
+    /**
+     * <code>string purse_id = 1;</code>
+     * @return The purseId.
+     */
+    @java.lang.Override
+    public java.lang.String getPurseId() {
+      return purseId_;
+    }
+    /**
+     * <code>string purse_id = 1;</code>
+     * @return The bytes for purseId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPurseIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(purseId_);
+    }
+    /**
+     * <code>string purse_id = 1;</code>
+     * @param value The purseId to set.
+     */
+    private void setPurseId(
+        java.lang.String value) {
+      value.getClass();
+  
+      purseId_ = value;
+    }
+    /**
+     * <code>string purse_id = 1;</code>
+     */
+    private void clearPurseId() {
+      
+      purseId_ = getDefaultInstance().getPurseId();
+    }
+    /**
+     * <code>string purse_id = 1;</code>
+     * @param value The bytes for purseId to set.
+     */
+    private void setPurseIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      purseId_ = value.toStringUtf8();
+      
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentPurseCounterParty prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PaymentPurseCounterParty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PaymentPurseCounterParty, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentPurseCounterParty)
+        com.elarian.hera.proto.Common.PaymentPurseCounterPartyOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentPurseCounterParty.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string purse_id = 1;</code>
+       * @return The purseId.
+       */
+      @java.lang.Override
+      public java.lang.String getPurseId() {
+        return instance.getPurseId();
+      }
+      /**
+       * <code>string purse_id = 1;</code>
+       * @return The bytes for purseId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPurseIdBytes() {
+        return instance.getPurseIdBytes();
+      }
+      /**
+       * <code>string purse_id = 1;</code>
+       * @param value The purseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurseId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPurseId(value);
+        return this;
+      }
+      /**
+       * <code>string purse_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPurseId() {
+        copyOnWrite();
+        instance.clearPurseId();
+        return this;
+      }
+      /**
+       * <code>string purse_id = 1;</code>
+       * @param value The bytes for purseId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPurseIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPurseIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentPurseCounterParty)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PaymentPurseCounterParty();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "purseId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentPurseCounterParty> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PaymentPurseCounterParty.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentPurseCounterParty>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentPurseCounterParty)
+    private static final com.elarian.hera.proto.Common.PaymentPurseCounterParty DEFAULT_INSTANCE;
+    static {
+      PaymentPurseCounterParty defaultInstance = new PaymentPurseCounterParty();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentPurseCounterParty.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentPurseCounterParty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentPurseCounterParty> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentPurseCounterParty> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PaymentWalletCounterPartyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentWalletCounterParty)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The customerId.
+     */
+    java.lang.String getCustomerId();
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The bytes for customerId.
+     */
+    com.google.protobuf.ByteString
+        getCustomerIdBytes();
+
+    /**
+     * <code>string wallet_id = 2;</code>
+     * @return The walletId.
+     */
+    java.lang.String getWalletId();
+    /**
+     * <code>string wallet_id = 2;</code>
+     * @return The bytes for walletId.
+     */
+    com.google.protobuf.ByteString
+        getWalletIdBytes();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PaymentWalletCounterParty}
+   */
+  public  static final class PaymentWalletCounterParty extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentWalletCounterParty, PaymentWalletCounterParty.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentWalletCounterParty)
+      PaymentWalletCounterPartyOrBuilder {
+    private PaymentWalletCounterParty() {
+      customerId_ = "";
+      walletId_ = "";
+    }
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
+    private java.lang.String customerId_;
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The customerId.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerId() {
+      return customerId_;
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The bytes for customerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @param value The customerId to set.
+     */
+    private void setCustomerId(
+        java.lang.String value) {
+      value.getClass();
+  
+      customerId_ = value;
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     */
+    private void clearCustomerId() {
+      
+      customerId_ = getDefaultInstance().getCustomerId();
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @param value The bytes for customerId to set.
+     */
+    private void setCustomerIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      customerId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int WALLET_ID_FIELD_NUMBER = 2;
+    private java.lang.String walletId_;
+    /**
+     * <code>string wallet_id = 2;</code>
+     * @return The walletId.
+     */
+    @java.lang.Override
+    public java.lang.String getWalletId() {
+      return walletId_;
+    }
+    /**
+     * <code>string wallet_id = 2;</code>
+     * @return The bytes for walletId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWalletIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(walletId_);
+    }
+    /**
+     * <code>string wallet_id = 2;</code>
+     * @param value The walletId to set.
+     */
+    private void setWalletId(
+        java.lang.String value) {
+      value.getClass();
+  
+      walletId_ = value;
+    }
+    /**
+     * <code>string wallet_id = 2;</code>
+     */
+    private void clearWalletId() {
+      
+      walletId_ = getDefaultInstance().getWalletId();
+    }
+    /**
+     * <code>string wallet_id = 2;</code>
+     * @param value The bytes for walletId to set.
+     */
+    private void setWalletIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      walletId_ = value.toStringUtf8();
+      
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentWalletCounterParty prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PaymentWalletCounterParty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PaymentWalletCounterParty, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentWalletCounterParty)
+        com.elarian.hera.proto.Common.PaymentWalletCounterPartyOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentWalletCounterParty.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string customer_id = 1;</code>
+       * @return The customerId.
+       */
+      @java.lang.Override
+      public java.lang.String getCustomerId() {
+        return instance.getCustomerId();
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @return The bytes for customerId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCustomerIdBytes() {
+        return instance.getCustomerIdBytes();
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @param value The customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerId() {
+        copyOnWrite();
+        instance.clearCustomerId();
+        return this;
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @param value The bytes for customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCustomerIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string wallet_id = 2;</code>
+       * @return The walletId.
+       */
+      @java.lang.Override
+      public java.lang.String getWalletId() {
+        return instance.getWalletId();
+      }
+      /**
+       * <code>string wallet_id = 2;</code>
+       * @return The bytes for walletId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getWalletIdBytes() {
+        return instance.getWalletIdBytes();
+      }
+      /**
+       * <code>string wallet_id = 2;</code>
+       * @param value The walletId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setWalletId(value);
+        return this;
+      }
+      /**
+       * <code>string wallet_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWalletId() {
+        copyOnWrite();
+        instance.clearWalletId();
+        return this;
+      }
+      /**
+       * <code>string wallet_id = 2;</code>
+       * @param value The bytes for walletId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWalletIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setWalletIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentWalletCounterParty)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PaymentWalletCounterParty();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerId_",
+              "walletId_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentWalletCounterParty> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PaymentWalletCounterParty.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentWalletCounterParty>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentWalletCounterParty)
+    private static final com.elarian.hera.proto.Common.PaymentWalletCounterParty DEFAULT_INSTANCE;
+    static {
+      PaymentWalletCounterParty defaultInstance = new PaymentWalletCounterParty();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentWalletCounterParty.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentWalletCounterParty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentWalletCounterParty> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentWalletCounterParty> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PaymentCustomerCounterPartyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentCustomerCounterParty)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
+     */
+    com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PaymentCustomerCounterParty}
+   */
+  public  static final class PaymentCustomerCounterParty extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentCustomerCounterParty, PaymentCustomerCounterParty.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentCustomerCounterParty)
+      PaymentCustomerCounterPartyOrBuilder {
+    private PaymentCustomerCounterParty() {
+    }
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  customerNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
+    }
+
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.Common.PaymentChannelNumber channelNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.Common.PaymentChannelNumber.getDefaultInstance() : channelNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+     */
+    private void setChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+      value.getClass();
+  channelNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.Common.PaymentChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.Common.PaymentChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+     */
+    private void clearChannelNumber() {  channelNumber_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentCustomerCounterParty prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PaymentCustomerCounterParty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PaymentCustomerCounterParty, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentCustomerCounterParty)
+        com.elarian.hera.proto.Common.PaymentCustomerCounterPartyOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentCustomerCounterParty.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber() {
+        return instance.getChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+        copyOnWrite();
+        instance.setChannelNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.Common.PaymentChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+       */
+      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+        copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 2;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentCustomerCounterParty)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PaymentCustomerCounterParty();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerNumber_",
+              "channelNumber_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\t\u0002\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentCustomerCounterParty> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PaymentCustomerCounterParty.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentCustomerCounterParty>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentCustomerCounterParty)
+    private static final com.elarian.hera.proto.Common.PaymentCustomerCounterParty DEFAULT_INSTANCE;
+    static {
+      PaymentCustomerCounterParty defaultInstance = new PaymentCustomerCounterParty();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentCustomerCounterParty.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentCustomerCounterParty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentCustomerCounterParty> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentCustomerCounterParty> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PaymentCounterPartyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentCounterParty)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+     * @return Whether the customer field is set.
+     */
+    boolean hasCustomer();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+     * @return The customer.
+     */
+    com.elarian.hera.proto.Common.PaymentCustomerCounterParty getCustomer();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+     * @return Whether the purse field is set.
+     */
+    boolean hasPurse();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+     * @return The purse.
+     */
+    com.elarian.hera.proto.Common.PaymentPurseCounterParty getPurse();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+     * @return Whether the wallet field is set.
+     */
+    boolean hasWallet();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+     * @return The wallet.
+     */
+    com.elarian.hera.proto.Common.PaymentWalletCounterParty getWallet();
+
+    public com.elarian.hera.proto.Common.PaymentCounterParty.PartyCase getPartyCase();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PaymentCounterParty}
+   */
+  public  static final class PaymentCounterParty extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentCounterParty, PaymentCounterParty.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentCounterParty)
+      PaymentCounterPartyOrBuilder {
+    private PaymentCounterParty() {
+    }
+    private int partyCase_ = 0;
+    private java.lang.Object party_;
+    public enum PartyCase {
+      CUSTOMER(1),
+      PURSE(2),
+      WALLET(3),
+      PARTY_NOT_SET(0);
+      private final int value;
+      private PartyCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PartyCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PartyCase forNumber(int value) {
+        switch (value) {
+          case 1: return CUSTOMER;
+          case 2: return PURSE;
+          case 3: return WALLET;
+          case 0: return PARTY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public PartyCase
+    getPartyCase() {
+      return PartyCase.forNumber(
+          partyCase_);
+    }
+
+    private void clearParty() {
+      partyCase_ = 0;
+      party_ = null;
+    }
+
+    public static final int CUSTOMER_FIELD_NUMBER = 1;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomer() {
+      return partyCase_ == 1;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentCustomerCounterParty getCustomer() {
+      if (partyCase_ == 1) {
+         return (com.elarian.hera.proto.Common.PaymentCustomerCounterParty) party_;
+      }
+      return com.elarian.hera.proto.Common.PaymentCustomerCounterParty.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+     */
+    private void setCustomer(com.elarian.hera.proto.Common.PaymentCustomerCounterParty value) {
+      value.getClass();
+  party_ = value;
+      partyCase_ = 1;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+     */
+    private void mergeCustomer(com.elarian.hera.proto.Common.PaymentCustomerCounterParty value) {
+      value.getClass();
+  if (partyCase_ == 1 &&
+          party_ != com.elarian.hera.proto.Common.PaymentCustomerCounterParty.getDefaultInstance()) {
+        party_ = com.elarian.hera.proto.Common.PaymentCustomerCounterParty.newBuilder((com.elarian.hera.proto.Common.PaymentCustomerCounterParty) party_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        party_ = value;
+      }
+      partyCase_ = 1;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+     */
+    private void clearCustomer() {
+      if (partyCase_ == 1) {
+        partyCase_ = 0;
+        party_ = null;
+      }
+    }
+
+    public static final int PURSE_FIELD_NUMBER = 2;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasPurse() {
+      return partyCase_ == 2;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentPurseCounterParty getPurse() {
+      if (partyCase_ == 2) {
+         return (com.elarian.hera.proto.Common.PaymentPurseCounterParty) party_;
+      }
+      return com.elarian.hera.proto.Common.PaymentPurseCounterParty.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+     */
+    private void setPurse(com.elarian.hera.proto.Common.PaymentPurseCounterParty value) {
+      value.getClass();
+  party_ = value;
+      partyCase_ = 2;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+     */
+    private void mergePurse(com.elarian.hera.proto.Common.PaymentPurseCounterParty value) {
+      value.getClass();
+  if (partyCase_ == 2 &&
+          party_ != com.elarian.hera.proto.Common.PaymentPurseCounterParty.getDefaultInstance()) {
+        party_ = com.elarian.hera.proto.Common.PaymentPurseCounterParty.newBuilder((com.elarian.hera.proto.Common.PaymentPurseCounterParty) party_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        party_ = value;
+      }
+      partyCase_ = 2;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+     */
+    private void clearPurse() {
+      if (partyCase_ == 2) {
+        partyCase_ = 0;
+        party_ = null;
+      }
+    }
+
+    public static final int WALLET_FIELD_NUMBER = 3;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasWallet() {
+      return partyCase_ == 3;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentWalletCounterParty getWallet() {
+      if (partyCase_ == 3) {
+         return (com.elarian.hera.proto.Common.PaymentWalletCounterParty) party_;
+      }
+      return com.elarian.hera.proto.Common.PaymentWalletCounterParty.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+     */
+    private void setWallet(com.elarian.hera.proto.Common.PaymentWalletCounterParty value) {
+      value.getClass();
+  party_ = value;
+      partyCase_ = 3;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+     */
+    private void mergeWallet(com.elarian.hera.proto.Common.PaymentWalletCounterParty value) {
+      value.getClass();
+  if (partyCase_ == 3 &&
+          party_ != com.elarian.hera.proto.Common.PaymentWalletCounterParty.getDefaultInstance()) {
+        party_ = com.elarian.hera.proto.Common.PaymentWalletCounterParty.newBuilder((com.elarian.hera.proto.Common.PaymentWalletCounterParty) party_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        party_ = value;
+      }
+      partyCase_ = 3;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+     */
+    private void clearWallet() {
+      if (partyCase_ == 3) {
+        partyCase_ = 0;
+        party_ = null;
+      }
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentCounterParty prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PaymentCounterParty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PaymentCounterParty, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentCounterParty)
+        com.elarian.hera.proto.Common.PaymentCounterPartyOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentCounterParty.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public PartyCase
+          getPartyCase() {
+        return instance.getPartyCase();
+      }
+
+      public Builder clearParty() {
+        copyOnWrite();
+        instance.clearParty();
+        return this;
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomer() {
+        return instance.hasCustomer();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentCustomerCounterParty getCustomer() {
+        return instance.getCustomer();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+       */
+      public Builder setCustomer(com.elarian.hera.proto.Common.PaymentCustomerCounterParty value) {
+        copyOnWrite();
+        instance.setCustomer(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+       */
+      public Builder setCustomer(
+          com.elarian.hera.proto.Common.PaymentCustomerCounterParty.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomer(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+       */
+      public Builder mergeCustomer(com.elarian.hera.proto.Common.PaymentCustomerCounterParty value) {
+        copyOnWrite();
+        instance.mergeCustomer(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCustomerCounterParty customer = 1;</code>
+       */
+      public Builder clearCustomer() {
+        copyOnWrite();
+        instance.clearCustomer();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasPurse() {
+        return instance.hasPurse();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentPurseCounterParty getPurse() {
+        return instance.getPurse();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+       */
+      public Builder setPurse(com.elarian.hera.proto.Common.PaymentPurseCounterParty value) {
+        copyOnWrite();
+        instance.setPurse(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+       */
+      public Builder setPurse(
+          com.elarian.hera.proto.Common.PaymentPurseCounterParty.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPurse(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+       */
+      public Builder mergePurse(com.elarian.hera.proto.Common.PaymentPurseCounterParty value) {
+        copyOnWrite();
+        instance.mergePurse(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentPurseCounterParty purse = 2;</code>
+       */
+      public Builder clearPurse() {
+        copyOnWrite();
+        instance.clearPurse();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasWallet() {
+        return instance.hasWallet();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentWalletCounterParty getWallet() {
+        return instance.getWallet();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+       */
+      public Builder setWallet(com.elarian.hera.proto.Common.PaymentWalletCounterParty value) {
+        copyOnWrite();
+        instance.setWallet(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+       */
+      public Builder setWallet(
+          com.elarian.hera.proto.Common.PaymentWalletCounterParty.Builder builderForValue) {
+        copyOnWrite();
+        instance.setWallet(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+       */
+      public Builder mergeWallet(com.elarian.hera.proto.Common.PaymentWalletCounterParty value) {
+        copyOnWrite();
+        instance.mergeWallet(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentWalletCounterParty wallet = 3;</code>
+       */
+      public Builder clearWallet() {
+        copyOnWrite();
+        instance.clearWallet();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentCounterParty)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PaymentCounterParty();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "party_",
+              "partyCase_",
+              com.elarian.hera.proto.Common.PaymentCustomerCounterParty.class,
+              com.elarian.hera.proto.Common.PaymentPurseCounterParty.class,
+              com.elarian.hera.proto.Common.PaymentWalletCounterParty.class,
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000\u0003<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentCounterParty> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PaymentCounterParty.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentCounterParty>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentCounterParty)
+    private static final com.elarian.hera.proto.Common.PaymentCounterParty DEFAULT_INSTANCE;
+    static {
+      PaymentCounterParty defaultInstance = new PaymentCounterParty();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentCounterParty.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentCounterParty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentCounterParty> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentCounterParty> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PaymentWalletTransactionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentWalletTransaction)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @return The transactionId.
+     */
+    java.lang.String getTransactionId();
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @return The bytes for transactionId.
+     */
+    com.google.protobuf.ByteString
+        getTransactionIdBytes();
+
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The appId.
+     */
+    java.lang.String getAppId();
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The bytes for appId.
+     */
+    com.google.protobuf.ByteString
+        getAppIdBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+     * @return The enum numeric value on the wire for side.
+     */
+    int getSideValue();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+     * @return The side.
+     */
+    com.elarian.hera.proto.Common.PaymentTransactionSide getSide();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+     * @return Whether the counterParty field is set.
+     */
+    boolean hasCounterParty();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+     * @return The counterParty.
+     */
+    com.elarian.hera.proto.Common.PaymentCounterParty getCounterParty();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+     * @return The value.
+     */
+    com.elarian.hera.proto.Common.Cash getValue();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+     * @return The status.
+     */
+    com.elarian.hera.proto.Common.PaymentStatus getStatus();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PaymentWalletTransaction}
+   */
+  public  static final class PaymentWalletTransaction extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentWalletTransaction, PaymentWalletTransaction.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentWalletTransaction)
+      PaymentWalletTransactionOrBuilder {
+    private PaymentWalletTransaction() {
+      transactionId_ = "";
+      appId_ = "";
+    }
+    public static final int TRANSACTION_ID_FIELD_NUMBER = 1;
+    private java.lang.String transactionId_;
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @return The transactionId.
+     */
+    @java.lang.Override
+    public java.lang.String getTransactionId() {
+      return transactionId_;
+    }
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @return The bytes for transactionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransactionIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(transactionId_);
+    }
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @param value The transactionId to set.
+     */
+    private void setTransactionId(
+        java.lang.String value) {
+      value.getClass();
+  
+      transactionId_ = value;
+    }
+    /**
+     * <code>string transaction_id = 1;</code>
+     */
+    private void clearTransactionId() {
+      
+      transactionId_ = getDefaultInstance().getTransactionId();
+    }
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @param value The bytes for transactionId to set.
+     */
+    private void setTransactionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      transactionId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private java.lang.String appId_;
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public java.lang.String getAppId() {
+      return appId_;
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The bytes for appId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAppIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @param value The appId to set.
+     */
+    private void setAppId(
+        java.lang.String value) {
+      value.getClass();
+  
+      appId_ = value;
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     */
+    private void clearAppId() {
+      
+      appId_ = getDefaultInstance().getAppId();
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @param value The bytes for appId to set.
+     */
+    private void setAppIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      appId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int SIDE_FIELD_NUMBER = 3;
+    private int side_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+     * @return The enum numeric value on the wire for side.
+     */
+    @java.lang.Override
+    public int getSideValue() {
+      return side_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+     * @return The side.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentTransactionSide getSide() {
+      com.elarian.hera.proto.Common.PaymentTransactionSide result = com.elarian.hera.proto.Common.PaymentTransactionSide.forNumber(side_);
+      return result == null ? com.elarian.hera.proto.Common.PaymentTransactionSide.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+     * @param value The enum numeric value on the wire for side to set.
+     */
+    private void setSideValue(int value) {
+        side_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+     * @param value The side to set.
+     */
+    private void setSide(com.elarian.hera.proto.Common.PaymentTransactionSide value) {
+      side_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+     */
+    private void clearSide() {
+      
+      side_ = 0;
+    }
+
+    public static final int COUNTER_PARTY_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.PaymentCounterParty counterParty_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasCounterParty() {
+      return counterParty_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentCounterParty getCounterParty() {
+      return counterParty_ == null ? com.elarian.hera.proto.Common.PaymentCounterParty.getDefaultInstance() : counterParty_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+     */
+    private void setCounterParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+      value.getClass();
+  counterParty_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCounterParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+      value.getClass();
+  if (counterParty_ != null &&
+          counterParty_ != com.elarian.hera.proto.Common.PaymentCounterParty.getDefaultInstance()) {
+        counterParty_ =
+          com.elarian.hera.proto.Common.PaymentCounterParty.newBuilder(counterParty_).mergeFrom(value).buildPartial();
+      } else {
+        counterParty_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+     */
+    private void clearCounterParty() {  counterParty_ = null;
+      
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 5;
+    private com.elarian.hera.proto.Common.Cash value_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.Cash getValue() {
+      return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+     */
+    private void setValue(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  value_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeValue(com.elarian.hera.proto.Common.Cash value) {
+      value.getClass();
+  if (value_ != null &&
+          value_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
+        value_ =
+          com.elarian.hera.proto.Common.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
+      } else {
+        value_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+     */
+    private void clearValue() {  value_ = null;
+      
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 6;
+    private int status_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+      com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+     * @param value The enum numeric value on the wire for status to set.
+     */
+    private void setStatusValue(int value) {
+        status_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+     * @param value The status to set.
+     */
+    private void setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+      status_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+     */
+    private void clearStatus() {
+      
+      status_ = 0;
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     */
+    private void setCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  createdAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (createdAt_ != null &&
+          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdAt_ =
+          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+      } else {
+        createdAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 7;</code>
+     */
+    private void clearCreatedAt() {  createdAt_ = null;
+      
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 8;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return updatedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     */
+    private void setUpdatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  updatedAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (updatedAt_ != null &&
+          updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        updatedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+      } else {
+        updatedAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     */
+    private void clearUpdatedAt() {  updatedAt_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentWalletTransaction prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PaymentWalletTransaction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PaymentWalletTransaction, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentWalletTransaction)
+        com.elarian.hera.proto.Common.PaymentWalletTransactionOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentWalletTransaction.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @return The transactionId.
+       */
+      @java.lang.Override
+      public java.lang.String getTransactionId() {
+        return instance.getTransactionId();
+      }
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @return The bytes for transactionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTransactionIdBytes() {
+        return instance.getTransactionIdBytes();
+      }
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @param value The transactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setTransactionId(value);
+        return this;
+      }
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionId() {
+        copyOnWrite();
+        instance.clearTransactionId();
+        return this;
+      }
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @param value The bytes for transactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setTransactionIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string app_id = 2;</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public java.lang.String getAppId() {
+        return instance.getAppId();
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @return The bytes for appId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAppIdBytes() {
+        return instance.getAppIdBytes();
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAppId(value);
+        return this;
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        copyOnWrite();
+        instance.clearAppId();
+        return this;
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @param value The bytes for appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAppIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+       * @return The enum numeric value on the wire for side.
+       */
+      @java.lang.Override
+      public int getSideValue() {
+        return instance.getSideValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+       * @param value The side to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSideValue(int value) {
+        copyOnWrite();
+        instance.setSideValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+       * @return The side.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentTransactionSide getSide() {
+        return instance.getSide();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+       * @param value The enum numeric value on the wire for side to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSide(com.elarian.hera.proto.Common.PaymentTransactionSide value) {
+        copyOnWrite();
+        instance.setSide(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentTransactionSide side = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSide() {
+        copyOnWrite();
+        instance.clearSide();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasCounterParty() {
+        return instance.hasCounterParty();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentCounterParty getCounterParty() {
+        return instance.getCounterParty();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+       */
+      public Builder setCounterParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+        copyOnWrite();
+        instance.setCounterParty(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+       */
+      public Builder setCounterParty(
+          com.elarian.hera.proto.Common.PaymentCounterParty.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCounterParty(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+       */
+      public Builder mergeCounterParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+        copyOnWrite();
+        instance.mergeCounterParty(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty counter_party = 4;</code>
+       */
+      public Builder clearCounterParty() {  copyOnWrite();
+        instance.clearCounterParty();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return instance.hasValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.Cash getValue() {
+        return instance.getValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+       */
+      public Builder setValue(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.setValue(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+       */
+      public Builder setValue(
+          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setValue(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+       */
+      public Builder mergeValue(com.elarian.hera.proto.Common.Cash value) {
+        copyOnWrite();
+        instance.mergeValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 5;</code>
+       */
+      public Builder clearValue() {  copyOnWrite();
+        instance.clearValue();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        copyOnWrite();
+        instance.setStatusValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
         return this;
       }
 
@@ -18324,53 +24165,7 @@ public final class Common {
         return this;
       }
 
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override
-      public int getStatusValue() {
-        return instance.getStatusValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        copyOnWrite();
-        instance.setStatusValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
-        return instance.getStatus();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
-        copyOnWrite();
-        instance.setStatus(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        copyOnWrite();
-        instance.clearStatus();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentTransactionStateEntry)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentWalletTransaction)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -18379,26 +24174,25 @@ public final class Common {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.Common.PaymentTransactionStateEntry();
+          return new com.elarian.hera.proto.Common.PaymentWalletTransaction();
         }
         case NEW_BUILDER: {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "direction_",
-              "customerNumber_",
-              "channelNumber_",
               "transactionId_",
-              "productId_",
+              "appId_",
+              "side_",
+              "counterParty_",
               "value_",
+              "status_",
               "createdAt_",
               "updatedAt_",
-              "status_",
             };
             java.lang.String info =
-                "\u0000\t\u0000\u0000\u0001\t\t\u0000\u0000\u0000\u0001\f\u0002\t\u0003\t\u0004\u0208" +
-                "\u0005\u0208\u0006\t\u0007\t\b\t\t\f";
+                "\u0000\b\u0000\u0000\u0001\b\b\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\f" +
+                "\u0004\t\u0005\t\u0006\f\u0007\t\b\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -18406,13 +24200,13 @@ public final class Common {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentWalletTransaction> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.Common.PaymentTransactionStateEntry.class) {
+            synchronized (com.elarian.hera.proto.Common.PaymentWalletTransaction.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentTransactionStateEntry>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentWalletTransaction>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -18431,24 +24225,525 @@ public final class Common {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentTransactionStateEntry)
-    private static final com.elarian.hera.proto.Common.PaymentTransactionStateEntry DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentWalletTransaction)
+    private static final com.elarian.hera.proto.Common.PaymentWalletTransaction DEFAULT_INSTANCE;
     static {
-      PaymentTransactionStateEntry defaultInstance = new PaymentTransactionStateEntry();
+      PaymentWalletTransaction defaultInstance = new PaymentWalletTransaction();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        PaymentTransactionStateEntry.class, defaultInstance);
+        PaymentWalletTransaction.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.Common.PaymentTransactionStateEntry getDefaultInstance() {
+    public static com.elarian.hera.proto.Common.PaymentWalletTransaction getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<PaymentTransactionStateEntry> PARSER;
+    private static volatile com.google.protobuf.Parser<PaymentWalletTransaction> PARSER;
 
-    public static com.google.protobuf.Parser<PaymentTransactionStateEntry> parser() {
+    public static com.google.protobuf.Parser<PaymentWalletTransaction> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PaymentWalletStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentWalletState)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+     * @return Whether the balance field is set.
+     */
+    boolean hasBalance();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+     * @return The balance.
+     */
+    com.elarian.hera.proto.Common.PaymentBalance getBalance();
+
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    java.util.List<com.elarian.hera.proto.Common.PaymentWalletTransaction> 
+        getTransactionLogList();
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    com.elarian.hera.proto.Common.PaymentWalletTransaction getTransactionLog(int index);
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    int getTransactionLogCount();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PaymentWalletState}
+   */
+  public  static final class PaymentWalletState extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentWalletState, PaymentWalletState.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentWalletState)
+      PaymentWalletStateOrBuilder {
+    private PaymentWalletState() {
+      transactionLog_ = emptyProtobufList();
+    }
+    public static final int BALANCE_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.Common.PaymentBalance balance_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasBalance() {
+      return balance_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentBalance getBalance() {
+      return balance_ == null ? com.elarian.hera.proto.Common.PaymentBalance.getDefaultInstance() : balance_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+     */
+    private void setBalance(com.elarian.hera.proto.Common.PaymentBalance value) {
+      value.getClass();
+  balance_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeBalance(com.elarian.hera.proto.Common.PaymentBalance value) {
+      value.getClass();
+  if (balance_ != null &&
+          balance_ != com.elarian.hera.proto.Common.PaymentBalance.getDefaultInstance()) {
+        balance_ =
+          com.elarian.hera.proto.Common.PaymentBalance.newBuilder(balance_).mergeFrom(value).buildPartial();
+      } else {
+        balance_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+     */
+    private void clearBalance() {  balance_ = null;
+      
+    }
+
+    public static final int TRANSACTION_LOG_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentWalletTransaction> transactionLog_;
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.elarian.hera.proto.Common.PaymentWalletTransaction> getTransactionLogList() {
+      return transactionLog_;
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    public java.util.List<? extends com.elarian.hera.proto.Common.PaymentWalletTransactionOrBuilder> 
+        getTransactionLogOrBuilderList() {
+      return transactionLog_;
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    @java.lang.Override
+    public int getTransactionLogCount() {
+      return transactionLog_.size();
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentWalletTransaction getTransactionLog(int index) {
+      return transactionLog_.get(index);
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    public com.elarian.hera.proto.Common.PaymentWalletTransactionOrBuilder getTransactionLogOrBuilder(
+        int index) {
+      return transactionLog_.get(index);
+    }
+    private void ensureTransactionLogIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentWalletTransaction> tmp = transactionLog_;
+      if (!tmp.isModifiable()) {
+        transactionLog_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    private void setTransactionLog(
+        int index, com.elarian.hera.proto.Common.PaymentWalletTransaction value) {
+      value.getClass();
+  ensureTransactionLogIsMutable();
+      transactionLog_.set(index, value);
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    private void addTransactionLog(com.elarian.hera.proto.Common.PaymentWalletTransaction value) {
+      value.getClass();
+  ensureTransactionLogIsMutable();
+      transactionLog_.add(value);
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    private void addTransactionLog(
+        int index, com.elarian.hera.proto.Common.PaymentWalletTransaction value) {
+      value.getClass();
+  ensureTransactionLogIsMutable();
+      transactionLog_.add(index, value);
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    private void addAllTransactionLog(
+        java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentWalletTransaction> values) {
+      ensureTransactionLogIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, transactionLog_);
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    private void clearTransactionLog() {
+      transactionLog_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+     */
+    private void removeTransactionLog(int index) {
+      ensureTransactionLogIsMutable();
+      transactionLog_.remove(index);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentWalletState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentWalletState prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PaymentWalletState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PaymentWalletState, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentWalletState)
+        com.elarian.hera.proto.Common.PaymentWalletStateOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentWalletState.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasBalance() {
+        return instance.hasBalance();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentBalance getBalance() {
+        return instance.getBalance();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+       */
+      public Builder setBalance(com.elarian.hera.proto.Common.PaymentBalance value) {
+        copyOnWrite();
+        instance.setBalance(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+       */
+      public Builder setBalance(
+          com.elarian.hera.proto.Common.PaymentBalance.Builder builderForValue) {
+        copyOnWrite();
+        instance.setBalance(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+       */
+      public Builder mergeBalance(com.elarian.hera.proto.Common.PaymentBalance value) {
+        copyOnWrite();
+        instance.mergeBalance(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentBalance balance = 1;</code>
+       */
+      public Builder clearBalance() {  copyOnWrite();
+        instance.clearBalance();
+        return this;
+      }
+
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.elarian.hera.proto.Common.PaymentWalletTransaction> getTransactionLogList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTransactionLogList());
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      @java.lang.Override
+      public int getTransactionLogCount() {
+        return instance.getTransactionLogCount();
+      }/**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentWalletTransaction getTransactionLog(int index) {
+        return instance.getTransactionLog(index);
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder setTransactionLog(
+          int index, com.elarian.hera.proto.Common.PaymentWalletTransaction value) {
+        copyOnWrite();
+        instance.setTransactionLog(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder setTransactionLog(
+          int index, com.elarian.hera.proto.Common.PaymentWalletTransaction.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTransactionLog(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder addTransactionLog(com.elarian.hera.proto.Common.PaymentWalletTransaction value) {
+        copyOnWrite();
+        instance.addTransactionLog(value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder addTransactionLog(
+          int index, com.elarian.hera.proto.Common.PaymentWalletTransaction value) {
+        copyOnWrite();
+        instance.addTransactionLog(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder addTransactionLog(
+          com.elarian.hera.proto.Common.PaymentWalletTransaction.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTransactionLog(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder addTransactionLog(
+          int index, com.elarian.hera.proto.Common.PaymentWalletTransaction.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTransactionLog(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder addAllTransactionLog(
+          java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentWalletTransaction> values) {
+        copyOnWrite();
+        instance.addAllTransactionLog(values);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder clearTransactionLog() {
+        copyOnWrite();
+        instance.clearTransactionLog();
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.PaymentWalletTransaction transaction_log = 2;</code>
+       */
+      public Builder removeTransactionLog(int index) {
+        copyOnWrite();
+        instance.removeTransactionLog(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentWalletState)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PaymentWalletState();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "balance_",
+              "transactionLog_",
+              com.elarian.hera.proto.Common.PaymentWalletTransaction.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\t\u0002\u001b" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentWalletState> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PaymentWalletState.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentWalletState>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentWalletState)
+    private static final com.elarian.hera.proto.Common.PaymentWalletState DEFAULT_INSTANCE;
+    static {
+      PaymentWalletState defaultInstance = new PaymentWalletState();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentWalletState.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentWalletState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentWalletState> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentWalletState> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -18486,30 +24781,30 @@ public final class Common {
     int getChannelNumbersCount();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
-    java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> 
+    java.util.List<com.elarian.hera.proto.Common.PaymentTransactionState> 
         getTransactionLogList();
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
-    com.elarian.hera.proto.Common.PaymentTransactionStateEntry getTransactionLog(int index);
+    com.elarian.hera.proto.Common.PaymentTransactionState getTransactionLog(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     int getTransactionLogCount();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
-    java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> 
+    java.util.List<com.elarian.hera.proto.Common.PaymentTransactionState> 
         getPendingTransactionsList();
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
-    com.elarian.hera.proto.Common.PaymentTransactionStateEntry getPendingTransactions(int index);
+    com.elarian.hera.proto.Common.PaymentTransactionState getPendingTransactions(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     int getPendingTransactionsCount();
   }
@@ -18716,44 +25011,44 @@ public final class Common {
     }
 
     public static final int TRANSACTION_LOG_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> transactionLog_;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentTransactionState> transactionLog_;
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     @java.lang.Override
-    public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> getTransactionLogList() {
+    public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionState> getTransactionLogList() {
       return transactionLog_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
-    public java.util.List<? extends com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder> 
+    public java.util.List<? extends com.elarian.hera.proto.Common.PaymentTransactionStateOrBuilder> 
         getTransactionLogOrBuilderList() {
       return transactionLog_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     @java.lang.Override
     public int getTransactionLogCount() {
       return transactionLog_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentTransactionStateEntry getTransactionLog(int index) {
+    public com.elarian.hera.proto.Common.PaymentTransactionState getTransactionLog(int index) {
       return transactionLog_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
-    public com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder getTransactionLogOrBuilder(
+    public com.elarian.hera.proto.Common.PaymentTransactionStateOrBuilder getTransactionLogOrBuilder(
         int index) {
       return transactionLog_.get(index);
     }
     private void ensureTransactionLogIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> tmp = transactionLog_;
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentTransactionState> tmp = transactionLog_;
       if (!tmp.isModifiable()) {
         transactionLog_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -18761,48 +25056,48 @@ public final class Common {
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     private void setTransactionLog(
-        int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+        int index, com.elarian.hera.proto.Common.PaymentTransactionState value) {
       value.getClass();
   ensureTransactionLogIsMutable();
       transactionLog_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
-    private void addTransactionLog(com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+    private void addTransactionLog(com.elarian.hera.proto.Common.PaymentTransactionState value) {
       value.getClass();
   ensureTransactionLogIsMutable();
       transactionLog_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     private void addTransactionLog(
-        int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+        int index, com.elarian.hera.proto.Common.PaymentTransactionState value) {
       value.getClass();
   ensureTransactionLogIsMutable();
       transactionLog_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     private void addAllTransactionLog(
-        java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentTransactionStateEntry> values) {
+        java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentTransactionState> values) {
       ensureTransactionLogIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, transactionLog_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     private void clearTransactionLog() {
       transactionLog_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
      */
     private void removeTransactionLog(int index) {
       ensureTransactionLogIsMutable();
@@ -18810,44 +25105,44 @@ public final class Common {
     }
 
     public static final int PENDING_TRANSACTIONS_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> pendingTransactions_;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentTransactionState> pendingTransactions_;
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> getPendingTransactionsList() {
+    public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionState> getPendingTransactionsList() {
       return pendingTransactions_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
-    public java.util.List<? extends com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder> 
+    public java.util.List<? extends com.elarian.hera.proto.Common.PaymentTransactionStateOrBuilder> 
         getPendingTransactionsOrBuilderList() {
       return pendingTransactions_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     @java.lang.Override
     public int getPendingTransactionsCount() {
       return pendingTransactions_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentTransactionStateEntry getPendingTransactions(int index) {
+    public com.elarian.hera.proto.Common.PaymentTransactionState getPendingTransactions(int index) {
       return pendingTransactions_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
-    public com.elarian.hera.proto.Common.PaymentTransactionStateEntryOrBuilder getPendingTransactionsOrBuilder(
+    public com.elarian.hera.proto.Common.PaymentTransactionStateOrBuilder getPendingTransactionsOrBuilder(
         int index) {
       return pendingTransactions_.get(index);
     }
     private void ensurePendingTransactionsIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> tmp = pendingTransactions_;
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.PaymentTransactionState> tmp = pendingTransactions_;
       if (!tmp.isModifiable()) {
         pendingTransactions_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -18855,48 +25150,48 @@ public final class Common {
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     private void setPendingTransactions(
-        int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+        int index, com.elarian.hera.proto.Common.PaymentTransactionState value) {
       value.getClass();
   ensurePendingTransactionsIsMutable();
       pendingTransactions_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
-    private void addPendingTransactions(com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+    private void addPendingTransactions(com.elarian.hera.proto.Common.PaymentTransactionState value) {
       value.getClass();
   ensurePendingTransactionsIsMutable();
       pendingTransactions_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     private void addPendingTransactions(
-        int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+        int index, com.elarian.hera.proto.Common.PaymentTransactionState value) {
       value.getClass();
   ensurePendingTransactionsIsMutable();
       pendingTransactions_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     private void addAllPendingTransactions(
-        java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentTransactionStateEntry> values) {
+        java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentTransactionState> values) {
       ensurePendingTransactionsIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, pendingTransactions_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     private void clearPendingTransactions() {
       pendingTransactions_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
      */
     private void removePendingTransactions(int index) {
       ensurePendingTransactionsIsMutable();
@@ -19203,92 +25498,92 @@ public final class Common {
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       @java.lang.Override
-      public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> getTransactionLogList() {
+      public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionState> getTransactionLogList() {
         return java.util.Collections.unmodifiableList(
             instance.getTransactionLogList());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       @java.lang.Override
       public int getTransactionLogCount() {
         return instance.getTransactionLogCount();
       }/**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentTransactionStateEntry getTransactionLog(int index) {
+      public com.elarian.hera.proto.Common.PaymentTransactionState getTransactionLog(int index) {
         return instance.getTransactionLog(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       public Builder setTransactionLog(
-          int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+          int index, com.elarian.hera.proto.Common.PaymentTransactionState value) {
         copyOnWrite();
         instance.setTransactionLog(index, value);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       public Builder setTransactionLog(
-          int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry.Builder builderForValue) {
+          int index, com.elarian.hera.proto.Common.PaymentTransactionState.Builder builderForValue) {
         copyOnWrite();
         instance.setTransactionLog(index,
             builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
-      public Builder addTransactionLog(com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+      public Builder addTransactionLog(com.elarian.hera.proto.Common.PaymentTransactionState value) {
         copyOnWrite();
         instance.addTransactionLog(value);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       public Builder addTransactionLog(
-          int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+          int index, com.elarian.hera.proto.Common.PaymentTransactionState value) {
         copyOnWrite();
         instance.addTransactionLog(index, value);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       public Builder addTransactionLog(
-          com.elarian.hera.proto.Common.PaymentTransactionStateEntry.Builder builderForValue) {
+          com.elarian.hera.proto.Common.PaymentTransactionState.Builder builderForValue) {
         copyOnWrite();
         instance.addTransactionLog(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       public Builder addTransactionLog(
-          int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry.Builder builderForValue) {
+          int index, com.elarian.hera.proto.Common.PaymentTransactionState.Builder builderForValue) {
         copyOnWrite();
         instance.addTransactionLog(index,
             builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       public Builder addAllTransactionLog(
-          java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentTransactionStateEntry> values) {
+          java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentTransactionState> values) {
         copyOnWrite();
         instance.addAllTransactionLog(values);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       public Builder clearTransactionLog() {
         copyOnWrite();
@@ -19296,7 +25591,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry transaction_log = 3;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState transaction_log = 3;</code>
        */
       public Builder removeTransactionLog(int index) {
         copyOnWrite();
@@ -19305,92 +25600,92 @@ public final class Common {
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       @java.lang.Override
-      public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionStateEntry> getPendingTransactionsList() {
+      public java.util.List<com.elarian.hera.proto.Common.PaymentTransactionState> getPendingTransactionsList() {
         return java.util.Collections.unmodifiableList(
             instance.getPendingTransactionsList());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       @java.lang.Override
       public int getPendingTransactionsCount() {
         return instance.getPendingTransactionsCount();
       }/**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentTransactionStateEntry getPendingTransactions(int index) {
+      public com.elarian.hera.proto.Common.PaymentTransactionState getPendingTransactions(int index) {
         return instance.getPendingTransactions(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       public Builder setPendingTransactions(
-          int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+          int index, com.elarian.hera.proto.Common.PaymentTransactionState value) {
         copyOnWrite();
         instance.setPendingTransactions(index, value);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       public Builder setPendingTransactions(
-          int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry.Builder builderForValue) {
+          int index, com.elarian.hera.proto.Common.PaymentTransactionState.Builder builderForValue) {
         copyOnWrite();
         instance.setPendingTransactions(index,
             builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
-      public Builder addPendingTransactions(com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+      public Builder addPendingTransactions(com.elarian.hera.proto.Common.PaymentTransactionState value) {
         copyOnWrite();
         instance.addPendingTransactions(value);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       public Builder addPendingTransactions(
-          int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry value) {
+          int index, com.elarian.hera.proto.Common.PaymentTransactionState value) {
         copyOnWrite();
         instance.addPendingTransactions(index, value);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       public Builder addPendingTransactions(
-          com.elarian.hera.proto.Common.PaymentTransactionStateEntry.Builder builderForValue) {
+          com.elarian.hera.proto.Common.PaymentTransactionState.Builder builderForValue) {
         copyOnWrite();
         instance.addPendingTransactions(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       public Builder addPendingTransactions(
-          int index, com.elarian.hera.proto.Common.PaymentTransactionStateEntry.Builder builderForValue) {
+          int index, com.elarian.hera.proto.Common.PaymentTransactionState.Builder builderForValue) {
         copyOnWrite();
         instance.addPendingTransactions(index,
             builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       public Builder addAllPendingTransactions(
-          java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentTransactionStateEntry> values) {
+          java.lang.Iterable<? extends com.elarian.hera.proto.Common.PaymentTransactionState> values) {
         copyOnWrite();
         instance.addAllPendingTransactions(values);
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       public Builder clearPendingTransactions() {
         copyOnWrite();
@@ -19398,7 +25693,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.PaymentTransactionStateEntry pending_transactions = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.PaymentTransactionState pending_transactions = 4;</code>
        */
       public Builder removePendingTransactions(int index) {
         copyOnWrite();
@@ -19427,9 +25722,9 @@ public final class Common {
               "channelNumbers_",
               com.elarian.hera.proto.Common.PaymentChannelNumber.class,
               "transactionLog_",
-              com.elarian.hera.proto.Common.PaymentTransactionStateEntry.class,
+              com.elarian.hera.proto.Common.PaymentTransactionState.class,
               "pendingTransactions_",
-              com.elarian.hera.proto.Common.PaymentTransactionStateEntry.class,
+              com.elarian.hera.proto.Common.PaymentTransactionState.class,
             };
             java.lang.String info =
                 "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0004\u0000\u0001\u001b\u0002\u001b" +
@@ -20283,16 +26578,16 @@ public final class Common {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
+     * <code>string app_id = 1;</code>
+     * @return The appId.
      */
-    java.lang.String getProductId();
+    java.lang.String getAppId();
     /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
+     * <code>string app_id = 1;</code>
+     * @return The bytes for appId.
      */
     com.google.protobuf.ByteString
-        getProductIdBytes();
+        getAppIdBytes();
 
     /**
      * <code>string key = 2;</code>
@@ -20318,12 +26613,23 @@ public final class Common {
     com.google.protobuf.Timestamp getExpiration();
 
     /**
-     * <code>.google.protobuf.StringValue payload = 4;</code>
+     * <code>.google.protobuf.Duration interval = 4;</code>
+     * @return Whether the interval field is set.
+     */
+    boolean hasInterval();
+    /**
+     * <code>.google.protobuf.Duration interval = 4;</code>
+     * @return The interval.
+     */
+    com.google.protobuf.Duration getInterval();
+
+    /**
+     * <code>.google.protobuf.StringValue payload = 5;</code>
      * @return Whether the payload field is set.
      */
     boolean hasPayload();
     /**
-     * <code>.google.protobuf.StringValue payload = 4;</code>
+     * <code>.google.protobuf.StringValue payload = 5;</code>
      * @return The payload.
      */
     com.google.protobuf.StringValue getPayload();
@@ -20337,53 +26643,53 @@ public final class Common {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerReminder)
       CustomerReminderOrBuilder {
     private CustomerReminder() {
-      productId_ = "";
+      appId_ = "";
       key_ = "";
     }
-    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
-    private java.lang.String productId_;
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private java.lang.String appId_;
     /**
-     * <code>string product_id = 1;</code>
-     * @return The productId.
+     * <code>string app_id = 1;</code>
+     * @return The appId.
      */
     @java.lang.Override
-    public java.lang.String getProductId() {
-      return productId_;
+    public java.lang.String getAppId() {
+      return appId_;
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @return The bytes for productId.
+     * <code>string app_id = 1;</code>
+     * @return The bytes for appId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getProductIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(productId_);
+        getAppIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @param value The productId to set.
+     * <code>string app_id = 1;</code>
+     * @param value The appId to set.
      */
-    private void setProductId(
+    private void setAppId(
         java.lang.String value) {
       value.getClass();
   
-      productId_ = value;
+      appId_ = value;
     }
     /**
-     * <code>string product_id = 1;</code>
+     * <code>string app_id = 1;</code>
      */
-    private void clearProductId() {
+    private void clearAppId() {
       
-      productId_ = getDefaultInstance().getProductId();
+      appId_ = getDefaultInstance().getAppId();
     }
     /**
-     * <code>string product_id = 1;</code>
-     * @param value The bytes for productId to set.
+     * <code>string app_id = 1;</code>
+     * @param value The bytes for appId to set.
      */
-    private void setProductIdBytes(
+    private void setAppIdBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      productId_ = value.toStringUtf8();
+      appId_ = value.toStringUtf8();
       
     }
 
@@ -20480,24 +26786,70 @@ public final class Common {
       
     }
 
-    public static final int PAYLOAD_FIELD_NUMBER = 4;
+    public static final int INTERVAL_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration interval_;
+    /**
+     * <code>.google.protobuf.Duration interval = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasInterval() {
+      return interval_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration interval = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getInterval() {
+      return interval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : interval_;
+    }
+    /**
+     * <code>.google.protobuf.Duration interval = 4;</code>
+     */
+    private void setInterval(com.google.protobuf.Duration value) {
+      value.getClass();
+  interval_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Duration interval = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeInterval(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (interval_ != null &&
+          interval_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        interval_ =
+          com.google.protobuf.Duration.newBuilder(interval_).mergeFrom(value).buildPartial();
+      } else {
+        interval_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Duration interval = 4;</code>
+     */
+    private void clearInterval() {  interval_ = null;
+      
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 5;
     private com.google.protobuf.StringValue payload_;
     /**
-     * <code>.google.protobuf.StringValue payload = 4;</code>
+     * <code>.google.protobuf.StringValue payload = 5;</code>
      */
     @java.lang.Override
     public boolean hasPayload() {
       return payload_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue payload = 4;</code>
+     * <code>.google.protobuf.StringValue payload = 5;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValue getPayload() {
       return payload_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : payload_;
     }
     /**
-     * <code>.google.protobuf.StringValue payload = 4;</code>
+     * <code>.google.protobuf.StringValue payload = 5;</code>
      */
     private void setPayload(com.google.protobuf.StringValue value) {
       value.getClass();
@@ -20505,7 +26857,7 @@ public final class Common {
       
       }
     /**
-     * <code>.google.protobuf.StringValue payload = 4;</code>
+     * <code>.google.protobuf.StringValue payload = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergePayload(com.google.protobuf.StringValue value) {
@@ -20520,7 +26872,7 @@ public final class Common {
       
     }
     /**
-     * <code>.google.protobuf.StringValue payload = 4;</code>
+     * <code>.google.protobuf.StringValue payload = 5;</code>
      */
     private void clearPayload() {  payload_ = null;
       
@@ -20622,51 +26974,51 @@ public final class Common {
 
 
       /**
-       * <code>string product_id = 1;</code>
-       * @return The productId.
+       * <code>string app_id = 1;</code>
+       * @return The appId.
        */
       @java.lang.Override
-      public java.lang.String getProductId() {
-        return instance.getProductId();
+      public java.lang.String getAppId() {
+        return instance.getAppId();
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
+       * <code>string app_id = 1;</code>
+       * @return The bytes for appId.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        return instance.getProductIdBytes();
+          getAppIdBytes() {
+        return instance.getAppIdBytes();
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @param value The productId to set.
+       * <code>string app_id = 1;</code>
+       * @param value The appId to set.
        * @return This builder for chaining.
        */
-      public Builder setProductId(
+      public Builder setAppId(
           java.lang.String value) {
         copyOnWrite();
-        instance.setProductId(value);
+        instance.setAppId(value);
         return this;
       }
       /**
-       * <code>string product_id = 1;</code>
+       * <code>string app_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearProductId() {
+      public Builder clearAppId() {
         copyOnWrite();
-        instance.clearProductId();
+        instance.clearAppId();
         return this;
       }
       /**
-       * <code>string product_id = 1;</code>
-       * @param value The bytes for productId to set.
+       * <code>string app_id = 1;</code>
+       * @param value The bytes for appId to set.
        * @return This builder for chaining.
        */
-      public Builder setProductIdBytes(
+      public Builder setAppIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setProductIdBytes(value);
+        instance.setAppIdBytes(value);
         return this;
       }
 
@@ -20767,21 +27119,68 @@ public final class Common {
       }
 
       /**
-       * <code>.google.protobuf.StringValue payload = 4;</code>
+       * <code>.google.protobuf.Duration interval = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasInterval() {
+        return instance.hasInterval();
+      }
+      /**
+       * <code>.google.protobuf.Duration interval = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getInterval() {
+        return instance.getInterval();
+      }
+      /**
+       * <code>.google.protobuf.Duration interval = 4;</code>
+       */
+      public Builder setInterval(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setInterval(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Duration interval = 4;</code>
+       */
+      public Builder setInterval(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setInterval(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration interval = 4;</code>
+       */
+      public Builder mergeInterval(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeInterval(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration interval = 4;</code>
+       */
+      public Builder clearInterval() {  copyOnWrite();
+        instance.clearInterval();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue payload = 5;</code>
        */
       @java.lang.Override
       public boolean hasPayload() {
         return instance.hasPayload();
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 4;</code>
+       * <code>.google.protobuf.StringValue payload = 5;</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValue getPayload() {
         return instance.getPayload();
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 4;</code>
+       * <code>.google.protobuf.StringValue payload = 5;</code>
        */
       public Builder setPayload(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -20789,7 +27188,7 @@ public final class Common {
         return this;
         }
       /**
-       * <code>.google.protobuf.StringValue payload = 4;</code>
+       * <code>.google.protobuf.StringValue payload = 5;</code>
        */
       public Builder setPayload(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -20798,7 +27197,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 4;</code>
+       * <code>.google.protobuf.StringValue payload = 5;</code>
        */
       public Builder mergePayload(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -20806,7 +27205,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 4;</code>
+       * <code>.google.protobuf.StringValue payload = 5;</code>
        */
       public Builder clearPayload() {  copyOnWrite();
         instance.clearPayload();
@@ -20829,14 +27228,15 @@ public final class Common {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "productId_",
+              "appId_",
               "key_",
               "expiration_",
+              "interval_",
               "payload_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\t\u0004\t";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t\u0004\t\u0005\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -26999,1234 +33399,6 @@ public final class Common {
     private static volatile com.google.protobuf.Parser<VoiceCallAction> PARSER;
 
     public static com.google.protobuf.Parser<VoiceCallAction> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface PendingWalletTransactionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PendingWalletTransaction)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     * @return Whether the createdAt field is set.
-     */
-    boolean hasCreatedAt();
-    /**
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     * @return The createdAt.
-     */
-    com.google.protobuf.Timestamp getCreatedAt();
-
-    /**
-     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-     * @return Whether the value field is set.
-     */
-    boolean hasValue();
-    /**
-     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-     * @return The value.
-     */
-    com.elarian.hera.proto.Common.Cash getValue();
-
-    /**
-     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-     * @return Whether the converted field is set.
-     */
-    boolean hasConverted();
-    /**
-     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-     * @return The converted.
-     */
-    com.elarian.hera.proto.Common.Cash getConverted();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.PendingWalletTransaction}
-   */
-  public  static final class PendingWalletTransaction extends
-      com.google.protobuf.GeneratedMessageLite<
-          PendingWalletTransaction, PendingWalletTransaction.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PendingWalletTransaction)
-      PendingWalletTransactionOrBuilder {
-    private PendingWalletTransaction() {
-    }
-    public static final int CREATED_AT_FIELD_NUMBER = 1;
-    private com.google.protobuf.Timestamp createdAt_;
-    /**
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     */
-    @java.lang.Override
-    public boolean hasCreatedAt() {
-      return createdAt_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getCreatedAt() {
-      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     */
-    private void setCreatedAt(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  createdAt_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  if (createdAt_ != null &&
-          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-        createdAt_ =
-          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
-      } else {
-        createdAt_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.Timestamp created_at = 1;</code>
-     */
-    private void clearCreatedAt() {  createdAt_ = null;
-      
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.Cash value_;
-    /**
-     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-     */
-    @java.lang.Override
-    public boolean hasValue() {
-      return value_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.Cash getValue() {
-      return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-     */
-    private void setValue(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  value_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeValue(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  if (value_ != null &&
-          value_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
-        value_ =
-          com.elarian.hera.proto.Common.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
-      } else {
-        value_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-     */
-    private void clearValue() {  value_ = null;
-      
-    }
-
-    public static final int CONVERTED_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.Cash converted_;
-    /**
-     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasConverted() {
-      return converted_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.Cash getConverted() {
-      return converted_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : converted_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-     */
-    private void setConverted(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  converted_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeConverted(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  if (converted_ != null &&
-          converted_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
-        converted_ =
-          com.elarian.hera.proto.Common.Cash.newBuilder(converted_).mergeFrom(value).buildPartial();
-      } else {
-        converted_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-     */
-    private void clearConverted() {  converted_ = null;
-      
-    }
-
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.Common.PendingWalletTransaction prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.PendingWalletTransaction}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.Common.PendingWalletTransaction, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PendingWalletTransaction)
-        com.elarian.hera.proto.Common.PendingWalletTransactionOrBuilder {
-      // Construct using com.elarian.hera.proto.Common.PendingWalletTransaction.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
-       */
-      @java.lang.Override
-      public boolean hasCreatedAt() {
-        return instance.hasCreatedAt();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Timestamp getCreatedAt() {
-        return instance.getCreatedAt();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
-       */
-      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.setCreatedAt(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
-       */
-      public Builder setCreatedAt(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCreatedAt(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
-       */
-      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.mergeCreatedAt(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp created_at = 1;</code>
-       */
-      public Builder clearCreatedAt() {  copyOnWrite();
-        instance.clearCreatedAt();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-       */
-      @java.lang.Override
-      public boolean hasValue() {
-        return instance.hasValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.Cash getValue() {
-        return instance.getValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-       */
-      public Builder setValue(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.setValue(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-       */
-      public Builder setValue(
-          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
-        copyOnWrite();
-        instance.setValue(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-       */
-      public Builder mergeValue(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.mergeValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash value = 2;</code>
-       */
-      public Builder clearValue() {  copyOnWrite();
-        instance.clearValue();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasConverted() {
-        return instance.hasConverted();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.Cash getConverted() {
-        return instance.getConverted();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-       */
-      public Builder setConverted(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.setConverted(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-       */
-      public Builder setConverted(
-          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
-        copyOnWrite();
-        instance.setConverted(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-       */
-      public Builder mergeConverted(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.mergeConverted(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash converted = 3;</code>
-       */
-      public Builder clearConverted() {  copyOnWrite();
-        instance.clearConverted();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PendingWalletTransaction)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.Common.PendingWalletTransaction();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "createdAt_",
-              "value_",
-              "converted_",
-            };
-            java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
-                "\t";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PendingWalletTransaction> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.Common.PendingWalletTransaction.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PendingWalletTransaction>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PendingWalletTransaction)
-    private static final com.elarian.hera.proto.Common.PendingWalletTransaction DEFAULT_INSTANCE;
-    static {
-      PendingWalletTransaction defaultInstance = new PendingWalletTransaction();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        PendingWalletTransaction.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.Common.PendingWalletTransaction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<PendingWalletTransaction> PARSER;
-
-    public static com.google.protobuf.Parser<PendingWalletTransaction> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface WalletBalanceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WalletBalance)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>string currency_code = 1;</code>
-     * @return The currencyCode.
-     */
-    java.lang.String getCurrencyCode();
-    /**
-     * <code>string currency_code = 1;</code>
-     * @return The bytes for currencyCode.
-     */
-    com.google.protobuf.ByteString
-        getCurrencyCodeBytes();
-
-    /**
-     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-     * @return Whether the available field is set.
-     */
-    boolean hasAvailable();
-    /**
-     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-     * @return The available.
-     */
-    com.elarian.hera.proto.Common.Cash getAvailable();
-
-    /**
-     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-     * @return Whether the actual field is set.
-     */
-    boolean hasActual();
-    /**
-     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-     * @return The actual.
-     */
-    com.elarian.hera.proto.Common.Cash getActual();
-
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-    int getPendingCount();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-    boolean containsPending(
-        java.lang.String key);
-    /**
-     * Use {@link #getPendingMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction>
-    getPending();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction>
-    getPendingMap();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-
-    com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.PendingWalletTransaction defaultValue);
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-
-    com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrThrow(
-        java.lang.String key);
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.WalletBalance}
-   */
-  public  static final class WalletBalance extends
-      com.google.protobuf.GeneratedMessageLite<
-          WalletBalance, WalletBalance.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WalletBalance)
-      WalletBalanceOrBuilder {
-    private WalletBalance() {
-      currencyCode_ = "";
-    }
-    public static final int CURRENCY_CODE_FIELD_NUMBER = 1;
-    private java.lang.String currencyCode_;
-    /**
-     * <code>string currency_code = 1;</code>
-     * @return The currencyCode.
-     */
-    @java.lang.Override
-    public java.lang.String getCurrencyCode() {
-      return currencyCode_;
-    }
-    /**
-     * <code>string currency_code = 1;</code>
-     * @return The bytes for currencyCode.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCurrencyCodeBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(currencyCode_);
-    }
-    /**
-     * <code>string currency_code = 1;</code>
-     * @param value The currencyCode to set.
-     */
-    private void setCurrencyCode(
-        java.lang.String value) {
-      value.getClass();
-  
-      currencyCode_ = value;
-    }
-    /**
-     * <code>string currency_code = 1;</code>
-     */
-    private void clearCurrencyCode() {
-      
-      currencyCode_ = getDefaultInstance().getCurrencyCode();
-    }
-    /**
-     * <code>string currency_code = 1;</code>
-     * @param value The bytes for currencyCode to set.
-     */
-    private void setCurrencyCodeBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      currencyCode_ = value.toStringUtf8();
-      
-    }
-
-    public static final int AVAILABLE_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.Cash available_;
-    /**
-     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-     */
-    @java.lang.Override
-    public boolean hasAvailable() {
-      return available_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.Cash getAvailable() {
-      return available_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : available_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-     */
-    private void setAvailable(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  available_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeAvailable(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  if (available_ != null &&
-          available_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
-        available_ =
-          com.elarian.hera.proto.Common.Cash.newBuilder(available_).mergeFrom(value).buildPartial();
-      } else {
-        available_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-     */
-    private void clearAvailable() {  available_ = null;
-      
-    }
-
-    public static final int ACTUAL_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.Cash actual_;
-    /**
-     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasActual() {
-      return actual_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.Cash getActual() {
-      return actual_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : actual_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-     */
-    private void setActual(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  actual_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeActual(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  if (actual_ != null &&
-          actual_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
-        actual_ =
-          com.elarian.hera.proto.Common.Cash.newBuilder(actual_).mergeFrom(value).buildPartial();
-      } else {
-        actual_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-     */
-    private void clearActual() {  actual_ = null;
-      
-    }
-
-    public static final int PENDING_FIELD_NUMBER = 4;
-    private static final class PendingDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.elarian.hera.proto.Common.PendingWalletTransaction.getDefaultInstance());
-    }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> pending_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction>
-    internalGetPending() {
-      return pending_;
-    }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction>
-    internalGetMutablePending() {
-      if (!pending_.isMutable()) {
-        pending_ = pending_.mutableCopy();
-      }
-      return pending_;
-    }
-    @java.lang.Override
-
-    public int getPendingCount() {
-      return internalGetPending().size();
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-    @java.lang.Override
-
-    public boolean containsPending(
-        java.lang.String key) {
-      key.getClass();
-      return internalGetPending().containsKey(key);
-    }
-    /**
-     * Use {@link #getPendingMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> getPending() {
-      return getPendingMap();
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> getPendingMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetPending());
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.PendingWalletTransaction defaultValue) {
-      key.getClass();
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> map =
-          internalGetPending();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrThrow(
-        java.lang.String key) {
-      key.getClass();
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> map =
-          internalGetPending();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-     */
-    private java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction>
-    getMutablePendingMap() {
-      return internalGetMutablePending();
-    }
-
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.Common.WalletBalance parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.Common.WalletBalance prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.WalletBalance}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.Common.WalletBalance, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WalletBalance)
-        com.elarian.hera.proto.Common.WalletBalanceOrBuilder {
-      // Construct using com.elarian.hera.proto.Common.WalletBalance.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>string currency_code = 1;</code>
-       * @return The currencyCode.
-       */
-      @java.lang.Override
-      public java.lang.String getCurrencyCode() {
-        return instance.getCurrencyCode();
-      }
-      /**
-       * <code>string currency_code = 1;</code>
-       * @return The bytes for currencyCode.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCurrencyCodeBytes() {
-        return instance.getCurrencyCodeBytes();
-      }
-      /**
-       * <code>string currency_code = 1;</code>
-       * @param value The currencyCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrencyCode(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setCurrencyCode(value);
-        return this;
-      }
-      /**
-       * <code>string currency_code = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurrencyCode() {
-        copyOnWrite();
-        instance.clearCurrencyCode();
-        return this;
-      }
-      /**
-       * <code>string currency_code = 1;</code>
-       * @param value The bytes for currencyCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrencyCodeBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setCurrencyCodeBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-       */
-      @java.lang.Override
-      public boolean hasAvailable() {
-        return instance.hasAvailable();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.Cash getAvailable() {
-        return instance.getAvailable();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-       */
-      public Builder setAvailable(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.setAvailable(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-       */
-      public Builder setAvailable(
-          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
-        copyOnWrite();
-        instance.setAvailable(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-       */
-      public Builder mergeAvailable(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.mergeAvailable(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash available = 2;</code>
-       */
-      public Builder clearAvailable() {  copyOnWrite();
-        instance.clearAvailable();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasActual() {
-        return instance.hasActual();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.Cash getActual() {
-        return instance.getActual();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-       */
-      public Builder setActual(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.setActual(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-       */
-      public Builder setActual(
-          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
-        copyOnWrite();
-        instance.setActual(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-       */
-      public Builder mergeActual(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.mergeActual(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash actual = 3;</code>
-       */
-      public Builder clearActual() {  copyOnWrite();
-        instance.clearActual();
-        return this;
-      }
-
-      @java.lang.Override
-
-      public int getPendingCount() {
-        return instance.getPendingMap().size();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-       */
-      @java.lang.Override
-
-      public boolean containsPending(
-          java.lang.String key) {
-        key.getClass();
-        return instance.getPendingMap().containsKey(key);
-      }
-
-      public Builder clearPending() {
-        copyOnWrite();
-        instance.getMutablePendingMap().clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-       */
-
-      public Builder removePending(
-          java.lang.String key) {
-        key.getClass();
-        copyOnWrite();
-        instance.getMutablePendingMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getPendingMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> getPending() {
-        return getPendingMap();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> getPendingMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getPendingMap());
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-       */
-      @java.lang.Override
-
-      public com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrDefault(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.PendingWalletTransaction defaultValue) {
-        key.getClass();
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> map =
-            instance.getPendingMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-       */
-      @java.lang.Override
-
-      public com.elarian.hera.proto.Common.PendingWalletTransaction getPendingOrThrow(
-          java.lang.String key) {
-        key.getClass();
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> map =
-            instance.getPendingMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-       */
-      public Builder putPending(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.PendingWalletTransaction value) {
-        key.getClass();
-        value.getClass();
-        copyOnWrite();
-        instance.getMutablePendingMap().put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.PendingWalletTransaction&gt; pending = 4;</code>
-       */
-      public Builder putAllPending(
-          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.PendingWalletTransaction> values) {
-        copyOnWrite();
-        instance.getMutablePendingMap().putAll(values);
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WalletBalance)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.Common.WalletBalance();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "currencyCode_",
-              "available_",
-              "actual_",
-              "pending_",
-              PendingDefaultEntryHolder.defaultEntry,
-            };
-            java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0001\u0000\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u00042";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.Common.WalletBalance> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.Common.WalletBalance.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.WalletBalance>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WalletBalance)
-    private static final com.elarian.hera.proto.Common.WalletBalance DEFAULT_INSTANCE;
-    static {
-      WalletBalance defaultInstance = new WalletBalance();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        WalletBalance.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.Common.WalletBalance getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<WalletBalance> PARSER;
-
-    public static com.google.protobuf.Parser<WalletBalance> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

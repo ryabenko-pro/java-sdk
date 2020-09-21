@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 Web.GetCustomerStateRequest req =  Web.GetCustomerStateRequest
                         .newBuilder()
                         .setCustomerId("fake_id")
-                        .setAppId("test_app")
+                        .setOrgId("test_org")
                         .build();
                 asyncInstance.getCustomerState(req, new StreamObserver<Web.GetCustomerStateReply>() {
                     @Override

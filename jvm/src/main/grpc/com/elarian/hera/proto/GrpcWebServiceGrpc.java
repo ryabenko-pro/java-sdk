@@ -368,6 +368,37 @@ public final class GrpcWebServiceGrpc {
     return getDeleteCustomerSecondaryIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest,
+      com.elarian.hera.proto.Web.LeaseCustomerMetadataReply> getLeaseCustomerMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "LeaseCustomerMetadata",
+      requestType = com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest.class,
+      responseType = com.elarian.hera.proto.Web.LeaseCustomerMetadataReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest,
+      com.elarian.hera.proto.Web.LeaseCustomerMetadataReply> getLeaseCustomerMetadataMethod() {
+    io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest, com.elarian.hera.proto.Web.LeaseCustomerMetadataReply> getLeaseCustomerMetadataMethod;
+    if ((getLeaseCustomerMetadataMethod = GrpcWebServiceGrpc.getLeaseCustomerMetadataMethod) == null) {
+      synchronized (GrpcWebServiceGrpc.class) {
+        if ((getLeaseCustomerMetadataMethod = GrpcWebServiceGrpc.getLeaseCustomerMetadataMethod) == null) {
+          GrpcWebServiceGrpc.getLeaseCustomerMetadataMethod = getLeaseCustomerMetadataMethod =
+              io.grpc.MethodDescriptor.<com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest, com.elarian.hera.proto.Web.LeaseCustomerMetadataReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "LeaseCustomerMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.elarian.hera.proto.Web.LeaseCustomerMetadataReply.getDefaultInstance()))
+              .setSchemaDescriptor(new GrpcWebServiceMethodDescriptorSupplier("LeaseCustomerMetadata"))
+              .build();
+        }
+      }
+    }
+    return getLeaseCustomerMetadataMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.UpdateCustomerMetadataRequest,
       com.elarian.hera.proto.Web.UpdateCustomerStateReply> getUpdateCustomerMetadataMethod;
 
@@ -555,28 +586,28 @@ public final class GrpcWebServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.SendPaymentRequest,
-      com.elarian.hera.proto.Web.SendPaymentReply> getSendPaymentMethod;
+      com.elarian.hera.proto.Web.InitiatePaymentReply> getSendPaymentMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SendPayment",
       requestType = com.elarian.hera.proto.Web.SendPaymentRequest.class,
-      responseType = com.elarian.hera.proto.Web.SendPaymentReply.class,
+      responseType = com.elarian.hera.proto.Web.InitiatePaymentReply.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.SendPaymentRequest,
-      com.elarian.hera.proto.Web.SendPaymentReply> getSendPaymentMethod() {
-    io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.SendPaymentRequest, com.elarian.hera.proto.Web.SendPaymentReply> getSendPaymentMethod;
+      com.elarian.hera.proto.Web.InitiatePaymentReply> getSendPaymentMethod() {
+    io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.SendPaymentRequest, com.elarian.hera.proto.Web.InitiatePaymentReply> getSendPaymentMethod;
     if ((getSendPaymentMethod = GrpcWebServiceGrpc.getSendPaymentMethod) == null) {
       synchronized (GrpcWebServiceGrpc.class) {
         if ((getSendPaymentMethod = GrpcWebServiceGrpc.getSendPaymentMethod) == null) {
           GrpcWebServiceGrpc.getSendPaymentMethod = getSendPaymentMethod =
-              io.grpc.MethodDescriptor.<com.elarian.hera.proto.Web.SendPaymentRequest, com.elarian.hera.proto.Web.SendPaymentReply>newBuilder()
+              io.grpc.MethodDescriptor.<com.elarian.hera.proto.Web.SendPaymentRequest, com.elarian.hera.proto.Web.InitiatePaymentReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendPayment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.elarian.hera.proto.Web.SendPaymentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.elarian.hera.proto.Web.SendPaymentReply.getDefaultInstance()))
+                  com.elarian.hera.proto.Web.InitiatePaymentReply.getDefaultInstance()))
               .setSchemaDescriptor(new GrpcWebServiceMethodDescriptorSupplier("SendPayment"))
               .build();
         }
@@ -586,34 +617,65 @@ public final class GrpcWebServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.CheckoutPaymentRequest,
-      com.elarian.hera.proto.Web.CheckoutPaymentReply> getCheckoutPaymentMethod;
+      com.elarian.hera.proto.Web.InitiatePaymentReply> getCheckoutPaymentMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CheckoutPayment",
       requestType = com.elarian.hera.proto.Web.CheckoutPaymentRequest.class,
-      responseType = com.elarian.hera.proto.Web.CheckoutPaymentReply.class,
+      responseType = com.elarian.hera.proto.Web.InitiatePaymentReply.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.CheckoutPaymentRequest,
-      com.elarian.hera.proto.Web.CheckoutPaymentReply> getCheckoutPaymentMethod() {
-    io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.CheckoutPaymentRequest, com.elarian.hera.proto.Web.CheckoutPaymentReply> getCheckoutPaymentMethod;
+      com.elarian.hera.proto.Web.InitiatePaymentReply> getCheckoutPaymentMethod() {
+    io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.CheckoutPaymentRequest, com.elarian.hera.proto.Web.InitiatePaymentReply> getCheckoutPaymentMethod;
     if ((getCheckoutPaymentMethod = GrpcWebServiceGrpc.getCheckoutPaymentMethod) == null) {
       synchronized (GrpcWebServiceGrpc.class) {
         if ((getCheckoutPaymentMethod = GrpcWebServiceGrpc.getCheckoutPaymentMethod) == null) {
           GrpcWebServiceGrpc.getCheckoutPaymentMethod = getCheckoutPaymentMethod =
-              io.grpc.MethodDescriptor.<com.elarian.hera.proto.Web.CheckoutPaymentRequest, com.elarian.hera.proto.Web.CheckoutPaymentReply>newBuilder()
+              io.grpc.MethodDescriptor.<com.elarian.hera.proto.Web.CheckoutPaymentRequest, com.elarian.hera.proto.Web.InitiatePaymentReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CheckoutPayment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.elarian.hera.proto.Web.CheckoutPaymentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.elarian.hera.proto.Web.CheckoutPaymentReply.getDefaultInstance()))
+                  com.elarian.hera.proto.Web.InitiatePaymentReply.getDefaultInstance()))
               .setSchemaDescriptor(new GrpcWebServiceMethodDescriptorSupplier("CheckoutPayment"))
               .build();
         }
       }
     }
     return getCheckoutPaymentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.CustomerWalletPaymentRequest,
+      com.elarian.hera.proto.Web.InitiatePaymentReply> getCustomerWalletPaymentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CustomerWalletPayment",
+      requestType = com.elarian.hera.proto.Web.CustomerWalletPaymentRequest.class,
+      responseType = com.elarian.hera.proto.Web.InitiatePaymentReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.CustomerWalletPaymentRequest,
+      com.elarian.hera.proto.Web.InitiatePaymentReply> getCustomerWalletPaymentMethod() {
+    io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.CustomerWalletPaymentRequest, com.elarian.hera.proto.Web.InitiatePaymentReply> getCustomerWalletPaymentMethod;
+    if ((getCustomerWalletPaymentMethod = GrpcWebServiceGrpc.getCustomerWalletPaymentMethod) == null) {
+      synchronized (GrpcWebServiceGrpc.class) {
+        if ((getCustomerWalletPaymentMethod = GrpcWebServiceGrpc.getCustomerWalletPaymentMethod) == null) {
+          GrpcWebServiceGrpc.getCustomerWalletPaymentMethod = getCustomerWalletPaymentMethod =
+              io.grpc.MethodDescriptor.<com.elarian.hera.proto.Web.CustomerWalletPaymentRequest, com.elarian.hera.proto.Web.InitiatePaymentReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CustomerWalletPayment"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.elarian.hera.proto.Web.CustomerWalletPaymentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.elarian.hera.proto.Web.InitiatePaymentReply.getDefaultInstance()))
+              .setSchemaDescriptor(new GrpcWebServiceMethodDescriptorSupplier("CustomerWalletPayment"))
+              .build();
+        }
+      }
+    }
+    return getCustomerWalletPaymentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.elarian.hera.proto.Web.MakeVoiceCallRequest,
@@ -836,6 +898,13 @@ public final class GrpcWebServiceGrpc {
 
     /**
      */
+    public void leaseCustomerMetadata(com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest request,
+        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.LeaseCustomerMetadataReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getLeaseCustomerMetadataMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void updateCustomerMetadata(com.elarian.hera.proto.Web.UpdateCustomerMetadataRequest request,
         io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.UpdateCustomerStateReply> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateCustomerMetadataMethod(), responseObserver);
@@ -879,15 +948,22 @@ public final class GrpcWebServiceGrpc {
     /**
      */
     public void sendPayment(com.elarian.hera.proto.Web.SendPaymentRequest request,
-        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.SendPaymentReply> responseObserver) {
+        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply> responseObserver) {
       asyncUnimplementedUnaryCall(getSendPaymentMethod(), responseObserver);
     }
 
     /**
      */
     public void checkoutPayment(com.elarian.hera.proto.Web.CheckoutPaymentRequest request,
-        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.CheckoutPaymentReply> responseObserver) {
+        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply> responseObserver) {
       asyncUnimplementedUnaryCall(getCheckoutPaymentMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void customerWalletPayment(com.elarian.hera.proto.Web.CustomerWalletPaymentRequest request,
+        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getCustomerWalletPaymentMethod(), responseObserver);
     }
 
     /**
@@ -991,6 +1067,13 @@ public final class GrpcWebServiceGrpc {
                 com.elarian.hera.proto.Web.UpdateCustomerStateReply>(
                   this, METHODID_DELETE_CUSTOMER_SECONDARY_ID)))
           .addMethod(
+            getLeaseCustomerMetadataMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest,
+                com.elarian.hera.proto.Web.LeaseCustomerMetadataReply>(
+                  this, METHODID_LEASE_CUSTOMER_METADATA)))
+          .addMethod(
             getUpdateCustomerMetadataMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -1037,15 +1120,22 @@ public final class GrpcWebServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.elarian.hera.proto.Web.SendPaymentRequest,
-                com.elarian.hera.proto.Web.SendPaymentReply>(
+                com.elarian.hera.proto.Web.InitiatePaymentReply>(
                   this, METHODID_SEND_PAYMENT)))
           .addMethod(
             getCheckoutPaymentMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.elarian.hera.proto.Web.CheckoutPaymentRequest,
-                com.elarian.hera.proto.Web.CheckoutPaymentReply>(
+                com.elarian.hera.proto.Web.InitiatePaymentReply>(
                   this, METHODID_CHECKOUT_PAYMENT)))
+          .addMethod(
+            getCustomerWalletPaymentMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.elarian.hera.proto.Web.CustomerWalletPaymentRequest,
+                com.elarian.hera.proto.Web.InitiatePaymentReply>(
+                  this, METHODID_CUSTOMER_WALLET_PAYMENT)))
           .addMethod(
             getMakeVoiceCallMethod(),
             asyncUnaryCall(
@@ -1175,6 +1265,14 @@ public final class GrpcWebServiceGrpc {
 
     /**
      */
+    public void leaseCustomerMetadata(com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest request,
+        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.LeaseCustomerMetadataReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getLeaseCustomerMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void updateCustomerMetadata(com.elarian.hera.proto.Web.UpdateCustomerMetadataRequest request,
         io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.UpdateCustomerStateReply> responseObserver) {
       asyncUnaryCall(
@@ -1224,7 +1322,7 @@ public final class GrpcWebServiceGrpc {
     /**
      */
     public void sendPayment(com.elarian.hera.proto.Web.SendPaymentRequest request,
-        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.SendPaymentReply> responseObserver) {
+        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSendPaymentMethod(), getCallOptions()), request, responseObserver);
     }
@@ -1232,9 +1330,17 @@ public final class GrpcWebServiceGrpc {
     /**
      */
     public void checkoutPayment(com.elarian.hera.proto.Web.CheckoutPaymentRequest request,
-        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.CheckoutPaymentReply> responseObserver) {
+        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCheckoutPaymentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void customerWalletPayment(com.elarian.hera.proto.Web.CustomerWalletPaymentRequest request,
+        io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCustomerWalletPaymentMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1355,6 +1461,13 @@ public final class GrpcWebServiceGrpc {
 
     /**
      */
+    public com.elarian.hera.proto.Web.LeaseCustomerMetadataReply leaseCustomerMetadata(com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getLeaseCustomerMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.elarian.hera.proto.Web.UpdateCustomerStateReply updateCustomerMetadata(com.elarian.hera.proto.Web.UpdateCustomerMetadataRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateCustomerMetadataMethod(), getCallOptions(), request);
@@ -1397,16 +1510,23 @@ public final class GrpcWebServiceGrpc {
 
     /**
      */
-    public com.elarian.hera.proto.Web.SendPaymentReply sendPayment(com.elarian.hera.proto.Web.SendPaymentRequest request) {
+    public com.elarian.hera.proto.Web.InitiatePaymentReply sendPayment(com.elarian.hera.proto.Web.SendPaymentRequest request) {
       return blockingUnaryCall(
           getChannel(), getSendPaymentMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.elarian.hera.proto.Web.CheckoutPaymentReply checkoutPayment(com.elarian.hera.proto.Web.CheckoutPaymentRequest request) {
+    public com.elarian.hera.proto.Web.InitiatePaymentReply checkoutPayment(com.elarian.hera.proto.Web.CheckoutPaymentRequest request) {
       return blockingUnaryCall(
           getChannel(), getCheckoutPaymentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.elarian.hera.proto.Web.InitiatePaymentReply customerWalletPayment(com.elarian.hera.proto.Web.CustomerWalletPaymentRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCustomerWalletPaymentMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1536,6 +1656,14 @@ public final class GrpcWebServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.elarian.hera.proto.Web.LeaseCustomerMetadataReply> leaseCustomerMetadata(
+        com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getLeaseCustomerMetadataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.elarian.hera.proto.Web.UpdateCustomerStateReply> updateCustomerMetadata(
         com.elarian.hera.proto.Web.UpdateCustomerMetadataRequest request) {
       return futureUnaryCall(
@@ -1584,7 +1712,7 @@ public final class GrpcWebServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.elarian.hera.proto.Web.SendPaymentReply> sendPayment(
+    public com.google.common.util.concurrent.ListenableFuture<com.elarian.hera.proto.Web.InitiatePaymentReply> sendPayment(
         com.elarian.hera.proto.Web.SendPaymentRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSendPaymentMethod(), getCallOptions()), request);
@@ -1592,10 +1720,18 @@ public final class GrpcWebServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.elarian.hera.proto.Web.CheckoutPaymentReply> checkoutPayment(
+    public com.google.common.util.concurrent.ListenableFuture<com.elarian.hera.proto.Web.InitiatePaymentReply> checkoutPayment(
         com.elarian.hera.proto.Web.CheckoutPaymentRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCheckoutPaymentMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.elarian.hera.proto.Web.InitiatePaymentReply> customerWalletPayment(
+        com.elarian.hera.proto.Web.CustomerWalletPaymentRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCustomerWalletPaymentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1626,17 +1762,19 @@ public final class GrpcWebServiceGrpc {
   private static final int METHODID_DELETE_CUSTOMER_TAG = 8;
   private static final int METHODID_UPDATE_CUSTOMER_SECONDARY_ID = 9;
   private static final int METHODID_DELETE_CUSTOMER_SECONDARY_ID = 10;
-  private static final int METHODID_UPDATE_CUSTOMER_METADATA = 11;
-  private static final int METHODID_DELETE_CUSTOMER_METADATA = 12;
-  private static final int METHODID_SEND_MESSAGE = 13;
-  private static final int METHODID_SEND_MESSAGE_BY_TAG = 14;
-  private static final int METHODID_REPLY_TO_MESSAGE = 15;
-  private static final int METHODID_MESSAGING_CONSENT = 16;
-  private static final int METHODID_SEND_PAYMENT = 17;
-  private static final int METHODID_CHECKOUT_PAYMENT = 18;
-  private static final int METHODID_MAKE_VOICE_CALL = 19;
-  private static final int METHODID_STREAM_NOTIFICATIONS = 20;
-  private static final int METHODID_SEND_WEBHOOK_RESPONSE = 21;
+  private static final int METHODID_LEASE_CUSTOMER_METADATA = 11;
+  private static final int METHODID_UPDATE_CUSTOMER_METADATA = 12;
+  private static final int METHODID_DELETE_CUSTOMER_METADATA = 13;
+  private static final int METHODID_SEND_MESSAGE = 14;
+  private static final int METHODID_SEND_MESSAGE_BY_TAG = 15;
+  private static final int METHODID_REPLY_TO_MESSAGE = 16;
+  private static final int METHODID_MESSAGING_CONSENT = 17;
+  private static final int METHODID_SEND_PAYMENT = 18;
+  private static final int METHODID_CHECKOUT_PAYMENT = 19;
+  private static final int METHODID_CUSTOMER_WALLET_PAYMENT = 20;
+  private static final int METHODID_MAKE_VOICE_CALL = 21;
+  private static final int METHODID_STREAM_NOTIFICATIONS = 22;
+  private static final int METHODID_SEND_WEBHOOK_RESPONSE = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1699,6 +1837,10 @@ public final class GrpcWebServiceGrpc {
           serviceImpl.deleteCustomerSecondaryId((com.elarian.hera.proto.Web.DeleteCustomerSecondaryIdRequest) request,
               (io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.UpdateCustomerStateReply>) responseObserver);
           break;
+        case METHODID_LEASE_CUSTOMER_METADATA:
+          serviceImpl.leaseCustomerMetadata((com.elarian.hera.proto.Web.LeaseCustomerMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.LeaseCustomerMetadataReply>) responseObserver);
+          break;
         case METHODID_UPDATE_CUSTOMER_METADATA:
           serviceImpl.updateCustomerMetadata((com.elarian.hera.proto.Web.UpdateCustomerMetadataRequest) request,
               (io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.UpdateCustomerStateReply>) responseObserver);
@@ -1725,11 +1867,15 @@ public final class GrpcWebServiceGrpc {
           break;
         case METHODID_SEND_PAYMENT:
           serviceImpl.sendPayment((com.elarian.hera.proto.Web.SendPaymentRequest) request,
-              (io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.SendPaymentReply>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply>) responseObserver);
           break;
         case METHODID_CHECKOUT_PAYMENT:
           serviceImpl.checkoutPayment((com.elarian.hera.proto.Web.CheckoutPaymentRequest) request,
-              (io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.CheckoutPaymentReply>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply>) responseObserver);
+          break;
+        case METHODID_CUSTOMER_WALLET_PAYMENT:
+          serviceImpl.customerWalletPayment((com.elarian.hera.proto.Web.CustomerWalletPaymentRequest) request,
+              (io.grpc.stub.StreamObserver<com.elarian.hera.proto.Web.InitiatePaymentReply>) responseObserver);
           break;
         case METHODID_MAKE_VOICE_CALL:
           serviceImpl.makeVoiceCall((com.elarian.hera.proto.Web.MakeVoiceCallRequest) request,
@@ -1815,6 +1961,7 @@ public final class GrpcWebServiceGrpc {
               .addMethod(getDeleteCustomerTagMethod())
               .addMethod(getUpdateCustomerSecondaryIdMethod())
               .addMethod(getDeleteCustomerSecondaryIdMethod())
+              .addMethod(getLeaseCustomerMetadataMethod())
               .addMethod(getUpdateCustomerMetadataMethod())
               .addMethod(getDeleteCustomerMetadataMethod())
               .addMethod(getSendMessageMethod())
@@ -1823,6 +1970,7 @@ public final class GrpcWebServiceGrpc {
               .addMethod(getMessagingConsentMethod())
               .addMethod(getSendPaymentMethod())
               .addMethod(getCheckoutPaymentMethod())
+              .addMethod(getCustomerWalletPaymentMethod())
               .addMethod(getMakeVoiceCallMethod())
               .addMethod(getStreamNotificationsMethod())
               .addMethod(getSendWebhookResponseMethod())
