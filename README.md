@@ -59,7 +59,7 @@ The SDK needs to be initialized with your API key, which you get from the [dashb
 val elarian = Elarian.newInstance("test_api_key")
 val req = GetCustomerStateRequest
         .newBuilder()
-        .setAppId("test_app")
+        .setOrgId("test_org")
         .setCustomerId("fake")
         .build()
 val res = elarian.getCustomerState(req)
@@ -70,7 +70,7 @@ val res = elarian.getCustomerState(req)
 GrpcWebServiceBlockingStub elarian = Elarian.newInstance("test_api_key");
 GetCustomerStateRequest req = GetCustomerStateRequest
         .newBuilder()
-        .setAppId("test_app")
+        .setOrgId("test_org")
         .setCustomerId("fake")
         .build();
 GetCustomerStateReply res = elarian.getCustomerState(req);
