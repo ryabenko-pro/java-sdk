@@ -8612,6 +8612,17 @@ public final class Common {
      * @return The expiration.
      */
     com.google.protobuf.Timestamp getExpiration();
+
+    /**
+     * <code>.google.protobuf.StringValue app_id = 3;</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>.google.protobuf.StringValue app_id = 3;</code>
+     * @return The appId.
+     */
+    com.google.protobuf.StringValue getAppId();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessagingSessionStateEntry}
@@ -8712,6 +8723,52 @@ public final class Common {
      * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
     private void clearExpiration() {  expiration_ = null;
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue appId_;
+    /**
+     * <code>.google.protobuf.StringValue app_id = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return appId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getAppId() {
+      return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 3;</code>
+     */
+    private void setAppId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  appId_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAppId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (appId_ != null &&
+          appId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        appId_ =
+          com.google.protobuf.StringValue.newBuilder(appId_).mergeFrom(value).buildPartial();
+      } else {
+        appId_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 3;</code>
+     */
+    private void clearAppId() {  appId_ = null;
       
     }
 
@@ -8904,6 +8961,53 @@ public final class Common {
         return this;
       }
 
+      /**
+       * <code>.google.protobuf.StringValue app_id = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasAppId() {
+        return instance.hasAppId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getAppId() {
+        return instance.getAppId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 3;</code>
+       */
+      public Builder setAppId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setAppId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 3;</code>
+       */
+      public Builder setAppId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAppId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 3;</code>
+       */
+      public Builder mergeAppId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeAppId(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 3;</code>
+       */
+      public Builder clearAppId() {  copyOnWrite();
+        instance.clearAppId();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingSessionStateEntry)
     }
     @java.lang.Override
@@ -8922,9 +9026,11 @@ public final class Common {
             java.lang.Object[] objects = new java.lang.Object[] {
               "startedAt_",
               "expiration_",
+              "appId_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\t\u0002\t";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
