@@ -1706,6 +1706,10 @@ public final class Common {
      */
     VOICE_CALL_STATUS_EXPIRED(405),
     /**
+     * <code>VOICE_CALL_STATUS_INVALID_CHANNEL_NUMBER = 406;</code>
+     */
+    VOICE_CALL_STATUS_INVALID_CHANNEL_NUMBER(406),
+    /**
      * <code>VOICE_CALL_STATUS_APPLICATION_ERROR = 501;</code>
      */
     VOICE_CALL_STATUS_APPLICATION_ERROR(501),
@@ -1789,6 +1793,10 @@ public final class Common {
      */
     public static final int VOICE_CALL_STATUS_EXPIRED_VALUE = 405;
     /**
+     * <code>VOICE_CALL_STATUS_INVALID_CHANNEL_NUMBER = 406;</code>
+     */
+    public static final int VOICE_CALL_STATUS_INVALID_CHANNEL_NUMBER_VALUE = 406;
+    /**
      * <code>VOICE_CALL_STATUS_APPLICATION_ERROR = 501;</code>
      */
     public static final int VOICE_CALL_STATUS_APPLICATION_ERROR_VALUE = 501;
@@ -1834,6 +1842,7 @@ public final class Common {
         case 403: return VOICE_CALL_STATUS_DESTINATION_NOT_SUPPORTED;
         case 404: return VOICE_CALL_STATUS_DECOMMISSIONED_CUSTOMERID;
         case 405: return VOICE_CALL_STATUS_EXPIRED;
+        case 406: return VOICE_CALL_STATUS_INVALID_CHANNEL_NUMBER;
         case 501: return VOICE_CALL_STATUS_APPLICATION_ERROR;
         default: return null;
       }
