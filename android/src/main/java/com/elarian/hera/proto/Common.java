@@ -2340,6 +2340,409 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.TextToSpeechVoice)
   }
 
+  public interface HttpHeadersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.HttpHeaders)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string ip_address = 1;</code>
+     * @return The ipAddress.
+     */
+    java.lang.String getIpAddress();
+    /**
+     * <code>string ip_address = 1;</code>
+     * @return The bytes for ipAddress.
+     */
+    com.google.protobuf.ByteString
+        getIpAddressBytes();
+
+    /**
+     * <code>string user_agent = 2;</code>
+     * @return The userAgent.
+     */
+    java.lang.String getUserAgent();
+    /**
+     * <code>string user_agent = 2;</code>
+     * @return The bytes for userAgent.
+     */
+    com.google.protobuf.ByteString
+        getUserAgentBytes();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.HttpHeaders}
+   */
+  public  static final class HttpHeaders extends
+      com.google.protobuf.GeneratedMessageLite<
+          HttpHeaders, HttpHeaders.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.HttpHeaders)
+      HttpHeadersOrBuilder {
+    private HttpHeaders() {
+      ipAddress_ = "";
+      userAgent_ = "";
+    }
+    public static final int IP_ADDRESS_FIELD_NUMBER = 1;
+    private java.lang.String ipAddress_;
+    /**
+     * <code>string ip_address = 1;</code>
+     * @return The ipAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getIpAddress() {
+      return ipAddress_;
+    }
+    /**
+     * <code>string ip_address = 1;</code>
+     * @return The bytes for ipAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIpAddressBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(ipAddress_);
+    }
+    /**
+     * <code>string ip_address = 1;</code>
+     * @param value The ipAddress to set.
+     */
+    private void setIpAddress(
+        java.lang.String value) {
+      value.getClass();
+  
+      ipAddress_ = value;
+    }
+    /**
+     * <code>string ip_address = 1;</code>
+     */
+    private void clearIpAddress() {
+      
+      ipAddress_ = getDefaultInstance().getIpAddress();
+    }
+    /**
+     * <code>string ip_address = 1;</code>
+     * @param value The bytes for ipAddress to set.
+     */
+    private void setIpAddressBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ipAddress_ = value.toStringUtf8();
+      
+    }
+
+    public static final int USER_AGENT_FIELD_NUMBER = 2;
+    private java.lang.String userAgent_;
+    /**
+     * <code>string user_agent = 2;</code>
+     * @return The userAgent.
+     */
+    @java.lang.Override
+    public java.lang.String getUserAgent() {
+      return userAgent_;
+    }
+    /**
+     * <code>string user_agent = 2;</code>
+     * @return The bytes for userAgent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserAgentBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(userAgent_);
+    }
+    /**
+     * <code>string user_agent = 2;</code>
+     * @param value The userAgent to set.
+     */
+    private void setUserAgent(
+        java.lang.String value) {
+      value.getClass();
+  
+      userAgent_ = value;
+    }
+    /**
+     * <code>string user_agent = 2;</code>
+     */
+    private void clearUserAgent() {
+      
+      userAgent_ = getDefaultInstance().getUserAgent();
+    }
+    /**
+     * <code>string user_agent = 2;</code>
+     * @param value The bytes for userAgent to set.
+     */
+    private void setUserAgentBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      userAgent_ = value.toStringUtf8();
+      
+    }
+
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.HttpHeaders prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.HttpHeaders}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.HttpHeaders, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.HttpHeaders)
+        com.elarian.hera.proto.Common.HttpHeadersOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.HttpHeaders.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string ip_address = 1;</code>
+       * @return The ipAddress.
+       */
+      @java.lang.Override
+      public java.lang.String getIpAddress() {
+        return instance.getIpAddress();
+      }
+      /**
+       * <code>string ip_address = 1;</code>
+       * @return The bytes for ipAddress.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIpAddressBytes() {
+        return instance.getIpAddressBytes();
+      }
+      /**
+       * <code>string ip_address = 1;</code>
+       * @param value The ipAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddress(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setIpAddress(value);
+        return this;
+      }
+      /**
+       * <code>string ip_address = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIpAddress() {
+        copyOnWrite();
+        instance.clearIpAddress();
+        return this;
+      }
+      /**
+       * <code>string ip_address = 1;</code>
+       * @param value The bytes for ipAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIpAddressBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIpAddressBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string user_agent = 2;</code>
+       * @return The userAgent.
+       */
+      @java.lang.Override
+      public java.lang.String getUserAgent() {
+        return instance.getUserAgent();
+      }
+      /**
+       * <code>string user_agent = 2;</code>
+       * @return The bytes for userAgent.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserAgentBytes() {
+        return instance.getUserAgentBytes();
+      }
+      /**
+       * <code>string user_agent = 2;</code>
+       * @param value The userAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAgent(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setUserAgent(value);
+        return this;
+      }
+      /**
+       * <code>string user_agent = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserAgent() {
+        copyOnWrite();
+        instance.clearUserAgent();
+        return this;
+      }
+      /**
+       * <code>string user_agent = 2;</code>
+       * @param value The bytes for userAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAgentBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUserAgentBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.HttpHeaders)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.HttpHeaders();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "ipAddress_",
+              "userAgent_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.HttpHeaders> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.HttpHeaders.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.HttpHeaders>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.HttpHeaders)
+    private static final com.elarian.hera.proto.Common.HttpHeaders DEFAULT_INSTANCE;
+    static {
+      HttpHeaders defaultInstance = new HttpHeaders();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        HttpHeaders.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.HttpHeaders getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<HttpHeaders> PARSER;
+
+    public static com.google.protobuf.Parser<HttpHeaders> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface CashOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.Cash)
       com.google.protobuf.MessageLiteOrBuilder {
