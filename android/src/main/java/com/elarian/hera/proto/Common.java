@@ -2340,8 +2340,8 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.TextToSpeechVoice)
   }
 
-  public interface HttpHeadersOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.HttpHeaders)
+  public interface AppHeadersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.AppHeaders)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -2369,14 +2369,14 @@ public final class Common {
         getUserAgentBytes();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.HttpHeaders}
+   * Protobuf type {@code com.elarian.hera.proto.AppHeaders}
    */
-  public  static final class HttpHeaders extends
+  public  static final class AppHeaders extends
       com.google.protobuf.GeneratedMessageLite<
-          HttpHeaders, HttpHeaders.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.HttpHeaders)
-      HttpHeadersOrBuilder {
-    private HttpHeaders() {
+          AppHeaders, AppHeaders.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AppHeaders)
+      AppHeadersOrBuilder {
+    private AppHeaders() {
       ipAddress_ = "";
       userAgent_ = "";
     }
@@ -2474,73 +2474,73 @@ public final class Common {
       
     }
 
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(byte[] data)
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.AppHeaders parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseDelimitedFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2551,19 +2551,19 @@ public final class Common {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.Common.HttpHeaders prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.Common.AppHeaders prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.HttpHeaders}
+     * Protobuf type {@code com.elarian.hera.proto.AppHeaders}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.Common.HttpHeaders, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.HttpHeaders)
-        com.elarian.hera.proto.Common.HttpHeadersOrBuilder {
-      // Construct using com.elarian.hera.proto.Common.HttpHeaders.newBuilder()
+          com.elarian.hera.proto.Common.AppHeaders, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.AppHeaders)
+        com.elarian.hera.proto.Common.AppHeadersOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.AppHeaders.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -2667,7 +2667,7 @@ public final class Common {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.HttpHeaders)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppHeaders)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -2676,7 +2676,7 @@ public final class Common {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.Common.HttpHeaders();
+          return new com.elarian.hera.proto.Common.AppHeaders();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -2696,13 +2696,13 @@ public final class Common {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.Common.HttpHeaders> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.AppHeaders> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.Common.HttpHeaders.class) {
+            synchronized (com.elarian.hera.proto.Common.AppHeaders.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.HttpHeaders>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.AppHeaders>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -2721,24 +2721,24 @@ public final class Common {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.HttpHeaders)
-    private static final com.elarian.hera.proto.Common.HttpHeaders DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AppHeaders)
+    private static final com.elarian.hera.proto.Common.AppHeaders DEFAULT_INSTANCE;
     static {
-      HttpHeaders defaultInstance = new HttpHeaders();
+      AppHeaders defaultInstance = new AppHeaders();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        HttpHeaders.class, defaultInstance);
+        AppHeaders.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.Common.HttpHeaders getDefaultInstance() {
+    public static com.elarian.hera.proto.Common.AppHeaders getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<HttpHeaders> PARSER;
+    private static volatile com.google.protobuf.Parser<AppHeaders> PARSER;
 
-    public static com.google.protobuf.Parser<HttpHeaders> parser() {
+    public static com.google.protobuf.Parser<AppHeaders> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

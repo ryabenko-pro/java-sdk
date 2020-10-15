@@ -2669,8 +2669,8 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.TextToSpeechVoice)
   }
 
-  public interface HttpHeadersOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.HttpHeaders)
+  public interface AppHeadersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.AppHeaders)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2698,18 +2698,18 @@ public final class Common {
         getUserAgentBytes();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.HttpHeaders}
+   * Protobuf type {@code com.elarian.hera.proto.AppHeaders}
    */
-  public static final class HttpHeaders extends
+  public static final class AppHeaders extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.HttpHeaders)
-      HttpHeadersOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AppHeaders)
+      AppHeadersOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use HttpHeaders.newBuilder() to construct.
-    private HttpHeaders(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AppHeaders.newBuilder() to construct.
+    private AppHeaders(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private HttpHeaders() {
+    private AppHeaders() {
       ipAddress_ = "";
       userAgent_ = "";
     }
@@ -2718,7 +2718,7 @@ public final class Common {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new HttpHeaders();
+      return new AppHeaders();
     }
 
     @java.lang.Override
@@ -2726,7 +2726,7 @@ public final class Common {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private HttpHeaders(
+    private AppHeaders(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2777,15 +2777,15 @@ public final class Common {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_HttpHeaders_descriptor;
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_HttpHeaders_fieldAccessorTable
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.elarian.hera.proto.Common.HttpHeaders.class, com.elarian.hera.proto.Common.HttpHeaders.Builder.class);
+              com.elarian.hera.proto.Common.AppHeaders.class, com.elarian.hera.proto.Common.AppHeaders.Builder.class);
     }
 
     public static final int IP_ADDRESS_FIELD_NUMBER = 1;
@@ -2909,10 +2909,10 @@ public final class Common {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.elarian.hera.proto.Common.HttpHeaders)) {
+      if (!(obj instanceof com.elarian.hera.proto.Common.AppHeaders)) {
         return super.equals(obj);
       }
-      com.elarian.hera.proto.Common.HttpHeaders other = (com.elarian.hera.proto.Common.HttpHeaders) obj;
+      com.elarian.hera.proto.Common.AppHeaders other = (com.elarian.hera.proto.Common.AppHeaders) obj;
 
       if (!getIpAddress()
           .equals(other.getIpAddress())) return false;
@@ -2938,69 +2938,69 @@ public final class Common {
       return hash;
     }
 
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(byte[] data)
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.AppHeaders parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseDelimitedFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.Common.HttpHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3013,7 +3013,7 @@ public final class Common {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.Common.HttpHeaders prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.Common.AppHeaders prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3029,26 +3029,26 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.elarian.hera.proto.HttpHeaders}
+     * Protobuf type {@code com.elarian.hera.proto.AppHeaders}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.HttpHeaders)
-        com.elarian.hera.proto.Common.HttpHeadersOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.AppHeaders)
+        com.elarian.hera.proto.Common.AppHeadersOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_HttpHeaders_descriptor;
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_HttpHeaders_fieldAccessorTable
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.elarian.hera.proto.Common.HttpHeaders.class, com.elarian.hera.proto.Common.HttpHeaders.Builder.class);
+                com.elarian.hera.proto.Common.AppHeaders.class, com.elarian.hera.proto.Common.AppHeaders.Builder.class);
       }
 
-      // Construct using com.elarian.hera.proto.Common.HttpHeaders.newBuilder()
+      // Construct using com.elarian.hera.proto.Common.AppHeaders.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3076,17 +3076,17 @@ public final class Common {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_HttpHeaders_descriptor;
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_descriptor;
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.Common.HttpHeaders getDefaultInstanceForType() {
-        return com.elarian.hera.proto.Common.HttpHeaders.getDefaultInstance();
+      public com.elarian.hera.proto.Common.AppHeaders getDefaultInstanceForType() {
+        return com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.Common.HttpHeaders build() {
-        com.elarian.hera.proto.Common.HttpHeaders result = buildPartial();
+      public com.elarian.hera.proto.Common.AppHeaders build() {
+        com.elarian.hera.proto.Common.AppHeaders result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3094,8 +3094,8 @@ public final class Common {
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.Common.HttpHeaders buildPartial() {
-        com.elarian.hera.proto.Common.HttpHeaders result = new com.elarian.hera.proto.Common.HttpHeaders(this);
+      public com.elarian.hera.proto.Common.AppHeaders buildPartial() {
+        com.elarian.hera.proto.Common.AppHeaders result = new com.elarian.hera.proto.Common.AppHeaders(this);
         result.ipAddress_ = ipAddress_;
         result.userAgent_ = userAgent_;
         onBuilt();
@@ -3136,16 +3136,16 @@ public final class Common {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.elarian.hera.proto.Common.HttpHeaders) {
-          return mergeFrom((com.elarian.hera.proto.Common.HttpHeaders)other);
+        if (other instanceof com.elarian.hera.proto.Common.AppHeaders) {
+          return mergeFrom((com.elarian.hera.proto.Common.AppHeaders)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.elarian.hera.proto.Common.HttpHeaders other) {
-        if (other == com.elarian.hera.proto.Common.HttpHeaders.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.elarian.hera.proto.Common.AppHeaders other) {
+        if (other == com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance()) return this;
         if (!other.getIpAddress().isEmpty()) {
           ipAddress_ = other.ipAddress_;
           onChanged();
@@ -3169,11 +3169,11 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.elarian.hera.proto.Common.HttpHeaders parsedMessage = null;
+        com.elarian.hera.proto.Common.AppHeaders parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.elarian.hera.proto.Common.HttpHeaders) e.getUnfinishedMessage();
+          parsedMessage = (com.elarian.hera.proto.Common.AppHeaders) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3347,41 +3347,41 @@ public final class Common {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.HttpHeaders)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppHeaders)
     }
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.HttpHeaders)
-    private static final com.elarian.hera.proto.Common.HttpHeaders DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AppHeaders)
+    private static final com.elarian.hera.proto.Common.AppHeaders DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.elarian.hera.proto.Common.HttpHeaders();
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.Common.AppHeaders();
     }
 
-    public static com.elarian.hera.proto.Common.HttpHeaders getDefaultInstance() {
+    public static com.elarian.hera.proto.Common.AppHeaders getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<HttpHeaders>
-        PARSER = new com.google.protobuf.AbstractParser<HttpHeaders>() {
+    private static final com.google.protobuf.Parser<AppHeaders>
+        PARSER = new com.google.protobuf.AbstractParser<AppHeaders>() {
       @java.lang.Override
-      public HttpHeaders parsePartialFrom(
+      public AppHeaders parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new HttpHeaders(input, extensionRegistry);
+        return new AppHeaders(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<HttpHeaders> parser() {
+    public static com.google.protobuf.Parser<AppHeaders> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<HttpHeaders> getParserForType() {
+    public com.google.protobuf.Parser<AppHeaders> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.elarian.hera.proto.Common.HttpHeaders getDefaultInstanceForType() {
+    public com.elarian.hera.proto.Common.AppHeaders getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -59321,10 +59321,10 @@ public final class Common {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_elarian_hera_proto_HttpHeaders_descriptor;
+    internal_static_com_elarian_hera_proto_AppHeaders_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_elarian_hera_proto_HttpHeaders_fieldAccessorTable;
+      internal_static_com_elarian_hera_proto_AppHeaders_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_Cash_descriptor;
   private static final 
@@ -59592,382 +59592,382 @@ public final class Common {
       "\n\014common.proto\022\026com.elarian.hera.proto\032\036" +
       "google/protobuf/wrappers.proto\032\036google/p" +
       "rotobuf/duration.proto\032\037google/protobuf/" +
-      "timestamp.proto\"5\n\013HttpHeaders\022\022\n\nip_add" +
-      "ress\030\001 \001(\t\022\022\n\nuser_agent\030\002 \001(\t\"-\n\004Cash\022\025" +
-      "\n\rcurrency_code\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"\223\001" +
-      "\n\016CustomerNumber\022@\n\010provider\030\001 \001(\0162..com" +
-      ".elarian.hera.proto.CustomerNumberProvid" +
-      "er\022\016\n\006number\030\002 \001(\t\022/\n\tpartition\030\003 \001(\0132\034." +
-      "google.protobuf.StringValue\"c\n\026Messaging" +
-      "ChannelNumber\0229\n\007channel\030\001 \001(\0162(.com.ela" +
-      "rian.hera.proto.MessagingChannel\022\016\n\006numb" +
-      "er\030\002 \001(\t\"Y\n\021UssdChannelNumber\0224\n\007channel" +
-      "\030\001 \001(\0162#.com.elarian.hera.proto.UssdChan" +
-      "nel\022\016\n\006number\030\002 \001(\t\"_\n\024PaymentChannelNum" +
-      "ber\0227\n\007channel\030\001 \001(\0162&.com.elarian.hera." +
-      "proto.PaymentChannel\022\016\n\006number\030\002 \001(\t\"[\n\022" +
-      "VoiceChannelNumber\0225\n\007channel\030\001 \001(\0162$.co" +
-      "m.elarian.hera.proto.VoiceChannel\022\016\n\006num" +
-      "ber\030\002 \001(\t\"3\n\023TextMessageTemplate\022\014\n\004name" +
-      "\030\001 \001(\t\022\016\n\006params\030\002 \003(\t\"|\n\017TextMessageBod" +
-      "y\022*\n\004text\030\001 \001(\0132\034.google.protobuf.String" +
-      "Value\022=\n\010template\030\002 \001(\0132+.com.elarian.he" +
-      "ra.proto.TextMessageTemplate\"Q\n\020MediaMes" +
-      "sageBody\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001(\0162!.c" +
-      "om.elarian.hera.proto.MediaType\":\n\023Locat" +
-      "ionMessageBody\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlong" +
-      "itude\030\002 \001(\001\"\323\001\n\023CustomerMessageBody\0227\n\004t" +
-      "ext\030\001 \001(\0132\'.com.elarian.hera.proto.TextM" +
-      "essageBodyH\000\0229\n\005media\030\002 \001(\0132(.com.elaria" +
-      "n.hera.proto.MediaMessageBodyH\000\022?\n\010locat" +
-      "ion\030\003 \001(\0132+.com.elarian.hera.proto.Locat" +
-      "ionMessageBodyH\000B\007\n\005entry\"-\n\010UssdMenu\022\014\n" +
-      "\004text\030\001 \001(\t\022\023\n\013is_terminal\030\002 \001(\010\"\226\001\n\007Uss" +
-      "dHop\022+\n\005input\030\001 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022.\n\004menu\030\002 \001(\0132 .com.elarian.he" +
-      "ra.proto.UssdMenu\022.\n\ncreated_at\030\003 \001(\0132\032." +
-      "google.protobuf.Timestamp\"B\n\014DataMapValu" +
-      "e\022\024\n\nstring_val\030\002 \001(\tH\000\022\023\n\tbytes_val\030\003 \001" +
-      "(\014H\000B\007\n\005value\"\214\001\n\032MessagingConsentStateE" +
-      "ntry\022>\n\006status\030\001 \001(\0162..com.elarian.hera." +
-      "proto.MessagingConsentStatus\022.\n\nupdated_" +
-      "at\030\002 \001(\0132\032.google.protobuf.Timestamp\"\252\001\n" +
-      "\032MessagingSessionStateEntry\022.\n\nstarted_a" +
-      "t\030\001 \001(\0132\032.google.protobuf.Timestamp\022.\n\ne" +
-      "xpiration\030\002 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022,\n\006app_id\030\003 \001(\0132\034.google.protobuf.St" +
-      "ringValue\"\274\002\n\032MessagingChannelStateEntry" +
-      "\022?\n\017customer_number\030\001 \001(\0132&.com.elarian." +
-      "hera.proto.CustomerNumber\022F\n\016channel_num" +
-      "ber\030\002 \001(\0132..com.elarian.hera.proto.Messa" +
-      "gingChannelNumber\022I\n\rconsent_state\030\003 \001(\013" +
-      "22.com.elarian.hera.proto.MessagingConse" +
-      "ntStateEntry\022J\n\016active_session\030\004 \001(\01322.c" +
-      "om.elarian.hera.proto.MessagingSessionSt" +
-      "ateEntry\"\243\005\n\021MessageStateEntry\022A\n\tdirect" +
-      "ion\030\001 \001(\0162..com.elarian.hera.proto.Custo" +
-      "merEventDirection\022?\n\017customer_number\030\002 \001" +
-      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
-      "er\022F\n\016channel_number\030\003 \001(\0132..com.elarian" +
-      ".hera.proto.MessagingChannelNumber\022\022\n\nme" +
-      "ssage_id\030\004 \001(\t\022,\n\006app_id\030\005 \001(\0132\034.google." +
-      "protobuf.StringValue\022*\n\004text\030\006 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022=\n\010template\030\007 \001" +
-      "(\0132+.com.elarian.hera.proto.TextMessageT" +
-      "emplate\0227\n\005media\030\010 \003(\0132(.com.elarian.her" +
-      "a.proto.MediaMessageBody\022=\n\010location\030\t \001" +
-      "(\0132+.com.elarian.hera.proto.LocationMess" +
-      "ageBody\022.\n\ncreated_at\030\n \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022.\n\nupdated_at\030\013 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022=\n\006status\030\014 \001(\0162" +
-      "-.com.elarian.hera.proto.MessageDelivery" +
-      "Status\"\243\002\n\016MessagingState\022I\n\rchannel_sta" +
-      "te\030\001 \003(\01322.com.elarian.hera.proto.Messag" +
-      "ingChannelStateEntry\022;\n\010messages\030\002 \003(\0132)" +
-      ".com.elarian.hera.proto.MessageStateEntr" +
-      "y\022@\n\020customer_numbers\030\003 \003(\0132&.com.elaria" +
-      "n.hera.proto.CustomerNumber\022G\n\017channel_n" +
-      "umbers\030\004 \003(\0132..com.elarian.hera.proto.Me" +
-      "ssagingChannelNumber\"\354\002\n\025UssdSessionStat" +
-      "eEntry\022?\n\017customer_number\030\001 \001(\0132&.com.el" +
-      "arian.hera.proto.CustomerNumber\022A\n\016chann" +
-      "el_number\030\002 \001(\0132).com.elarian.hera.proto" +
-      ".UssdChannelNumber\022\022\n\nsession_id\030\003 \001(\t\022," +
-      "\n\006app_id\030\004 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022-\n\004hops\030\005 \003(\0132\037.com.elarian.hera.pr" +
-      "oto.UssdHop\022.\n\ncreated_at\030\006 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022.\n\nupdated_at\030\007 \001(\0132" +
-      "\032.google.protobuf.Timestamp\"\322\001\n\tUssdStat" +
-      "e\022?\n\010sessions\030\001 \003(\0132-.com.elarian.hera.p" +
-      "roto.UssdSessionStateEntry\022@\n\020customer_n" +
-      "umbers\030\002 \003(\0132&.com.elarian.hera.proto.Cu" +
-      "stomerNumber\022B\n\017channel_numbers\030\003 \003(\0132)." +
-      "com.elarian.hera.proto.UssdChannelNumber" +
-      "\"\215\001\n\022VoiceCallDialInput\022\032\n\022destination_n" +
-      "umber\030\001 \001(\t\022.\n\nstarted_at\030\002 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022+\n\010duration\030\003 \001(\0132\031." +
-      "google.protobuf.Duration\"\241\002\n\023VoiceCallQu" +
-      "eueInput\022/\n\013enqueued_at\030\001 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022/\n\013dequeued_at\030\002 \001(\0132\032" +
-      ".google.protobuf.Timestamp\0228\n\022dequeued_t" +
-      "o_number\030\003 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022;\n\025dequeued_to_sessionId\030\004 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\0221\n\016queue_durat" +
-      "ion\030\005 \001(\0132\031.google.protobuf.Duration\"\250\003\n" +
-      "\021VoiceCallHopInput\0227\n\006status\030\001 \001(\0162\'.com" +
-      ".elarian.hera.proto.VoiceCallStatus\022.\n\ns" +
-      "tarted_at\030\002 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022B\n\014hangup_cause\030\003 \001(\0162,.com.elarian." +
-      "hera.proto.VoiceCallHangupCause\0221\n\013dtmf_" +
-      "digits\030\004 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\0223\n\rrecording_url\030\005 \001(\0132\034.google.proto" +
-      "buf.StringValue\022=\n\tdial_data\030\006 \001(\0132*.com" +
-      ".elarian.hera.proto.VoiceCallDialInput\022?" +
-      "\n\nqueue_data\030\007 \001(\0132+.com.elarian.hera.pr" +
-      "oto.VoiceCallQueueInput\"\262\001\n\014VoiceCallHop" +
-      "\0228\n\005input\030\001 \001(\0132).com.elarian.hera.proto" +
-      ".VoiceCallHopInput\0228\n\007actions\030\002 \003(\0132\'.co" +
-      "m.elarian.hera.proto.VoiceCallAction\022.\n\n" +
-      "created_at\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tamp\"\305\004\n\023VoiceCallStateEntry\022A\n\tdirectio" +
-      "n\030\001 \001(\0162..com.elarian.hera.proto.Custome" +
-      "rEventDirection\022?\n\017customer_number\030\002 \001(\013" +
-      "2&.com.elarian.hera.proto.CustomerNumber" +
-      "\022B\n\016channel_number\030\003 \001(\0132*.com.elarian.h" +
-      "era.proto.VoiceChannelNumber\022\022\n\nsession_" +
-      "id\030\004 \001(\t\022,\n\006app_id\030\005 \001(\0132\034.google.protob" +
-      "uf.StringValue\0227\n\006status\030\006 \001(\0162\'.com.ela" +
-      "rian.hera.proto.VoiceCallStatus\0222\n\004hops\030" +
-      "\007 \003(\0132$.com.elarian.hera.proto.VoiceCall" +
-      "Hop\022+\n\010duration\030\010 \001(\0132\031.google.protobuf." +
-      "Duration\022*\n\004cost\030\t \001(\0132\034.com.elarian.her" +
-      "a.proto.Cash\022.\n\ncreated_at\030\n \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022.\n\nupdated_at\030\013 \001(\013" +
-      "2\032.google.protobuf.Timestamp\"\317\001\n\nVoiceSt" +
-      "ate\022:\n\005calls\030\001 \003(\0132+.com.elarian.hera.pr" +
-      "oto.VoiceCallStateEntry\022@\n\020customer_numb" +
-      "ers\030\002 \003(\0132&.com.elarian.hera.proto.Custo" +
-      "merNumber\022C\n\017channel_numbers\030\003 \003(\0132*.com" +
-      ".elarian.hera.proto.VoiceChannelNumber\"\251" +
-      "\001\n\031PendingPaymentTransaction\022.\n\ncreated_" +
-      "at\030\001 \001(\0132\032.google.protobuf.Timestamp\022+\n\005" +
-      "value\030\002 \001(\0132\034.com.elarian.hera.proto.Cas" +
-      "h\022/\n\tconverted\030\003 \001(\0132\034.com.elarian.hera." +
-      "proto.Cash\"\304\002\n\016PaymentBalance\022\025\n\rcurrenc" +
-      "y_code\030\001 \001(\t\022/\n\tavailable\030\002 \001(\0132\034.com.el" +
-      "arian.hera.proto.Cash\022,\n\006actual\030\003 \001(\0132\034." +
-      "com.elarian.hera.proto.Cash\022D\n\007pending\030\004" +
-      " \003(\01323.com.elarian.hera.proto.PaymentBal" +
-      "ance.PendingEntry\022\023\n\013sequence_nr\030\005 \001(\004\032a" +
-      "\n\014PendingEntry\022\013\n\003key\030\001 \001(\t\022@\n\005value\030\002 \001" +
-      "(\01321.com.elarian.hera.proto.PendingPayme" +
-      "ntTransaction:\0028\001\",\n\030PaymentPurseCounter" +
-      "Party\022\020\n\010purse_id\030\001 \001(\t\"C\n\031PaymentWallet" +
-      "CounterParty\022\023\n\013customer_id\030\001 \001(\t\022\021\n\twal" +
-      "let_id\030\002 \001(\t\"\244\001\n\033PaymentCustomerCounterP" +
-      "arty\022?\n\017customer_number\030\001 \001(\0132&.com.elar" +
-      "ian.hera.proto.CustomerNumber\022D\n\016channel" +
-      "_number\030\002 \001(\0132,.com.elarian.hera.proto.P" +
-      "aymentChannelNumber\"\357\001\n\023PaymentCounterPa" +
-      "rty\022G\n\010customer\030\001 \001(\01323.com.elarian.hera" +
-      ".proto.PaymentCustomerCounterPartyH\000\022A\n\005" +
-      "purse\030\002 \001(\01320.com.elarian.hera.proto.Pay" +
-      "mentPurseCounterPartyH\000\022C\n\006wallet\030\003 \001(\0132" +
-      "1.com.elarian.hera.proto.PaymentWalletCo" +
-      "unterPartyH\000B\007\n\005party\"\243\003\n\022PaymentTransac" +
-      "tion\022\026\n\016transaction_id\030\001 \001(\t\022,\n\006app_id\030\002" +
-      " \001(\0132\034.google.protobuf.StringValue\022@\n\013de" +
-      "bit_party\030\004 \001(\0132+.com.elarian.hera.proto" +
-      ".PaymentCounterParty\022A\n\014credit_party\030\005 \001" +
-      "(\0132+.com.elarian.hera.proto.PaymentCount" +
-      "erParty\022+\n\005value\030\006 \001(\0132\034.com.elarian.her" +
-      "a.proto.Cash\0225\n\006status\030\007 \001(\0162%.com.elari" +
-      "an.hera.proto.PaymentStatus\022.\n\ncreated_a" +
-      "t\030\010 \001(\0132\032.google.protobuf.Timestamp\022.\n\nu" +
-      "pdated_at\030\t \001(\0132\032.google.protobuf.Timest" +
-      "amp\"\302\003\n\014PaymentState\022@\n\020customer_numbers" +
-      "\030\001 \003(\0132&.com.elarian.hera.proto.Customer" +
-      "Number\022E\n\017channel_numbers\030\002 \003(\0132,.com.el" +
-      "arian.hera.proto.PaymentChannelNumber\022C\n" +
-      "\017transaction_log\030\003 \003(\0132*.com.elarian.her" +
-      "a.proto.PaymentTransaction\022H\n\024pending_tr" +
-      "ansactions\030\004 \003(\0132*.com.elarian.hera.prot" +
-      "o.PaymentTransaction\022B\n\007wallets\030\005 \003(\01321." +
-      "com.elarian.hera.proto.PaymentState.Wall" +
-      "etsEntry\032V\n\014WalletsEntry\022\013\n\003key\030\001 \001(\t\0225\n" +
-      "\005value\030\002 \001(\0132&.com.elarian.hera.proto.Pa" +
-      "ymentBalance:\0028\001\"H\n\014IndexMapping\022\013\n\003key\030" +
-      "\001 \001(\t\022+\n\005value\030\002 \001(\0132\034.google.protobuf.S" +
-      "tringValue\"v\n\rCustomerIndex\0225\n\007mapping\030\001" +
-      " \001(\0132$.com.elarian.hera.proto.IndexMappi" +
-      "ng\022.\n\nexpiration\030\002 \001(\0132\032.google.protobuf" +
-      ".Timestamp\"\273\001\n\020CustomerReminder\022\016\n\006app_i" +
-      "d\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\022.\n\nexpiration\030\003 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022+\n\010interval" +
-      "\030\004 \001(\0132\031.google.protobuf.Duration\022-\n\007pay" +
-      "load\030\005 \001(\0132\034.google.protobuf.StringValue" +
-      "\"j\n\rSayCallAction\022\014\n\004text\030\001 \001(\t\0228\n\005voice" +
-      "\030\002 \001(\0162).com.elarian.hera.proto.TextToSp" +
-      "eechVoice\022\021\n\tplay_beep\030\003 \001(\010\"\035\n\016PlayCall" +
-      "Action\022\013\n\003url\030\001 \001(\t\"\237\002\n\023GetDigitsCallAct" +
-      "ion\0224\n\003say\030\001 \001(\0132%.com.elarian.hera.prot" +
-      "o.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com.el" +
-      "arian.hera.proto.PlayCallActionH\000\022*\n\007tim" +
-      "eout\030\003 \001(\0132\031.google.protobuf.Duration\0223\n" +
-      "\rfinish_on_key\030\004 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022/\n\nnum_digits\030\005 \001(\0132\033.google." +
-      "protobuf.Int32ValueB\010\n\006prompt\"\311\002\n\026GetRec" +
-      "ordingCallAction\0224\n\003say\030\001 \001(\0132%.com.elar" +
-      "ian.hera.proto.SayCallActionH\000\0226\n\004play\030\002" +
-      " \001(\0132&.com.elarian.hera.proto.PlayCallAc" +
-      "tionH\000\022*\n\007timeout\030\003 \001(\0132\031.google.protobu" +
-      "f.Duration\022-\n\nmax_length\030\004 \001(\0132\031.google." +
-      "protobuf.Duration\0223\n\rfinish_on_key\030\005 \001(\013" +
-      "2\034.google.protobuf.StringValue\022\021\n\tplay_b" +
-      "eep\030\006 \001(\010\022\024\n\014trim_silence\030\007 \001(\010B\010\n\006promp" +
-      "t\"\031\n\027RecordSessionCallAction\"\217\002\n\016DialCal" +
-      "lAction\022@\n\020customer_numbers\030\001 \003(\0132&.com." +
-      "elarian.hera.proto.CustomerNumber\022\016\n\006rec" +
-      "ord\030\002 \001(\010\022\022\n\nsequential\030\003 \001(\010\0223\n\rringbac" +
-      "k_tone\030\004 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022/\n\tcaller_id\030\005 \001(\0132\034.google.protobuf." +
-      "StringValue\0221\n\014max_duration\030\006 \001(\0132\033.goog" +
-      "le.protobuf.Int32Value\"w\n\021EnqueueCallAct" +
-      "ion\0220\n\nhold_music\030\001 \001(\0132\034.google.protobu" +
-      "f.StringValue\0220\n\nqueue_name\030\002 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\"\231\001\n\021DequeueCallA" +
-      "ction\022B\n\016channel_number\030\001 \001(\0132*.com.elar" +
-      "ian.hera.proto.VoiceChannelNumber\022\016\n\006rec" +
-      "ord\030\002 \001(\010\0220\n\nqueue_name\030\003 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\"\022\n\020RejectCallAction\"" +
-      "!\n\022RedirectCallAction\022\013\n\003url\030\001 \001(\t\"\217\005\n\017V" +
-      "oiceCallAction\0224\n\003say\030\001 \001(\0132%.com.elaria" +
-      "n.hera.proto.SayCallActionH\000\0226\n\004play\030\002 \001" +
-      "(\0132&.com.elarian.hera.proto.PlayCallActi" +
-      "onH\000\022A\n\nget_digits\030\003 \001(\0132+.com.elarian.h" +
-      "era.proto.GetDigitsCallActionH\000\0226\n\004dial\030" +
-      "\004 \001(\0132&.com.elarian.hera.proto.DialCallA" +
-      "ctionH\000\022I\n\016record_session\030\005 \001(\0132/.com.el" +
-      "arian.hera.proto.RecordSessionCallAction" +
-      "H\000\022G\n\rget_recording\030\006 \001(\0132..com.elarian." +
-      "hera.proto.GetRecordingCallActionH\000\022<\n\007e" +
-      "nqueue\030\007 \001(\0132).com.elarian.hera.proto.En" +
-      "queueCallActionH\000\022<\n\007dequeue\030\010 \001(\0132).com" +
-      ".elarian.hera.proto.DequeueCallActionH\000\022" +
-      ":\n\006reject\030\t \001(\0132(.com.elarian.hera.proto" +
-      ".RejectCallActionH\000\022>\n\010redirect\030\n \001(\0132*." +
-      "com.elarian.hera.proto.RedirectCallActio" +
-      "nH\000B\007\n\005entry*\326\001\n\020MessagingChannel\022!\n\035MES" +
-      "SAGING_CHANNEL_UNSPECIFIED\020\000\022 \n\034MESSAGIN" +
-      "G_CHANNEL_GOOGLE_RCS\020\001\022\"\n\036MESSAGING_CHAN" +
-      "NEL_FB_MESSENGER\020\002\022\031\n\025MESSAGING_CHANNEL_" +
-      "SMS\020\003\022\036\n\032MESSAGING_CHANNEL_TELEGRAM\020\004\022\036\n" +
-      "\032MESSAGING_CHANNEL_WHATSAPP\020\005*L\n\016Payment" +
-      "Channel\022\037\n\033PAYMENT_CHANNEL_UNSPECIFIED\020\000" +
-      "\022\031\n\025PAYMENT_CHANNEL_TELCO\020\001*C\n\013UssdChann" +
-      "el\022\034\n\030USSD_CHANNEL_UNSPECIFIED\020\000\022\026\n\022USSD" +
-      "_CHANNEL_TELCO\020\001*F\n\014VoiceChannel\022\035\n\031VOIC" +
-      "E_CHANNEL_UNSPECIFIED\020\000\022\027\n\023VOICE_CHANNEL" +
-      "_TELCO\020\001*\264\001\n\026CustomerNumberProvider\022(\n$C" +
-      "USTOMER_NUMBER_PROVIDER_UNSPECIFIED\020\000\022%\n" +
-      "!CUSTOMER_NUMBER_PROVIDER_FACEBOOK\020\001\022\"\n\036" +
-      "CUSTOMER_NUMBER_PROVIDER_TELCO\020\002\022%\n!CUST" +
-      "OMER_NUMBER_PROVIDER_TELEGRAM\020\003*\260\001\n\tMedi" +
-      "aType\022\032\n\026MEDIA_TYPE_UNSPECIFIED\020\000\022\024\n\020MED" +
-      "IA_TYPE_IMAGE\020\001\022\024\n\020MEDIA_TYPE_AUDIO\020\002\022\024\n" +
-      "\020MEDIA_TYPE_VIDEO\020\003\022\027\n\023MEDIA_TYPE_DOCUME" +
-      "NT\020\004\022\024\n\020MEDIA_TYPE_VOICE\020\005\022\026\n\022MEDUA_TYPE" +
-      "_STICKER\020\006*\215\001\n\026MessagingConsentAction\022(\n" +
-      "$MESSAGING_CONSENT_ACTION_UNSPECIFIED\020\000\022" +
-      "#\n\037MESSAGING_CONSENT_ACTION_OPT_IN\020\001\022$\n " +
-      "MESSAGING_CONSENT_ACTION_OPT_OUT\020\002*\366\002\n\026M" +
-      "essagingConsentStatus\022(\n$MESSAGING_CONSE" +
-      "NT_STATUS_UNSPECIFIED\020\000\0220\n,MESSAGING_CON" +
-      "SENT_STATUS_OPT_IN_REQUEST_SENT\020e\022.\n)MES" +
-      "SAGING_CONSENT_STATUS_OPT_IN_COMPLETED\020\254" +
-      "\002\022/\n*MESSAGING_CONSENT_STATUS_OPT_OUT_CO" +
-      "MPLETED\020\255\002\0224\n/MESSAGING_CONSENT_STATUS_I" +
-      "NVALID_CHANNEL_NUMBER\020\221\003\0228\n3MESSAGING_CO" +
-      "NSENT_STATUS_DECOMMISSIONED_CUSTOMER_ID\020" +
-      "\222\003\022/\n*MESSAGING_CONSENT_STATUS_APPLICATI" +
-      "ON_ERROR\020\365\003*\221\001\n\026MessagingSessionStatus\022)" +
-      "\n%MESSAGING_SESSION_STATUSN_UNSPECIFIED\020" +
-      "\000\022$\n MESSAGING_SESSION_STATUSN_ACTIVE\020d\022" +
-      "&\n!MESSAGING_SESSION_STATUSN_EXPIRED\020\310\001*" +
-      "\217\001\n\026CustomerEventDirection\022(\n$CUSTOMER_E" +
-      "VENT_DIRECTION_UNSPECIFIED\020\000\022$\n CUSTOMER" +
-      "_EVENT_DIRECTION_INBOUND\020\001\022%\n!CUSTOMER_E" +
-      "VENT_DIRECTION_OUTBOUND\020\002*\223\001\n\025CustomerRe" +
-      "questOrigin\022\'\n#CUSTOMER_REQUEST_ORIGIN_U" +
-      "NSPECIFIED\020\000\022\'\n#CUSTOMER_REQUEST_ORIGIN_" +
-      "API_REQUEST\020\001\022(\n$CUSTOMER_REQUEST_ORIGIN" +
-      "_CUSTOMER_TAG\020\002*\237\007\n\025MessageDeliveryStatu" +
-      "s\022\'\n#MESSAGE_DELIVERY_STATUS_UNSEPCIFIED" +
-      "\020\000\022 \n\034MESSAGE_DELIVERY_STATUS_SENT\020e\022&\n!" +
-      "MESSAGE_DELIVERY_STATUS_DELIVERED\020\254\002\022!\n\034" +
-      "MESSAGE_DELIVERY_STATUS_READ\020\255\002\022%\n MESSA" +
-      "GE_DELIVERY_STATUS_RECEIVED\020\256\002\022#\n\036MESSAG" +
-      "E_DELIVERY_STATUS_FAILED\020\220\003\022\'\n\"MESSAGE_D" +
-      "ELIVERY_STATUS_NO_CONSENT\020\221\003\022*\n%MESSAGE_" +
-      "DELIVERY_STATUS_NO_CAPABILITY\020\222\003\022$\n\037MESS" +
-      "AGE_DELIVERY_STATUS_EXPIRED\020\223\003\0222\n-MESSAG" +
-      "E_DELIVERY_STATUS_ONLY_TEMPLATE_ALLOWED\020" +
-      "\224\003\0223\n.MESSAGE_DELIVERY_STATUS_INVALID_CH" +
-      "ANNEL_NUMBER\020\225\003\022*\n%MESSAGE_DELIVERY_STAT" +
-      "US_NOT_SUPPORTED\020\226\003\0228\n3MESSAGE_DELIVERY_" +
-      "STATUS_INVALID_REPLY_TO_MESSAGE_ID\020\227\003\0220\n" +
-      "+MESSAGE_DELIVERY_STATUS_INVALID_CUSTOME" +
-      "R_ID\020\230\003\022.\n)MESSAGE_DELIVERY_STATUS_DUPLI" +
-      "CATE_REQUEST\020\231\003\022*\n%MESSAGE_DELIVERY_STAT" +
-      "US_TAG_NOT_FOUND\020\232\003\0226\n1MESSAGE_DELIVERY_" +
-      "STATUS_CUSTOMER_NUMBER_NOT_FOUND\020\233\003\0226\n1M" +
-      "ESSAGE_DELIVERY_STATUS_DECOMMISSIONED_CU" +
-      "STOMERID\020\234\003\022,\n\'MESSAGE_DELIVERY_STATUS_I" +
-      "NVALID_REQUEST\020\235\003\022.\n)MESSAGE_DELIVERY_ST" +
-      "ATUS_APPLICATION_ERROR\020\365\003*\311\005\n\024VoiceCallH" +
-      "angupCause\022\'\n#VOICE_CALL_HANGUP_CAUSE_UN" +
-      "SPECIFIED\020\000\022.\n*VOICE_CALL_HANGUP_CAUSE_U" +
-      "NALLOCATED_NUMBER\020\001\022%\n!VOICE_CALL_HANGUP" +
-      "_CAUSE_USER_BUSY\020\021\022+\n\'VOICE_CALL_HANGUP_" +
-      "CAUSE_NORMAL_CLEARING\020\020\022,\n(VOICE_CALL_HA" +
-      "NGUP_CAUSE_NO_USER_RESPONSE\020\022\022%\n!VOICE_C" +
-      "ALL_HANGUP_CAUSE_NO_ANSWER\020\023\022-\n)VOICE_CA" +
-      "LL_HANGUP_CAUSE_SUBSCRIBER_ABSENT\020\024\022)\n%V" +
-      "OICE_CALL_HANGUP_CAUSE_CALL_REJECTED\020\025\022." +
-      "\n*VOICE_CALL_HANGUP_CAUSE_NORMAL_UNSPECI" +
-      "FIED\020\037\0224\n0VOICE_CALL_HANGUP_CAUSE_NORMAL" +
-      "_TEMPORARY_FAILURE\020)\022/\n+VOICE_CALL_HANGU" +
-      "P_CAUSE_SERVICE_UNAVAILABLE\020?\0224\n0VOICE_C" +
-      "ALL_HANGUP_CAUSE_RECOVERY_ON_TIMER_EXPIR" +
-      "E\020f\022.\n)VOICE_CALL_HANGUP_CAUSE_ORIGINATO" +
-      "R_CANCEL\020\347\003\022&\n!VOICE_CALL_HANGUP_CAUSE_L" +
-      "OSE_RACE\020\366\003\0220\n+VOICE_CALL_HANGUP_CAUSE_U" +
-      "SER_NOT_REGISTERED\020\336\004*\245\006\n\017VoiceCallStatu" +
-      "s\022!\n\035VOICE_CALL_STATUS_UNSPECIFIED\020\000\022\034\n\030" +
-      "VOICE_CALL_STATUS_QUEUED\020d\022\036\n\032VOICE_CALL" +
-      "_STATUS_ANSWERED\020e\022\035\n\031VOICE_CALL_STATUS_" +
-      "RINGING\020f\022\035\n\030VOICE_CALL_STATUS_ACTIVE\020\310\001" +
-      "\022\036\n\031VOICE_CALL_STATUS_DIALING\020\311\001\022%\n VOIC" +
-      "E_CALL_STATUS_DIAL_COMPLETED\020\312\001\022\036\n\031VOICE" +
-      "_CALL_STATUS_BRIDGED\020\313\001\022\037\n\032VOICE_CALL_ST" +
-      "ATUS_ENQUEUED\020\314\001\022\037\n\032VOICE_CALL_STATUS_DE" +
-      "QUEUED\020\315\001\022\"\n\035VOICE_CALL_STATUS_TRANSFERR" +
-      "ED\020\316\001\022)\n$VOICE_CALL_STATUS_TRANSFER_COMP" +
-      "LETED\020\317\001\022 \n\033VOICE_CALL_STATUS_COMPLETED\020" +
-      "\254\002\022*\n%VOICE_CALL_STATUS_INSUFFICIENT_CRE" +
-      "DIT\020\220\003\022#\n\036VOICE_CALL_STATUS_NOT_ANSWERED" +
-      "\020\221\003\022+\n&VOICE_CALL_STATUS_INVALID_PHONE_N" +
-      "UMBER\020\222\003\0220\n+VOICE_CALL_STATUS_DESTINATIO" +
-      "N_NOT_SUPPORTED\020\223\003\0220\n+VOICE_CALL_STATUS_" +
-      "DECOMMISSIONED_CUSTOMERID\020\224\003\022\036\n\031VOICE_CA" +
-      "LL_STATUS_EXPIRED\020\225\003\022-\n(VOICE_CALL_STATU" +
-      "S_INVALID_CHANNEL_NUMBER\020\226\003\022(\n#VOICE_CAL" +
-      "L_STATUS_APPLICATION_ERROR\020\365\003*\341\005\n\rPaymen" +
-      "tStatus\022\036\n\032PAYMENT_STATUS_UNSPECIFIED\020\000\022" +
-      "\031\n\025PAYMENT_STATUS_QUEUED\020e\022\'\n#PAYMENT_ST" +
-      "ATUS_PENDING_CONFIRMATION\020f\022%\n!PAYMENT_S" +
-      "TATUS_PENDING_VALIDATION\020g\022\034\n\030PAYMENT_ST" +
-      "ATUS_VALIDATED\020h\022#\n\036PAYMENT_STATUS_INVAL" +
-      "ID_REQUEST\020\310\001\022!\n\034PAYMENT_STATUS_NOT_SUPP" +
-      "ORTED\020\311\001\022&\n!PAYMENT_STATUS_INSUFFICIENT_" +
-      "FUNDS\020\312\001\022%\n PAYMENT_STATUS_APPLICATION_E" +
-      "RROR\020\313\001\022\037\n\032PAYMENT_STATUS_NOT_ALLOWED\020\314\001" +
-      "\022%\n PAYMENT_STATUS_DUPLICATE_REQUEST\020\315\001\022" +
-      "!\n\034PAYMENT_STATUS_INVALID_PURSE\020\316\001\022\"\n\035PA" +
-      "YMENT_STATUS_INVALID_WALLET\020\317\001\022.\n)PAYMEN" +
-      "T_STATUS_DECOMMISSIONED_CUSTOMER_ID\020\253\002\022\033" +
-      "\n\026PAYMENT_STATUS_SUCCESS\020\254\002\022 \n\033PAYMENT_S" +
-      "TATUS_PASS_THROUGH\020\255\002\022\032\n\025PAYMENT_STATUS_" +
-      "FAILED\020\220\003\022\035\n\030PAYMENT_STATUS_THROTTLED\020\221\003" +
-      "\022\033\n\026PAYMENT_STATUS_EXPIRED\020\222\003\022\034\n\027PAYMENT" +
-      "_STATUS_REJECTED\020\223\003\022\034\n\027PAYMENT_STATUS_RE" +
-      "VERSED\020\364\003*{\n\022PaymentAccountType\022$\n PAYME" +
-      "NT_ACCOUNT_TYPE_UNSPECIFIED\020\000\022\036\n\032PAYMENT" +
-      "_ACCOUNT_TYPE_PURSE\020\001\022\037\n\033PAYMENT_ACCOUNT" +
-      "_TYPE_WALLET\020\002*y\n\021TextToSpeechVoice\022$\n T" +
-      "EXT_TO_SPEECH_VOICE_UNSPECIFIED\020\000\022\035\n\031TEX" +
-      "T_TO_SPEECH_VOICE_MALE\020\001\022\037\n\033TEXT_TO_SPEE" +
-      "CH_VOICE_FEMALE\020\002b\006proto3"
+      "timestamp.proto\"4\n\nAppHeaders\022\022\n\nip_addr" +
+      "ess\030\001 \001(\t\022\022\n\nuser_agent\030\002 \001(\t\"-\n\004Cash\022\025\n" +
+      "\rcurrency_code\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"\223\001\n" +
+      "\016CustomerNumber\022@\n\010provider\030\001 \001(\0162..com." +
+      "elarian.hera.proto.CustomerNumberProvide" +
+      "r\022\016\n\006number\030\002 \001(\t\022/\n\tpartition\030\003 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\"c\n\026MessagingC" +
+      "hannelNumber\0229\n\007channel\030\001 \001(\0162(.com.elar" +
+      "ian.hera.proto.MessagingChannel\022\016\n\006numbe" +
+      "r\030\002 \001(\t\"Y\n\021UssdChannelNumber\0224\n\007channel\030" +
+      "\001 \001(\0162#.com.elarian.hera.proto.UssdChann" +
+      "el\022\016\n\006number\030\002 \001(\t\"_\n\024PaymentChannelNumb" +
+      "er\0227\n\007channel\030\001 \001(\0162&.com.elarian.hera.p" +
+      "roto.PaymentChannel\022\016\n\006number\030\002 \001(\t\"[\n\022V" +
+      "oiceChannelNumber\0225\n\007channel\030\001 \001(\0162$.com" +
+      ".elarian.hera.proto.VoiceChannel\022\016\n\006numb" +
+      "er\030\002 \001(\t\"3\n\023TextMessageTemplate\022\014\n\004name\030" +
+      "\001 \001(\t\022\016\n\006params\030\002 \003(\t\"|\n\017TextMessageBody" +
+      "\022*\n\004text\030\001 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022=\n\010template\030\002 \001(\0132+.com.elarian.her" +
+      "a.proto.TextMessageTemplate\"Q\n\020MediaMess" +
+      "ageBody\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001(\0162!.co" +
+      "m.elarian.hera.proto.MediaType\":\n\023Locati" +
+      "onMessageBody\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongi" +
+      "tude\030\002 \001(\001\"\323\001\n\023CustomerMessageBody\0227\n\004te" +
+      "xt\030\001 \001(\0132\'.com.elarian.hera.proto.TextMe" +
+      "ssageBodyH\000\0229\n\005media\030\002 \001(\0132(.com.elarian" +
+      ".hera.proto.MediaMessageBodyH\000\022?\n\010locati" +
+      "on\030\003 \001(\0132+.com.elarian.hera.proto.Locati" +
+      "onMessageBodyH\000B\007\n\005entry\"-\n\010UssdMenu\022\014\n\004" +
+      "text\030\001 \001(\t\022\023\n\013is_terminal\030\002 \001(\010\"\226\001\n\007Ussd" +
+      "Hop\022+\n\005input\030\001 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022.\n\004menu\030\002 \001(\0132 .com.elarian.her" +
+      "a.proto.UssdMenu\022.\n\ncreated_at\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"B\n\014DataMapValue" +
+      "\022\024\n\nstring_val\030\002 \001(\tH\000\022\023\n\tbytes_val\030\003 \001(" +
+      "\014H\000B\007\n\005value\"\214\001\n\032MessagingConsentStateEn" +
+      "try\022>\n\006status\030\001 \001(\0162..com.elarian.hera.p" +
+      "roto.MessagingConsentStatus\022.\n\nupdated_a" +
+      "t\030\002 \001(\0132\032.google.protobuf.Timestamp\"\252\001\n\032" +
+      "MessagingSessionStateEntry\022.\n\nstarted_at" +
+      "\030\001 \001(\0132\032.google.protobuf.Timestamp\022.\n\nex" +
+      "piration\030\002 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022,\n\006app_id\030\003 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\"\274\002\n\032MessagingChannelStateEntry\022" +
+      "?\n\017customer_number\030\001 \001(\0132&.com.elarian.h" +
+      "era.proto.CustomerNumber\022F\n\016channel_numb" +
+      "er\030\002 \001(\0132..com.elarian.hera.proto.Messag" +
+      "ingChannelNumber\022I\n\rconsent_state\030\003 \001(\0132" +
+      "2.com.elarian.hera.proto.MessagingConsen" +
+      "tStateEntry\022J\n\016active_session\030\004 \001(\01322.co" +
+      "m.elarian.hera.proto.MessagingSessionSta" +
+      "teEntry\"\243\005\n\021MessageStateEntry\022A\n\tdirecti" +
+      "on\030\001 \001(\0162..com.elarian.hera.proto.Custom" +
+      "erEventDirection\022?\n\017customer_number\030\002 \001(" +
+      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
+      "r\022F\n\016channel_number\030\003 \001(\0132..com.elarian." +
+      "hera.proto.MessagingChannelNumber\022\022\n\nmes" +
+      "sage_id\030\004 \001(\t\022,\n\006app_id\030\005 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\022*\n\004text\030\006 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\022=\n\010template\030\007 \001(" +
+      "\0132+.com.elarian.hera.proto.TextMessageTe" +
+      "mplate\0227\n\005media\030\010 \003(\0132(.com.elarian.hera" +
+      ".proto.MediaMessageBody\022=\n\010location\030\t \001(" +
+      "\0132+.com.elarian.hera.proto.LocationMessa" +
+      "geBody\022.\n\ncreated_at\030\n \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022.\n\nupdated_at\030\013 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022=\n\006status\030\014 \001(\0162-" +
+      ".com.elarian.hera.proto.MessageDeliveryS" +
+      "tatus\"\243\002\n\016MessagingState\022I\n\rchannel_stat" +
+      "e\030\001 \003(\01322.com.elarian.hera.proto.Messagi" +
+      "ngChannelStateEntry\022;\n\010messages\030\002 \003(\0132)." +
+      "com.elarian.hera.proto.MessageStateEntry" +
+      "\022@\n\020customer_numbers\030\003 \003(\0132&.com.elarian" +
+      ".hera.proto.CustomerNumber\022G\n\017channel_nu" +
+      "mbers\030\004 \003(\0132..com.elarian.hera.proto.Mes" +
+      "sagingChannelNumber\"\354\002\n\025UssdSessionState" +
+      "Entry\022?\n\017customer_number\030\001 \001(\0132&.com.ela" +
+      "rian.hera.proto.CustomerNumber\022A\n\016channe" +
+      "l_number\030\002 \001(\0132).com.elarian.hera.proto." +
+      "UssdChannelNumber\022\022\n\nsession_id\030\003 \001(\t\022,\n" +
+      "\006app_id\030\004 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022-\n\004hops\030\005 \003(\0132\037.com.elarian.hera.pro" +
+      "to.UssdHop\022.\n\ncreated_at\030\006 \001(\0132\032.google." +
+      "protobuf.Timestamp\022.\n\nupdated_at\030\007 \001(\0132\032" +
+      ".google.protobuf.Timestamp\"\322\001\n\tUssdState" +
+      "\022?\n\010sessions\030\001 \003(\0132-.com.elarian.hera.pr" +
+      "oto.UssdSessionStateEntry\022@\n\020customer_nu" +
+      "mbers\030\002 \003(\0132&.com.elarian.hera.proto.Cus" +
+      "tomerNumber\022B\n\017channel_numbers\030\003 \003(\0132).c" +
+      "om.elarian.hera.proto.UssdChannelNumber\"" +
+      "\215\001\n\022VoiceCallDialInput\022\032\n\022destination_nu" +
+      "mber\030\001 \001(\t\022.\n\nstarted_at\030\002 \001(\0132\032.google." +
+      "protobuf.Timestamp\022+\n\010duration\030\003 \001(\0132\031.g" +
+      "oogle.protobuf.Duration\"\241\002\n\023VoiceCallQue" +
+      "ueInput\022/\n\013enqueued_at\030\001 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022/\n\013dequeued_at\030\002 \001(\0132\032." +
+      "google.protobuf.Timestamp\0228\n\022dequeued_to" +
+      "_number\030\003 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022;\n\025dequeued_to_sessionId\030\004 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\0221\n\016queue_durati" +
+      "on\030\005 \001(\0132\031.google.protobuf.Duration\"\250\003\n\021" +
+      "VoiceCallHopInput\0227\n\006status\030\001 \001(\0162\'.com." +
+      "elarian.hera.proto.VoiceCallStatus\022.\n\nst" +
+      "arted_at\030\002 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022B\n\014hangup_cause\030\003 \001(\0162,.com.elarian.h" +
+      "era.proto.VoiceCallHangupCause\0221\n\013dtmf_d" +
+      "igits\030\004 \001(\0132\034.google.protobuf.StringValu" +
+      "e\0223\n\rrecording_url\030\005 \001(\0132\034.google.protob" +
+      "uf.StringValue\022=\n\tdial_data\030\006 \001(\0132*.com." +
+      "elarian.hera.proto.VoiceCallDialInput\022?\n" +
+      "\nqueue_data\030\007 \001(\0132+.com.elarian.hera.pro" +
+      "to.VoiceCallQueueInput\"\262\001\n\014VoiceCallHop\022" +
+      "8\n\005input\030\001 \001(\0132).com.elarian.hera.proto." +
+      "VoiceCallHopInput\0228\n\007actions\030\002 \003(\0132\'.com" +
+      ".elarian.hera.proto.VoiceCallAction\022.\n\nc" +
+      "reated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "amp\"\305\004\n\023VoiceCallStateEntry\022A\n\tdirection" +
+      "\030\001 \001(\0162..com.elarian.hera.proto.Customer" +
+      "EventDirection\022?\n\017customer_number\030\002 \001(\0132" +
+      "&.com.elarian.hera.proto.CustomerNumber\022" +
+      "B\n\016channel_number\030\003 \001(\0132*.com.elarian.he" +
+      "ra.proto.VoiceChannelNumber\022\022\n\nsession_i" +
+      "d\030\004 \001(\t\022,\n\006app_id\030\005 \001(\0132\034.google.protobu" +
+      "f.StringValue\0227\n\006status\030\006 \001(\0162\'.com.elar" +
+      "ian.hera.proto.VoiceCallStatus\0222\n\004hops\030\007" +
+      " \003(\0132$.com.elarian.hera.proto.VoiceCallH" +
+      "op\022+\n\010duration\030\010 \001(\0132\031.google.protobuf.D" +
+      "uration\022*\n\004cost\030\t \001(\0132\034.com.elarian.hera" +
+      ".proto.Cash\022.\n\ncreated_at\030\n \001(\0132\032.google" +
+      ".protobuf.Timestamp\022.\n\nupdated_at\030\013 \001(\0132" +
+      "\032.google.protobuf.Timestamp\"\317\001\n\nVoiceSta" +
+      "te\022:\n\005calls\030\001 \003(\0132+.com.elarian.hera.pro" +
+      "to.VoiceCallStateEntry\022@\n\020customer_numbe" +
+      "rs\030\002 \003(\0132&.com.elarian.hera.proto.Custom" +
+      "erNumber\022C\n\017channel_numbers\030\003 \003(\0132*.com." +
+      "elarian.hera.proto.VoiceChannelNumber\"\251\001" +
+      "\n\031PendingPaymentTransaction\022.\n\ncreated_a" +
+      "t\030\001 \001(\0132\032.google.protobuf.Timestamp\022+\n\005v" +
+      "alue\030\002 \001(\0132\034.com.elarian.hera.proto.Cash" +
+      "\022/\n\tconverted\030\003 \001(\0132\034.com.elarian.hera.p" +
+      "roto.Cash\"\304\002\n\016PaymentBalance\022\025\n\rcurrency" +
+      "_code\030\001 \001(\t\022/\n\tavailable\030\002 \001(\0132\034.com.ela" +
+      "rian.hera.proto.Cash\022,\n\006actual\030\003 \001(\0132\034.c" +
+      "om.elarian.hera.proto.Cash\022D\n\007pending\030\004 " +
+      "\003(\01323.com.elarian.hera.proto.PaymentBala" +
+      "nce.PendingEntry\022\023\n\013sequence_nr\030\005 \001(\004\032a\n" +
+      "\014PendingEntry\022\013\n\003key\030\001 \001(\t\022@\n\005value\030\002 \001(" +
+      "\01321.com.elarian.hera.proto.PendingPaymen" +
+      "tTransaction:\0028\001\",\n\030PaymentPurseCounterP" +
+      "arty\022\020\n\010purse_id\030\001 \001(\t\"C\n\031PaymentWalletC" +
+      "ounterParty\022\023\n\013customer_id\030\001 \001(\t\022\021\n\twall" +
+      "et_id\030\002 \001(\t\"\244\001\n\033PaymentCustomerCounterPa" +
+      "rty\022?\n\017customer_number\030\001 \001(\0132&.com.elari" +
+      "an.hera.proto.CustomerNumber\022D\n\016channel_" +
+      "number\030\002 \001(\0132,.com.elarian.hera.proto.Pa" +
+      "ymentChannelNumber\"\357\001\n\023PaymentCounterPar" +
+      "ty\022G\n\010customer\030\001 \001(\01323.com.elarian.hera." +
+      "proto.PaymentCustomerCounterPartyH\000\022A\n\005p" +
+      "urse\030\002 \001(\01320.com.elarian.hera.proto.Paym" +
+      "entPurseCounterPartyH\000\022C\n\006wallet\030\003 \001(\01321" +
+      ".com.elarian.hera.proto.PaymentWalletCou" +
+      "nterPartyH\000B\007\n\005party\"\243\003\n\022PaymentTransact" +
+      "ion\022\026\n\016transaction_id\030\001 \001(\t\022,\n\006app_id\030\002 " +
+      "\001(\0132\034.google.protobuf.StringValue\022@\n\013deb" +
+      "it_party\030\004 \001(\0132+.com.elarian.hera.proto." +
+      "PaymentCounterParty\022A\n\014credit_party\030\005 \001(" +
+      "\0132+.com.elarian.hera.proto.PaymentCounte" +
+      "rParty\022+\n\005value\030\006 \001(\0132\034.com.elarian.hera" +
+      ".proto.Cash\0225\n\006status\030\007 \001(\0162%.com.elaria" +
+      "n.hera.proto.PaymentStatus\022.\n\ncreated_at" +
+      "\030\010 \001(\0132\032.google.protobuf.Timestamp\022.\n\nup" +
+      "dated_at\030\t \001(\0132\032.google.protobuf.Timesta" +
+      "mp\"\302\003\n\014PaymentState\022@\n\020customer_numbers\030" +
+      "\001 \003(\0132&.com.elarian.hera.proto.CustomerN" +
+      "umber\022E\n\017channel_numbers\030\002 \003(\0132,.com.ela" +
+      "rian.hera.proto.PaymentChannelNumber\022C\n\017" +
+      "transaction_log\030\003 \003(\0132*.com.elarian.hera" +
+      ".proto.PaymentTransaction\022H\n\024pending_tra" +
+      "nsactions\030\004 \003(\0132*.com.elarian.hera.proto" +
+      ".PaymentTransaction\022B\n\007wallets\030\005 \003(\01321.c" +
+      "om.elarian.hera.proto.PaymentState.Walle" +
+      "tsEntry\032V\n\014WalletsEntry\022\013\n\003key\030\001 \001(\t\0225\n\005" +
+      "value\030\002 \001(\0132&.com.elarian.hera.proto.Pay" +
+      "mentBalance:\0028\001\"H\n\014IndexMapping\022\013\n\003key\030\001" +
+      " \001(\t\022+\n\005value\030\002 \001(\0132\034.google.protobuf.St" +
+      "ringValue\"v\n\rCustomerIndex\0225\n\007mapping\030\001 " +
+      "\001(\0132$.com.elarian.hera.proto.IndexMappin" +
+      "g\022.\n\nexpiration\030\002 \001(\0132\032.google.protobuf." +
+      "Timestamp\"\273\001\n\020CustomerReminder\022\016\n\006app_id" +
+      "\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\022.\n\nexpiration\030\003 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022+\n\010interval\030" +
+      "\004 \001(\0132\031.google.protobuf.Duration\022-\n\007payl" +
+      "oad\030\005 \001(\0132\034.google.protobuf.StringValue\"" +
+      "j\n\rSayCallAction\022\014\n\004text\030\001 \001(\t\0228\n\005voice\030" +
+      "\002 \001(\0162).com.elarian.hera.proto.TextToSpe" +
+      "echVoice\022\021\n\tplay_beep\030\003 \001(\010\"\035\n\016PlayCallA" +
+      "ction\022\013\n\003url\030\001 \001(\t\"\237\002\n\023GetDigitsCallActi" +
+      "on\0224\n\003say\030\001 \001(\0132%.com.elarian.hera.proto" +
+      ".SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com.ela" +
+      "rian.hera.proto.PlayCallActionH\000\022*\n\007time" +
+      "out\030\003 \001(\0132\031.google.protobuf.Duration\0223\n\r" +
+      "finish_on_key\030\004 \001(\0132\034.google.protobuf.St" +
+      "ringValue\022/\n\nnum_digits\030\005 \001(\0132\033.google.p" +
+      "rotobuf.Int32ValueB\010\n\006prompt\"\311\002\n\026GetReco" +
+      "rdingCallAction\0224\n\003say\030\001 \001(\0132%.com.elari" +
+      "an.hera.proto.SayCallActionH\000\0226\n\004play\030\002 " +
+      "\001(\0132&.com.elarian.hera.proto.PlayCallAct" +
+      "ionH\000\022*\n\007timeout\030\003 \001(\0132\031.google.protobuf" +
+      ".Duration\022-\n\nmax_length\030\004 \001(\0132\031.google.p" +
+      "rotobuf.Duration\0223\n\rfinish_on_key\030\005 \001(\0132" +
+      "\034.google.protobuf.StringValue\022\021\n\tplay_be" +
+      "ep\030\006 \001(\010\022\024\n\014trim_silence\030\007 \001(\010B\010\n\006prompt" +
+      "\"\031\n\027RecordSessionCallAction\"\217\002\n\016DialCall" +
+      "Action\022@\n\020customer_numbers\030\001 \003(\0132&.com.e" +
+      "larian.hera.proto.CustomerNumber\022\016\n\006reco" +
+      "rd\030\002 \001(\010\022\022\n\nsequential\030\003 \001(\010\0223\n\rringback" +
+      "_tone\030\004 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022/\n\tcaller_id\030\005 \001(\0132\034.google.protobuf.S" +
+      "tringValue\0221\n\014max_duration\030\006 \001(\0132\033.googl" +
+      "e.protobuf.Int32Value\"w\n\021EnqueueCallActi" +
+      "on\0220\n\nhold_music\030\001 \001(\0132\034.google.protobuf" +
+      ".StringValue\0220\n\nqueue_name\030\002 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\"\231\001\n\021DequeueCallAc" +
+      "tion\022B\n\016channel_number\030\001 \001(\0132*.com.elari" +
+      "an.hera.proto.VoiceChannelNumber\022\016\n\006reco" +
+      "rd\030\002 \001(\010\0220\n\nqueue_name\030\003 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\"\022\n\020RejectCallAction\"!" +
+      "\n\022RedirectCallAction\022\013\n\003url\030\001 \001(\t\"\217\005\n\017Vo" +
+      "iceCallAction\0224\n\003say\030\001 \001(\0132%.com.elarian" +
+      ".hera.proto.SayCallActionH\000\0226\n\004play\030\002 \001(" +
+      "\0132&.com.elarian.hera.proto.PlayCallActio" +
+      "nH\000\022A\n\nget_digits\030\003 \001(\0132+.com.elarian.he" +
+      "ra.proto.GetDigitsCallActionH\000\0226\n\004dial\030\004" +
+      " \001(\0132&.com.elarian.hera.proto.DialCallAc" +
+      "tionH\000\022I\n\016record_session\030\005 \001(\0132/.com.ela" +
+      "rian.hera.proto.RecordSessionCallActionH" +
+      "\000\022G\n\rget_recording\030\006 \001(\0132..com.elarian.h" +
+      "era.proto.GetRecordingCallActionH\000\022<\n\007en" +
+      "queue\030\007 \001(\0132).com.elarian.hera.proto.Enq" +
+      "ueueCallActionH\000\022<\n\007dequeue\030\010 \001(\0132).com." +
+      "elarian.hera.proto.DequeueCallActionH\000\022:" +
+      "\n\006reject\030\t \001(\0132(.com.elarian.hera.proto." +
+      "RejectCallActionH\000\022>\n\010redirect\030\n \001(\0132*.c" +
+      "om.elarian.hera.proto.RedirectCallAction" +
+      "H\000B\007\n\005entry*\326\001\n\020MessagingChannel\022!\n\035MESS" +
+      "AGING_CHANNEL_UNSPECIFIED\020\000\022 \n\034MESSAGING" +
+      "_CHANNEL_GOOGLE_RCS\020\001\022\"\n\036MESSAGING_CHANN" +
+      "EL_FB_MESSENGER\020\002\022\031\n\025MESSAGING_CHANNEL_S" +
+      "MS\020\003\022\036\n\032MESSAGING_CHANNEL_TELEGRAM\020\004\022\036\n\032" +
+      "MESSAGING_CHANNEL_WHATSAPP\020\005*L\n\016PaymentC" +
+      "hannel\022\037\n\033PAYMENT_CHANNEL_UNSPECIFIED\020\000\022" +
+      "\031\n\025PAYMENT_CHANNEL_TELCO\020\001*C\n\013UssdChanne" +
+      "l\022\034\n\030USSD_CHANNEL_UNSPECIFIED\020\000\022\026\n\022USSD_" +
+      "CHANNEL_TELCO\020\001*F\n\014VoiceChannel\022\035\n\031VOICE" +
+      "_CHANNEL_UNSPECIFIED\020\000\022\027\n\023VOICE_CHANNEL_" +
+      "TELCO\020\001*\264\001\n\026CustomerNumberProvider\022(\n$CU" +
+      "STOMER_NUMBER_PROVIDER_UNSPECIFIED\020\000\022%\n!" +
+      "CUSTOMER_NUMBER_PROVIDER_FACEBOOK\020\001\022\"\n\036C" +
+      "USTOMER_NUMBER_PROVIDER_TELCO\020\002\022%\n!CUSTO" +
+      "MER_NUMBER_PROVIDER_TELEGRAM\020\003*\260\001\n\tMedia" +
+      "Type\022\032\n\026MEDIA_TYPE_UNSPECIFIED\020\000\022\024\n\020MEDI" +
+      "A_TYPE_IMAGE\020\001\022\024\n\020MEDIA_TYPE_AUDIO\020\002\022\024\n\020" +
+      "MEDIA_TYPE_VIDEO\020\003\022\027\n\023MEDIA_TYPE_DOCUMEN" +
+      "T\020\004\022\024\n\020MEDIA_TYPE_VOICE\020\005\022\026\n\022MEDUA_TYPE_" +
+      "STICKER\020\006*\215\001\n\026MessagingConsentAction\022(\n$" +
+      "MESSAGING_CONSENT_ACTION_UNSPECIFIED\020\000\022#" +
+      "\n\037MESSAGING_CONSENT_ACTION_OPT_IN\020\001\022$\n M" +
+      "ESSAGING_CONSENT_ACTION_OPT_OUT\020\002*\366\002\n\026Me" +
+      "ssagingConsentStatus\022(\n$MESSAGING_CONSEN" +
+      "T_STATUS_UNSPECIFIED\020\000\0220\n,MESSAGING_CONS" +
+      "ENT_STATUS_OPT_IN_REQUEST_SENT\020e\022.\n)MESS" +
+      "AGING_CONSENT_STATUS_OPT_IN_COMPLETED\020\254\002" +
+      "\022/\n*MESSAGING_CONSENT_STATUS_OPT_OUT_COM" +
+      "PLETED\020\255\002\0224\n/MESSAGING_CONSENT_STATUS_IN" +
+      "VALID_CHANNEL_NUMBER\020\221\003\0228\n3MESSAGING_CON" +
+      "SENT_STATUS_DECOMMISSIONED_CUSTOMER_ID\020\222" +
+      "\003\022/\n*MESSAGING_CONSENT_STATUS_APPLICATIO" +
+      "N_ERROR\020\365\003*\221\001\n\026MessagingSessionStatus\022)\n" +
+      "%MESSAGING_SESSION_STATUSN_UNSPECIFIED\020\000" +
+      "\022$\n MESSAGING_SESSION_STATUSN_ACTIVE\020d\022&" +
+      "\n!MESSAGING_SESSION_STATUSN_EXPIRED\020\310\001*\217" +
+      "\001\n\026CustomerEventDirection\022(\n$CUSTOMER_EV" +
+      "ENT_DIRECTION_UNSPECIFIED\020\000\022$\n CUSTOMER_" +
+      "EVENT_DIRECTION_INBOUND\020\001\022%\n!CUSTOMER_EV" +
+      "ENT_DIRECTION_OUTBOUND\020\002*\223\001\n\025CustomerReq" +
+      "uestOrigin\022\'\n#CUSTOMER_REQUEST_ORIGIN_UN" +
+      "SPECIFIED\020\000\022\'\n#CUSTOMER_REQUEST_ORIGIN_A" +
+      "PI_REQUEST\020\001\022(\n$CUSTOMER_REQUEST_ORIGIN_" +
+      "CUSTOMER_TAG\020\002*\237\007\n\025MessageDeliveryStatus" +
+      "\022\'\n#MESSAGE_DELIVERY_STATUS_UNSEPCIFIED\020" +
+      "\000\022 \n\034MESSAGE_DELIVERY_STATUS_SENT\020e\022&\n!M" +
+      "ESSAGE_DELIVERY_STATUS_DELIVERED\020\254\002\022!\n\034M" +
+      "ESSAGE_DELIVERY_STATUS_READ\020\255\002\022%\n MESSAG" +
+      "E_DELIVERY_STATUS_RECEIVED\020\256\002\022#\n\036MESSAGE" +
+      "_DELIVERY_STATUS_FAILED\020\220\003\022\'\n\"MESSAGE_DE" +
+      "LIVERY_STATUS_NO_CONSENT\020\221\003\022*\n%MESSAGE_D" +
+      "ELIVERY_STATUS_NO_CAPABILITY\020\222\003\022$\n\037MESSA" +
+      "GE_DELIVERY_STATUS_EXPIRED\020\223\003\0222\n-MESSAGE" +
+      "_DELIVERY_STATUS_ONLY_TEMPLATE_ALLOWED\020\224" +
+      "\003\0223\n.MESSAGE_DELIVERY_STATUS_INVALID_CHA" +
+      "NNEL_NUMBER\020\225\003\022*\n%MESSAGE_DELIVERY_STATU" +
+      "S_NOT_SUPPORTED\020\226\003\0228\n3MESSAGE_DELIVERY_S" +
+      "TATUS_INVALID_REPLY_TO_MESSAGE_ID\020\227\003\0220\n+" +
+      "MESSAGE_DELIVERY_STATUS_INVALID_CUSTOMER" +
+      "_ID\020\230\003\022.\n)MESSAGE_DELIVERY_STATUS_DUPLIC" +
+      "ATE_REQUEST\020\231\003\022*\n%MESSAGE_DELIVERY_STATU" +
+      "S_TAG_NOT_FOUND\020\232\003\0226\n1MESSAGE_DELIVERY_S" +
+      "TATUS_CUSTOMER_NUMBER_NOT_FOUND\020\233\003\0226\n1ME" +
+      "SSAGE_DELIVERY_STATUS_DECOMMISSIONED_CUS" +
+      "TOMERID\020\234\003\022,\n\'MESSAGE_DELIVERY_STATUS_IN" +
+      "VALID_REQUEST\020\235\003\022.\n)MESSAGE_DELIVERY_STA" +
+      "TUS_APPLICATION_ERROR\020\365\003*\311\005\n\024VoiceCallHa" +
+      "ngupCause\022\'\n#VOICE_CALL_HANGUP_CAUSE_UNS" +
+      "PECIFIED\020\000\022.\n*VOICE_CALL_HANGUP_CAUSE_UN" +
+      "ALLOCATED_NUMBER\020\001\022%\n!VOICE_CALL_HANGUP_" +
+      "CAUSE_USER_BUSY\020\021\022+\n\'VOICE_CALL_HANGUP_C" +
+      "AUSE_NORMAL_CLEARING\020\020\022,\n(VOICE_CALL_HAN" +
+      "GUP_CAUSE_NO_USER_RESPONSE\020\022\022%\n!VOICE_CA" +
+      "LL_HANGUP_CAUSE_NO_ANSWER\020\023\022-\n)VOICE_CAL" +
+      "L_HANGUP_CAUSE_SUBSCRIBER_ABSENT\020\024\022)\n%VO" +
+      "ICE_CALL_HANGUP_CAUSE_CALL_REJECTED\020\025\022.\n" +
+      "*VOICE_CALL_HANGUP_CAUSE_NORMAL_UNSPECIF" +
+      "IED\020\037\0224\n0VOICE_CALL_HANGUP_CAUSE_NORMAL_" +
+      "TEMPORARY_FAILURE\020)\022/\n+VOICE_CALL_HANGUP" +
+      "_CAUSE_SERVICE_UNAVAILABLE\020?\0224\n0VOICE_CA" +
+      "LL_HANGUP_CAUSE_RECOVERY_ON_TIMER_EXPIRE" +
+      "\020f\022.\n)VOICE_CALL_HANGUP_CAUSE_ORIGINATOR" +
+      "_CANCEL\020\347\003\022&\n!VOICE_CALL_HANGUP_CAUSE_LO" +
+      "SE_RACE\020\366\003\0220\n+VOICE_CALL_HANGUP_CAUSE_US" +
+      "ER_NOT_REGISTERED\020\336\004*\245\006\n\017VoiceCallStatus" +
+      "\022!\n\035VOICE_CALL_STATUS_UNSPECIFIED\020\000\022\034\n\030V" +
+      "OICE_CALL_STATUS_QUEUED\020d\022\036\n\032VOICE_CALL_" +
+      "STATUS_ANSWERED\020e\022\035\n\031VOICE_CALL_STATUS_R" +
+      "INGING\020f\022\035\n\030VOICE_CALL_STATUS_ACTIVE\020\310\001\022" +
+      "\036\n\031VOICE_CALL_STATUS_DIALING\020\311\001\022%\n VOICE" +
+      "_CALL_STATUS_DIAL_COMPLETED\020\312\001\022\036\n\031VOICE_" +
+      "CALL_STATUS_BRIDGED\020\313\001\022\037\n\032VOICE_CALL_STA" +
+      "TUS_ENQUEUED\020\314\001\022\037\n\032VOICE_CALL_STATUS_DEQ" +
+      "UEUED\020\315\001\022\"\n\035VOICE_CALL_STATUS_TRANSFERRE" +
+      "D\020\316\001\022)\n$VOICE_CALL_STATUS_TRANSFER_COMPL" +
+      "ETED\020\317\001\022 \n\033VOICE_CALL_STATUS_COMPLETED\020\254" +
+      "\002\022*\n%VOICE_CALL_STATUS_INSUFFICIENT_CRED" +
+      "IT\020\220\003\022#\n\036VOICE_CALL_STATUS_NOT_ANSWERED\020" +
+      "\221\003\022+\n&VOICE_CALL_STATUS_INVALID_PHONE_NU" +
+      "MBER\020\222\003\0220\n+VOICE_CALL_STATUS_DESTINATION" +
+      "_NOT_SUPPORTED\020\223\003\0220\n+VOICE_CALL_STATUS_D" +
+      "ECOMMISSIONED_CUSTOMERID\020\224\003\022\036\n\031VOICE_CAL" +
+      "L_STATUS_EXPIRED\020\225\003\022-\n(VOICE_CALL_STATUS" +
+      "_INVALID_CHANNEL_NUMBER\020\226\003\022(\n#VOICE_CALL" +
+      "_STATUS_APPLICATION_ERROR\020\365\003*\341\005\n\rPayment" +
+      "Status\022\036\n\032PAYMENT_STATUS_UNSPECIFIED\020\000\022\031" +
+      "\n\025PAYMENT_STATUS_QUEUED\020e\022\'\n#PAYMENT_STA" +
+      "TUS_PENDING_CONFIRMATION\020f\022%\n!PAYMENT_ST" +
+      "ATUS_PENDING_VALIDATION\020g\022\034\n\030PAYMENT_STA" +
+      "TUS_VALIDATED\020h\022#\n\036PAYMENT_STATUS_INVALI" +
+      "D_REQUEST\020\310\001\022!\n\034PAYMENT_STATUS_NOT_SUPPO" +
+      "RTED\020\311\001\022&\n!PAYMENT_STATUS_INSUFFICIENT_F" +
+      "UNDS\020\312\001\022%\n PAYMENT_STATUS_APPLICATION_ER" +
+      "ROR\020\313\001\022\037\n\032PAYMENT_STATUS_NOT_ALLOWED\020\314\001\022" +
+      "%\n PAYMENT_STATUS_DUPLICATE_REQUEST\020\315\001\022!" +
+      "\n\034PAYMENT_STATUS_INVALID_PURSE\020\316\001\022\"\n\035PAY" +
+      "MENT_STATUS_INVALID_WALLET\020\317\001\022.\n)PAYMENT" +
+      "_STATUS_DECOMMISSIONED_CUSTOMER_ID\020\253\002\022\033\n" +
+      "\026PAYMENT_STATUS_SUCCESS\020\254\002\022 \n\033PAYMENT_ST" +
+      "ATUS_PASS_THROUGH\020\255\002\022\032\n\025PAYMENT_STATUS_F" +
+      "AILED\020\220\003\022\035\n\030PAYMENT_STATUS_THROTTLED\020\221\003\022" +
+      "\033\n\026PAYMENT_STATUS_EXPIRED\020\222\003\022\034\n\027PAYMENT_" +
+      "STATUS_REJECTED\020\223\003\022\034\n\027PAYMENT_STATUS_REV" +
+      "ERSED\020\364\003*{\n\022PaymentAccountType\022$\n PAYMEN" +
+      "T_ACCOUNT_TYPE_UNSPECIFIED\020\000\022\036\n\032PAYMENT_" +
+      "ACCOUNT_TYPE_PURSE\020\001\022\037\n\033PAYMENT_ACCOUNT_" +
+      "TYPE_WALLET\020\002*y\n\021TextToSpeechVoice\022$\n TE" +
+      "XT_TO_SPEECH_VOICE_UNSPECIFIED\020\000\022\035\n\031TEXT" +
+      "_TO_SPEECH_VOICE_MALE\020\001\022\037\n\033TEXT_TO_SPEEC" +
+      "H_VOICE_FEMALE\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59976,11 +59976,11 @@ public final class Common {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_com_elarian_hera_proto_HttpHeaders_descriptor =
+    internal_static_com_elarian_hera_proto_AppHeaders_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_elarian_hera_proto_HttpHeaders_fieldAccessorTable = new
+    internal_static_com_elarian_hera_proto_AppHeaders_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_elarian_hera_proto_HttpHeaders_descriptor,
+        internal_static_com_elarian_hera_proto_AppHeaders_descriptor,
         new java.lang.String[] { "IpAddress", "UserAgent", });
     internal_static_com_elarian_hera_proto_Cash_descriptor =
       getDescriptor().getMessageTypes().get(1);
