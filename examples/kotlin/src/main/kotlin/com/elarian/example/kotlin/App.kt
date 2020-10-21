@@ -12,7 +12,7 @@ fun main() {
             .setCustomerNumber(
                     CustomerNumber
                             .newBuilder()
-                            .setNumber("+254700000000")
+                            .setNumber("+254720000000")
                             .setProvider(CustomerNumberProvider.CUSTOMER_NUMBER_PROVIDER_TELCO)
                             .build()
             )

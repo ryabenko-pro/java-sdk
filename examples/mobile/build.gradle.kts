@@ -15,13 +15,13 @@ dependencies {
 }
 
 android {
-    compileSdkVersion(29)
-    buildToolsVersion = "29.0.3"
+    compileSdkVersion(30)
+    buildToolsVersion = "30.0.2"
 
     defaultConfig {
         applicationId = "com.elarian.example.android"
         minSdkVersion(23)
-        targetSdkVersion(29)
+        targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
     }

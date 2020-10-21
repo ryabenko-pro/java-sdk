@@ -14,11 +14,11 @@ String grpcVersion = "1.31.0"
 String protobufVersion = "3.12.4"
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     defaultConfig {
         consumerProguardFiles "proguard-rules.txt"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
