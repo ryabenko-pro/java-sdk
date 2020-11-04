@@ -2145,104 +2145,6 @@ public final class Common {
   }
 
   /**
-   * Protobuf enum {@code com.elarian.hera.proto.PaymentAccountType}
-   */
-  public enum PaymentAccountType
-      implements com.google.protobuf.Internal.EnumLite {
-    /**
-     * <code>PAYMENT_ACCOUNT_TYPE_UNSPECIFIED = 0;</code>
-     */
-    PAYMENT_ACCOUNT_TYPE_UNSPECIFIED(0),
-    /**
-     * <code>PAYMENT_ACCOUNT_TYPE_PURSE = 1;</code>
-     */
-    PAYMENT_ACCOUNT_TYPE_PURSE(1),
-    /**
-     * <code>PAYMENT_ACCOUNT_TYPE_WALLET = 2;</code>
-     */
-    PAYMENT_ACCOUNT_TYPE_WALLET(2),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>PAYMENT_ACCOUNT_TYPE_UNSPECIFIED = 0;</code>
-     */
-    public static final int PAYMENT_ACCOUNT_TYPE_UNSPECIFIED_VALUE = 0;
-    /**
-     * <code>PAYMENT_ACCOUNT_TYPE_PURSE = 1;</code>
-     */
-    public static final int PAYMENT_ACCOUNT_TYPE_PURSE_VALUE = 1;
-    /**
-     * <code>PAYMENT_ACCOUNT_TYPE_WALLET = 2;</code>
-     */
-    public static final int PAYMENT_ACCOUNT_TYPE_WALLET_VALUE = 2;
-
-
-    @java.lang.Override
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static PaymentAccountType valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static PaymentAccountType forNumber(int value) {
-      switch (value) {
-        case 0: return PAYMENT_ACCOUNT_TYPE_UNSPECIFIED;
-        case 1: return PAYMENT_ACCOUNT_TYPE_PURSE;
-        case 2: return PAYMENT_ACCOUNT_TYPE_WALLET;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<PaymentAccountType>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        PaymentAccountType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PaymentAccountType>() {
-            @java.lang.Override
-            public PaymentAccountType findValueByNumber(int number) {
-              return PaymentAccountType.forNumber(number);
-            }
-          };
-
-    public static com.google.protobuf.Internal.EnumVerifier 
-        internalGetVerifier() {
-      return PaymentAccountTypeVerifier.INSTANCE;
-    }
-
-    private static final class PaymentAccountTypeVerifier implements 
-         com.google.protobuf.Internal.EnumVerifier { 
-            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new PaymentAccountTypeVerifier();
-            @java.lang.Override
-            public boolean isInRange(int number) {
-              return PaymentAccountType.forNumber(number) != null;
-            }
-          };
-
-    private final int value;
-
-    private PaymentAccountType(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.PaymentAccountType)
-  }
-
-  /**
    * Protobuf enum {@code com.elarian.hera.proto.TextToSpeechVoice}
    */
   public enum TextToSpeechVoice
@@ -21898,6 +21800,460 @@ public final class Common {
     }
   }
 
+  public interface PaymentChannelCounterPartyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentChannelCounterParty)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+     * @return The channelNumber.
+     */
+    com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber();
+
+    /**
+     * <code>int32 channel_code = 2;</code>
+     * @return The channelCode.
+     */
+    int getChannelCode();
+
+    /**
+     * <code>.google.protobuf.StringValue account = 3;</code>
+     * @return Whether the account field is set.
+     */
+    boolean hasAccount();
+    /**
+     * <code>.google.protobuf.StringValue account = 3;</code>
+     * @return The account.
+     */
+    com.google.protobuf.StringValue getAccount();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.PaymentChannelCounterParty}
+   */
+  public  static final class PaymentChannelCounterParty extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentChannelCounterParty, PaymentChannelCounterParty.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentChannelCounterParty)
+      PaymentChannelCounterPartyOrBuilder {
+    private PaymentChannelCounterParty() {
+    }
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.Common.PaymentChannelNumber channelNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.Common.PaymentChannelNumber.getDefaultInstance() : channelNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+     */
+    private void setChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+      value.getClass();
+  channelNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.Common.PaymentChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.Common.PaymentChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+     */
+    private void clearChannelNumber() {  channelNumber_ = null;
+      
+    }
+
+    public static final int CHANNEL_CODE_FIELD_NUMBER = 2;
+    private int channelCode_;
+    /**
+     * <code>int32 channel_code = 2;</code>
+     * @return The channelCode.
+     */
+    @java.lang.Override
+    public int getChannelCode() {
+      return channelCode_;
+    }
+    /**
+     * <code>int32 channel_code = 2;</code>
+     * @param value The channelCode to set.
+     */
+    private void setChannelCode(int value) {
+      
+      channelCode_ = value;
+    }
+    /**
+     * <code>int32 channel_code = 2;</code>
+     */
+    private void clearChannelCode() {
+      
+      channelCode_ = 0;
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue account_;
+    /**
+     * <code>.google.protobuf.StringValue account = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasAccount() {
+      return account_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue account = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getAccount() {
+      return account_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : account_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue account = 3;</code>
+     */
+    private void setAccount(com.google.protobuf.StringValue value) {
+      value.getClass();
+  account_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue account = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAccount(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (account_ != null &&
+          account_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        account_ =
+          com.google.protobuf.StringValue.newBuilder(account_).mergeFrom(value).buildPartial();
+      } else {
+        account_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue account = 3;</code>
+     */
+    private void clearAccount() {  account_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.PaymentChannelCounterParty prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.PaymentChannelCounterParty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.PaymentChannelCounterParty, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.PaymentChannelCounterParty)
+        com.elarian.hera.proto.Common.PaymentChannelCounterPartyOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.PaymentChannelCounterParty.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber() {
+        return instance.getChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+       */
+      public Builder setChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+        copyOnWrite();
+        instance.setChannelNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.Common.PaymentChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+       */
+      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+        copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 1;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
+        return this;
+      }
+
+      /**
+       * <code>int32 channel_code = 2;</code>
+       * @return The channelCode.
+       */
+      @java.lang.Override
+      public int getChannelCode() {
+        return instance.getChannelCode();
+      }
+      /**
+       * <code>int32 channel_code = 2;</code>
+       * @param value The channelCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelCode(int value) {
+        copyOnWrite();
+        instance.setChannelCode(value);
+        return this;
+      }
+      /**
+       * <code>int32 channel_code = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelCode() {
+        copyOnWrite();
+        instance.clearChannelCode();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue account = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasAccount() {
+        return instance.hasAccount();
+      }
+      /**
+       * <code>.google.protobuf.StringValue account = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getAccount() {
+        return instance.getAccount();
+      }
+      /**
+       * <code>.google.protobuf.StringValue account = 3;</code>
+       */
+      public Builder setAccount(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setAccount(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue account = 3;</code>
+       */
+      public Builder setAccount(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAccount(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue account = 3;</code>
+       */
+      public Builder mergeAccount(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeAccount(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue account = 3;</code>
+       */
+      public Builder clearAccount() {  copyOnWrite();
+        instance.clearAccount();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentChannelCounterParty)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.PaymentChannelCounterParty();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "channelNumber_",
+              "channelCode_",
+              "account_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\u0004" +
+                "\u0003\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.PaymentChannelCounterParty> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.PaymentChannelCounterParty.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.PaymentChannelCounterParty>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.PaymentChannelCounterParty)
+    private static final com.elarian.hera.proto.Common.PaymentChannelCounterParty DEFAULT_INSTANCE;
+    static {
+      PaymentChannelCounterParty defaultInstance = new PaymentChannelCounterParty();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentChannelCounterParty.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.PaymentChannelCounterParty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentChannelCounterParty> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentChannelCounterParty> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface PaymentCounterPartyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.PaymentCounterParty)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -21935,6 +22291,17 @@ public final class Common {
      */
     com.elarian.hera.proto.Common.PaymentWalletCounterParty getWallet();
 
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+     * @return Whether the channel field is set.
+     */
+    boolean hasChannel();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+     * @return The channel.
+     */
+    com.elarian.hera.proto.Common.PaymentChannelCounterParty getChannel();
+
     public com.elarian.hera.proto.Common.PaymentCounterParty.PartyCase getPartyCase();
   }
   /**
@@ -21953,6 +22320,7 @@ public final class Common {
       CUSTOMER(1),
       PURSE(2),
       WALLET(3),
+      CHANNEL(4),
       PARTY_NOT_SET(0);
       private final int value;
       private PartyCase(int value) {
@@ -21971,6 +22339,7 @@ public final class Common {
           case 1: return CUSTOMER;
           case 2: return PURSE;
           case 3: return WALLET;
+          case 4: return CHANNEL;
           case 0: return PARTY_NOT_SET;
           default: return null;
         }
@@ -22137,6 +22506,56 @@ public final class Common {
      */
     private void clearWallet() {
       if (partyCase_ == 3) {
+        partyCase_ = 0;
+        party_ = null;
+      }
+    }
+
+    public static final int CHANNEL_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannel() {
+      return partyCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.PaymentChannelCounterParty getChannel() {
+      if (partyCase_ == 4) {
+         return (com.elarian.hera.proto.Common.PaymentChannelCounterParty) party_;
+      }
+      return com.elarian.hera.proto.Common.PaymentChannelCounterParty.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+     */
+    private void setChannel(com.elarian.hera.proto.Common.PaymentChannelCounterParty value) {
+      value.getClass();
+  party_ = value;
+      partyCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+     */
+    private void mergeChannel(com.elarian.hera.proto.Common.PaymentChannelCounterParty value) {
+      value.getClass();
+  if (partyCase_ == 4 &&
+          party_ != com.elarian.hera.proto.Common.PaymentChannelCounterParty.getDefaultInstance()) {
+        party_ = com.elarian.hera.proto.Common.PaymentChannelCounterParty.newBuilder((com.elarian.hera.proto.Common.PaymentChannelCounterParty) party_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        party_ = value;
+      }
+      partyCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+     */
+    private void clearChannel() {
+      if (partyCase_ == 4) {
         partyCase_ = 0;
         party_ = null;
       }
@@ -22393,6 +22812,54 @@ public final class Common {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannel() {
+        return instance.hasChannel();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.PaymentChannelCounterParty getChannel() {
+        return instance.getChannel();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+       */
+      public Builder setChannel(com.elarian.hera.proto.Common.PaymentChannelCounterParty value) {
+        copyOnWrite();
+        instance.setChannel(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+       */
+      public Builder setChannel(
+          com.elarian.hera.proto.Common.PaymentChannelCounterParty.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannel(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+       */
+      public Builder mergeChannel(com.elarian.hera.proto.Common.PaymentChannelCounterParty value) {
+        copyOnWrite();
+        instance.mergeChannel(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentChannelCounterParty channel = 4;</code>
+       */
+      public Builder clearChannel() {
+        copyOnWrite();
+        instance.clearChannel();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.PaymentCounterParty)
     }
     @java.lang.Override
@@ -22414,10 +22881,11 @@ public final class Common {
               com.elarian.hera.proto.Common.PaymentCustomerCounterParty.class,
               com.elarian.hera.proto.Common.PaymentPurseCounterParty.class,
               com.elarian.hera.proto.Common.PaymentWalletCounterParty.class,
+              com.elarian.hera.proto.Common.PaymentChannelCounterParty.class,
             };
             java.lang.String info =
-                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001<\u0000\u0002<" +
-                "\u0000\u0003<\u0000";
+                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000\u0003<\u0000\u0004<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

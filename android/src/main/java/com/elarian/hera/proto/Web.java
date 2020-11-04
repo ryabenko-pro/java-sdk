@@ -27722,16 +27722,15 @@ public final class Web {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string customer_id = 1;</code>
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
+     * @return Whether the customerId field is set.
+     */
+    boolean hasCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      * @return The customerId.
      */
-    java.lang.String getCustomerId();
-    /**
-     * <code>string customer_id = 1;</code>
-     * @return The bytes for customerId.
-     */
-    com.google.protobuf.ByteString
-        getCustomerIdBytes();
+    com.google.protobuf.StringValue getCustomerId();
 
     /**
      * <code>string transaction_id = 2;</code>
@@ -27765,53 +27764,51 @@ public final class Web {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.PaymentStatusNotification)
       PaymentStatusNotificationOrBuilder {
     private PaymentStatusNotification() {
-      customerId_ = "";
       transactionId_ = "";
     }
     public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-    private java.lang.String customerId_;
+    private com.google.protobuf.StringValue customerId_;
     /**
-     * <code>string customer_id = 1;</code>
-     * @return The customerId.
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      */
     @java.lang.Override
-    public java.lang.String getCustomerId() {
-      return customerId_;
+    public boolean hasCustomerId() {
+      return customerId_ != null;
     }
     /**
-     * <code>string customer_id = 1;</code>
-     * @return The bytes for customerId.
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
+    public com.google.protobuf.StringValue getCustomerId() {
+      return customerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
     }
     /**
-     * <code>string customer_id = 1;</code>
-     * @param value The customerId to set.
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      */
-    private void setCustomerId(
-        java.lang.String value) {
+    private void setCustomerId(com.google.protobuf.StringValue value) {
       value.getClass();
-  
-      customerId_ = value;
-    }
-    /**
-     * <code>string customer_id = 1;</code>
-     */
-    private void clearCustomerId() {
+  customerId_ = value;
       
-      customerId_ = getDefaultInstance().getCustomerId();
+      }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (customerId_ != null &&
+          customerId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        customerId_ =
+          com.google.protobuf.StringValue.newBuilder(customerId_).mergeFrom(value).buildPartial();
+      } else {
+        customerId_ = value;
+      }
+      
     }
     /**
-     * <code>string customer_id = 1;</code>
-     * @param value The bytes for customerId to set.
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      */
-    private void setCustomerIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      customerId_ = value.toStringUtf8();
+    private void clearCustomerId() {  customerId_ = null;
       
     }
 
@@ -28000,51 +27997,49 @@ public final class Web {
 
 
       /**
-       * <code>string customer_id = 1;</code>
-       * @return The customerId.
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        */
       @java.lang.Override
-      public java.lang.String getCustomerId() {
+      public boolean hasCustomerId() {
+        return instance.hasCustomerId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getCustomerId() {
         return instance.getCustomerId();
       }
       /**
-       * <code>string customer_id = 1;</code>
-       * @return The bytes for customerId.
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCustomerIdBytes() {
-        return instance.getCustomerIdBytes();
-      }
-      /**
-       * <code>string customer_id = 1;</code>
-       * @param value The customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerId(
-          java.lang.String value) {
+      public Builder setCustomerId(com.google.protobuf.StringValue value) {
         copyOnWrite();
         instance.setCustomerId(value);
         return this;
-      }
+        }
       /**
-       * <code>string customer_id = 1;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        */
-      public Builder clearCustomerId() {
+      public Builder setCustomerId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
         copyOnWrite();
-        instance.clearCustomerId();
+        instance.setCustomerId(builderForValue.build());
         return this;
       }
       /**
-       * <code>string customer_id = 1;</code>
-       * @param value The bytes for customerId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        */
-      public Builder setCustomerIdBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder mergeCustomerId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.setCustomerIdBytes(value);
+        instance.mergeCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
+       */
+      public Builder clearCustomerId() {  copyOnWrite();
+        instance.clearCustomerId();
         return this;
       }
 
@@ -28164,7 +28159,7 @@ public final class Web {
               "status_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\u0208" +
                 "\u0003\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }

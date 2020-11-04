@@ -49742,16 +49742,19 @@ public final class Web {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string customer_id = 1;</code>
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
+     * @return Whether the customerId field is set.
+     */
+    boolean hasCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      * @return The customerId.
      */
-    java.lang.String getCustomerId();
+    com.google.protobuf.StringValue getCustomerId();
     /**
-     * <code>string customer_id = 1;</code>
-     * @return The bytes for customerId.
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getCustomerIdBytes();
+    com.google.protobuf.StringValueOrBuilder getCustomerIdOrBuilder();
 
     /**
      * <code>string transaction_id = 2;</code>
@@ -49789,7 +49792,6 @@ public final class Web {
       super(builder);
     }
     private PaymentStatusNotification() {
-      customerId_ = "";
       transactionId_ = "";
       status_ = 0;
     }
@@ -49825,9 +49827,16 @@ public final class Web {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (customerId_ != null) {
+                subBuilder = customerId_.toBuilder();
+              }
+              customerId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(customerId_);
+                customerId_ = subBuilder.buildPartial();
+              }
 
-              customerId_ = s;
               break;
             }
             case 18: {
@@ -49875,41 +49884,29 @@ public final class Web {
     }
 
     public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object customerId_;
+    private com.google.protobuf.StringValue customerId_;
     /**
-     * <code>string customer_id = 1;</code>
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
+     * @return Whether the customerId field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerId() {
+      return customerId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      * @return The customerId.
      */
     @java.lang.Override
-    public java.lang.String getCustomerId() {
-      java.lang.Object ref = customerId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        customerId_ = s;
-        return s;
-      }
+    public com.google.protobuf.StringValue getCustomerId() {
+      return customerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
     }
     /**
-     * <code>string customer_id = 1;</code>
-     * @return The bytes for customerId.
+     * <code>.google.protobuf.StringValue customer_id = 1;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      java.lang.Object ref = customerId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        customerId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.google.protobuf.StringValueOrBuilder getCustomerIdOrBuilder() {
+      return getCustomerId();
     }
 
     public static final int TRANSACTION_ID_FIELD_NUMBER = 2;
@@ -49983,8 +49980,8 @@ public final class Web {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCustomerIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerId_);
+      if (customerId_ != null) {
+        output.writeMessage(1, getCustomerId());
       }
       if (!getTransactionIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, transactionId_);
@@ -50001,8 +49998,9 @@ public final class Web {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCustomerIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, customerId_);
+      if (customerId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCustomerId());
       }
       if (!getTransactionIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, transactionId_);
@@ -50026,8 +50024,11 @@ public final class Web {
       }
       com.elarian.hera.proto.Web.PaymentStatusNotification other = (com.elarian.hera.proto.Web.PaymentStatusNotification) obj;
 
-      if (!getCustomerId()
-          .equals(other.getCustomerId())) return false;
+      if (hasCustomerId() != other.hasCustomerId()) return false;
+      if (hasCustomerId()) {
+        if (!getCustomerId()
+            .equals(other.getCustomerId())) return false;
+      }
       if (!getTransactionId()
           .equals(other.getTransactionId())) return false;
       if (status_ != other.status_) return false;
@@ -50042,8 +50043,10 @@ public final class Web {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CUSTOMER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCustomerId().hashCode();
+      if (hasCustomerId()) {
+        hash = (37 * hash) + CUSTOMER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerId().hashCode();
+      }
       hash = (37 * hash) + TRANSACTION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getTransactionId().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
@@ -50181,8 +50184,12 @@ public final class Web {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        customerId_ = "";
-
+        if (customerIdBuilder_ == null) {
+          customerId_ = null;
+        } else {
+          customerId_ = null;
+          customerIdBuilder_ = null;
+        }
         transactionId_ = "";
 
         status_ = 0;
@@ -50213,7 +50220,11 @@ public final class Web {
       @java.lang.Override
       public com.elarian.hera.proto.Web.PaymentStatusNotification buildPartial() {
         com.elarian.hera.proto.Web.PaymentStatusNotification result = new com.elarian.hera.proto.Web.PaymentStatusNotification(this);
-        result.customerId_ = customerId_;
+        if (customerIdBuilder_ == null) {
+          result.customerId_ = customerId_;
+        } else {
+          result.customerId_ = customerIdBuilder_.build();
+        }
         result.transactionId_ = transactionId_;
         result.status_ = status_;
         onBuilt();
@@ -50264,9 +50275,8 @@ public final class Web {
 
       public Builder mergeFrom(com.elarian.hera.proto.Web.PaymentStatusNotification other) {
         if (other == com.elarian.hera.proto.Web.PaymentStatusNotification.getDefaultInstance()) return this;
-        if (!other.getCustomerId().isEmpty()) {
-          customerId_ = other.customerId_;
-          onChanged();
+        if (other.hasCustomerId()) {
+          mergeCustomerId(other.getCustomerId());
         }
         if (!other.getTransactionId().isEmpty()) {
           transactionId_ = other.transactionId_;
@@ -50304,80 +50314,123 @@ public final class Web {
         return this;
       }
 
-      private java.lang.Object customerId_ = "";
+      private com.google.protobuf.StringValue customerId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerIdBuilder_;
       /**
-       * <code>string customer_id = 1;</code>
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
+       * @return Whether the customerId field is set.
+       */
+      public boolean hasCustomerId() {
+        return customerIdBuilder_ != null || customerId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        * @return The customerId.
        */
-      public java.lang.String getCustomerId() {
-        java.lang.Object ref = customerId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          customerId_ = s;
-          return s;
+      public com.google.protobuf.StringValue getCustomerId() {
+        if (customerIdBuilder_ == null) {
+          return customerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
         } else {
-          return (java.lang.String) ref;
+          return customerIdBuilder_.getMessage();
         }
       }
       /**
-       * <code>string customer_id = 1;</code>
-       * @return The bytes for customerId.
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getCustomerIdBytes() {
-        java.lang.Object ref = customerId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          customerId_ = b;
-          return b;
+      public Builder setCustomerId(com.google.protobuf.StringValue value) {
+        if (customerIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customerId_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          customerIdBuilder_.setMessage(value);
         }
+
+        return this;
       }
       /**
-       * <code>string customer_id = 1;</code>
-       * @param value The customerId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        */
       public Builder setCustomerId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        customerId_ = value;
-        onChanged();
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (customerIdBuilder_ == null) {
+          customerId_ = builderForValue.build();
+          onChanged();
+        } else {
+          customerIdBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
       }
       /**
-       * <code>string customer_id = 1;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
+       */
+      public Builder mergeCustomerId(com.google.protobuf.StringValue value) {
+        if (customerIdBuilder_ == null) {
+          if (customerId_ != null) {
+            customerId_ =
+              com.google.protobuf.StringValue.newBuilder(customerId_).mergeFrom(value).buildPartial();
+          } else {
+            customerId_ = value;
+          }
+          onChanged();
+        } else {
+          customerIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        */
       public Builder clearCustomerId() {
-        
-        customerId_ = getDefaultInstance().getCustomerId();
-        onChanged();
+        if (customerIdBuilder_ == null) {
+          customerId_ = null;
+          onChanged();
+        } else {
+          customerId_ = null;
+          customerIdBuilder_ = null;
+        }
+
         return this;
       }
       /**
-       * <code>string customer_id = 1;</code>
-       * @param value The bytes for customerId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
        */
-      public Builder setCustomerIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      public com.google.protobuf.StringValue.Builder getCustomerIdBuilder() {
         
-        customerId_ = value;
         onChanged();
-        return this;
+        return getCustomerIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getCustomerIdOrBuilder() {
+        if (customerIdBuilder_ != null) {
+          return customerIdBuilder_.getMessageOrBuilder();
+        } else {
+          return customerId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getCustomerIdFieldBuilder() {
+        if (customerIdBuilder_ == null) {
+          customerIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getCustomerId(),
+                  getParentForChildren(),
+                  isClean());
+          customerId_ = null;
+        }
+        return customerIdBuilder_;
       }
 
       private java.lang.Object transactionId_ = "";
@@ -57368,111 +57421,112 @@ public final class Web {
       "n.hera.proto.PaymentChannelNumber\022+\n\005val" +
       "ue\030\006 \001(\0132\034.com.elarian.hera.proto.Cash\0225" +
       "\n\006status\030\007 \001(\0162%.com.elarian.hera.proto." +
-      "PaymentStatus\"\177\n\031PaymentStatusNotificati" +
-      "on\022\023\n\013customer_id\030\001 \001(\t\022\026\n\016transaction_i" +
-      "d\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.elarian.he" +
-      "ra.proto.PaymentStatus\"\230\001\n\037WalletPayment" +
-      "StatusNotification\022\021\n\twallet_id\030\001 \001(\t\022\023\n" +
-      "\013customer_id\030\002 \001(\t\022\026\n\016transaction_id\030\003 \001" +
-      "(\t\0225\n\006status\030\004 \001(\0162%.com.elarian.hera.pr" +
-      "oto.PaymentStatus\"\216\007\n\016WebhookRequest\022\016\n\006" +
-      "org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022-\n\ttimestam" +
-      "p\030\003 \001(\0132\032.google.protobuf.Timestamp\022^\n\030m" +
-      "essaging_consent_status\030\004 \001(\0132:.com.elar" +
-      "ian.hera.proto.MessagingConsentStatusNot" +
-      "ificationH\000\022^\n\030messaging_session_status\030" +
-      "\005 \001(\0132:.com.elarian.hera.proto.Messaging" +
-      "SessionStatusNotificationH\000\022@\n\010reminder\030" +
-      "\006 \001(\0132,.com.elarian.hera.proto.ReminderN" +
-      "otificationH\000\022O\n\020received_message\030\007 \001(\0132" +
-      "3.com.elarian.hera.proto.ReceivedMessage" +
-      "NotificationH\000\022K\n\016message_status\030\010 \001(\01321" +
-      ".com.elarian.hera.proto.MessageStatusNot" +
-      "ificationH\000\022G\n\014ussd_session\030\t \001(\0132/.com." +
-      "elarian.hera.proto.UssdSessionNotificati" +
-      "onH\000\022C\n\nvoice_call\030\n \001(\0132-.com.elarian.h" +
-      "era.proto.VoiceCallNotificationH\000\022O\n\020rec" +
-      "eived_payment\030\013 \001(\01323.com.elarian.hera.p" +
-      "roto.ReceivedPaymentNotificationH\000\022K\n\016pa" +
-      "yment_status\030\014 \001(\01321.com.elarian.hera.pr" +
-      "oto.PaymentStatusNotificationH\000\022X\n\025walle" +
-      "t_payment_status\030\r \001(\01327.com.elarian.her" +
-      "a.proto.WalletPaymentStatusNotificationH" +
-      "\000B\007\n\005entry\"\277\001\n\017WebhookResponse\022\016\n\006org_id" +
-      "\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\022\n\nsession_id\030\003 \001" +
-      "(\t\0223\n\tussd_menu\030\004 \001(\0132 .com.elarian.hera" +
-      ".proto.UssdMenu\022C\n\022voice_call_actions\030\005 " +
-      "\003(\0132\'.com.elarian.hera.proto.VoiceCallAc" +
-      "tion\";\n\024WebhookResponseReply\022\016\n\006status\030\001" +
-      " \001(\010\022\023\n\013description\030\002 \001(\t2\212\025\n\016GrpcWebSer" +
-      "vice\022_\n\tAuthToken\022(.com.elarian.hera.pro" +
-      "to.AuthTokenRequest\032&.com.elarian.hera.p" +
-      "roto.AuthTokenReply\"\000\022t\n\020GetCustomerStat" +
-      "e\022/.com.elarian.hera.proto.GetCustomerSt" +
-      "ateRequest\032-.com.elarian.hera.proto.GetC" +
-      "ustomerStateReply\"\000\022{\n\022AdoptCustomerStat" +
-      "e\0221.com.elarian.hera.proto.AdoptCustomer" +
-      "StateRequest\0320.com.elarian.hera.proto.Up" +
-      "dateCustomerStateReply\"\000\022}\n\023AddCustomerR" +
-      "eminder\0222.com.elarian.hera.proto.AddCust" +
-      "omerReminderRequest\0320.com.elarian.hera.p" +
-      "roto.UpdateCustomerStateReply\"\000\022|\n\030AddCu" +
-      "stomerReminderByTag\0225.com.elarian.hera.p" +
-      "roto.AddCustomerReminderTagRequest\032\'.com" +
-      ".elarian.hera.proto.TagCommandReply\"\000\022\203\001" +
-      "\n\026CancelCustomerReminder\0225.com.elarian.h" +
-      "era.proto.CancelCustomerReminderRequest\032" +
-      "0.com.elarian.hera.proto.UpdateCustomerS" +
-      "tateReply\"\000\022\202\001\n\033CancelCustomerReminderBy" +
-      "Tag\0228.com.elarian.hera.proto.CancelCusto" +
-      "merReminderTagRequest\032\'.com.elarian.hera" +
-      ".proto.TagCommandReply\"\000\022y\n\021UpdateCustom" +
-      "erTag\0220.com.elarian.hera.proto.UpdateCus" +
-      "tomerTagRequest\0320.com.elarian.hera.proto" +
-      ".UpdateCustomerStateReply\"\000\022y\n\021DeleteCus" +
-      "tomerTag\0220.com.elarian.hera.proto.Delete" +
-      "CustomerTagRequest\0320.com.elarian.hera.pr" +
-      "oto.UpdateCustomerStateReply\"\000\022\211\001\n\031Updat" +
-      "eCustomerSecondaryId\0228.com.elarian.hera." +
-      "proto.UpdateCustomerSecondaryIdRequest\0320" +
-      ".com.elarian.hera.proto.UpdateCustomerSt" +
-      "ateReply\"\000\022\211\001\n\031DeleteCustomerSecondaryId" +
-      "\0228.com.elarian.hera.proto.DeleteCustomer" +
-      "SecondaryIdRequest\0320.com.elarian.hera.pr" +
-      "oto.UpdateCustomerStateReply\"\000\022\203\001\n\025Lease" +
-      "CustomerMetadata\0224.com.elarian.hera.prot" +
-      "o.LeaseCustomerMetadataRequest\0322.com.ela" +
-      "rian.hera.proto.LeaseCustomerMetadataRep" +
-      "ly\"\000\022\203\001\n\026UpdateCustomerMetadata\0225.com.el" +
-      "arian.hera.proto.UpdateCustomerMetadataR" +
+      "PaymentStatus\"\235\001\n\031PaymentStatusNotificat" +
+      "ion\0221\n\013customer_id\030\001 \001(\0132\034.google.protob" +
+      "uf.StringValue\022\026\n\016transaction_id\030\002 \001(\t\0225" +
+      "\n\006status\030\003 \001(\0162%.com.elarian.hera.proto." +
+      "PaymentStatus\"\230\001\n\037WalletPaymentStatusNot" +
+      "ification\022\021\n\twallet_id\030\001 \001(\t\022\023\n\013customer" +
+      "_id\030\002 \001(\t\022\026\n\016transaction_id\030\003 \001(\t\0225\n\006sta" +
+      "tus\030\004 \001(\0162%.com.elarian.hera.proto.Payme" +
+      "ntStatus\"\216\007\n\016WebhookRequest\022\016\n\006org_id\030\001 " +
+      "\001(\t\022\016\n\006app_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022^\n\030messaging_" +
+      "consent_status\030\004 \001(\0132:.com.elarian.hera." +
+      "proto.MessagingConsentStatusNotification" +
+      "H\000\022^\n\030messaging_session_status\030\005 \001(\0132:.c" +
+      "om.elarian.hera.proto.MessagingSessionSt" +
+      "atusNotificationH\000\022@\n\010reminder\030\006 \001(\0132,.c" +
+      "om.elarian.hera.proto.ReminderNotificati" +
+      "onH\000\022O\n\020received_message\030\007 \001(\01323.com.ela" +
+      "rian.hera.proto.ReceivedMessageNotificat" +
+      "ionH\000\022K\n\016message_status\030\010 \001(\01321.com.elar" +
+      "ian.hera.proto.MessageStatusNotification" +
+      "H\000\022G\n\014ussd_session\030\t \001(\0132/.com.elarian.h" +
+      "era.proto.UssdSessionNotificationH\000\022C\n\nv" +
+      "oice_call\030\n \001(\0132-.com.elarian.hera.proto" +
+      ".VoiceCallNotificationH\000\022O\n\020received_pay" +
+      "ment\030\013 \001(\01323.com.elarian.hera.proto.Rece" +
+      "ivedPaymentNotificationH\000\022K\n\016payment_sta" +
+      "tus\030\014 \001(\01321.com.elarian.hera.proto.Payme" +
+      "ntStatusNotificationH\000\022X\n\025wallet_payment" +
+      "_status\030\r \001(\01327.com.elarian.hera.proto.W" +
+      "alletPaymentStatusNotificationH\000B\007\n\005entr" +
+      "y\"\277\001\n\017WebhookResponse\022\016\n\006org_id\030\001 \001(\t\022\016\n" +
+      "\006app_id\030\002 \001(\t\022\022\n\nsession_id\030\003 \001(\t\0223\n\tuss" +
+      "d_menu\030\004 \001(\0132 .com.elarian.hera.proto.Us" +
+      "sdMenu\022C\n\022voice_call_actions\030\005 \003(\0132\'.com" +
+      ".elarian.hera.proto.VoiceCallAction\";\n\024W" +
+      "ebhookResponseReply\022\016\n\006status\030\001 \001(\010\022\023\n\013d" +
+      "escription\030\002 \001(\t2\212\025\n\016GrpcWebService\022_\n\tA" +
+      "uthToken\022(.com.elarian.hera.proto.AuthTo" +
+      "kenRequest\032&.com.elarian.hera.proto.Auth" +
+      "TokenReply\"\000\022t\n\020GetCustomerState\022/.com.e" +
+      "larian.hera.proto.GetCustomerStateReques" +
+      "t\032-.com.elarian.hera.proto.GetCustomerSt" +
+      "ateReply\"\000\022{\n\022AdoptCustomerState\0221.com.e" +
+      "larian.hera.proto.AdoptCustomerStateRequ" +
+      "est\0320.com.elarian.hera.proto.UpdateCusto" +
+      "merStateReply\"\000\022}\n\023AddCustomerReminder\0222" +
+      ".com.elarian.hera.proto.AddCustomerRemin" +
+      "derRequest\0320.com.elarian.hera.proto.Upda" +
+      "teCustomerStateReply\"\000\022|\n\030AddCustomerRem" +
+      "inderByTag\0225.com.elarian.hera.proto.AddC" +
+      "ustomerReminderTagRequest\032\'.com.elarian." +
+      "hera.proto.TagCommandReply\"\000\022\203\001\n\026CancelC" +
+      "ustomerReminder\0225.com.elarian.hera.proto" +
+      ".CancelCustomerReminderRequest\0320.com.ela" +
+      "rian.hera.proto.UpdateCustomerStateReply" +
+      "\"\000\022\202\001\n\033CancelCustomerReminderByTag\0228.com" +
+      ".elarian.hera.proto.CancelCustomerRemind" +
+      "erTagRequest\032\'.com.elarian.hera.proto.Ta" +
+      "gCommandReply\"\000\022y\n\021UpdateCustomerTag\0220.c" +
+      "om.elarian.hera.proto.UpdateCustomerTagR" +
       "equest\0320.com.elarian.hera.proto.UpdateCu" +
-      "stomerStateReply\"\000\022\203\001\n\026DeleteCustomerMet" +
-      "adata\0225.com.elarian.hera.proto.DeleteCus" +
-      "tomerMetadataRequest\0320.com.elarian.hera." +
-      "proto.UpdateCustomerStateReply\"\000\022e\n\013Send" +
-      "Message\022*.com.elarian.hera.proto.SendMes" +
-      "sageRequest\032(.com.elarian.hera.proto.Sen" +
-      "dMessageReply\"\000\022l\n\020SendMessageByTag\022-.co" +
-      "m.elarian.hera.proto.SendMessageTagReque" +
-      "st\032\'.com.elarian.hera.proto.TagCommandRe" +
-      "ply\"\000\022k\n\016ReplyToMessage\022-.com.elarian.he" +
-      "ra.proto.ReplyToMessageRequest\032(.com.ela" +
-      "rian.hera.proto.SendMessageReply\"\000\022t\n\020Me" +
-      "ssagingConsent\022/.com.elarian.hera.proto." +
-      "MessagingConsentRequest\032-.com.elarian.he" +
-      "ra.proto.MessagingConsentReply\"\000\022q\n\017Init" +
-      "iatePayment\022..com.elarian.hera.proto.Ini" +
-      "tiatePaymentRequest\032,.com.elarian.hera.p" +
-      "roto.InitiatePaymentReply\"\000\022k\n\rMakeVoice" +
-      "Call\022,.com.elarian.hera.proto.MakeVoiceC" +
-      "allRequest\032*.com.elarian.hera.proto.Make" +
-      "VoiceCallReply\"\000\022t\n\023StreamNotifications\022" +
-      "1.com.elarian.hera.proto.StreamNotificat" +
-      "ionRequest\032&.com.elarian.hera.proto.Webh" +
-      "ookRequest\"\0000\001\022n\n\023SendWebhookResponse\022\'." +
-      "com.elarian.hera.proto.WebhookResponse\032," +
-      ".com.elarian.hera.proto.WebhookResponseR" +
-      "eply\"\000b\006proto3"
+      "stomerStateReply\"\000\022y\n\021DeleteCustomerTag\022" +
+      "0.com.elarian.hera.proto.DeleteCustomerT" +
+      "agRequest\0320.com.elarian.hera.proto.Updat" +
+      "eCustomerStateReply\"\000\022\211\001\n\031UpdateCustomer" +
+      "SecondaryId\0228.com.elarian.hera.proto.Upd" +
+      "ateCustomerSecondaryIdRequest\0320.com.elar" +
+      "ian.hera.proto.UpdateCustomerStateReply\"" +
+      "\000\022\211\001\n\031DeleteCustomerSecondaryId\0228.com.el" +
+      "arian.hera.proto.DeleteCustomerSecondary" +
+      "IdRequest\0320.com.elarian.hera.proto.Updat" +
+      "eCustomerStateReply\"\000\022\203\001\n\025LeaseCustomerM" +
+      "etadata\0224.com.elarian.hera.proto.LeaseCu" +
+      "stomerMetadataRequest\0322.com.elarian.hera" +
+      ".proto.LeaseCustomerMetadataReply\"\000\022\203\001\n\026" +
+      "UpdateCustomerMetadata\0225.com.elarian.her" +
+      "a.proto.UpdateCustomerMetadataRequest\0320." +
+      "com.elarian.hera.proto.UpdateCustomerSta" +
+      "teReply\"\000\022\203\001\n\026DeleteCustomerMetadata\0225.c" +
+      "om.elarian.hera.proto.DeleteCustomerMeta" +
+      "dataRequest\0320.com.elarian.hera.proto.Upd" +
+      "ateCustomerStateReply\"\000\022e\n\013SendMessage\022*" +
+      ".com.elarian.hera.proto.SendMessageReque" +
+      "st\032(.com.elarian.hera.proto.SendMessageR" +
+      "eply\"\000\022l\n\020SendMessageByTag\022-.com.elarian" +
+      ".hera.proto.SendMessageTagRequest\032\'.com." +
+      "elarian.hera.proto.TagCommandReply\"\000\022k\n\016" +
+      "ReplyToMessage\022-.com.elarian.hera.proto." +
+      "ReplyToMessageRequest\032(.com.elarian.hera" +
+      ".proto.SendMessageReply\"\000\022t\n\020MessagingCo" +
+      "nsent\022/.com.elarian.hera.proto.Messaging" +
+      "ConsentRequest\032-.com.elarian.hera.proto." +
+      "MessagingConsentReply\"\000\022q\n\017InitiatePayme" +
+      "nt\022..com.elarian.hera.proto.InitiatePaym" +
+      "entRequest\032,.com.elarian.hera.proto.Init" +
+      "iatePaymentReply\"\000\022k\n\rMakeVoiceCall\022,.co" +
+      "m.elarian.hera.proto.MakeVoiceCallReques" +
+      "t\032*.com.elarian.hera.proto.MakeVoiceCall" +
+      "Reply\"\000\022t\n\023StreamNotifications\0221.com.ela" +
+      "rian.hera.proto.StreamNotificationReques" +
+      "t\032&.com.elarian.hera.proto.WebhookReques" +
+      "t\"\0000\001\022n\n\023SendWebhookResponse\022\'.com.elari" +
+      "an.hera.proto.WebhookResponse\032,.com.elar" +
+      "ian.hera.proto.WebhookResponseReply\"\000b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
