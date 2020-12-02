@@ -19,38 +19,61 @@ public final class App {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    int getEntriesCount();
+    java.lang.String getOrgId();
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
-    boolean containsEntries(
-        java.lang.String key);
-    /**
-     * Use {@link #getEntriesMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getEntries();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getEntriesMap();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
 
-    com.elarian.hera.proto.Common.DataMapValue getEntriesOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue);
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+     * <code>string app_id = 2;</code>
+     * @return The appId.
      */
+    java.lang.String getAppId();
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The bytes for appId.
+     */
+    com.google.protobuf.ByteString
+        getAppIdBytes();
 
-    com.elarian.hera.proto.Common.DataMapValue getEntriesOrThrow(
-        java.lang.String key);
+    /**
+     * <code>string auth_token = 3;</code>
+     * @return The authToken.
+     */
+    java.lang.String getAuthToken();
+    /**
+     * <code>string auth_token = 3;</code>
+     * @return The bytes for authToken.
+     */
+    com.google.protobuf.ByteString
+        getAuthTokenBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+
+    /**
+     * <code>bool simplex_mode = 5;</code>
+     * @return The simplexMode.
+     */
+    boolean getSimplexMode();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.AppConnectionMetadata}
@@ -65,6 +88,9 @@ public final class App {
       super(builder);
     }
     private AppConnectionMetadata() {
+      orgId_ = "";
+      appId_ = "";
+      authToken_ = "";
     }
 
     @java.lang.Override
@@ -87,7 +113,6 @@ public final class App {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -99,16 +124,39 @@ public final class App {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                entries_ = com.google.protobuf.MapField.newMapField(
-                    EntriesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orgId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              appId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              authToken_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (timestamp_ != null) {
+                subBuilder = timestamp_.toBuilder();
               }
-              com.google.protobuf.MapEntry<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-              entries__ = input.readMessage(
-                  EntriesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              entries_.getMutableMap().put(
-                  entries__.getKey(), entries__.getValue());
+              timestamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timestamp_);
+                timestamp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 40: {
+
+              simplexMode_ = input.readBool();
               break;
             }
             default: {
@@ -135,18 +183,6 @@ public final class App {
       return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_AppConnectionMetadata_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetEntries();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -155,85 +191,155 @@ public final class App {
               com.elarian.hera.proto.App.AppConnectionMetadata.class, com.elarian.hera.proto.App.AppConnectionMetadata.Builder.class);
     }
 
-    public static final int ENTRIES_FIELD_NUMBER = 1;
-    private static final class EntriesDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>newDefaultInstance(
-                  com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_AppConnectionMetadata_EntriesEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance());
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, com.elarian.hera.proto.Common.DataMapValue> entries_;
-    private com.google.protobuf.MapField<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    internalGetEntries() {
-      if (entries_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            EntriesDefaultEntryHolder.defaultEntry);
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
       }
-      return entries_;
-    }
-
-    public int getEntriesCount() {
-      return internalGetEntries().getMap().size();
     }
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsEntries(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetEntries().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getEntriesMap()} instead.
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
     @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getEntries() {
-      return getEntriesMap();
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getEntriesMap() {
-      return internalGetEntries().getMap();
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.DataMapValue getEntriesOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-          internalGetEntries().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.DataMapValue getEntriesOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-          internalGetEntries().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return map.get(key);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object appId_;
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public java.lang.String getAppId() {
+      java.lang.Object ref = appId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        appId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The bytes for appId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAppIdBytes() {
+      java.lang.Object ref = appId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        appId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTH_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object authToken_;
+    /**
+     * <code>string auth_token = 3;</code>
+     * @return The authToken.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthToken() {
+      java.lang.Object ref = authToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string auth_token = 3;</code>
+     * @return The bytes for authToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthTokenBytes() {
+      java.lang.Object ref = authToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     * @return Whether the timestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return getTimestamp();
+    }
+
+    public static final int SIMPLEX_MODE_FIELD_NUMBER = 5;
+    private boolean simplexMode_;
+    /**
+     * <code>bool simplex_mode = 5;</code>
+     * @return The simplexMode.
+     */
+    @java.lang.Override
+    public boolean getSimplexMode() {
+      return simplexMode_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -250,12 +356,21 @@ public final class App {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetEntries(),
-          EntriesDefaultEntryHolder.defaultEntry,
-          1);
+      if (!getOrgIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
+      }
+      if (!getAppIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, appId_);
+      }
+      if (!getAuthTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, authToken_);
+      }
+      if (timestamp_ != null) {
+        output.writeMessage(4, getTimestamp());
+      }
+      if (simplexMode_ != false) {
+        output.writeBool(5, simplexMode_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -265,15 +380,22 @@ public final class App {
       if (size != -1) return size;
 
       size = 0;
-      for (java.util.Map.Entry<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> entry
-           : internalGetEntries().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-        entries__ = EntriesDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
+      if (!getOrgIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
+      }
+      if (!getAppIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, appId_);
+      }
+      if (!getAuthTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, authToken_);
+      }
+      if (timestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, entries__);
+          .computeMessageSize(4, getTimestamp());
+      }
+      if (simplexMode_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, simplexMode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -290,8 +412,19 @@ public final class App {
       }
       com.elarian.hera.proto.App.AppConnectionMetadata other = (com.elarian.hera.proto.App.AppConnectionMetadata) obj;
 
-      if (!internalGetEntries().equals(
-          other.internalGetEntries())) return false;
+      if (!getOrgId()
+          .equals(other.getOrgId())) return false;
+      if (!getAppId()
+          .equals(other.getAppId())) return false;
+      if (!getAuthToken()
+          .equals(other.getAuthToken())) return false;
+      if (hasTimestamp() != other.hasTimestamp()) return false;
+      if (hasTimestamp()) {
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
+      }
+      if (getSimplexMode()
+          != other.getSimplexMode()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -303,10 +436,19 @@ public final class App {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetEntries().getMap().isEmpty()) {
-        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetEntries().hashCode();
+      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrgId().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAppId().hashCode();
+      hash = (37 * hash) + AUTH_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthToken().hashCode();
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
       }
+      hash = (37 * hash) + SIMPLEX_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSimplexMode());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -414,28 +556,6 @@ public final class App {
         return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_AppConnectionMetadata_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetEntries();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutableEntries();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -462,7 +582,20 @@ public final class App {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        internalGetMutableEntries().clear();
+        orgId_ = "";
+
+        appId_ = "";
+
+        authToken_ = "";
+
+        if (timestampBuilder_ == null) {
+          timestamp_ = null;
+        } else {
+          timestamp_ = null;
+          timestampBuilder_ = null;
+        }
+        simplexMode_ = false;
+
         return this;
       }
 
@@ -489,9 +622,15 @@ public final class App {
       @java.lang.Override
       public com.elarian.hera.proto.App.AppConnectionMetadata buildPartial() {
         com.elarian.hera.proto.App.AppConnectionMetadata result = new com.elarian.hera.proto.App.AppConnectionMetadata(this);
-        int from_bitField0_ = bitField0_;
-        result.entries_ = internalGetEntries();
-        result.entries_.makeImmutable();
+        result.orgId_ = orgId_;
+        result.appId_ = appId_;
+        result.authToken_ = authToken_;
+        if (timestampBuilder_ == null) {
+          result.timestamp_ = timestamp_;
+        } else {
+          result.timestamp_ = timestampBuilder_.build();
+        }
+        result.simplexMode_ = simplexMode_;
         onBuilt();
         return result;
       }
@@ -540,8 +679,24 @@ public final class App {
 
       public Builder mergeFrom(com.elarian.hera.proto.App.AppConnectionMetadata other) {
         if (other == com.elarian.hera.proto.App.AppConnectionMetadata.getDefaultInstance()) return this;
-        internalGetMutableEntries().mergeFrom(
-            other.internalGetEntries());
+        if (!other.getOrgId().isEmpty()) {
+          orgId_ = other.orgId_;
+          onChanged();
+        }
+        if (!other.getAppId().isEmpty()) {
+          appId_ = other.appId_;
+          onChanged();
+        }
+        if (!other.getAuthToken().isEmpty()) {
+          authToken_ = other.authToken_;
+          onChanged();
+        }
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        if (other.getSimplexMode() != false) {
+          setSimplexMode(other.getSimplexMode());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -570,133 +725,382 @@ public final class App {
         }
         return this;
       }
-      private int bitField0_;
 
-      private com.google.protobuf.MapField<
-          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> entries_;
-      private com.google.protobuf.MapField<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-      internalGetEntries() {
-        if (entries_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              EntriesDefaultEntryHolder.defaultEntry);
+      private java.lang.Object orgId_ = "";
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
+       */
+      public java.lang.String getOrgId() {
+        java.lang.Object ref = orgId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orgId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        return entries_;
       }
-      private com.google.protobuf.MapField<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-      internalGetMutableEntries() {
-        onChanged();;
-        if (entries_ == null) {
-          entries_ = com.google.protobuf.MapField.newMapField(
-              EntriesDefaultEntryHolder.defaultEntry);
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        java.lang.Object ref = orgId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orgId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
-        if (!entries_.isMutable()) {
-          entries_ = entries_.copy();
-        }
-        return entries_;
-      }
-
-      public int getEntriesCount() {
-        return internalGetEntries().getMap().size();
       }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
        */
-
-      @java.lang.Override
-      public boolean containsEntries(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetEntries().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getEntriesMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getEntries() {
-        return getEntriesMap();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getEntriesMap() {
-        return internalGetEntries().getMap();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-       */
-      @java.lang.Override
-
-      public com.elarian.hera.proto.Common.DataMapValue getEntriesOrDefault(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-            internalGetEntries().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-       */
-      @java.lang.Override
-
-      public com.elarian.hera.proto.Common.DataMapValue getEntriesOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-            internalGetEntries().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearEntries() {
-        internalGetMutableEntries().getMutableMap()
-            .clear();
+      public Builder setOrgId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orgId_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
        */
-
-      public Builder removeEntries(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableEntries().getMutableMap()
-            .remove(key);
+      public Builder clearOrgId() {
+        
+        orgId_ = getDefaultInstance().getOrgId();
+        onChanged();
         return this;
       }
       /**
-       * Use alternate mutation accessors instead.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
        */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-      getMutableEntries() {
-        return internalGetMutableEntries().getMutableMap();
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orgId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object appId_ = "";
+      /**
+       * <code>string app_id = 2;</code>
+       * @return The appId.
+       */
+      public java.lang.String getAppId() {
+        java.lang.Object ref = appId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          appId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>string app_id = 2;</code>
+       * @return The bytes for appId.
        */
-      public Builder putEntries(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableEntries().getMutableMap()
-            .put(key, value);
+      public com.google.protobuf.ByteString
+          getAppIdBytes() {
+        java.lang.Object ref = appId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          appId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        appId_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>string app_id = 2;</code>
+       * @return This builder for chaining.
        */
+      public Builder clearAppId() {
+        
+        appId_ = getDefaultInstance().getAppId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @param value The bytes for appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        appId_ = value;
+        onChanged();
+        return this;
+      }
 
-      public Builder putAllEntries(
-          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> values) {
-        internalGetMutableEntries().getMutableMap()
-            .putAll(values);
+      private java.lang.Object authToken_ = "";
+      /**
+       * <code>string auth_token = 3;</code>
+       * @return The authToken.
+       */
+      public java.lang.String getAuthToken() {
+        java.lang.Object ref = authToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string auth_token = 3;</code>
+       * @return The bytes for authToken.
+       */
+      public com.google.protobuf.ByteString
+          getAuthTokenBytes() {
+        java.lang.Object ref = authToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string auth_token = 3;</code>
+       * @param value The authToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        authToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auth_token = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthToken() {
+        
+        authToken_ = getDefaultInstance().getAuthToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auth_token = 3;</code>
+       * @param value The bytes for authToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        authToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * @return Whether the timestamp field is set.
+       */
+      public boolean hasTimestamp() {
+        return timestampBuilder_ != null || timestamp_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * @return The timestamp.
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+          onChanged();
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+          onChanged();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (timestamp_ != null) {
+            timestamp_ =
+              com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+          } else {
+            timestamp_ = value;
+          }
+          onChanged();
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      public Builder clearTimestamp() {
+        if (timestampBuilder_ == null) {
+          timestamp_ = null;
+          onChanged();
+        } else {
+          timestamp_ = null;
+          timestampBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+
+      private boolean simplexMode_ ;
+      /**
+       * <code>bool simplex_mode = 5;</code>
+       * @return The simplexMode.
+       */
+      @java.lang.Override
+      public boolean getSimplexMode() {
+        return simplexMode_;
+      }
+      /**
+       * <code>bool simplex_mode = 5;</code>
+       * @param value The simplexMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSimplexMode(boolean value) {
+        
+        simplexMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool simplex_mode = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSimplexMode() {
+        
+        simplexMode_ = false;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -58941,11 +59345,6 @@ public final class App {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_AppConnectionMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_elarian_hera_proto_AppConnectionMetadata_EntriesEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_elarian_hera_proto_AppConnectionMetadata_EntriesEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_AppToServerCommand_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -59189,311 +59588,310 @@ public final class App {
       "obuf/timestamp.proto\032\036google/protobuf/wr" +
       "appers.proto\032\014common.proto\032\rnuclear.prot" +
       "o\032\017messaging.proto\032\rpayment.proto\032\nussd." +
-      "proto\032\013voice.proto\"\272\001\n\025AppConnectionMeta" +
-      "data\022K\n\007entries\030\001 \003(\0132:.com.elarian.hera" +
-      ".proto.AppConnectionMetadata.EntriesEntr" +
-      "y\032T\n\014EntriesEntry\022\013\n\003key\030\001 \001(\t\0223\n\005value\030" +
-      "\002 \001(\0132$.com.elarian.hera.proto.DataMapVa" +
-      "lue:\0028\001\"\337\014\n\022AppToServerCommand\022M\n\022get_cu" +
-      "stomer_state\030\001 \001(\0132/.com.elarian.hera.pr" +
-      "oto.GetCustomerStateCommandH\000\022Q\n\024adopt_c" +
-      "ustomer_state\030\002 \001(\01321.com.elarian.hera.p" +
-      "roto.AdoptCustomerStateCommandH\000\022S\n\025add_" +
-      "customer_reminder\030\003 \001(\01322.com.elarian.he" +
-      "ra.proto.AddCustomerReminderCommandH\000\022Z\n" +
-      "\031add_customer_reminder_tag\030\004 \001(\01325.com.e" +
-      "larian.hera.proto.AddCustomerReminderTag" +
-      "CommandH\000\022Y\n\030cancel_customer_reminder\030\005 " +
-      "\001(\01325.com.elarian.hera.proto.CancelCusto" +
-      "merReminderCommandH\000\022`\n\034cancel_customer_" +
-      "reminder_tag\030\006 \001(\01328.com.elarian.hera.pr" +
-      "oto.CancelCustomerReminderTagCommandH\000\022O" +
-      "\n\023update_customer_tag\030\007 \001(\01320.com.elaria" +
-      "n.hera.proto.UpdateCustomerTagCommandH\000\022" +
-      "O\n\023delete_customer_tag\030\010 \001(\01320.com.elari" +
-      "an.hera.proto.DeleteCustomerTagCommandH\000" +
-      "\022`\n\034update_customer_secondary_id\030\t \001(\01328" +
-      ".com.elarian.hera.proto.UpdateCustomerSe" +
-      "condaryIdCommandH\000\022`\n\034delete_customer_se" +
-      "condary_id\030\n \001(\01328.com.elarian.hera.prot" +
-      "o.DeleteCustomerSecondaryIdCommandH\000\022W\n\027" +
-      "lease_customer_metadata\030\013 \001(\01324.com.elar" +
-      "ian.hera.proto.LeaseCustomerMetadataComm" +
-      "andH\000\022Y\n\030update_customer_metadata\030\014 \001(\0132" +
-      "5.com.elarian.hera.proto.UpdateCustomerM" +
-      "etadataCommandH\000\022Y\n\030delete_customer_meta" +
-      "data\030\r \001(\01325.com.elarian.hera.proto.Dele" +
-      "teCustomerMetadataCommandH\000\022B\n\014send_mess" +
-      "age\030\016 \001(\0132*.com.elarian.hera.proto.SendM" +
-      "essageCommandH\000\022I\n\020send_message_tag\030\017 \001(" +
-      "\0132-.com.elarian.hera.proto.SendMessageTa" +
-      "gCommandH\000\022I\n\020reply_to_message\030\020 \001(\0132-.c" +
-      "om.elarian.hera.proto.ReplyToMessageComm" +
-      "andH\000\022L\n\021messaging_consent\030\021 \001(\0132/.com.e" +
-      "larian.hera.proto.MessagingConsentComman" +
-      "dH\000\022J\n\020initiate_payment\030\022 \001(\0132..com.elar" +
-      "ian.hera.proto.InitiatePaymentCommandH\000\022" +
-      "G\n\017make_voice_call\030\023 \001(\0132,.com.elarian.h" +
-      "era.proto.MakeVoiceCallCommandH\000B\007\n\005entr" +
-      "y\"\370\004\n\027AppToServerCommandReply\022K\n\022get_cus" +
-      "tomer_state\030\001 \001(\0132-.com.elarian.hera.pro" +
-      "to.GetCustomerStateReplyH\000\022U\n\027lease_cust" +
-      "omer_metadata\030\002 \001(\01322.com.elarian.hera.p" +
-      "roto.LeaseCustomerMetadataReplyH\000\022Q\n\025upd" +
-      "ate_customer_state\030\003 \001(\01320.com.elarian.h" +
-      "era.proto.UpdateCustomerStateReplyH\000\022@\n\014" +
-      "send_message\030\004 \001(\0132(.com.elarian.hera.pr" +
-      "oto.SendMessageReplyH\000\022J\n\021messaging_cons" +
-      "ent\030\005 \001(\0132-.com.elarian.hera.proto.Messa" +
-      "gingConsentReplyH\000\022H\n\020initiate_payment\030\006" +
-      " \001(\0132,.com.elarian.hera.proto.InitiatePa" +
-      "ymentReplyH\000\022E\n\017make_voice_call\030\007 \001(\0132*." +
-      "com.elarian.hera.proto.MakeVoiceCallRepl" +
-      "yH\000\022>\n\013tag_command\030\010 \001(\0132\'.com.elarian.h" +
-      "era.proto.TagCommandReplyH\000B\007\n\005entry\"L\n\016" +
-      "AuthTokenReply\022\r\n\005token\030\001 \001(\t\022+\n\010lifetim" +
-      "e\030\002 \001(\0132\031.google.protobuf.Duration\"\275\001\n\027G" +
-      "etCustomerStateCommand\022\025\n\013customer_id\030\001 " +
-      "\001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.ela" +
-      "rian.hera.proto.CustomerNumberH\000\022<\n\014seco" +
-      "ndary_id\030\003 \001(\0132$.com.elarian.hera.proto." +
-      "IndexMappingH\000B\n\n\010customer\"z\n\025GetCustome" +
-      "rStateReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descripti" +
-      "on\030\002 \001(\t\022<\n\004data\030\003 \001(\0132..com.elarian.her" +
-      "a.proto.CustomerStateReplyData\"\330\002\n\026Custo" +
-      "merStateReplyData\022\023\n\013customer_id\030\001 \001(\t\022;" +
-      "\n\rnuclear_state\030\002 \001(\0132$.com.elarian.hera" +
-      ".proto.NuclearState\022?\n\017messaging_state\030\003" +
-      " \001(\0132&.com.elarian.hera.proto.MessagingS" +
-      "tate\0225\n\nussd_state\030\004 \001(\0132!.com.elarian.h" +
-      "era.proto.UssdState\0227\n\013voice_state\030\005 \001(\013" +
-      "2\".com.elarian.hera.proto.VoiceState\022;\n\r" +
-      "payment_state\030\006 \001(\0132$.com.elarian.hera.p" +
-      "roto.PaymentState\"\354\001\n\031AdoptCustomerState" +
-      "Command\022\023\n\013customer_id\030\001 \001(\t\022\033\n\021other_cu" +
-      "stomer_id\030\002 \001(\tH\000\022G\n\025other_customer_numb" +
-      "er\030\003 \001(\0132&.com.elarian.hera.proto.Custom" +
-      "erNumberH\000\022B\n\022other_secondary_id\030\004 \001(\0132$" +
-      ".com.elarian.hera.proto.IndexMappingH\000B\020" +
-      "\n\016other_customer\"\374\001\n\032AddCustomerReminder" +
-      "Command\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017custom" +
-      "er_number\030\002 \001(\0132&.com.elarian.hera.proto" +
-      ".CustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132" +
-      "$.com.elarian.hera.proto.IndexMappingH\000\022" +
-      ":\n\010reminder\030\004 \001(\0132(.com.elarian.hera.pro" +
-      "to.CustomerReminderB\n\n\010customer\"\216\001\n\035AddC" +
-      "ustomerReminderTagCommand\0221\n\003tag\030\001 \001(\0132$" +
-      ".com.elarian.hera.proto.IndexMapping\022:\n\010" +
-      "reminder\030\002 \001(\0132(.com.elarian.hera.proto." +
-      "CustomerReminder\"\320\001\n\035CancelCustomerRemin" +
-      "derCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017cus" +
-      "tomer_number\030\002 \001(\0132&.com.elarian.hera.pr" +
-      "oto.CustomerNumberH\000\022<\n\014secondary_id\030\003 \001" +
-      "(\0132$.com.elarian.hera.proto.IndexMapping" +
-      "H\000\022\013\n\003key\030\004 \001(\tB\n\n\010customer\"b\n CancelCus" +
+      "proto\032\013voice.proto\"\220\001\n\025AppConnectionMeta" +
+      "data\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\022\n\n" +
+      "auth_token\030\003 \001(\t\022-\n\ttimestamp\030\004 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\024\n\014simplex_mode\030" +
+      "\005 \001(\010\"\337\014\n\022AppToServerCommand\022M\n\022get_cust" +
+      "omer_state\030\001 \001(\0132/.com.elarian.hera.prot" +
+      "o.GetCustomerStateCommandH\000\022Q\n\024adopt_cus" +
+      "tomer_state\030\002 \001(\01321.com.elarian.hera.pro" +
+      "to.AdoptCustomerStateCommandH\000\022S\n\025add_cu" +
+      "stomer_reminder\030\003 \001(\01322.com.elarian.hera" +
+      ".proto.AddCustomerReminderCommandH\000\022Z\n\031a" +
+      "dd_customer_reminder_tag\030\004 \001(\01325.com.ela" +
+      "rian.hera.proto.AddCustomerReminderTagCo" +
+      "mmandH\000\022Y\n\030cancel_customer_reminder\030\005 \001(" +
+      "\01325.com.elarian.hera.proto.CancelCustome" +
+      "rReminderCommandH\000\022`\n\034cancel_customer_re" +
+      "minder_tag\030\006 \001(\01328.com.elarian.hera.prot" +
+      "o.CancelCustomerReminderTagCommandH\000\022O\n\023" +
+      "update_customer_tag\030\007 \001(\01320.com.elarian." +
+      "hera.proto.UpdateCustomerTagCommandH\000\022O\n" +
+      "\023delete_customer_tag\030\010 \001(\01320.com.elarian" +
+      ".hera.proto.DeleteCustomerTagCommandH\000\022`" +
+      "\n\034update_customer_secondary_id\030\t \001(\01328.c" +
+      "om.elarian.hera.proto.UpdateCustomerSeco" +
+      "ndaryIdCommandH\000\022`\n\034delete_customer_seco" +
+      "ndary_id\030\n \001(\01328.com.elarian.hera.proto." +
+      "DeleteCustomerSecondaryIdCommandH\000\022W\n\027le" +
+      "ase_customer_metadata\030\013 \001(\01324.com.elaria" +
+      "n.hera.proto.LeaseCustomerMetadataComman" +
+      "dH\000\022Y\n\030update_customer_metadata\030\014 \001(\01325." +
+      "com.elarian.hera.proto.UpdateCustomerMet" +
+      "adataCommandH\000\022Y\n\030delete_customer_metada" +
+      "ta\030\r \001(\01325.com.elarian.hera.proto.Delete" +
+      "CustomerMetadataCommandH\000\022B\n\014send_messag" +
+      "e\030\016 \001(\0132*.com.elarian.hera.proto.SendMes" +
+      "sageCommandH\000\022I\n\020send_message_tag\030\017 \001(\0132" +
+      "-.com.elarian.hera.proto.SendMessageTagC" +
+      "ommandH\000\022I\n\020reply_to_message\030\020 \001(\0132-.com" +
+      ".elarian.hera.proto.ReplyToMessageComman" +
+      "dH\000\022L\n\021messaging_consent\030\021 \001(\0132/.com.ela" +
+      "rian.hera.proto.MessagingConsentCommandH" +
+      "\000\022J\n\020initiate_payment\030\022 \001(\0132..com.elaria" +
+      "n.hera.proto.InitiatePaymentCommandH\000\022G\n" +
+      "\017make_voice_call\030\023 \001(\0132,.com.elarian.her" +
+      "a.proto.MakeVoiceCallCommandH\000B\007\n\005entry\"" +
+      "\370\004\n\027AppToServerCommandReply\022K\n\022get_custo" +
+      "mer_state\030\001 \001(\0132-.com.elarian.hera.proto" +
+      ".GetCustomerStateReplyH\000\022U\n\027lease_custom" +
+      "er_metadata\030\002 \001(\01322.com.elarian.hera.pro" +
+      "to.LeaseCustomerMetadataReplyH\000\022Q\n\025updat" +
+      "e_customer_state\030\003 \001(\01320.com.elarian.her" +
+      "a.proto.UpdateCustomerStateReplyH\000\022@\n\014se" +
+      "nd_message\030\004 \001(\0132(.com.elarian.hera.prot" +
+      "o.SendMessageReplyH\000\022J\n\021messaging_consen" +
+      "t\030\005 \001(\0132-.com.elarian.hera.proto.Messagi" +
+      "ngConsentReplyH\000\022H\n\020initiate_payment\030\006 \001" +
+      "(\0132,.com.elarian.hera.proto.InitiatePaym" +
+      "entReplyH\000\022E\n\017make_voice_call\030\007 \001(\0132*.co" +
+      "m.elarian.hera.proto.MakeVoiceCallReplyH" +
+      "\000\022>\n\013tag_command\030\010 \001(\0132\'.com.elarian.her" +
+      "a.proto.TagCommandReplyH\000B\007\n\005entry\"L\n\016Au" +
+      "thTokenReply\022\r\n\005token\030\001 \001(\t\022+\n\010lifetime\030" +
+      "\002 \001(\0132\031.google.protobuf.Duration\"\275\001\n\027Get" +
+      "CustomerStateCommand\022\025\n\013customer_id\030\001 \001(" +
+      "\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.elari" +
+      "an.hera.proto.CustomerNumberH\000\022<\n\014second" +
+      "ary_id\030\003 \001(\0132$.com.elarian.hera.proto.In" +
+      "dexMappingH\000B\n\n\010customer\"z\n\025GetCustomerS" +
+      "tateReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description" +
+      "\030\002 \001(\t\022<\n\004data\030\003 \001(\0132..com.elarian.hera." +
+      "proto.CustomerStateReplyData\"\330\002\n\026Custome" +
+      "rStateReplyData\022\023\n\013customer_id\030\001 \001(\t\022;\n\r" +
+      "nuclear_state\030\002 \001(\0132$.com.elarian.hera.p" +
+      "roto.NuclearState\022?\n\017messaging_state\030\003 \001" +
+      "(\0132&.com.elarian.hera.proto.MessagingSta" +
+      "te\0225\n\nussd_state\030\004 \001(\0132!.com.elarian.her" +
+      "a.proto.UssdState\0227\n\013voice_state\030\005 \001(\0132\"" +
+      ".com.elarian.hera.proto.VoiceState\022;\n\rpa" +
+      "yment_state\030\006 \001(\0132$.com.elarian.hera.pro" +
+      "to.PaymentState\"\354\001\n\031AdoptCustomerStateCo" +
+      "mmand\022\023\n\013customer_id\030\001 \001(\t\022\033\n\021other_cust" +
+      "omer_id\030\002 \001(\tH\000\022G\n\025other_customer_number" +
+      "\030\003 \001(\0132&.com.elarian.hera.proto.Customer" +
+      "NumberH\000\022B\n\022other_secondary_id\030\004 \001(\0132$.c" +
+      "om.elarian.hera.proto.IndexMappingH\000B\020\n\016" +
+      "other_customer\"\374\001\n\032AddCustomerReminderCo" +
+      "mmand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer" +
+      "_number\030\002 \001(\0132&.com.elarian.hera.proto.C" +
+      "ustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$." +
+      "com.elarian.hera.proto.IndexMappingH\000\022:\n" +
+      "\010reminder\030\004 \001(\0132(.com.elarian.hera.proto" +
+      ".CustomerReminderB\n\n\010customer\"\216\001\n\035AddCus" +
       "tomerReminderTagCommand\0221\n\003tag\030\001 \001(\0132$.c" +
-      "om.elarian.hera.proto.IndexMapping\022\013\n\003ke" +
-      "y\030\002 \001(\t\"\363\001\n\030UpdateCustomerTagCommand\022\025\n\013" +
-      "customer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002" +
-      " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
-      "mberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elari" +
-      "an.hera.proto.IndexMappingH\000\0223\n\004tags\030\004 \003" +
-      "(\0132%.com.elarian.hera.proto.CustomerInde" +
-      "xB\n\n\010customer\"\314\001\n\030DeleteCustomerTagComma" +
-      "nd\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_nu" +
-      "mber\030\002 \001(\0132&.com.elarian.hera.proto.Cust" +
-      "omerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com" +
-      ".elarian.hera.proto.IndexMappingH\000\022\014\n\004ke" +
-      "ys\030\004 \003(\tB\n\n\010customer\"\204\002\n UpdateCustomerS" +
-      "econdaryIdCommand\022\025\n\013customer_id\030\001 \001(\tH\000" +
-      "\022A\n\017customer_number\030\002 \001(\0132&.com.elarian." +
-      "hera.proto.CustomerNumberH\000\022<\n\014secondary" +
-      "_id\030\003 \001(\0132$.com.elarian.hera.proto.Index" +
-      "MappingH\000\022<\n\rsecondary_ids\030\004 \003(\0132%.com.e" +
-      "larian.hera.proto.CustomerIndexB\n\n\010custo" +
-      "mer\"\376\001\n DeleteCustomerSecondaryIdCommand" +
-      "\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_numb" +
-      "er\030\002 \001(\0132&.com.elarian.hera.proto.Custom" +
-      "erNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.e" +
-      "larian.hera.proto.IndexMappingH\000\0226\n\010mapp" +
-      "ings\030\004 \003(\0132$.com.elarian.hera.proto.Inde" +
-      "xMappingB\n\n\010customer\"\317\001\n\034LeaseCustomerMe" +
-      "tadataCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017" +
-      "customer_number\030\002 \001(\0132&.com.elarian.hera" +
-      ".proto.CustomerNumberH\000\022<\n\014secondary_id\030" +
-      "\003 \001(\0132$.com.elarian.hera.proto.IndexMapp" +
-      "ingH\000\022\013\n\003key\030\004 \001(\tB\n\n\010customer\"\251\001\n\032Lease" +
-      "CustomerMetadataReply\022\016\n\006status\030\001 \001(\010\022\023\n" +
-      "\013description\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132" +
-      "\034.google.protobuf.StringValue\0223\n\005value\030\004" +
-      " \001(\0132$.com.elarian.hera.proto.DataMapVal" +
-      "ue\"\361\002\n\035UpdateCustomerMetadataCommand\022\025\n\013" +
-      "customer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002" +
-      " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
-      "mberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elari" +
-      "an.hera.proto.IndexMappingH\000\022U\n\010metadata" +
-      "\030\004 \003(\0132C.com.elarian.hera.proto.UpdateCu" +
-      "stomerMetadataCommand.MetadataEntry\032U\n\rM" +
-      "etadataEntry\022\013\n\003key\030\001 \001(\t\0223\n\005value\030\002 \001(\013" +
-      "2$.com.elarian.hera.proto.DataMapValue:\002" +
-      "8\001B\n\n\010customer\"\321\001\n\035DeleteCustomerMetadat" +
-      "aCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017custo" +
+      "om.elarian.hera.proto.IndexMapping\022:\n\010re" +
+      "minder\030\002 \001(\0132(.com.elarian.hera.proto.Cu" +
+      "stomerReminder\"\320\001\n\035CancelCustomerReminde" +
+      "rCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017custo" +
       "mer_number\030\002 \001(\0132&.com.elarian.hera.prot" +
       "o.CustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\013" +
       "2$.com.elarian.hera.proto.IndexMappingH\000" +
-      "\022\014\n\004keys\030\004 \003(\tB\n\n\010customer\"\330\001\n\022SendMessa" +
-      "geCommand\022?\n\017customer_number\030\001 \001(\0132&.com" +
-      ".elarian.hera.proto.CustomerNumber\022F\n\016ch" +
-      "annel_number\030\002 \001(\0132..com.elarian.hera.pr" +
-      "oto.MessagingChannelNumber\0229\n\004body\030\003 \001(\013" +
-      "2+.com.elarian.hera.proto.CustomerMessag" +
-      "eBody\"\315\001\n\025SendMessageTagCommand\0221\n\003tag\030\001" +
-      " \001(\0132$.com.elarian.hera.proto.IndexMappi" +
-      "ng\022F\n\016channel_number\030\002 \001(\0132..com.elarian" +
-      ".hera.proto.MessagingChannelNumber\0229\n\004bo" +
-      "dy\030\003 \001(\0132+.com.elarian.hera.proto.Custom" +
-      "erMessageBody\"\204\001\n\025ReplyToMessageCommand\022" +
-      "\023\n\013customer_id\030\001 \001(\t\022\033\n\023reply_to_message" +
-      "_id\030\002 \001(\t\0229\n\004body\030\003 \001(\0132+.com.elarian.he" +
-      "ra.proto.CustomerMessageBody\"\313\001\n\020SendMes" +
-      "sageReply\022=\n\006status\030\001 \001(\0162-.com.elarian." +
-      "hera.proto.MessageDeliveryStatus\022\023\n\013desc" +
-      "ription\030\002 \001(\t\0220\n\nmessage_id\030\003 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0221\n\013customer_id\030\004" +
-      " \001(\0132\034.google.protobuf.StringValue\"\342\001\n\027M" +
-      "essagingConsentCommand\022?\n\017customer_numbe" +
-      "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome" +
-      "rNumber\022F\n\016channel_number\030\002 \001(\0132..com.el" +
-      "arian.hera.proto.MessagingChannelNumber\022" +
-      ">\n\006action\030\003 \001(\0162..com.elarian.hera.proto" +
-      ".MessagingConsentAction\"\237\001\n\025MessagingCon" +
-      "sentReply\022>\n\006status\030\001 \001(\0162..com.elarian." +
-      "hera.proto.MessagingConsentStatus\022\023\n\013des" +
-      "cription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\"\312\001\n\026InitiatePa" +
-      "ymentCommand\022@\n\013debit_party\030\001 \001(\0132+.com." +
-      "elarian.hera.proto.PaymentCounterParty\022A" +
-      "\n\014credit_party\030\002 \001(\0132+.com.elarian.hera." +
-      "proto.PaymentCounterParty\022+\n\005value\030\003 \001(\013" +
-      "2\034.com.elarian.hera.proto.Cash\"\213\002\n\024Initi" +
-      "atePaymentReply\0225\n\006status\030\001 \001(\0162%.com.el" +
-      "arian.hera.proto.PaymentStatus\022\023\n\013descri" +
-      "ption\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\0227\n\021debit_custo" +
-      "mer_id\030\004 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\0228\n\022credit_customer_id\030\005 \001(\0132\034.google." +
-      "protobuf.StringValue\"\233\001\n\024MakeVoiceCallCo" +
-      "mmand\022?\n\017customer_number\030\001 \001(\0132&.com.ela" +
-      "rian.hera.proto.CustomerNumber\022B\n\016channe" +
-      "l_number\030\002 \001(\0132*.com.elarian.hera.proto." +
-      "VoiceChannelNumber\"\307\001\n\022MakeVoiceCallRepl" +
-      "y\0227\n\006status\030\001 \001(\0162\'.com.elarian.hera.pro" +
-      "to.VoiceCallStatus\022\023\n\013description\030\002 \001(\t\022" +
-      "0\n\nsession_id\030\003 \001(\0132\034.google.protobuf.St" +
-      "ringValue\0221\n\013customer_id\030\004 \001(\0132\034.google." +
-      "protobuf.StringValue\"r\n\030UpdateCustomerSt" +
-      "ateReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description\030" +
-      "\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.prot" +
-      "obuf.StringValue\"e\n\017TagCommandReply\022\016\n\006s" +
-      "tatus\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007work" +
-      "_id\030\003 \001(\0132\034.google.protobuf.StringValue\"" +
-      "\230\007\n\027ServerToAppNotification\022\016\n\006org_id\030\001 " +
-      "\001(\t\022\016\n\006app_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022@\n\010reminder\030" +
-      "\004 \001(\0132,.com.elarian.hera.proto.ReminderN" +
-      "otificationH\000\022^\n\030messaging_consent_statu" +
-      "s\030\005 \001(\0132:.com.elarian.hera.proto.Messagi" +
-      "ngConsentStatusNotificationH\000\022^\n\030messagi" +
-      "ng_session_status\030\006 \001(\0132:.com.elarian.he" +
-      "ra.proto.MessagingSessionStatusNotificat" +
-      "ionH\000\022O\n\020received_message\030\007 \001(\01323.com.el" +
-      "arian.hera.proto.ReceivedMessageNotifica" +
-      "tionH\000\022K\n\016message_status\030\010 \001(\01321.com.ela" +
-      "rian.hera.proto.MessageStatusNotificatio" +
-      "nH\000\022G\n\014ussd_session\030\t \001(\0132/.com.elarian." +
-      "hera.proto.UssdSessionNotificationH\000\022C\n\n" +
-      "voice_call\030\n \001(\0132-.com.elarian.hera.prot" +
-      "o.VoiceCallNotificationH\000\022O\n\020received_pa" +
-      "yment\030\013 \001(\01323.com.elarian.hera.proto.Rec" +
-      "eivedPaymentNotificationH\000\022K\n\016payment_st" +
-      "atus\030\014 \001(\01321.com.elarian.hera.proto.Paym" +
-      "entStatusNotificationH\000\022X\n\025wallet_paymen" +
-      "t_status\030\r \001(\01327.com.elarian.hera.proto." +
-      "WalletPaymentStatusNotificationH\000B\007\n\005ent" +
-      "ry\"\277\001\n\034ServerToAppNotificationReply\022L\n\014u" +
-      "ssd_session\030\001 \001(\01324.com.elarian.hera.pro" +
-      "to.UssdSessionNotificationReplyH\000\022H\n\nvoi" +
-      "ce_call\030\002 \001(\01322.com.elarian.hera.proto.V" +
-      "oiceCallNotificationReplyH\000B\007\n\005entry\"\202\002\n" +
-      "\"MessagingConsentStatusNotification\022\023\n\013c" +
-      "ustomer_id\030\001 \001(\t\022?\n\017customer_number\030\002 \001(" +
-      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
-      "r\022F\n\016channel_number\030\003 \001(\0132..com.elarian." +
-      "hera.proto.MessagingChannelNumber\022>\n\006sta" +
-      "tus\030\004 \001(\0162..com.elarian.hera.proto.Messa" +
-      "gingConsentStatus\"\262\002\n\"MessagingSessionSt" +
-      "atusNotification\022\023\n\013customer_id\030\001 \001(\t\022?\n" +
-      "\017customer_number\030\002 \001(\0132&.com.elarian.her" +
-      "a.proto.CustomerNumber\022F\n\016channel_number" +
-      "\030\003 \001(\0132..com.elarian.hera.proto.Messagin" +
-      "gChannelNumber\022.\n\nexpiration\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022>\n\006status\030\005 \001(\0162." +
-      ".com.elarian.hera.proto.MessagingSession" +
-      "Status\"\312\001\n\024ReminderNotification\022\023\n\013custo" +
-      "mer_id\030\001 \001(\t\022:\n\010reminder\030\002 \001(\0132(.com.ela" +
-      "rian.hera.proto.CustomerReminder\0222\n\003tag\030" +
-      "\003 \001(\0132%.com.elarian.hera.proto.CustomerI" +
-      "ndex\022-\n\007work_id\030\004 \001(\0132\034.google.protobuf." +
-      "StringValue\"\363\002\n\033ReceivedMessageNotificat" +
-      "ion\022\023\n\013customer_id\030\001 \001(\t\022\022\n\nmessage_id\030\002" +
-      " \001(\t\022?\n\017customer_number\030\003 \001(\0132&.com.elar" +
-      "ian.hera.proto.CustomerNumber\022F\n\016channel" +
-      "_number\030\004 \001(\0132..com.elarian.hera.proto.M" +
-      "essagingChannelNumber\022*\n\004text\030\005 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\0227\n\005media\030\006 \003(\013" +
-      "2(.com.elarian.hera.proto.MediaMessageBo" +
-      "dy\022=\n\010location\030\007 \001(\0132+.com.elarian.hera." +
-      "proto.LocationMessageBody\"\203\001\n\031MessageSta" +
-      "tusNotification\022\023\n\013customer_id\030\001 \001(\t\022\022\n\n" +
-      "message_id\030\002 \001(\t\022=\n\006status\030\003 \001(\0162-.com.e" +
-      "larian.hera.proto.MessageDeliveryStatus\"" +
-      "\363\001\n\027UssdSessionNotification\022\023\n\013customer_" +
-      "id\030\001 \001(\t\022\022\n\nsession_id\030\002 \001(\t\022A\n\016channel_" +
-      "number\030\003 \001(\0132).com.elarian.hera.proto.Us" +
-      "sdChannelNumber\022?\n\017customer_number\030\004 \001(\013" +
-      "2&.com.elarian.hera.proto.CustomerNumber" +
-      "\022+\n\005input\030\005 \001(\0132\034.google.protobuf.String" +
-      "Value\"\233\003\n\025VoiceCallNotification\022\023\n\013custo" +
-      "mer_id\030\001 \001(\t\022\022\n\nsession_id\030\002 \001(\t\022B\n\016chan" +
-      "nel_number\030\003 \001(\0132*.com.elarian.hera.prot" +
-      "o.VoiceChannelNumber\022?\n\017customer_number\030" +
-      "\004 \001(\0132&.com.elarian.hera.proto.CustomerN" +
-      "umber\022A\n\tdirection\030\005 \001(\0162..com.elarian.h" +
-      "era.proto.CustomerEventDirection\0228\n\005inpu" +
-      "t\030\006 \001(\0132).com.elarian.hera.proto.VoiceCa" +
-      "llHopInput\022+\n\010duration\030\007 \001(\0132\031.google.pr" +
-      "otobuf.Duration\022*\n\004cost\030\010 \001(\0132\034.com.elar" +
-      "ian.hera.proto.Cash\"\307\002\n\033ReceivedPaymentN" +
-      "otification\022\020\n\010purse_id\030\001 \001(\t\022\023\n\013custome" +
-      "r_id\030\002 \001(\t\022\026\n\016transaction_id\030\003 \001(\t\022?\n\017cu" +
-      "stomer_number\030\004 \001(\0132&.com.elarian.hera.p" +
-      "roto.CustomerNumber\022D\n\016channel_number\030\005 " +
-      "\001(\0132,.com.elarian.hera.proto.PaymentChan" +
-      "nelNumber\022+\n\005value\030\006 \001(\0132\034.com.elarian.h" +
-      "era.proto.Cash\0225\n\006status\030\007 \001(\0162%.com.ela" +
-      "rian.hera.proto.PaymentStatus\"\235\001\n\031Paymen" +
-      "tStatusNotification\0221\n\013customer_id\030\001 \001(\013" +
-      "2\034.google.protobuf.StringValue\022\026\n\016transa" +
-      "ction_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.ela" +
-      "rian.hera.proto.PaymentStatus\"\230\001\n\037Wallet" +
-      "PaymentStatusNotification\022\021\n\twallet_id\030\001" +
-      " \001(\t\022\023\n\013customer_id\030\002 \001(\t\022\026\n\016transaction" +
-      "_id\030\003 \001(\t\0225\n\006status\030\004 \001(\0162%.com.elarian." +
-      "hera.proto.PaymentStatus\"N\n\034UssdSessionN" +
-      "otificationReply\022.\n\004menu\030\001 \001(\0132 .com.ela" +
-      "rian.hera.proto.UssdMenu\"V\n\032VoiceCallNot" +
-      "ificationReply\0228\n\007actions\030\001 \003(\0132\'.com.el" +
-      "arian.hera.proto.VoiceCallActionb\006proto3"
+      "\022\013\n\003key\030\004 \001(\tB\n\n\010customer\"b\n CancelCusto" +
+      "merReminderTagCommand\0221\n\003tag\030\001 \001(\0132$.com" +
+      ".elarian.hera.proto.IndexMapping\022\013\n\003key\030" +
+      "\002 \001(\t\"\363\001\n\030UpdateCustomerTagCommand\022\025\n\013cu" +
+      "stomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001" +
+      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
+      "erH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian" +
+      ".hera.proto.IndexMappingH\000\0223\n\004tags\030\004 \003(\013" +
+      "2%.com.elarian.hera.proto.CustomerIndexB" +
+      "\n\n\010customer\"\314\001\n\030DeleteCustomerTagCommand" +
+      "\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_numb" +
+      "er\030\002 \001(\0132&.com.elarian.hera.proto.Custom" +
+      "erNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.e" +
+      "larian.hera.proto.IndexMappingH\000\022\014\n\004keys" +
+      "\030\004 \003(\tB\n\n\010customer\"\204\002\n UpdateCustomerSec" +
+      "ondaryIdCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A" +
+      "\n\017customer_number\030\002 \001(\0132&.com.elarian.he" +
+      "ra.proto.CustomerNumberH\000\022<\n\014secondary_i" +
+      "d\030\003 \001(\0132$.com.elarian.hera.proto.IndexMa" +
+      "ppingH\000\022<\n\rsecondary_ids\030\004 \003(\0132%.com.ela" +
+      "rian.hera.proto.CustomerIndexB\n\n\010custome" +
+      "r\"\376\001\n DeleteCustomerSecondaryIdCommand\022\025" +
+      "\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_number" +
+      "\030\002 \001(\0132&.com.elarian.hera.proto.Customer" +
+      "NumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.ela" +
+      "rian.hera.proto.IndexMappingH\000\0226\n\010mappin" +
+      "gs\030\004 \003(\0132$.com.elarian.hera.proto.IndexM" +
+      "appingB\n\n\010customer\"\317\001\n\034LeaseCustomerMeta" +
+      "dataCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017cu" +
+      "stomer_number\030\002 \001(\0132&.com.elarian.hera.p" +
+      "roto.CustomerNumberH\000\022<\n\014secondary_id\030\003 " +
+      "\001(\0132$.com.elarian.hera.proto.IndexMappin" +
+      "gH\000\022\013\n\003key\030\004 \001(\tB\n\n\010customer\"\251\001\n\032LeaseCu" +
+      "stomerMetadataReply\022\016\n\006status\030\001 \001(\010\022\023\n\013d" +
+      "escription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034." +
+      "google.protobuf.StringValue\0223\n\005value\030\004 \001" +
+      "(\0132$.com.elarian.hera.proto.DataMapValue" +
+      "\"\361\002\n\035UpdateCustomerMetadataCommand\022\025\n\013cu" +
+      "stomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001" +
+      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
+      "erH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian" +
+      ".hera.proto.IndexMappingH\000\022U\n\010metadata\030\004" +
+      " \003(\0132C.com.elarian.hera.proto.UpdateCust" +
+      "omerMetadataCommand.MetadataEntry\032U\n\rMet" +
+      "adataEntry\022\013\n\003key\030\001 \001(\t\0223\n\005value\030\002 \001(\0132$" +
+      ".com.elarian.hera.proto.DataMapValue:\0028\001" +
+      "B\n\n\010customer\"\321\001\n\035DeleteCustomerMetadataC" +
+      "ommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017custome" +
+      "r_number\030\002 \001(\0132&.com.elarian.hera.proto." +
+      "CustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$" +
+      ".com.elarian.hera.proto.IndexMappingH\000\022\014" +
+      "\n\004keys\030\004 \003(\tB\n\n\010customer\"\330\001\n\022SendMessage" +
+      "Command\022?\n\017customer_number\030\001 \001(\0132&.com.e" +
+      "larian.hera.proto.CustomerNumber\022F\n\016chan" +
+      "nel_number\030\002 \001(\0132..com.elarian.hera.prot" +
+      "o.MessagingChannelNumber\0229\n\004body\030\003 \001(\0132+" +
+      ".com.elarian.hera.proto.CustomerMessageB" +
+      "ody\"\315\001\n\025SendMessageTagCommand\0221\n\003tag\030\001 \001" +
+      "(\0132$.com.elarian.hera.proto.IndexMapping" +
+      "\022F\n\016channel_number\030\002 \001(\0132..com.elarian.h" +
+      "era.proto.MessagingChannelNumber\0229\n\004body" +
+      "\030\003 \001(\0132+.com.elarian.hera.proto.Customer" +
+      "MessageBody\"\204\001\n\025ReplyToMessageCommand\022\023\n" +
+      "\013customer_id\030\001 \001(\t\022\033\n\023reply_to_message_i" +
+      "d\030\002 \001(\t\0229\n\004body\030\003 \001(\0132+.com.elarian.hera" +
+      ".proto.CustomerMessageBody\"\313\001\n\020SendMessa" +
+      "geReply\022=\n\006status\030\001 \001(\0162-.com.elarian.he" +
+      "ra.proto.MessageDeliveryStatus\022\023\n\013descri" +
+      "ption\030\002 \001(\t\0220\n\nmessage_id\030\003 \001(\0132\034.google" +
+      ".protobuf.StringValue\0221\n\013customer_id\030\004 \001" +
+      "(\0132\034.google.protobuf.StringValue\"\342\001\n\027Mes" +
+      "sagingConsentCommand\022?\n\017customer_number\030" +
+      "\001 \001(\0132&.com.elarian.hera.proto.CustomerN" +
+      "umber\022F\n\016channel_number\030\002 \001(\0132..com.elar" +
+      "ian.hera.proto.MessagingChannelNumber\022>\n" +
+      "\006action\030\003 \001(\0162..com.elarian.hera.proto.M" +
+      "essagingConsentAction\"\237\001\n\025MessagingConse" +
+      "ntReply\022>\n\006status\030\001 \001(\0162..com.elarian.he" +
+      "ra.proto.MessagingConsentStatus\022\023\n\013descr" +
+      "iption\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\"\312\001\n\026InitiatePaym" +
+      "entCommand\022@\n\013debit_party\030\001 \001(\0132+.com.el" +
+      "arian.hera.proto.PaymentCounterParty\022A\n\014" +
+      "credit_party\030\002 \001(\0132+.com.elarian.hera.pr" +
+      "oto.PaymentCounterParty\022+\n\005value\030\003 \001(\0132\034" +
+      ".com.elarian.hera.proto.Cash\"\213\002\n\024Initiat" +
+      "ePaymentReply\0225\n\006status\030\001 \001(\0162%.com.elar" +
+      "ian.hera.proto.PaymentStatus\022\023\n\013descript" +
+      "ion\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0227\n\021debit_custome" +
+      "r_id\030\004 \001(\0132\034.google.protobuf.StringValue" +
+      "\0228\n\022credit_customer_id\030\005 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\"\233\001\n\024MakeVoiceCallComm" +
+      "and\022?\n\017customer_number\030\001 \001(\0132&.com.elari" +
+      "an.hera.proto.CustomerNumber\022B\n\016channel_" +
+      "number\030\002 \001(\0132*.com.elarian.hera.proto.Vo" +
+      "iceChannelNumber\"\307\001\n\022MakeVoiceCallReply\022" +
+      "7\n\006status\030\001 \001(\0162\'.com.elarian.hera.proto" +
+      ".VoiceCallStatus\022\023\n\013description\030\002 \001(\t\0220\n" +
+      "\nsession_id\030\003 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\0221\n\013customer_id\030\004 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\"r\n\030UpdateCustomerStat" +
+      "eReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description\030\002 " +
+      "\001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.protob" +
+      "uf.StringValue\"e\n\017TagCommandReply\022\016\n\006sta" +
+      "tus\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007work_i" +
+      "d\030\003 \001(\0132\034.google.protobuf.StringValue\"\230\007" +
+      "\n\027ServerToAppNotification\022\016\n\006org_id\030\001 \001(" +
+      "\t\022\016\n\006app_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032." +
+      "google.protobuf.Timestamp\022@\n\010reminder\030\004 " +
+      "\001(\0132,.com.elarian.hera.proto.ReminderNot" +
+      "ificationH\000\022^\n\030messaging_consent_status\030" +
+      "\005 \001(\0132:.com.elarian.hera.proto.Messaging" +
+      "ConsentStatusNotificationH\000\022^\n\030messaging" +
+      "_session_status\030\006 \001(\0132:.com.elarian.hera" +
+      ".proto.MessagingSessionStatusNotificatio" +
+      "nH\000\022O\n\020received_message\030\007 \001(\01323.com.elar" +
+      "ian.hera.proto.ReceivedMessageNotificati" +
+      "onH\000\022K\n\016message_status\030\010 \001(\01321.com.elari" +
+      "an.hera.proto.MessageStatusNotificationH" +
+      "\000\022G\n\014ussd_session\030\t \001(\0132/.com.elarian.he" +
+      "ra.proto.UssdSessionNotificationH\000\022C\n\nvo" +
+      "ice_call\030\n \001(\0132-.com.elarian.hera.proto." +
+      "VoiceCallNotificationH\000\022O\n\020received_paym" +
+      "ent\030\013 \001(\01323.com.elarian.hera.proto.Recei" +
+      "vedPaymentNotificationH\000\022K\n\016payment_stat" +
+      "us\030\014 \001(\01321.com.elarian.hera.proto.Paymen" +
+      "tStatusNotificationH\000\022X\n\025wallet_payment_" +
+      "status\030\r \001(\01327.com.elarian.hera.proto.Wa" +
+      "lletPaymentStatusNotificationH\000B\007\n\005entry" +
+      "\"\277\001\n\034ServerToAppNotificationReply\022L\n\014uss" +
+      "d_session\030\001 \001(\01324.com.elarian.hera.proto" +
+      ".UssdSessionNotificationReplyH\000\022H\n\nvoice" +
+      "_call\030\002 \001(\01322.com.elarian.hera.proto.Voi" +
+      "ceCallNotificationReplyH\000B\007\n\005entry\"\202\002\n\"M" +
+      "essagingConsentStatusNotification\022\023\n\013cus" +
+      "tomer_id\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132" +
+      "&.com.elarian.hera.proto.CustomerNumber\022" +
+      "F\n\016channel_number\030\003 \001(\0132..com.elarian.he" +
+      "ra.proto.MessagingChannelNumber\022>\n\006statu" +
+      "s\030\004 \001(\0162..com.elarian.hera.proto.Messagi" +
+      "ngConsentStatus\"\262\002\n\"MessagingSessionStat" +
+      "usNotification\022\023\n\013customer_id\030\001 \001(\t\022?\n\017c" +
+      "ustomer_number\030\002 \001(\0132&.com.elarian.hera." +
+      "proto.CustomerNumber\022F\n\016channel_number\030\003" +
+      " \001(\0132..com.elarian.hera.proto.MessagingC" +
+      "hannelNumber\022.\n\nexpiration\030\004 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022>\n\006status\030\005 \001(\0162..c" +
+      "om.elarian.hera.proto.MessagingSessionSt" +
+      "atus\"\312\001\n\024ReminderNotification\022\023\n\013custome" +
+      "r_id\030\001 \001(\t\022:\n\010reminder\030\002 \001(\0132(.com.elari" +
+      "an.hera.proto.CustomerReminder\0222\n\003tag\030\003 " +
+      "\001(\0132%.com.elarian.hera.proto.CustomerInd" +
+      "ex\022-\n\007work_id\030\004 \001(\0132\034.google.protobuf.St" +
+      "ringValue\"\363\002\n\033ReceivedMessageNotificatio" +
+      "n\022\023\n\013customer_id\030\001 \001(\t\022\022\n\nmessage_id\030\002 \001" +
+      "(\t\022?\n\017customer_number\030\003 \001(\0132&.com.elaria" +
+      "n.hera.proto.CustomerNumber\022F\n\016channel_n" +
+      "umber\030\004 \001(\0132..com.elarian.hera.proto.Mes" +
+      "sagingChannelNumber\022*\n\004text\030\005 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0227\n\005media\030\006 \003(\0132(" +
+      ".com.elarian.hera.proto.MediaMessageBody" +
+      "\022=\n\010location\030\007 \001(\0132+.com.elarian.hera.pr" +
+      "oto.LocationMessageBody\"\203\001\n\031MessageStatu" +
+      "sNotification\022\023\n\013customer_id\030\001 \001(\t\022\022\n\nme" +
+      "ssage_id\030\002 \001(\t\022=\n\006status\030\003 \001(\0162-.com.ela" +
+      "rian.hera.proto.MessageDeliveryStatus\"\363\001" +
+      "\n\027UssdSessionNotification\022\023\n\013customer_id" +
+      "\030\001 \001(\t\022\022\n\nsession_id\030\002 \001(\t\022A\n\016channel_nu" +
+      "mber\030\003 \001(\0132).com.elarian.hera.proto.Ussd" +
+      "ChannelNumber\022?\n\017customer_number\030\004 \001(\0132&" +
+      ".com.elarian.hera.proto.CustomerNumber\022+" +
+      "\n\005input\030\005 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\"\233\003\n\025VoiceCallNotification\022\023\n\013custome" +
+      "r_id\030\001 \001(\t\022\022\n\nsession_id\030\002 \001(\t\022B\n\016channe" +
+      "l_number\030\003 \001(\0132*.com.elarian.hera.proto." +
+      "VoiceChannelNumber\022?\n\017customer_number\030\004 " +
+      "\001(\0132&.com.elarian.hera.proto.CustomerNum" +
+      "ber\022A\n\tdirection\030\005 \001(\0162..com.elarian.her" +
+      "a.proto.CustomerEventDirection\0228\n\005input\030" +
+      "\006 \001(\0132).com.elarian.hera.proto.VoiceCall" +
+      "HopInput\022+\n\010duration\030\007 \001(\0132\031.google.prot" +
+      "obuf.Duration\022*\n\004cost\030\010 \001(\0132\034.com.elaria" +
+      "n.hera.proto.Cash\"\307\002\n\033ReceivedPaymentNot" +
+      "ification\022\020\n\010purse_id\030\001 \001(\t\022\023\n\013customer_" +
+      "id\030\002 \001(\t\022\026\n\016transaction_id\030\003 \001(\t\022?\n\017cust" +
+      "omer_number\030\004 \001(\0132&.com.elarian.hera.pro" +
+      "to.CustomerNumber\022D\n\016channel_number\030\005 \001(" +
+      "\0132,.com.elarian.hera.proto.PaymentChanne" +
+      "lNumber\022+\n\005value\030\006 \001(\0132\034.com.elarian.her" +
+      "a.proto.Cash\0225\n\006status\030\007 \001(\0162%.com.elari" +
+      "an.hera.proto.PaymentStatus\"\235\001\n\031PaymentS" +
+      "tatusNotification\0221\n\013customer_id\030\001 \001(\0132\034" +
+      ".google.protobuf.StringValue\022\026\n\016transact" +
+      "ion_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.elari" +
+      "an.hera.proto.PaymentStatus\"\230\001\n\037WalletPa" +
+      "ymentStatusNotification\022\021\n\twallet_id\030\001 \001" +
+      "(\t\022\023\n\013customer_id\030\002 \001(\t\022\026\n\016transaction_i" +
+      "d\030\003 \001(\t\0225\n\006status\030\004 \001(\0162%.com.elarian.he" +
+      "ra.proto.PaymentStatus\"N\n\034UssdSessionNot" +
+      "ificationReply\022.\n\004menu\030\001 \001(\0132 .com.elari" +
+      "an.hera.proto.UssdMenu\"V\n\032VoiceCallNotif" +
+      "icationReply\0228\n\007actions\030\001 \003(\0132\'.com.elar" +
+      "ian.hera.proto.VoiceCallActionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59513,13 +59911,7 @@ public final class App {
     internal_static_com_elarian_hera_proto_AppConnectionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AppConnectionMetadata_descriptor,
-        new java.lang.String[] { "Entries", });
-    internal_static_com_elarian_hera_proto_AppConnectionMetadata_EntriesEntry_descriptor =
-      internal_static_com_elarian_hera_proto_AppConnectionMetadata_descriptor.getNestedTypes().get(0);
-    internal_static_com_elarian_hera_proto_AppConnectionMetadata_EntriesEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_elarian_hera_proto_AppConnectionMetadata_EntriesEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "OrgId", "AppId", "AuthToken", "Timestamp", "SimplexMode", });
     internal_static_com_elarian_hera_proto_AppToServerCommand_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_elarian_hera_proto_AppToServerCommand_fieldAccessorTable = new

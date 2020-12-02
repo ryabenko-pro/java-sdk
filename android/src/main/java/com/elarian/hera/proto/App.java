@@ -13,38 +13,57 @@ public final class App {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
      */
-    int getEntriesCount();
+    java.lang.String getOrgId();
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
      */
-    boolean containsEntries(
-        java.lang.String key);
-    /**
-     * Use {@link #getEntriesMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getEntries();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getEntriesMap();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
 
-    com.elarian.hera.proto.Common.DataMapValue getEntriesOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue);
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+     * <code>string app_id = 2;</code>
+     * @return The appId.
      */
+    java.lang.String getAppId();
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The bytes for appId.
+     */
+    com.google.protobuf.ByteString
+        getAppIdBytes();
 
-    com.elarian.hera.proto.Common.DataMapValue getEntriesOrThrow(
-        java.lang.String key);
+    /**
+     * <code>string auth_token = 3;</code>
+     * @return The authToken.
+     */
+    java.lang.String getAuthToken();
+    /**
+     * <code>string auth_token = 3;</code>
+     * @return The bytes for authToken.
+     */
+    com.google.protobuf.ByteString
+        getAuthTokenBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+
+    /**
+     * <code>bool simplex_mode = 5;</code>
+     * @return The simplexMode.
+     */
+    boolean getSimplexMode();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.AppConnectionMetadata}
@@ -55,98 +74,221 @@ public final class App {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AppConnectionMetadata)
       AppConnectionMetadataOrBuilder {
     private AppConnectionMetadata() {
+      orgId_ = "";
+      appId_ = "";
+      authToken_ = "";
     }
-    public static final int ENTRIES_FIELD_NUMBER = 1;
-    private static final class EntriesDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance());
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    private java.lang.String orgId_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      return orgId_;
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.elarian.hera.proto.Common.DataMapValue> entries_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    internalGetEntries() {
-      return entries_;
+    /**
+     * <code>string org_id = 1;</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    internalGetMutableEntries() {
-      if (!entries_.isMutable()) {
-        entries_ = entries_.mutableCopy();
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     */
+    private void clearOrgId() {
+      
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1;</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private java.lang.String appId_;
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public java.lang.String getAppId() {
+      return appId_;
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @return The bytes for appId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAppIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @param value The appId to set.
+     */
+    private void setAppId(
+        java.lang.String value) {
+      value.getClass();
+  
+      appId_ = value;
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     */
+    private void clearAppId() {
+      
+      appId_ = getDefaultInstance().getAppId();
+    }
+    /**
+     * <code>string app_id = 2;</code>
+     * @param value The bytes for appId to set.
+     */
+    private void setAppIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      appId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int AUTH_TOKEN_FIELD_NUMBER = 3;
+    private java.lang.String authToken_;
+    /**
+     * <code>string auth_token = 3;</code>
+     * @return The authToken.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthToken() {
+      return authToken_;
+    }
+    /**
+     * <code>string auth_token = 3;</code>
+     * @return The bytes for authToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(authToken_);
+    }
+    /**
+     * <code>string auth_token = 3;</code>
+     * @param value The authToken to set.
+     */
+    private void setAuthToken(
+        java.lang.String value) {
+      value.getClass();
+  
+      authToken_ = value;
+    }
+    /**
+     * <code>string auth_token = 3;</code>
+     */
+    private void clearAuthToken() {
+      
+      authToken_ = getDefaultInstance().getAuthToken();
+    }
+    /**
+     * <code>string auth_token = 3;</code>
+     * @param value The bytes for authToken to set.
+     */
+    private void setAuthTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      authToken_ = value.toStringUtf8();
+      
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     */
+    private void setTimestamp(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  timestamp_ = value;
+      
       }
-      return entries_;
-    }
-    @java.lang.Override
-
-    public int getEntriesCount() {
-      return internalGetEntries().size();
-    }
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
      */
-    @java.lang.Override
-
-    public boolean containsEntries(
-        java.lang.String key) {
-      key.getClass();
-      return internalGetEntries().containsKey(key);
-    }
-    /**
-     * Use {@link #getEntriesMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getEntries() {
-      return getEntriesMap();
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getEntriesMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetEntries());
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.DataMapValue getEntriesOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue) {
-      key.getClass();
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-          internalGetEntries();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.DataMapValue getEntriesOrThrow(
-        java.lang.String key) {
-      key.getClass();
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-          internalGetEntries();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTimestamp(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (timestamp_ != null &&
+          timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        timestamp_ =
+          com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+      } else {
+        timestamp_ = value;
       }
-      return map.get(key);
+      
     }
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
      */
-    private java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getMutableEntriesMap() {
-      return internalGetMutableEntries();
+    private void clearTimestamp() {  timestamp_ = null;
+      
+    }
+
+    public static final int SIMPLEX_MODE_FIELD_NUMBER = 5;
+    private boolean simplexMode_;
+    /**
+     * <code>bool simplex_mode = 5;</code>
+     * @return The simplexMode.
+     */
+    @java.lang.Override
+    public boolean getSimplexMode() {
+      return simplexMode_;
+    }
+    /**
+     * <code>bool simplex_mode = 5;</code>
+     * @param value The simplexMode to set.
+     */
+    private void setSimplexMode(boolean value) {
+      
+      simplexMode_ = value;
+    }
+    /**
+     * <code>bool simplex_mode = 5;</code>
+     */
+    private void clearSimplexMode() {
+      
+      simplexMode_ = false;
     }
 
     public static com.elarian.hera.proto.App.AppConnectionMetadata parseFrom(
@@ -244,101 +386,225 @@ public final class App {
       }
 
 
-      @java.lang.Override
-
-      public int getEntriesCount() {
-        return instance.getEntriesMap().size();
-      }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @return The orgId.
        */
       @java.lang.Override
-
-      public boolean containsEntries(
-          java.lang.String key) {
-        key.getClass();
-        return instance.getEntriesMap().containsKey(key);
+      public java.lang.String getOrgId() {
+        return instance.getOrgId();
       }
-
-      public Builder clearEntries() {
+      /**
+       * <code>string org_id = 1;</code>
+       * @return The bytes for orgId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        return instance.getOrgIdBytes();
+      }
+      /**
+       * <code>string org_id = 1;</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
         copyOnWrite();
-        instance.getMutableEntriesMap().clear();
+        instance.setOrgId(value);
         return this;
       }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>string org_id = 1;</code>
+       * @return This builder for chaining.
        */
-
-      public Builder removeEntries(
-          java.lang.String key) {
-        key.getClass();
+      public Builder clearOrgId() {
         copyOnWrite();
-        instance.getMutableEntriesMap().remove(key);
+        instance.clearOrgId();
         return this;
       }
       /**
-       * Use {@link #getEntriesMap()} instead.
+       * <code>string org_id = 1;</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
        */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getEntries() {
-        return getEntriesMap();
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
+        return this;
       }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getEntriesMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getEntriesMap());
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
-       */
-      @java.lang.Override
 
-      public com.elarian.hera.proto.Common.DataMapValue getEntriesOrDefault(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue defaultValue) {
-        key.getClass();
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-            instance.getEntriesMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>string app_id = 2;</code>
+       * @return The appId.
        */
       @java.lang.Override
+      public java.lang.String getAppId() {
+        return instance.getAppId();
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @return The bytes for appId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAppIdBytes() {
+        return instance.getAppIdBytes();
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAppId(value);
+        return this;
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        copyOnWrite();
+        instance.clearAppId();
+        return this;
+      }
+      /**
+       * <code>string app_id = 2;</code>
+       * @param value The bytes for appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAppIdBytes(value);
+        return this;
+      }
 
-      public com.elarian.hera.proto.Common.DataMapValue getEntriesOrThrow(
-          java.lang.String key) {
-        key.getClass();
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-            instance.getEntriesMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
+      /**
+       * <code>string auth_token = 3;</code>
+       * @return The authToken.
+       */
+      @java.lang.Override
+      public java.lang.String getAuthToken() {
+        return instance.getAuthToken();
+      }
+      /**
+       * <code>string auth_token = 3;</code>
+       * @return The bytes for authToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAuthTokenBytes() {
+        return instance.getAuthTokenBytes();
+      }
+      /**
+       * <code>string auth_token = 3;</code>
+       * @param value The authToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAuthToken(value);
+        return this;
+      }
+      /**
+       * <code>string auth_token = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthToken() {
+        copyOnWrite();
+        instance.clearAuthToken();
+        return this;
+      }
+      /**
+       * <code>string auth_token = 3;</code>
+       * @param value The bytes for authToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAuthTokenBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasTimestamp() {
+        return instance.hasTimestamp();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getTimestamp() {
+        return instance.getTimestamp();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setTimestamp(value);
+        return this;
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
        */
-      public Builder putEntries(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue value) {
-        key.getClass();
-        value.getClass();
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableEntriesMap().put(key, value);
+        instance.setTimestamp(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; entries = 1;</code>
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
        */
-      public Builder putAllEntries(
-          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> values) {
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
         copyOnWrite();
-        instance.getMutableEntriesMap().putAll(values);
+        instance.mergeTimestamp(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       */
+      public Builder clearTimestamp() {  copyOnWrite();
+        instance.clearTimestamp();
+        return this;
+      }
+
+      /**
+       * <code>bool simplex_mode = 5;</code>
+       * @return The simplexMode.
+       */
+      @java.lang.Override
+      public boolean getSimplexMode() {
+        return instance.getSimplexMode();
+      }
+      /**
+       * <code>bool simplex_mode = 5;</code>
+       * @param value The simplexMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSimplexMode(boolean value) {
+        copyOnWrite();
+        instance.setSimplexMode(value);
+        return this;
+      }
+      /**
+       * <code>bool simplex_mode = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSimplexMode() {
+        copyOnWrite();
+        instance.clearSimplexMode();
         return this;
       }
 
@@ -358,11 +624,15 @@ public final class App {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "entries_",
-              EntriesDefaultEntryHolder.defaultEntry,
+              "orgId_",
+              "appId_",
+              "authToken_",
+              "timestamp_",
+              "simplexMode_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\t\u0005\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
