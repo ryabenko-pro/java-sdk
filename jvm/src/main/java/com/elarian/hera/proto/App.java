@@ -43,31 +43,34 @@ public final class App {
         getAppIdBytes();
 
     /**
-     * <code>string auth_token = 3;</code>
-     * @return The authToken.
+     * <code>.google.protobuf.StringValue api_key = 3;</code>
+     * @return Whether the apiKey field is set.
      */
-    java.lang.String getAuthToken();
+    boolean hasApiKey();
     /**
-     * <code>string auth_token = 3;</code>
-     * @return The bytes for authToken.
+     * <code>.google.protobuf.StringValue api_key = 3;</code>
+     * @return The apiKey.
      */
-    com.google.protobuf.ByteString
-        getAuthTokenBytes();
+    com.google.protobuf.StringValue getApiKey();
+    /**
+     * <code>.google.protobuf.StringValue api_key = 3;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getApiKeyOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
-     * @return Whether the timestamp field is set.
+     * <code>.google.protobuf.StringValue auth_token = 4;</code>
+     * @return Whether the authToken field is set.
      */
-    boolean hasTimestamp();
+    boolean hasAuthToken();
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
-     * @return The timestamp.
+     * <code>.google.protobuf.StringValue auth_token = 4;</code>
+     * @return The authToken.
      */
-    com.google.protobuf.Timestamp getTimestamp();
+    com.google.protobuf.StringValue getAuthToken();
     /**
-     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     * <code>.google.protobuf.StringValue auth_token = 4;</code>
      */
-    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+    com.google.protobuf.StringValueOrBuilder getAuthTokenOrBuilder();
 
     /**
      * <code>bool simplex_mode = 5;</code>
@@ -90,7 +93,6 @@ public final class App {
     private AppConnectionMetadata() {
       orgId_ = "";
       appId_ = "";
-      authToken_ = "";
     }
 
     @java.lang.Override
@@ -136,20 +138,27 @@ public final class App {
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (apiKey_ != null) {
+                subBuilder = apiKey_.toBuilder();
+              }
+              apiKey_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(apiKey_);
+                apiKey_ = subBuilder.buildPartial();
+              }
 
-              authToken_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (timestamp_ != null) {
-                subBuilder = timestamp_.toBuilder();
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (authToken_ != null) {
+                subBuilder = authToken_.toBuilder();
               }
-              timestamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              authToken_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(timestamp_);
-                timestamp_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(authToken_);
+                authToken_ = subBuilder.buildPartial();
               }
 
               break;
@@ -267,68 +276,56 @@ public final class App {
       }
     }
 
-    public static final int AUTH_TOKEN_FIELD_NUMBER = 3;
-    private volatile java.lang.Object authToken_;
+    public static final int API_KEY_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue apiKey_;
     /**
-     * <code>string auth_token = 3;</code>
+     * <code>.google.protobuf.StringValue api_key = 3;</code>
+     * @return Whether the apiKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasApiKey() {
+      return apiKey_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue api_key = 3;</code>
+     * @return The apiKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getApiKey() {
+      return apiKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : apiKey_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue api_key = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getApiKeyOrBuilder() {
+      return getApiKey();
+    }
+
+    public static final int AUTH_TOKEN_FIELD_NUMBER = 4;
+    private com.google.protobuf.StringValue authToken_;
+    /**
+     * <code>.google.protobuf.StringValue auth_token = 4;</code>
+     * @return Whether the authToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthToken() {
+      return authToken_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue auth_token = 4;</code>
      * @return The authToken.
      */
     @java.lang.Override
-    public java.lang.String getAuthToken() {
-      java.lang.Object ref = authToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        authToken_ = s;
-        return s;
-      }
+    public com.google.protobuf.StringValue getAuthToken() {
+      return authToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : authToken_;
     }
     /**
-     * <code>string auth_token = 3;</code>
-     * @return The bytes for authToken.
+     * <code>.google.protobuf.StringValue auth_token = 4;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAuthTokenBytes() {
-      java.lang.Object ref = authToken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        authToken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TIMESTAMP_FIELD_NUMBER = 4;
-    private com.google.protobuf.Timestamp timestamp_;
-    /**
-     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
-     * @return Whether the timestamp field is set.
-     */
-    @java.lang.Override
-    public boolean hasTimestamp() {
-      return timestamp_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
-     * @return The timestamp.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getTimestamp() {
-      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp timestamp = 4;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
-      return getTimestamp();
+    public com.google.protobuf.StringValueOrBuilder getAuthTokenOrBuilder() {
+      return getAuthToken();
     }
 
     public static final int SIMPLEX_MODE_FIELD_NUMBER = 5;
@@ -362,11 +359,11 @@ public final class App {
       if (!getAppIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, appId_);
       }
-      if (!getAuthTokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, authToken_);
+      if (apiKey_ != null) {
+        output.writeMessage(3, getApiKey());
       }
-      if (timestamp_ != null) {
-        output.writeMessage(4, getTimestamp());
+      if (authToken_ != null) {
+        output.writeMessage(4, getAuthToken());
       }
       if (simplexMode_ != false) {
         output.writeBool(5, simplexMode_);
@@ -386,12 +383,13 @@ public final class App {
       if (!getAppIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, appId_);
       }
-      if (!getAuthTokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, authToken_);
-      }
-      if (timestamp_ != null) {
+      if (apiKey_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTimestamp());
+          .computeMessageSize(3, getApiKey());
+      }
+      if (authToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getAuthToken());
       }
       if (simplexMode_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -416,12 +414,15 @@ public final class App {
           .equals(other.getOrgId())) return false;
       if (!getAppId()
           .equals(other.getAppId())) return false;
-      if (!getAuthToken()
-          .equals(other.getAuthToken())) return false;
-      if (hasTimestamp() != other.hasTimestamp()) return false;
-      if (hasTimestamp()) {
-        if (!getTimestamp()
-            .equals(other.getTimestamp())) return false;
+      if (hasApiKey() != other.hasApiKey()) return false;
+      if (hasApiKey()) {
+        if (!getApiKey()
+            .equals(other.getApiKey())) return false;
+      }
+      if (hasAuthToken() != other.hasAuthToken()) return false;
+      if (hasAuthToken()) {
+        if (!getAuthToken()
+            .equals(other.getAuthToken())) return false;
       }
       if (getSimplexMode()
           != other.getSimplexMode()) return false;
@@ -440,11 +441,13 @@ public final class App {
       hash = (53 * hash) + getOrgId().hashCode();
       hash = (37 * hash) + APP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAppId().hashCode();
-      hash = (37 * hash) + AUTH_TOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getAuthToken().hashCode();
-      if (hasTimestamp()) {
-        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
-        hash = (53 * hash) + getTimestamp().hashCode();
+      if (hasApiKey()) {
+        hash = (37 * hash) + API_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getApiKey().hashCode();
+      }
+      if (hasAuthToken()) {
+        hash = (37 * hash) + AUTH_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthToken().hashCode();
       }
       hash = (37 * hash) + SIMPLEX_MODE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -586,13 +589,17 @@ public final class App {
 
         appId_ = "";
 
-        authToken_ = "";
-
-        if (timestampBuilder_ == null) {
-          timestamp_ = null;
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = null;
         } else {
-          timestamp_ = null;
-          timestampBuilder_ = null;
+          apiKey_ = null;
+          apiKeyBuilder_ = null;
+        }
+        if (authTokenBuilder_ == null) {
+          authToken_ = null;
+        } else {
+          authToken_ = null;
+          authTokenBuilder_ = null;
         }
         simplexMode_ = false;
 
@@ -624,11 +631,15 @@ public final class App {
         com.elarian.hera.proto.App.AppConnectionMetadata result = new com.elarian.hera.proto.App.AppConnectionMetadata(this);
         result.orgId_ = orgId_;
         result.appId_ = appId_;
-        result.authToken_ = authToken_;
-        if (timestampBuilder_ == null) {
-          result.timestamp_ = timestamp_;
+        if (apiKeyBuilder_ == null) {
+          result.apiKey_ = apiKey_;
         } else {
-          result.timestamp_ = timestampBuilder_.build();
+          result.apiKey_ = apiKeyBuilder_.build();
+        }
+        if (authTokenBuilder_ == null) {
+          result.authToken_ = authToken_;
+        } else {
+          result.authToken_ = authTokenBuilder_.build();
         }
         result.simplexMode_ = simplexMode_;
         onBuilt();
@@ -687,12 +698,11 @@ public final class App {
           appId_ = other.appId_;
           onChanged();
         }
-        if (!other.getAuthToken().isEmpty()) {
-          authToken_ = other.authToken_;
-          onChanged();
+        if (other.hasApiKey()) {
+          mergeApiKey(other.getApiKey());
         }
-        if (other.hasTimestamp()) {
-          mergeTimestamp(other.getTimestamp());
+        if (other.hasAuthToken()) {
+          mergeAuthToken(other.getAuthToken());
         }
         if (other.getSimplexMode() != false) {
           setSimplexMode(other.getSimplexMode());
@@ -878,199 +888,242 @@ public final class App {
         return this;
       }
 
-      private java.lang.Object authToken_ = "";
-      /**
-       * <code>string auth_token = 3;</code>
-       * @return The authToken.
-       */
-      public java.lang.String getAuthToken() {
-        java.lang.Object ref = authToken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          authToken_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string auth_token = 3;</code>
-       * @return The bytes for authToken.
-       */
-      public com.google.protobuf.ByteString
-          getAuthTokenBytes() {
-        java.lang.Object ref = authToken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          authToken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string auth_token = 3;</code>
-       * @param value The authToken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAuthToken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        authToken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string auth_token = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAuthToken() {
-        
-        authToken_ = getDefaultInstance().getAuthToken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string auth_token = 3;</code>
-       * @param value The bytes for authToken to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAuthTokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        authToken_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.StringValue apiKey_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> apiKeyBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
-       * @return Whether the timestamp field is set.
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
+       * @return Whether the apiKey field is set.
        */
-      public boolean hasTimestamp() {
-        return timestampBuilder_ != null || timestamp_ != null;
+      public boolean hasApiKey() {
+        return apiKeyBuilder_ != null || apiKey_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
-       * @return The timestamp.
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
+       * @return The apiKey.
        */
-      public com.google.protobuf.Timestamp getTimestamp() {
-        if (timestampBuilder_ == null) {
-          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+      public com.google.protobuf.StringValue getApiKey() {
+        if (apiKeyBuilder_ == null) {
+          return apiKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : apiKey_;
         } else {
-          return timestampBuilder_.getMessage();
+          return apiKeyBuilder_.getMessage();
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
        */
-      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
-        if (timestampBuilder_ == null) {
+      public Builder setApiKey(com.google.protobuf.StringValue value) {
+        if (apiKeyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          timestamp_ = value;
+          apiKey_ = value;
           onChanged();
         } else {
-          timestampBuilder_.setMessage(value);
+          apiKeyBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
        */
-      public Builder setTimestamp(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timestampBuilder_ == null) {
-          timestamp_ = builderForValue.build();
+      public Builder setApiKey(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = builderForValue.build();
           onChanged();
         } else {
-          timestampBuilder_.setMessage(builderForValue.build());
+          apiKeyBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
        */
-      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
-        if (timestampBuilder_ == null) {
-          if (timestamp_ != null) {
-            timestamp_ =
-              com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+      public Builder mergeApiKey(com.google.protobuf.StringValue value) {
+        if (apiKeyBuilder_ == null) {
+          if (apiKey_ != null) {
+            apiKey_ =
+              com.google.protobuf.StringValue.newBuilder(apiKey_).mergeFrom(value).buildPartial();
           } else {
-            timestamp_ = value;
+            apiKey_ = value;
           }
           onChanged();
         } else {
-          timestampBuilder_.mergeFrom(value);
+          apiKeyBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
        */
-      public Builder clearTimestamp() {
-        if (timestampBuilder_ == null) {
-          timestamp_ = null;
+      public Builder clearApiKey() {
+        if (apiKeyBuilder_ == null) {
+          apiKey_ = null;
           onChanged();
         } else {
-          timestamp_ = null;
-          timestampBuilder_ = null;
+          apiKey_ = null;
+          apiKeyBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
        */
-      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+      public com.google.protobuf.StringValue.Builder getApiKeyBuilder() {
         
         onChanged();
-        return getTimestampFieldBuilder().getBuilder();
+        return getApiKeyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
        */
-      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
-        if (timestampBuilder_ != null) {
-          return timestampBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.StringValueOrBuilder getApiKeyOrBuilder() {
+        if (apiKeyBuilder_ != null) {
+          return apiKeyBuilder_.getMessageOrBuilder();
         } else {
-          return timestamp_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+          return apiKey_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : apiKey_;
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp timestamp = 4;</code>
+       * <code>.google.protobuf.StringValue api_key = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimestampFieldBuilder() {
-        if (timestampBuilder_ == null) {
-          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTimestamp(),
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getApiKeyFieldBuilder() {
+        if (apiKeyBuilder_ == null) {
+          apiKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getApiKey(),
                   getParentForChildren(),
                   isClean());
-          timestamp_ = null;
+          apiKey_ = null;
         }
-        return timestampBuilder_;
+        return apiKeyBuilder_;
+      }
+
+      private com.google.protobuf.StringValue authToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> authTokenBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       * @return Whether the authToken field is set.
+       */
+      public boolean hasAuthToken() {
+        return authTokenBuilder_ != null || authToken_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       * @return The authToken.
+       */
+      public com.google.protobuf.StringValue getAuthToken() {
+        if (authTokenBuilder_ == null) {
+          return authToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : authToken_;
+        } else {
+          return authTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       */
+      public Builder setAuthToken(com.google.protobuf.StringValue value) {
+        if (authTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          authToken_ = value;
+          onChanged();
+        } else {
+          authTokenBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       */
+      public Builder setAuthToken(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (authTokenBuilder_ == null) {
+          authToken_ = builderForValue.build();
+          onChanged();
+        } else {
+          authTokenBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       */
+      public Builder mergeAuthToken(com.google.protobuf.StringValue value) {
+        if (authTokenBuilder_ == null) {
+          if (authToken_ != null) {
+            authToken_ =
+              com.google.protobuf.StringValue.newBuilder(authToken_).mergeFrom(value).buildPartial();
+          } else {
+            authToken_ = value;
+          }
+          onChanged();
+        } else {
+          authTokenBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       */
+      public Builder clearAuthToken() {
+        if (authTokenBuilder_ == null) {
+          authToken_ = null;
+          onChanged();
+        } else {
+          authToken_ = null;
+          authTokenBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getAuthTokenBuilder() {
+        
+        onChanged();
+        return getAuthTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getAuthTokenOrBuilder() {
+        if (authTokenBuilder_ != null) {
+          return authTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return authToken_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : authToken_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue auth_token = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getAuthTokenFieldBuilder() {
+        if (authTokenBuilder_ == null) {
+          authTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getAuthToken(),
+                  getParentForChildren(),
+                  isClean());
+          authToken_ = null;
+        }
+        return authTokenBuilder_;
       }
 
       private boolean simplexMode_ ;
@@ -1161,287 +1214,302 @@ public final class App {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+     * @return Whether the generateAuthToken field is set.
+     */
+    boolean hasGenerateAuthToken();
+    /**
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+     * @return The generateAuthToken.
+     */
+    com.elarian.hera.proto.App.GenerateAuthTokenCommand getGenerateAuthToken();
+    /**
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+     */
+    com.elarian.hera.proto.App.GenerateAuthTokenCommandOrBuilder getGenerateAuthTokenOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
      * @return Whether the getCustomerState field is set.
      */
     boolean hasGetCustomerState();
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
      * @return The getCustomerState.
      */
     com.elarian.hera.proto.App.GetCustomerStateCommand getGetCustomerState();
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
      */
     com.elarian.hera.proto.App.GetCustomerStateCommandOrBuilder getGetCustomerStateOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
      * @return Whether the adoptCustomerState field is set.
      */
     boolean hasAdoptCustomerState();
     /**
-     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
      * @return The adoptCustomerState.
      */
     com.elarian.hera.proto.App.AdoptCustomerStateCommand getAdoptCustomerState();
     /**
-     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
      */
     com.elarian.hera.proto.App.AdoptCustomerStateCommandOrBuilder getAdoptCustomerStateOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
      * @return Whether the addCustomerReminder field is set.
      */
     boolean hasAddCustomerReminder();
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
      * @return The addCustomerReminder.
      */
     com.elarian.hera.proto.App.AddCustomerReminderCommand getAddCustomerReminder();
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
      */
     com.elarian.hera.proto.App.AddCustomerReminderCommandOrBuilder getAddCustomerReminderOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
      * @return Whether the addCustomerReminderTag field is set.
      */
     boolean hasAddCustomerReminderTag();
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
      * @return The addCustomerReminderTag.
      */
     com.elarian.hera.proto.App.AddCustomerReminderTagCommand getAddCustomerReminderTag();
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
      */
     com.elarian.hera.proto.App.AddCustomerReminderTagCommandOrBuilder getAddCustomerReminderTagOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
      * @return Whether the cancelCustomerReminder field is set.
      */
     boolean hasCancelCustomerReminder();
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
      * @return The cancelCustomerReminder.
      */
     com.elarian.hera.proto.App.CancelCustomerReminderCommand getCancelCustomerReminder();
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
      */
     com.elarian.hera.proto.App.CancelCustomerReminderCommandOrBuilder getCancelCustomerReminderOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
      * @return Whether the cancelCustomerReminderTag field is set.
      */
     boolean hasCancelCustomerReminderTag();
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
      * @return The cancelCustomerReminderTag.
      */
     com.elarian.hera.proto.App.CancelCustomerReminderTagCommand getCancelCustomerReminderTag();
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
      */
     com.elarian.hera.proto.App.CancelCustomerReminderTagCommandOrBuilder getCancelCustomerReminderTagOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
      * @return Whether the updateCustomerTag field is set.
      */
     boolean hasUpdateCustomerTag();
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
      * @return The updateCustomerTag.
      */
     com.elarian.hera.proto.App.UpdateCustomerTagCommand getUpdateCustomerTag();
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
      */
     com.elarian.hera.proto.App.UpdateCustomerTagCommandOrBuilder getUpdateCustomerTagOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
      * @return Whether the deleteCustomerTag field is set.
      */
     boolean hasDeleteCustomerTag();
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
      * @return The deleteCustomerTag.
      */
     com.elarian.hera.proto.App.DeleteCustomerTagCommand getDeleteCustomerTag();
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
      */
     com.elarian.hera.proto.App.DeleteCustomerTagCommandOrBuilder getDeleteCustomerTagOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
      * @return Whether the updateCustomerSecondaryId field is set.
      */
     boolean hasUpdateCustomerSecondaryId();
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
      * @return The updateCustomerSecondaryId.
      */
     com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand getUpdateCustomerSecondaryId();
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
      */
     com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommandOrBuilder getUpdateCustomerSecondaryIdOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
      * @return Whether the deleteCustomerSecondaryId field is set.
      */
     boolean hasDeleteCustomerSecondaryId();
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
      * @return The deleteCustomerSecondaryId.
      */
     com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand getDeleteCustomerSecondaryId();
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
      */
     com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommandOrBuilder getDeleteCustomerSecondaryIdOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
      * @return Whether the leaseCustomerMetadata field is set.
      */
     boolean hasLeaseCustomerMetadata();
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
      * @return The leaseCustomerMetadata.
      */
     com.elarian.hera.proto.App.LeaseCustomerMetadataCommand getLeaseCustomerMetadata();
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
      */
     com.elarian.hera.proto.App.LeaseCustomerMetadataCommandOrBuilder getLeaseCustomerMetadataOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
      * @return Whether the updateCustomerMetadata field is set.
      */
     boolean hasUpdateCustomerMetadata();
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
      * @return The updateCustomerMetadata.
      */
     com.elarian.hera.proto.App.UpdateCustomerMetadataCommand getUpdateCustomerMetadata();
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
      */
     com.elarian.hera.proto.App.UpdateCustomerMetadataCommandOrBuilder getUpdateCustomerMetadataOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
      * @return Whether the deleteCustomerMetadata field is set.
      */
     boolean hasDeleteCustomerMetadata();
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
      * @return The deleteCustomerMetadata.
      */
     com.elarian.hera.proto.App.DeleteCustomerMetadataCommand getDeleteCustomerMetadata();
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
      */
     com.elarian.hera.proto.App.DeleteCustomerMetadataCommandOrBuilder getDeleteCustomerMetadataOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
      * @return Whether the sendMessage field is set.
      */
     boolean hasSendMessage();
     /**
-     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
      * @return The sendMessage.
      */
     com.elarian.hera.proto.App.SendMessageCommand getSendMessage();
     /**
-     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
      */
     com.elarian.hera.proto.App.SendMessageCommandOrBuilder getSendMessageOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
      * @return Whether the sendMessageTag field is set.
      */
     boolean hasSendMessageTag();
     /**
-     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
      * @return The sendMessageTag.
      */
     com.elarian.hera.proto.App.SendMessageTagCommand getSendMessageTag();
     /**
-     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
      */
     com.elarian.hera.proto.App.SendMessageTagCommandOrBuilder getSendMessageTagOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
      * @return Whether the replyToMessage field is set.
      */
     boolean hasReplyToMessage();
     /**
-     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
      * @return The replyToMessage.
      */
     com.elarian.hera.proto.App.ReplyToMessageCommand getReplyToMessage();
     /**
-     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
      */
     com.elarian.hera.proto.App.ReplyToMessageCommandOrBuilder getReplyToMessageOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
      * @return Whether the messagingConsent field is set.
      */
     boolean hasMessagingConsent();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
      * @return The messagingConsent.
      */
     com.elarian.hera.proto.App.MessagingConsentCommand getMessagingConsent();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
      */
     com.elarian.hera.proto.App.MessagingConsentCommandOrBuilder getMessagingConsentOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
      * @return Whether the initiatePayment field is set.
      */
     boolean hasInitiatePayment();
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
      * @return The initiatePayment.
      */
     com.elarian.hera.proto.App.InitiatePaymentCommand getInitiatePayment();
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
      */
     com.elarian.hera.proto.App.InitiatePaymentCommandOrBuilder getInitiatePaymentOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
      * @return Whether the makeVoiceCall field is set.
      */
     boolean hasMakeVoiceCall();
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
      * @return The makeVoiceCall.
      */
     com.elarian.hera.proto.App.MakeVoiceCallCommand getMakeVoiceCall();
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
      */
     com.elarian.hera.proto.App.MakeVoiceCallCommandOrBuilder getMakeVoiceCallOrBuilder();
 
@@ -1493,8 +1561,22 @@ public final class App {
               done = true;
               break;
             case 10: {
-              com.elarian.hera.proto.App.GetCustomerStateCommand.Builder subBuilder = null;
+              com.elarian.hera.proto.App.GenerateAuthTokenCommand.Builder subBuilder = null;
               if (entryCase_ == 1) {
+                subBuilder = ((com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_).toBuilder();
+              }
+              entry_ =
+                  input.readMessage(com.elarian.hera.proto.App.GenerateAuthTokenCommand.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_);
+                entry_ = subBuilder.buildPartial();
+              }
+              entryCase_ = 1;
+              break;
+            }
+            case 18: {
+              com.elarian.hera.proto.App.GetCustomerStateCommand.Builder subBuilder = null;
+              if (entryCase_ == 2) {
                 subBuilder = ((com.elarian.hera.proto.App.GetCustomerStateCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1503,12 +1585,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.GetCustomerStateCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 1;
+              entryCase_ = 2;
               break;
             }
-            case 18: {
+            case 26: {
               com.elarian.hera.proto.App.AdoptCustomerStateCommand.Builder subBuilder = null;
-              if (entryCase_ == 2) {
+              if (entryCase_ == 3) {
                 subBuilder = ((com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1517,12 +1599,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 2;
+              entryCase_ = 3;
               break;
             }
-            case 26: {
+            case 34: {
               com.elarian.hera.proto.App.AddCustomerReminderCommand.Builder subBuilder = null;
-              if (entryCase_ == 3) {
+              if (entryCase_ == 4) {
                 subBuilder = ((com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1531,12 +1613,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 3;
+              entryCase_ = 4;
               break;
             }
-            case 34: {
+            case 42: {
               com.elarian.hera.proto.App.AddCustomerReminderTagCommand.Builder subBuilder = null;
-              if (entryCase_ == 4) {
+              if (entryCase_ == 5) {
                 subBuilder = ((com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1545,12 +1627,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 4;
+              entryCase_ = 5;
               break;
             }
-            case 42: {
+            case 50: {
               com.elarian.hera.proto.App.CancelCustomerReminderCommand.Builder subBuilder = null;
-              if (entryCase_ == 5) {
+              if (entryCase_ == 6) {
                 subBuilder = ((com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1559,12 +1641,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 5;
+              entryCase_ = 6;
               break;
             }
-            case 50: {
+            case 58: {
               com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.Builder subBuilder = null;
-              if (entryCase_ == 6) {
+              if (entryCase_ == 7) {
                 subBuilder = ((com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1573,12 +1655,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 6;
+              entryCase_ = 7;
               break;
             }
-            case 58: {
+            case 66: {
               com.elarian.hera.proto.App.UpdateCustomerTagCommand.Builder subBuilder = null;
-              if (entryCase_ == 7) {
+              if (entryCase_ == 8) {
                 subBuilder = ((com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1587,12 +1669,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 7;
+              entryCase_ = 8;
               break;
             }
-            case 66: {
+            case 74: {
               com.elarian.hera.proto.App.DeleteCustomerTagCommand.Builder subBuilder = null;
-              if (entryCase_ == 8) {
+              if (entryCase_ == 9) {
                 subBuilder = ((com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1601,12 +1683,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 8;
+              entryCase_ = 9;
               break;
             }
-            case 74: {
+            case 82: {
               com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.Builder subBuilder = null;
-              if (entryCase_ == 9) {
+              if (entryCase_ == 10) {
                 subBuilder = ((com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1615,12 +1697,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 9;
+              entryCase_ = 10;
               break;
             }
-            case 82: {
+            case 90: {
               com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.Builder subBuilder = null;
-              if (entryCase_ == 10) {
+              if (entryCase_ == 11) {
                 subBuilder = ((com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1629,12 +1711,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 10;
+              entryCase_ = 11;
               break;
             }
-            case 90: {
+            case 98: {
               com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.Builder subBuilder = null;
-              if (entryCase_ == 11) {
+              if (entryCase_ == 12) {
                 subBuilder = ((com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1643,12 +1725,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 11;
+              entryCase_ = 12;
               break;
             }
-            case 98: {
+            case 106: {
               com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.Builder subBuilder = null;
-              if (entryCase_ == 12) {
+              if (entryCase_ == 13) {
                 subBuilder = ((com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1657,12 +1739,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 12;
+              entryCase_ = 13;
               break;
             }
-            case 106: {
+            case 114: {
               com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.Builder subBuilder = null;
-              if (entryCase_ == 13) {
+              if (entryCase_ == 14) {
                 subBuilder = ((com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1671,12 +1753,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 13;
+              entryCase_ = 14;
               break;
             }
-            case 114: {
+            case 122: {
               com.elarian.hera.proto.App.SendMessageCommand.Builder subBuilder = null;
-              if (entryCase_ == 14) {
+              if (entryCase_ == 15) {
                 subBuilder = ((com.elarian.hera.proto.App.SendMessageCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1685,12 +1767,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.SendMessageCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 14;
+              entryCase_ = 15;
               break;
             }
-            case 122: {
+            case 130: {
               com.elarian.hera.proto.App.SendMessageTagCommand.Builder subBuilder = null;
-              if (entryCase_ == 15) {
+              if (entryCase_ == 16) {
                 subBuilder = ((com.elarian.hera.proto.App.SendMessageTagCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1699,12 +1781,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.SendMessageTagCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 15;
+              entryCase_ = 16;
               break;
             }
-            case 130: {
+            case 138: {
               com.elarian.hera.proto.App.ReplyToMessageCommand.Builder subBuilder = null;
-              if (entryCase_ == 16) {
+              if (entryCase_ == 17) {
                 subBuilder = ((com.elarian.hera.proto.App.ReplyToMessageCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1713,12 +1795,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.ReplyToMessageCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 16;
+              entryCase_ = 17;
               break;
             }
-            case 138: {
+            case 146: {
               com.elarian.hera.proto.App.MessagingConsentCommand.Builder subBuilder = null;
-              if (entryCase_ == 17) {
+              if (entryCase_ == 18) {
                 subBuilder = ((com.elarian.hera.proto.App.MessagingConsentCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1727,12 +1809,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.MessagingConsentCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 17;
+              entryCase_ = 18;
               break;
             }
-            case 146: {
+            case 154: {
               com.elarian.hera.proto.App.InitiatePaymentCommand.Builder subBuilder = null;
-              if (entryCase_ == 18) {
+              if (entryCase_ == 19) {
                 subBuilder = ((com.elarian.hera.proto.App.InitiatePaymentCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1741,12 +1823,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.InitiatePaymentCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 18;
+              entryCase_ = 19;
               break;
             }
-            case 154: {
+            case 162: {
               com.elarian.hera.proto.App.MakeVoiceCallCommand.Builder subBuilder = null;
-              if (entryCase_ == 19) {
+              if (entryCase_ == 20) {
                 subBuilder = ((com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_).toBuilder();
               }
               entry_ =
@@ -1755,7 +1837,7 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 19;
+              entryCase_ = 20;
               break;
             }
             default: {
@@ -1795,25 +1877,26 @@ public final class App {
     public enum EntryCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      GET_CUSTOMER_STATE(1),
-      ADOPT_CUSTOMER_STATE(2),
-      ADD_CUSTOMER_REMINDER(3),
-      ADD_CUSTOMER_REMINDER_TAG(4),
-      CANCEL_CUSTOMER_REMINDER(5),
-      CANCEL_CUSTOMER_REMINDER_TAG(6),
-      UPDATE_CUSTOMER_TAG(7),
-      DELETE_CUSTOMER_TAG(8),
-      UPDATE_CUSTOMER_SECONDARY_ID(9),
-      DELETE_CUSTOMER_SECONDARY_ID(10),
-      LEASE_CUSTOMER_METADATA(11),
-      UPDATE_CUSTOMER_METADATA(12),
-      DELETE_CUSTOMER_METADATA(13),
-      SEND_MESSAGE(14),
-      SEND_MESSAGE_TAG(15),
-      REPLY_TO_MESSAGE(16),
-      MESSAGING_CONSENT(17),
-      INITIATE_PAYMENT(18),
-      MAKE_VOICE_CALL(19),
+      GENERATE_AUTH_TOKEN(1),
+      GET_CUSTOMER_STATE(2),
+      ADOPT_CUSTOMER_STATE(3),
+      ADD_CUSTOMER_REMINDER(4),
+      ADD_CUSTOMER_REMINDER_TAG(5),
+      CANCEL_CUSTOMER_REMINDER(6),
+      CANCEL_CUSTOMER_REMINDER_TAG(7),
+      UPDATE_CUSTOMER_TAG(8),
+      DELETE_CUSTOMER_TAG(9),
+      UPDATE_CUSTOMER_SECONDARY_ID(10),
+      DELETE_CUSTOMER_SECONDARY_ID(11),
+      LEASE_CUSTOMER_METADATA(12),
+      UPDATE_CUSTOMER_METADATA(13),
+      DELETE_CUSTOMER_METADATA(14),
+      SEND_MESSAGE(15),
+      SEND_MESSAGE_TAG(16),
+      REPLY_TO_MESSAGE(17),
+      MESSAGING_CONSENT(18),
+      INITIATE_PAYMENT(19),
+      MAKE_VOICE_CALL(20),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -1831,25 +1914,26 @@ public final class App {
 
       public static EntryCase forNumber(int value) {
         switch (value) {
-          case 1: return GET_CUSTOMER_STATE;
-          case 2: return ADOPT_CUSTOMER_STATE;
-          case 3: return ADD_CUSTOMER_REMINDER;
-          case 4: return ADD_CUSTOMER_REMINDER_TAG;
-          case 5: return CANCEL_CUSTOMER_REMINDER;
-          case 6: return CANCEL_CUSTOMER_REMINDER_TAG;
-          case 7: return UPDATE_CUSTOMER_TAG;
-          case 8: return DELETE_CUSTOMER_TAG;
-          case 9: return UPDATE_CUSTOMER_SECONDARY_ID;
-          case 10: return DELETE_CUSTOMER_SECONDARY_ID;
-          case 11: return LEASE_CUSTOMER_METADATA;
-          case 12: return UPDATE_CUSTOMER_METADATA;
-          case 13: return DELETE_CUSTOMER_METADATA;
-          case 14: return SEND_MESSAGE;
-          case 15: return SEND_MESSAGE_TAG;
-          case 16: return REPLY_TO_MESSAGE;
-          case 17: return MESSAGING_CONSENT;
-          case 18: return INITIATE_PAYMENT;
-          case 19: return MAKE_VOICE_CALL;
+          case 1: return GENERATE_AUTH_TOKEN;
+          case 2: return GET_CUSTOMER_STATE;
+          case 3: return ADOPT_CUSTOMER_STATE;
+          case 4: return ADD_CUSTOMER_REMINDER;
+          case 5: return ADD_CUSTOMER_REMINDER_TAG;
+          case 6: return CANCEL_CUSTOMER_REMINDER;
+          case 7: return CANCEL_CUSTOMER_REMINDER_TAG;
+          case 8: return UPDATE_CUSTOMER_TAG;
+          case 9: return DELETE_CUSTOMER_TAG;
+          case 10: return UPDATE_CUSTOMER_SECONDARY_ID;
+          case 11: return DELETE_CUSTOMER_SECONDARY_ID;
+          case 12: return LEASE_CUSTOMER_METADATA;
+          case 13: return UPDATE_CUSTOMER_METADATA;
+          case 14: return DELETE_CUSTOMER_METADATA;
+          case 15: return SEND_MESSAGE;
+          case 16: return SEND_MESSAGE_TAG;
+          case 17: return REPLY_TO_MESSAGE;
+          case 18: return MESSAGING_CONSENT;
+          case 19: return INITIATE_PAYMENT;
+          case 20: return MAKE_VOICE_CALL;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -1865,590 +1949,621 @@ public final class App {
           entryCase_);
     }
 
-    public static final int GET_CUSTOMER_STATE_FIELD_NUMBER = 1;
+    public static final int GENERATE_AUTH_TOKEN_FIELD_NUMBER = 1;
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+     * @return Whether the generateAuthToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasGenerateAuthToken() {
+      return entryCase_ == 1;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+     * @return The generateAuthToken.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.App.GenerateAuthTokenCommand getGenerateAuthToken() {
+      if (entryCase_ == 1) {
+         return (com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_;
+      }
+      return com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.App.GenerateAuthTokenCommandOrBuilder getGenerateAuthTokenOrBuilder() {
+      if (entryCase_ == 1) {
+         return (com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_;
+      }
+      return com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance();
+    }
+
+    public static final int GET_CUSTOMER_STATE_FIELD_NUMBER = 2;
+    /**
+     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
      * @return Whether the getCustomerState field is set.
      */
     @java.lang.Override
     public boolean hasGetCustomerState() {
-      return entryCase_ == 1;
+      return entryCase_ == 2;
     }
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
      * @return The getCustomerState.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.GetCustomerStateCommand getGetCustomerState() {
-      if (entryCase_ == 1) {
+      if (entryCase_ == 2) {
          return (com.elarian.hera.proto.App.GetCustomerStateCommand) entry_;
       }
       return com.elarian.hera.proto.App.GetCustomerStateCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.GetCustomerStateCommandOrBuilder getGetCustomerStateOrBuilder() {
-      if (entryCase_ == 1) {
+      if (entryCase_ == 2) {
          return (com.elarian.hera.proto.App.GetCustomerStateCommand) entry_;
       }
       return com.elarian.hera.proto.App.GetCustomerStateCommand.getDefaultInstance();
     }
 
-    public static final int ADOPT_CUSTOMER_STATE_FIELD_NUMBER = 2;
+    public static final int ADOPT_CUSTOMER_STATE_FIELD_NUMBER = 3;
     /**
-     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
      * @return Whether the adoptCustomerState field is set.
      */
     @java.lang.Override
     public boolean hasAdoptCustomerState() {
-      return entryCase_ == 2;
+      return entryCase_ == 3;
     }
     /**
-     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
      * @return The adoptCustomerState.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.AdoptCustomerStateCommand getAdoptCustomerState() {
-      if (entryCase_ == 2) {
+      if (entryCase_ == 3) {
          return (com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_;
       }
       return com.elarian.hera.proto.App.AdoptCustomerStateCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+     * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.AdoptCustomerStateCommandOrBuilder getAdoptCustomerStateOrBuilder() {
-      if (entryCase_ == 2) {
+      if (entryCase_ == 3) {
          return (com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_;
       }
       return com.elarian.hera.proto.App.AdoptCustomerStateCommand.getDefaultInstance();
     }
 
-    public static final int ADD_CUSTOMER_REMINDER_FIELD_NUMBER = 3;
+    public static final int ADD_CUSTOMER_REMINDER_FIELD_NUMBER = 4;
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
      * @return Whether the addCustomerReminder field is set.
      */
     @java.lang.Override
     public boolean hasAddCustomerReminder() {
-      return entryCase_ == 3;
+      return entryCase_ == 4;
     }
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
      * @return The addCustomerReminder.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.AddCustomerReminderCommand getAddCustomerReminder() {
-      if (entryCase_ == 3) {
+      if (entryCase_ == 4) {
          return (com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_;
       }
       return com.elarian.hera.proto.App.AddCustomerReminderCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.AddCustomerReminderCommandOrBuilder getAddCustomerReminderOrBuilder() {
-      if (entryCase_ == 3) {
+      if (entryCase_ == 4) {
          return (com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_;
       }
       return com.elarian.hera.proto.App.AddCustomerReminderCommand.getDefaultInstance();
     }
 
-    public static final int ADD_CUSTOMER_REMINDER_TAG_FIELD_NUMBER = 4;
+    public static final int ADD_CUSTOMER_REMINDER_TAG_FIELD_NUMBER = 5;
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
      * @return Whether the addCustomerReminderTag field is set.
      */
     @java.lang.Override
     public boolean hasAddCustomerReminderTag() {
-      return entryCase_ == 4;
+      return entryCase_ == 5;
     }
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
      * @return The addCustomerReminderTag.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.AddCustomerReminderTagCommand getAddCustomerReminderTag() {
-      if (entryCase_ == 4) {
+      if (entryCase_ == 5) {
          return (com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.AddCustomerReminderTagCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+     * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.AddCustomerReminderTagCommandOrBuilder getAddCustomerReminderTagOrBuilder() {
-      if (entryCase_ == 4) {
+      if (entryCase_ == 5) {
          return (com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.AddCustomerReminderTagCommand.getDefaultInstance();
     }
 
-    public static final int CANCEL_CUSTOMER_REMINDER_FIELD_NUMBER = 5;
+    public static final int CANCEL_CUSTOMER_REMINDER_FIELD_NUMBER = 6;
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
      * @return Whether the cancelCustomerReminder field is set.
      */
     @java.lang.Override
     public boolean hasCancelCustomerReminder() {
-      return entryCase_ == 5;
+      return entryCase_ == 6;
     }
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
      * @return The cancelCustomerReminder.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.CancelCustomerReminderCommand getCancelCustomerReminder() {
-      if (entryCase_ == 5) {
+      if (entryCase_ == 6) {
          return (com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_;
       }
       return com.elarian.hera.proto.App.CancelCustomerReminderCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.CancelCustomerReminderCommandOrBuilder getCancelCustomerReminderOrBuilder() {
-      if (entryCase_ == 5) {
+      if (entryCase_ == 6) {
          return (com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_;
       }
       return com.elarian.hera.proto.App.CancelCustomerReminderCommand.getDefaultInstance();
     }
 
-    public static final int CANCEL_CUSTOMER_REMINDER_TAG_FIELD_NUMBER = 6;
+    public static final int CANCEL_CUSTOMER_REMINDER_TAG_FIELD_NUMBER = 7;
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
      * @return Whether the cancelCustomerReminderTag field is set.
      */
     @java.lang.Override
     public boolean hasCancelCustomerReminderTag() {
-      return entryCase_ == 6;
+      return entryCase_ == 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
      * @return The cancelCustomerReminderTag.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.CancelCustomerReminderTagCommand getCancelCustomerReminderTag() {
-      if (entryCase_ == 6) {
+      if (entryCase_ == 7) {
          return (com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+     * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.CancelCustomerReminderTagCommandOrBuilder getCancelCustomerReminderTagOrBuilder() {
-      if (entryCase_ == 6) {
+      if (entryCase_ == 7) {
          return (com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.getDefaultInstance();
     }
 
-    public static final int UPDATE_CUSTOMER_TAG_FIELD_NUMBER = 7;
+    public static final int UPDATE_CUSTOMER_TAG_FIELD_NUMBER = 8;
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
      * @return Whether the updateCustomerTag field is set.
      */
     @java.lang.Override
     public boolean hasUpdateCustomerTag() {
-      return entryCase_ == 7;
+      return entryCase_ == 8;
     }
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
      * @return The updateCustomerTag.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.UpdateCustomerTagCommand getUpdateCustomerTag() {
-      if (entryCase_ == 7) {
+      if (entryCase_ == 8) {
          return (com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.UpdateCustomerTagCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.UpdateCustomerTagCommandOrBuilder getUpdateCustomerTagOrBuilder() {
-      if (entryCase_ == 7) {
+      if (entryCase_ == 8) {
          return (com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.UpdateCustomerTagCommand.getDefaultInstance();
     }
 
-    public static final int DELETE_CUSTOMER_TAG_FIELD_NUMBER = 8;
+    public static final int DELETE_CUSTOMER_TAG_FIELD_NUMBER = 9;
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
      * @return Whether the deleteCustomerTag field is set.
      */
     @java.lang.Override
     public boolean hasDeleteCustomerTag() {
-      return entryCase_ == 8;
+      return entryCase_ == 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
      * @return The deleteCustomerTag.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.DeleteCustomerTagCommand getDeleteCustomerTag() {
-      if (entryCase_ == 8) {
+      if (entryCase_ == 9) {
          return (com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.DeleteCustomerTagCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.DeleteCustomerTagCommandOrBuilder getDeleteCustomerTagOrBuilder() {
-      if (entryCase_ == 8) {
+      if (entryCase_ == 9) {
          return (com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.DeleteCustomerTagCommand.getDefaultInstance();
     }
 
-    public static final int UPDATE_CUSTOMER_SECONDARY_ID_FIELD_NUMBER = 9;
+    public static final int UPDATE_CUSTOMER_SECONDARY_ID_FIELD_NUMBER = 10;
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
      * @return Whether the updateCustomerSecondaryId field is set.
      */
     @java.lang.Override
     public boolean hasUpdateCustomerSecondaryId() {
-      return entryCase_ == 9;
+      return entryCase_ == 10;
     }
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
      * @return The updateCustomerSecondaryId.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand getUpdateCustomerSecondaryId() {
-      if (entryCase_ == 9) {
+      if (entryCase_ == 10) {
          return (com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_;
       }
       return com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommandOrBuilder getUpdateCustomerSecondaryIdOrBuilder() {
-      if (entryCase_ == 9) {
+      if (entryCase_ == 10) {
          return (com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_;
       }
       return com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.getDefaultInstance();
     }
 
-    public static final int DELETE_CUSTOMER_SECONDARY_ID_FIELD_NUMBER = 10;
+    public static final int DELETE_CUSTOMER_SECONDARY_ID_FIELD_NUMBER = 11;
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
      * @return Whether the deleteCustomerSecondaryId field is set.
      */
     @java.lang.Override
     public boolean hasDeleteCustomerSecondaryId() {
-      return entryCase_ == 10;
+      return entryCase_ == 11;
     }
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
      * @return The deleteCustomerSecondaryId.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand getDeleteCustomerSecondaryId() {
-      if (entryCase_ == 10) {
+      if (entryCase_ == 11) {
          return (com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_;
       }
       return com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommandOrBuilder getDeleteCustomerSecondaryIdOrBuilder() {
-      if (entryCase_ == 10) {
+      if (entryCase_ == 11) {
          return (com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_;
       }
       return com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.getDefaultInstance();
     }
 
-    public static final int LEASE_CUSTOMER_METADATA_FIELD_NUMBER = 11;
+    public static final int LEASE_CUSTOMER_METADATA_FIELD_NUMBER = 12;
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
      * @return Whether the leaseCustomerMetadata field is set.
      */
     @java.lang.Override
     public boolean hasLeaseCustomerMetadata() {
-      return entryCase_ == 11;
+      return entryCase_ == 12;
     }
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
      * @return The leaseCustomerMetadata.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.LeaseCustomerMetadataCommand getLeaseCustomerMetadata() {
-      if (entryCase_ == 11) {
+      if (entryCase_ == 12) {
          return (com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_;
       }
       return com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.LeaseCustomerMetadataCommandOrBuilder getLeaseCustomerMetadataOrBuilder() {
-      if (entryCase_ == 11) {
+      if (entryCase_ == 12) {
          return (com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_;
       }
       return com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.getDefaultInstance();
     }
 
-    public static final int UPDATE_CUSTOMER_METADATA_FIELD_NUMBER = 12;
+    public static final int UPDATE_CUSTOMER_METADATA_FIELD_NUMBER = 13;
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
      * @return Whether the updateCustomerMetadata field is set.
      */
     @java.lang.Override
     public boolean hasUpdateCustomerMetadata() {
-      return entryCase_ == 12;
+      return entryCase_ == 13;
     }
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
      * @return The updateCustomerMetadata.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.UpdateCustomerMetadataCommand getUpdateCustomerMetadata() {
-      if (entryCase_ == 12) {
+      if (entryCase_ == 13) {
          return (com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_;
       }
       return com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.UpdateCustomerMetadataCommandOrBuilder getUpdateCustomerMetadataOrBuilder() {
-      if (entryCase_ == 12) {
+      if (entryCase_ == 13) {
          return (com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_;
       }
       return com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.getDefaultInstance();
     }
 
-    public static final int DELETE_CUSTOMER_METADATA_FIELD_NUMBER = 13;
+    public static final int DELETE_CUSTOMER_METADATA_FIELD_NUMBER = 14;
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
      * @return Whether the deleteCustomerMetadata field is set.
      */
     @java.lang.Override
     public boolean hasDeleteCustomerMetadata() {
-      return entryCase_ == 13;
+      return entryCase_ == 14;
     }
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
      * @return The deleteCustomerMetadata.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.DeleteCustomerMetadataCommand getDeleteCustomerMetadata() {
-      if (entryCase_ == 13) {
+      if (entryCase_ == 14) {
          return (com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_;
       }
       return com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+     * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.DeleteCustomerMetadataCommandOrBuilder getDeleteCustomerMetadataOrBuilder() {
-      if (entryCase_ == 13) {
+      if (entryCase_ == 14) {
          return (com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_;
       }
       return com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.getDefaultInstance();
     }
 
-    public static final int SEND_MESSAGE_FIELD_NUMBER = 14;
+    public static final int SEND_MESSAGE_FIELD_NUMBER = 15;
     /**
-     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
      * @return Whether the sendMessage field is set.
      */
     @java.lang.Override
     public boolean hasSendMessage() {
-      return entryCase_ == 14;
+      return entryCase_ == 15;
     }
     /**
-     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
      * @return The sendMessage.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.SendMessageCommand getSendMessage() {
-      if (entryCase_ == 14) {
+      if (entryCase_ == 15) {
          return (com.elarian.hera.proto.App.SendMessageCommand) entry_;
       }
       return com.elarian.hera.proto.App.SendMessageCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+     * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.SendMessageCommandOrBuilder getSendMessageOrBuilder() {
-      if (entryCase_ == 14) {
+      if (entryCase_ == 15) {
          return (com.elarian.hera.proto.App.SendMessageCommand) entry_;
       }
       return com.elarian.hera.proto.App.SendMessageCommand.getDefaultInstance();
     }
 
-    public static final int SEND_MESSAGE_TAG_FIELD_NUMBER = 15;
+    public static final int SEND_MESSAGE_TAG_FIELD_NUMBER = 16;
     /**
-     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
      * @return Whether the sendMessageTag field is set.
      */
     @java.lang.Override
     public boolean hasSendMessageTag() {
-      return entryCase_ == 15;
+      return entryCase_ == 16;
     }
     /**
-     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
      * @return The sendMessageTag.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.SendMessageTagCommand getSendMessageTag() {
-      if (entryCase_ == 15) {
+      if (entryCase_ == 16) {
          return (com.elarian.hera.proto.App.SendMessageTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.SendMessageTagCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+     * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.SendMessageTagCommandOrBuilder getSendMessageTagOrBuilder() {
-      if (entryCase_ == 15) {
+      if (entryCase_ == 16) {
          return (com.elarian.hera.proto.App.SendMessageTagCommand) entry_;
       }
       return com.elarian.hera.proto.App.SendMessageTagCommand.getDefaultInstance();
     }
 
-    public static final int REPLY_TO_MESSAGE_FIELD_NUMBER = 16;
+    public static final int REPLY_TO_MESSAGE_FIELD_NUMBER = 17;
     /**
-     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
      * @return Whether the replyToMessage field is set.
      */
     @java.lang.Override
     public boolean hasReplyToMessage() {
-      return entryCase_ == 16;
+      return entryCase_ == 17;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
      * @return The replyToMessage.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.ReplyToMessageCommand getReplyToMessage() {
-      if (entryCase_ == 16) {
+      if (entryCase_ == 17) {
          return (com.elarian.hera.proto.App.ReplyToMessageCommand) entry_;
       }
       return com.elarian.hera.proto.App.ReplyToMessageCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+     * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.ReplyToMessageCommandOrBuilder getReplyToMessageOrBuilder() {
-      if (entryCase_ == 16) {
+      if (entryCase_ == 17) {
          return (com.elarian.hera.proto.App.ReplyToMessageCommand) entry_;
       }
       return com.elarian.hera.proto.App.ReplyToMessageCommand.getDefaultInstance();
     }
 
-    public static final int MESSAGING_CONSENT_FIELD_NUMBER = 17;
+    public static final int MESSAGING_CONSENT_FIELD_NUMBER = 18;
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
      * @return Whether the messagingConsent field is set.
      */
     @java.lang.Override
     public boolean hasMessagingConsent() {
-      return entryCase_ == 17;
+      return entryCase_ == 18;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
      * @return The messagingConsent.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.MessagingConsentCommand getMessagingConsent() {
-      if (entryCase_ == 17) {
+      if (entryCase_ == 18) {
          return (com.elarian.hera.proto.App.MessagingConsentCommand) entry_;
       }
       return com.elarian.hera.proto.App.MessagingConsentCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.MessagingConsentCommandOrBuilder getMessagingConsentOrBuilder() {
-      if (entryCase_ == 17) {
+      if (entryCase_ == 18) {
          return (com.elarian.hera.proto.App.MessagingConsentCommand) entry_;
       }
       return com.elarian.hera.proto.App.MessagingConsentCommand.getDefaultInstance();
     }
 
-    public static final int INITIATE_PAYMENT_FIELD_NUMBER = 18;
+    public static final int INITIATE_PAYMENT_FIELD_NUMBER = 19;
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
      * @return Whether the initiatePayment field is set.
      */
     @java.lang.Override
     public boolean hasInitiatePayment() {
-      return entryCase_ == 18;
+      return entryCase_ == 19;
     }
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
      * @return The initiatePayment.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.InitiatePaymentCommand getInitiatePayment() {
-      if (entryCase_ == 18) {
+      if (entryCase_ == 19) {
          return (com.elarian.hera.proto.App.InitiatePaymentCommand) entry_;
       }
       return com.elarian.hera.proto.App.InitiatePaymentCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.InitiatePaymentCommandOrBuilder getInitiatePaymentOrBuilder() {
-      if (entryCase_ == 18) {
+      if (entryCase_ == 19) {
          return (com.elarian.hera.proto.App.InitiatePaymentCommand) entry_;
       }
       return com.elarian.hera.proto.App.InitiatePaymentCommand.getDefaultInstance();
     }
 
-    public static final int MAKE_VOICE_CALL_FIELD_NUMBER = 19;
+    public static final int MAKE_VOICE_CALL_FIELD_NUMBER = 20;
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
      * @return Whether the makeVoiceCall field is set.
      */
     @java.lang.Override
     public boolean hasMakeVoiceCall() {
-      return entryCase_ == 19;
+      return entryCase_ == 20;
     }
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
      * @return The makeVoiceCall.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.MakeVoiceCallCommand getMakeVoiceCall() {
-      if (entryCase_ == 19) {
+      if (entryCase_ == 20) {
          return (com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_;
       }
       return com.elarian.hera.proto.App.MakeVoiceCallCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.MakeVoiceCallCommandOrBuilder getMakeVoiceCallOrBuilder() {
-      if (entryCase_ == 19) {
+      if (entryCase_ == 20) {
          return (com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_;
       }
       return com.elarian.hera.proto.App.MakeVoiceCallCommand.getDefaultInstance();
@@ -2469,61 +2584,64 @@ public final class App {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entryCase_ == 1) {
-        output.writeMessage(1, (com.elarian.hera.proto.App.GetCustomerStateCommand) entry_);
+        output.writeMessage(1, (com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_);
       }
       if (entryCase_ == 2) {
-        output.writeMessage(2, (com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_);
+        output.writeMessage(2, (com.elarian.hera.proto.App.GetCustomerStateCommand) entry_);
       }
       if (entryCase_ == 3) {
-        output.writeMessage(3, (com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_);
+        output.writeMessage(3, (com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_);
       }
       if (entryCase_ == 4) {
-        output.writeMessage(4, (com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_);
+        output.writeMessage(4, (com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_);
       }
       if (entryCase_ == 5) {
-        output.writeMessage(5, (com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_);
+        output.writeMessage(5, (com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_);
       }
       if (entryCase_ == 6) {
-        output.writeMessage(6, (com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_);
+        output.writeMessage(6, (com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_);
       }
       if (entryCase_ == 7) {
-        output.writeMessage(7, (com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_);
+        output.writeMessage(7, (com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_);
       }
       if (entryCase_ == 8) {
-        output.writeMessage(8, (com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_);
+        output.writeMessage(8, (com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_);
       }
       if (entryCase_ == 9) {
-        output.writeMessage(9, (com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_);
+        output.writeMessage(9, (com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_);
       }
       if (entryCase_ == 10) {
-        output.writeMessage(10, (com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_);
+        output.writeMessage(10, (com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_);
       }
       if (entryCase_ == 11) {
-        output.writeMessage(11, (com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_);
+        output.writeMessage(11, (com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_);
       }
       if (entryCase_ == 12) {
-        output.writeMessage(12, (com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_);
+        output.writeMessage(12, (com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_);
       }
       if (entryCase_ == 13) {
-        output.writeMessage(13, (com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_);
+        output.writeMessage(13, (com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_);
       }
       if (entryCase_ == 14) {
-        output.writeMessage(14, (com.elarian.hera.proto.App.SendMessageCommand) entry_);
+        output.writeMessage(14, (com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_);
       }
       if (entryCase_ == 15) {
-        output.writeMessage(15, (com.elarian.hera.proto.App.SendMessageTagCommand) entry_);
+        output.writeMessage(15, (com.elarian.hera.proto.App.SendMessageCommand) entry_);
       }
       if (entryCase_ == 16) {
-        output.writeMessage(16, (com.elarian.hera.proto.App.ReplyToMessageCommand) entry_);
+        output.writeMessage(16, (com.elarian.hera.proto.App.SendMessageTagCommand) entry_);
       }
       if (entryCase_ == 17) {
-        output.writeMessage(17, (com.elarian.hera.proto.App.MessagingConsentCommand) entry_);
+        output.writeMessage(17, (com.elarian.hera.proto.App.ReplyToMessageCommand) entry_);
       }
       if (entryCase_ == 18) {
-        output.writeMessage(18, (com.elarian.hera.proto.App.InitiatePaymentCommand) entry_);
+        output.writeMessage(18, (com.elarian.hera.proto.App.MessagingConsentCommand) entry_);
       }
       if (entryCase_ == 19) {
-        output.writeMessage(19, (com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_);
+        output.writeMessage(19, (com.elarian.hera.proto.App.InitiatePaymentCommand) entry_);
+      }
+      if (entryCase_ == 20) {
+        output.writeMessage(20, (com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_);
       }
       unknownFields.writeTo(output);
     }
@@ -2536,79 +2654,83 @@ public final class App {
       size = 0;
       if (entryCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.elarian.hera.proto.App.GetCustomerStateCommand) entry_);
+          .computeMessageSize(1, (com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_);
       }
       if (entryCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_);
+          .computeMessageSize(2, (com.elarian.hera.proto.App.GetCustomerStateCommand) entry_);
       }
       if (entryCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_);
+          .computeMessageSize(3, (com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_);
       }
       if (entryCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_);
+          .computeMessageSize(4, (com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_);
       }
       if (entryCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_);
+          .computeMessageSize(5, (com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_);
       }
       if (entryCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_);
+          .computeMessageSize(6, (com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_);
       }
       if (entryCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_);
+          .computeMessageSize(7, (com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_);
       }
       if (entryCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_);
+          .computeMessageSize(8, (com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_);
       }
       if (entryCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, (com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_);
+          .computeMessageSize(9, (com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_);
       }
       if (entryCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_);
+          .computeMessageSize(10, (com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_);
       }
       if (entryCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, (com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_);
+          .computeMessageSize(11, (com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_);
       }
       if (entryCase_ == 12) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, (com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_);
+          .computeMessageSize(12, (com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_);
       }
       if (entryCase_ == 13) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, (com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_);
+          .computeMessageSize(13, (com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_);
       }
       if (entryCase_ == 14) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, (com.elarian.hera.proto.App.SendMessageCommand) entry_);
+          .computeMessageSize(14, (com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_);
       }
       if (entryCase_ == 15) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, (com.elarian.hera.proto.App.SendMessageTagCommand) entry_);
+          .computeMessageSize(15, (com.elarian.hera.proto.App.SendMessageCommand) entry_);
       }
       if (entryCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, (com.elarian.hera.proto.App.ReplyToMessageCommand) entry_);
+          .computeMessageSize(16, (com.elarian.hera.proto.App.SendMessageTagCommand) entry_);
       }
       if (entryCase_ == 17) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, (com.elarian.hera.proto.App.MessagingConsentCommand) entry_);
+          .computeMessageSize(17, (com.elarian.hera.proto.App.ReplyToMessageCommand) entry_);
       }
       if (entryCase_ == 18) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(18, (com.elarian.hera.proto.App.InitiatePaymentCommand) entry_);
+          .computeMessageSize(18, (com.elarian.hera.proto.App.MessagingConsentCommand) entry_);
       }
       if (entryCase_ == 19) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(19, (com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_);
+          .computeMessageSize(19, (com.elarian.hera.proto.App.InitiatePaymentCommand) entry_);
+      }
+      if (entryCase_ == 20) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, (com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2628,78 +2750,82 @@ public final class App {
       if (!getEntryCase().equals(other.getEntryCase())) return false;
       switch (entryCase_) {
         case 1:
+          if (!getGenerateAuthToken()
+              .equals(other.getGenerateAuthToken())) return false;
+          break;
+        case 2:
           if (!getGetCustomerState()
               .equals(other.getGetCustomerState())) return false;
           break;
-        case 2:
+        case 3:
           if (!getAdoptCustomerState()
               .equals(other.getAdoptCustomerState())) return false;
           break;
-        case 3:
+        case 4:
           if (!getAddCustomerReminder()
               .equals(other.getAddCustomerReminder())) return false;
           break;
-        case 4:
+        case 5:
           if (!getAddCustomerReminderTag()
               .equals(other.getAddCustomerReminderTag())) return false;
           break;
-        case 5:
+        case 6:
           if (!getCancelCustomerReminder()
               .equals(other.getCancelCustomerReminder())) return false;
           break;
-        case 6:
+        case 7:
           if (!getCancelCustomerReminderTag()
               .equals(other.getCancelCustomerReminderTag())) return false;
           break;
-        case 7:
+        case 8:
           if (!getUpdateCustomerTag()
               .equals(other.getUpdateCustomerTag())) return false;
           break;
-        case 8:
+        case 9:
           if (!getDeleteCustomerTag()
               .equals(other.getDeleteCustomerTag())) return false;
           break;
-        case 9:
+        case 10:
           if (!getUpdateCustomerSecondaryId()
               .equals(other.getUpdateCustomerSecondaryId())) return false;
           break;
-        case 10:
+        case 11:
           if (!getDeleteCustomerSecondaryId()
               .equals(other.getDeleteCustomerSecondaryId())) return false;
           break;
-        case 11:
+        case 12:
           if (!getLeaseCustomerMetadata()
               .equals(other.getLeaseCustomerMetadata())) return false;
           break;
-        case 12:
+        case 13:
           if (!getUpdateCustomerMetadata()
               .equals(other.getUpdateCustomerMetadata())) return false;
           break;
-        case 13:
+        case 14:
           if (!getDeleteCustomerMetadata()
               .equals(other.getDeleteCustomerMetadata())) return false;
           break;
-        case 14:
+        case 15:
           if (!getSendMessage()
               .equals(other.getSendMessage())) return false;
           break;
-        case 15:
+        case 16:
           if (!getSendMessageTag()
               .equals(other.getSendMessageTag())) return false;
           break;
-        case 16:
+        case 17:
           if (!getReplyToMessage()
               .equals(other.getReplyToMessage())) return false;
           break;
-        case 17:
+        case 18:
           if (!getMessagingConsent()
               .equals(other.getMessagingConsent())) return false;
           break;
-        case 18:
+        case 19:
           if (!getInitiatePayment()
               .equals(other.getInitiatePayment())) return false;
           break;
-        case 19:
+        case 20:
           if (!getMakeVoiceCall()
               .equals(other.getMakeVoiceCall())) return false;
           break;
@@ -2719,78 +2845,82 @@ public final class App {
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (entryCase_) {
         case 1:
+          hash = (37 * hash) + GENERATE_AUTH_TOKEN_FIELD_NUMBER;
+          hash = (53 * hash) + getGenerateAuthToken().hashCode();
+          break;
+        case 2:
           hash = (37 * hash) + GET_CUSTOMER_STATE_FIELD_NUMBER;
           hash = (53 * hash) + getGetCustomerState().hashCode();
           break;
-        case 2:
+        case 3:
           hash = (37 * hash) + ADOPT_CUSTOMER_STATE_FIELD_NUMBER;
           hash = (53 * hash) + getAdoptCustomerState().hashCode();
           break;
-        case 3:
+        case 4:
           hash = (37 * hash) + ADD_CUSTOMER_REMINDER_FIELD_NUMBER;
           hash = (53 * hash) + getAddCustomerReminder().hashCode();
           break;
-        case 4:
+        case 5:
           hash = (37 * hash) + ADD_CUSTOMER_REMINDER_TAG_FIELD_NUMBER;
           hash = (53 * hash) + getAddCustomerReminderTag().hashCode();
           break;
-        case 5:
+        case 6:
           hash = (37 * hash) + CANCEL_CUSTOMER_REMINDER_FIELD_NUMBER;
           hash = (53 * hash) + getCancelCustomerReminder().hashCode();
           break;
-        case 6:
+        case 7:
           hash = (37 * hash) + CANCEL_CUSTOMER_REMINDER_TAG_FIELD_NUMBER;
           hash = (53 * hash) + getCancelCustomerReminderTag().hashCode();
           break;
-        case 7:
+        case 8:
           hash = (37 * hash) + UPDATE_CUSTOMER_TAG_FIELD_NUMBER;
           hash = (53 * hash) + getUpdateCustomerTag().hashCode();
           break;
-        case 8:
+        case 9:
           hash = (37 * hash) + DELETE_CUSTOMER_TAG_FIELD_NUMBER;
           hash = (53 * hash) + getDeleteCustomerTag().hashCode();
           break;
-        case 9:
+        case 10:
           hash = (37 * hash) + UPDATE_CUSTOMER_SECONDARY_ID_FIELD_NUMBER;
           hash = (53 * hash) + getUpdateCustomerSecondaryId().hashCode();
           break;
-        case 10:
+        case 11:
           hash = (37 * hash) + DELETE_CUSTOMER_SECONDARY_ID_FIELD_NUMBER;
           hash = (53 * hash) + getDeleteCustomerSecondaryId().hashCode();
           break;
-        case 11:
+        case 12:
           hash = (37 * hash) + LEASE_CUSTOMER_METADATA_FIELD_NUMBER;
           hash = (53 * hash) + getLeaseCustomerMetadata().hashCode();
           break;
-        case 12:
+        case 13:
           hash = (37 * hash) + UPDATE_CUSTOMER_METADATA_FIELD_NUMBER;
           hash = (53 * hash) + getUpdateCustomerMetadata().hashCode();
           break;
-        case 13:
+        case 14:
           hash = (37 * hash) + DELETE_CUSTOMER_METADATA_FIELD_NUMBER;
           hash = (53 * hash) + getDeleteCustomerMetadata().hashCode();
           break;
-        case 14:
+        case 15:
           hash = (37 * hash) + SEND_MESSAGE_FIELD_NUMBER;
           hash = (53 * hash) + getSendMessage().hashCode();
           break;
-        case 15:
+        case 16:
           hash = (37 * hash) + SEND_MESSAGE_TAG_FIELD_NUMBER;
           hash = (53 * hash) + getSendMessageTag().hashCode();
           break;
-        case 16:
+        case 17:
           hash = (37 * hash) + REPLY_TO_MESSAGE_FIELD_NUMBER;
           hash = (53 * hash) + getReplyToMessage().hashCode();
           break;
-        case 17:
+        case 18:
           hash = (37 * hash) + MESSAGING_CONSENT_FIELD_NUMBER;
           hash = (53 * hash) + getMessagingConsent().hashCode();
           break;
-        case 18:
+        case 19:
           hash = (37 * hash) + INITIATE_PAYMENT_FIELD_NUMBER;
           hash = (53 * hash) + getInitiatePayment().hashCode();
           break;
-        case 19:
+        case 20:
           hash = (37 * hash) + MAKE_VOICE_CALL_FIELD_NUMBER;
           hash = (53 * hash) + getMakeVoiceCall().hashCode();
           break;
@@ -2959,132 +3089,139 @@ public final class App {
       public com.elarian.hera.proto.App.AppToServerCommand buildPartial() {
         com.elarian.hera.proto.App.AppToServerCommand result = new com.elarian.hera.proto.App.AppToServerCommand(this);
         if (entryCase_ == 1) {
+          if (generateAuthTokenBuilder_ == null) {
+            result.entry_ = entry_;
+          } else {
+            result.entry_ = generateAuthTokenBuilder_.build();
+          }
+        }
+        if (entryCase_ == 2) {
           if (getCustomerStateBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = getCustomerStateBuilder_.build();
           }
         }
-        if (entryCase_ == 2) {
+        if (entryCase_ == 3) {
           if (adoptCustomerStateBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = adoptCustomerStateBuilder_.build();
           }
         }
-        if (entryCase_ == 3) {
+        if (entryCase_ == 4) {
           if (addCustomerReminderBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = addCustomerReminderBuilder_.build();
           }
         }
-        if (entryCase_ == 4) {
+        if (entryCase_ == 5) {
           if (addCustomerReminderTagBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = addCustomerReminderTagBuilder_.build();
           }
         }
-        if (entryCase_ == 5) {
+        if (entryCase_ == 6) {
           if (cancelCustomerReminderBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = cancelCustomerReminderBuilder_.build();
           }
         }
-        if (entryCase_ == 6) {
+        if (entryCase_ == 7) {
           if (cancelCustomerReminderTagBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = cancelCustomerReminderTagBuilder_.build();
           }
         }
-        if (entryCase_ == 7) {
+        if (entryCase_ == 8) {
           if (updateCustomerTagBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = updateCustomerTagBuilder_.build();
           }
         }
-        if (entryCase_ == 8) {
+        if (entryCase_ == 9) {
           if (deleteCustomerTagBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = deleteCustomerTagBuilder_.build();
           }
         }
-        if (entryCase_ == 9) {
+        if (entryCase_ == 10) {
           if (updateCustomerSecondaryIdBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = updateCustomerSecondaryIdBuilder_.build();
           }
         }
-        if (entryCase_ == 10) {
+        if (entryCase_ == 11) {
           if (deleteCustomerSecondaryIdBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = deleteCustomerSecondaryIdBuilder_.build();
           }
         }
-        if (entryCase_ == 11) {
+        if (entryCase_ == 12) {
           if (leaseCustomerMetadataBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = leaseCustomerMetadataBuilder_.build();
           }
         }
-        if (entryCase_ == 12) {
+        if (entryCase_ == 13) {
           if (updateCustomerMetadataBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = updateCustomerMetadataBuilder_.build();
           }
         }
-        if (entryCase_ == 13) {
+        if (entryCase_ == 14) {
           if (deleteCustomerMetadataBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = deleteCustomerMetadataBuilder_.build();
           }
         }
-        if (entryCase_ == 14) {
+        if (entryCase_ == 15) {
           if (sendMessageBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = sendMessageBuilder_.build();
           }
         }
-        if (entryCase_ == 15) {
+        if (entryCase_ == 16) {
           if (sendMessageTagBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = sendMessageTagBuilder_.build();
           }
         }
-        if (entryCase_ == 16) {
+        if (entryCase_ == 17) {
           if (replyToMessageBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = replyToMessageBuilder_.build();
           }
         }
-        if (entryCase_ == 17) {
+        if (entryCase_ == 18) {
           if (messagingConsentBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = messagingConsentBuilder_.build();
           }
         }
-        if (entryCase_ == 18) {
+        if (entryCase_ == 19) {
           if (initiatePaymentBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = initiatePaymentBuilder_.build();
           }
         }
-        if (entryCase_ == 19) {
+        if (entryCase_ == 20) {
           if (makeVoiceCallBuilder_ == null) {
             result.entry_ = entry_;
           } else {
@@ -3141,6 +3278,10 @@ public final class App {
       public Builder mergeFrom(com.elarian.hera.proto.App.AppToServerCommand other) {
         if (other == com.elarian.hera.proto.App.AppToServerCommand.getDefaultInstance()) return this;
         switch (other.getEntryCase()) {
+          case GENERATE_AUTH_TOKEN: {
+            mergeGenerateAuthToken(other.getGenerateAuthToken());
+            break;
+          }
           case GET_CUSTOMER_STATE: {
             mergeGetCustomerState(other.getGetCustomerState());
             break;
@@ -3266,35 +3407,176 @@ public final class App {
 
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.App.GenerateAuthTokenCommand, com.elarian.hera.proto.App.GenerateAuthTokenCommand.Builder, com.elarian.hera.proto.App.GenerateAuthTokenCommandOrBuilder> generateAuthTokenBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       * @return Whether the generateAuthToken field is set.
+       */
+      @java.lang.Override
+      public boolean hasGenerateAuthToken() {
+        return entryCase_ == 1;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       * @return The generateAuthToken.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.App.GenerateAuthTokenCommand getGenerateAuthToken() {
+        if (generateAuthTokenBuilder_ == null) {
+          if (entryCase_ == 1) {
+            return (com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_;
+          }
+          return com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance();
+        } else {
+          if (entryCase_ == 1) {
+            return generateAuthTokenBuilder_.getMessage();
+          }
+          return com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       */
+      public Builder setGenerateAuthToken(com.elarian.hera.proto.App.GenerateAuthTokenCommand value) {
+        if (generateAuthTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entry_ = value;
+          onChanged();
+        } else {
+          generateAuthTokenBuilder_.setMessage(value);
+        }
+        entryCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       */
+      public Builder setGenerateAuthToken(
+          com.elarian.hera.proto.App.GenerateAuthTokenCommand.Builder builderForValue) {
+        if (generateAuthTokenBuilder_ == null) {
+          entry_ = builderForValue.build();
+          onChanged();
+        } else {
+          generateAuthTokenBuilder_.setMessage(builderForValue.build());
+        }
+        entryCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       */
+      public Builder mergeGenerateAuthToken(com.elarian.hera.proto.App.GenerateAuthTokenCommand value) {
+        if (generateAuthTokenBuilder_ == null) {
+          if (entryCase_ == 1 &&
+              entry_ != com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance()) {
+            entry_ = com.elarian.hera.proto.App.GenerateAuthTokenCommand.newBuilder((com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            entry_ = value;
+          }
+          onChanged();
+        } else {
+          if (entryCase_ == 1) {
+            generateAuthTokenBuilder_.mergeFrom(value);
+          }
+          generateAuthTokenBuilder_.setMessage(value);
+        }
+        entryCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       */
+      public Builder clearGenerateAuthToken() {
+        if (generateAuthTokenBuilder_ == null) {
+          if (entryCase_ == 1) {
+            entryCase_ = 0;
+            entry_ = null;
+            onChanged();
+          }
+        } else {
+          if (entryCase_ == 1) {
+            entryCase_ = 0;
+            entry_ = null;
+          }
+          generateAuthTokenBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       */
+      public com.elarian.hera.proto.App.GenerateAuthTokenCommand.Builder getGenerateAuthTokenBuilder() {
+        return getGenerateAuthTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.App.GenerateAuthTokenCommandOrBuilder getGenerateAuthTokenOrBuilder() {
+        if ((entryCase_ == 1) && (generateAuthTokenBuilder_ != null)) {
+          return generateAuthTokenBuilder_.getMessageOrBuilder();
+        } else {
+          if (entryCase_ == 1) {
+            return (com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_;
+          }
+          return com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.App.GenerateAuthTokenCommand, com.elarian.hera.proto.App.GenerateAuthTokenCommand.Builder, com.elarian.hera.proto.App.GenerateAuthTokenCommandOrBuilder> 
+          getGenerateAuthTokenFieldBuilder() {
+        if (generateAuthTokenBuilder_ == null) {
+          if (!(entryCase_ == 1)) {
+            entry_ = com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance();
+          }
+          generateAuthTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.App.GenerateAuthTokenCommand, com.elarian.hera.proto.App.GenerateAuthTokenCommand.Builder, com.elarian.hera.proto.App.GenerateAuthTokenCommandOrBuilder>(
+                  (com.elarian.hera.proto.App.GenerateAuthTokenCommand) entry_,
+                  getParentForChildren(),
+                  isClean());
+          entry_ = null;
+        }
+        entryCase_ = 1;
+        onChanged();;
+        return generateAuthTokenBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.GetCustomerStateCommand, com.elarian.hera.proto.App.GetCustomerStateCommand.Builder, com.elarian.hera.proto.App.GetCustomerStateCommandOrBuilder> getCustomerStateBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        * @return Whether the getCustomerState field is set.
        */
       @java.lang.Override
       public boolean hasGetCustomerState() {
-        return entryCase_ == 1;
+        return entryCase_ == 2;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        * @return The getCustomerState.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.GetCustomerStateCommand getGetCustomerState() {
         if (getCustomerStateBuilder_ == null) {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             return (com.elarian.hera.proto.App.GetCustomerStateCommand) entry_;
           }
           return com.elarian.hera.proto.App.GetCustomerStateCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             return getCustomerStateBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.GetCustomerStateCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        */
       public Builder setGetCustomerState(com.elarian.hera.proto.App.GetCustomerStateCommand value) {
         if (getCustomerStateBuilder_ == null) {
@@ -3306,11 +3588,11 @@ public final class App {
         } else {
           getCustomerStateBuilder_.setMessage(value);
         }
-        entryCase_ = 1;
+        entryCase_ = 2;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        */
       public Builder setGetCustomerState(
           com.elarian.hera.proto.App.GetCustomerStateCommand.Builder builderForValue) {
@@ -3320,15 +3602,15 @@ public final class App {
         } else {
           getCustomerStateBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 1;
+        entryCase_ = 2;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        */
       public Builder mergeGetCustomerState(com.elarian.hera.proto.App.GetCustomerStateCommand value) {
         if (getCustomerStateBuilder_ == null) {
-          if (entryCase_ == 1 &&
+          if (entryCase_ == 2 &&
               entry_ != com.elarian.hera.proto.App.GetCustomerStateCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.GetCustomerStateCommand.newBuilder((com.elarian.hera.proto.App.GetCustomerStateCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -3337,26 +3619,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             getCustomerStateBuilder_.mergeFrom(value);
           }
           getCustomerStateBuilder_.setMessage(value);
         }
-        entryCase_ = 1;
+        entryCase_ = 2;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        */
       public Builder clearGetCustomerState() {
         if (getCustomerStateBuilder_ == null) {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -3365,33 +3647,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        */
       public com.elarian.hera.proto.App.GetCustomerStateCommand.Builder getGetCustomerStateBuilder() {
         return getGetCustomerStateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.GetCustomerStateCommandOrBuilder getGetCustomerStateOrBuilder() {
-        if ((entryCase_ == 1) && (getCustomerStateBuilder_ != null)) {
+        if ((entryCase_ == 2) && (getCustomerStateBuilder_ != null)) {
           return getCustomerStateBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             return (com.elarian.hera.proto.App.GetCustomerStateCommand) entry_;
           }
           return com.elarian.hera.proto.App.GetCustomerStateCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateCommand get_customer_state = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.GetCustomerStateCommand, com.elarian.hera.proto.App.GetCustomerStateCommand.Builder, com.elarian.hera.proto.App.GetCustomerStateCommandOrBuilder> 
           getGetCustomerStateFieldBuilder() {
         if (getCustomerStateBuilder_ == null) {
-          if (!(entryCase_ == 1)) {
+          if (!(entryCase_ == 2)) {
             entry_ = com.elarian.hera.proto.App.GetCustomerStateCommand.getDefaultInstance();
           }
           getCustomerStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3401,7 +3683,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 1;
+        entryCase_ = 2;
         onChanged();;
         return getCustomerStateBuilder_;
       }
@@ -3409,33 +3691,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.AdoptCustomerStateCommand, com.elarian.hera.proto.App.AdoptCustomerStateCommand.Builder, com.elarian.hera.proto.App.AdoptCustomerStateCommandOrBuilder> adoptCustomerStateBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        * @return Whether the adoptCustomerState field is set.
        */
       @java.lang.Override
       public boolean hasAdoptCustomerState() {
-        return entryCase_ == 2;
+        return entryCase_ == 3;
       }
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        * @return The adoptCustomerState.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.AdoptCustomerStateCommand getAdoptCustomerState() {
         if (adoptCustomerStateBuilder_ == null) {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             return (com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_;
           }
           return com.elarian.hera.proto.App.AdoptCustomerStateCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             return adoptCustomerStateBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.AdoptCustomerStateCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        */
       public Builder setAdoptCustomerState(com.elarian.hera.proto.App.AdoptCustomerStateCommand value) {
         if (adoptCustomerStateBuilder_ == null) {
@@ -3447,11 +3729,11 @@ public final class App {
         } else {
           adoptCustomerStateBuilder_.setMessage(value);
         }
-        entryCase_ = 2;
+        entryCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        */
       public Builder setAdoptCustomerState(
           com.elarian.hera.proto.App.AdoptCustomerStateCommand.Builder builderForValue) {
@@ -3461,15 +3743,15 @@ public final class App {
         } else {
           adoptCustomerStateBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 2;
+        entryCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        */
       public Builder mergeAdoptCustomerState(com.elarian.hera.proto.App.AdoptCustomerStateCommand value) {
         if (adoptCustomerStateBuilder_ == null) {
-          if (entryCase_ == 2 &&
+          if (entryCase_ == 3 &&
               entry_ != com.elarian.hera.proto.App.AdoptCustomerStateCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.AdoptCustomerStateCommand.newBuilder((com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -3478,26 +3760,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             adoptCustomerStateBuilder_.mergeFrom(value);
           }
           adoptCustomerStateBuilder_.setMessage(value);
         }
-        entryCase_ = 2;
+        entryCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        */
       public Builder clearAdoptCustomerState() {
         if (adoptCustomerStateBuilder_ == null) {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -3506,33 +3788,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        */
       public com.elarian.hera.proto.App.AdoptCustomerStateCommand.Builder getAdoptCustomerStateBuilder() {
         return getAdoptCustomerStateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.AdoptCustomerStateCommandOrBuilder getAdoptCustomerStateOrBuilder() {
-        if ((entryCase_ == 2) && (adoptCustomerStateBuilder_ != null)) {
+        if ((entryCase_ == 3) && (adoptCustomerStateBuilder_ != null)) {
           return adoptCustomerStateBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             return (com.elarian.hera.proto.App.AdoptCustomerStateCommand) entry_;
           }
           return com.elarian.hera.proto.App.AdoptCustomerStateCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 2;</code>
+       * <code>.com.elarian.hera.proto.AdoptCustomerStateCommand adopt_customer_state = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.AdoptCustomerStateCommand, com.elarian.hera.proto.App.AdoptCustomerStateCommand.Builder, com.elarian.hera.proto.App.AdoptCustomerStateCommandOrBuilder> 
           getAdoptCustomerStateFieldBuilder() {
         if (adoptCustomerStateBuilder_ == null) {
-          if (!(entryCase_ == 2)) {
+          if (!(entryCase_ == 3)) {
             entry_ = com.elarian.hera.proto.App.AdoptCustomerStateCommand.getDefaultInstance();
           }
           adoptCustomerStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3542,7 +3824,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 2;
+        entryCase_ = 3;
         onChanged();;
         return adoptCustomerStateBuilder_;
       }
@@ -3550,33 +3832,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.AddCustomerReminderCommand, com.elarian.hera.proto.App.AddCustomerReminderCommand.Builder, com.elarian.hera.proto.App.AddCustomerReminderCommandOrBuilder> addCustomerReminderBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        * @return Whether the addCustomerReminder field is set.
        */
       @java.lang.Override
       public boolean hasAddCustomerReminder() {
-        return entryCase_ == 3;
+        return entryCase_ == 4;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        * @return The addCustomerReminder.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.AddCustomerReminderCommand getAddCustomerReminder() {
         if (addCustomerReminderBuilder_ == null) {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             return (com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_;
           }
           return com.elarian.hera.proto.App.AddCustomerReminderCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             return addCustomerReminderBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.AddCustomerReminderCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        */
       public Builder setAddCustomerReminder(com.elarian.hera.proto.App.AddCustomerReminderCommand value) {
         if (addCustomerReminderBuilder_ == null) {
@@ -3588,11 +3870,11 @@ public final class App {
         } else {
           addCustomerReminderBuilder_.setMessage(value);
         }
-        entryCase_ = 3;
+        entryCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        */
       public Builder setAddCustomerReminder(
           com.elarian.hera.proto.App.AddCustomerReminderCommand.Builder builderForValue) {
@@ -3602,15 +3884,15 @@ public final class App {
         } else {
           addCustomerReminderBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 3;
+        entryCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        */
       public Builder mergeAddCustomerReminder(com.elarian.hera.proto.App.AddCustomerReminderCommand value) {
         if (addCustomerReminderBuilder_ == null) {
-          if (entryCase_ == 3 &&
+          if (entryCase_ == 4 &&
               entry_ != com.elarian.hera.proto.App.AddCustomerReminderCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.AddCustomerReminderCommand.newBuilder((com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -3619,26 +3901,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             addCustomerReminderBuilder_.mergeFrom(value);
           }
           addCustomerReminderBuilder_.setMessage(value);
         }
-        entryCase_ = 3;
+        entryCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        */
       public Builder clearAddCustomerReminder() {
         if (addCustomerReminderBuilder_ == null) {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -3647,33 +3929,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        */
       public com.elarian.hera.proto.App.AddCustomerReminderCommand.Builder getAddCustomerReminderBuilder() {
         return getAddCustomerReminderFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.AddCustomerReminderCommandOrBuilder getAddCustomerReminderOrBuilder() {
-        if ((entryCase_ == 3) && (addCustomerReminderBuilder_ != null)) {
+        if ((entryCase_ == 4) && (addCustomerReminderBuilder_ != null)) {
           return addCustomerReminderBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             return (com.elarian.hera.proto.App.AddCustomerReminderCommand) entry_;
           }
           return com.elarian.hera.proto.App.AddCustomerReminderCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 3;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderCommand add_customer_reminder = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.AddCustomerReminderCommand, com.elarian.hera.proto.App.AddCustomerReminderCommand.Builder, com.elarian.hera.proto.App.AddCustomerReminderCommandOrBuilder> 
           getAddCustomerReminderFieldBuilder() {
         if (addCustomerReminderBuilder_ == null) {
-          if (!(entryCase_ == 3)) {
+          if (!(entryCase_ == 4)) {
             entry_ = com.elarian.hera.proto.App.AddCustomerReminderCommand.getDefaultInstance();
           }
           addCustomerReminderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3683,7 +3965,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 3;
+        entryCase_ = 4;
         onChanged();;
         return addCustomerReminderBuilder_;
       }
@@ -3691,33 +3973,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.AddCustomerReminderTagCommand, com.elarian.hera.proto.App.AddCustomerReminderTagCommand.Builder, com.elarian.hera.proto.App.AddCustomerReminderTagCommandOrBuilder> addCustomerReminderTagBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        * @return Whether the addCustomerReminderTag field is set.
        */
       @java.lang.Override
       public boolean hasAddCustomerReminderTag() {
-        return entryCase_ == 4;
+        return entryCase_ == 5;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        * @return The addCustomerReminderTag.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.AddCustomerReminderTagCommand getAddCustomerReminderTag() {
         if (addCustomerReminderTagBuilder_ == null) {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             return (com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.AddCustomerReminderTagCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             return addCustomerReminderTagBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.AddCustomerReminderTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        */
       public Builder setAddCustomerReminderTag(com.elarian.hera.proto.App.AddCustomerReminderTagCommand value) {
         if (addCustomerReminderTagBuilder_ == null) {
@@ -3729,11 +4011,11 @@ public final class App {
         } else {
           addCustomerReminderTagBuilder_.setMessage(value);
         }
-        entryCase_ = 4;
+        entryCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        */
       public Builder setAddCustomerReminderTag(
           com.elarian.hera.proto.App.AddCustomerReminderTagCommand.Builder builderForValue) {
@@ -3743,15 +4025,15 @@ public final class App {
         } else {
           addCustomerReminderTagBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 4;
+        entryCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        */
       public Builder mergeAddCustomerReminderTag(com.elarian.hera.proto.App.AddCustomerReminderTagCommand value) {
         if (addCustomerReminderTagBuilder_ == null) {
-          if (entryCase_ == 4 &&
+          if (entryCase_ == 5 &&
               entry_ != com.elarian.hera.proto.App.AddCustomerReminderTagCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.AddCustomerReminderTagCommand.newBuilder((com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -3760,26 +4042,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             addCustomerReminderTagBuilder_.mergeFrom(value);
           }
           addCustomerReminderTagBuilder_.setMessage(value);
         }
-        entryCase_ = 4;
+        entryCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        */
       public Builder clearAddCustomerReminderTag() {
         if (addCustomerReminderTagBuilder_ == null) {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -3788,33 +4070,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        */
       public com.elarian.hera.proto.App.AddCustomerReminderTagCommand.Builder getAddCustomerReminderTagBuilder() {
         return getAddCustomerReminderTagFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.AddCustomerReminderTagCommandOrBuilder getAddCustomerReminderTagOrBuilder() {
-        if ((entryCase_ == 4) && (addCustomerReminderTagBuilder_ != null)) {
+        if ((entryCase_ == 5) && (addCustomerReminderTagBuilder_ != null)) {
           return addCustomerReminderTagBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             return (com.elarian.hera.proto.App.AddCustomerReminderTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.AddCustomerReminderTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 4;</code>
+       * <code>.com.elarian.hera.proto.AddCustomerReminderTagCommand add_customer_reminder_tag = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.AddCustomerReminderTagCommand, com.elarian.hera.proto.App.AddCustomerReminderTagCommand.Builder, com.elarian.hera.proto.App.AddCustomerReminderTagCommandOrBuilder> 
           getAddCustomerReminderTagFieldBuilder() {
         if (addCustomerReminderTagBuilder_ == null) {
-          if (!(entryCase_ == 4)) {
+          if (!(entryCase_ == 5)) {
             entry_ = com.elarian.hera.proto.App.AddCustomerReminderTagCommand.getDefaultInstance();
           }
           addCustomerReminderTagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3824,7 +4106,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 4;
+        entryCase_ = 5;
         onChanged();;
         return addCustomerReminderTagBuilder_;
       }
@@ -3832,33 +4114,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.CancelCustomerReminderCommand, com.elarian.hera.proto.App.CancelCustomerReminderCommand.Builder, com.elarian.hera.proto.App.CancelCustomerReminderCommandOrBuilder> cancelCustomerReminderBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        * @return Whether the cancelCustomerReminder field is set.
        */
       @java.lang.Override
       public boolean hasCancelCustomerReminder() {
-        return entryCase_ == 5;
+        return entryCase_ == 6;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        * @return The cancelCustomerReminder.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.CancelCustomerReminderCommand getCancelCustomerReminder() {
         if (cancelCustomerReminderBuilder_ == null) {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             return (com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_;
           }
           return com.elarian.hera.proto.App.CancelCustomerReminderCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             return cancelCustomerReminderBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.CancelCustomerReminderCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        */
       public Builder setCancelCustomerReminder(com.elarian.hera.proto.App.CancelCustomerReminderCommand value) {
         if (cancelCustomerReminderBuilder_ == null) {
@@ -3870,11 +4152,11 @@ public final class App {
         } else {
           cancelCustomerReminderBuilder_.setMessage(value);
         }
-        entryCase_ = 5;
+        entryCase_ = 6;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        */
       public Builder setCancelCustomerReminder(
           com.elarian.hera.proto.App.CancelCustomerReminderCommand.Builder builderForValue) {
@@ -3884,15 +4166,15 @@ public final class App {
         } else {
           cancelCustomerReminderBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 5;
+        entryCase_ = 6;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        */
       public Builder mergeCancelCustomerReminder(com.elarian.hera.proto.App.CancelCustomerReminderCommand value) {
         if (cancelCustomerReminderBuilder_ == null) {
-          if (entryCase_ == 5 &&
+          if (entryCase_ == 6 &&
               entry_ != com.elarian.hera.proto.App.CancelCustomerReminderCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.CancelCustomerReminderCommand.newBuilder((com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -3901,26 +4183,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             cancelCustomerReminderBuilder_.mergeFrom(value);
           }
           cancelCustomerReminderBuilder_.setMessage(value);
         }
-        entryCase_ = 5;
+        entryCase_ = 6;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        */
       public Builder clearCancelCustomerReminder() {
         if (cancelCustomerReminderBuilder_ == null) {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -3929,33 +4211,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        */
       public com.elarian.hera.proto.App.CancelCustomerReminderCommand.Builder getCancelCustomerReminderBuilder() {
         return getCancelCustomerReminderFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.CancelCustomerReminderCommandOrBuilder getCancelCustomerReminderOrBuilder() {
-        if ((entryCase_ == 5) && (cancelCustomerReminderBuilder_ != null)) {
+        if ((entryCase_ == 6) && (cancelCustomerReminderBuilder_ != null)) {
           return cancelCustomerReminderBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             return (com.elarian.hera.proto.App.CancelCustomerReminderCommand) entry_;
           }
           return com.elarian.hera.proto.App.CancelCustomerReminderCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 5;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderCommand cancel_customer_reminder = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.CancelCustomerReminderCommand, com.elarian.hera.proto.App.CancelCustomerReminderCommand.Builder, com.elarian.hera.proto.App.CancelCustomerReminderCommandOrBuilder> 
           getCancelCustomerReminderFieldBuilder() {
         if (cancelCustomerReminderBuilder_ == null) {
-          if (!(entryCase_ == 5)) {
+          if (!(entryCase_ == 6)) {
             entry_ = com.elarian.hera.proto.App.CancelCustomerReminderCommand.getDefaultInstance();
           }
           cancelCustomerReminderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -3965,7 +4247,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 5;
+        entryCase_ = 6;
         onChanged();;
         return cancelCustomerReminderBuilder_;
       }
@@ -3973,33 +4255,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.CancelCustomerReminderTagCommand, com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.Builder, com.elarian.hera.proto.App.CancelCustomerReminderTagCommandOrBuilder> cancelCustomerReminderTagBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        * @return Whether the cancelCustomerReminderTag field is set.
        */
       @java.lang.Override
       public boolean hasCancelCustomerReminderTag() {
-        return entryCase_ == 6;
+        return entryCase_ == 7;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        * @return The cancelCustomerReminderTag.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.CancelCustomerReminderTagCommand getCancelCustomerReminderTag() {
         if (cancelCustomerReminderTagBuilder_ == null) {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             return (com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             return cancelCustomerReminderTagBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        */
       public Builder setCancelCustomerReminderTag(com.elarian.hera.proto.App.CancelCustomerReminderTagCommand value) {
         if (cancelCustomerReminderTagBuilder_ == null) {
@@ -4011,11 +4293,11 @@ public final class App {
         } else {
           cancelCustomerReminderTagBuilder_.setMessage(value);
         }
-        entryCase_ = 6;
+        entryCase_ = 7;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        */
       public Builder setCancelCustomerReminderTag(
           com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.Builder builderForValue) {
@@ -4025,15 +4307,15 @@ public final class App {
         } else {
           cancelCustomerReminderTagBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 6;
+        entryCase_ = 7;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        */
       public Builder mergeCancelCustomerReminderTag(com.elarian.hera.proto.App.CancelCustomerReminderTagCommand value) {
         if (cancelCustomerReminderTagBuilder_ == null) {
-          if (entryCase_ == 6 &&
+          if (entryCase_ == 7 &&
               entry_ != com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.newBuilder((com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -4042,26 +4324,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             cancelCustomerReminderTagBuilder_.mergeFrom(value);
           }
           cancelCustomerReminderTagBuilder_.setMessage(value);
         }
-        entryCase_ = 6;
+        entryCase_ = 7;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        */
       public Builder clearCancelCustomerReminderTag() {
         if (cancelCustomerReminderTagBuilder_ == null) {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -4070,33 +4352,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        */
       public com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.Builder getCancelCustomerReminderTagBuilder() {
         return getCancelCustomerReminderTagFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.CancelCustomerReminderTagCommandOrBuilder getCancelCustomerReminderTagOrBuilder() {
-        if ((entryCase_ == 6) && (cancelCustomerReminderTagBuilder_ != null)) {
+        if ((entryCase_ == 7) && (cancelCustomerReminderTagBuilder_ != null)) {
           return cancelCustomerReminderTagBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             return (com.elarian.hera.proto.App.CancelCustomerReminderTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 6;</code>
+       * <code>.com.elarian.hera.proto.CancelCustomerReminderTagCommand cancel_customer_reminder_tag = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.CancelCustomerReminderTagCommand, com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.Builder, com.elarian.hera.proto.App.CancelCustomerReminderTagCommandOrBuilder> 
           getCancelCustomerReminderTagFieldBuilder() {
         if (cancelCustomerReminderTagBuilder_ == null) {
-          if (!(entryCase_ == 6)) {
+          if (!(entryCase_ == 7)) {
             entry_ = com.elarian.hera.proto.App.CancelCustomerReminderTagCommand.getDefaultInstance();
           }
           cancelCustomerReminderTagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4106,7 +4388,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 6;
+        entryCase_ = 7;
         onChanged();;
         return cancelCustomerReminderTagBuilder_;
       }
@@ -4114,33 +4396,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.UpdateCustomerTagCommand, com.elarian.hera.proto.App.UpdateCustomerTagCommand.Builder, com.elarian.hera.proto.App.UpdateCustomerTagCommandOrBuilder> updateCustomerTagBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        * @return Whether the updateCustomerTag field is set.
        */
       @java.lang.Override
       public boolean hasUpdateCustomerTag() {
-        return entryCase_ == 7;
+        return entryCase_ == 8;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        * @return The updateCustomerTag.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.UpdateCustomerTagCommand getUpdateCustomerTag() {
         if (updateCustomerTagBuilder_ == null) {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             return (com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.UpdateCustomerTagCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             return updateCustomerTagBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.UpdateCustomerTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        */
       public Builder setUpdateCustomerTag(com.elarian.hera.proto.App.UpdateCustomerTagCommand value) {
         if (updateCustomerTagBuilder_ == null) {
@@ -4152,11 +4434,11 @@ public final class App {
         } else {
           updateCustomerTagBuilder_.setMessage(value);
         }
-        entryCase_ = 7;
+        entryCase_ = 8;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        */
       public Builder setUpdateCustomerTag(
           com.elarian.hera.proto.App.UpdateCustomerTagCommand.Builder builderForValue) {
@@ -4166,15 +4448,15 @@ public final class App {
         } else {
           updateCustomerTagBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 7;
+        entryCase_ = 8;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        */
       public Builder mergeUpdateCustomerTag(com.elarian.hera.proto.App.UpdateCustomerTagCommand value) {
         if (updateCustomerTagBuilder_ == null) {
-          if (entryCase_ == 7 &&
+          if (entryCase_ == 8 &&
               entry_ != com.elarian.hera.proto.App.UpdateCustomerTagCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.UpdateCustomerTagCommand.newBuilder((com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -4183,26 +4465,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             updateCustomerTagBuilder_.mergeFrom(value);
           }
           updateCustomerTagBuilder_.setMessage(value);
         }
-        entryCase_ = 7;
+        entryCase_ = 8;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        */
       public Builder clearUpdateCustomerTag() {
         if (updateCustomerTagBuilder_ == null) {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -4211,33 +4493,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        */
       public com.elarian.hera.proto.App.UpdateCustomerTagCommand.Builder getUpdateCustomerTagBuilder() {
         return getUpdateCustomerTagFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.UpdateCustomerTagCommandOrBuilder getUpdateCustomerTagOrBuilder() {
-        if ((entryCase_ == 7) && (updateCustomerTagBuilder_ != null)) {
+        if ((entryCase_ == 8) && (updateCustomerTagBuilder_ != null)) {
           return updateCustomerTagBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             return (com.elarian.hera.proto.App.UpdateCustomerTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.UpdateCustomerTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerTagCommand update_customer_tag = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.UpdateCustomerTagCommand, com.elarian.hera.proto.App.UpdateCustomerTagCommand.Builder, com.elarian.hera.proto.App.UpdateCustomerTagCommandOrBuilder> 
           getUpdateCustomerTagFieldBuilder() {
         if (updateCustomerTagBuilder_ == null) {
-          if (!(entryCase_ == 7)) {
+          if (!(entryCase_ == 8)) {
             entry_ = com.elarian.hera.proto.App.UpdateCustomerTagCommand.getDefaultInstance();
           }
           updateCustomerTagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4247,7 +4529,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 7;
+        entryCase_ = 8;
         onChanged();;
         return updateCustomerTagBuilder_;
       }
@@ -4255,33 +4537,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.DeleteCustomerTagCommand, com.elarian.hera.proto.App.DeleteCustomerTagCommand.Builder, com.elarian.hera.proto.App.DeleteCustomerTagCommandOrBuilder> deleteCustomerTagBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        * @return Whether the deleteCustomerTag field is set.
        */
       @java.lang.Override
       public boolean hasDeleteCustomerTag() {
-        return entryCase_ == 8;
+        return entryCase_ == 9;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        * @return The deleteCustomerTag.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.DeleteCustomerTagCommand getDeleteCustomerTag() {
         if (deleteCustomerTagBuilder_ == null) {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             return (com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.DeleteCustomerTagCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             return deleteCustomerTagBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.DeleteCustomerTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        */
       public Builder setDeleteCustomerTag(com.elarian.hera.proto.App.DeleteCustomerTagCommand value) {
         if (deleteCustomerTagBuilder_ == null) {
@@ -4293,11 +4575,11 @@ public final class App {
         } else {
           deleteCustomerTagBuilder_.setMessage(value);
         }
-        entryCase_ = 8;
+        entryCase_ = 9;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        */
       public Builder setDeleteCustomerTag(
           com.elarian.hera.proto.App.DeleteCustomerTagCommand.Builder builderForValue) {
@@ -4307,15 +4589,15 @@ public final class App {
         } else {
           deleteCustomerTagBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 8;
+        entryCase_ = 9;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        */
       public Builder mergeDeleteCustomerTag(com.elarian.hera.proto.App.DeleteCustomerTagCommand value) {
         if (deleteCustomerTagBuilder_ == null) {
-          if (entryCase_ == 8 &&
+          if (entryCase_ == 9 &&
               entry_ != com.elarian.hera.proto.App.DeleteCustomerTagCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.DeleteCustomerTagCommand.newBuilder((com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -4324,26 +4606,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             deleteCustomerTagBuilder_.mergeFrom(value);
           }
           deleteCustomerTagBuilder_.setMessage(value);
         }
-        entryCase_ = 8;
+        entryCase_ = 9;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        */
       public Builder clearDeleteCustomerTag() {
         if (deleteCustomerTagBuilder_ == null) {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -4352,33 +4634,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        */
       public com.elarian.hera.proto.App.DeleteCustomerTagCommand.Builder getDeleteCustomerTagBuilder() {
         return getDeleteCustomerTagFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.DeleteCustomerTagCommandOrBuilder getDeleteCustomerTagOrBuilder() {
-        if ((entryCase_ == 8) && (deleteCustomerTagBuilder_ != null)) {
+        if ((entryCase_ == 9) && (deleteCustomerTagBuilder_ != null)) {
           return deleteCustomerTagBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             return (com.elarian.hera.proto.App.DeleteCustomerTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.DeleteCustomerTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 8;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerTagCommand delete_customer_tag = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.DeleteCustomerTagCommand, com.elarian.hera.proto.App.DeleteCustomerTagCommand.Builder, com.elarian.hera.proto.App.DeleteCustomerTagCommandOrBuilder> 
           getDeleteCustomerTagFieldBuilder() {
         if (deleteCustomerTagBuilder_ == null) {
-          if (!(entryCase_ == 8)) {
+          if (!(entryCase_ == 9)) {
             entry_ = com.elarian.hera.proto.App.DeleteCustomerTagCommand.getDefaultInstance();
           }
           deleteCustomerTagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4388,7 +4670,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 8;
+        entryCase_ = 9;
         onChanged();;
         return deleteCustomerTagBuilder_;
       }
@@ -4396,33 +4678,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand, com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.Builder, com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommandOrBuilder> updateCustomerSecondaryIdBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        * @return Whether the updateCustomerSecondaryId field is set.
        */
       @java.lang.Override
       public boolean hasUpdateCustomerSecondaryId() {
-        return entryCase_ == 9;
+        return entryCase_ == 10;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        * @return The updateCustomerSecondaryId.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand getUpdateCustomerSecondaryId() {
         if (updateCustomerSecondaryIdBuilder_ == null) {
-          if (entryCase_ == 9) {
+          if (entryCase_ == 10) {
             return (com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_;
           }
           return com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 9) {
+          if (entryCase_ == 10) {
             return updateCustomerSecondaryIdBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        */
       public Builder setUpdateCustomerSecondaryId(com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand value) {
         if (updateCustomerSecondaryIdBuilder_ == null) {
@@ -4434,11 +4716,11 @@ public final class App {
         } else {
           updateCustomerSecondaryIdBuilder_.setMessage(value);
         }
-        entryCase_ = 9;
+        entryCase_ = 10;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        */
       public Builder setUpdateCustomerSecondaryId(
           com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.Builder builderForValue) {
@@ -4448,15 +4730,15 @@ public final class App {
         } else {
           updateCustomerSecondaryIdBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 9;
+        entryCase_ = 10;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        */
       public Builder mergeUpdateCustomerSecondaryId(com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand value) {
         if (updateCustomerSecondaryIdBuilder_ == null) {
-          if (entryCase_ == 9 &&
+          if (entryCase_ == 10 &&
               entry_ != com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.newBuilder((com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -4465,26 +4747,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 9) {
+          if (entryCase_ == 10) {
             updateCustomerSecondaryIdBuilder_.mergeFrom(value);
           }
           updateCustomerSecondaryIdBuilder_.setMessage(value);
         }
-        entryCase_ = 9;
+        entryCase_ = 10;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        */
       public Builder clearUpdateCustomerSecondaryId() {
         if (updateCustomerSecondaryIdBuilder_ == null) {
-          if (entryCase_ == 9) {
+          if (entryCase_ == 10) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 9) {
+          if (entryCase_ == 10) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -4493,33 +4775,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        */
       public com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.Builder getUpdateCustomerSecondaryIdBuilder() {
         return getUpdateCustomerSecondaryIdFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommandOrBuilder getUpdateCustomerSecondaryIdOrBuilder() {
-        if ((entryCase_ == 9) && (updateCustomerSecondaryIdBuilder_ != null)) {
+        if ((entryCase_ == 10) && (updateCustomerSecondaryIdBuilder_ != null)) {
           return updateCustomerSecondaryIdBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 9) {
+          if (entryCase_ == 10) {
             return (com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand) entry_;
           }
           return com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 9;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerSecondaryIdCommand update_customer_secondary_id = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand, com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.Builder, com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommandOrBuilder> 
           getUpdateCustomerSecondaryIdFieldBuilder() {
         if (updateCustomerSecondaryIdBuilder_ == null) {
-          if (!(entryCase_ == 9)) {
+          if (!(entryCase_ == 10)) {
             entry_ = com.elarian.hera.proto.App.UpdateCustomerSecondaryIdCommand.getDefaultInstance();
           }
           updateCustomerSecondaryIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4529,7 +4811,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 9;
+        entryCase_ = 10;
         onChanged();;
         return updateCustomerSecondaryIdBuilder_;
       }
@@ -4537,33 +4819,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand, com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.Builder, com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommandOrBuilder> deleteCustomerSecondaryIdBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        * @return Whether the deleteCustomerSecondaryId field is set.
        */
       @java.lang.Override
       public boolean hasDeleteCustomerSecondaryId() {
-        return entryCase_ == 10;
+        return entryCase_ == 11;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        * @return The deleteCustomerSecondaryId.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand getDeleteCustomerSecondaryId() {
         if (deleteCustomerSecondaryIdBuilder_ == null) {
-          if (entryCase_ == 10) {
+          if (entryCase_ == 11) {
             return (com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_;
           }
           return com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 10) {
+          if (entryCase_ == 11) {
             return deleteCustomerSecondaryIdBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        */
       public Builder setDeleteCustomerSecondaryId(com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand value) {
         if (deleteCustomerSecondaryIdBuilder_ == null) {
@@ -4575,11 +4857,11 @@ public final class App {
         } else {
           deleteCustomerSecondaryIdBuilder_.setMessage(value);
         }
-        entryCase_ = 10;
+        entryCase_ = 11;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        */
       public Builder setDeleteCustomerSecondaryId(
           com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.Builder builderForValue) {
@@ -4589,15 +4871,15 @@ public final class App {
         } else {
           deleteCustomerSecondaryIdBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 10;
+        entryCase_ = 11;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        */
       public Builder mergeDeleteCustomerSecondaryId(com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand value) {
         if (deleteCustomerSecondaryIdBuilder_ == null) {
-          if (entryCase_ == 10 &&
+          if (entryCase_ == 11 &&
               entry_ != com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.newBuilder((com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -4606,26 +4888,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 10) {
+          if (entryCase_ == 11) {
             deleteCustomerSecondaryIdBuilder_.mergeFrom(value);
           }
           deleteCustomerSecondaryIdBuilder_.setMessage(value);
         }
-        entryCase_ = 10;
+        entryCase_ = 11;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        */
       public Builder clearDeleteCustomerSecondaryId() {
         if (deleteCustomerSecondaryIdBuilder_ == null) {
-          if (entryCase_ == 10) {
+          if (entryCase_ == 11) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 10) {
+          if (entryCase_ == 11) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -4634,33 +4916,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        */
       public com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.Builder getDeleteCustomerSecondaryIdBuilder() {
         return getDeleteCustomerSecondaryIdFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommandOrBuilder getDeleteCustomerSecondaryIdOrBuilder() {
-        if ((entryCase_ == 10) && (deleteCustomerSecondaryIdBuilder_ != null)) {
+        if ((entryCase_ == 11) && (deleteCustomerSecondaryIdBuilder_ != null)) {
           return deleteCustomerSecondaryIdBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 10) {
+          if (entryCase_ == 11) {
             return (com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand) entry_;
           }
           return com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 10;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerSecondaryIdCommand delete_customer_secondary_id = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand, com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.Builder, com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommandOrBuilder> 
           getDeleteCustomerSecondaryIdFieldBuilder() {
         if (deleteCustomerSecondaryIdBuilder_ == null) {
-          if (!(entryCase_ == 10)) {
+          if (!(entryCase_ == 11)) {
             entry_ = com.elarian.hera.proto.App.DeleteCustomerSecondaryIdCommand.getDefaultInstance();
           }
           deleteCustomerSecondaryIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4670,7 +4952,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 10;
+        entryCase_ = 11;
         onChanged();;
         return deleteCustomerSecondaryIdBuilder_;
       }
@@ -4678,33 +4960,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.LeaseCustomerMetadataCommand, com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.Builder, com.elarian.hera.proto.App.LeaseCustomerMetadataCommandOrBuilder> leaseCustomerMetadataBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        * @return Whether the leaseCustomerMetadata field is set.
        */
       @java.lang.Override
       public boolean hasLeaseCustomerMetadata() {
-        return entryCase_ == 11;
+        return entryCase_ == 12;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        * @return The leaseCustomerMetadata.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.LeaseCustomerMetadataCommand getLeaseCustomerMetadata() {
         if (leaseCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 11) {
+          if (entryCase_ == 12) {
             return (com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_;
           }
           return com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 11) {
+          if (entryCase_ == 12) {
             return leaseCustomerMetadataBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        */
       public Builder setLeaseCustomerMetadata(com.elarian.hera.proto.App.LeaseCustomerMetadataCommand value) {
         if (leaseCustomerMetadataBuilder_ == null) {
@@ -4716,11 +4998,11 @@ public final class App {
         } else {
           leaseCustomerMetadataBuilder_.setMessage(value);
         }
-        entryCase_ = 11;
+        entryCase_ = 12;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        */
       public Builder setLeaseCustomerMetadata(
           com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.Builder builderForValue) {
@@ -4730,15 +5012,15 @@ public final class App {
         } else {
           leaseCustomerMetadataBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 11;
+        entryCase_ = 12;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        */
       public Builder mergeLeaseCustomerMetadata(com.elarian.hera.proto.App.LeaseCustomerMetadataCommand value) {
         if (leaseCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 11 &&
+          if (entryCase_ == 12 &&
               entry_ != com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.newBuilder((com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -4747,26 +5029,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 11) {
+          if (entryCase_ == 12) {
             leaseCustomerMetadataBuilder_.mergeFrom(value);
           }
           leaseCustomerMetadataBuilder_.setMessage(value);
         }
-        entryCase_ = 11;
+        entryCase_ = 12;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        */
       public Builder clearLeaseCustomerMetadata() {
         if (leaseCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 11) {
+          if (entryCase_ == 12) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 11) {
+          if (entryCase_ == 12) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -4775,33 +5057,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        */
       public com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.Builder getLeaseCustomerMetadataBuilder() {
         return getLeaseCustomerMetadataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.LeaseCustomerMetadataCommandOrBuilder getLeaseCustomerMetadataOrBuilder() {
-        if ((entryCase_ == 11) && (leaseCustomerMetadataBuilder_ != null)) {
+        if ((entryCase_ == 12) && (leaseCustomerMetadataBuilder_ != null)) {
           return leaseCustomerMetadataBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 11) {
+          if (entryCase_ == 12) {
             return (com.elarian.hera.proto.App.LeaseCustomerMetadataCommand) entry_;
           }
           return com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 11;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataCommand lease_customer_metadata = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.LeaseCustomerMetadataCommand, com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.Builder, com.elarian.hera.proto.App.LeaseCustomerMetadataCommandOrBuilder> 
           getLeaseCustomerMetadataFieldBuilder() {
         if (leaseCustomerMetadataBuilder_ == null) {
-          if (!(entryCase_ == 11)) {
+          if (!(entryCase_ == 12)) {
             entry_ = com.elarian.hera.proto.App.LeaseCustomerMetadataCommand.getDefaultInstance();
           }
           leaseCustomerMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4811,7 +5093,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 11;
+        entryCase_ = 12;
         onChanged();;
         return leaseCustomerMetadataBuilder_;
       }
@@ -4819,33 +5101,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.UpdateCustomerMetadataCommand, com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.Builder, com.elarian.hera.proto.App.UpdateCustomerMetadataCommandOrBuilder> updateCustomerMetadataBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        * @return Whether the updateCustomerMetadata field is set.
        */
       @java.lang.Override
       public boolean hasUpdateCustomerMetadata() {
-        return entryCase_ == 12;
+        return entryCase_ == 13;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        * @return The updateCustomerMetadata.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.UpdateCustomerMetadataCommand getUpdateCustomerMetadata() {
         if (updateCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 12) {
+          if (entryCase_ == 13) {
             return (com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_;
           }
           return com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 12) {
+          if (entryCase_ == 13) {
             return updateCustomerMetadataBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        */
       public Builder setUpdateCustomerMetadata(com.elarian.hera.proto.App.UpdateCustomerMetadataCommand value) {
         if (updateCustomerMetadataBuilder_ == null) {
@@ -4857,11 +5139,11 @@ public final class App {
         } else {
           updateCustomerMetadataBuilder_.setMessage(value);
         }
-        entryCase_ = 12;
+        entryCase_ = 13;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        */
       public Builder setUpdateCustomerMetadata(
           com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.Builder builderForValue) {
@@ -4871,15 +5153,15 @@ public final class App {
         } else {
           updateCustomerMetadataBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 12;
+        entryCase_ = 13;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        */
       public Builder mergeUpdateCustomerMetadata(com.elarian.hera.proto.App.UpdateCustomerMetadataCommand value) {
         if (updateCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 12 &&
+          if (entryCase_ == 13 &&
               entry_ != com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.newBuilder((com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -4888,26 +5170,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 12) {
+          if (entryCase_ == 13) {
             updateCustomerMetadataBuilder_.mergeFrom(value);
           }
           updateCustomerMetadataBuilder_.setMessage(value);
         }
-        entryCase_ = 12;
+        entryCase_ = 13;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        */
       public Builder clearUpdateCustomerMetadata() {
         if (updateCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 12) {
+          if (entryCase_ == 13) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 12) {
+          if (entryCase_ == 13) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -4916,33 +5198,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        */
       public com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.Builder getUpdateCustomerMetadataBuilder() {
         return getUpdateCustomerMetadataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.UpdateCustomerMetadataCommandOrBuilder getUpdateCustomerMetadataOrBuilder() {
-        if ((entryCase_ == 12) && (updateCustomerMetadataBuilder_ != null)) {
+        if ((entryCase_ == 13) && (updateCustomerMetadataBuilder_ != null)) {
           return updateCustomerMetadataBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 12) {
+          if (entryCase_ == 13) {
             return (com.elarian.hera.proto.App.UpdateCustomerMetadataCommand) entry_;
           }
           return com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 12;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerMetadataCommand update_customer_metadata = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.UpdateCustomerMetadataCommand, com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.Builder, com.elarian.hera.proto.App.UpdateCustomerMetadataCommandOrBuilder> 
           getUpdateCustomerMetadataFieldBuilder() {
         if (updateCustomerMetadataBuilder_ == null) {
-          if (!(entryCase_ == 12)) {
+          if (!(entryCase_ == 13)) {
             entry_ = com.elarian.hera.proto.App.UpdateCustomerMetadataCommand.getDefaultInstance();
           }
           updateCustomerMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4952,7 +5234,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 12;
+        entryCase_ = 13;
         onChanged();;
         return updateCustomerMetadataBuilder_;
       }
@@ -4960,33 +5242,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.DeleteCustomerMetadataCommand, com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.Builder, com.elarian.hera.proto.App.DeleteCustomerMetadataCommandOrBuilder> deleteCustomerMetadataBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        * @return Whether the deleteCustomerMetadata field is set.
        */
       @java.lang.Override
       public boolean hasDeleteCustomerMetadata() {
-        return entryCase_ == 13;
+        return entryCase_ == 14;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        * @return The deleteCustomerMetadata.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.DeleteCustomerMetadataCommand getDeleteCustomerMetadata() {
         if (deleteCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 13) {
+          if (entryCase_ == 14) {
             return (com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_;
           }
           return com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 13) {
+          if (entryCase_ == 14) {
             return deleteCustomerMetadataBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        */
       public Builder setDeleteCustomerMetadata(com.elarian.hera.proto.App.DeleteCustomerMetadataCommand value) {
         if (deleteCustomerMetadataBuilder_ == null) {
@@ -4998,11 +5280,11 @@ public final class App {
         } else {
           deleteCustomerMetadataBuilder_.setMessage(value);
         }
-        entryCase_ = 13;
+        entryCase_ = 14;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        */
       public Builder setDeleteCustomerMetadata(
           com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.Builder builderForValue) {
@@ -5012,15 +5294,15 @@ public final class App {
         } else {
           deleteCustomerMetadataBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 13;
+        entryCase_ = 14;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        */
       public Builder mergeDeleteCustomerMetadata(com.elarian.hera.proto.App.DeleteCustomerMetadataCommand value) {
         if (deleteCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 13 &&
+          if (entryCase_ == 14 &&
               entry_ != com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.newBuilder((com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -5029,26 +5311,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 13) {
+          if (entryCase_ == 14) {
             deleteCustomerMetadataBuilder_.mergeFrom(value);
           }
           deleteCustomerMetadataBuilder_.setMessage(value);
         }
-        entryCase_ = 13;
+        entryCase_ = 14;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        */
       public Builder clearDeleteCustomerMetadata() {
         if (deleteCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 13) {
+          if (entryCase_ == 14) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 13) {
+          if (entryCase_ == 14) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -5057,33 +5339,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        */
       public com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.Builder getDeleteCustomerMetadataBuilder() {
         return getDeleteCustomerMetadataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.DeleteCustomerMetadataCommandOrBuilder getDeleteCustomerMetadataOrBuilder() {
-        if ((entryCase_ == 13) && (deleteCustomerMetadataBuilder_ != null)) {
+        if ((entryCase_ == 14) && (deleteCustomerMetadataBuilder_ != null)) {
           return deleteCustomerMetadataBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 13) {
+          if (entryCase_ == 14) {
             return (com.elarian.hera.proto.App.DeleteCustomerMetadataCommand) entry_;
           }
           return com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 13;</code>
+       * <code>.com.elarian.hera.proto.DeleteCustomerMetadataCommand delete_customer_metadata = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.DeleteCustomerMetadataCommand, com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.Builder, com.elarian.hera.proto.App.DeleteCustomerMetadataCommandOrBuilder> 
           getDeleteCustomerMetadataFieldBuilder() {
         if (deleteCustomerMetadataBuilder_ == null) {
-          if (!(entryCase_ == 13)) {
+          if (!(entryCase_ == 14)) {
             entry_ = com.elarian.hera.proto.App.DeleteCustomerMetadataCommand.getDefaultInstance();
           }
           deleteCustomerMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5093,7 +5375,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 13;
+        entryCase_ = 14;
         onChanged();;
         return deleteCustomerMetadataBuilder_;
       }
@@ -5101,33 +5383,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.SendMessageCommand, com.elarian.hera.proto.App.SendMessageCommand.Builder, com.elarian.hera.proto.App.SendMessageCommandOrBuilder> sendMessageBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        * @return Whether the sendMessage field is set.
        */
       @java.lang.Override
       public boolean hasSendMessage() {
-        return entryCase_ == 14;
+        return entryCase_ == 15;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        * @return The sendMessage.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.SendMessageCommand getSendMessage() {
         if (sendMessageBuilder_ == null) {
-          if (entryCase_ == 14) {
+          if (entryCase_ == 15) {
             return (com.elarian.hera.proto.App.SendMessageCommand) entry_;
           }
           return com.elarian.hera.proto.App.SendMessageCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 14) {
+          if (entryCase_ == 15) {
             return sendMessageBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.SendMessageCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        */
       public Builder setSendMessage(com.elarian.hera.proto.App.SendMessageCommand value) {
         if (sendMessageBuilder_ == null) {
@@ -5139,11 +5421,11 @@ public final class App {
         } else {
           sendMessageBuilder_.setMessage(value);
         }
-        entryCase_ = 14;
+        entryCase_ = 15;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        */
       public Builder setSendMessage(
           com.elarian.hera.proto.App.SendMessageCommand.Builder builderForValue) {
@@ -5153,15 +5435,15 @@ public final class App {
         } else {
           sendMessageBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 14;
+        entryCase_ = 15;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        */
       public Builder mergeSendMessage(com.elarian.hera.proto.App.SendMessageCommand value) {
         if (sendMessageBuilder_ == null) {
-          if (entryCase_ == 14 &&
+          if (entryCase_ == 15 &&
               entry_ != com.elarian.hera.proto.App.SendMessageCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.SendMessageCommand.newBuilder((com.elarian.hera.proto.App.SendMessageCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -5170,26 +5452,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 14) {
+          if (entryCase_ == 15) {
             sendMessageBuilder_.mergeFrom(value);
           }
           sendMessageBuilder_.setMessage(value);
         }
-        entryCase_ = 14;
+        entryCase_ = 15;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        */
       public Builder clearSendMessage() {
         if (sendMessageBuilder_ == null) {
-          if (entryCase_ == 14) {
+          if (entryCase_ == 15) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 14) {
+          if (entryCase_ == 15) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -5198,33 +5480,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        */
       public com.elarian.hera.proto.App.SendMessageCommand.Builder getSendMessageBuilder() {
         return getSendMessageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.SendMessageCommandOrBuilder getSendMessageOrBuilder() {
-        if ((entryCase_ == 14) && (sendMessageBuilder_ != null)) {
+        if ((entryCase_ == 15) && (sendMessageBuilder_ != null)) {
           return sendMessageBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 14) {
+          if (entryCase_ == 15) {
             return (com.elarian.hera.proto.App.SendMessageCommand) entry_;
           }
           return com.elarian.hera.proto.App.SendMessageCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 14;</code>
+       * <code>.com.elarian.hera.proto.SendMessageCommand send_message = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.SendMessageCommand, com.elarian.hera.proto.App.SendMessageCommand.Builder, com.elarian.hera.proto.App.SendMessageCommandOrBuilder> 
           getSendMessageFieldBuilder() {
         if (sendMessageBuilder_ == null) {
-          if (!(entryCase_ == 14)) {
+          if (!(entryCase_ == 15)) {
             entry_ = com.elarian.hera.proto.App.SendMessageCommand.getDefaultInstance();
           }
           sendMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5234,7 +5516,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 14;
+        entryCase_ = 15;
         onChanged();;
         return sendMessageBuilder_;
       }
@@ -5242,33 +5524,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.SendMessageTagCommand, com.elarian.hera.proto.App.SendMessageTagCommand.Builder, com.elarian.hera.proto.App.SendMessageTagCommandOrBuilder> sendMessageTagBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        * @return Whether the sendMessageTag field is set.
        */
       @java.lang.Override
       public boolean hasSendMessageTag() {
-        return entryCase_ == 15;
+        return entryCase_ == 16;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        * @return The sendMessageTag.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.SendMessageTagCommand getSendMessageTag() {
         if (sendMessageTagBuilder_ == null) {
-          if (entryCase_ == 15) {
+          if (entryCase_ == 16) {
             return (com.elarian.hera.proto.App.SendMessageTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.SendMessageTagCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 15) {
+          if (entryCase_ == 16) {
             return sendMessageTagBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.SendMessageTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        */
       public Builder setSendMessageTag(com.elarian.hera.proto.App.SendMessageTagCommand value) {
         if (sendMessageTagBuilder_ == null) {
@@ -5280,11 +5562,11 @@ public final class App {
         } else {
           sendMessageTagBuilder_.setMessage(value);
         }
-        entryCase_ = 15;
+        entryCase_ = 16;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        */
       public Builder setSendMessageTag(
           com.elarian.hera.proto.App.SendMessageTagCommand.Builder builderForValue) {
@@ -5294,15 +5576,15 @@ public final class App {
         } else {
           sendMessageTagBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 15;
+        entryCase_ = 16;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        */
       public Builder mergeSendMessageTag(com.elarian.hera.proto.App.SendMessageTagCommand value) {
         if (sendMessageTagBuilder_ == null) {
-          if (entryCase_ == 15 &&
+          if (entryCase_ == 16 &&
               entry_ != com.elarian.hera.proto.App.SendMessageTagCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.SendMessageTagCommand.newBuilder((com.elarian.hera.proto.App.SendMessageTagCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -5311,26 +5593,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 15) {
+          if (entryCase_ == 16) {
             sendMessageTagBuilder_.mergeFrom(value);
           }
           sendMessageTagBuilder_.setMessage(value);
         }
-        entryCase_ = 15;
+        entryCase_ = 16;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        */
       public Builder clearSendMessageTag() {
         if (sendMessageTagBuilder_ == null) {
-          if (entryCase_ == 15) {
+          if (entryCase_ == 16) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 15) {
+          if (entryCase_ == 16) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -5339,33 +5621,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        */
       public com.elarian.hera.proto.App.SendMessageTagCommand.Builder getSendMessageTagBuilder() {
         return getSendMessageTagFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.SendMessageTagCommandOrBuilder getSendMessageTagOrBuilder() {
-        if ((entryCase_ == 15) && (sendMessageTagBuilder_ != null)) {
+        if ((entryCase_ == 16) && (sendMessageTagBuilder_ != null)) {
           return sendMessageTagBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 15) {
+          if (entryCase_ == 16) {
             return (com.elarian.hera.proto.App.SendMessageTagCommand) entry_;
           }
           return com.elarian.hera.proto.App.SendMessageTagCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 15;</code>
+       * <code>.com.elarian.hera.proto.SendMessageTagCommand send_message_tag = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.SendMessageTagCommand, com.elarian.hera.proto.App.SendMessageTagCommand.Builder, com.elarian.hera.proto.App.SendMessageTagCommandOrBuilder> 
           getSendMessageTagFieldBuilder() {
         if (sendMessageTagBuilder_ == null) {
-          if (!(entryCase_ == 15)) {
+          if (!(entryCase_ == 16)) {
             entry_ = com.elarian.hera.proto.App.SendMessageTagCommand.getDefaultInstance();
           }
           sendMessageTagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5375,7 +5657,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 15;
+        entryCase_ = 16;
         onChanged();;
         return sendMessageTagBuilder_;
       }
@@ -5383,33 +5665,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.ReplyToMessageCommand, com.elarian.hera.proto.App.ReplyToMessageCommand.Builder, com.elarian.hera.proto.App.ReplyToMessageCommandOrBuilder> replyToMessageBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        * @return Whether the replyToMessage field is set.
        */
       @java.lang.Override
       public boolean hasReplyToMessage() {
-        return entryCase_ == 16;
+        return entryCase_ == 17;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        * @return The replyToMessage.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.ReplyToMessageCommand getReplyToMessage() {
         if (replyToMessageBuilder_ == null) {
-          if (entryCase_ == 16) {
+          if (entryCase_ == 17) {
             return (com.elarian.hera.proto.App.ReplyToMessageCommand) entry_;
           }
           return com.elarian.hera.proto.App.ReplyToMessageCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 16) {
+          if (entryCase_ == 17) {
             return replyToMessageBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.ReplyToMessageCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        */
       public Builder setReplyToMessage(com.elarian.hera.proto.App.ReplyToMessageCommand value) {
         if (replyToMessageBuilder_ == null) {
@@ -5421,11 +5703,11 @@ public final class App {
         } else {
           replyToMessageBuilder_.setMessage(value);
         }
-        entryCase_ = 16;
+        entryCase_ = 17;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        */
       public Builder setReplyToMessage(
           com.elarian.hera.proto.App.ReplyToMessageCommand.Builder builderForValue) {
@@ -5435,15 +5717,15 @@ public final class App {
         } else {
           replyToMessageBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 16;
+        entryCase_ = 17;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        */
       public Builder mergeReplyToMessage(com.elarian.hera.proto.App.ReplyToMessageCommand value) {
         if (replyToMessageBuilder_ == null) {
-          if (entryCase_ == 16 &&
+          if (entryCase_ == 17 &&
               entry_ != com.elarian.hera.proto.App.ReplyToMessageCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.ReplyToMessageCommand.newBuilder((com.elarian.hera.proto.App.ReplyToMessageCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -5452,26 +5734,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 16) {
+          if (entryCase_ == 17) {
             replyToMessageBuilder_.mergeFrom(value);
           }
           replyToMessageBuilder_.setMessage(value);
         }
-        entryCase_ = 16;
+        entryCase_ = 17;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        */
       public Builder clearReplyToMessage() {
         if (replyToMessageBuilder_ == null) {
-          if (entryCase_ == 16) {
+          if (entryCase_ == 17) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 16) {
+          if (entryCase_ == 17) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -5480,33 +5762,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        */
       public com.elarian.hera.proto.App.ReplyToMessageCommand.Builder getReplyToMessageBuilder() {
         return getReplyToMessageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.ReplyToMessageCommandOrBuilder getReplyToMessageOrBuilder() {
-        if ((entryCase_ == 16) && (replyToMessageBuilder_ != null)) {
+        if ((entryCase_ == 17) && (replyToMessageBuilder_ != null)) {
           return replyToMessageBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 16) {
+          if (entryCase_ == 17) {
             return (com.elarian.hera.proto.App.ReplyToMessageCommand) entry_;
           }
           return com.elarian.hera.proto.App.ReplyToMessageCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 16;</code>
+       * <code>.com.elarian.hera.proto.ReplyToMessageCommand reply_to_message = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.ReplyToMessageCommand, com.elarian.hera.proto.App.ReplyToMessageCommand.Builder, com.elarian.hera.proto.App.ReplyToMessageCommandOrBuilder> 
           getReplyToMessageFieldBuilder() {
         if (replyToMessageBuilder_ == null) {
-          if (!(entryCase_ == 16)) {
+          if (!(entryCase_ == 17)) {
             entry_ = com.elarian.hera.proto.App.ReplyToMessageCommand.getDefaultInstance();
           }
           replyToMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5516,7 +5798,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 16;
+        entryCase_ = 17;
         onChanged();;
         return replyToMessageBuilder_;
       }
@@ -5524,33 +5806,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.MessagingConsentCommand, com.elarian.hera.proto.App.MessagingConsentCommand.Builder, com.elarian.hera.proto.App.MessagingConsentCommandOrBuilder> messagingConsentBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        * @return Whether the messagingConsent field is set.
        */
       @java.lang.Override
       public boolean hasMessagingConsent() {
-        return entryCase_ == 17;
+        return entryCase_ == 18;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        * @return The messagingConsent.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.MessagingConsentCommand getMessagingConsent() {
         if (messagingConsentBuilder_ == null) {
-          if (entryCase_ == 17) {
+          if (entryCase_ == 18) {
             return (com.elarian.hera.proto.App.MessagingConsentCommand) entry_;
           }
           return com.elarian.hera.proto.App.MessagingConsentCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 17) {
+          if (entryCase_ == 18) {
             return messagingConsentBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.MessagingConsentCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        */
       public Builder setMessagingConsent(com.elarian.hera.proto.App.MessagingConsentCommand value) {
         if (messagingConsentBuilder_ == null) {
@@ -5562,11 +5844,11 @@ public final class App {
         } else {
           messagingConsentBuilder_.setMessage(value);
         }
-        entryCase_ = 17;
+        entryCase_ = 18;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        */
       public Builder setMessagingConsent(
           com.elarian.hera.proto.App.MessagingConsentCommand.Builder builderForValue) {
@@ -5576,15 +5858,15 @@ public final class App {
         } else {
           messagingConsentBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 17;
+        entryCase_ = 18;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        */
       public Builder mergeMessagingConsent(com.elarian.hera.proto.App.MessagingConsentCommand value) {
         if (messagingConsentBuilder_ == null) {
-          if (entryCase_ == 17 &&
+          if (entryCase_ == 18 &&
               entry_ != com.elarian.hera.proto.App.MessagingConsentCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.MessagingConsentCommand.newBuilder((com.elarian.hera.proto.App.MessagingConsentCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -5593,26 +5875,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 17) {
+          if (entryCase_ == 18) {
             messagingConsentBuilder_.mergeFrom(value);
           }
           messagingConsentBuilder_.setMessage(value);
         }
-        entryCase_ = 17;
+        entryCase_ = 18;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        */
       public Builder clearMessagingConsent() {
         if (messagingConsentBuilder_ == null) {
-          if (entryCase_ == 17) {
+          if (entryCase_ == 18) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 17) {
+          if (entryCase_ == 18) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -5621,33 +5903,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        */
       public com.elarian.hera.proto.App.MessagingConsentCommand.Builder getMessagingConsentBuilder() {
         return getMessagingConsentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.MessagingConsentCommandOrBuilder getMessagingConsentOrBuilder() {
-        if ((entryCase_ == 17) && (messagingConsentBuilder_ != null)) {
+        if ((entryCase_ == 18) && (messagingConsentBuilder_ != null)) {
           return messagingConsentBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 17) {
+          if (entryCase_ == 18) {
             return (com.elarian.hera.proto.App.MessagingConsentCommand) entry_;
           }
           return com.elarian.hera.proto.App.MessagingConsentCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 17;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 18;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.MessagingConsentCommand, com.elarian.hera.proto.App.MessagingConsentCommand.Builder, com.elarian.hera.proto.App.MessagingConsentCommandOrBuilder> 
           getMessagingConsentFieldBuilder() {
         if (messagingConsentBuilder_ == null) {
-          if (!(entryCase_ == 17)) {
+          if (!(entryCase_ == 18)) {
             entry_ = com.elarian.hera.proto.App.MessagingConsentCommand.getDefaultInstance();
           }
           messagingConsentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5657,7 +5939,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 17;
+        entryCase_ = 18;
         onChanged();;
         return messagingConsentBuilder_;
       }
@@ -5665,33 +5947,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.InitiatePaymentCommand, com.elarian.hera.proto.App.InitiatePaymentCommand.Builder, com.elarian.hera.proto.App.InitiatePaymentCommandOrBuilder> initiatePaymentBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        * @return Whether the initiatePayment field is set.
        */
       @java.lang.Override
       public boolean hasInitiatePayment() {
-        return entryCase_ == 18;
+        return entryCase_ == 19;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        * @return The initiatePayment.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.InitiatePaymentCommand getInitiatePayment() {
         if (initiatePaymentBuilder_ == null) {
-          if (entryCase_ == 18) {
+          if (entryCase_ == 19) {
             return (com.elarian.hera.proto.App.InitiatePaymentCommand) entry_;
           }
           return com.elarian.hera.proto.App.InitiatePaymentCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 18) {
+          if (entryCase_ == 19) {
             return initiatePaymentBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.InitiatePaymentCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        */
       public Builder setInitiatePayment(com.elarian.hera.proto.App.InitiatePaymentCommand value) {
         if (initiatePaymentBuilder_ == null) {
@@ -5703,11 +5985,11 @@ public final class App {
         } else {
           initiatePaymentBuilder_.setMessage(value);
         }
-        entryCase_ = 18;
+        entryCase_ = 19;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        */
       public Builder setInitiatePayment(
           com.elarian.hera.proto.App.InitiatePaymentCommand.Builder builderForValue) {
@@ -5717,15 +5999,15 @@ public final class App {
         } else {
           initiatePaymentBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 18;
+        entryCase_ = 19;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        */
       public Builder mergeInitiatePayment(com.elarian.hera.proto.App.InitiatePaymentCommand value) {
         if (initiatePaymentBuilder_ == null) {
-          if (entryCase_ == 18 &&
+          if (entryCase_ == 19 &&
               entry_ != com.elarian.hera.proto.App.InitiatePaymentCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.InitiatePaymentCommand.newBuilder((com.elarian.hera.proto.App.InitiatePaymentCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -5734,26 +6016,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 18) {
+          if (entryCase_ == 19) {
             initiatePaymentBuilder_.mergeFrom(value);
           }
           initiatePaymentBuilder_.setMessage(value);
         }
-        entryCase_ = 18;
+        entryCase_ = 19;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        */
       public Builder clearInitiatePayment() {
         if (initiatePaymentBuilder_ == null) {
-          if (entryCase_ == 18) {
+          if (entryCase_ == 19) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 18) {
+          if (entryCase_ == 19) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -5762,33 +6044,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        */
       public com.elarian.hera.proto.App.InitiatePaymentCommand.Builder getInitiatePaymentBuilder() {
         return getInitiatePaymentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.InitiatePaymentCommandOrBuilder getInitiatePaymentOrBuilder() {
-        if ((entryCase_ == 18) && (initiatePaymentBuilder_ != null)) {
+        if ((entryCase_ == 19) && (initiatePaymentBuilder_ != null)) {
           return initiatePaymentBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 18) {
+          if (entryCase_ == 19) {
             return (com.elarian.hera.proto.App.InitiatePaymentCommand) entry_;
           }
           return com.elarian.hera.proto.App.InitiatePaymentCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 18;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 19;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.InitiatePaymentCommand, com.elarian.hera.proto.App.InitiatePaymentCommand.Builder, com.elarian.hera.proto.App.InitiatePaymentCommandOrBuilder> 
           getInitiatePaymentFieldBuilder() {
         if (initiatePaymentBuilder_ == null) {
-          if (!(entryCase_ == 18)) {
+          if (!(entryCase_ == 19)) {
             entry_ = com.elarian.hera.proto.App.InitiatePaymentCommand.getDefaultInstance();
           }
           initiatePaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5798,7 +6080,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 18;
+        entryCase_ = 19;
         onChanged();;
         return initiatePaymentBuilder_;
       }
@@ -5806,33 +6088,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.MakeVoiceCallCommand, com.elarian.hera.proto.App.MakeVoiceCallCommand.Builder, com.elarian.hera.proto.App.MakeVoiceCallCommandOrBuilder> makeVoiceCallBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        * @return Whether the makeVoiceCall field is set.
        */
       @java.lang.Override
       public boolean hasMakeVoiceCall() {
-        return entryCase_ == 19;
+        return entryCase_ == 20;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        * @return The makeVoiceCall.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.MakeVoiceCallCommand getMakeVoiceCall() {
         if (makeVoiceCallBuilder_ == null) {
-          if (entryCase_ == 19) {
+          if (entryCase_ == 20) {
             return (com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_;
           }
           return com.elarian.hera.proto.App.MakeVoiceCallCommand.getDefaultInstance();
         } else {
-          if (entryCase_ == 19) {
+          if (entryCase_ == 20) {
             return makeVoiceCallBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.MakeVoiceCallCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        */
       public Builder setMakeVoiceCall(com.elarian.hera.proto.App.MakeVoiceCallCommand value) {
         if (makeVoiceCallBuilder_ == null) {
@@ -5844,11 +6126,11 @@ public final class App {
         } else {
           makeVoiceCallBuilder_.setMessage(value);
         }
-        entryCase_ = 19;
+        entryCase_ = 20;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        */
       public Builder setMakeVoiceCall(
           com.elarian.hera.proto.App.MakeVoiceCallCommand.Builder builderForValue) {
@@ -5858,15 +6140,15 @@ public final class App {
         } else {
           makeVoiceCallBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 19;
+        entryCase_ = 20;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        */
       public Builder mergeMakeVoiceCall(com.elarian.hera.proto.App.MakeVoiceCallCommand value) {
         if (makeVoiceCallBuilder_ == null) {
-          if (entryCase_ == 19 &&
+          if (entryCase_ == 20 &&
               entry_ != com.elarian.hera.proto.App.MakeVoiceCallCommand.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.MakeVoiceCallCommand.newBuilder((com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_)
                 .mergeFrom(value).buildPartial();
@@ -5875,26 +6157,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 19) {
+          if (entryCase_ == 20) {
             makeVoiceCallBuilder_.mergeFrom(value);
           }
           makeVoiceCallBuilder_.setMessage(value);
         }
-        entryCase_ = 19;
+        entryCase_ = 20;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        */
       public Builder clearMakeVoiceCall() {
         if (makeVoiceCallBuilder_ == null) {
-          if (entryCase_ == 19) {
+          if (entryCase_ == 20) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 19) {
+          if (entryCase_ == 20) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -5903,33 +6185,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        */
       public com.elarian.hera.proto.App.MakeVoiceCallCommand.Builder getMakeVoiceCallBuilder() {
         return getMakeVoiceCallFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.MakeVoiceCallCommandOrBuilder getMakeVoiceCallOrBuilder() {
-        if ((entryCase_ == 19) && (makeVoiceCallBuilder_ != null)) {
+        if ((entryCase_ == 20) && (makeVoiceCallBuilder_ != null)) {
           return makeVoiceCallBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 19) {
+          if (entryCase_ == 20) {
             return (com.elarian.hera.proto.App.MakeVoiceCallCommand) entry_;
           }
           return com.elarian.hera.proto.App.MakeVoiceCallCommand.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 19;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.MakeVoiceCallCommand, com.elarian.hera.proto.App.MakeVoiceCallCommand.Builder, com.elarian.hera.proto.App.MakeVoiceCallCommandOrBuilder> 
           getMakeVoiceCallFieldBuilder() {
         if (makeVoiceCallBuilder_ == null) {
-          if (!(entryCase_ == 19)) {
+          if (!(entryCase_ == 20)) {
             entry_ = com.elarian.hera.proto.App.MakeVoiceCallCommand.getDefaultInstance();
           }
           makeVoiceCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5939,7 +6221,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 19;
+        entryCase_ = 20;
         onChanged();;
         return makeVoiceCallBuilder_;
       }
@@ -6001,122 +6283,137 @@ public final class App {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+     * @return Whether the generateAuthToken field is set.
+     */
+    boolean hasGenerateAuthToken();
+    /**
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+     * @return The generateAuthToken.
+     */
+    com.elarian.hera.proto.App.GenerateAuthTokenReply getGenerateAuthToken();
+    /**
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+     */
+    com.elarian.hera.proto.App.GenerateAuthTokenReplyOrBuilder getGenerateAuthTokenOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
      * @return Whether the getCustomerState field is set.
      */
     boolean hasGetCustomerState();
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
      * @return The getCustomerState.
      */
     com.elarian.hera.proto.App.GetCustomerStateReply getGetCustomerState();
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
      */
     com.elarian.hera.proto.App.GetCustomerStateReplyOrBuilder getGetCustomerStateOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
      * @return Whether the leaseCustomerMetadata field is set.
      */
     boolean hasLeaseCustomerMetadata();
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
      * @return The leaseCustomerMetadata.
      */
     com.elarian.hera.proto.App.LeaseCustomerMetadataReply getLeaseCustomerMetadata();
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
      */
     com.elarian.hera.proto.App.LeaseCustomerMetadataReplyOrBuilder getLeaseCustomerMetadataOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
      * @return Whether the updateCustomerState field is set.
      */
     boolean hasUpdateCustomerState();
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
      * @return The updateCustomerState.
      */
     com.elarian.hera.proto.App.UpdateCustomerStateReply getUpdateCustomerState();
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
      */
     com.elarian.hera.proto.App.UpdateCustomerStateReplyOrBuilder getUpdateCustomerStateOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
      * @return Whether the sendMessage field is set.
      */
     boolean hasSendMessage();
     /**
-     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
      * @return The sendMessage.
      */
     com.elarian.hera.proto.App.SendMessageReply getSendMessage();
     /**
-     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
      */
     com.elarian.hera.proto.App.SendMessageReplyOrBuilder getSendMessageOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
      * @return Whether the messagingConsent field is set.
      */
     boolean hasMessagingConsent();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
      * @return The messagingConsent.
      */
     com.elarian.hera.proto.App.MessagingConsentReply getMessagingConsent();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
      */
     com.elarian.hera.proto.App.MessagingConsentReplyOrBuilder getMessagingConsentOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
      * @return Whether the initiatePayment field is set.
      */
     boolean hasInitiatePayment();
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
      * @return The initiatePayment.
      */
     com.elarian.hera.proto.App.InitiatePaymentReply getInitiatePayment();
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
      */
     com.elarian.hera.proto.App.InitiatePaymentReplyOrBuilder getInitiatePaymentOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
      * @return Whether the makeVoiceCall field is set.
      */
     boolean hasMakeVoiceCall();
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
      * @return The makeVoiceCall.
      */
     com.elarian.hera.proto.App.MakeVoiceCallReply getMakeVoiceCall();
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
      */
     com.elarian.hera.proto.App.MakeVoiceCallReplyOrBuilder getMakeVoiceCallOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      * @return Whether the tagCommand field is set.
      */
     boolean hasTagCommand();
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      * @return The tagCommand.
      */
     com.elarian.hera.proto.App.TagCommandReply getTagCommand();
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      */
     com.elarian.hera.proto.App.TagCommandReplyOrBuilder getTagCommandOrBuilder();
 
@@ -6168,8 +6465,22 @@ public final class App {
               done = true;
               break;
             case 10: {
-              com.elarian.hera.proto.App.GetCustomerStateReply.Builder subBuilder = null;
+              com.elarian.hera.proto.App.GenerateAuthTokenReply.Builder subBuilder = null;
               if (entryCase_ == 1) {
+                subBuilder = ((com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_).toBuilder();
+              }
+              entry_ =
+                  input.readMessage(com.elarian.hera.proto.App.GenerateAuthTokenReply.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_);
+                entry_ = subBuilder.buildPartial();
+              }
+              entryCase_ = 1;
+              break;
+            }
+            case 18: {
+              com.elarian.hera.proto.App.GetCustomerStateReply.Builder subBuilder = null;
+              if (entryCase_ == 2) {
                 subBuilder = ((com.elarian.hera.proto.App.GetCustomerStateReply) entry_).toBuilder();
               }
               entry_ =
@@ -6178,12 +6489,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.GetCustomerStateReply) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 1;
+              entryCase_ = 2;
               break;
             }
-            case 18: {
+            case 26: {
               com.elarian.hera.proto.App.LeaseCustomerMetadataReply.Builder subBuilder = null;
-              if (entryCase_ == 2) {
+              if (entryCase_ == 3) {
                 subBuilder = ((com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_).toBuilder();
               }
               entry_ =
@@ -6192,12 +6503,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 2;
+              entryCase_ = 3;
               break;
             }
-            case 26: {
+            case 34: {
               com.elarian.hera.proto.App.UpdateCustomerStateReply.Builder subBuilder = null;
-              if (entryCase_ == 3) {
+              if (entryCase_ == 4) {
                 subBuilder = ((com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_).toBuilder();
               }
               entry_ =
@@ -6206,12 +6517,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 3;
+              entryCase_ = 4;
               break;
             }
-            case 34: {
+            case 42: {
               com.elarian.hera.proto.App.SendMessageReply.Builder subBuilder = null;
-              if (entryCase_ == 4) {
+              if (entryCase_ == 5) {
                 subBuilder = ((com.elarian.hera.proto.App.SendMessageReply) entry_).toBuilder();
               }
               entry_ =
@@ -6220,12 +6531,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.SendMessageReply) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 4;
+              entryCase_ = 5;
               break;
             }
-            case 42: {
+            case 50: {
               com.elarian.hera.proto.App.MessagingConsentReply.Builder subBuilder = null;
-              if (entryCase_ == 5) {
+              if (entryCase_ == 6) {
                 subBuilder = ((com.elarian.hera.proto.App.MessagingConsentReply) entry_).toBuilder();
               }
               entry_ =
@@ -6234,12 +6545,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.MessagingConsentReply) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 5;
+              entryCase_ = 6;
               break;
             }
-            case 50: {
+            case 58: {
               com.elarian.hera.proto.App.InitiatePaymentReply.Builder subBuilder = null;
-              if (entryCase_ == 6) {
+              if (entryCase_ == 7) {
                 subBuilder = ((com.elarian.hera.proto.App.InitiatePaymentReply) entry_).toBuilder();
               }
               entry_ =
@@ -6248,12 +6559,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.InitiatePaymentReply) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 6;
+              entryCase_ = 7;
               break;
             }
-            case 58: {
+            case 66: {
               com.elarian.hera.proto.App.MakeVoiceCallReply.Builder subBuilder = null;
-              if (entryCase_ == 7) {
+              if (entryCase_ == 8) {
                 subBuilder = ((com.elarian.hera.proto.App.MakeVoiceCallReply) entry_).toBuilder();
               }
               entry_ =
@@ -6262,12 +6573,12 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.MakeVoiceCallReply) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 7;
+              entryCase_ = 8;
               break;
             }
-            case 66: {
+            case 74: {
               com.elarian.hera.proto.App.TagCommandReply.Builder subBuilder = null;
-              if (entryCase_ == 8) {
+              if (entryCase_ == 9) {
                 subBuilder = ((com.elarian.hera.proto.App.TagCommandReply) entry_).toBuilder();
               }
               entry_ =
@@ -6276,7 +6587,7 @@ public final class App {
                 subBuilder.mergeFrom((com.elarian.hera.proto.App.TagCommandReply) entry_);
                 entry_ = subBuilder.buildPartial();
               }
-              entryCase_ = 8;
+              entryCase_ = 9;
               break;
             }
             default: {
@@ -6316,14 +6627,15 @@ public final class App {
     public enum EntryCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      GET_CUSTOMER_STATE(1),
-      LEASE_CUSTOMER_METADATA(2),
-      UPDATE_CUSTOMER_STATE(3),
-      SEND_MESSAGE(4),
-      MESSAGING_CONSENT(5),
-      INITIATE_PAYMENT(6),
-      MAKE_VOICE_CALL(7),
-      TAG_COMMAND(8),
+      GENERATE_AUTH_TOKEN(1),
+      GET_CUSTOMER_STATE(2),
+      LEASE_CUSTOMER_METADATA(3),
+      UPDATE_CUSTOMER_STATE(4),
+      SEND_MESSAGE(5),
+      MESSAGING_CONSENT(6),
+      INITIATE_PAYMENT(7),
+      MAKE_VOICE_CALL(8),
+      TAG_COMMAND(9),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -6341,14 +6653,15 @@ public final class App {
 
       public static EntryCase forNumber(int value) {
         switch (value) {
-          case 1: return GET_CUSTOMER_STATE;
-          case 2: return LEASE_CUSTOMER_METADATA;
-          case 3: return UPDATE_CUSTOMER_STATE;
-          case 4: return SEND_MESSAGE;
-          case 5: return MESSAGING_CONSENT;
-          case 6: return INITIATE_PAYMENT;
-          case 7: return MAKE_VOICE_CALL;
-          case 8: return TAG_COMMAND;
+          case 1: return GENERATE_AUTH_TOKEN;
+          case 2: return GET_CUSTOMER_STATE;
+          case 3: return LEASE_CUSTOMER_METADATA;
+          case 4: return UPDATE_CUSTOMER_STATE;
+          case 5: return SEND_MESSAGE;
+          case 6: return MESSAGING_CONSENT;
+          case 7: return INITIATE_PAYMENT;
+          case 8: return MAKE_VOICE_CALL;
+          case 9: return TAG_COMMAND;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -6364,249 +6677,280 @@ public final class App {
           entryCase_);
     }
 
-    public static final int GET_CUSTOMER_STATE_FIELD_NUMBER = 1;
+    public static final int GENERATE_AUTH_TOKEN_FIELD_NUMBER = 1;
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+     * @return Whether the generateAuthToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasGenerateAuthToken() {
+      return entryCase_ == 1;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+     * @return The generateAuthToken.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.App.GenerateAuthTokenReply getGenerateAuthToken() {
+      if (entryCase_ == 1) {
+         return (com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_;
+      }
+      return com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.App.GenerateAuthTokenReplyOrBuilder getGenerateAuthTokenOrBuilder() {
+      if (entryCase_ == 1) {
+         return (com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_;
+      }
+      return com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance();
+    }
+
+    public static final int GET_CUSTOMER_STATE_FIELD_NUMBER = 2;
+    /**
+     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
      * @return Whether the getCustomerState field is set.
      */
     @java.lang.Override
     public boolean hasGetCustomerState() {
-      return entryCase_ == 1;
+      return entryCase_ == 2;
     }
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
      * @return The getCustomerState.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.GetCustomerStateReply getGetCustomerState() {
-      if (entryCase_ == 1) {
+      if (entryCase_ == 2) {
          return (com.elarian.hera.proto.App.GetCustomerStateReply) entry_;
       }
       return com.elarian.hera.proto.App.GetCustomerStateReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+     * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.GetCustomerStateReplyOrBuilder getGetCustomerStateOrBuilder() {
-      if (entryCase_ == 1) {
+      if (entryCase_ == 2) {
          return (com.elarian.hera.proto.App.GetCustomerStateReply) entry_;
       }
       return com.elarian.hera.proto.App.GetCustomerStateReply.getDefaultInstance();
     }
 
-    public static final int LEASE_CUSTOMER_METADATA_FIELD_NUMBER = 2;
+    public static final int LEASE_CUSTOMER_METADATA_FIELD_NUMBER = 3;
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
      * @return Whether the leaseCustomerMetadata field is set.
      */
     @java.lang.Override
     public boolean hasLeaseCustomerMetadata() {
-      return entryCase_ == 2;
+      return entryCase_ == 3;
     }
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
      * @return The leaseCustomerMetadata.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.LeaseCustomerMetadataReply getLeaseCustomerMetadata() {
-      if (entryCase_ == 2) {
+      if (entryCase_ == 3) {
          return (com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_;
       }
       return com.elarian.hera.proto.App.LeaseCustomerMetadataReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+     * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.LeaseCustomerMetadataReplyOrBuilder getLeaseCustomerMetadataOrBuilder() {
-      if (entryCase_ == 2) {
+      if (entryCase_ == 3) {
          return (com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_;
       }
       return com.elarian.hera.proto.App.LeaseCustomerMetadataReply.getDefaultInstance();
     }
 
-    public static final int UPDATE_CUSTOMER_STATE_FIELD_NUMBER = 3;
+    public static final int UPDATE_CUSTOMER_STATE_FIELD_NUMBER = 4;
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
      * @return Whether the updateCustomerState field is set.
      */
     @java.lang.Override
     public boolean hasUpdateCustomerState() {
-      return entryCase_ == 3;
+      return entryCase_ == 4;
     }
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
      * @return The updateCustomerState.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.UpdateCustomerStateReply getUpdateCustomerState() {
-      if (entryCase_ == 3) {
+      if (entryCase_ == 4) {
          return (com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_;
       }
       return com.elarian.hera.proto.App.UpdateCustomerStateReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+     * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.UpdateCustomerStateReplyOrBuilder getUpdateCustomerStateOrBuilder() {
-      if (entryCase_ == 3) {
+      if (entryCase_ == 4) {
          return (com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_;
       }
       return com.elarian.hera.proto.App.UpdateCustomerStateReply.getDefaultInstance();
     }
 
-    public static final int SEND_MESSAGE_FIELD_NUMBER = 4;
+    public static final int SEND_MESSAGE_FIELD_NUMBER = 5;
     /**
-     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
      * @return Whether the sendMessage field is set.
      */
     @java.lang.Override
     public boolean hasSendMessage() {
-      return entryCase_ == 4;
+      return entryCase_ == 5;
     }
     /**
-     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
      * @return The sendMessage.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.SendMessageReply getSendMessage() {
-      if (entryCase_ == 4) {
+      if (entryCase_ == 5) {
          return (com.elarian.hera.proto.App.SendMessageReply) entry_;
       }
       return com.elarian.hera.proto.App.SendMessageReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+     * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.SendMessageReplyOrBuilder getSendMessageOrBuilder() {
-      if (entryCase_ == 4) {
+      if (entryCase_ == 5) {
          return (com.elarian.hera.proto.App.SendMessageReply) entry_;
       }
       return com.elarian.hera.proto.App.SendMessageReply.getDefaultInstance();
     }
 
-    public static final int MESSAGING_CONSENT_FIELD_NUMBER = 5;
+    public static final int MESSAGING_CONSENT_FIELD_NUMBER = 6;
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
      * @return Whether the messagingConsent field is set.
      */
     @java.lang.Override
     public boolean hasMessagingConsent() {
-      return entryCase_ == 5;
+      return entryCase_ == 6;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
      * @return The messagingConsent.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.MessagingConsentReply getMessagingConsent() {
-      if (entryCase_ == 5) {
+      if (entryCase_ == 6) {
          return (com.elarian.hera.proto.App.MessagingConsentReply) entry_;
       }
       return com.elarian.hera.proto.App.MessagingConsentReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.MessagingConsentReplyOrBuilder getMessagingConsentOrBuilder() {
-      if (entryCase_ == 5) {
+      if (entryCase_ == 6) {
          return (com.elarian.hera.proto.App.MessagingConsentReply) entry_;
       }
       return com.elarian.hera.proto.App.MessagingConsentReply.getDefaultInstance();
     }
 
-    public static final int INITIATE_PAYMENT_FIELD_NUMBER = 6;
+    public static final int INITIATE_PAYMENT_FIELD_NUMBER = 7;
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
      * @return Whether the initiatePayment field is set.
      */
     @java.lang.Override
     public boolean hasInitiatePayment() {
-      return entryCase_ == 6;
+      return entryCase_ == 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
      * @return The initiatePayment.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.InitiatePaymentReply getInitiatePayment() {
-      if (entryCase_ == 6) {
+      if (entryCase_ == 7) {
          return (com.elarian.hera.proto.App.InitiatePaymentReply) entry_;
       }
       return com.elarian.hera.proto.App.InitiatePaymentReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+     * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.InitiatePaymentReplyOrBuilder getInitiatePaymentOrBuilder() {
-      if (entryCase_ == 6) {
+      if (entryCase_ == 7) {
          return (com.elarian.hera.proto.App.InitiatePaymentReply) entry_;
       }
       return com.elarian.hera.proto.App.InitiatePaymentReply.getDefaultInstance();
     }
 
-    public static final int MAKE_VOICE_CALL_FIELD_NUMBER = 7;
+    public static final int MAKE_VOICE_CALL_FIELD_NUMBER = 8;
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
      * @return Whether the makeVoiceCall field is set.
      */
     @java.lang.Override
     public boolean hasMakeVoiceCall() {
-      return entryCase_ == 7;
+      return entryCase_ == 8;
     }
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
      * @return The makeVoiceCall.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.MakeVoiceCallReply getMakeVoiceCall() {
-      if (entryCase_ == 7) {
+      if (entryCase_ == 8) {
          return (com.elarian.hera.proto.App.MakeVoiceCallReply) entry_;
       }
       return com.elarian.hera.proto.App.MakeVoiceCallReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.MakeVoiceCallReplyOrBuilder getMakeVoiceCallOrBuilder() {
-      if (entryCase_ == 7) {
+      if (entryCase_ == 8) {
          return (com.elarian.hera.proto.App.MakeVoiceCallReply) entry_;
       }
       return com.elarian.hera.proto.App.MakeVoiceCallReply.getDefaultInstance();
     }
 
-    public static final int TAG_COMMAND_FIELD_NUMBER = 8;
+    public static final int TAG_COMMAND_FIELD_NUMBER = 9;
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      * @return Whether the tagCommand field is set.
      */
     @java.lang.Override
     public boolean hasTagCommand() {
-      return entryCase_ == 8;
+      return entryCase_ == 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      * @return The tagCommand.
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.TagCommandReply getTagCommand() {
-      if (entryCase_ == 8) {
+      if (entryCase_ == 9) {
          return (com.elarian.hera.proto.App.TagCommandReply) entry_;
       }
       return com.elarian.hera.proto.App.TagCommandReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.App.TagCommandReplyOrBuilder getTagCommandOrBuilder() {
-      if (entryCase_ == 8) {
+      if (entryCase_ == 9) {
          return (com.elarian.hera.proto.App.TagCommandReply) entry_;
       }
       return com.elarian.hera.proto.App.TagCommandReply.getDefaultInstance();
@@ -6627,28 +6971,31 @@ public final class App {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (entryCase_ == 1) {
-        output.writeMessage(1, (com.elarian.hera.proto.App.GetCustomerStateReply) entry_);
+        output.writeMessage(1, (com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_);
       }
       if (entryCase_ == 2) {
-        output.writeMessage(2, (com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_);
+        output.writeMessage(2, (com.elarian.hera.proto.App.GetCustomerStateReply) entry_);
       }
       if (entryCase_ == 3) {
-        output.writeMessage(3, (com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_);
+        output.writeMessage(3, (com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_);
       }
       if (entryCase_ == 4) {
-        output.writeMessage(4, (com.elarian.hera.proto.App.SendMessageReply) entry_);
+        output.writeMessage(4, (com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_);
       }
       if (entryCase_ == 5) {
-        output.writeMessage(5, (com.elarian.hera.proto.App.MessagingConsentReply) entry_);
+        output.writeMessage(5, (com.elarian.hera.proto.App.SendMessageReply) entry_);
       }
       if (entryCase_ == 6) {
-        output.writeMessage(6, (com.elarian.hera.proto.App.InitiatePaymentReply) entry_);
+        output.writeMessage(6, (com.elarian.hera.proto.App.MessagingConsentReply) entry_);
       }
       if (entryCase_ == 7) {
-        output.writeMessage(7, (com.elarian.hera.proto.App.MakeVoiceCallReply) entry_);
+        output.writeMessage(7, (com.elarian.hera.proto.App.InitiatePaymentReply) entry_);
       }
       if (entryCase_ == 8) {
-        output.writeMessage(8, (com.elarian.hera.proto.App.TagCommandReply) entry_);
+        output.writeMessage(8, (com.elarian.hera.proto.App.MakeVoiceCallReply) entry_);
+      }
+      if (entryCase_ == 9) {
+        output.writeMessage(9, (com.elarian.hera.proto.App.TagCommandReply) entry_);
       }
       unknownFields.writeTo(output);
     }
@@ -6661,35 +7008,39 @@ public final class App {
       size = 0;
       if (entryCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.elarian.hera.proto.App.GetCustomerStateReply) entry_);
+          .computeMessageSize(1, (com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_);
       }
       if (entryCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_);
+          .computeMessageSize(2, (com.elarian.hera.proto.App.GetCustomerStateReply) entry_);
       }
       if (entryCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_);
+          .computeMessageSize(3, (com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_);
       }
       if (entryCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.elarian.hera.proto.App.SendMessageReply) entry_);
+          .computeMessageSize(4, (com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_);
       }
       if (entryCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.elarian.hera.proto.App.MessagingConsentReply) entry_);
+          .computeMessageSize(5, (com.elarian.hera.proto.App.SendMessageReply) entry_);
       }
       if (entryCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.elarian.hera.proto.App.InitiatePaymentReply) entry_);
+          .computeMessageSize(6, (com.elarian.hera.proto.App.MessagingConsentReply) entry_);
       }
       if (entryCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (com.elarian.hera.proto.App.MakeVoiceCallReply) entry_);
+          .computeMessageSize(7, (com.elarian.hera.proto.App.InitiatePaymentReply) entry_);
       }
       if (entryCase_ == 8) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (com.elarian.hera.proto.App.TagCommandReply) entry_);
+          .computeMessageSize(8, (com.elarian.hera.proto.App.MakeVoiceCallReply) entry_);
+      }
+      if (entryCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (com.elarian.hera.proto.App.TagCommandReply) entry_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6709,34 +7060,38 @@ public final class App {
       if (!getEntryCase().equals(other.getEntryCase())) return false;
       switch (entryCase_) {
         case 1:
+          if (!getGenerateAuthToken()
+              .equals(other.getGenerateAuthToken())) return false;
+          break;
+        case 2:
           if (!getGetCustomerState()
               .equals(other.getGetCustomerState())) return false;
           break;
-        case 2:
+        case 3:
           if (!getLeaseCustomerMetadata()
               .equals(other.getLeaseCustomerMetadata())) return false;
           break;
-        case 3:
+        case 4:
           if (!getUpdateCustomerState()
               .equals(other.getUpdateCustomerState())) return false;
           break;
-        case 4:
+        case 5:
           if (!getSendMessage()
               .equals(other.getSendMessage())) return false;
           break;
-        case 5:
+        case 6:
           if (!getMessagingConsent()
               .equals(other.getMessagingConsent())) return false;
           break;
-        case 6:
+        case 7:
           if (!getInitiatePayment()
               .equals(other.getInitiatePayment())) return false;
           break;
-        case 7:
+        case 8:
           if (!getMakeVoiceCall()
               .equals(other.getMakeVoiceCall())) return false;
           break;
-        case 8:
+        case 9:
           if (!getTagCommand()
               .equals(other.getTagCommand())) return false;
           break;
@@ -6756,34 +7111,38 @@ public final class App {
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (entryCase_) {
         case 1:
+          hash = (37 * hash) + GENERATE_AUTH_TOKEN_FIELD_NUMBER;
+          hash = (53 * hash) + getGenerateAuthToken().hashCode();
+          break;
+        case 2:
           hash = (37 * hash) + GET_CUSTOMER_STATE_FIELD_NUMBER;
           hash = (53 * hash) + getGetCustomerState().hashCode();
           break;
-        case 2:
+        case 3:
           hash = (37 * hash) + LEASE_CUSTOMER_METADATA_FIELD_NUMBER;
           hash = (53 * hash) + getLeaseCustomerMetadata().hashCode();
           break;
-        case 3:
+        case 4:
           hash = (37 * hash) + UPDATE_CUSTOMER_STATE_FIELD_NUMBER;
           hash = (53 * hash) + getUpdateCustomerState().hashCode();
           break;
-        case 4:
+        case 5:
           hash = (37 * hash) + SEND_MESSAGE_FIELD_NUMBER;
           hash = (53 * hash) + getSendMessage().hashCode();
           break;
-        case 5:
+        case 6:
           hash = (37 * hash) + MESSAGING_CONSENT_FIELD_NUMBER;
           hash = (53 * hash) + getMessagingConsent().hashCode();
           break;
-        case 6:
+        case 7:
           hash = (37 * hash) + INITIATE_PAYMENT_FIELD_NUMBER;
           hash = (53 * hash) + getInitiatePayment().hashCode();
           break;
-        case 7:
+        case 8:
           hash = (37 * hash) + MAKE_VOICE_CALL_FIELD_NUMBER;
           hash = (53 * hash) + getMakeVoiceCall().hashCode();
           break;
-        case 8:
+        case 9:
           hash = (37 * hash) + TAG_COMMAND_FIELD_NUMBER;
           hash = (53 * hash) + getTagCommand().hashCode();
           break;
@@ -6952,55 +7311,62 @@ public final class App {
       public com.elarian.hera.proto.App.AppToServerCommandReply buildPartial() {
         com.elarian.hera.proto.App.AppToServerCommandReply result = new com.elarian.hera.proto.App.AppToServerCommandReply(this);
         if (entryCase_ == 1) {
+          if (generateAuthTokenBuilder_ == null) {
+            result.entry_ = entry_;
+          } else {
+            result.entry_ = generateAuthTokenBuilder_.build();
+          }
+        }
+        if (entryCase_ == 2) {
           if (getCustomerStateBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = getCustomerStateBuilder_.build();
           }
         }
-        if (entryCase_ == 2) {
+        if (entryCase_ == 3) {
           if (leaseCustomerMetadataBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = leaseCustomerMetadataBuilder_.build();
           }
         }
-        if (entryCase_ == 3) {
+        if (entryCase_ == 4) {
           if (updateCustomerStateBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = updateCustomerStateBuilder_.build();
           }
         }
-        if (entryCase_ == 4) {
+        if (entryCase_ == 5) {
           if (sendMessageBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = sendMessageBuilder_.build();
           }
         }
-        if (entryCase_ == 5) {
+        if (entryCase_ == 6) {
           if (messagingConsentBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = messagingConsentBuilder_.build();
           }
         }
-        if (entryCase_ == 6) {
+        if (entryCase_ == 7) {
           if (initiatePaymentBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = initiatePaymentBuilder_.build();
           }
         }
-        if (entryCase_ == 7) {
+        if (entryCase_ == 8) {
           if (makeVoiceCallBuilder_ == null) {
             result.entry_ = entry_;
           } else {
             result.entry_ = makeVoiceCallBuilder_.build();
           }
         }
-        if (entryCase_ == 8) {
+        if (entryCase_ == 9) {
           if (tagCommandBuilder_ == null) {
             result.entry_ = entry_;
           } else {
@@ -7057,6 +7423,10 @@ public final class App {
       public Builder mergeFrom(com.elarian.hera.proto.App.AppToServerCommandReply other) {
         if (other == com.elarian.hera.proto.App.AppToServerCommandReply.getDefaultInstance()) return this;
         switch (other.getEntryCase()) {
+          case GENERATE_AUTH_TOKEN: {
+            mergeGenerateAuthToken(other.getGenerateAuthToken());
+            break;
+          }
           case GET_CUSTOMER_STATE: {
             mergeGetCustomerState(other.getGetCustomerState());
             break;
@@ -7138,35 +7508,176 @@ public final class App {
 
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.App.GenerateAuthTokenReply, com.elarian.hera.proto.App.GenerateAuthTokenReply.Builder, com.elarian.hera.proto.App.GenerateAuthTokenReplyOrBuilder> generateAuthTokenBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       * @return Whether the generateAuthToken field is set.
+       */
+      @java.lang.Override
+      public boolean hasGenerateAuthToken() {
+        return entryCase_ == 1;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       * @return The generateAuthToken.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.App.GenerateAuthTokenReply getGenerateAuthToken() {
+        if (generateAuthTokenBuilder_ == null) {
+          if (entryCase_ == 1) {
+            return (com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_;
+          }
+          return com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance();
+        } else {
+          if (entryCase_ == 1) {
+            return generateAuthTokenBuilder_.getMessage();
+          }
+          return com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       */
+      public Builder setGenerateAuthToken(com.elarian.hera.proto.App.GenerateAuthTokenReply value) {
+        if (generateAuthTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entry_ = value;
+          onChanged();
+        } else {
+          generateAuthTokenBuilder_.setMessage(value);
+        }
+        entryCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       */
+      public Builder setGenerateAuthToken(
+          com.elarian.hera.proto.App.GenerateAuthTokenReply.Builder builderForValue) {
+        if (generateAuthTokenBuilder_ == null) {
+          entry_ = builderForValue.build();
+          onChanged();
+        } else {
+          generateAuthTokenBuilder_.setMessage(builderForValue.build());
+        }
+        entryCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       */
+      public Builder mergeGenerateAuthToken(com.elarian.hera.proto.App.GenerateAuthTokenReply value) {
+        if (generateAuthTokenBuilder_ == null) {
+          if (entryCase_ == 1 &&
+              entry_ != com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance()) {
+            entry_ = com.elarian.hera.proto.App.GenerateAuthTokenReply.newBuilder((com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            entry_ = value;
+          }
+          onChanged();
+        } else {
+          if (entryCase_ == 1) {
+            generateAuthTokenBuilder_.mergeFrom(value);
+          }
+          generateAuthTokenBuilder_.setMessage(value);
+        }
+        entryCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       */
+      public Builder clearGenerateAuthToken() {
+        if (generateAuthTokenBuilder_ == null) {
+          if (entryCase_ == 1) {
+            entryCase_ = 0;
+            entry_ = null;
+            onChanged();
+          }
+        } else {
+          if (entryCase_ == 1) {
+            entryCase_ = 0;
+            entry_ = null;
+          }
+          generateAuthTokenBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       */
+      public com.elarian.hera.proto.App.GenerateAuthTokenReply.Builder getGenerateAuthTokenBuilder() {
+        return getGenerateAuthTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.App.GenerateAuthTokenReplyOrBuilder getGenerateAuthTokenOrBuilder() {
+        if ((entryCase_ == 1) && (generateAuthTokenBuilder_ != null)) {
+          return generateAuthTokenBuilder_.getMessageOrBuilder();
+        } else {
+          if (entryCase_ == 1) {
+            return (com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_;
+          }
+          return com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.App.GenerateAuthTokenReply, com.elarian.hera.proto.App.GenerateAuthTokenReply.Builder, com.elarian.hera.proto.App.GenerateAuthTokenReplyOrBuilder> 
+          getGenerateAuthTokenFieldBuilder() {
+        if (generateAuthTokenBuilder_ == null) {
+          if (!(entryCase_ == 1)) {
+            entry_ = com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance();
+          }
+          generateAuthTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.App.GenerateAuthTokenReply, com.elarian.hera.proto.App.GenerateAuthTokenReply.Builder, com.elarian.hera.proto.App.GenerateAuthTokenReplyOrBuilder>(
+                  (com.elarian.hera.proto.App.GenerateAuthTokenReply) entry_,
+                  getParentForChildren(),
+                  isClean());
+          entry_ = null;
+        }
+        entryCase_ = 1;
+        onChanged();;
+        return generateAuthTokenBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.GetCustomerStateReply, com.elarian.hera.proto.App.GetCustomerStateReply.Builder, com.elarian.hera.proto.App.GetCustomerStateReplyOrBuilder> getCustomerStateBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        * @return Whether the getCustomerState field is set.
        */
       @java.lang.Override
       public boolean hasGetCustomerState() {
-        return entryCase_ == 1;
+        return entryCase_ == 2;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        * @return The getCustomerState.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.GetCustomerStateReply getGetCustomerState() {
         if (getCustomerStateBuilder_ == null) {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             return (com.elarian.hera.proto.App.GetCustomerStateReply) entry_;
           }
           return com.elarian.hera.proto.App.GetCustomerStateReply.getDefaultInstance();
         } else {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             return getCustomerStateBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.GetCustomerStateReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        */
       public Builder setGetCustomerState(com.elarian.hera.proto.App.GetCustomerStateReply value) {
         if (getCustomerStateBuilder_ == null) {
@@ -7178,11 +7689,11 @@ public final class App {
         } else {
           getCustomerStateBuilder_.setMessage(value);
         }
-        entryCase_ = 1;
+        entryCase_ = 2;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        */
       public Builder setGetCustomerState(
           com.elarian.hera.proto.App.GetCustomerStateReply.Builder builderForValue) {
@@ -7192,15 +7703,15 @@ public final class App {
         } else {
           getCustomerStateBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 1;
+        entryCase_ = 2;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        */
       public Builder mergeGetCustomerState(com.elarian.hera.proto.App.GetCustomerStateReply value) {
         if (getCustomerStateBuilder_ == null) {
-          if (entryCase_ == 1 &&
+          if (entryCase_ == 2 &&
               entry_ != com.elarian.hera.proto.App.GetCustomerStateReply.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.GetCustomerStateReply.newBuilder((com.elarian.hera.proto.App.GetCustomerStateReply) entry_)
                 .mergeFrom(value).buildPartial();
@@ -7209,26 +7720,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             getCustomerStateBuilder_.mergeFrom(value);
           }
           getCustomerStateBuilder_.setMessage(value);
         }
-        entryCase_ = 1;
+        entryCase_ = 2;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        */
       public Builder clearGetCustomerState() {
         if (getCustomerStateBuilder_ == null) {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -7237,33 +7748,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        */
       public com.elarian.hera.proto.App.GetCustomerStateReply.Builder getGetCustomerStateBuilder() {
         return getGetCustomerStateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.GetCustomerStateReplyOrBuilder getGetCustomerStateOrBuilder() {
-        if ((entryCase_ == 1) && (getCustomerStateBuilder_ != null)) {
+        if ((entryCase_ == 2) && (getCustomerStateBuilder_ != null)) {
           return getCustomerStateBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 1) {
+          if (entryCase_ == 2) {
             return (com.elarian.hera.proto.App.GetCustomerStateReply) entry_;
           }
           return com.elarian.hera.proto.App.GetCustomerStateReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 1;</code>
+       * <code>.com.elarian.hera.proto.GetCustomerStateReply get_customer_state = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.GetCustomerStateReply, com.elarian.hera.proto.App.GetCustomerStateReply.Builder, com.elarian.hera.proto.App.GetCustomerStateReplyOrBuilder> 
           getGetCustomerStateFieldBuilder() {
         if (getCustomerStateBuilder_ == null) {
-          if (!(entryCase_ == 1)) {
+          if (!(entryCase_ == 2)) {
             entry_ = com.elarian.hera.proto.App.GetCustomerStateReply.getDefaultInstance();
           }
           getCustomerStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -7273,7 +7784,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 1;
+        entryCase_ = 2;
         onChanged();;
         return getCustomerStateBuilder_;
       }
@@ -7281,33 +7792,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.LeaseCustomerMetadataReply, com.elarian.hera.proto.App.LeaseCustomerMetadataReply.Builder, com.elarian.hera.proto.App.LeaseCustomerMetadataReplyOrBuilder> leaseCustomerMetadataBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        * @return Whether the leaseCustomerMetadata field is set.
        */
       @java.lang.Override
       public boolean hasLeaseCustomerMetadata() {
-        return entryCase_ == 2;
+        return entryCase_ == 3;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        * @return The leaseCustomerMetadata.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.LeaseCustomerMetadataReply getLeaseCustomerMetadata() {
         if (leaseCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             return (com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_;
           }
           return com.elarian.hera.proto.App.LeaseCustomerMetadataReply.getDefaultInstance();
         } else {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             return leaseCustomerMetadataBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.LeaseCustomerMetadataReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        */
       public Builder setLeaseCustomerMetadata(com.elarian.hera.proto.App.LeaseCustomerMetadataReply value) {
         if (leaseCustomerMetadataBuilder_ == null) {
@@ -7319,11 +7830,11 @@ public final class App {
         } else {
           leaseCustomerMetadataBuilder_.setMessage(value);
         }
-        entryCase_ = 2;
+        entryCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        */
       public Builder setLeaseCustomerMetadata(
           com.elarian.hera.proto.App.LeaseCustomerMetadataReply.Builder builderForValue) {
@@ -7333,15 +7844,15 @@ public final class App {
         } else {
           leaseCustomerMetadataBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 2;
+        entryCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        */
       public Builder mergeLeaseCustomerMetadata(com.elarian.hera.proto.App.LeaseCustomerMetadataReply value) {
         if (leaseCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 2 &&
+          if (entryCase_ == 3 &&
               entry_ != com.elarian.hera.proto.App.LeaseCustomerMetadataReply.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.LeaseCustomerMetadataReply.newBuilder((com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_)
                 .mergeFrom(value).buildPartial();
@@ -7350,26 +7861,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             leaseCustomerMetadataBuilder_.mergeFrom(value);
           }
           leaseCustomerMetadataBuilder_.setMessage(value);
         }
-        entryCase_ = 2;
+        entryCase_ = 3;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        */
       public Builder clearLeaseCustomerMetadata() {
         if (leaseCustomerMetadataBuilder_ == null) {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -7378,33 +7889,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        */
       public com.elarian.hera.proto.App.LeaseCustomerMetadataReply.Builder getLeaseCustomerMetadataBuilder() {
         return getLeaseCustomerMetadataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.LeaseCustomerMetadataReplyOrBuilder getLeaseCustomerMetadataOrBuilder() {
-        if ((entryCase_ == 2) && (leaseCustomerMetadataBuilder_ != null)) {
+        if ((entryCase_ == 3) && (leaseCustomerMetadataBuilder_ != null)) {
           return leaseCustomerMetadataBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 2) {
+          if (entryCase_ == 3) {
             return (com.elarian.hera.proto.App.LeaseCustomerMetadataReply) entry_;
           }
           return com.elarian.hera.proto.App.LeaseCustomerMetadataReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 2;</code>
+       * <code>.com.elarian.hera.proto.LeaseCustomerMetadataReply lease_customer_metadata = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.LeaseCustomerMetadataReply, com.elarian.hera.proto.App.LeaseCustomerMetadataReply.Builder, com.elarian.hera.proto.App.LeaseCustomerMetadataReplyOrBuilder> 
           getLeaseCustomerMetadataFieldBuilder() {
         if (leaseCustomerMetadataBuilder_ == null) {
-          if (!(entryCase_ == 2)) {
+          if (!(entryCase_ == 3)) {
             entry_ = com.elarian.hera.proto.App.LeaseCustomerMetadataReply.getDefaultInstance();
           }
           leaseCustomerMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -7414,7 +7925,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 2;
+        entryCase_ = 3;
         onChanged();;
         return leaseCustomerMetadataBuilder_;
       }
@@ -7422,33 +7933,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.UpdateCustomerStateReply, com.elarian.hera.proto.App.UpdateCustomerStateReply.Builder, com.elarian.hera.proto.App.UpdateCustomerStateReplyOrBuilder> updateCustomerStateBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        * @return Whether the updateCustomerState field is set.
        */
       @java.lang.Override
       public boolean hasUpdateCustomerState() {
-        return entryCase_ == 3;
+        return entryCase_ == 4;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        * @return The updateCustomerState.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.UpdateCustomerStateReply getUpdateCustomerState() {
         if (updateCustomerStateBuilder_ == null) {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             return (com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_;
           }
           return com.elarian.hera.proto.App.UpdateCustomerStateReply.getDefaultInstance();
         } else {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             return updateCustomerStateBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.UpdateCustomerStateReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        */
       public Builder setUpdateCustomerState(com.elarian.hera.proto.App.UpdateCustomerStateReply value) {
         if (updateCustomerStateBuilder_ == null) {
@@ -7460,11 +7971,11 @@ public final class App {
         } else {
           updateCustomerStateBuilder_.setMessage(value);
         }
-        entryCase_ = 3;
+        entryCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        */
       public Builder setUpdateCustomerState(
           com.elarian.hera.proto.App.UpdateCustomerStateReply.Builder builderForValue) {
@@ -7474,15 +7985,15 @@ public final class App {
         } else {
           updateCustomerStateBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 3;
+        entryCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        */
       public Builder mergeUpdateCustomerState(com.elarian.hera.proto.App.UpdateCustomerStateReply value) {
         if (updateCustomerStateBuilder_ == null) {
-          if (entryCase_ == 3 &&
+          if (entryCase_ == 4 &&
               entry_ != com.elarian.hera.proto.App.UpdateCustomerStateReply.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.UpdateCustomerStateReply.newBuilder((com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_)
                 .mergeFrom(value).buildPartial();
@@ -7491,26 +8002,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             updateCustomerStateBuilder_.mergeFrom(value);
           }
           updateCustomerStateBuilder_.setMessage(value);
         }
-        entryCase_ = 3;
+        entryCase_ = 4;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        */
       public Builder clearUpdateCustomerState() {
         if (updateCustomerStateBuilder_ == null) {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -7519,33 +8030,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        */
       public com.elarian.hera.proto.App.UpdateCustomerStateReply.Builder getUpdateCustomerStateBuilder() {
         return getUpdateCustomerStateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.UpdateCustomerStateReplyOrBuilder getUpdateCustomerStateOrBuilder() {
-        if ((entryCase_ == 3) && (updateCustomerStateBuilder_ != null)) {
+        if ((entryCase_ == 4) && (updateCustomerStateBuilder_ != null)) {
           return updateCustomerStateBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 3) {
+          if (entryCase_ == 4) {
             return (com.elarian.hera.proto.App.UpdateCustomerStateReply) entry_;
           }
           return com.elarian.hera.proto.App.UpdateCustomerStateReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 3;</code>
+       * <code>.com.elarian.hera.proto.UpdateCustomerStateReply update_customer_state = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.UpdateCustomerStateReply, com.elarian.hera.proto.App.UpdateCustomerStateReply.Builder, com.elarian.hera.proto.App.UpdateCustomerStateReplyOrBuilder> 
           getUpdateCustomerStateFieldBuilder() {
         if (updateCustomerStateBuilder_ == null) {
-          if (!(entryCase_ == 3)) {
+          if (!(entryCase_ == 4)) {
             entry_ = com.elarian.hera.proto.App.UpdateCustomerStateReply.getDefaultInstance();
           }
           updateCustomerStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -7555,7 +8066,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 3;
+        entryCase_ = 4;
         onChanged();;
         return updateCustomerStateBuilder_;
       }
@@ -7563,33 +8074,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.SendMessageReply, com.elarian.hera.proto.App.SendMessageReply.Builder, com.elarian.hera.proto.App.SendMessageReplyOrBuilder> sendMessageBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        * @return Whether the sendMessage field is set.
        */
       @java.lang.Override
       public boolean hasSendMessage() {
-        return entryCase_ == 4;
+        return entryCase_ == 5;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        * @return The sendMessage.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.SendMessageReply getSendMessage() {
         if (sendMessageBuilder_ == null) {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             return (com.elarian.hera.proto.App.SendMessageReply) entry_;
           }
           return com.elarian.hera.proto.App.SendMessageReply.getDefaultInstance();
         } else {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             return sendMessageBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.SendMessageReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        */
       public Builder setSendMessage(com.elarian.hera.proto.App.SendMessageReply value) {
         if (sendMessageBuilder_ == null) {
@@ -7601,11 +8112,11 @@ public final class App {
         } else {
           sendMessageBuilder_.setMessage(value);
         }
-        entryCase_ = 4;
+        entryCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        */
       public Builder setSendMessage(
           com.elarian.hera.proto.App.SendMessageReply.Builder builderForValue) {
@@ -7615,15 +8126,15 @@ public final class App {
         } else {
           sendMessageBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 4;
+        entryCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        */
       public Builder mergeSendMessage(com.elarian.hera.proto.App.SendMessageReply value) {
         if (sendMessageBuilder_ == null) {
-          if (entryCase_ == 4 &&
+          if (entryCase_ == 5 &&
               entry_ != com.elarian.hera.proto.App.SendMessageReply.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.SendMessageReply.newBuilder((com.elarian.hera.proto.App.SendMessageReply) entry_)
                 .mergeFrom(value).buildPartial();
@@ -7632,26 +8143,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             sendMessageBuilder_.mergeFrom(value);
           }
           sendMessageBuilder_.setMessage(value);
         }
-        entryCase_ = 4;
+        entryCase_ = 5;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        */
       public Builder clearSendMessage() {
         if (sendMessageBuilder_ == null) {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -7660,33 +8171,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        */
       public com.elarian.hera.proto.App.SendMessageReply.Builder getSendMessageBuilder() {
         return getSendMessageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.SendMessageReplyOrBuilder getSendMessageOrBuilder() {
-        if ((entryCase_ == 4) && (sendMessageBuilder_ != null)) {
+        if ((entryCase_ == 5) && (sendMessageBuilder_ != null)) {
           return sendMessageBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 4) {
+          if (entryCase_ == 5) {
             return (com.elarian.hera.proto.App.SendMessageReply) entry_;
           }
           return com.elarian.hera.proto.App.SendMessageReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 4;</code>
+       * <code>.com.elarian.hera.proto.SendMessageReply send_message = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.SendMessageReply, com.elarian.hera.proto.App.SendMessageReply.Builder, com.elarian.hera.proto.App.SendMessageReplyOrBuilder> 
           getSendMessageFieldBuilder() {
         if (sendMessageBuilder_ == null) {
-          if (!(entryCase_ == 4)) {
+          if (!(entryCase_ == 5)) {
             entry_ = com.elarian.hera.proto.App.SendMessageReply.getDefaultInstance();
           }
           sendMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -7696,7 +8207,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 4;
+        entryCase_ = 5;
         onChanged();;
         return sendMessageBuilder_;
       }
@@ -7704,33 +8215,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.MessagingConsentReply, com.elarian.hera.proto.App.MessagingConsentReply.Builder, com.elarian.hera.proto.App.MessagingConsentReplyOrBuilder> messagingConsentBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        * @return Whether the messagingConsent field is set.
        */
       @java.lang.Override
       public boolean hasMessagingConsent() {
-        return entryCase_ == 5;
+        return entryCase_ == 6;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        * @return The messagingConsent.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.MessagingConsentReply getMessagingConsent() {
         if (messagingConsentBuilder_ == null) {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             return (com.elarian.hera.proto.App.MessagingConsentReply) entry_;
           }
           return com.elarian.hera.proto.App.MessagingConsentReply.getDefaultInstance();
         } else {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             return messagingConsentBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.MessagingConsentReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        */
       public Builder setMessagingConsent(com.elarian.hera.proto.App.MessagingConsentReply value) {
         if (messagingConsentBuilder_ == null) {
@@ -7742,11 +8253,11 @@ public final class App {
         } else {
           messagingConsentBuilder_.setMessage(value);
         }
-        entryCase_ = 5;
+        entryCase_ = 6;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        */
       public Builder setMessagingConsent(
           com.elarian.hera.proto.App.MessagingConsentReply.Builder builderForValue) {
@@ -7756,15 +8267,15 @@ public final class App {
         } else {
           messagingConsentBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 5;
+        entryCase_ = 6;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        */
       public Builder mergeMessagingConsent(com.elarian.hera.proto.App.MessagingConsentReply value) {
         if (messagingConsentBuilder_ == null) {
-          if (entryCase_ == 5 &&
+          if (entryCase_ == 6 &&
               entry_ != com.elarian.hera.proto.App.MessagingConsentReply.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.MessagingConsentReply.newBuilder((com.elarian.hera.proto.App.MessagingConsentReply) entry_)
                 .mergeFrom(value).buildPartial();
@@ -7773,26 +8284,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             messagingConsentBuilder_.mergeFrom(value);
           }
           messagingConsentBuilder_.setMessage(value);
         }
-        entryCase_ = 5;
+        entryCase_ = 6;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        */
       public Builder clearMessagingConsent() {
         if (messagingConsentBuilder_ == null) {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -7801,33 +8312,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        */
       public com.elarian.hera.proto.App.MessagingConsentReply.Builder getMessagingConsentBuilder() {
         return getMessagingConsentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.MessagingConsentReplyOrBuilder getMessagingConsentOrBuilder() {
-        if ((entryCase_ == 5) && (messagingConsentBuilder_ != null)) {
+        if ((entryCase_ == 6) && (messagingConsentBuilder_ != null)) {
           return messagingConsentBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 5) {
+          if (entryCase_ == 6) {
             return (com.elarian.hera.proto.App.MessagingConsentReply) entry_;
           }
           return com.elarian.hera.proto.App.MessagingConsentReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 5;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.MessagingConsentReply, com.elarian.hera.proto.App.MessagingConsentReply.Builder, com.elarian.hera.proto.App.MessagingConsentReplyOrBuilder> 
           getMessagingConsentFieldBuilder() {
         if (messagingConsentBuilder_ == null) {
-          if (!(entryCase_ == 5)) {
+          if (!(entryCase_ == 6)) {
             entry_ = com.elarian.hera.proto.App.MessagingConsentReply.getDefaultInstance();
           }
           messagingConsentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -7837,7 +8348,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 5;
+        entryCase_ = 6;
         onChanged();;
         return messagingConsentBuilder_;
       }
@@ -7845,33 +8356,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.InitiatePaymentReply, com.elarian.hera.proto.App.InitiatePaymentReply.Builder, com.elarian.hera.proto.App.InitiatePaymentReplyOrBuilder> initiatePaymentBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        * @return Whether the initiatePayment field is set.
        */
       @java.lang.Override
       public boolean hasInitiatePayment() {
-        return entryCase_ == 6;
+        return entryCase_ == 7;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        * @return The initiatePayment.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.InitiatePaymentReply getInitiatePayment() {
         if (initiatePaymentBuilder_ == null) {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             return (com.elarian.hera.proto.App.InitiatePaymentReply) entry_;
           }
           return com.elarian.hera.proto.App.InitiatePaymentReply.getDefaultInstance();
         } else {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             return initiatePaymentBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.InitiatePaymentReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        */
       public Builder setInitiatePayment(com.elarian.hera.proto.App.InitiatePaymentReply value) {
         if (initiatePaymentBuilder_ == null) {
@@ -7883,11 +8394,11 @@ public final class App {
         } else {
           initiatePaymentBuilder_.setMessage(value);
         }
-        entryCase_ = 6;
+        entryCase_ = 7;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        */
       public Builder setInitiatePayment(
           com.elarian.hera.proto.App.InitiatePaymentReply.Builder builderForValue) {
@@ -7897,15 +8408,15 @@ public final class App {
         } else {
           initiatePaymentBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 6;
+        entryCase_ = 7;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        */
       public Builder mergeInitiatePayment(com.elarian.hera.proto.App.InitiatePaymentReply value) {
         if (initiatePaymentBuilder_ == null) {
-          if (entryCase_ == 6 &&
+          if (entryCase_ == 7 &&
               entry_ != com.elarian.hera.proto.App.InitiatePaymentReply.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.InitiatePaymentReply.newBuilder((com.elarian.hera.proto.App.InitiatePaymentReply) entry_)
                 .mergeFrom(value).buildPartial();
@@ -7914,26 +8425,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             initiatePaymentBuilder_.mergeFrom(value);
           }
           initiatePaymentBuilder_.setMessage(value);
         }
-        entryCase_ = 6;
+        entryCase_ = 7;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        */
       public Builder clearInitiatePayment() {
         if (initiatePaymentBuilder_ == null) {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -7942,33 +8453,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        */
       public com.elarian.hera.proto.App.InitiatePaymentReply.Builder getInitiatePaymentBuilder() {
         return getInitiatePaymentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.InitiatePaymentReplyOrBuilder getInitiatePaymentOrBuilder() {
-        if ((entryCase_ == 6) && (initiatePaymentBuilder_ != null)) {
+        if ((entryCase_ == 7) && (initiatePaymentBuilder_ != null)) {
           return initiatePaymentBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 6) {
+          if (entryCase_ == 7) {
             return (com.elarian.hera.proto.App.InitiatePaymentReply) entry_;
           }
           return com.elarian.hera.proto.App.InitiatePaymentReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 6;</code>
+       * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.InitiatePaymentReply, com.elarian.hera.proto.App.InitiatePaymentReply.Builder, com.elarian.hera.proto.App.InitiatePaymentReplyOrBuilder> 
           getInitiatePaymentFieldBuilder() {
         if (initiatePaymentBuilder_ == null) {
-          if (!(entryCase_ == 6)) {
+          if (!(entryCase_ == 7)) {
             entry_ = com.elarian.hera.proto.App.InitiatePaymentReply.getDefaultInstance();
           }
           initiatePaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -7978,7 +8489,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 6;
+        entryCase_ = 7;
         onChanged();;
         return initiatePaymentBuilder_;
       }
@@ -7986,33 +8497,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.MakeVoiceCallReply, com.elarian.hera.proto.App.MakeVoiceCallReply.Builder, com.elarian.hera.proto.App.MakeVoiceCallReplyOrBuilder> makeVoiceCallBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        * @return Whether the makeVoiceCall field is set.
        */
       @java.lang.Override
       public boolean hasMakeVoiceCall() {
-        return entryCase_ == 7;
+        return entryCase_ == 8;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        * @return The makeVoiceCall.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.MakeVoiceCallReply getMakeVoiceCall() {
         if (makeVoiceCallBuilder_ == null) {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             return (com.elarian.hera.proto.App.MakeVoiceCallReply) entry_;
           }
           return com.elarian.hera.proto.App.MakeVoiceCallReply.getDefaultInstance();
         } else {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             return makeVoiceCallBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.MakeVoiceCallReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        */
       public Builder setMakeVoiceCall(com.elarian.hera.proto.App.MakeVoiceCallReply value) {
         if (makeVoiceCallBuilder_ == null) {
@@ -8024,11 +8535,11 @@ public final class App {
         } else {
           makeVoiceCallBuilder_.setMessage(value);
         }
-        entryCase_ = 7;
+        entryCase_ = 8;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        */
       public Builder setMakeVoiceCall(
           com.elarian.hera.proto.App.MakeVoiceCallReply.Builder builderForValue) {
@@ -8038,15 +8549,15 @@ public final class App {
         } else {
           makeVoiceCallBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 7;
+        entryCase_ = 8;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        */
       public Builder mergeMakeVoiceCall(com.elarian.hera.proto.App.MakeVoiceCallReply value) {
         if (makeVoiceCallBuilder_ == null) {
-          if (entryCase_ == 7 &&
+          if (entryCase_ == 8 &&
               entry_ != com.elarian.hera.proto.App.MakeVoiceCallReply.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.MakeVoiceCallReply.newBuilder((com.elarian.hera.proto.App.MakeVoiceCallReply) entry_)
                 .mergeFrom(value).buildPartial();
@@ -8055,26 +8566,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             makeVoiceCallBuilder_.mergeFrom(value);
           }
           makeVoiceCallBuilder_.setMessage(value);
         }
-        entryCase_ = 7;
+        entryCase_ = 8;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        */
       public Builder clearMakeVoiceCall() {
         if (makeVoiceCallBuilder_ == null) {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -8083,33 +8594,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        */
       public com.elarian.hera.proto.App.MakeVoiceCallReply.Builder getMakeVoiceCallBuilder() {
         return getMakeVoiceCallFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.MakeVoiceCallReplyOrBuilder getMakeVoiceCallOrBuilder() {
-        if ((entryCase_ == 7) && (makeVoiceCallBuilder_ != null)) {
+        if ((entryCase_ == 8) && (makeVoiceCallBuilder_ != null)) {
           return makeVoiceCallBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 7) {
+          if (entryCase_ == 8) {
             return (com.elarian.hera.proto.App.MakeVoiceCallReply) entry_;
           }
           return com.elarian.hera.proto.App.MakeVoiceCallReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 7;</code>
+       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.MakeVoiceCallReply, com.elarian.hera.proto.App.MakeVoiceCallReply.Builder, com.elarian.hera.proto.App.MakeVoiceCallReplyOrBuilder> 
           getMakeVoiceCallFieldBuilder() {
         if (makeVoiceCallBuilder_ == null) {
-          if (!(entryCase_ == 7)) {
+          if (!(entryCase_ == 8)) {
             entry_ = com.elarian.hera.proto.App.MakeVoiceCallReply.getDefaultInstance();
           }
           makeVoiceCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -8119,7 +8630,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 7;
+        entryCase_ = 8;
         onChanged();;
         return makeVoiceCallBuilder_;
       }
@@ -8127,33 +8638,33 @@ public final class App {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.TagCommandReply, com.elarian.hera.proto.App.TagCommandReply.Builder, com.elarian.hera.proto.App.TagCommandReplyOrBuilder> tagCommandBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        * @return Whether the tagCommand field is set.
        */
       @java.lang.Override
       public boolean hasTagCommand() {
-        return entryCase_ == 8;
+        return entryCase_ == 9;
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        * @return The tagCommand.
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.TagCommandReply getTagCommand() {
         if (tagCommandBuilder_ == null) {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             return (com.elarian.hera.proto.App.TagCommandReply) entry_;
           }
           return com.elarian.hera.proto.App.TagCommandReply.getDefaultInstance();
         } else {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             return tagCommandBuilder_.getMessage();
           }
           return com.elarian.hera.proto.App.TagCommandReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public Builder setTagCommand(com.elarian.hera.proto.App.TagCommandReply value) {
         if (tagCommandBuilder_ == null) {
@@ -8165,11 +8676,11 @@ public final class App {
         } else {
           tagCommandBuilder_.setMessage(value);
         }
-        entryCase_ = 8;
+        entryCase_ = 9;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public Builder setTagCommand(
           com.elarian.hera.proto.App.TagCommandReply.Builder builderForValue) {
@@ -8179,15 +8690,15 @@ public final class App {
         } else {
           tagCommandBuilder_.setMessage(builderForValue.build());
         }
-        entryCase_ = 8;
+        entryCase_ = 9;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public Builder mergeTagCommand(com.elarian.hera.proto.App.TagCommandReply value) {
         if (tagCommandBuilder_ == null) {
-          if (entryCase_ == 8 &&
+          if (entryCase_ == 9 &&
               entry_ != com.elarian.hera.proto.App.TagCommandReply.getDefaultInstance()) {
             entry_ = com.elarian.hera.proto.App.TagCommandReply.newBuilder((com.elarian.hera.proto.App.TagCommandReply) entry_)
                 .mergeFrom(value).buildPartial();
@@ -8196,26 +8707,26 @@ public final class App {
           }
           onChanged();
         } else {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             tagCommandBuilder_.mergeFrom(value);
           }
           tagCommandBuilder_.setMessage(value);
         }
-        entryCase_ = 8;
+        entryCase_ = 9;
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public Builder clearTagCommand() {
         if (tagCommandBuilder_ == null) {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             entryCase_ = 0;
             entry_ = null;
             onChanged();
           }
         } else {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             entryCase_ = 0;
             entry_ = null;
           }
@@ -8224,33 +8735,33 @@ public final class App {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public com.elarian.hera.proto.App.TagCommandReply.Builder getTagCommandBuilder() {
         return getTagCommandFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.App.TagCommandReplyOrBuilder getTagCommandOrBuilder() {
-        if ((entryCase_ == 8) && (tagCommandBuilder_ != null)) {
+        if ((entryCase_ == 9) && (tagCommandBuilder_ != null)) {
           return tagCommandBuilder_.getMessageOrBuilder();
         } else {
-          if (entryCase_ == 8) {
+          if (entryCase_ == 9) {
             return (com.elarian.hera.proto.App.TagCommandReply) entry_;
           }
           return com.elarian.hera.proto.App.TagCommandReply.getDefaultInstance();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 8;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.App.TagCommandReply, com.elarian.hera.proto.App.TagCommandReply.Builder, com.elarian.hera.proto.App.TagCommandReplyOrBuilder> 
           getTagCommandFieldBuilder() {
         if (tagCommandBuilder_ == null) {
-          if (!(entryCase_ == 8)) {
+          if (!(entryCase_ == 9)) {
             entry_ = com.elarian.hera.proto.App.TagCommandReply.getDefaultInstance();
           }
           tagCommandBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -8260,7 +8771,7 @@ public final class App {
                   isClean());
           entry_ = null;
         }
-        entryCase_ = 8;
+        entryCase_ = 9;
         onChanged();;
         return tagCommandBuilder_;
       }
@@ -8317,8 +8828,426 @@ public final class App {
 
   }
 
-  public interface AuthTokenReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.AuthTokenReply)
+  public interface GenerateAuthTokenCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.GenerateAuthTokenCommand)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.GenerateAuthTokenCommand}
+   */
+  public static final class GenerateAuthTokenCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.GenerateAuthTokenCommand)
+      GenerateAuthTokenCommandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenerateAuthTokenCommand.newBuilder() to construct.
+    private GenerateAuthTokenCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenerateAuthTokenCommand() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenerateAuthTokenCommand();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GenerateAuthTokenCommand(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.elarian.hera.proto.App.GenerateAuthTokenCommand.class, com.elarian.hera.proto.App.GenerateAuthTokenCommand.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.elarian.hera.proto.App.GenerateAuthTokenCommand)) {
+        return super.equals(obj);
+      }
+      com.elarian.hera.proto.App.GenerateAuthTokenCommand other = (com.elarian.hera.proto.App.GenerateAuthTokenCommand) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.App.GenerateAuthTokenCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.GenerateAuthTokenCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.GenerateAuthTokenCommand)
+        com.elarian.hera.proto.App.GenerateAuthTokenCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.elarian.hera.proto.App.GenerateAuthTokenCommand.class, com.elarian.hera.proto.App.GenerateAuthTokenCommand.Builder.class);
+      }
+
+      // Construct using com.elarian.hera.proto.App.GenerateAuthTokenCommand.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_descriptor;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.App.GenerateAuthTokenCommand getDefaultInstanceForType() {
+        return com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.App.GenerateAuthTokenCommand build() {
+        com.elarian.hera.proto.App.GenerateAuthTokenCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.App.GenerateAuthTokenCommand buildPartial() {
+        com.elarian.hera.proto.App.GenerateAuthTokenCommand result = new com.elarian.hera.proto.App.GenerateAuthTokenCommand(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.elarian.hera.proto.App.GenerateAuthTokenCommand) {
+          return mergeFrom((com.elarian.hera.proto.App.GenerateAuthTokenCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.elarian.hera.proto.App.GenerateAuthTokenCommand other) {
+        if (other == com.elarian.hera.proto.App.GenerateAuthTokenCommand.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.elarian.hera.proto.App.GenerateAuthTokenCommand parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.elarian.hera.proto.App.GenerateAuthTokenCommand) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.GenerateAuthTokenCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.GenerateAuthTokenCommand)
+    private static final com.elarian.hera.proto.App.GenerateAuthTokenCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.App.GenerateAuthTokenCommand();
+    }
+
+    public static com.elarian.hera.proto.App.GenerateAuthTokenCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenerateAuthTokenCommand>
+        PARSER = new com.google.protobuf.AbstractParser<GenerateAuthTokenCommand>() {
+      @java.lang.Override
+      public GenerateAuthTokenCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GenerateAuthTokenCommand(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenerateAuthTokenCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenerateAuthTokenCommand> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.elarian.hera.proto.App.GenerateAuthTokenCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenerateAuthTokenReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.GenerateAuthTokenReply)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -8349,18 +9278,18 @@ public final class App {
     com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.AuthTokenReply}
+   * Protobuf type {@code com.elarian.hera.proto.GenerateAuthTokenReply}
    */
-  public static final class AuthTokenReply extends
+  public static final class GenerateAuthTokenReply extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AuthTokenReply)
-      AuthTokenReplyOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.GenerateAuthTokenReply)
+      GenerateAuthTokenReplyOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuthTokenReply.newBuilder() to construct.
-    private AuthTokenReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use GenerateAuthTokenReply.newBuilder() to construct.
+    private GenerateAuthTokenReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuthTokenReply() {
+    private GenerateAuthTokenReply() {
       token_ = "";
     }
 
@@ -8368,7 +9297,7 @@ public final class App {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuthTokenReply();
+      return new GenerateAuthTokenReply();
     }
 
     @java.lang.Override
@@ -8376,7 +9305,7 @@ public final class App {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuthTokenReply(
+    private GenerateAuthTokenReply(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -8434,15 +9363,15 @@ public final class App {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_AuthTokenReply_descriptor;
+      return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_AuthTokenReply_fieldAccessorTable
+      return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.elarian.hera.proto.App.AuthTokenReply.class, com.elarian.hera.proto.App.AuthTokenReply.Builder.class);
+              com.elarian.hera.proto.App.GenerateAuthTokenReply.class, com.elarian.hera.proto.App.GenerateAuthTokenReply.Builder.class);
     }
 
     public static final int TOKEN_FIELD_NUMBER = 1;
@@ -8555,10 +9484,10 @@ public final class App {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.elarian.hera.proto.App.AuthTokenReply)) {
+      if (!(obj instanceof com.elarian.hera.proto.App.GenerateAuthTokenReply)) {
         return super.equals(obj);
       }
-      com.elarian.hera.proto.App.AuthTokenReply other = (com.elarian.hera.proto.App.AuthTokenReply) obj;
+      com.elarian.hera.proto.App.GenerateAuthTokenReply other = (com.elarian.hera.proto.App.GenerateAuthTokenReply) obj;
 
       if (!getToken()
           .equals(other.getToken())) return false;
@@ -8589,69 +9518,69 @@ public final class App {
       return hash;
     }
 
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(byte[] data)
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseDelimitedFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.App.AuthTokenReply parseFrom(
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8664,7 +9593,7 @@ public final class App {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.App.AuthTokenReply prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.App.GenerateAuthTokenReply prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8680,26 +9609,26 @@ public final class App {
       return builder;
     }
     /**
-     * Protobuf type {@code com.elarian.hera.proto.AuthTokenReply}
+     * Protobuf type {@code com.elarian.hera.proto.GenerateAuthTokenReply}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.AuthTokenReply)
-        com.elarian.hera.proto.App.AuthTokenReplyOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.GenerateAuthTokenReply)
+        com.elarian.hera.proto.App.GenerateAuthTokenReplyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_AuthTokenReply_descriptor;
+        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_AuthTokenReply_fieldAccessorTable
+        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.elarian.hera.proto.App.AuthTokenReply.class, com.elarian.hera.proto.App.AuthTokenReply.Builder.class);
+                com.elarian.hera.proto.App.GenerateAuthTokenReply.class, com.elarian.hera.proto.App.GenerateAuthTokenReply.Builder.class);
       }
 
-      // Construct using com.elarian.hera.proto.App.AuthTokenReply.newBuilder()
+      // Construct using com.elarian.hera.proto.App.GenerateAuthTokenReply.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8731,17 +9660,17 @@ public final class App {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_AuthTokenReply_descriptor;
+        return com.elarian.hera.proto.App.internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_descriptor;
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.App.AuthTokenReply getDefaultInstanceForType() {
-        return com.elarian.hera.proto.App.AuthTokenReply.getDefaultInstance();
+      public com.elarian.hera.proto.App.GenerateAuthTokenReply getDefaultInstanceForType() {
+        return com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.App.AuthTokenReply build() {
-        com.elarian.hera.proto.App.AuthTokenReply result = buildPartial();
+      public com.elarian.hera.proto.App.GenerateAuthTokenReply build() {
+        com.elarian.hera.proto.App.GenerateAuthTokenReply result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8749,8 +9678,8 @@ public final class App {
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.App.AuthTokenReply buildPartial() {
-        com.elarian.hera.proto.App.AuthTokenReply result = new com.elarian.hera.proto.App.AuthTokenReply(this);
+      public com.elarian.hera.proto.App.GenerateAuthTokenReply buildPartial() {
+        com.elarian.hera.proto.App.GenerateAuthTokenReply result = new com.elarian.hera.proto.App.GenerateAuthTokenReply(this);
         result.token_ = token_;
         if (lifetimeBuilder_ == null) {
           result.lifetime_ = lifetime_;
@@ -8795,16 +9724,16 @@ public final class App {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.elarian.hera.proto.App.AuthTokenReply) {
-          return mergeFrom((com.elarian.hera.proto.App.AuthTokenReply)other);
+        if (other instanceof com.elarian.hera.proto.App.GenerateAuthTokenReply) {
+          return mergeFrom((com.elarian.hera.proto.App.GenerateAuthTokenReply)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.elarian.hera.proto.App.AuthTokenReply other) {
-        if (other == com.elarian.hera.proto.App.AuthTokenReply.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.elarian.hera.proto.App.GenerateAuthTokenReply other) {
+        if (other == com.elarian.hera.proto.App.GenerateAuthTokenReply.getDefaultInstance()) return this;
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
           onChanged();
@@ -8827,11 +9756,11 @@ public final class App {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.elarian.hera.proto.App.AuthTokenReply parsedMessage = null;
+        com.elarian.hera.proto.App.GenerateAuthTokenReply parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.elarian.hera.proto.App.AuthTokenReply) e.getUnfinishedMessage();
+          parsedMessage = (com.elarian.hera.proto.App.GenerateAuthTokenReply) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9048,41 +9977,41 @@ public final class App {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AuthTokenReply)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.GenerateAuthTokenReply)
     }
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AuthTokenReply)
-    private static final com.elarian.hera.proto.App.AuthTokenReply DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.GenerateAuthTokenReply)
+    private static final com.elarian.hera.proto.App.GenerateAuthTokenReply DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.elarian.hera.proto.App.AuthTokenReply();
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.App.GenerateAuthTokenReply();
     }
 
-    public static com.elarian.hera.proto.App.AuthTokenReply getDefaultInstance() {
+    public static com.elarian.hera.proto.App.GenerateAuthTokenReply getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthTokenReply>
-        PARSER = new com.google.protobuf.AbstractParser<AuthTokenReply>() {
+    private static final com.google.protobuf.Parser<GenerateAuthTokenReply>
+        PARSER = new com.google.protobuf.AbstractParser<GenerateAuthTokenReply>() {
       @java.lang.Override
-      public AuthTokenReply parsePartialFrom(
+      public GenerateAuthTokenReply parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuthTokenReply(input, extensionRegistry);
+        return new GenerateAuthTokenReply(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuthTokenReply> parser() {
+    public static com.google.protobuf.Parser<GenerateAuthTokenReply> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuthTokenReply> getParserForType() {
+    public com.google.protobuf.Parser<GenerateAuthTokenReply> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.elarian.hera.proto.App.AuthTokenReply getDefaultInstanceForType() {
+    public com.elarian.hera.proto.App.GenerateAuthTokenReply getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -59355,10 +60284,15 @@ public final class App {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_AppToServerCommandReply_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_elarian_hera_proto_AuthTokenReply_descriptor;
+    internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_elarian_hera_proto_AuthTokenReply_fieldAccessorTable;
+      internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_GetCustomerStateCommand_descriptor;
   private static final 
@@ -59588,310 +60522,316 @@ public final class App {
       "obuf/timestamp.proto\032\036google/protobuf/wr" +
       "appers.proto\032\014common.proto\032\rnuclear.prot" +
       "o\032\017messaging.proto\032\rpayment.proto\032\nussd." +
-      "proto\032\013voice.proto\"\220\001\n\025AppConnectionMeta" +
-      "data\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\022\n\n" +
-      "auth_token\030\003 \001(\t\022-\n\ttimestamp\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022\024\n\014simplex_mode\030" +
-      "\005 \001(\010\"\337\014\n\022AppToServerCommand\022M\n\022get_cust" +
-      "omer_state\030\001 \001(\0132/.com.elarian.hera.prot" +
-      "o.GetCustomerStateCommandH\000\022Q\n\024adopt_cus" +
-      "tomer_state\030\002 \001(\01321.com.elarian.hera.pro" +
-      "to.AdoptCustomerStateCommandH\000\022S\n\025add_cu" +
-      "stomer_reminder\030\003 \001(\01322.com.elarian.hera" +
-      ".proto.AddCustomerReminderCommandH\000\022Z\n\031a" +
-      "dd_customer_reminder_tag\030\004 \001(\01325.com.ela" +
-      "rian.hera.proto.AddCustomerReminderTagCo" +
-      "mmandH\000\022Y\n\030cancel_customer_reminder\030\005 \001(" +
-      "\01325.com.elarian.hera.proto.CancelCustome" +
-      "rReminderCommandH\000\022`\n\034cancel_customer_re" +
-      "minder_tag\030\006 \001(\01328.com.elarian.hera.prot" +
-      "o.CancelCustomerReminderTagCommandH\000\022O\n\023" +
-      "update_customer_tag\030\007 \001(\01320.com.elarian." +
-      "hera.proto.UpdateCustomerTagCommandH\000\022O\n" +
-      "\023delete_customer_tag\030\010 \001(\01320.com.elarian" +
-      ".hera.proto.DeleteCustomerTagCommandH\000\022`" +
-      "\n\034update_customer_secondary_id\030\t \001(\01328.c" +
-      "om.elarian.hera.proto.UpdateCustomerSeco" +
-      "ndaryIdCommandH\000\022`\n\034delete_customer_seco" +
-      "ndary_id\030\n \001(\01328.com.elarian.hera.proto." +
-      "DeleteCustomerSecondaryIdCommandH\000\022W\n\027le" +
-      "ase_customer_metadata\030\013 \001(\01324.com.elaria" +
-      "n.hera.proto.LeaseCustomerMetadataComman" +
-      "dH\000\022Y\n\030update_customer_metadata\030\014 \001(\01325." +
-      "com.elarian.hera.proto.UpdateCustomerMet" +
-      "adataCommandH\000\022Y\n\030delete_customer_metada" +
-      "ta\030\r \001(\01325.com.elarian.hera.proto.Delete" +
-      "CustomerMetadataCommandH\000\022B\n\014send_messag" +
-      "e\030\016 \001(\0132*.com.elarian.hera.proto.SendMes" +
-      "sageCommandH\000\022I\n\020send_message_tag\030\017 \001(\0132" +
-      "-.com.elarian.hera.proto.SendMessageTagC" +
-      "ommandH\000\022I\n\020reply_to_message\030\020 \001(\0132-.com" +
-      ".elarian.hera.proto.ReplyToMessageComman" +
-      "dH\000\022L\n\021messaging_consent\030\021 \001(\0132/.com.ela" +
-      "rian.hera.proto.MessagingConsentCommandH" +
-      "\000\022J\n\020initiate_payment\030\022 \001(\0132..com.elaria" +
-      "n.hera.proto.InitiatePaymentCommandH\000\022G\n" +
-      "\017make_voice_call\030\023 \001(\0132,.com.elarian.her" +
-      "a.proto.MakeVoiceCallCommandH\000B\007\n\005entry\"" +
-      "\370\004\n\027AppToServerCommandReply\022K\n\022get_custo" +
-      "mer_state\030\001 \001(\0132-.com.elarian.hera.proto" +
-      ".GetCustomerStateReplyH\000\022U\n\027lease_custom" +
-      "er_metadata\030\002 \001(\01322.com.elarian.hera.pro" +
-      "to.LeaseCustomerMetadataReplyH\000\022Q\n\025updat" +
-      "e_customer_state\030\003 \001(\01320.com.elarian.her" +
-      "a.proto.UpdateCustomerStateReplyH\000\022@\n\014se" +
-      "nd_message\030\004 \001(\0132(.com.elarian.hera.prot" +
-      "o.SendMessageReplyH\000\022J\n\021messaging_consen" +
-      "t\030\005 \001(\0132-.com.elarian.hera.proto.Messagi" +
-      "ngConsentReplyH\000\022H\n\020initiate_payment\030\006 \001" +
-      "(\0132,.com.elarian.hera.proto.InitiatePaym" +
-      "entReplyH\000\022E\n\017make_voice_call\030\007 \001(\0132*.co" +
-      "m.elarian.hera.proto.MakeVoiceCallReplyH" +
-      "\000\022>\n\013tag_command\030\010 \001(\0132\'.com.elarian.her" +
-      "a.proto.TagCommandReplyH\000B\007\n\005entry\"L\n\016Au" +
-      "thTokenReply\022\r\n\005token\030\001 \001(\t\022+\n\010lifetime\030" +
-      "\002 \001(\0132\031.google.protobuf.Duration\"\275\001\n\027Get" +
-      "CustomerStateCommand\022\025\n\013customer_id\030\001 \001(" +
-      "\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.elari" +
-      "an.hera.proto.CustomerNumberH\000\022<\n\014second" +
-      "ary_id\030\003 \001(\0132$.com.elarian.hera.proto.In" +
-      "dexMappingH\000B\n\n\010customer\"z\n\025GetCustomerS" +
-      "tateReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description" +
-      "\030\002 \001(\t\022<\n\004data\030\003 \001(\0132..com.elarian.hera." +
-      "proto.CustomerStateReplyData\"\330\002\n\026Custome" +
-      "rStateReplyData\022\023\n\013customer_id\030\001 \001(\t\022;\n\r" +
-      "nuclear_state\030\002 \001(\0132$.com.elarian.hera.p" +
-      "roto.NuclearState\022?\n\017messaging_state\030\003 \001" +
-      "(\0132&.com.elarian.hera.proto.MessagingSta" +
-      "te\0225\n\nussd_state\030\004 \001(\0132!.com.elarian.her" +
-      "a.proto.UssdState\0227\n\013voice_state\030\005 \001(\0132\"" +
-      ".com.elarian.hera.proto.VoiceState\022;\n\rpa" +
-      "yment_state\030\006 \001(\0132$.com.elarian.hera.pro" +
-      "to.PaymentState\"\354\001\n\031AdoptCustomerStateCo" +
-      "mmand\022\023\n\013customer_id\030\001 \001(\t\022\033\n\021other_cust" +
-      "omer_id\030\002 \001(\tH\000\022G\n\025other_customer_number" +
-      "\030\003 \001(\0132&.com.elarian.hera.proto.Customer" +
-      "NumberH\000\022B\n\022other_secondary_id\030\004 \001(\0132$.c" +
-      "om.elarian.hera.proto.IndexMappingH\000B\020\n\016" +
-      "other_customer\"\374\001\n\032AddCustomerReminderCo" +
-      "mmand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer" +
-      "_number\030\002 \001(\0132&.com.elarian.hera.proto.C" +
-      "ustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$." +
-      "com.elarian.hera.proto.IndexMappingH\000\022:\n" +
-      "\010reminder\030\004 \001(\0132(.com.elarian.hera.proto" +
-      ".CustomerReminderB\n\n\010customer\"\216\001\n\035AddCus" +
-      "tomerReminderTagCommand\0221\n\003tag\030\001 \001(\0132$.c" +
-      "om.elarian.hera.proto.IndexMapping\022:\n\010re" +
-      "minder\030\002 \001(\0132(.com.elarian.hera.proto.Cu" +
-      "stomerReminder\"\320\001\n\035CancelCustomerReminde" +
-      "rCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017custo" +
-      "mer_number\030\002 \001(\0132&.com.elarian.hera.prot" +
-      "o.CustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\013" +
-      "2$.com.elarian.hera.proto.IndexMappingH\000" +
-      "\022\013\n\003key\030\004 \001(\tB\n\n\010customer\"b\n CancelCusto" +
-      "merReminderTagCommand\0221\n\003tag\030\001 \001(\0132$.com" +
-      ".elarian.hera.proto.IndexMapping\022\013\n\003key\030" +
-      "\002 \001(\t\"\363\001\n\030UpdateCustomerTagCommand\022\025\n\013cu" +
-      "stomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001" +
-      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
-      "erH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian" +
-      ".hera.proto.IndexMappingH\000\0223\n\004tags\030\004 \003(\013" +
-      "2%.com.elarian.hera.proto.CustomerIndexB" +
-      "\n\n\010customer\"\314\001\n\030DeleteCustomerTagCommand" +
-      "\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_numb" +
-      "er\030\002 \001(\0132&.com.elarian.hera.proto.Custom" +
-      "erNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.e" +
-      "larian.hera.proto.IndexMappingH\000\022\014\n\004keys" +
-      "\030\004 \003(\tB\n\n\010customer\"\204\002\n UpdateCustomerSec" +
-      "ondaryIdCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A" +
-      "\n\017customer_number\030\002 \001(\0132&.com.elarian.he" +
-      "ra.proto.CustomerNumberH\000\022<\n\014secondary_i" +
-      "d\030\003 \001(\0132$.com.elarian.hera.proto.IndexMa" +
-      "ppingH\000\022<\n\rsecondary_ids\030\004 \003(\0132%.com.ela" +
-      "rian.hera.proto.CustomerIndexB\n\n\010custome" +
-      "r\"\376\001\n DeleteCustomerSecondaryIdCommand\022\025" +
-      "\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_number" +
-      "\030\002 \001(\0132&.com.elarian.hera.proto.Customer" +
-      "NumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.ela" +
-      "rian.hera.proto.IndexMappingH\000\0226\n\010mappin" +
-      "gs\030\004 \003(\0132$.com.elarian.hera.proto.IndexM" +
-      "appingB\n\n\010customer\"\317\001\n\034LeaseCustomerMeta" +
-      "dataCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017cu" +
-      "stomer_number\030\002 \001(\0132&.com.elarian.hera.p" +
-      "roto.CustomerNumberH\000\022<\n\014secondary_id\030\003 " +
-      "\001(\0132$.com.elarian.hera.proto.IndexMappin" +
-      "gH\000\022\013\n\003key\030\004 \001(\tB\n\n\010customer\"\251\001\n\032LeaseCu" +
-      "stomerMetadataReply\022\016\n\006status\030\001 \001(\010\022\023\n\013d" +
-      "escription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034." +
-      "google.protobuf.StringValue\0223\n\005value\030\004 \001" +
-      "(\0132$.com.elarian.hera.proto.DataMapValue" +
-      "\"\361\002\n\035UpdateCustomerMetadataCommand\022\025\n\013cu" +
-      "stomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001" +
-      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
-      "erH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian" +
-      ".hera.proto.IndexMappingH\000\022U\n\010metadata\030\004" +
-      " \003(\0132C.com.elarian.hera.proto.UpdateCust" +
-      "omerMetadataCommand.MetadataEntry\032U\n\rMet" +
-      "adataEntry\022\013\n\003key\030\001 \001(\t\0223\n\005value\030\002 \001(\0132$" +
-      ".com.elarian.hera.proto.DataMapValue:\0028\001" +
-      "B\n\n\010customer\"\321\001\n\035DeleteCustomerMetadataC" +
+      "proto\032\013voice.proto\"\256\001\n\025AppConnectionMeta" +
+      "data\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022-\n\007" +
+      "api_key\030\003 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\0220\n\nauth_token\030\004 \001(\0132\034.google.protobu" +
+      "f.StringValue\022\024\n\014simplex_mode\030\005 \001(\010\"\260\r\n\022" +
+      "AppToServerCommand\022O\n\023generate_auth_toke" +
+      "n\030\001 \001(\01320.com.elarian.hera.proto.Generat" +
+      "eAuthTokenCommandH\000\022M\n\022get_customer_stat" +
+      "e\030\002 \001(\0132/.com.elarian.hera.proto.GetCust" +
+      "omerStateCommandH\000\022Q\n\024adopt_customer_sta" +
+      "te\030\003 \001(\01321.com.elarian.hera.proto.AdoptC" +
+      "ustomerStateCommandH\000\022S\n\025add_customer_re" +
+      "minder\030\004 \001(\01322.com.elarian.hera.proto.Ad" +
+      "dCustomerReminderCommandH\000\022Z\n\031add_custom" +
+      "er_reminder_tag\030\005 \001(\01325.com.elarian.hera" +
+      ".proto.AddCustomerReminderTagCommandH\000\022Y" +
+      "\n\030cancel_customer_reminder\030\006 \001(\01325.com.e" +
+      "larian.hera.proto.CancelCustomerReminder" +
+      "CommandH\000\022`\n\034cancel_customer_reminder_ta" +
+      "g\030\007 \001(\01328.com.elarian.hera.proto.CancelC" +
+      "ustomerReminderTagCommandH\000\022O\n\023update_cu" +
+      "stomer_tag\030\010 \001(\01320.com.elarian.hera.prot" +
+      "o.UpdateCustomerTagCommandH\000\022O\n\023delete_c" +
+      "ustomer_tag\030\t \001(\01320.com.elarian.hera.pro" +
+      "to.DeleteCustomerTagCommandH\000\022`\n\034update_" +
+      "customer_secondary_id\030\n \001(\01328.com.elaria" +
+      "n.hera.proto.UpdateCustomerSecondaryIdCo" +
+      "mmandH\000\022`\n\034delete_customer_secondary_id\030" +
+      "\013 \001(\01328.com.elarian.hera.proto.DeleteCus" +
+      "tomerSecondaryIdCommandH\000\022W\n\027lease_custo" +
+      "mer_metadata\030\014 \001(\01324.com.elarian.hera.pr" +
+      "oto.LeaseCustomerMetadataCommandH\000\022Y\n\030up" +
+      "date_customer_metadata\030\r \001(\01325.com.elari" +
+      "an.hera.proto.UpdateCustomerMetadataComm" +
+      "andH\000\022Y\n\030delete_customer_metadata\030\016 \001(\0132" +
+      "5.com.elarian.hera.proto.DeleteCustomerM" +
+      "etadataCommandH\000\022B\n\014send_message\030\017 \001(\0132*" +
+      ".com.elarian.hera.proto.SendMessageComma" +
+      "ndH\000\022I\n\020send_message_tag\030\020 \001(\0132-.com.ela" +
+      "rian.hera.proto.SendMessageTagCommandH\000\022" +
+      "I\n\020reply_to_message\030\021 \001(\0132-.com.elarian." +
+      "hera.proto.ReplyToMessageCommandH\000\022L\n\021me" +
+      "ssaging_consent\030\022 \001(\0132/.com.elarian.hera" +
+      ".proto.MessagingConsentCommandH\000\022J\n\020init" +
+      "iate_payment\030\023 \001(\0132..com.elarian.hera.pr" +
+      "oto.InitiatePaymentCommandH\000\022G\n\017make_voi" +
+      "ce_call\030\024 \001(\0132,.com.elarian.hera.proto.M" +
+      "akeVoiceCallCommandH\000B\007\n\005entry\"\307\005\n\027AppTo" +
+      "ServerCommandReply\022M\n\023generate_auth_toke" +
+      "n\030\001 \001(\0132..com.elarian.hera.proto.Generat" +
+      "eAuthTokenReplyH\000\022K\n\022get_customer_state\030" +
+      "\002 \001(\0132-.com.elarian.hera.proto.GetCustom" +
+      "erStateReplyH\000\022U\n\027lease_customer_metadat" +
+      "a\030\003 \001(\01322.com.elarian.hera.proto.LeaseCu" +
+      "stomerMetadataReplyH\000\022Q\n\025update_customer" +
+      "_state\030\004 \001(\01320.com.elarian.hera.proto.Up" +
+      "dateCustomerStateReplyH\000\022@\n\014send_message" +
+      "\030\005 \001(\0132(.com.elarian.hera.proto.SendMess" +
+      "ageReplyH\000\022J\n\021messaging_consent\030\006 \001(\0132-." +
+      "com.elarian.hera.proto.MessagingConsentR" +
+      "eplyH\000\022H\n\020initiate_payment\030\007 \001(\0132,.com.e" +
+      "larian.hera.proto.InitiatePaymentReplyH\000" +
+      "\022E\n\017make_voice_call\030\010 \001(\0132*.com.elarian." +
+      "hera.proto.MakeVoiceCallReplyH\000\022>\n\013tag_c" +
+      "ommand\030\t \001(\0132\'.com.elarian.hera.proto.Ta" +
+      "gCommandReplyH\000B\007\n\005entry\"\032\n\030GenerateAuth" +
+      "TokenCommand\"T\n\026GenerateAuthTokenReply\022\r" +
+      "\n\005token\030\001 \001(\t\022+\n\010lifetime\030\002 \001(\0132\031.google" +
+      ".protobuf.Duration\"\275\001\n\027GetCustomerStateC" +
       "ommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017custome" +
       "r_number\030\002 \001(\0132&.com.elarian.hera.proto." +
       "CustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$" +
-      ".com.elarian.hera.proto.IndexMappingH\000\022\014" +
-      "\n\004keys\030\004 \003(\tB\n\n\010customer\"\330\001\n\022SendMessage" +
-      "Command\022?\n\017customer_number\030\001 \001(\0132&.com.e" +
-      "larian.hera.proto.CustomerNumber\022F\n\016chan" +
-      "nel_number\030\002 \001(\0132..com.elarian.hera.prot" +
-      "o.MessagingChannelNumber\0229\n\004body\030\003 \001(\0132+" +
-      ".com.elarian.hera.proto.CustomerMessageB" +
-      "ody\"\315\001\n\025SendMessageTagCommand\0221\n\003tag\030\001 \001" +
-      "(\0132$.com.elarian.hera.proto.IndexMapping" +
-      "\022F\n\016channel_number\030\002 \001(\0132..com.elarian.h" +
-      "era.proto.MessagingChannelNumber\0229\n\004body" +
-      "\030\003 \001(\0132+.com.elarian.hera.proto.Customer" +
-      "MessageBody\"\204\001\n\025ReplyToMessageCommand\022\023\n" +
-      "\013customer_id\030\001 \001(\t\022\033\n\023reply_to_message_i" +
-      "d\030\002 \001(\t\0229\n\004body\030\003 \001(\0132+.com.elarian.hera" +
-      ".proto.CustomerMessageBody\"\313\001\n\020SendMessa" +
-      "geReply\022=\n\006status\030\001 \001(\0162-.com.elarian.he" +
-      "ra.proto.MessageDeliveryStatus\022\023\n\013descri" +
-      "ption\030\002 \001(\t\0220\n\nmessage_id\030\003 \001(\0132\034.google" +
-      ".protobuf.StringValue\0221\n\013customer_id\030\004 \001" +
-      "(\0132\034.google.protobuf.StringValue\"\342\001\n\027Mes" +
-      "sagingConsentCommand\022?\n\017customer_number\030" +
-      "\001 \001(\0132&.com.elarian.hera.proto.CustomerN" +
-      "umber\022F\n\016channel_number\030\002 \001(\0132..com.elar" +
-      "ian.hera.proto.MessagingChannelNumber\022>\n" +
-      "\006action\030\003 \001(\0162..com.elarian.hera.proto.M" +
-      "essagingConsentAction\"\237\001\n\025MessagingConse" +
-      "ntReply\022>\n\006status\030\001 \001(\0162..com.elarian.he" +
-      "ra.proto.MessagingConsentStatus\022\023\n\013descr" +
-      "iption\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\"\312\001\n\026InitiatePaym" +
-      "entCommand\022@\n\013debit_party\030\001 \001(\0132+.com.el" +
-      "arian.hera.proto.PaymentCounterParty\022A\n\014" +
-      "credit_party\030\002 \001(\0132+.com.elarian.hera.pr" +
-      "oto.PaymentCounterParty\022+\n\005value\030\003 \001(\0132\034" +
-      ".com.elarian.hera.proto.Cash\"\213\002\n\024Initiat" +
-      "ePaymentReply\0225\n\006status\030\001 \001(\0162%.com.elar" +
-      "ian.hera.proto.PaymentStatus\022\023\n\013descript" +
-      "ion\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0227\n\021debit_custome" +
-      "r_id\030\004 \001(\0132\034.google.protobuf.StringValue" +
-      "\0228\n\022credit_customer_id\030\005 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\"\233\001\n\024MakeVoiceCallComm" +
-      "and\022?\n\017customer_number\030\001 \001(\0132&.com.elari" +
-      "an.hera.proto.CustomerNumber\022B\n\016channel_" +
-      "number\030\002 \001(\0132*.com.elarian.hera.proto.Vo" +
-      "iceChannelNumber\"\307\001\n\022MakeVoiceCallReply\022" +
-      "7\n\006status\030\001 \001(\0162\'.com.elarian.hera.proto" +
-      ".VoiceCallStatus\022\023\n\013description\030\002 \001(\t\0220\n" +
-      "\nsession_id\030\003 \001(\0132\034.google.protobuf.Stri" +
+      ".com.elarian.hera.proto.IndexMappingH\000B\n" +
+      "\n\010customer\"z\n\025GetCustomerStateReply\022\016\n\006s" +
+      "tatus\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022<\n\004data" +
+      "\030\003 \001(\0132..com.elarian.hera.proto.Customer" +
+      "StateReplyData\"\330\002\n\026CustomerStateReplyDat" +
+      "a\022\023\n\013customer_id\030\001 \001(\t\022;\n\rnuclear_state\030" +
+      "\002 \001(\0132$.com.elarian.hera.proto.NuclearSt" +
+      "ate\022?\n\017messaging_state\030\003 \001(\0132&.com.elari" +
+      "an.hera.proto.MessagingState\0225\n\nussd_sta" +
+      "te\030\004 \001(\0132!.com.elarian.hera.proto.UssdSt" +
+      "ate\0227\n\013voice_state\030\005 \001(\0132\".com.elarian.h" +
+      "era.proto.VoiceState\022;\n\rpayment_state\030\006 " +
+      "\001(\0132$.com.elarian.hera.proto.PaymentStat" +
+      "e\"\354\001\n\031AdoptCustomerStateCommand\022\023\n\013custo" +
+      "mer_id\030\001 \001(\t\022\033\n\021other_customer_id\030\002 \001(\tH" +
+      "\000\022G\n\025other_customer_number\030\003 \001(\0132&.com.e" +
+      "larian.hera.proto.CustomerNumberH\000\022B\n\022ot" +
+      "her_secondary_id\030\004 \001(\0132$.com.elarian.her" +
+      "a.proto.IndexMappingH\000B\020\n\016other_customer" +
+      "\"\374\001\n\032AddCustomerReminderCommand\022\025\n\013custo" +
+      "mer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132" +
+      "&.com.elarian.hera.proto.CustomerNumberH" +
+      "\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian.he" +
+      "ra.proto.IndexMappingH\000\022:\n\010reminder\030\004 \001(" +
+      "\0132(.com.elarian.hera.proto.CustomerRemin" +
+      "derB\n\n\010customer\"\216\001\n\035AddCustomerReminderT" +
+      "agCommand\0221\n\003tag\030\001 \001(\0132$.com.elarian.her" +
+      "a.proto.IndexMapping\022:\n\010reminder\030\002 \001(\0132(" +
+      ".com.elarian.hera.proto.CustomerReminder" +
+      "\"\320\001\n\035CancelCustomerReminderCommand\022\025\n\013cu" +
+      "stomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001" +
+      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
+      "erH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian" +
+      ".hera.proto.IndexMappingH\000\022\013\n\003key\030\004 \001(\tB" +
+      "\n\n\010customer\"b\n CancelCustomerReminderTag" +
+      "Command\0221\n\003tag\030\001 \001(\0132$.com.elarian.hera." +
+      "proto.IndexMapping\022\013\n\003key\030\002 \001(\t\"\363\001\n\030Upda" +
+      "teCustomerTagCommand\022\025\n\013customer_id\030\001 \001(" +
+      "\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.elari" +
+      "an.hera.proto.CustomerNumberH\000\022<\n\014second" +
+      "ary_id\030\003 \001(\0132$.com.elarian.hera.proto.In" +
+      "dexMappingH\000\0223\n\004tags\030\004 \003(\0132%.com.elarian" +
+      ".hera.proto.CustomerIndexB\n\n\010customer\"\314\001" +
+      "\n\030DeleteCustomerTagCommand\022\025\n\013customer_i" +
+      "d\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com" +
+      ".elarian.hera.proto.CustomerNumberH\000\022<\n\014" +
+      "secondary_id\030\003 \001(\0132$.com.elarian.hera.pr" +
+      "oto.IndexMappingH\000\022\014\n\004keys\030\004 \003(\tB\n\n\010cust" +
+      "omer\"\204\002\n UpdateCustomerSecondaryIdComman" +
+      "d\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_num" +
+      "ber\030\002 \001(\0132&.com.elarian.hera.proto.Custo" +
+      "merNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com." +
+      "elarian.hera.proto.IndexMappingH\000\022<\n\rsec" +
+      "ondary_ids\030\004 \003(\0132%.com.elarian.hera.prot" +
+      "o.CustomerIndexB\n\n\010customer\"\376\001\n DeleteCu" +
+      "stomerSecondaryIdCommand\022\025\n\013customer_id\030" +
+      "\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.e" +
+      "larian.hera.proto.CustomerNumberH\000\022<\n\014se" +
+      "condary_id\030\003 \001(\0132$.com.elarian.hera.prot" +
+      "o.IndexMappingH\000\0226\n\010mappings\030\004 \003(\0132$.com" +
+      ".elarian.hera.proto.IndexMappingB\n\n\010cust" +
+      "omer\"\317\001\n\034LeaseCustomerMetadataCommand\022\025\n" +
+      "\013customer_id\030\001 \001(\tH\000\022A\n\017customer_number\030" +
+      "\002 \001(\0132&.com.elarian.hera.proto.CustomerN" +
+      "umberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elar" +
+      "ian.hera.proto.IndexMappingH\000\022\013\n\003key\030\004 \001" +
+      "(\tB\n\n\010customer\"\251\001\n\032LeaseCustomerMetadata" +
+      "Reply\022\016\n\006status\030\001 \001(\010\022\023\n\013description\030\002 \001" +
+      "(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.protobu" +
+      "f.StringValue\0223\n\005value\030\004 \001(\0132$.com.elari" +
+      "an.hera.proto.DataMapValue\"\361\002\n\035UpdateCus" +
+      "tomerMetadataCommand\022\025\n\013customer_id\030\001 \001(" +
+      "\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.elari" +
+      "an.hera.proto.CustomerNumberH\000\022<\n\014second" +
+      "ary_id\030\003 \001(\0132$.com.elarian.hera.proto.In" +
+      "dexMappingH\000\022U\n\010metadata\030\004 \003(\0132C.com.ela" +
+      "rian.hera.proto.UpdateCustomerMetadataCo" +
+      "mmand.MetadataEntry\032U\n\rMetadataEntry\022\013\n\003" +
+      "key\030\001 \001(\t\0223\n\005value\030\002 \001(\0132$.com.elarian.h" +
+      "era.proto.DataMapValue:\0028\001B\n\n\010customer\"\321" +
+      "\001\n\035DeleteCustomerMetadataCommand\022\025\n\013cust" +
+      "omer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\013" +
+      "2&.com.elarian.hera.proto.CustomerNumber" +
+      "H\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian.h" +
+      "era.proto.IndexMappingH\000\022\014\n\004keys\030\004 \003(\tB\n" +
+      "\n\010customer\"\330\001\n\022SendMessageCommand\022?\n\017cus" +
+      "tomer_number\030\001 \001(\0132&.com.elarian.hera.pr" +
+      "oto.CustomerNumber\022F\n\016channel_number\030\002 \001" +
+      "(\0132..com.elarian.hera.proto.MessagingCha" +
+      "nnelNumber\0229\n\004body\030\003 \001(\0132+.com.elarian.h" +
+      "era.proto.CustomerMessageBody\"\315\001\n\025SendMe" +
+      "ssageTagCommand\0221\n\003tag\030\001 \001(\0132$.com.elari" +
+      "an.hera.proto.IndexMapping\022F\n\016channel_nu" +
+      "mber\030\002 \001(\0132..com.elarian.hera.proto.Mess" +
+      "agingChannelNumber\0229\n\004body\030\003 \001(\0132+.com.e" +
+      "larian.hera.proto.CustomerMessageBody\"\204\001" +
+      "\n\025ReplyToMessageCommand\022\023\n\013customer_id\030\001" +
+      " \001(\t\022\033\n\023reply_to_message_id\030\002 \001(\t\0229\n\004bod" +
+      "y\030\003 \001(\0132+.com.elarian.hera.proto.Custome" +
+      "rMessageBody\"\313\001\n\020SendMessageReply\022=\n\006sta" +
+      "tus\030\001 \001(\0162-.com.elarian.hera.proto.Messa" +
+      "geDeliveryStatus\022\023\n\013description\030\002 \001(\t\0220\n" +
+      "\nmessage_id\030\003 \001(\0132\034.google.protobuf.Stri" +
       "ngValue\0221\n\013customer_id\030\004 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\"r\n\030UpdateCustomerStat" +
-      "eReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description\030\002 " +
-      "\001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.protob" +
-      "uf.StringValue\"e\n\017TagCommandReply\022\016\n\006sta" +
-      "tus\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007work_i" +
-      "d\030\003 \001(\0132\034.google.protobuf.StringValue\"\230\007" +
-      "\n\027ServerToAppNotification\022\016\n\006org_id\030\001 \001(" +
-      "\t\022\016\n\006app_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032." +
-      "google.protobuf.Timestamp\022@\n\010reminder\030\004 " +
-      "\001(\0132,.com.elarian.hera.proto.ReminderNot" +
-      "ificationH\000\022^\n\030messaging_consent_status\030" +
-      "\005 \001(\0132:.com.elarian.hera.proto.Messaging" +
-      "ConsentStatusNotificationH\000\022^\n\030messaging" +
-      "_session_status\030\006 \001(\0132:.com.elarian.hera" +
-      ".proto.MessagingSessionStatusNotificatio" +
-      "nH\000\022O\n\020received_message\030\007 \001(\01323.com.elar" +
-      "ian.hera.proto.ReceivedMessageNotificati" +
-      "onH\000\022K\n\016message_status\030\010 \001(\01321.com.elari" +
-      "an.hera.proto.MessageStatusNotificationH" +
-      "\000\022G\n\014ussd_session\030\t \001(\0132/.com.elarian.he" +
-      "ra.proto.UssdSessionNotificationH\000\022C\n\nvo" +
-      "ice_call\030\n \001(\0132-.com.elarian.hera.proto." +
-      "VoiceCallNotificationH\000\022O\n\020received_paym" +
-      "ent\030\013 \001(\01323.com.elarian.hera.proto.Recei" +
-      "vedPaymentNotificationH\000\022K\n\016payment_stat" +
-      "us\030\014 \001(\01321.com.elarian.hera.proto.Paymen" +
-      "tStatusNotificationH\000\022X\n\025wallet_payment_" +
-      "status\030\r \001(\01327.com.elarian.hera.proto.Wa" +
-      "lletPaymentStatusNotificationH\000B\007\n\005entry" +
-      "\"\277\001\n\034ServerToAppNotificationReply\022L\n\014uss" +
-      "d_session\030\001 \001(\01324.com.elarian.hera.proto" +
-      ".UssdSessionNotificationReplyH\000\022H\n\nvoice" +
-      "_call\030\002 \001(\01322.com.elarian.hera.proto.Voi" +
-      "ceCallNotificationReplyH\000B\007\n\005entry\"\202\002\n\"M" +
-      "essagingConsentStatusNotification\022\023\n\013cus" +
-      "tomer_id\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132" +
-      "&.com.elarian.hera.proto.CustomerNumber\022" +
-      "F\n\016channel_number\030\003 \001(\0132..com.elarian.he" +
-      "ra.proto.MessagingChannelNumber\022>\n\006statu" +
-      "s\030\004 \001(\0162..com.elarian.hera.proto.Messagi" +
-      "ngConsentStatus\"\262\002\n\"MessagingSessionStat" +
-      "usNotification\022\023\n\013customer_id\030\001 \001(\t\022?\n\017c" +
-      "ustomer_number\030\002 \001(\0132&.com.elarian.hera." +
-      "proto.CustomerNumber\022F\n\016channel_number\030\003" +
-      " \001(\0132..com.elarian.hera.proto.MessagingC" +
-      "hannelNumber\022.\n\nexpiration\030\004 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022>\n\006status\030\005 \001(\0162..c" +
-      "om.elarian.hera.proto.MessagingSessionSt" +
-      "atus\"\312\001\n\024ReminderNotification\022\023\n\013custome" +
-      "r_id\030\001 \001(\t\022:\n\010reminder\030\002 \001(\0132(.com.elari" +
-      "an.hera.proto.CustomerReminder\0222\n\003tag\030\003 " +
-      "\001(\0132%.com.elarian.hera.proto.CustomerInd" +
-      "ex\022-\n\007work_id\030\004 \001(\0132\034.google.protobuf.St" +
-      "ringValue\"\363\002\n\033ReceivedMessageNotificatio" +
-      "n\022\023\n\013customer_id\030\001 \001(\t\022\022\n\nmessage_id\030\002 \001" +
-      "(\t\022?\n\017customer_number\030\003 \001(\0132&.com.elaria" +
-      "n.hera.proto.CustomerNumber\022F\n\016channel_n" +
-      "umber\030\004 \001(\0132..com.elarian.hera.proto.Mes" +
-      "sagingChannelNumber\022*\n\004text\030\005 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0227\n\005media\030\006 \003(\0132(" +
-      ".com.elarian.hera.proto.MediaMessageBody" +
-      "\022=\n\010location\030\007 \001(\0132+.com.elarian.hera.pr" +
-      "oto.LocationMessageBody\"\203\001\n\031MessageStatu" +
-      "sNotification\022\023\n\013customer_id\030\001 \001(\t\022\022\n\nme" +
-      "ssage_id\030\002 \001(\t\022=\n\006status\030\003 \001(\0162-.com.ela" +
-      "rian.hera.proto.MessageDeliveryStatus\"\363\001" +
-      "\n\027UssdSessionNotification\022\023\n\013customer_id" +
-      "\030\001 \001(\t\022\022\n\nsession_id\030\002 \001(\t\022A\n\016channel_nu" +
-      "mber\030\003 \001(\0132).com.elarian.hera.proto.Ussd" +
-      "ChannelNumber\022?\n\017customer_number\030\004 \001(\0132&" +
-      ".com.elarian.hera.proto.CustomerNumber\022+" +
-      "\n\005input\030\005 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\"\233\003\n\025VoiceCallNotification\022\023\n\013custome" +
-      "r_id\030\001 \001(\t\022\022\n\nsession_id\030\002 \001(\t\022B\n\016channe" +
-      "l_number\030\003 \001(\0132*.com.elarian.hera.proto." +
-      "VoiceChannelNumber\022?\n\017customer_number\030\004 " +
+      "otobuf.StringValue\"\342\001\n\027MessagingConsentC" +
+      "ommand\022?\n\017customer_number\030\001 \001(\0132&.com.el" +
+      "arian.hera.proto.CustomerNumber\022F\n\016chann" +
+      "el_number\030\002 \001(\0132..com.elarian.hera.proto" +
+      ".MessagingChannelNumber\022>\n\006action\030\003 \001(\0162" +
+      "..com.elarian.hera.proto.MessagingConsen" +
+      "tAction\"\237\001\n\025MessagingConsentReply\022>\n\006sta" +
+      "tus\030\001 \001(\0162..com.elarian.hera.proto.Messa" +
+      "gingConsentStatus\022\023\n\013description\030\002 \001(\t\0221" +
+      "\n\013customer_id\030\003 \001(\0132\034.google.protobuf.St" +
+      "ringValue\"\312\001\n\026InitiatePaymentCommand\022@\n\013" +
+      "debit_party\030\001 \001(\0132+.com.elarian.hera.pro" +
+      "to.PaymentCounterParty\022A\n\014credit_party\030\002" +
+      " \001(\0132+.com.elarian.hera.proto.PaymentCou" +
+      "nterParty\022+\n\005value\030\003 \001(\0132\034.com.elarian.h" +
+      "era.proto.Cash\"\213\002\n\024InitiatePaymentReply\022" +
+      "5\n\006status\030\001 \001(\0162%.com.elarian.hera.proto" +
+      ".PaymentStatus\022\023\n\013description\030\002 \001(\t\0224\n\016t" +
+      "ransaction_id\030\003 \001(\0132\034.google.protobuf.St" +
+      "ringValue\0227\n\021debit_customer_id\030\004 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\0228\n\022credit_cus" +
+      "tomer_id\030\005 \001(\0132\034.google.protobuf.StringV" +
+      "alue\"\233\001\n\024MakeVoiceCallCommand\022?\n\017custome" +
+      "r_number\030\001 \001(\0132&.com.elarian.hera.proto." +
+      "CustomerNumber\022B\n\016channel_number\030\002 \001(\0132*" +
+      ".com.elarian.hera.proto.VoiceChannelNumb" +
+      "er\"\307\001\n\022MakeVoiceCallReply\0227\n\006status\030\001 \001(" +
+      "\0162\'.com.elarian.hera.proto.VoiceCallStat" +
+      "us\022\023\n\013description\030\002 \001(\t\0220\n\nsession_id\030\003 " +
+      "\001(\0132\034.google.protobuf.StringValue\0221\n\013cus" +
+      "tomer_id\030\004 \001(\0132\034.google.protobuf.StringV" +
+      "alue\"r\n\030UpdateCustomerStateReply\022\016\n\006stat" +
+      "us\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\0221\n\013custome" +
+      "r_id\030\003 \001(\0132\034.google.protobuf.StringValue" +
+      "\"e\n\017TagCommandReply\022\016\n\006status\030\001 \001(\010\022\023\n\013d" +
+      "escription\030\002 \001(\t\022-\n\007work_id\030\003 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\"\230\007\n\027ServerToAppN" +
+      "otification\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 " +
+      "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022@\n\010reminder\030\004 \001(\0132,.com.elar" +
+      "ian.hera.proto.ReminderNotificationH\000\022^\n" +
+      "\030messaging_consent_status\030\005 \001(\0132:.com.el" +
+      "arian.hera.proto.MessagingConsentStatusN" +
+      "otificationH\000\022^\n\030messaging_session_statu" +
+      "s\030\006 \001(\0132:.com.elarian.hera.proto.Messagi" +
+      "ngSessionStatusNotificationH\000\022O\n\020receive" +
+      "d_message\030\007 \001(\01323.com.elarian.hera.proto" +
+      ".ReceivedMessageNotificationH\000\022K\n\016messag" +
+      "e_status\030\010 \001(\01321.com.elarian.hera.proto." +
+      "MessageStatusNotificationH\000\022G\n\014ussd_sess" +
+      "ion\030\t \001(\0132/.com.elarian.hera.proto.UssdS" +
+      "essionNotificationH\000\022C\n\nvoice_call\030\n \001(\013" +
+      "2-.com.elarian.hera.proto.VoiceCallNotif" +
+      "icationH\000\022O\n\020received_payment\030\013 \001(\01323.co" +
+      "m.elarian.hera.proto.ReceivedPaymentNoti" +
+      "ficationH\000\022K\n\016payment_status\030\014 \001(\01321.com" +
+      ".elarian.hera.proto.PaymentStatusNotific" +
+      "ationH\000\022X\n\025wallet_payment_status\030\r \001(\01327" +
+      ".com.elarian.hera.proto.WalletPaymentSta" +
+      "tusNotificationH\000B\007\n\005entry\"\277\001\n\034ServerToA" +
+      "ppNotificationReply\022L\n\014ussd_session\030\001 \001(" +
+      "\01324.com.elarian.hera.proto.UssdSessionNo" +
+      "tificationReplyH\000\022H\n\nvoice_call\030\002 \001(\01322." +
+      "com.elarian.hera.proto.VoiceCallNotifica" +
+      "tionReplyH\000B\007\n\005entry\"\202\002\n\"MessagingConsen" +
+      "tStatusNotification\022\023\n\013customer_id\030\001 \001(\t" +
+      "\022?\n\017customer_number\030\002 \001(\0132&.com.elarian." +
+      "hera.proto.CustomerNumber\022F\n\016channel_num" +
+      "ber\030\003 \001(\0132..com.elarian.hera.proto.Messa" +
+      "gingChannelNumber\022>\n\006status\030\004 \001(\0162..com." +
+      "elarian.hera.proto.MessagingConsentStatu" +
+      "s\"\262\002\n\"MessagingSessionStatusNotification" +
+      "\022\023\n\013customer_id\030\001 \001(\t\022?\n\017customer_number" +
+      "\030\002 \001(\0132&.com.elarian.hera.proto.Customer" +
+      "Number\022F\n\016channel_number\030\003 \001(\0132..com.ela" +
+      "rian.hera.proto.MessagingChannelNumber\022." +
+      "\n\nexpiration\030\004 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022>\n\006status\030\005 \001(\0162..com.elarian.her" +
+      "a.proto.MessagingSessionStatus\"\312\001\n\024Remin" +
+      "derNotification\022\023\n\013customer_id\030\001 \001(\t\022:\n\010" +
+      "reminder\030\002 \001(\0132(.com.elarian.hera.proto." +
+      "CustomerReminder\0222\n\003tag\030\003 \001(\0132%.com.elar" +
+      "ian.hera.proto.CustomerIndex\022-\n\007work_id\030" +
+      "\004 \001(\0132\034.google.protobuf.StringValue\"\363\002\n\033" +
+      "ReceivedMessageNotification\022\023\n\013customer_" +
+      "id\030\001 \001(\t\022\022\n\nmessage_id\030\002 \001(\t\022?\n\017customer" +
+      "_number\030\003 \001(\0132&.com.elarian.hera.proto.C" +
+      "ustomerNumber\022F\n\016channel_number\030\004 \001(\0132.." +
+      "com.elarian.hera.proto.MessagingChannelN" +
+      "umber\022*\n\004text\030\005 \001(\0132\034.google.protobuf.St" +
+      "ringValue\0227\n\005media\030\006 \003(\0132(.com.elarian.h" +
+      "era.proto.MediaMessageBody\022=\n\010location\030\007" +
+      " \001(\0132+.com.elarian.hera.proto.LocationMe" +
+      "ssageBody\"\203\001\n\031MessageStatusNotification\022" +
+      "\023\n\013customer_id\030\001 \001(\t\022\022\n\nmessage_id\030\002 \001(\t" +
+      "\022=\n\006status\030\003 \001(\0162-.com.elarian.hera.prot" +
+      "o.MessageDeliveryStatus\"\363\001\n\027UssdSessionN" +
+      "otification\022\023\n\013customer_id\030\001 \001(\t\022\022\n\nsess" +
+      "ion_id\030\002 \001(\t\022A\n\016channel_number\030\003 \001(\0132).c" +
+      "om.elarian.hera.proto.UssdChannelNumber\022" +
+      "?\n\017customer_number\030\004 \001(\0132&.com.elarian.h" +
+      "era.proto.CustomerNumber\022+\n\005input\030\005 \001(\0132" +
+      "\034.google.protobuf.StringValue\"\233\003\n\025VoiceC" +
+      "allNotification\022\023\n\013customer_id\030\001 \001(\t\022\022\n\n" +
+      "session_id\030\002 \001(\t\022B\n\016channel_number\030\003 \001(\013" +
+      "2*.com.elarian.hera.proto.VoiceChannelNu" +
+      "mber\022?\n\017customer_number\030\004 \001(\0132&.com.elar" +
+      "ian.hera.proto.CustomerNumber\022A\n\tdirecti" +
+      "on\030\005 \001(\0162..com.elarian.hera.proto.Custom" +
+      "erEventDirection\0228\n\005input\030\006 \001(\0132).com.el" +
+      "arian.hera.proto.VoiceCallHopInput\022+\n\010du" +
+      "ration\030\007 \001(\0132\031.google.protobuf.Duration\022" +
+      "*\n\004cost\030\010 \001(\0132\034.com.elarian.hera.proto.C" +
+      "ash\"\307\002\n\033ReceivedPaymentNotification\022\020\n\010p" +
+      "urse_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022\026\n\016tr" +
+      "ansaction_id\030\003 \001(\t\022?\n\017customer_number\030\004 " +
       "\001(\0132&.com.elarian.hera.proto.CustomerNum" +
-      "ber\022A\n\tdirection\030\005 \001(\0162..com.elarian.her" +
-      "a.proto.CustomerEventDirection\0228\n\005input\030" +
-      "\006 \001(\0132).com.elarian.hera.proto.VoiceCall" +
-      "HopInput\022+\n\010duration\030\007 \001(\0132\031.google.prot" +
-      "obuf.Duration\022*\n\004cost\030\010 \001(\0132\034.com.elaria" +
-      "n.hera.proto.Cash\"\307\002\n\033ReceivedPaymentNot" +
-      "ification\022\020\n\010purse_id\030\001 \001(\t\022\023\n\013customer_" +
-      "id\030\002 \001(\t\022\026\n\016transaction_id\030\003 \001(\t\022?\n\017cust" +
-      "omer_number\030\004 \001(\0132&.com.elarian.hera.pro" +
-      "to.CustomerNumber\022D\n\016channel_number\030\005 \001(" +
-      "\0132,.com.elarian.hera.proto.PaymentChanne" +
-      "lNumber\022+\n\005value\030\006 \001(\0132\034.com.elarian.her" +
-      "a.proto.Cash\0225\n\006status\030\007 \001(\0162%.com.elari" +
-      "an.hera.proto.PaymentStatus\"\235\001\n\031PaymentS" +
-      "tatusNotification\0221\n\013customer_id\030\001 \001(\0132\034" +
-      ".google.protobuf.StringValue\022\026\n\016transact" +
-      "ion_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.elari" +
-      "an.hera.proto.PaymentStatus\"\230\001\n\037WalletPa" +
-      "ymentStatusNotification\022\021\n\twallet_id\030\001 \001" +
-      "(\t\022\023\n\013customer_id\030\002 \001(\t\022\026\n\016transaction_i" +
-      "d\030\003 \001(\t\0225\n\006status\030\004 \001(\0162%.com.elarian.he" +
-      "ra.proto.PaymentStatus\"N\n\034UssdSessionNot" +
-      "ificationReply\022.\n\004menu\030\001 \001(\0132 .com.elari" +
-      "an.hera.proto.UssdMenu\"V\n\032VoiceCallNotif" +
-      "icationReply\0228\n\007actions\030\001 \003(\0132\'.com.elar" +
-      "ian.hera.proto.VoiceCallActionb\006proto3"
+      "ber\022D\n\016channel_number\030\005 \001(\0132,.com.elaria" +
+      "n.hera.proto.PaymentChannelNumber\022+\n\005val" +
+      "ue\030\006 \001(\0132\034.com.elarian.hera.proto.Cash\0225" +
+      "\n\006status\030\007 \001(\0162%.com.elarian.hera.proto." +
+      "PaymentStatus\"\235\001\n\031PaymentStatusNotificat" +
+      "ion\0221\n\013customer_id\030\001 \001(\0132\034.google.protob" +
+      "uf.StringValue\022\026\n\016transaction_id\030\002 \001(\t\0225" +
+      "\n\006status\030\003 \001(\0162%.com.elarian.hera.proto." +
+      "PaymentStatus\"\230\001\n\037WalletPaymentStatusNot" +
+      "ification\022\021\n\twallet_id\030\001 \001(\t\022\023\n\013customer" +
+      "_id\030\002 \001(\t\022\026\n\016transaction_id\030\003 \001(\t\0225\n\006sta" +
+      "tus\030\004 \001(\0162%.com.elarian.hera.proto.Payme" +
+      "ntStatus\"N\n\034UssdSessionNotificationReply" +
+      "\022.\n\004menu\030\001 \001(\0132 .com.elarian.hera.proto." +
+      "UssdMenu\"V\n\032VoiceCallNotificationReply\0228" +
+      "\n\007actions\030\001 \003(\0132\'.com.elarian.hera.proto" +
+      ".VoiceCallActionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59911,111 +60851,117 @@ public final class App {
     internal_static_com_elarian_hera_proto_AppConnectionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AppConnectionMetadata_descriptor,
-        new java.lang.String[] { "OrgId", "AppId", "AuthToken", "Timestamp", "SimplexMode", });
+        new java.lang.String[] { "OrgId", "AppId", "ApiKey", "AuthToken", "SimplexMode", });
     internal_static_com_elarian_hera_proto_AppToServerCommand_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_elarian_hera_proto_AppToServerCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AppToServerCommand_descriptor,
-        new java.lang.String[] { "GetCustomerState", "AdoptCustomerState", "AddCustomerReminder", "AddCustomerReminderTag", "CancelCustomerReminder", "CancelCustomerReminderTag", "UpdateCustomerTag", "DeleteCustomerTag", "UpdateCustomerSecondaryId", "DeleteCustomerSecondaryId", "LeaseCustomerMetadata", "UpdateCustomerMetadata", "DeleteCustomerMetadata", "SendMessage", "SendMessageTag", "ReplyToMessage", "MessagingConsent", "InitiatePayment", "MakeVoiceCall", "Entry", });
+        new java.lang.String[] { "GenerateAuthToken", "GetCustomerState", "AdoptCustomerState", "AddCustomerReminder", "AddCustomerReminderTag", "CancelCustomerReminder", "CancelCustomerReminderTag", "UpdateCustomerTag", "DeleteCustomerTag", "UpdateCustomerSecondaryId", "DeleteCustomerSecondaryId", "LeaseCustomerMetadata", "UpdateCustomerMetadata", "DeleteCustomerMetadata", "SendMessage", "SendMessageTag", "ReplyToMessage", "MessagingConsent", "InitiatePayment", "MakeVoiceCall", "Entry", });
     internal_static_com_elarian_hera_proto_AppToServerCommandReply_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_elarian_hera_proto_AppToServerCommandReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AppToServerCommandReply_descriptor,
-        new java.lang.String[] { "GetCustomerState", "LeaseCustomerMetadata", "UpdateCustomerState", "SendMessage", "MessagingConsent", "InitiatePayment", "MakeVoiceCall", "TagCommand", "Entry", });
-    internal_static_com_elarian_hera_proto_AuthTokenReply_descriptor =
+        new java.lang.String[] { "GenerateAuthToken", "GetCustomerState", "LeaseCustomerMetadata", "UpdateCustomerState", "SendMessage", "MessagingConsent", "InitiatePayment", "MakeVoiceCall", "TagCommand", "Entry", });
+    internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_com_elarian_hera_proto_AuthTokenReply_fieldAccessorTable = new
+    internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_elarian_hera_proto_AuthTokenReply_descriptor,
+        internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_descriptor,
+        new java.lang.String[] { });
+    internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_GenerateAuthTokenReply_descriptor,
         new java.lang.String[] { "Token", "Lifetime", });
     internal_static_com_elarian_hera_proto_GetCustomerStateCommand_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_com_elarian_hera_proto_GetCustomerStateCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_GetCustomerStateCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Customer", });
     internal_static_com_elarian_hera_proto_GetCustomerStateReply_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_com_elarian_hera_proto_GetCustomerStateReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_GetCustomerStateReply_descriptor,
         new java.lang.String[] { "Status", "Description", "Data", });
     internal_static_com_elarian_hera_proto_CustomerStateReplyData_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_com_elarian_hera_proto_CustomerStateReplyData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerStateReplyData_descriptor,
         new java.lang.String[] { "CustomerId", "NuclearState", "MessagingState", "UssdState", "VoiceState", "PaymentState", });
     internal_static_com_elarian_hera_proto_AdoptCustomerStateCommand_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_com_elarian_hera_proto_AdoptCustomerStateCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AdoptCustomerStateCommand_descriptor,
         new java.lang.String[] { "CustomerId", "OtherCustomerId", "OtherCustomerNumber", "OtherSecondaryId", "OtherCustomer", });
     internal_static_com_elarian_hera_proto_AddCustomerReminderCommand_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_com_elarian_hera_proto_AddCustomerReminderCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AddCustomerReminderCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Reminder", "Customer", });
     internal_static_com_elarian_hera_proto_AddCustomerReminderTagCommand_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_com_elarian_hera_proto_AddCustomerReminderTagCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AddCustomerReminderTagCommand_descriptor,
         new java.lang.String[] { "Tag", "Reminder", });
     internal_static_com_elarian_hera_proto_CancelCustomerReminderCommand_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_com_elarian_hera_proto_CancelCustomerReminderCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CancelCustomerReminderCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Key", "Customer", });
     internal_static_com_elarian_hera_proto_CancelCustomerReminderTagCommand_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_com_elarian_hera_proto_CancelCustomerReminderTagCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CancelCustomerReminderTagCommand_descriptor,
         new java.lang.String[] { "Tag", "Key", });
     internal_static_com_elarian_hera_proto_UpdateCustomerTagCommand_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_com_elarian_hera_proto_UpdateCustomerTagCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UpdateCustomerTagCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Tags", "Customer", });
     internal_static_com_elarian_hera_proto_DeleteCustomerTagCommand_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_com_elarian_hera_proto_DeleteCustomerTagCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DeleteCustomerTagCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Keys", "Customer", });
     internal_static_com_elarian_hera_proto_UpdateCustomerSecondaryIdCommand_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_com_elarian_hera_proto_UpdateCustomerSecondaryIdCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UpdateCustomerSecondaryIdCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "SecondaryIds", "Customer", });
     internal_static_com_elarian_hera_proto_DeleteCustomerSecondaryIdCommand_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_com_elarian_hera_proto_DeleteCustomerSecondaryIdCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DeleteCustomerSecondaryIdCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Mappings", "Customer", });
     internal_static_com_elarian_hera_proto_LeaseCustomerMetadataCommand_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_com_elarian_hera_proto_LeaseCustomerMetadataCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_LeaseCustomerMetadataCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Key", "Customer", });
     internal_static_com_elarian_hera_proto_LeaseCustomerMetadataReply_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_com_elarian_hera_proto_LeaseCustomerMetadataReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_LeaseCustomerMetadataReply_descriptor,
         new java.lang.String[] { "Status", "Description", "CustomerId", "Value", });
     internal_static_com_elarian_hera_proto_UpdateCustomerMetadataCommand_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_com_elarian_hera_proto_UpdateCustomerMetadataCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UpdateCustomerMetadataCommand_descriptor,
@@ -60027,163 +60973,163 @@ public final class App {
         internal_static_com_elarian_hera_proto_UpdateCustomerMetadataCommand_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_com_elarian_hera_proto_DeleteCustomerMetadataCommand_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_com_elarian_hera_proto_DeleteCustomerMetadataCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DeleteCustomerMetadataCommand_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Keys", "Customer", });
     internal_static_com_elarian_hera_proto_SendMessageCommand_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_com_elarian_hera_proto_SendMessageCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SendMessageCommand_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Body", });
     internal_static_com_elarian_hera_proto_SendMessageTagCommand_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_com_elarian_hera_proto_SendMessageTagCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SendMessageTagCommand_descriptor,
         new java.lang.String[] { "Tag", "ChannelNumber", "Body", });
     internal_static_com_elarian_hera_proto_ReplyToMessageCommand_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_com_elarian_hera_proto_ReplyToMessageCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReplyToMessageCommand_descriptor,
         new java.lang.String[] { "CustomerId", "ReplyToMessageId", "Body", });
     internal_static_com_elarian_hera_proto_SendMessageReply_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_com_elarian_hera_proto_SendMessageReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SendMessageReply_descriptor,
         new java.lang.String[] { "Status", "Description", "MessageId", "CustomerId", });
     internal_static_com_elarian_hera_proto_MessagingConsentCommand_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_com_elarian_hera_proto_MessagingConsentCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingConsentCommand_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Action", });
     internal_static_com_elarian_hera_proto_MessagingConsentReply_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_com_elarian_hera_proto_MessagingConsentReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingConsentReply_descriptor,
         new java.lang.String[] { "Status", "Description", "CustomerId", });
     internal_static_com_elarian_hera_proto_InitiatePaymentCommand_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_com_elarian_hera_proto_InitiatePaymentCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_InitiatePaymentCommand_descriptor,
         new java.lang.String[] { "DebitParty", "CreditParty", "Value", });
     internal_static_com_elarian_hera_proto_InitiatePaymentReply_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_com_elarian_hera_proto_InitiatePaymentReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_InitiatePaymentReply_descriptor,
         new java.lang.String[] { "Status", "Description", "TransactionId", "DebitCustomerId", "CreditCustomerId", });
     internal_static_com_elarian_hera_proto_MakeVoiceCallCommand_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_com_elarian_hera_proto_MakeVoiceCallCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MakeVoiceCallCommand_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", });
     internal_static_com_elarian_hera_proto_MakeVoiceCallReply_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_com_elarian_hera_proto_MakeVoiceCallReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MakeVoiceCallReply_descriptor,
         new java.lang.String[] { "Status", "Description", "SessionId", "CustomerId", });
     internal_static_com_elarian_hera_proto_UpdateCustomerStateReply_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_com_elarian_hera_proto_UpdateCustomerStateReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UpdateCustomerStateReply_descriptor,
         new java.lang.String[] { "Status", "Description", "CustomerId", });
     internal_static_com_elarian_hera_proto_TagCommandReply_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_com_elarian_hera_proto_TagCommandReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_TagCommandReply_descriptor,
         new java.lang.String[] { "Status", "Description", "WorkId", });
     internal_static_com_elarian_hera_proto_ServerToAppNotification_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_com_elarian_hera_proto_ServerToAppNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ServerToAppNotification_descriptor,
         new java.lang.String[] { "OrgId", "AppId", "CreatedAt", "Reminder", "MessagingConsentStatus", "MessagingSessionStatus", "ReceivedMessage", "MessageStatus", "UssdSession", "VoiceCall", "ReceivedPayment", "PaymentStatus", "WalletPaymentStatus", "Entry", });
     internal_static_com_elarian_hera_proto_ServerToAppNotificationReply_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_com_elarian_hera_proto_ServerToAppNotificationReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ServerToAppNotificationReply_descriptor,
         new java.lang.String[] { "UssdSession", "VoiceCall", "Entry", });
     internal_static_com_elarian_hera_proto_MessagingConsentStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_com_elarian_hera_proto_MessagingConsentStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingConsentStatusNotification_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "ChannelNumber", "Status", });
     internal_static_com_elarian_hera_proto_MessagingSessionStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_com_elarian_hera_proto_MessagingSessionStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingSessionStatusNotification_descriptor,
         new java.lang.String[] { "CustomerId", "CustomerNumber", "ChannelNumber", "Expiration", "Status", });
     internal_static_com_elarian_hera_proto_ReminderNotification_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_com_elarian_hera_proto_ReminderNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReminderNotification_descriptor,
         new java.lang.String[] { "CustomerId", "Reminder", "Tag", "WorkId", });
     internal_static_com_elarian_hera_proto_ReceivedMessageNotification_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_com_elarian_hera_proto_ReceivedMessageNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReceivedMessageNotification_descriptor,
         new java.lang.String[] { "CustomerId", "MessageId", "CustomerNumber", "ChannelNumber", "Text", "Media", "Location", });
     internal_static_com_elarian_hera_proto_MessageStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_com_elarian_hera_proto_MessageStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessageStatusNotification_descriptor,
         new java.lang.String[] { "CustomerId", "MessageId", "Status", });
     internal_static_com_elarian_hera_proto_UssdSessionNotification_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_com_elarian_hera_proto_UssdSessionNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UssdSessionNotification_descriptor,
         new java.lang.String[] { "CustomerId", "SessionId", "ChannelNumber", "CustomerNumber", "Input", });
     internal_static_com_elarian_hera_proto_VoiceCallNotification_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_com_elarian_hera_proto_VoiceCallNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallNotification_descriptor,
         new java.lang.String[] { "CustomerId", "SessionId", "ChannelNumber", "CustomerNumber", "Direction", "Input", "Duration", "Cost", });
     internal_static_com_elarian_hera_proto_ReceivedPaymentNotification_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_com_elarian_hera_proto_ReceivedPaymentNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReceivedPaymentNotification_descriptor,
         new java.lang.String[] { "PurseId", "CustomerId", "TransactionId", "CustomerNumber", "ChannelNumber", "Value", "Status", });
     internal_static_com_elarian_hera_proto_PaymentStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_com_elarian_hera_proto_PaymentStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentStatusNotification_descriptor,
         new java.lang.String[] { "CustomerId", "TransactionId", "Status", });
     internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor,
         new java.lang.String[] { "WalletId", "CustomerId", "TransactionId", "Status", });
     internal_static_com_elarian_hera_proto_UssdSessionNotificationReply_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_com_elarian_hera_proto_UssdSessionNotificationReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UssdSessionNotificationReply_descriptor,
         new java.lang.String[] { "Menu", });
     internal_static_com_elarian_hera_proto_VoiceCallNotificationReply_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_com_elarian_hera_proto_VoiceCallNotificationReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallNotificationReply_descriptor,
