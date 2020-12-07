@@ -2242,8 +2242,8 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.TextToSpeechVoice)
   }
 
-  public interface AppHeadersOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.AppHeaders)
+  public interface AppConnectionPropsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.AppConnectionProps)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -2279,16 +2279,22 @@ public final class Common {
      * @return The ipAddress.
      */
     com.google.protobuf.StringValue getIpAddress();
+
+    /**
+     * <code>bool simplex_mode = 4;</code>
+     * @return The simplexMode.
+     */
+    boolean getSimplexMode();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.AppHeaders}
+   * Protobuf type {@code com.elarian.hera.proto.AppConnectionProps}
    */
-  public  static final class AppHeaders extends
+  public  static final class AppConnectionProps extends
       com.google.protobuf.GeneratedMessageLite<
-          AppHeaders, AppHeaders.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AppHeaders)
-      AppHeadersOrBuilder {
-    private AppHeaders() {
+          AppConnectionProps, AppConnectionProps.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AppConnectionProps)
+      AppConnectionPropsOrBuilder {
+    private AppConnectionProps() {
       connectionId_ = "";
     }
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
@@ -2430,73 +2436,99 @@ public final class Common {
       
     }
 
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static final int SIMPLEX_MODE_FIELD_NUMBER = 4;
+    private boolean simplexMode_;
+    /**
+     * <code>bool simplex_mode = 4;</code>
+     * @return The simplexMode.
+     */
+    @java.lang.Override
+    public boolean getSimplexMode() {
+      return simplexMode_;
+    }
+    /**
+     * <code>bool simplex_mode = 4;</code>
+     * @param value The simplexMode to set.
+     */
+    private void setSimplexMode(boolean value) {
+      
+      simplexMode_ = value;
+    }
+    /**
+     * <code>bool simplex_mode = 4;</code>
+     */
+    private void clearSimplexMode() {
+      
+      simplexMode_ = false;
+    }
+
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(byte[] data)
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseDelimitedFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2507,19 +2539,19 @@ public final class Common {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.Common.AppHeaders prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.Common.AppConnectionProps prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.AppHeaders}
+     * Protobuf type {@code com.elarian.hera.proto.AppConnectionProps}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.Common.AppHeaders, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.AppHeaders)
-        com.elarian.hera.proto.Common.AppHeadersOrBuilder {
-      // Construct using com.elarian.hera.proto.Common.AppHeaders.newBuilder()
+          com.elarian.hera.proto.Common.AppConnectionProps, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.AppConnectionProps)
+        com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.AppConnectionProps.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -2668,7 +2700,35 @@ public final class Common {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppHeaders)
+      /**
+       * <code>bool simplex_mode = 4;</code>
+       * @return The simplexMode.
+       */
+      @java.lang.Override
+      public boolean getSimplexMode() {
+        return instance.getSimplexMode();
+      }
+      /**
+       * <code>bool simplex_mode = 4;</code>
+       * @param value The simplexMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSimplexMode(boolean value) {
+        copyOnWrite();
+        instance.setSimplexMode(value);
+        return this;
+      }
+      /**
+       * <code>bool simplex_mode = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSimplexMode() {
+        copyOnWrite();
+        instance.clearSimplexMode();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppConnectionProps)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -2677,7 +2737,7 @@ public final class Common {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.Common.AppHeaders();
+          return new com.elarian.hera.proto.Common.AppConnectionProps();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -2687,10 +2747,11 @@ public final class Common {
               "connectionId_",
               "connectionTime_",
               "ipAddress_",
+              "simplexMode_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -2698,13 +2759,13 @@ public final class Common {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.Common.AppHeaders> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.AppConnectionProps> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.Common.AppHeaders.class) {
+            synchronized (com.elarian.hera.proto.Common.AppConnectionProps.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.AppHeaders>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.AppConnectionProps>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -2723,24 +2784,24 @@ public final class Common {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AppHeaders)
-    private static final com.elarian.hera.proto.Common.AppHeaders DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AppConnectionProps)
+    private static final com.elarian.hera.proto.Common.AppConnectionProps DEFAULT_INSTANCE;
     static {
-      AppHeaders defaultInstance = new AppHeaders();
+      AppConnectionProps defaultInstance = new AppConnectionProps();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        AppHeaders.class, defaultInstance);
+        AppConnectionProps.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.Common.AppHeaders getDefaultInstance() {
+    public static com.elarian.hera.proto.Common.AppConnectionProps getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<AppHeaders> PARSER;
+    private static volatile com.google.protobuf.Parser<AppConnectionProps> PARSER;
 
-    public static com.google.protobuf.Parser<AppHeaders> parser() {
+    public static com.google.protobuf.Parser<AppConnectionProps> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -15650,58 +15711,46 @@ public final class Common {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
-     */
-    java.lang.String getAppId();
-    /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
-     */
-    com.google.protobuf.ByteString
-        getAppIdBytes();
-
-    /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @return The bytes for key.
      */
     com.google.protobuf.ByteString
         getKeyBytes();
 
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      * @return Whether the expiration field is set.
      */
     boolean hasExpiration();
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      * @return The expiration.
      */
     com.google.protobuf.Timestamp getExpiration();
 
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      * @return Whether the interval field is set.
      */
     boolean hasInterval();
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      * @return The interval.
      */
     com.google.protobuf.Duration getInterval();
 
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      * @return Whether the payload field is set.
      */
     boolean hasPayload();
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      * @return The payload.
      */
     com.google.protobuf.StringValue getPayload();
@@ -15715,60 +15764,12 @@ public final class Common {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerReminder)
       CustomerReminderOrBuilder {
     private CustomerReminder() {
-      appId_ = "";
       key_ = "";
     }
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private java.lang.String appId_;
-    /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
-     */
-    @java.lang.Override
-    public java.lang.String getAppId() {
-      return appId_;
-    }
-    /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(appId_);
-    }
-    /**
-     * <code>string app_id = 1;</code>
-     * @param value The appId to set.
-     */
-    private void setAppId(
-        java.lang.String value) {
-      value.getClass();
-  
-      appId_ = value;
-    }
-    /**
-     * <code>string app_id = 1;</code>
-     */
-    private void clearAppId() {
-      
-      appId_ = getDefaultInstance().getAppId();
-    }
-    /**
-     * <code>string app_id = 1;</code>
-     * @param value The bytes for appId to set.
-     */
-    private void setAppIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      appId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int KEY_FIELD_NUMBER = 2;
+    public static final int KEY_FIELD_NUMBER = 1;
     private java.lang.String key_;
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @return The key.
      */
     @java.lang.Override
@@ -15776,7 +15777,7 @@ public final class Common {
       return key_;
     }
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @return The bytes for key.
      */
     @java.lang.Override
@@ -15785,7 +15786,7 @@ public final class Common {
       return com.google.protobuf.ByteString.copyFromUtf8(key_);
     }
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @param value The key to set.
      */
     private void setKey(
@@ -15795,14 +15796,14 @@ public final class Common {
       key_ = value;
     }
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      */
     private void clearKey() {
       
       key_ = getDefaultInstance().getKey();
     }
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @param value The bytes for key to set.
      */
     private void setKeyBytes(
@@ -15812,24 +15813,24 @@ public final class Common {
       
     }
 
-    public static final int EXPIRATION_FIELD_NUMBER = 3;
+    public static final int EXPIRATION_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp expiration_;
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
     @java.lang.Override
     public boolean hasExpiration() {
       return expiration_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getExpiration() {
       return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
     }
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
     private void setExpiration(com.google.protobuf.Timestamp value) {
       value.getClass();
@@ -15837,7 +15838,7 @@ public final class Common {
       
       }
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeExpiration(com.google.protobuf.Timestamp value) {
@@ -15852,30 +15853,30 @@ public final class Common {
       
     }
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
     private void clearExpiration() {  expiration_ = null;
       
     }
 
-    public static final int INTERVAL_FIELD_NUMBER = 4;
+    public static final int INTERVAL_FIELD_NUMBER = 3;
     private com.google.protobuf.Duration interval_;
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      */
     @java.lang.Override
     public boolean hasInterval() {
       return interval_ != null;
     }
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      */
     @java.lang.Override
     public com.google.protobuf.Duration getInterval() {
       return interval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : interval_;
     }
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      */
     private void setInterval(com.google.protobuf.Duration value) {
       value.getClass();
@@ -15883,7 +15884,7 @@ public final class Common {
       
       }
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeInterval(com.google.protobuf.Duration value) {
@@ -15898,30 +15899,30 @@ public final class Common {
       
     }
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      */
     private void clearInterval() {  interval_ = null;
       
     }
 
-    public static final int PAYLOAD_FIELD_NUMBER = 5;
+    public static final int PAYLOAD_FIELD_NUMBER = 4;
     private com.google.protobuf.StringValue payload_;
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      */
     @java.lang.Override
     public boolean hasPayload() {
       return payload_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValue getPayload() {
       return payload_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : payload_;
     }
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      */
     private void setPayload(com.google.protobuf.StringValue value) {
       value.getClass();
@@ -15929,7 +15930,7 @@ public final class Common {
       
       }
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergePayload(com.google.protobuf.StringValue value) {
@@ -15944,7 +15945,7 @@ public final class Common {
       
     }
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      */
     private void clearPayload() {  payload_ = null;
       
@@ -16046,56 +16047,7 @@ public final class Common {
 
 
       /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
-       */
-      @java.lang.Override
-      public java.lang.String getAppId() {
-        return instance.getAppId();
-      }
-      /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        return instance.getAppIdBytes();
-      }
-      /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAppId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setAppId(value);
-        return this;
-      }
-      /**
-       * <code>string app_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAppId() {
-        copyOnWrite();
-        instance.clearAppId();
-        return this;
-      }
-      /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAppIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setAppIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @return The key.
        */
       @java.lang.Override
@@ -16103,7 +16055,7 @@ public final class Common {
         return instance.getKey();
       }
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @return The bytes for key.
        */
       @java.lang.Override
@@ -16112,7 +16064,7 @@ public final class Common {
         return instance.getKeyBytes();
       }
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @param value The key to set.
        * @return This builder for chaining.
        */
@@ -16123,7 +16075,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearKey() {
@@ -16132,7 +16084,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
        */
@@ -16144,21 +16096,21 @@ public final class Common {
       }
 
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       @java.lang.Override
       public boolean hasExpiration() {
         return instance.hasExpiration();
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       @java.lang.Override
       public com.google.protobuf.Timestamp getExpiration() {
         return instance.getExpiration();
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public Builder setExpiration(com.google.protobuf.Timestamp value) {
         copyOnWrite();
@@ -16166,7 +16118,7 @@ public final class Common {
         return this;
         }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public Builder setExpiration(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -16175,7 +16127,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public Builder mergeExpiration(com.google.protobuf.Timestamp value) {
         copyOnWrite();
@@ -16183,7 +16135,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public Builder clearExpiration() {  copyOnWrite();
         instance.clearExpiration();
@@ -16191,21 +16143,21 @@ public final class Common {
       }
 
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       @java.lang.Override
       public boolean hasInterval() {
         return instance.hasInterval();
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       @java.lang.Override
       public com.google.protobuf.Duration getInterval() {
         return instance.getInterval();
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public Builder setInterval(com.google.protobuf.Duration value) {
         copyOnWrite();
@@ -16213,7 +16165,7 @@ public final class Common {
         return this;
         }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public Builder setInterval(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -16222,7 +16174,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public Builder mergeInterval(com.google.protobuf.Duration value) {
         copyOnWrite();
@@ -16230,7 +16182,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public Builder clearInterval() {  copyOnWrite();
         instance.clearInterval();
@@ -16238,21 +16190,21 @@ public final class Common {
       }
 
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       @java.lang.Override
       public boolean hasPayload() {
         return instance.hasPayload();
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       @java.lang.Override
       public com.google.protobuf.StringValue getPayload() {
         return instance.getPayload();
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public Builder setPayload(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -16260,7 +16212,7 @@ public final class Common {
         return this;
         }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public Builder setPayload(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -16269,7 +16221,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public Builder mergePayload(com.google.protobuf.StringValue value) {
         copyOnWrite();
@@ -16277,7 +16229,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public Builder clearPayload() {  copyOnWrite();
         instance.clearPayload();
@@ -16300,15 +16252,14 @@ public final class Common {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "appId_",
               "key_",
               "expiration_",
               "interval_",
               "payload_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\t\u0004\t\u0005\t";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

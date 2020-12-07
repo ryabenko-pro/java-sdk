@@ -10054,46 +10054,46 @@ public final class Messaging {
     com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return Whether the appHeaders field is set.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return Whether the cxnProps field is set.
      */
-    boolean hasAppHeaders();
+    boolean hasCxnProps();
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return The appHeaders.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return The cxnProps.
      */
-    com.elarian.hera.proto.Common.AppHeaders getAppHeaders();
+    com.elarian.hera.proto.Common.AppConnectionProps getCxnProps();
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
      */
-    com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder();
+    com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder();
 
     /**
-     * <code>string other_customer_id = 5;</code>
-     * @return The otherCustomerId.
+     * <code>string adopted_customer_id = 5;</code>
+     * @return The adoptedCustomerId.
      */
-    java.lang.String getOtherCustomerId();
+    java.lang.String getAdoptedCustomerId();
     /**
-     * <code>string other_customer_id = 5;</code>
-     * @return The bytes for otherCustomerId.
+     * <code>string adopted_customer_id = 5;</code>
+     * @return The bytes for adoptedCustomerId.
      */
     com.google.protobuf.ByteString
-        getOtherCustomerIdBytes();
+        getAdoptedCustomerIdBytes();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
-     * @return Whether the otherMessagingState field is set.
+     * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
+     * @return Whether the adoptedState field is set.
      */
-    boolean hasOtherMessagingState();
+    boolean hasAdoptedState();
     /**
-     * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
-     * @return The otherMessagingState.
+     * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
+     * @return The adoptedState.
      */
-    com.elarian.hera.proto.Messaging.MessagingState getOtherMessagingState();
+    com.elarian.hera.proto.Messaging.MessagingState getAdoptedState();
     /**
-     * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
      */
-    com.elarian.hera.proto.Messaging.MessagingStateOrBuilder getOtherMessagingStateOrBuilder();
+    com.elarian.hera.proto.Messaging.MessagingStateOrBuilder getAdoptedStateOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessagingStateAdoptedEvent}
@@ -10110,7 +10110,7 @@ public final class Messaging {
     private MessagingStateAdoptedEvent() {
       orgId_ = "";
       customerId_ = "";
-      otherCustomerId_ = "";
+      adoptedCustomerId_ = "";
     }
 
     @java.lang.Override
@@ -10169,14 +10169,14 @@ public final class Messaging {
               break;
             }
             case 34: {
-              com.elarian.hera.proto.Common.AppHeaders.Builder subBuilder = null;
-              if (appHeaders_ != null) {
-                subBuilder = appHeaders_.toBuilder();
+              com.elarian.hera.proto.Common.AppConnectionProps.Builder subBuilder = null;
+              if (cxnProps_ != null) {
+                subBuilder = cxnProps_.toBuilder();
               }
-              appHeaders_ = input.readMessage(com.elarian.hera.proto.Common.AppHeaders.parser(), extensionRegistry);
+              cxnProps_ = input.readMessage(com.elarian.hera.proto.Common.AppConnectionProps.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(appHeaders_);
-                appHeaders_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(cxnProps_);
+                cxnProps_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10184,18 +10184,18 @@ public final class Messaging {
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              otherCustomerId_ = s;
+              adoptedCustomerId_ = s;
               break;
             }
             case 50: {
               com.elarian.hera.proto.Messaging.MessagingState.Builder subBuilder = null;
-              if (otherMessagingState_ != null) {
-                subBuilder = otherMessagingState_.toBuilder();
+              if (adoptedState_ != null) {
+                subBuilder = adoptedState_.toBuilder();
               }
-              otherMessagingState_ = input.readMessage(com.elarian.hera.proto.Messaging.MessagingState.parser(), extensionRegistry);
+              adoptedState_ = input.readMessage(com.elarian.hera.proto.Messaging.MessagingState.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(otherMessagingState_);
-                otherMessagingState_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(adoptedState_);
+                adoptedState_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10334,94 +10334,94 @@ public final class Messaging {
       return getTimestamp();
     }
 
-    public static final int APP_HEADERS_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.AppHeaders appHeaders_;
+    public static final int CXN_PROPS_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.AppConnectionProps cxnProps_;
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return Whether the appHeaders field is set.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return Whether the cxnProps field is set.
      */
     @java.lang.Override
-    public boolean hasAppHeaders() {
-      return appHeaders_ != null;
+    public boolean hasCxnProps() {
+      return cxnProps_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return The appHeaders.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return The cxnProps.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeaders getAppHeaders() {
-      return appHeaders_ == null ? com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+    public com.elarian.hera.proto.Common.AppConnectionProps getCxnProps() {
+      return cxnProps_ == null ? com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
     }
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder() {
-      return getAppHeaders();
+    public com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder() {
+      return getCxnProps();
     }
 
-    public static final int OTHER_CUSTOMER_ID_FIELD_NUMBER = 5;
-    private volatile java.lang.Object otherCustomerId_;
+    public static final int ADOPTED_CUSTOMER_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object adoptedCustomerId_;
     /**
-     * <code>string other_customer_id = 5;</code>
-     * @return The otherCustomerId.
+     * <code>string adopted_customer_id = 5;</code>
+     * @return The adoptedCustomerId.
      */
     @java.lang.Override
-    public java.lang.String getOtherCustomerId() {
-      java.lang.Object ref = otherCustomerId_;
+    public java.lang.String getAdoptedCustomerId() {
+      java.lang.Object ref = adoptedCustomerId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        otherCustomerId_ = s;
+        adoptedCustomerId_ = s;
         return s;
       }
     }
     /**
-     * <code>string other_customer_id = 5;</code>
-     * @return The bytes for otherCustomerId.
+     * <code>string adopted_customer_id = 5;</code>
+     * @return The bytes for adoptedCustomerId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getOtherCustomerIdBytes() {
-      java.lang.Object ref = otherCustomerId_;
+        getAdoptedCustomerIdBytes() {
+      java.lang.Object ref = adoptedCustomerId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        otherCustomerId_ = b;
+        adoptedCustomerId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int OTHER_MESSAGING_STATE_FIELD_NUMBER = 6;
-    private com.elarian.hera.proto.Messaging.MessagingState otherMessagingState_;
+    public static final int ADOPTED_STATE_FIELD_NUMBER = 6;
+    private com.elarian.hera.proto.Messaging.MessagingState adoptedState_;
     /**
-     * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
-     * @return Whether the otherMessagingState field is set.
+     * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
+     * @return Whether the adoptedState field is set.
      */
     @java.lang.Override
-    public boolean hasOtherMessagingState() {
-      return otherMessagingState_ != null;
+    public boolean hasAdoptedState() {
+      return adoptedState_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
-     * @return The otherMessagingState.
+     * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
+     * @return The adoptedState.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Messaging.MessagingState getOtherMessagingState() {
-      return otherMessagingState_ == null ? com.elarian.hera.proto.Messaging.MessagingState.getDefaultInstance() : otherMessagingState_;
+    public com.elarian.hera.proto.Messaging.MessagingState getAdoptedState() {
+      return adoptedState_ == null ? com.elarian.hera.proto.Messaging.MessagingState.getDefaultInstance() : adoptedState_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+     * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Messaging.MessagingStateOrBuilder getOtherMessagingStateOrBuilder() {
-      return getOtherMessagingState();
+    public com.elarian.hera.proto.Messaging.MessagingStateOrBuilder getAdoptedStateOrBuilder() {
+      return getAdoptedState();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10447,14 +10447,14 @@ public final class Messaging {
       if (timestamp_ != null) {
         output.writeMessage(3, getTimestamp());
       }
-      if (appHeaders_ != null) {
-        output.writeMessage(4, getAppHeaders());
+      if (cxnProps_ != null) {
+        output.writeMessage(4, getCxnProps());
       }
-      if (!getOtherCustomerIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, otherCustomerId_);
+      if (!getAdoptedCustomerIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, adoptedCustomerId_);
       }
-      if (otherMessagingState_ != null) {
-        output.writeMessage(6, getOtherMessagingState());
+      if (adoptedState_ != null) {
+        output.writeMessage(6, getAdoptedState());
       }
       unknownFields.writeTo(output);
     }
@@ -10475,16 +10475,16 @@ public final class Messaging {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimestamp());
       }
-      if (appHeaders_ != null) {
+      if (cxnProps_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getAppHeaders());
+          .computeMessageSize(4, getCxnProps());
       }
-      if (!getOtherCustomerIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, otherCustomerId_);
+      if (!getAdoptedCustomerIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, adoptedCustomerId_);
       }
-      if (otherMessagingState_ != null) {
+      if (adoptedState_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getOtherMessagingState());
+          .computeMessageSize(6, getAdoptedState());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10510,17 +10510,17 @@ public final class Messaging {
         if (!getTimestamp()
             .equals(other.getTimestamp())) return false;
       }
-      if (hasAppHeaders() != other.hasAppHeaders()) return false;
-      if (hasAppHeaders()) {
-        if (!getAppHeaders()
-            .equals(other.getAppHeaders())) return false;
+      if (hasCxnProps() != other.hasCxnProps()) return false;
+      if (hasCxnProps()) {
+        if (!getCxnProps()
+            .equals(other.getCxnProps())) return false;
       }
-      if (!getOtherCustomerId()
-          .equals(other.getOtherCustomerId())) return false;
-      if (hasOtherMessagingState() != other.hasOtherMessagingState()) return false;
-      if (hasOtherMessagingState()) {
-        if (!getOtherMessagingState()
-            .equals(other.getOtherMessagingState())) return false;
+      if (!getAdoptedCustomerId()
+          .equals(other.getAdoptedCustomerId())) return false;
+      if (hasAdoptedState() != other.hasAdoptedState()) return false;
+      if (hasAdoptedState()) {
+        if (!getAdoptedState()
+            .equals(other.getAdoptedState())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -10541,15 +10541,15 @@ public final class Messaging {
         hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + getTimestamp().hashCode();
       }
-      if (hasAppHeaders()) {
-        hash = (37 * hash) + APP_HEADERS_FIELD_NUMBER;
-        hash = (53 * hash) + getAppHeaders().hashCode();
+      if (hasCxnProps()) {
+        hash = (37 * hash) + CXN_PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getCxnProps().hashCode();
       }
-      hash = (37 * hash) + OTHER_CUSTOMER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOtherCustomerId().hashCode();
-      if (hasOtherMessagingState()) {
-        hash = (37 * hash) + OTHER_MESSAGING_STATE_FIELD_NUMBER;
-        hash = (53 * hash) + getOtherMessagingState().hashCode();
+      hash = (37 * hash) + ADOPTED_CUSTOMER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAdoptedCustomerId().hashCode();
+      if (hasAdoptedState()) {
+        hash = (37 * hash) + ADOPTED_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getAdoptedState().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10694,19 +10694,19 @@ public final class Messaging {
           timestamp_ = null;
           timestampBuilder_ = null;
         }
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = null;
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = null;
         } else {
-          appHeaders_ = null;
-          appHeadersBuilder_ = null;
+          cxnProps_ = null;
+          cxnPropsBuilder_ = null;
         }
-        otherCustomerId_ = "";
+        adoptedCustomerId_ = "";
 
-        if (otherMessagingStateBuilder_ == null) {
-          otherMessagingState_ = null;
+        if (adoptedStateBuilder_ == null) {
+          adoptedState_ = null;
         } else {
-          otherMessagingState_ = null;
-          otherMessagingStateBuilder_ = null;
+          adoptedState_ = null;
+          adoptedStateBuilder_ = null;
         }
         return this;
       }
@@ -10741,16 +10741,16 @@ public final class Messaging {
         } else {
           result.timestamp_ = timestampBuilder_.build();
         }
-        if (appHeadersBuilder_ == null) {
-          result.appHeaders_ = appHeaders_;
+        if (cxnPropsBuilder_ == null) {
+          result.cxnProps_ = cxnProps_;
         } else {
-          result.appHeaders_ = appHeadersBuilder_.build();
+          result.cxnProps_ = cxnPropsBuilder_.build();
         }
-        result.otherCustomerId_ = otherCustomerId_;
-        if (otherMessagingStateBuilder_ == null) {
-          result.otherMessagingState_ = otherMessagingState_;
+        result.adoptedCustomerId_ = adoptedCustomerId_;
+        if (adoptedStateBuilder_ == null) {
+          result.adoptedState_ = adoptedState_;
         } else {
-          result.otherMessagingState_ = otherMessagingStateBuilder_.build();
+          result.adoptedState_ = adoptedStateBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10811,15 +10811,15 @@ public final class Messaging {
         if (other.hasTimestamp()) {
           mergeTimestamp(other.getTimestamp());
         }
-        if (other.hasAppHeaders()) {
-          mergeAppHeaders(other.getAppHeaders());
+        if (other.hasCxnProps()) {
+          mergeCxnProps(other.getCxnProps());
         }
-        if (!other.getOtherCustomerId().isEmpty()) {
-          otherCustomerId_ = other.otherCustomerId_;
+        if (!other.getAdoptedCustomerId().isEmpty()) {
+          adoptedCustomerId_ = other.adoptedCustomerId_;
           onChanged();
         }
-        if (other.hasOtherMessagingState()) {
-          mergeOtherMessagingState(other.getOtherMessagingState());
+        if (other.hasAdoptedState()) {
+          mergeAdoptedState(other.getAdoptedState());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11121,318 +11121,318 @@ public final class Messaging {
         return timestampBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.AppHeaders appHeaders_;
+      private com.elarian.hera.proto.Common.AppConnectionProps cxnProps_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder> appHeadersBuilder_;
+          com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder> cxnPropsBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-       * @return Whether the appHeaders field is set.
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+       * @return Whether the cxnProps field is set.
        */
-      public boolean hasAppHeaders() {
-        return appHeadersBuilder_ != null || appHeaders_ != null;
+      public boolean hasCxnProps() {
+        return cxnPropsBuilder_ != null || cxnProps_ != null;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-       * @return The appHeaders.
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+       * @return The cxnProps.
        */
-      public com.elarian.hera.proto.Common.AppHeaders getAppHeaders() {
-        if (appHeadersBuilder_ == null) {
-          return appHeaders_ == null ? com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+      public com.elarian.hera.proto.Common.AppConnectionProps getCxnProps() {
+        if (cxnPropsBuilder_ == null) {
+          return cxnProps_ == null ? com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
         } else {
-          return appHeadersBuilder_.getMessage();
+          return cxnPropsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder setAppHeaders(com.elarian.hera.proto.Common.AppHeaders value) {
-        if (appHeadersBuilder_ == null) {
+      public Builder setCxnProps(com.elarian.hera.proto.Common.AppConnectionProps value) {
+        if (cxnPropsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          appHeaders_ = value;
+          cxnProps_ = value;
           onChanged();
         } else {
-          appHeadersBuilder_.setMessage(value);
+          cxnPropsBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder setAppHeaders(
-          com.elarian.hera.proto.Common.AppHeaders.Builder builderForValue) {
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = builderForValue.build();
+      public Builder setCxnProps(
+          com.elarian.hera.proto.Common.AppConnectionProps.Builder builderForValue) {
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = builderForValue.build();
           onChanged();
         } else {
-          appHeadersBuilder_.setMessage(builderForValue.build());
+          cxnPropsBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder mergeAppHeaders(com.elarian.hera.proto.Common.AppHeaders value) {
-        if (appHeadersBuilder_ == null) {
-          if (appHeaders_ != null) {
-            appHeaders_ =
-              com.elarian.hera.proto.Common.AppHeaders.newBuilder(appHeaders_).mergeFrom(value).buildPartial();
+      public Builder mergeCxnProps(com.elarian.hera.proto.Common.AppConnectionProps value) {
+        if (cxnPropsBuilder_ == null) {
+          if (cxnProps_ != null) {
+            cxnProps_ =
+              com.elarian.hera.proto.Common.AppConnectionProps.newBuilder(cxnProps_).mergeFrom(value).buildPartial();
           } else {
-            appHeaders_ = value;
+            cxnProps_ = value;
           }
           onChanged();
         } else {
-          appHeadersBuilder_.mergeFrom(value);
+          cxnPropsBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder clearAppHeaders() {
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = null;
+      public Builder clearCxnProps() {
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = null;
           onChanged();
         } else {
-          appHeaders_ = null;
-          appHeadersBuilder_ = null;
+          cxnProps_ = null;
+          cxnPropsBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public com.elarian.hera.proto.Common.AppHeaders.Builder getAppHeadersBuilder() {
+      public com.elarian.hera.proto.Common.AppConnectionProps.Builder getCxnPropsBuilder() {
         
         onChanged();
-        return getAppHeadersFieldBuilder().getBuilder();
+        return getCxnPropsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder() {
-        if (appHeadersBuilder_ != null) {
-          return appHeadersBuilder_.getMessageOrBuilder();
+      public com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder() {
+        if (cxnPropsBuilder_ != null) {
+          return cxnPropsBuilder_.getMessageOrBuilder();
         } else {
-          return appHeaders_ == null ?
-              com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+          return cxnProps_ == null ?
+              com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder> 
-          getAppHeadersFieldBuilder() {
-        if (appHeadersBuilder_ == null) {
-          appHeadersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder>(
-                  getAppHeaders(),
+          com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder> 
+          getCxnPropsFieldBuilder() {
+        if (cxnPropsBuilder_ == null) {
+          cxnPropsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder>(
+                  getCxnProps(),
                   getParentForChildren(),
                   isClean());
-          appHeaders_ = null;
+          cxnProps_ = null;
         }
-        return appHeadersBuilder_;
+        return cxnPropsBuilder_;
       }
 
-      private java.lang.Object otherCustomerId_ = "";
+      private java.lang.Object adoptedCustomerId_ = "";
       /**
-       * <code>string other_customer_id = 5;</code>
-       * @return The otherCustomerId.
+       * <code>string adopted_customer_id = 5;</code>
+       * @return The adoptedCustomerId.
        */
-      public java.lang.String getOtherCustomerId() {
-        java.lang.Object ref = otherCustomerId_;
+      public java.lang.String getAdoptedCustomerId() {
+        java.lang.Object ref = adoptedCustomerId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          otherCustomerId_ = s;
+          adoptedCustomerId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string other_customer_id = 5;</code>
-       * @return The bytes for otherCustomerId.
+       * <code>string adopted_customer_id = 5;</code>
+       * @return The bytes for adoptedCustomerId.
        */
       public com.google.protobuf.ByteString
-          getOtherCustomerIdBytes() {
-        java.lang.Object ref = otherCustomerId_;
+          getAdoptedCustomerIdBytes() {
+        java.lang.Object ref = adoptedCustomerId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          otherCustomerId_ = b;
+          adoptedCustomerId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string other_customer_id = 5;</code>
-       * @param value The otherCustomerId to set.
+       * <code>string adopted_customer_id = 5;</code>
+       * @param value The adoptedCustomerId to set.
        * @return This builder for chaining.
        */
-      public Builder setOtherCustomerId(
+      public Builder setAdoptedCustomerId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        otherCustomerId_ = value;
+        adoptedCustomerId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string other_customer_id = 5;</code>
+       * <code>string adopted_customer_id = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearOtherCustomerId() {
+      public Builder clearAdoptedCustomerId() {
         
-        otherCustomerId_ = getDefaultInstance().getOtherCustomerId();
+        adoptedCustomerId_ = getDefaultInstance().getAdoptedCustomerId();
         onChanged();
         return this;
       }
       /**
-       * <code>string other_customer_id = 5;</code>
-       * @param value The bytes for otherCustomerId to set.
+       * <code>string adopted_customer_id = 5;</code>
+       * @param value The bytes for adoptedCustomerId to set.
        * @return This builder for chaining.
        */
-      public Builder setOtherCustomerIdBytes(
+      public Builder setAdoptedCustomerIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        otherCustomerId_ = value;
+        adoptedCustomerId_ = value;
         onChanged();
         return this;
       }
 
-      private com.elarian.hera.proto.Messaging.MessagingState otherMessagingState_;
+      private com.elarian.hera.proto.Messaging.MessagingState adoptedState_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Messaging.MessagingState, com.elarian.hera.proto.Messaging.MessagingState.Builder, com.elarian.hera.proto.Messaging.MessagingStateOrBuilder> otherMessagingStateBuilder_;
+          com.elarian.hera.proto.Messaging.MessagingState, com.elarian.hera.proto.Messaging.MessagingState.Builder, com.elarian.hera.proto.Messaging.MessagingStateOrBuilder> adoptedStateBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
-       * @return Whether the otherMessagingState field is set.
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
+       * @return Whether the adoptedState field is set.
        */
-      public boolean hasOtherMessagingState() {
-        return otherMessagingStateBuilder_ != null || otherMessagingState_ != null;
+      public boolean hasAdoptedState() {
+        return adoptedStateBuilder_ != null || adoptedState_ != null;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
-       * @return The otherMessagingState.
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
+       * @return The adoptedState.
        */
-      public com.elarian.hera.proto.Messaging.MessagingState getOtherMessagingState() {
-        if (otherMessagingStateBuilder_ == null) {
-          return otherMessagingState_ == null ? com.elarian.hera.proto.Messaging.MessagingState.getDefaultInstance() : otherMessagingState_;
+      public com.elarian.hera.proto.Messaging.MessagingState getAdoptedState() {
+        if (adoptedStateBuilder_ == null) {
+          return adoptedState_ == null ? com.elarian.hera.proto.Messaging.MessagingState.getDefaultInstance() : adoptedState_;
         } else {
-          return otherMessagingStateBuilder_.getMessage();
+          return adoptedStateBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
        */
-      public Builder setOtherMessagingState(com.elarian.hera.proto.Messaging.MessagingState value) {
-        if (otherMessagingStateBuilder_ == null) {
+      public Builder setAdoptedState(com.elarian.hera.proto.Messaging.MessagingState value) {
+        if (adoptedStateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          otherMessagingState_ = value;
+          adoptedState_ = value;
           onChanged();
         } else {
-          otherMessagingStateBuilder_.setMessage(value);
+          adoptedStateBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
        */
-      public Builder setOtherMessagingState(
+      public Builder setAdoptedState(
           com.elarian.hera.proto.Messaging.MessagingState.Builder builderForValue) {
-        if (otherMessagingStateBuilder_ == null) {
-          otherMessagingState_ = builderForValue.build();
+        if (adoptedStateBuilder_ == null) {
+          adoptedState_ = builderForValue.build();
           onChanged();
         } else {
-          otherMessagingStateBuilder_.setMessage(builderForValue.build());
+          adoptedStateBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
        */
-      public Builder mergeOtherMessagingState(com.elarian.hera.proto.Messaging.MessagingState value) {
-        if (otherMessagingStateBuilder_ == null) {
-          if (otherMessagingState_ != null) {
-            otherMessagingState_ =
-              com.elarian.hera.proto.Messaging.MessagingState.newBuilder(otherMessagingState_).mergeFrom(value).buildPartial();
+      public Builder mergeAdoptedState(com.elarian.hera.proto.Messaging.MessagingState value) {
+        if (adoptedStateBuilder_ == null) {
+          if (adoptedState_ != null) {
+            adoptedState_ =
+              com.elarian.hera.proto.Messaging.MessagingState.newBuilder(adoptedState_).mergeFrom(value).buildPartial();
           } else {
-            otherMessagingState_ = value;
+            adoptedState_ = value;
           }
           onChanged();
         } else {
-          otherMessagingStateBuilder_.mergeFrom(value);
+          adoptedStateBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
        */
-      public Builder clearOtherMessagingState() {
-        if (otherMessagingStateBuilder_ == null) {
-          otherMessagingState_ = null;
+      public Builder clearAdoptedState() {
+        if (adoptedStateBuilder_ == null) {
+          adoptedState_ = null;
           onChanged();
         } else {
-          otherMessagingState_ = null;
-          otherMessagingStateBuilder_ = null;
+          adoptedState_ = null;
+          adoptedStateBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
        */
-      public com.elarian.hera.proto.Messaging.MessagingState.Builder getOtherMessagingStateBuilder() {
+      public com.elarian.hera.proto.Messaging.MessagingState.Builder getAdoptedStateBuilder() {
         
         onChanged();
-        return getOtherMessagingStateFieldBuilder().getBuilder();
+        return getAdoptedStateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
        */
-      public com.elarian.hera.proto.Messaging.MessagingStateOrBuilder getOtherMessagingStateOrBuilder() {
-        if (otherMessagingStateBuilder_ != null) {
-          return otherMessagingStateBuilder_.getMessageOrBuilder();
+      public com.elarian.hera.proto.Messaging.MessagingStateOrBuilder getAdoptedStateOrBuilder() {
+        if (adoptedStateBuilder_ != null) {
+          return adoptedStateBuilder_.getMessageOrBuilder();
         } else {
-          return otherMessagingState_ == null ?
-              com.elarian.hera.proto.Messaging.MessagingState.getDefaultInstance() : otherMessagingState_;
+          return adoptedState_ == null ?
+              com.elarian.hera.proto.Messaging.MessagingState.getDefaultInstance() : adoptedState_;
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingState other_messaging_state = 6;</code>
+       * <code>.com.elarian.hera.proto.MessagingState adopted_state = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.Messaging.MessagingState, com.elarian.hera.proto.Messaging.MessagingState.Builder, com.elarian.hera.proto.Messaging.MessagingStateOrBuilder> 
-          getOtherMessagingStateFieldBuilder() {
-        if (otherMessagingStateBuilder_ == null) {
-          otherMessagingStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getAdoptedStateFieldBuilder() {
+        if (adoptedStateBuilder_ == null) {
+          adoptedStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.elarian.hera.proto.Messaging.MessagingState, com.elarian.hera.proto.Messaging.MessagingState.Builder, com.elarian.hera.proto.Messaging.MessagingStateOrBuilder>(
-                  getOtherMessagingState(),
+                  getAdoptedState(),
                   getParentForChildren(),
                   isClean());
-          otherMessagingState_ = null;
+          adoptedState_ = null;
         }
-        return otherMessagingStateBuilder_;
+        return adoptedStateBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11531,19 +11531,19 @@ public final class Messaging {
     com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return Whether the appHeaders field is set.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return Whether the cxnProps field is set.
      */
-    boolean hasAppHeaders();
+    boolean hasCxnProps();
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return The appHeaders.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return The cxnProps.
      */
-    com.elarian.hera.proto.Common.AppHeaders getAppHeaders();
+    com.elarian.hera.proto.Common.AppConnectionProps getCxnProps();
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
      */
-    com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder();
+    com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder();
 
     /**
      * <code>string new_customer_id = 5;</code>
@@ -11631,14 +11631,14 @@ public final class Messaging {
               break;
             }
             case 34: {
-              com.elarian.hera.proto.Common.AppHeaders.Builder subBuilder = null;
-              if (appHeaders_ != null) {
-                subBuilder = appHeaders_.toBuilder();
+              com.elarian.hera.proto.Common.AppConnectionProps.Builder subBuilder = null;
+              if (cxnProps_ != null) {
+                subBuilder = cxnProps_.toBuilder();
               }
-              appHeaders_ = input.readMessage(com.elarian.hera.proto.Common.AppHeaders.parser(), extensionRegistry);
+              cxnProps_ = input.readMessage(com.elarian.hera.proto.Common.AppConnectionProps.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(appHeaders_);
-                appHeaders_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(cxnProps_);
+                cxnProps_ = subBuilder.buildPartial();
               }
 
               break;
@@ -11783,30 +11783,30 @@ public final class Messaging {
       return getTimestamp();
     }
 
-    public static final int APP_HEADERS_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.AppHeaders appHeaders_;
+    public static final int CXN_PROPS_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.AppConnectionProps cxnProps_;
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return Whether the appHeaders field is set.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return Whether the cxnProps field is set.
      */
     @java.lang.Override
-    public boolean hasAppHeaders() {
-      return appHeaders_ != null;
+    public boolean hasCxnProps() {
+      return cxnProps_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return The appHeaders.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return The cxnProps.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeaders getAppHeaders() {
-      return appHeaders_ == null ? com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+    public com.elarian.hera.proto.Common.AppConnectionProps getCxnProps() {
+      return cxnProps_ == null ? com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
     }
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder() {
-      return getAppHeaders();
+    public com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder() {
+      return getCxnProps();
     }
 
     public static final int NEW_CUSTOMER_ID_FIELD_NUMBER = 5;
@@ -11870,8 +11870,8 @@ public final class Messaging {
       if (timestamp_ != null) {
         output.writeMessage(3, getTimestamp());
       }
-      if (appHeaders_ != null) {
-        output.writeMessage(4, getAppHeaders());
+      if (cxnProps_ != null) {
+        output.writeMessage(4, getCxnProps());
       }
       if (!getNewCustomerIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, newCustomerId_);
@@ -11895,9 +11895,9 @@ public final class Messaging {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimestamp());
       }
-      if (appHeaders_ != null) {
+      if (cxnProps_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getAppHeaders());
+          .computeMessageSize(4, getCxnProps());
       }
       if (!getNewCustomerIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, newCustomerId_);
@@ -11926,10 +11926,10 @@ public final class Messaging {
         if (!getTimestamp()
             .equals(other.getTimestamp())) return false;
       }
-      if (hasAppHeaders() != other.hasAppHeaders()) return false;
-      if (hasAppHeaders()) {
-        if (!getAppHeaders()
-            .equals(other.getAppHeaders())) return false;
+      if (hasCxnProps() != other.hasCxnProps()) return false;
+      if (hasCxnProps()) {
+        if (!getCxnProps()
+            .equals(other.getCxnProps())) return false;
       }
       if (!getNewCustomerId()
           .equals(other.getNewCustomerId())) return false;
@@ -11952,9 +11952,9 @@ public final class Messaging {
         hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + getTimestamp().hashCode();
       }
-      if (hasAppHeaders()) {
-        hash = (37 * hash) + APP_HEADERS_FIELD_NUMBER;
-        hash = (53 * hash) + getAppHeaders().hashCode();
+      if (hasCxnProps()) {
+        hash = (37 * hash) + CXN_PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getCxnProps().hashCode();
       }
       hash = (37 * hash) + NEW_CUSTOMER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNewCustomerId().hashCode();
@@ -12101,11 +12101,11 @@ public final class Messaging {
           timestamp_ = null;
           timestampBuilder_ = null;
         }
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = null;
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = null;
         } else {
-          appHeaders_ = null;
-          appHeadersBuilder_ = null;
+          cxnProps_ = null;
+          cxnPropsBuilder_ = null;
         }
         newCustomerId_ = "";
 
@@ -12142,10 +12142,10 @@ public final class Messaging {
         } else {
           result.timestamp_ = timestampBuilder_.build();
         }
-        if (appHeadersBuilder_ == null) {
-          result.appHeaders_ = appHeaders_;
+        if (cxnPropsBuilder_ == null) {
+          result.cxnProps_ = cxnProps_;
         } else {
-          result.appHeaders_ = appHeadersBuilder_.build();
+          result.cxnProps_ = cxnPropsBuilder_.build();
         }
         result.newCustomerId_ = newCustomerId_;
         onBuilt();
@@ -12207,8 +12207,8 @@ public final class Messaging {
         if (other.hasTimestamp()) {
           mergeTimestamp(other.getTimestamp());
         }
-        if (other.hasAppHeaders()) {
-          mergeAppHeaders(other.getAppHeaders());
+        if (other.hasCxnProps()) {
+          mergeCxnProps(other.getCxnProps());
         }
         if (!other.getNewCustomerId().isEmpty()) {
           newCustomerId_ = other.newCustomerId_;
@@ -12514,123 +12514,123 @@ public final class Messaging {
         return timestampBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.AppHeaders appHeaders_;
+      private com.elarian.hera.proto.Common.AppConnectionProps cxnProps_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder> appHeadersBuilder_;
+          com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder> cxnPropsBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-       * @return Whether the appHeaders field is set.
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+       * @return Whether the cxnProps field is set.
        */
-      public boolean hasAppHeaders() {
-        return appHeadersBuilder_ != null || appHeaders_ != null;
+      public boolean hasCxnProps() {
+        return cxnPropsBuilder_ != null || cxnProps_ != null;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-       * @return The appHeaders.
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+       * @return The cxnProps.
        */
-      public com.elarian.hera.proto.Common.AppHeaders getAppHeaders() {
-        if (appHeadersBuilder_ == null) {
-          return appHeaders_ == null ? com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+      public com.elarian.hera.proto.Common.AppConnectionProps getCxnProps() {
+        if (cxnPropsBuilder_ == null) {
+          return cxnProps_ == null ? com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
         } else {
-          return appHeadersBuilder_.getMessage();
+          return cxnPropsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder setAppHeaders(com.elarian.hera.proto.Common.AppHeaders value) {
-        if (appHeadersBuilder_ == null) {
+      public Builder setCxnProps(com.elarian.hera.proto.Common.AppConnectionProps value) {
+        if (cxnPropsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          appHeaders_ = value;
+          cxnProps_ = value;
           onChanged();
         } else {
-          appHeadersBuilder_.setMessage(value);
+          cxnPropsBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder setAppHeaders(
-          com.elarian.hera.proto.Common.AppHeaders.Builder builderForValue) {
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = builderForValue.build();
+      public Builder setCxnProps(
+          com.elarian.hera.proto.Common.AppConnectionProps.Builder builderForValue) {
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = builderForValue.build();
           onChanged();
         } else {
-          appHeadersBuilder_.setMessage(builderForValue.build());
+          cxnPropsBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder mergeAppHeaders(com.elarian.hera.proto.Common.AppHeaders value) {
-        if (appHeadersBuilder_ == null) {
-          if (appHeaders_ != null) {
-            appHeaders_ =
-              com.elarian.hera.proto.Common.AppHeaders.newBuilder(appHeaders_).mergeFrom(value).buildPartial();
+      public Builder mergeCxnProps(com.elarian.hera.proto.Common.AppConnectionProps value) {
+        if (cxnPropsBuilder_ == null) {
+          if (cxnProps_ != null) {
+            cxnProps_ =
+              com.elarian.hera.proto.Common.AppConnectionProps.newBuilder(cxnProps_).mergeFrom(value).buildPartial();
           } else {
-            appHeaders_ = value;
+            cxnProps_ = value;
           }
           onChanged();
         } else {
-          appHeadersBuilder_.mergeFrom(value);
+          cxnPropsBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder clearAppHeaders() {
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = null;
+      public Builder clearCxnProps() {
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = null;
           onChanged();
         } else {
-          appHeaders_ = null;
-          appHeadersBuilder_ = null;
+          cxnProps_ = null;
+          cxnPropsBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public com.elarian.hera.proto.Common.AppHeaders.Builder getAppHeadersBuilder() {
+      public com.elarian.hera.proto.Common.AppConnectionProps.Builder getCxnPropsBuilder() {
         
         onChanged();
-        return getAppHeadersFieldBuilder().getBuilder();
+        return getCxnPropsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder() {
-        if (appHeadersBuilder_ != null) {
-          return appHeadersBuilder_.getMessageOrBuilder();
+      public com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder() {
+        if (cxnPropsBuilder_ != null) {
+          return cxnPropsBuilder_.getMessageOrBuilder();
         } else {
-          return appHeaders_ == null ?
-              com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+          return cxnProps_ == null ?
+              com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder> 
-          getAppHeadersFieldBuilder() {
-        if (appHeadersBuilder_ == null) {
-          appHeadersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder>(
-                  getAppHeaders(),
+          com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder> 
+          getCxnPropsFieldBuilder() {
+        if (cxnPropsBuilder_ == null) {
+          cxnPropsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder>(
+                  getCxnProps(),
                   getParentForChildren(),
                   isClean());
-          appHeaders_ = null;
+          cxnProps_ = null;
         }
-        return appHeadersBuilder_;
+        return cxnPropsBuilder_;
       }
 
       private java.lang.Object newCustomerId_ = "";
@@ -12805,19 +12805,19 @@ public final class Messaging {
     com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return Whether the appHeaders field is set.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return Whether the cxnProps field is set.
      */
-    boolean hasAppHeaders();
+    boolean hasCxnProps();
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return The appHeaders.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return The cxnProps.
      */
-    com.elarian.hera.proto.Common.AppHeaders getAppHeaders();
+    com.elarian.hera.proto.Common.AppConnectionProps getCxnProps();
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
      */
-    com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder();
+    com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder();
 
     /**
      * <code>string app_id = 5;</code>
@@ -12959,14 +12959,14 @@ public final class Messaging {
               break;
             }
             case 34: {
-              com.elarian.hera.proto.Common.AppHeaders.Builder subBuilder = null;
-              if (appHeaders_ != null) {
-                subBuilder = appHeaders_.toBuilder();
+              com.elarian.hera.proto.Common.AppConnectionProps.Builder subBuilder = null;
+              if (cxnProps_ != null) {
+                subBuilder = cxnProps_.toBuilder();
               }
-              appHeaders_ = input.readMessage(com.elarian.hera.proto.Common.AppHeaders.parser(), extensionRegistry);
+              cxnProps_ = input.readMessage(com.elarian.hera.proto.Common.AppConnectionProps.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(appHeaders_);
-                appHeaders_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(cxnProps_);
+                cxnProps_ = subBuilder.buildPartial();
               }
 
               break;
@@ -13149,30 +13149,30 @@ public final class Messaging {
       return getTimestamp();
     }
 
-    public static final int APP_HEADERS_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.AppHeaders appHeaders_;
+    public static final int CXN_PROPS_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.AppConnectionProps cxnProps_;
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return Whether the appHeaders field is set.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return Whether the cxnProps field is set.
      */
     @java.lang.Override
-    public boolean hasAppHeaders() {
-      return appHeaders_ != null;
+    public boolean hasCxnProps() {
+      return cxnProps_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return The appHeaders.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return The cxnProps.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeaders getAppHeaders() {
-      return appHeaders_ == null ? com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+    public com.elarian.hera.proto.Common.AppConnectionProps getCxnProps() {
+      return cxnProps_ == null ? com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
     }
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder() {
-      return getAppHeaders();
+    public com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder() {
+      return getCxnProps();
     }
 
     public static final int APP_ID_FIELD_NUMBER = 5;
@@ -13326,8 +13326,8 @@ public final class Messaging {
       if (timestamp_ != null) {
         output.writeMessage(3, getTimestamp());
       }
-      if (appHeaders_ != null) {
-        output.writeMessage(4, getAppHeaders());
+      if (cxnProps_ != null) {
+        output.writeMessage(4, getCxnProps());
       }
       if (!getAppIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, appId_);
@@ -13363,9 +13363,9 @@ public final class Messaging {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimestamp());
       }
-      if (appHeaders_ != null) {
+      if (cxnProps_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getAppHeaders());
+          .computeMessageSize(4, getCxnProps());
       }
       if (!getAppIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, appId_);
@@ -13410,10 +13410,10 @@ public final class Messaging {
         if (!getTimestamp()
             .equals(other.getTimestamp())) return false;
       }
-      if (hasAppHeaders() != other.hasAppHeaders()) return false;
-      if (hasAppHeaders()) {
-        if (!getAppHeaders()
-            .equals(other.getAppHeaders())) return false;
+      if (hasCxnProps() != other.hasCxnProps()) return false;
+      if (hasCxnProps()) {
+        if (!getCxnProps()
+            .equals(other.getCxnProps())) return false;
       }
       if (!getAppId()
           .equals(other.getAppId())) return false;
@@ -13448,9 +13448,9 @@ public final class Messaging {
         hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + getTimestamp().hashCode();
       }
-      if (hasAppHeaders()) {
-        hash = (37 * hash) + APP_HEADERS_FIELD_NUMBER;
-        hash = (53 * hash) + getAppHeaders().hashCode();
+      if (hasCxnProps()) {
+        hash = (37 * hash) + CXN_PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getCxnProps().hashCode();
       }
       hash = (37 * hash) + APP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAppId().hashCode();
@@ -13609,11 +13609,11 @@ public final class Messaging {
           timestamp_ = null;
           timestampBuilder_ = null;
         }
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = null;
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = null;
         } else {
-          appHeaders_ = null;
-          appHeadersBuilder_ = null;
+          cxnProps_ = null;
+          cxnPropsBuilder_ = null;
         }
         appId_ = "";
 
@@ -13666,10 +13666,10 @@ public final class Messaging {
         } else {
           result.timestamp_ = timestampBuilder_.build();
         }
-        if (appHeadersBuilder_ == null) {
-          result.appHeaders_ = appHeaders_;
+        if (cxnPropsBuilder_ == null) {
+          result.cxnProps_ = cxnProps_;
         } else {
-          result.appHeaders_ = appHeadersBuilder_.build();
+          result.cxnProps_ = cxnPropsBuilder_.build();
         }
         result.appId_ = appId_;
         if (customerNumberBuilder_ == null) {
@@ -13743,8 +13743,8 @@ public final class Messaging {
         if (other.hasTimestamp()) {
           mergeTimestamp(other.getTimestamp());
         }
-        if (other.hasAppHeaders()) {
-          mergeAppHeaders(other.getAppHeaders());
+        if (other.hasCxnProps()) {
+          mergeCxnProps(other.getCxnProps());
         }
         if (!other.getAppId().isEmpty()) {
           appId_ = other.appId_;
@@ -14062,123 +14062,123 @@ public final class Messaging {
         return timestampBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.AppHeaders appHeaders_;
+      private com.elarian.hera.proto.Common.AppConnectionProps cxnProps_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder> appHeadersBuilder_;
+          com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder> cxnPropsBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-       * @return Whether the appHeaders field is set.
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+       * @return Whether the cxnProps field is set.
        */
-      public boolean hasAppHeaders() {
-        return appHeadersBuilder_ != null || appHeaders_ != null;
+      public boolean hasCxnProps() {
+        return cxnPropsBuilder_ != null || cxnProps_ != null;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-       * @return The appHeaders.
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+       * @return The cxnProps.
        */
-      public com.elarian.hera.proto.Common.AppHeaders getAppHeaders() {
-        if (appHeadersBuilder_ == null) {
-          return appHeaders_ == null ? com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+      public com.elarian.hera.proto.Common.AppConnectionProps getCxnProps() {
+        if (cxnPropsBuilder_ == null) {
+          return cxnProps_ == null ? com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
         } else {
-          return appHeadersBuilder_.getMessage();
+          return cxnPropsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder setAppHeaders(com.elarian.hera.proto.Common.AppHeaders value) {
-        if (appHeadersBuilder_ == null) {
+      public Builder setCxnProps(com.elarian.hera.proto.Common.AppConnectionProps value) {
+        if (cxnPropsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          appHeaders_ = value;
+          cxnProps_ = value;
           onChanged();
         } else {
-          appHeadersBuilder_.setMessage(value);
+          cxnPropsBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder setAppHeaders(
-          com.elarian.hera.proto.Common.AppHeaders.Builder builderForValue) {
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = builderForValue.build();
+      public Builder setCxnProps(
+          com.elarian.hera.proto.Common.AppConnectionProps.Builder builderForValue) {
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = builderForValue.build();
           onChanged();
         } else {
-          appHeadersBuilder_.setMessage(builderForValue.build());
+          cxnPropsBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder mergeAppHeaders(com.elarian.hera.proto.Common.AppHeaders value) {
-        if (appHeadersBuilder_ == null) {
-          if (appHeaders_ != null) {
-            appHeaders_ =
-              com.elarian.hera.proto.Common.AppHeaders.newBuilder(appHeaders_).mergeFrom(value).buildPartial();
+      public Builder mergeCxnProps(com.elarian.hera.proto.Common.AppConnectionProps value) {
+        if (cxnPropsBuilder_ == null) {
+          if (cxnProps_ != null) {
+            cxnProps_ =
+              com.elarian.hera.proto.Common.AppConnectionProps.newBuilder(cxnProps_).mergeFrom(value).buildPartial();
           } else {
-            appHeaders_ = value;
+            cxnProps_ = value;
           }
           onChanged();
         } else {
-          appHeadersBuilder_.mergeFrom(value);
+          cxnPropsBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder clearAppHeaders() {
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = null;
+      public Builder clearCxnProps() {
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = null;
           onChanged();
         } else {
-          appHeaders_ = null;
-          appHeadersBuilder_ = null;
+          cxnProps_ = null;
+          cxnPropsBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public com.elarian.hera.proto.Common.AppHeaders.Builder getAppHeadersBuilder() {
+      public com.elarian.hera.proto.Common.AppConnectionProps.Builder getCxnPropsBuilder() {
         
         onChanged();
-        return getAppHeadersFieldBuilder().getBuilder();
+        return getCxnPropsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder() {
-        if (appHeadersBuilder_ != null) {
-          return appHeadersBuilder_.getMessageOrBuilder();
+      public com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder() {
+        if (cxnPropsBuilder_ != null) {
+          return cxnPropsBuilder_.getMessageOrBuilder();
         } else {
-          return appHeaders_ == null ?
-              com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+          return cxnProps_ == null ?
+              com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder> 
-          getAppHeadersFieldBuilder() {
-        if (appHeadersBuilder_ == null) {
-          appHeadersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder>(
-                  getAppHeaders(),
+          com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder> 
+          getCxnPropsFieldBuilder() {
+        if (cxnPropsBuilder_ == null) {
+          cxnPropsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder>(
+                  getCxnProps(),
                   getParentForChildren(),
                   isClean());
-          appHeaders_ = null;
+          cxnProps_ = null;
         }
-        return appHeadersBuilder_;
+        return cxnPropsBuilder_;
       }
 
       private java.lang.Object appId_ = "";
@@ -20584,19 +20584,19 @@ public final class Messaging {
     com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return Whether the appHeaders field is set.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return Whether the cxnProps field is set.
      */
-    boolean hasAppHeaders();
+    boolean hasCxnProps();
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return The appHeaders.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return The cxnProps.
      */
-    com.elarian.hera.proto.Common.AppHeaders getAppHeaders();
+    com.elarian.hera.proto.Common.AppConnectionProps getCxnProps();
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
      */
-    com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder();
+    com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder();
 
     /**
      * <code>string app_id = 5;</code>
@@ -20811,14 +20811,14 @@ public final class Messaging {
               break;
             }
             case 34: {
-              com.elarian.hera.proto.Common.AppHeaders.Builder subBuilder = null;
-              if (appHeaders_ != null) {
-                subBuilder = appHeaders_.toBuilder();
+              com.elarian.hera.proto.Common.AppConnectionProps.Builder subBuilder = null;
+              if (cxnProps_ != null) {
+                subBuilder = cxnProps_.toBuilder();
               }
-              appHeaders_ = input.readMessage(com.elarian.hera.proto.Common.AppHeaders.parser(), extensionRegistry);
+              cxnProps_ = input.readMessage(com.elarian.hera.proto.Common.AppConnectionProps.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(appHeaders_);
-                appHeaders_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(cxnProps_);
+                cxnProps_ = subBuilder.buildPartial();
               }
 
               break;
@@ -21059,30 +21059,30 @@ public final class Messaging {
       return getTimestamp();
     }
 
-    public static final int APP_HEADERS_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.AppHeaders appHeaders_;
+    public static final int CXN_PROPS_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.AppConnectionProps cxnProps_;
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return Whether the appHeaders field is set.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return Whether the cxnProps field is set.
      */
     @java.lang.Override
-    public boolean hasAppHeaders() {
-      return appHeaders_ != null;
+    public boolean hasCxnProps() {
+      return cxnProps_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-     * @return The appHeaders.
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+     * @return The cxnProps.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeaders getAppHeaders() {
-      return appHeaders_ == null ? com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+    public com.elarian.hera.proto.Common.AppConnectionProps getCxnProps() {
+      return cxnProps_ == null ? com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
     }
     /**
-     * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+     * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder() {
-      return getAppHeaders();
+    public com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder() {
+      return getCxnProps();
     }
 
     public static final int APP_ID_FIELD_NUMBER = 5;
@@ -21378,8 +21378,8 @@ public final class Messaging {
       if (timestamp_ != null) {
         output.writeMessage(3, getTimestamp());
       }
-      if (appHeaders_ != null) {
-        output.writeMessage(4, getAppHeaders());
+      if (cxnProps_ != null) {
+        output.writeMessage(4, getCxnProps());
       }
       if (!getAppIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, appId_);
@@ -21430,9 +21430,9 @@ public final class Messaging {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimestamp());
       }
-      if (appHeaders_ != null) {
+      if (cxnProps_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getAppHeaders());
+          .computeMessageSize(4, getCxnProps());
       }
       if (!getAppIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, appId_);
@@ -21496,10 +21496,10 @@ public final class Messaging {
         if (!getTimestamp()
             .equals(other.getTimestamp())) return false;
       }
-      if (hasAppHeaders() != other.hasAppHeaders()) return false;
-      if (hasAppHeaders()) {
-        if (!getAppHeaders()
-            .equals(other.getAppHeaders())) return false;
+      if (hasCxnProps() != other.hasCxnProps()) return false;
+      if (hasCxnProps()) {
+        if (!getCxnProps()
+            .equals(other.getCxnProps())) return false;
       }
       if (!getAppId()
           .equals(other.getAppId())) return false;
@@ -21556,9 +21556,9 @@ public final class Messaging {
         hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + getTimestamp().hashCode();
       }
-      if (hasAppHeaders()) {
-        hash = (37 * hash) + APP_HEADERS_FIELD_NUMBER;
-        hash = (53 * hash) + getAppHeaders().hashCode();
+      if (hasCxnProps()) {
+        hash = (37 * hash) + CXN_PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getCxnProps().hashCode();
       }
       hash = (37 * hash) + APP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAppId().hashCode();
@@ -21735,11 +21735,11 @@ public final class Messaging {
           timestamp_ = null;
           timestampBuilder_ = null;
         }
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = null;
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = null;
         } else {
-          appHeaders_ = null;
-          appHeadersBuilder_ = null;
+          cxnProps_ = null;
+          cxnPropsBuilder_ = null;
         }
         appId_ = "";
 
@@ -21818,10 +21818,10 @@ public final class Messaging {
         } else {
           result.timestamp_ = timestampBuilder_.build();
         }
-        if (appHeadersBuilder_ == null) {
-          result.appHeaders_ = appHeaders_;
+        if (cxnPropsBuilder_ == null) {
+          result.cxnProps_ = cxnProps_;
         } else {
-          result.appHeaders_ = appHeadersBuilder_.build();
+          result.cxnProps_ = cxnPropsBuilder_.build();
         }
         result.appId_ = appId_;
         result.messageId_ = messageId_;
@@ -21916,8 +21916,8 @@ public final class Messaging {
         if (other.hasTimestamp()) {
           mergeTimestamp(other.getTimestamp());
         }
-        if (other.hasAppHeaders()) {
-          mergeAppHeaders(other.getAppHeaders());
+        if (other.hasCxnProps()) {
+          mergeCxnProps(other.getCxnProps());
         }
         if (!other.getAppId().isEmpty()) {
           appId_ = other.appId_;
@@ -22251,123 +22251,123 @@ public final class Messaging {
         return timestampBuilder_;
       }
 
-      private com.elarian.hera.proto.Common.AppHeaders appHeaders_;
+      private com.elarian.hera.proto.Common.AppConnectionProps cxnProps_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder> appHeadersBuilder_;
+          com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder> cxnPropsBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-       * @return Whether the appHeaders field is set.
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+       * @return Whether the cxnProps field is set.
        */
-      public boolean hasAppHeaders() {
-        return appHeadersBuilder_ != null || appHeaders_ != null;
+      public boolean hasCxnProps() {
+        return cxnPropsBuilder_ != null || cxnProps_ != null;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
-       * @return The appHeaders.
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
+       * @return The cxnProps.
        */
-      public com.elarian.hera.proto.Common.AppHeaders getAppHeaders() {
-        if (appHeadersBuilder_ == null) {
-          return appHeaders_ == null ? com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+      public com.elarian.hera.proto.Common.AppConnectionProps getCxnProps() {
+        if (cxnPropsBuilder_ == null) {
+          return cxnProps_ == null ? com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
         } else {
-          return appHeadersBuilder_.getMessage();
+          return cxnPropsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder setAppHeaders(com.elarian.hera.proto.Common.AppHeaders value) {
-        if (appHeadersBuilder_ == null) {
+      public Builder setCxnProps(com.elarian.hera.proto.Common.AppConnectionProps value) {
+        if (cxnPropsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          appHeaders_ = value;
+          cxnProps_ = value;
           onChanged();
         } else {
-          appHeadersBuilder_.setMessage(value);
+          cxnPropsBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder setAppHeaders(
-          com.elarian.hera.proto.Common.AppHeaders.Builder builderForValue) {
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = builderForValue.build();
+      public Builder setCxnProps(
+          com.elarian.hera.proto.Common.AppConnectionProps.Builder builderForValue) {
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = builderForValue.build();
           onChanged();
         } else {
-          appHeadersBuilder_.setMessage(builderForValue.build());
+          cxnPropsBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder mergeAppHeaders(com.elarian.hera.proto.Common.AppHeaders value) {
-        if (appHeadersBuilder_ == null) {
-          if (appHeaders_ != null) {
-            appHeaders_ =
-              com.elarian.hera.proto.Common.AppHeaders.newBuilder(appHeaders_).mergeFrom(value).buildPartial();
+      public Builder mergeCxnProps(com.elarian.hera.proto.Common.AppConnectionProps value) {
+        if (cxnPropsBuilder_ == null) {
+          if (cxnProps_ != null) {
+            cxnProps_ =
+              com.elarian.hera.proto.Common.AppConnectionProps.newBuilder(cxnProps_).mergeFrom(value).buildPartial();
           } else {
-            appHeaders_ = value;
+            cxnProps_ = value;
           }
           onChanged();
         } else {
-          appHeadersBuilder_.mergeFrom(value);
+          cxnPropsBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public Builder clearAppHeaders() {
-        if (appHeadersBuilder_ == null) {
-          appHeaders_ = null;
+      public Builder clearCxnProps() {
+        if (cxnPropsBuilder_ == null) {
+          cxnProps_ = null;
           onChanged();
         } else {
-          appHeaders_ = null;
-          appHeadersBuilder_ = null;
+          cxnProps_ = null;
+          cxnPropsBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public com.elarian.hera.proto.Common.AppHeaders.Builder getAppHeadersBuilder() {
+      public com.elarian.hera.proto.Common.AppConnectionProps.Builder getCxnPropsBuilder() {
         
         onChanged();
-        return getAppHeadersFieldBuilder().getBuilder();
+        return getCxnPropsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
-      public com.elarian.hera.proto.Common.AppHeadersOrBuilder getAppHeadersOrBuilder() {
-        if (appHeadersBuilder_ != null) {
-          return appHeadersBuilder_.getMessageOrBuilder();
+      public com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder getCxnPropsOrBuilder() {
+        if (cxnPropsBuilder_ != null) {
+          return cxnPropsBuilder_.getMessageOrBuilder();
         } else {
-          return appHeaders_ == null ?
-              com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance() : appHeaders_;
+          return cxnProps_ == null ?
+              com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance() : cxnProps_;
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.AppHeaders app_headers = 4;</code>
+       * <code>.com.elarian.hera.proto.AppConnectionProps cxn_props = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder> 
-          getAppHeadersFieldBuilder() {
-        if (appHeadersBuilder_ == null) {
-          appHeadersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.elarian.hera.proto.Common.AppHeaders, com.elarian.hera.proto.Common.AppHeaders.Builder, com.elarian.hera.proto.Common.AppHeadersOrBuilder>(
-                  getAppHeaders(),
+          com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder> 
+          getCxnPropsFieldBuilder() {
+        if (cxnPropsBuilder_ == null) {
+          cxnPropsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.Common.AppConnectionProps, com.elarian.hera.proto.Common.AppConnectionProps.Builder, com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder>(
+                  getCxnProps(),
                   getParentForChildren(),
                   isClean());
-          appHeaders_ = null;
+          cxnProps_ = null;
         }
-        return appHeadersBuilder_;
+        return cxnPropsBuilder_;
       }
 
       private java.lang.Object appId_ = "";
@@ -24867,80 +24867,81 @@ public final class Messaging {
       "ntH\000B\007\n\005event\"\213\002\n\032MessagingStateAdoptedE" +
       "vent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(" +
       "\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.protobuf.T" +
-      "imestamp\0227\n\013app_headers\030\004 \001(\0132\".com.elar" +
-      "ian.hera.proto.AppHeaders\022\031\n\021other_custo" +
-      "mer_id\030\005 \001(\t\022E\n\025other_messaging_state\030\006 " +
+      "imestamp\022=\n\tcxn_props\030\004 \001(\0132*.com.elaria" +
+      "n.hera.proto.AppConnectionProps\022\033\n\023adopt" +
+      "ed_customer_id\030\005 \001(\t\022=\n\radopted_state\030\006 " +
       "\001(\0132&.com.elarian.hera.proto.MessagingSt" +
-      "ate\"\312\001\n\"MessagingEntityDecommissionedEve" +
+      "ate\"\320\001\n\"MessagingEntityDecommissionedEve" +
       "nt\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022" +
       "-\n\ttimestamp\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\0227\n\013app_headers\030\004 \001(\0132\".com.elaria" +
-      "n.hera.proto.AppHeaders\022\027\n\017new_customer_" +
-      "id\030\005 \001(\t\"\306\003\n\036MessagingConsentRequestedEv" +
-      "ent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t" +
-      "\022-\n\ttimestamp\030\003 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\0227\n\013app_headers\030\004 \001(\0132\".com.elari" +
-      "an.hera.proto.AppHeaders\022\016\n\006app_id\030\005 \001(\t" +
-      "\022?\n\017customer_number\030\006 \001(\0132&.com.elarian." +
-      "hera.proto.CustomerNumber\022F\n\016channel_num" +
-      "ber\030\007 \001(\0132..com.elarian.hera.proto.Messa" +
-      "gingChannelNumber\022>\n\006status\030\010 \001(\0162..com." +
-      "elarian.hera.proto.MessagingConsentStatu" +
-      "s\022>\n\006action\030\t \001(\0162..com.elarian.hera.pro" +
-      "to.MessagingConsentAction\"\321\002\n\"MessagingC" +
-      "onsentStatusUpdatedEvent\022\016\n\006org_id\030\001 \001(\t" +
-      "\022\023\n\013customer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022\016\n\006app_id\030\004" +
-      " \001(\t\022?\n\017customer_number\030\005 \001(\0132&.com.elar" +
-      "ian.hera.proto.CustomerNumber\022F\n\016channel" +
-      "_number\030\006 \001(\0132..com.elarian.hera.proto.M" +
-      "essagingChannelNumber\022>\n\006status\030\007 \001(\0162.." +
-      "com.elarian.hera.proto.MessagingConsentS" +
-      "tatus\"\237\003\n\"MessagingSessionStatusUpdatedE" +
-      "vent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(" +
-      "\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022,\n\006app_id\030\004 \001(\0132\034.google.protob" +
-      "uf.StringValue\022?\n\017customer_number\030\005 \001(\0132" +
+      "estamp\022=\n\tcxn_props\030\004 \001(\0132*.com.elarian." +
+      "hera.proto.AppConnectionProps\022\027\n\017new_cus" +
+      "tomer_id\030\005 \001(\t\"\314\003\n\036MessagingConsentReque" +
+      "stedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id" +
+      "\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022=\n\tcxn_props\030\004 \001(\0132*.com.e" +
+      "larian.hera.proto.AppConnectionProps\022\016\n\006" +
+      "app_id\030\005 \001(\t\022?\n\017customer_number\030\006 \001(\0132&." +
+      "com.elarian.hera.proto.CustomerNumber\022F\n" +
+      "\016channel_number\030\007 \001(\0132..com.elarian.hera" +
+      ".proto.MessagingChannelNumber\022>\n\006status\030" +
+      "\010 \001(\0162..com.elarian.hera.proto.Messaging" +
+      "ConsentStatus\022>\n\006action\030\t \001(\0162..com.elar" +
+      "ian.hera.proto.MessagingConsentAction\"\321\002" +
+      "\n\"MessagingConsentStatusUpdatedEvent\022\016\n\006" +
+      "org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022-\n\ttim" +
+      "estamp\030\003 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\016\n\006app_id\030\004 \001(\t\022?\n\017customer_number\030\005 \001(" +
+      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
+      "r\022F\n\016channel_number\030\006 \001(\0132..com.elarian." +
+      "hera.proto.MessagingChannelNumber\022>\n\006sta" +
+      "tus\030\007 \001(\0162..com.elarian.hera.proto.Messa" +
+      "gingConsentStatus\"\237\003\n\"MessagingSessionSt" +
+      "atusUpdatedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013cust" +
+      "omer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022,\n\006app_id\030\004 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022?\n\017customer_n" +
+      "umber\030\005 \001(\0132&.com.elarian.hera.proto.Cus" +
+      "tomerNumber\022F\n\016channel_number\030\006 \001(\0132..co" +
+      "m.elarian.hera.proto.MessagingChannelNum" +
+      "ber\022>\n\006status\030\007 \001(\0162..com.elarian.hera.p" +
+      "roto.MessagingSessionStatus\022.\n\nexpiratio" +
+      "n\030\010 \001(\0132\032.google.protobuf.Timestamp\"\331\003\n\024" +
+      "MessageReceivedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013" +
+      "customer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022,\n\006app_id\030\004 \001(\013" +
+      "2\034.google.protobuf.StringValue\022\022\n\nmessag" +
+      "e_id\030\005 \001(\t\022?\n\017customer_number\030\006 \001(\0132&.co" +
+      "m.elarian.hera.proto.CustomerNumber\022F\n\016c" +
+      "hannel_number\030\007 \001(\0132..com.elarian.hera.p" +
+      "roto.MessagingChannelNumber\022*\n\004text\030\010 \001(" +
+      "\0132\034.google.protobuf.StringValue\0227\n\005media" +
+      "\030\t \003(\0132(.com.elarian.hera.proto.MediaMes" +
+      "sageBody\022=\n\010location\030\n \001(\0132+.com.elarian" +
+      ".hera.proto.LocationMessageBody\"\251\005\n\020Mess" +
+      "ageSentEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer" +
+      "_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022=\n\tcxn_props\030\004 \001(\0132*.co" +
+      "m.elarian.hera.proto.AppConnectionProps\022" +
+      "\016\n\006app_id\030\005 \001(\t\022\022\n\nmessage_id\030\006 \001(\t\0229\n\023r" +
+      "eply_to_message_id\030\007 \001(\0132\034.google.protob" +
+      "uf.StringValue\022?\n\017customer_number\030\010 \001(\0132" +
       "&.com.elarian.hera.proto.CustomerNumber\022" +
-      "F\n\016channel_number\030\006 \001(\0132..com.elarian.he" +
-      "ra.proto.MessagingChannelNumber\022>\n\006statu" +
-      "s\030\007 \001(\0162..com.elarian.hera.proto.Messagi" +
-      "ngSessionStatus\022.\n\nexpiration\030\010 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\"\331\003\n\024MessageRecei" +
-      "vedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030" +
-      "\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022,\n\006app_id\030\004 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\022\022\n\nmessage_id\030\005 \001(\t\022?" +
-      "\n\017customer_number\030\006 \001(\0132&.com.elarian.he" +
-      "ra.proto.CustomerNumber\022F\n\016channel_numbe" +
-      "r\030\007 \001(\0132..com.elarian.hera.proto.Messagi" +
-      "ngChannelNumber\022*\n\004text\030\010 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\0227\n\005media\030\t \003(\0132(.com" +
-      ".elarian.hera.proto.MediaMessageBody\022=\n\010" +
-      "location\030\n \001(\0132+.com.elarian.hera.proto." +
-      "LocationMessageBody\"\243\005\n\020MessageSentEvent" +
-      "\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022-\n" +
-      "\ttimestamp\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tamp\0227\n\013app_headers\030\004 \001(\0132\".com.elarian." +
-      "hera.proto.AppHeaders\022\016\n\006app_id\030\005 \001(\t\022\022\n" +
-      "\nmessage_id\030\006 \001(\t\0229\n\023reply_to_message_id" +
-      "\030\007 \001(\0132\034.google.protobuf.StringValue\022?\n\017" +
-      "customer_number\030\010 \001(\0132&.com.elarian.hera" +
-      ".proto.CustomerNumber\022F\n\016channel_number\030" +
-      "\t \001(\0132..com.elarian.hera.proto.Messaging" +
-      "ChannelNumber\0229\n\004body\030\n \001(\0132+.com.elaria" +
-      "n.hera.proto.CustomerMessageBody\022=\n\006orig" +
-      "in\030\013 \001(\0162-.com.elarian.hera.proto.Custom" +
-      "erRequestOrigin\022=\n\006status\030\014 \001(\0162-.com.el" +
-      "arian.hera.proto.MessageDeliveryStatus\0222" +
-      "\n\003tag\030\r \001(\0132%.com.elarian.hera.proto.Cus" +
-      "tomerIndex\022-\n\007work_id\030\016 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\"\322\001\n\031MessageStatusUpdat" +
-      "edEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002" +
-      " \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022\016\n\006app_id\030\004 \001(\t\022\022\n\nmessage_i" +
-      "d\030\005 \001(\t\022=\n\006status\030\006 \001(\0162-.com.elarian.he" +
-      "ra.proto.MessageDeliveryStatusb\006proto3"
+      "F\n\016channel_number\030\t \001(\0132..com.elarian.he" +
+      "ra.proto.MessagingChannelNumber\0229\n\004body\030" +
+      "\n \001(\0132+.com.elarian.hera.proto.CustomerM" +
+      "essageBody\022=\n\006origin\030\013 \001(\0162-.com.elarian" +
+      ".hera.proto.CustomerRequestOrigin\022=\n\006sta" +
+      "tus\030\014 \001(\0162-.com.elarian.hera.proto.Messa" +
+      "geDeliveryStatus\0222\n\003tag\030\r \001(\0132%.com.elar" +
+      "ian.hera.proto.CustomerIndex\022-\n\007work_id\030" +
+      "\016 \001(\0132\034.google.protobuf.StringValue\"\322\001\n\031" +
+      "MessageStatusUpdatedEvent\022\016\n\006org_id\030\001 \001(" +
+      "\t\022\023\n\013customer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022\016\n\006app_id\030" +
+      "\004 \001(\t\022\022\n\nmessage_id\030\005 \001(\t\022=\n\006status\030\006 \001(" +
+      "\0162-.com.elarian.hera.proto.MessageDelive" +
+      "ryStatusb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24990,19 +24991,19 @@ public final class Messaging {
     internal_static_com_elarian_hera_proto_MessagingStateAdoptedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingStateAdoptedEvent_descriptor,
-        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "AppHeaders", "OtherCustomerId", "OtherMessagingState", });
+        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "CxnProps", "AdoptedCustomerId", "AdoptedState", });
     internal_static_com_elarian_hera_proto_MessagingEntityDecommissionedEvent_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_com_elarian_hera_proto_MessagingEntityDecommissionedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingEntityDecommissionedEvent_descriptor,
-        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "AppHeaders", "NewCustomerId", });
+        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "CxnProps", "NewCustomerId", });
     internal_static_com_elarian_hera_proto_MessagingConsentRequestedEvent_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_com_elarian_hera_proto_MessagingConsentRequestedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingConsentRequestedEvent_descriptor,
-        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "AppHeaders", "AppId", "CustomerNumber", "ChannelNumber", "Status", "Action", });
+        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "CxnProps", "AppId", "CustomerNumber", "ChannelNumber", "Status", "Action", });
     internal_static_com_elarian_hera_proto_MessagingConsentStatusUpdatedEvent_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_com_elarian_hera_proto_MessagingConsentStatusUpdatedEvent_fieldAccessorTable = new
@@ -25026,7 +25027,7 @@ public final class Messaging {
     internal_static_com_elarian_hera_proto_MessageSentEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessageSentEvent_descriptor,
-        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "AppHeaders", "AppId", "MessageId", "ReplyToMessageId", "CustomerNumber", "ChannelNumber", "Body", "Origin", "Status", "Tag", "WorkId", });
+        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "CxnProps", "AppId", "MessageId", "ReplyToMessageId", "CustomerNumber", "ChannelNumber", "Body", "Origin", "Status", "Tag", "WorkId", });
     internal_static_com_elarian_hera_proto_MessageStatusUpdatedEvent_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_com_elarian_hera_proto_MessageStatusUpdatedEvent_fieldAccessorTable = new

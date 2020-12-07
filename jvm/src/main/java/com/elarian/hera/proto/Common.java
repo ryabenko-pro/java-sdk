@@ -2552,8 +2552,8 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.TextToSpeechVoice)
   }
 
-  public interface AppHeadersOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.AppHeaders)
+  public interface AppConnectionPropsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.AppConnectionProps)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2597,20 +2597,26 @@ public final class Common {
      * <code>.google.protobuf.StringValue ip_address = 3;</code>
      */
     com.google.protobuf.StringValueOrBuilder getIpAddressOrBuilder();
+
+    /**
+     * <code>bool simplex_mode = 4;</code>
+     * @return The simplexMode.
+     */
+    boolean getSimplexMode();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.AppHeaders}
+   * Protobuf type {@code com.elarian.hera.proto.AppConnectionProps}
    */
-  public static final class AppHeaders extends
+  public static final class AppConnectionProps extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AppHeaders)
-      AppHeadersOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.AppConnectionProps)
+      AppConnectionPropsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AppHeaders.newBuilder() to construct.
-    private AppHeaders(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AppConnectionProps.newBuilder() to construct.
+    private AppConnectionProps(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AppHeaders() {
+    private AppConnectionProps() {
       connectionId_ = "";
     }
 
@@ -2618,7 +2624,7 @@ public final class Common {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AppHeaders();
+      return new AppConnectionProps();
     }
 
     @java.lang.Override
@@ -2626,7 +2632,7 @@ public final class Common {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AppHeaders(
+    private AppConnectionProps(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2676,6 +2682,11 @@ public final class Common {
 
               break;
             }
+            case 32: {
+
+              simplexMode_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2697,15 +2708,15 @@ public final class Common {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_descriptor;
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppConnectionProps_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_fieldAccessorTable
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppConnectionProps_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.elarian.hera.proto.Common.AppHeaders.class, com.elarian.hera.proto.Common.AppHeaders.Builder.class);
+              com.elarian.hera.proto.Common.AppConnectionProps.class, com.elarian.hera.proto.Common.AppConnectionProps.Builder.class);
     }
 
     public static final int CONNECTION_ID_FIELD_NUMBER = 1;
@@ -2798,6 +2809,17 @@ public final class Common {
       return getIpAddress();
     }
 
+    public static final int SIMPLEX_MODE_FIELD_NUMBER = 4;
+    private boolean simplexMode_;
+    /**
+     * <code>bool simplex_mode = 4;</code>
+     * @return The simplexMode.
+     */
+    @java.lang.Override
+    public boolean getSimplexMode() {
+      return simplexMode_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2821,6 +2843,9 @@ public final class Common {
       if (ipAddress_ != null) {
         output.writeMessage(3, getIpAddress());
       }
+      if (simplexMode_ != false) {
+        output.writeBool(4, simplexMode_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2841,6 +2866,10 @@ public final class Common {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getIpAddress());
       }
+      if (simplexMode_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, simplexMode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2851,10 +2880,10 @@ public final class Common {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.elarian.hera.proto.Common.AppHeaders)) {
+      if (!(obj instanceof com.elarian.hera.proto.Common.AppConnectionProps)) {
         return super.equals(obj);
       }
-      com.elarian.hera.proto.Common.AppHeaders other = (com.elarian.hera.proto.Common.AppHeaders) obj;
+      com.elarian.hera.proto.Common.AppConnectionProps other = (com.elarian.hera.proto.Common.AppConnectionProps) obj;
 
       if (!getConnectionId()
           .equals(other.getConnectionId())) return false;
@@ -2868,6 +2897,8 @@ public final class Common {
         if (!getIpAddress()
             .equals(other.getIpAddress())) return false;
       }
+      if (getSimplexMode()
+          != other.getSimplexMode()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2889,74 +2920,77 @@ public final class Common {
         hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getIpAddress().hashCode();
       }
+      hash = (37 * hash) + SIMPLEX_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSimplexMode());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(byte[] data)
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseDelimitedFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.elarian.hera.proto.Common.AppHeaders parseFrom(
+    public static com.elarian.hera.proto.Common.AppConnectionProps parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2969,7 +3003,7 @@ public final class Common {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.Common.AppHeaders prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.Common.AppConnectionProps prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2985,26 +3019,26 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.elarian.hera.proto.AppHeaders}
+     * Protobuf type {@code com.elarian.hera.proto.AppConnectionProps}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.AppHeaders)
-        com.elarian.hera.proto.Common.AppHeadersOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.AppConnectionProps)
+        com.elarian.hera.proto.Common.AppConnectionPropsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_descriptor;
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppConnectionProps_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_fieldAccessorTable
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppConnectionProps_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.elarian.hera.proto.Common.AppHeaders.class, com.elarian.hera.proto.Common.AppHeaders.Builder.class);
+                com.elarian.hera.proto.Common.AppConnectionProps.class, com.elarian.hera.proto.Common.AppConnectionProps.Builder.class);
       }
 
-      // Construct using com.elarian.hera.proto.Common.AppHeaders.newBuilder()
+      // Construct using com.elarian.hera.proto.Common.AppConnectionProps.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3036,23 +3070,25 @@ public final class Common {
           ipAddress_ = null;
           ipAddressBuilder_ = null;
         }
+        simplexMode_ = false;
+
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppHeaders_descriptor;
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_AppConnectionProps_descriptor;
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.Common.AppHeaders getDefaultInstanceForType() {
-        return com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance();
+      public com.elarian.hera.proto.Common.AppConnectionProps getDefaultInstanceForType() {
+        return com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.Common.AppHeaders build() {
-        com.elarian.hera.proto.Common.AppHeaders result = buildPartial();
+      public com.elarian.hera.proto.Common.AppConnectionProps build() {
+        com.elarian.hera.proto.Common.AppConnectionProps result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3060,8 +3096,8 @@ public final class Common {
       }
 
       @java.lang.Override
-      public com.elarian.hera.proto.Common.AppHeaders buildPartial() {
-        com.elarian.hera.proto.Common.AppHeaders result = new com.elarian.hera.proto.Common.AppHeaders(this);
+      public com.elarian.hera.proto.Common.AppConnectionProps buildPartial() {
+        com.elarian.hera.proto.Common.AppConnectionProps result = new com.elarian.hera.proto.Common.AppConnectionProps(this);
         result.connectionId_ = connectionId_;
         if (connectionTimeBuilder_ == null) {
           result.connectionTime_ = connectionTime_;
@@ -3073,6 +3109,7 @@ public final class Common {
         } else {
           result.ipAddress_ = ipAddressBuilder_.build();
         }
+        result.simplexMode_ = simplexMode_;
         onBuilt();
         return result;
       }
@@ -3111,16 +3148,16 @@ public final class Common {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.elarian.hera.proto.Common.AppHeaders) {
-          return mergeFrom((com.elarian.hera.proto.Common.AppHeaders)other);
+        if (other instanceof com.elarian.hera.proto.Common.AppConnectionProps) {
+          return mergeFrom((com.elarian.hera.proto.Common.AppConnectionProps)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.elarian.hera.proto.Common.AppHeaders other) {
-        if (other == com.elarian.hera.proto.Common.AppHeaders.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.elarian.hera.proto.Common.AppConnectionProps other) {
+        if (other == com.elarian.hera.proto.Common.AppConnectionProps.getDefaultInstance()) return this;
         if (!other.getConnectionId().isEmpty()) {
           connectionId_ = other.connectionId_;
           onChanged();
@@ -3130,6 +3167,9 @@ public final class Common {
         }
         if (other.hasIpAddress()) {
           mergeIpAddress(other.getIpAddress());
+        }
+        if (other.getSimplexMode() != false) {
+          setSimplexMode(other.getSimplexMode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3146,11 +3186,11 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.elarian.hera.proto.Common.AppHeaders parsedMessage = null;
+        com.elarian.hera.proto.Common.AppConnectionProps parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.elarian.hera.proto.Common.AppHeaders) e.getUnfinishedMessage();
+          parsedMessage = (com.elarian.hera.proto.Common.AppConnectionProps) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3473,6 +3513,37 @@ public final class Common {
         }
         return ipAddressBuilder_;
       }
+
+      private boolean simplexMode_ ;
+      /**
+       * <code>bool simplex_mode = 4;</code>
+       * @return The simplexMode.
+       */
+      @java.lang.Override
+      public boolean getSimplexMode() {
+        return simplexMode_;
+      }
+      /**
+       * <code>bool simplex_mode = 4;</code>
+       * @param value The simplexMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSimplexMode(boolean value) {
+        
+        simplexMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool simplex_mode = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSimplexMode() {
+        
+        simplexMode_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3486,41 +3557,41 @@ public final class Common {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppHeaders)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppConnectionProps)
     }
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AppHeaders)
-    private static final com.elarian.hera.proto.Common.AppHeaders DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AppConnectionProps)
+    private static final com.elarian.hera.proto.Common.AppConnectionProps DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.elarian.hera.proto.Common.AppHeaders();
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.Common.AppConnectionProps();
     }
 
-    public static com.elarian.hera.proto.Common.AppHeaders getDefaultInstance() {
+    public static com.elarian.hera.proto.Common.AppConnectionProps getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AppHeaders>
-        PARSER = new com.google.protobuf.AbstractParser<AppHeaders>() {
+    private static final com.google.protobuf.Parser<AppConnectionProps>
+        PARSER = new com.google.protobuf.AbstractParser<AppConnectionProps>() {
       @java.lang.Override
-      public AppHeaders parsePartialFrom(
+      public AppConnectionProps parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AppHeaders(input, extensionRegistry);
+        return new AppConnectionProps(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AppHeaders> parser() {
+    public static com.google.protobuf.Parser<AppConnectionProps> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AppHeaders> getParserForType() {
+    public com.google.protobuf.Parser<AppConnectionProps> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.elarian.hera.proto.Common.AppHeaders getDefaultInstanceForType() {
+    public com.elarian.hera.proto.Common.AppConnectionProps getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -27842,71 +27913,59 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
-     */
-    java.lang.String getAppId();
-    /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
-     */
-    com.google.protobuf.ByteString
-        getAppIdBytes();
-
-    /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @return The bytes for key.
      */
     com.google.protobuf.ByteString
         getKeyBytes();
 
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      * @return Whether the expiration field is set.
      */
     boolean hasExpiration();
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      * @return The expiration.
      */
     com.google.protobuf.Timestamp getExpiration();
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder();
 
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      * @return Whether the interval field is set.
      */
     boolean hasInterval();
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      * @return The interval.
      */
     com.google.protobuf.Duration getInterval();
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      */
     com.google.protobuf.DurationOrBuilder getIntervalOrBuilder();
 
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      * @return Whether the payload field is set.
      */
     boolean hasPayload();
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      * @return The payload.
      */
     com.google.protobuf.StringValue getPayload();
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      */
     com.google.protobuf.StringValueOrBuilder getPayloadOrBuilder();
   }
@@ -27923,7 +27982,6 @@ public final class Common {
       super(builder);
     }
     private CustomerReminder() {
-      appId_ = "";
       key_ = "";
     }
 
@@ -27960,16 +28018,10 @@ public final class Common {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              appId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
               key_ = s;
               break;
             }
-            case 26: {
+            case 18: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (expiration_ != null) {
                 subBuilder = expiration_.toBuilder();
@@ -27982,7 +28034,7 @@ public final class Common {
 
               break;
             }
-            case 34: {
+            case 26: {
               com.google.protobuf.Duration.Builder subBuilder = null;
               if (interval_ != null) {
                 subBuilder = interval_.toBuilder();
@@ -27995,7 +28047,7 @@ public final class Common {
 
               break;
             }
-            case 42: {
+            case 34: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
               if (payload_ != null) {
                 subBuilder = payload_.toBuilder();
@@ -28040,48 +28092,10 @@ public final class Common {
               com.elarian.hera.proto.Common.CustomerReminder.class, com.elarian.hera.proto.Common.CustomerReminder.Builder.class);
     }
 
-    public static final int APP_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object appId_;
-    /**
-     * <code>string app_id = 1;</code>
-     * @return The appId.
-     */
-    @java.lang.Override
-    public java.lang.String getAppId() {
-      java.lang.Object ref = appId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        appId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string app_id = 1;</code>
-     * @return The bytes for appId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      java.lang.Object ref = appId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        appId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int KEY_FIELD_NUMBER = 2;
+    public static final int KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object key_;
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @return The key.
      */
     @java.lang.Override
@@ -28098,7 +28112,7 @@ public final class Common {
       }
     }
     /**
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      * @return The bytes for key.
      */
     @java.lang.Override
@@ -28116,10 +28130,10 @@ public final class Common {
       }
     }
 
-    public static final int EXPIRATION_FIELD_NUMBER = 3;
+    public static final int EXPIRATION_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp expiration_;
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      * @return Whether the expiration field is set.
      */
     @java.lang.Override
@@ -28127,7 +28141,7 @@ public final class Common {
       return expiration_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      * @return The expiration.
      */
     @java.lang.Override
@@ -28135,17 +28149,17 @@ public final class Common {
       return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
     }
     /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
+     * <code>.google.protobuf.Timestamp expiration = 2;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder() {
       return getExpiration();
     }
 
-    public static final int INTERVAL_FIELD_NUMBER = 4;
+    public static final int INTERVAL_FIELD_NUMBER = 3;
     private com.google.protobuf.Duration interval_;
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      * @return Whether the interval field is set.
      */
     @java.lang.Override
@@ -28153,7 +28167,7 @@ public final class Common {
       return interval_ != null;
     }
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      * @return The interval.
      */
     @java.lang.Override
@@ -28161,17 +28175,17 @@ public final class Common {
       return interval_ == null ? com.google.protobuf.Duration.getDefaultInstance() : interval_;
     }
     /**
-     * <code>.google.protobuf.Duration interval = 4;</code>
+     * <code>.google.protobuf.Duration interval = 3;</code>
      */
     @java.lang.Override
     public com.google.protobuf.DurationOrBuilder getIntervalOrBuilder() {
       return getInterval();
     }
 
-    public static final int PAYLOAD_FIELD_NUMBER = 5;
+    public static final int PAYLOAD_FIELD_NUMBER = 4;
     private com.google.protobuf.StringValue payload_;
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      * @return Whether the payload field is set.
      */
     @java.lang.Override
@@ -28179,7 +28193,7 @@ public final class Common {
       return payload_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      * @return The payload.
      */
     @java.lang.Override
@@ -28187,7 +28201,7 @@ public final class Common {
       return payload_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : payload_;
     }
     /**
-     * <code>.google.protobuf.StringValue payload = 5;</code>
+     * <code>.google.protobuf.StringValue payload = 4;</code>
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPayloadOrBuilder() {
@@ -28208,20 +28222,17 @@ public final class Common {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAppIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, appId_);
-      }
       if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
       }
       if (expiration_ != null) {
-        output.writeMessage(3, getExpiration());
+        output.writeMessage(2, getExpiration());
       }
       if (interval_ != null) {
-        output.writeMessage(4, getInterval());
+        output.writeMessage(3, getInterval());
       }
       if (payload_ != null) {
-        output.writeMessage(5, getPayload());
+        output.writeMessage(4, getPayload());
       }
       unknownFields.writeTo(output);
     }
@@ -28232,23 +28243,20 @@ public final class Common {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAppIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, appId_);
-      }
       if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
       }
       if (expiration_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getExpiration());
+          .computeMessageSize(2, getExpiration());
       }
       if (interval_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getInterval());
+          .computeMessageSize(3, getInterval());
       }
       if (payload_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getPayload());
+          .computeMessageSize(4, getPayload());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -28265,8 +28273,6 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.CustomerReminder other = (com.elarian.hera.proto.Common.CustomerReminder) obj;
 
-      if (!getAppId()
-          .equals(other.getAppId())) return false;
       if (!getKey()
           .equals(other.getKey())) return false;
       if (hasExpiration() != other.hasExpiration()) return false;
@@ -28295,8 +28301,6 @@ public final class Common {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getAppId().hashCode();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey().hashCode();
       if (hasExpiration()) {
@@ -28444,8 +28448,6 @@ public final class Common {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        appId_ = "";
-
         key_ = "";
 
         if (expirationBuilder_ == null) {
@@ -28492,7 +28494,6 @@ public final class Common {
       @java.lang.Override
       public com.elarian.hera.proto.Common.CustomerReminder buildPartial() {
         com.elarian.hera.proto.Common.CustomerReminder result = new com.elarian.hera.proto.Common.CustomerReminder(this);
-        result.appId_ = appId_;
         result.key_ = key_;
         if (expirationBuilder_ == null) {
           result.expiration_ = expiration_;
@@ -28557,10 +28558,6 @@ public final class Common {
 
       public Builder mergeFrom(com.elarian.hera.proto.Common.CustomerReminder other) {
         if (other == com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance()) return this;
-        if (!other.getAppId().isEmpty()) {
-          appId_ = other.appId_;
-          onChanged();
-        }
         if (!other.getKey().isEmpty()) {
           key_ = other.key_;
           onChanged();
@@ -28603,85 +28600,9 @@ public final class Common {
         return this;
       }
 
-      private java.lang.Object appId_ = "";
-      /**
-       * <code>string app_id = 1;</code>
-       * @return The appId.
-       */
-      public java.lang.String getAppId() {
-        java.lang.Object ref = appId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          appId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string app_id = 1;</code>
-       * @return The bytes for appId.
-       */
-      public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        java.lang.Object ref = appId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          appId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string app_id = 1;</code>
-       * @param value The appId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAppId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        appId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string app_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAppId() {
-        
-        appId_ = getDefaultInstance().getAppId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string app_id = 1;</code>
-       * @param value The bytes for appId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAppIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        appId_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object key_ = "";
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @return The key.
        */
       public java.lang.String getKey() {
@@ -28697,7 +28618,7 @@ public final class Common {
         }
       }
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @return The bytes for key.
        */
       public com.google.protobuf.ByteString
@@ -28714,7 +28635,7 @@ public final class Common {
         }
       }
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @param value The key to set.
        * @return This builder for chaining.
        */
@@ -28729,7 +28650,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearKey() {
@@ -28739,7 +28660,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
        */
@@ -28759,14 +28680,14 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expirationBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        * @return Whether the expiration field is set.
        */
       public boolean hasExpiration() {
         return expirationBuilder_ != null || expiration_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        * @return The expiration.
        */
       public com.google.protobuf.Timestamp getExpiration() {
@@ -28777,7 +28698,7 @@ public final class Common {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public Builder setExpiration(com.google.protobuf.Timestamp value) {
         if (expirationBuilder_ == null) {
@@ -28793,7 +28714,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public Builder setExpiration(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -28807,7 +28728,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public Builder mergeExpiration(com.google.protobuf.Timestamp value) {
         if (expirationBuilder_ == null) {
@@ -28825,7 +28746,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public Builder clearExpiration() {
         if (expirationBuilder_ == null) {
@@ -28839,7 +28760,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpirationBuilder() {
         
@@ -28847,7 +28768,7 @@ public final class Common {
         return getExpirationFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getExpirationOrBuilder() {
         if (expirationBuilder_ != null) {
@@ -28858,7 +28779,7 @@ public final class Common {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
+       * <code>.google.protobuf.Timestamp expiration = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -28878,14 +28799,14 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> intervalBuilder_;
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        * @return Whether the interval field is set.
        */
       public boolean hasInterval() {
         return intervalBuilder_ != null || interval_ != null;
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        * @return The interval.
        */
       public com.google.protobuf.Duration getInterval() {
@@ -28896,7 +28817,7 @@ public final class Common {
         }
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public Builder setInterval(com.google.protobuf.Duration value) {
         if (intervalBuilder_ == null) {
@@ -28912,7 +28833,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public Builder setInterval(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -28926,7 +28847,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public Builder mergeInterval(com.google.protobuf.Duration value) {
         if (intervalBuilder_ == null) {
@@ -28944,7 +28865,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public Builder clearInterval() {
         if (intervalBuilder_ == null) {
@@ -28958,7 +28879,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public com.google.protobuf.Duration.Builder getIntervalBuilder() {
         
@@ -28966,7 +28887,7 @@ public final class Common {
         return getIntervalFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       public com.google.protobuf.DurationOrBuilder getIntervalOrBuilder() {
         if (intervalBuilder_ != null) {
@@ -28977,7 +28898,7 @@ public final class Common {
         }
       }
       /**
-       * <code>.google.protobuf.Duration interval = 4;</code>
+       * <code>.google.protobuf.Duration interval = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -28997,14 +28918,14 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> payloadBuilder_;
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        * @return Whether the payload field is set.
        */
       public boolean hasPayload() {
         return payloadBuilder_ != null || payload_ != null;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        * @return The payload.
        */
       public com.google.protobuf.StringValue getPayload() {
@@ -29015,7 +28936,7 @@ public final class Common {
         }
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public Builder setPayload(com.google.protobuf.StringValue value) {
         if (payloadBuilder_ == null) {
@@ -29031,7 +28952,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public Builder setPayload(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -29045,7 +28966,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public Builder mergePayload(com.google.protobuf.StringValue value) {
         if (payloadBuilder_ == null) {
@@ -29063,7 +28984,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public Builder clearPayload() {
         if (payloadBuilder_ == null) {
@@ -29077,7 +28998,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public com.google.protobuf.StringValue.Builder getPayloadBuilder() {
         
@@ -29085,7 +29006,7 @@ public final class Common {
         return getPayloadFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       public com.google.protobuf.StringValueOrBuilder getPayloadOrBuilder() {
         if (payloadBuilder_ != null) {
@@ -29096,7 +29017,7 @@ public final class Common {
         }
       }
       /**
-       * <code>.google.protobuf.StringValue payload = 5;</code>
+       * <code>.google.protobuf.StringValue payload = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -41179,10 +41100,10 @@ public final class Common {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_elarian_hera_proto_AppHeaders_descriptor;
+    internal_static_com_elarian_hera_proto_AppConnectionProps_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_elarian_hera_proto_AppHeaders_fieldAccessorTable;
+      internal_static_com_elarian_hera_proto_AppConnectionProps_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_Cash_descriptor;
   private static final 
@@ -41395,291 +41316,291 @@ public final class Common {
       "\n\014common.proto\022\026com.elarian.hera.proto\032\036" +
       "google/protobuf/wrappers.proto\032\036google/p" +
       "rotobuf/duration.proto\032\037google/protobuf/" +
-      "timestamp.proto\"\212\001\n\nAppHeaders\022\025\n\rconnec" +
-      "tion_id\030\001 \001(\t\0223\n\017connection_time\030\002 \001(\0132\032" +
-      ".google.protobuf.Timestamp\0220\n\nip_address" +
-      "\030\003 \001(\0132\034.google.protobuf.StringValue\"-\n\004" +
-      "Cash\022\025\n\rcurrency_code\030\001 \001(\t\022\016\n\006amount\030\002 " +
-      "\001(\001\"\223\001\n\016CustomerNumber\022@\n\010provider\030\001 \001(\016" +
-      "2..com.elarian.hera.proto.CustomerNumber" +
-      "Provider\022\016\n\006number\030\002 \001(\t\022/\n\tpartition\030\003 " +
-      "\001(\0132\034.google.protobuf.StringValue\"c\n\026Mes" +
-      "sagingChannelNumber\0229\n\007channel\030\001 \001(\0162(.c" +
-      "om.elarian.hera.proto.MessagingChannel\022\016" +
-      "\n\006number\030\002 \001(\t\"Y\n\021UssdChannelNumber\0224\n\007c" +
-      "hannel\030\001 \001(\0162#.com.elarian.hera.proto.Us" +
-      "sdChannel\022\016\n\006number\030\002 \001(\t\"_\n\024PaymentChan" +
-      "nelNumber\0227\n\007channel\030\001 \001(\0162&.com.elarian" +
-      ".hera.proto.PaymentChannel\022\016\n\006number\030\002 \001" +
-      "(\t\"[\n\022VoiceChannelNumber\0225\n\007channel\030\001 \001(" +
-      "\0162$.com.elarian.hera.proto.VoiceChannel\022" +
-      "\016\n\006number\030\002 \001(\t\"3\n\023TextMessageTemplate\022\014" +
-      "\n\004name\030\001 \001(\t\022\016\n\006params\030\002 \003(\t\"|\n\017TextMess" +
-      "ageBody\022*\n\004text\030\001 \001(\0132\034.google.protobuf." +
-      "StringValue\022=\n\010template\030\002 \001(\0132+.com.elar" +
-      "ian.hera.proto.TextMessageTemplate\"Q\n\020Me" +
-      "diaMessageBody\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001" +
-      "(\0162!.com.elarian.hera.proto.MediaType\":\n" +
-      "\023LocationMessageBody\022\020\n\010latitude\030\001 \001(\001\022\021" +
-      "\n\tlongitude\030\002 \001(\001\"\323\001\n\023CustomerMessageBod" +
-      "y\0227\n\004text\030\001 \001(\0132\'.com.elarian.hera.proto" +
-      ".TextMessageBodyH\000\0229\n\005media\030\002 \001(\0132(.com." +
-      "elarian.hera.proto.MediaMessageBodyH\000\022?\n" +
-      "\010location\030\003 \001(\0132+.com.elarian.hera.proto" +
-      ".LocationMessageBodyH\000B\007\n\005entry\"-\n\010UssdM" +
-      "enu\022\014\n\004text\030\001 \001(\t\022\023\n\013is_terminal\030\002 \001(\010\"\226" +
-      "\001\n\007UssdHop\022+\n\005input\030\001 \001(\0132\034.google.proto" +
-      "buf.StringValue\022.\n\004menu\030\002 \001(\0132 .com.elar" +
-      "ian.hera.proto.UssdMenu\022.\n\ncreated_at\030\003 " +
-      "\001(\0132\032.google.protobuf.Timestamp\"B\n\014DataM" +
-      "apValue\022\024\n\nstring_val\030\002 \001(\tH\000\022\023\n\tbytes_v" +
-      "al\030\003 \001(\014H\000B\007\n\005value\"\215\001\n\022VoiceCallDialInp" +
-      "ut\022\032\n\022destination_number\030\001 \001(\t\022.\n\nstarte" +
-      "d_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022+" +
-      "\n\010duration\030\003 \001(\0132\031.google.protobuf.Durat" +
-      "ion\"\241\002\n\023VoiceCallQueueInput\022/\n\013enqueued_" +
-      "at\030\001 \001(\0132\032.google.protobuf.Timestamp\022/\n\013" +
-      "dequeued_at\030\002 \001(\0132\032.google.protobuf.Time" +
-      "stamp\0228\n\022dequeued_to_number\030\003 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\022;\n\025dequeued_to_s" +
-      "essionId\030\004 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0221\n\016queue_duration\030\005 \001(\0132\031.google.pr" +
-      "otobuf.Duration\"\250\003\n\021VoiceCallHopInput\0227\n" +
-      "\006status\030\001 \001(\0162\'.com.elarian.hera.proto.V" +
-      "oiceCallStatus\022.\n\nstarted_at\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022B\n\014hangup_cause\030\003" +
-      " \001(\0162,.com.elarian.hera.proto.VoiceCallH" +
-      "angupCause\0221\n\013dtmf_digits\030\004 \001(\0132\034.google" +
-      ".protobuf.StringValue\0223\n\rrecording_url\030\005" +
-      " \001(\0132\034.google.protobuf.StringValue\022=\n\tdi" +
-      "al_data\030\006 \001(\0132*.com.elarian.hera.proto.V" +
-      "oiceCallDialInput\022?\n\nqueue_data\030\007 \001(\0132+." +
-      "com.elarian.hera.proto.VoiceCallQueueInp" +
-      "ut\"\262\001\n\014VoiceCallHop\0228\n\005input\030\001 \001(\0132).com" +
-      ".elarian.hera.proto.VoiceCallHopInput\0228\n" +
-      "\007actions\030\002 \003(\0132\'.com.elarian.hera.proto." +
-      "VoiceCallAction\022.\n\ncreated_at\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\"\251\001\n\031PendingPayme" +
-      "ntTransaction\022.\n\ncreated_at\030\001 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022+\n\005value\030\002 \001(\0132\034.c" +
-      "om.elarian.hera.proto.Cash\022/\n\tconverted\030" +
-      "\003 \001(\0132\034.com.elarian.hera.proto.Cash\"\304\002\n\016" +
-      "PaymentBalance\022\025\n\rcurrency_code\030\001 \001(\t\022/\n" +
-      "\tavailable\030\002 \001(\0132\034.com.elarian.hera.prot" +
-      "o.Cash\022,\n\006actual\030\003 \001(\0132\034.com.elarian.her" +
-      "a.proto.Cash\022D\n\007pending\030\004 \003(\01323.com.elar" +
-      "ian.hera.proto.PaymentBalance.PendingEnt" +
-      "ry\022\023\n\013sequence_nr\030\005 \001(\004\032a\n\014PendingEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022@\n\005value\030\002 \001(\01321.com.elaria" +
-      "n.hera.proto.PendingPaymentTransaction:\002" +
-      "8\001\",\n\030PaymentPurseCounterParty\022\020\n\010purse_" +
-      "id\030\001 \001(\t\"C\n\031PaymentWalletCounterParty\022\023\n" +
-      "\013customer_id\030\001 \001(\t\022\021\n\twallet_id\030\002 \001(\t\"\244\001" +
-      "\n\033PaymentCustomerCounterParty\022?\n\017custome" +
-      "r_number\030\001 \001(\0132&.com.elarian.hera.proto." +
-      "CustomerNumber\022D\n\016channel_number\030\002 \001(\0132," +
-      ".com.elarian.hera.proto.PaymentChannelNu" +
-      "mber\"\247\001\n\032PaymentChannelCounterParty\022D\n\016c" +
-      "hannel_number\030\001 \001(\0132,.com.elarian.hera.p" +
-      "roto.PaymentChannelNumber\022\024\n\014channel_cod" +
-      "e\030\002 \001(\005\022-\n\007account\030\003 \001(\0132\034.google.protob" +
-      "uf.StringValue\"\266\002\n\023PaymentCounterParty\022G" +
-      "\n\010customer\030\001 \001(\01323.com.elarian.hera.prot" +
-      "o.PaymentCustomerCounterPartyH\000\022A\n\005purse" +
-      "\030\002 \001(\01320.com.elarian.hera.proto.PaymentP" +
-      "urseCounterPartyH\000\022C\n\006wallet\030\003 \001(\01321.com" +
-      ".elarian.hera.proto.PaymentWalletCounter" +
-      "PartyH\000\022E\n\007channel\030\004 \001(\01322.com.elarian.h" +
-      "era.proto.PaymentChannelCounterPartyH\000B\007" +
-      "\n\005party\"H\n\014IndexMapping\022\013\n\003key\030\001 \001(\t\022+\n\005" +
-      "value\030\002 \001(\0132\034.google.protobuf.StringValu" +
-      "e\"v\n\rCustomerIndex\0225\n\007mapping\030\001 \001(\0132$.co" +
-      "m.elarian.hera.proto.IndexMapping\022.\n\nexp" +
-      "iration\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "p\"\273\001\n\020CustomerReminder\022\016\n\006app_id\030\001 \001(\t\022\013" +
-      "\n\003key\030\002 \001(\t\022.\n\nexpiration\030\003 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022+\n\010interval\030\004 \001(\0132\031." +
-      "google.protobuf.Duration\022-\n\007payload\030\005 \001(" +
-      "\0132\034.google.protobuf.StringValue\"j\n\rSayCa" +
-      "llAction\022\014\n\004text\030\001 \001(\t\0228\n\005voice\030\002 \001(\0162)." +
-      "com.elarian.hera.proto.TextToSpeechVoice" +
-      "\022\021\n\tplay_beep\030\003 \001(\010\"\035\n\016PlayCallAction\022\013\n" +
-      "\003url\030\001 \001(\t\"\237\002\n\023GetDigitsCallAction\0224\n\003sa" +
-      "y\030\001 \001(\0132%.com.elarian.hera.proto.SayCall" +
-      "ActionH\000\0226\n\004play\030\002 \001(\0132&.com.elarian.her" +
-      "a.proto.PlayCallActionH\000\022*\n\007timeout\030\003 \001(" +
-      "\0132\031.google.protobuf.Duration\0223\n\rfinish_o" +
-      "n_key\030\004 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022/\n\nnum_digits\030\005 \001(\0132\033.google.protobuf." +
-      "Int32ValueB\010\n\006prompt\"\311\002\n\026GetRecordingCal" +
-      "lAction\0224\n\003say\030\001 \001(\0132%.com.elarian.hera." +
-      "proto.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.co" +
-      "m.elarian.hera.proto.PlayCallActionH\000\022*\n" +
-      "\007timeout\030\003 \001(\0132\031.google.protobuf.Duratio" +
-      "n\022-\n\nmax_length\030\004 \001(\0132\031.google.protobuf." +
-      "Duration\0223\n\rfinish_on_key\030\005 \001(\0132\034.google" +
-      ".protobuf.StringValue\022\021\n\tplay_beep\030\006 \001(\010" +
-      "\022\024\n\014trim_silence\030\007 \001(\010B\010\n\006prompt\"\031\n\027Reco" +
-      "rdSessionCallAction\"\217\002\n\016DialCallAction\022@" +
-      "\n\020customer_numbers\030\001 \003(\0132&.com.elarian.h" +
-      "era.proto.CustomerNumber\022\016\n\006record\030\002 \001(\010" +
-      "\022\022\n\nsequential\030\003 \001(\010\0223\n\rringback_tone\030\004 " +
-      "\001(\0132\034.google.protobuf.StringValue\022/\n\tcal" +
-      "ler_id\030\005 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\0221\n\014max_duration\030\006 \001(\0132\033.google.protob" +
-      "uf.Int32Value\"w\n\021EnqueueCallAction\0220\n\nho" +
-      "ld_music\030\001 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0220\n\nqueue_name\030\002 \001(\0132\034.google.protob" +
-      "uf.StringValue\"\231\001\n\021DequeueCallAction\022B\n\016" +
-      "channel_number\030\001 \001(\0132*.com.elarian.hera." +
-      "proto.VoiceChannelNumber\022\016\n\006record\030\002 \001(\010" +
-      "\0220\n\nqueue_name\030\003 \001(\0132\034.google.protobuf.S" +
-      "tringValue\"\022\n\020RejectCallAction\"!\n\022Redire" +
-      "ctCallAction\022\013\n\003url\030\001 \001(\t\"\217\005\n\017VoiceCallA" +
-      "ction\0224\n\003say\030\001 \001(\0132%.com.elarian.hera.pr" +
-      "oto.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com." +
-      "elarian.hera.proto.PlayCallActionH\000\022A\n\ng" +
-      "et_digits\030\003 \001(\0132+.com.elarian.hera.proto" +
-      ".GetDigitsCallActionH\000\0226\n\004dial\030\004 \001(\0132&.c" +
-      "om.elarian.hera.proto.DialCallActionH\000\022I" +
-      "\n\016record_session\030\005 \001(\0132/.com.elarian.her" +
-      "a.proto.RecordSessionCallActionH\000\022G\n\rget" +
-      "_recording\030\006 \001(\0132..com.elarian.hera.prot" +
-      "o.GetRecordingCallActionH\000\022<\n\007enqueue\030\007 " +
-      "\001(\0132).com.elarian.hera.proto.EnqueueCall" +
-      "ActionH\000\022<\n\007dequeue\030\010 \001(\0132).com.elarian." +
-      "hera.proto.DequeueCallActionH\000\022:\n\006reject" +
-      "\030\t \001(\0132(.com.elarian.hera.proto.RejectCa" +
-      "llActionH\000\022>\n\010redirect\030\n \001(\0132*.com.elari" +
-      "an.hera.proto.RedirectCallActionH\000B\007\n\005en" +
-      "try*\326\001\n\020MessagingChannel\022!\n\035MESSAGING_CH" +
-      "ANNEL_UNSPECIFIED\020\000\022 \n\034MESSAGING_CHANNEL" +
-      "_GOOGLE_RCS\020\001\022\"\n\036MESSAGING_CHANNEL_FB_ME" +
-      "SSENGER\020\002\022\031\n\025MESSAGING_CHANNEL_SMS\020\003\022\036\n\032" +
-      "MESSAGING_CHANNEL_TELEGRAM\020\004\022\036\n\032MESSAGIN" +
-      "G_CHANNEL_WHATSAPP\020\005*L\n\016PaymentChannel\022\037" +
-      "\n\033PAYMENT_CHANNEL_UNSPECIFIED\020\000\022\031\n\025PAYME" +
-      "NT_CHANNEL_TELCO\020\001*C\n\013UssdChannel\022\034\n\030USS" +
-      "D_CHANNEL_UNSPECIFIED\020\000\022\026\n\022USSD_CHANNEL_" +
-      "TELCO\020\001*F\n\014VoiceChannel\022\035\n\031VOICE_CHANNEL" +
-      "_UNSPECIFIED\020\000\022\027\n\023VOICE_CHANNEL_TELCO\020\001*" +
-      "\264\001\n\026CustomerNumberProvider\022(\n$CUSTOMER_N" +
-      "UMBER_PROVIDER_UNSPECIFIED\020\000\022%\n!CUSTOMER" +
-      "_NUMBER_PROVIDER_FACEBOOK\020\001\022\"\n\036CUSTOMER_" +
-      "NUMBER_PROVIDER_TELCO\020\002\022%\n!CUSTOMER_NUMB" +
-      "ER_PROVIDER_TELEGRAM\020\003*\260\001\n\tMediaType\022\032\n\026" +
-      "MEDIA_TYPE_UNSPECIFIED\020\000\022\024\n\020MEDIA_TYPE_I" +
-      "MAGE\020\001\022\024\n\020MEDIA_TYPE_AUDIO\020\002\022\024\n\020MEDIA_TY" +
-      "PE_VIDEO\020\003\022\027\n\023MEDIA_TYPE_DOCUMENT\020\004\022\024\n\020M" +
-      "EDIA_TYPE_VOICE\020\005\022\026\n\022MEDUA_TYPE_STICKER\020" +
-      "\006*\215\001\n\026MessagingConsentAction\022(\n$MESSAGIN" +
-      "G_CONSENT_ACTION_UNSPECIFIED\020\000\022#\n\037MESSAG" +
-      "ING_CONSENT_ACTION_OPT_IN\020\001\022$\n MESSAGING" +
-      "_CONSENT_ACTION_OPT_OUT\020\002*\366\002\n\026MessagingC" +
-      "onsentStatus\022(\n$MESSAGING_CONSENT_STATUS" +
-      "_UNSPECIFIED\020\000\0220\n,MESSAGING_CONSENT_STAT" +
-      "US_OPT_IN_REQUEST_SENT\020e\022.\n)MESSAGING_CO" +
-      "NSENT_STATUS_OPT_IN_COMPLETED\020\254\002\022/\n*MESS" +
-      "AGING_CONSENT_STATUS_OPT_OUT_COMPLETED\020\255" +
-      "\002\0224\n/MESSAGING_CONSENT_STATUS_INVALID_CH" +
-      "ANNEL_NUMBER\020\221\003\0228\n3MESSAGING_CONSENT_STA" +
-      "TUS_DECOMMISSIONED_CUSTOMER_ID\020\222\003\022/\n*MES" +
-      "SAGING_CONSENT_STATUS_APPLICATION_ERROR\020" +
-      "\365\003*\221\001\n\026MessagingSessionStatus\022)\n%MESSAGI" +
-      "NG_SESSION_STATUSN_UNSPECIFIED\020\000\022$\n MESS" +
-      "AGING_SESSION_STATUSN_ACTIVE\020d\022&\n!MESSAG" +
-      "ING_SESSION_STATUSN_EXPIRED\020\310\001*\217\001\n\026Custo" +
-      "merEventDirection\022(\n$CUSTOMER_EVENT_DIRE" +
-      "CTION_UNSPECIFIED\020\000\022$\n CUSTOMER_EVENT_DI" +
-      "RECTION_INBOUND\020\001\022%\n!CUSTOMER_EVENT_DIRE" +
-      "CTION_OUTBOUND\020\002*\223\001\n\025CustomerRequestOrig" +
-      "in\022\'\n#CUSTOMER_REQUEST_ORIGIN_UNSPECIFIE" +
-      "D\020\000\022\'\n#CUSTOMER_REQUEST_ORIGIN_API_REQUE" +
-      "ST\020\001\022(\n$CUSTOMER_REQUEST_ORIGIN_CUSTOMER" +
-      "_TAG\020\002*\237\007\n\025MessageDeliveryStatus\022\'\n#MESS" +
-      "AGE_DELIVERY_STATUS_UNSEPCIFIED\020\000\022 \n\034MES" +
-      "SAGE_DELIVERY_STATUS_SENT\020e\022&\n!MESSAGE_D" +
-      "ELIVERY_STATUS_DELIVERED\020\254\002\022!\n\034MESSAGE_D" +
-      "ELIVERY_STATUS_READ\020\255\002\022%\n MESSAGE_DELIVE" +
-      "RY_STATUS_RECEIVED\020\256\002\022#\n\036MESSAGE_DELIVER" +
-      "Y_STATUS_FAILED\020\220\003\022\'\n\"MESSAGE_DELIVERY_S" +
-      "TATUS_NO_CONSENT\020\221\003\022*\n%MESSAGE_DELIVERY_" +
-      "STATUS_NO_CAPABILITY\020\222\003\022$\n\037MESSAGE_DELIV" +
-      "ERY_STATUS_EXPIRED\020\223\003\0222\n-MESSAGE_DELIVER" +
-      "Y_STATUS_ONLY_TEMPLATE_ALLOWED\020\224\003\0223\n.MES" +
-      "SAGE_DELIVERY_STATUS_INVALID_CHANNEL_NUM" +
-      "BER\020\225\003\022*\n%MESSAGE_DELIVERY_STATUS_NOT_SU" +
-      "PPORTED\020\226\003\0228\n3MESSAGE_DELIVERY_STATUS_IN" +
-      "VALID_REPLY_TO_MESSAGE_ID\020\227\003\0220\n+MESSAGE_" +
-      "DELIVERY_STATUS_INVALID_CUSTOMER_ID\020\230\003\022." +
-      "\n)MESSAGE_DELIVERY_STATUS_DUPLICATE_REQU" +
-      "EST\020\231\003\022*\n%MESSAGE_DELIVERY_STATUS_TAG_NO" +
-      "T_FOUND\020\232\003\0226\n1MESSAGE_DELIVERY_STATUS_CU" +
-      "STOMER_NUMBER_NOT_FOUND\020\233\003\0226\n1MESSAGE_DE" +
-      "LIVERY_STATUS_DECOMMISSIONED_CUSTOMERID\020" +
-      "\234\003\022,\n\'MESSAGE_DELIVERY_STATUS_INVALID_RE" +
-      "QUEST\020\235\003\022.\n)MESSAGE_DELIVERY_STATUS_APPL" +
-      "ICATION_ERROR\020\365\003*\311\005\n\024VoiceCallHangupCaus" +
-      "e\022\'\n#VOICE_CALL_HANGUP_CAUSE_UNSPECIFIED" +
-      "\020\000\022.\n*VOICE_CALL_HANGUP_CAUSE_UNALLOCATE" +
-      "D_NUMBER\020\001\022%\n!VOICE_CALL_HANGUP_CAUSE_US" +
-      "ER_BUSY\020\021\022+\n\'VOICE_CALL_HANGUP_CAUSE_NOR" +
-      "MAL_CLEARING\020\020\022,\n(VOICE_CALL_HANGUP_CAUS" +
-      "E_NO_USER_RESPONSE\020\022\022%\n!VOICE_CALL_HANGU" +
-      "P_CAUSE_NO_ANSWER\020\023\022-\n)VOICE_CALL_HANGUP" +
-      "_CAUSE_SUBSCRIBER_ABSENT\020\024\022)\n%VOICE_CALL" +
-      "_HANGUP_CAUSE_CALL_REJECTED\020\025\022.\n*VOICE_C" +
-      "ALL_HANGUP_CAUSE_NORMAL_UNSPECIFIED\020\037\0224\n" +
-      "0VOICE_CALL_HANGUP_CAUSE_NORMAL_TEMPORAR" +
-      "Y_FAILURE\020)\022/\n+VOICE_CALL_HANGUP_CAUSE_S" +
-      "ERVICE_UNAVAILABLE\020?\0224\n0VOICE_CALL_HANGU" +
-      "P_CAUSE_RECOVERY_ON_TIMER_EXPIRE\020f\022.\n)VO" +
-      "ICE_CALL_HANGUP_CAUSE_ORIGINATOR_CANCEL\020" +
-      "\347\003\022&\n!VOICE_CALL_HANGUP_CAUSE_LOSE_RACE\020" +
-      "\366\003\0220\n+VOICE_CALL_HANGUP_CAUSE_USER_NOT_R" +
-      "EGISTERED\020\336\004*\245\006\n\017VoiceCallStatus\022!\n\035VOIC" +
-      "E_CALL_STATUS_UNSPECIFIED\020\000\022\034\n\030VOICE_CAL" +
-      "L_STATUS_QUEUED\020d\022\036\n\032VOICE_CALL_STATUS_A" +
-      "NSWERED\020e\022\035\n\031VOICE_CALL_STATUS_RINGING\020f" +
-      "\022\035\n\030VOICE_CALL_STATUS_ACTIVE\020\310\001\022\036\n\031VOICE" +
-      "_CALL_STATUS_DIALING\020\311\001\022%\n VOICE_CALL_ST" +
-      "ATUS_DIAL_COMPLETED\020\312\001\022\036\n\031VOICE_CALL_STA" +
-      "TUS_BRIDGED\020\313\001\022\037\n\032VOICE_CALL_STATUS_ENQU" +
-      "EUED\020\314\001\022\037\n\032VOICE_CALL_STATUS_DEQUEUED\020\315\001" +
-      "\022\"\n\035VOICE_CALL_STATUS_TRANSFERRED\020\316\001\022)\n$" +
-      "VOICE_CALL_STATUS_TRANSFER_COMPLETED\020\317\001\022" +
-      " \n\033VOICE_CALL_STATUS_COMPLETED\020\254\002\022*\n%VOI" +
-      "CE_CALL_STATUS_INSUFFICIENT_CREDIT\020\220\003\022#\n" +
-      "\036VOICE_CALL_STATUS_NOT_ANSWERED\020\221\003\022+\n&VO" +
-      "ICE_CALL_STATUS_INVALID_PHONE_NUMBER\020\222\003\022" +
-      "0\n+VOICE_CALL_STATUS_DESTINATION_NOT_SUP" +
-      "PORTED\020\223\003\0220\n+VOICE_CALL_STATUS_DECOMMISS" +
-      "IONED_CUSTOMERID\020\224\003\022\036\n\031VOICE_CALL_STATUS" +
-      "_EXPIRED\020\225\003\022-\n(VOICE_CALL_STATUS_INVALID" +
-      "_CHANNEL_NUMBER\020\226\003\022(\n#VOICE_CALL_STATUS_" +
-      "APPLICATION_ERROR\020\365\003*\341\005\n\rPaymentStatus\022\036" +
-      "\n\032PAYMENT_STATUS_UNSPECIFIED\020\000\022\031\n\025PAYMEN" +
-      "T_STATUS_QUEUED\020e\022\'\n#PAYMENT_STATUS_PEND" +
-      "ING_CONFIRMATION\020f\022%\n!PAYMENT_STATUS_PEN" +
-      "DING_VALIDATION\020g\022\034\n\030PAYMENT_STATUS_VALI" +
-      "DATED\020h\022#\n\036PAYMENT_STATUS_INVALID_REQUES" +
-      "T\020\310\001\022!\n\034PAYMENT_STATUS_NOT_SUPPORTED\020\311\001\022" +
-      "&\n!PAYMENT_STATUS_INSUFFICIENT_FUNDS\020\312\001\022" +
-      "%\n PAYMENT_STATUS_APPLICATION_ERROR\020\313\001\022\037" +
-      "\n\032PAYMENT_STATUS_NOT_ALLOWED\020\314\001\022%\n PAYME" +
-      "NT_STATUS_DUPLICATE_REQUEST\020\315\001\022!\n\034PAYMEN" +
-      "T_STATUS_INVALID_PURSE\020\316\001\022\"\n\035PAYMENT_STA" +
-      "TUS_INVALID_WALLET\020\317\001\022.\n)PAYMENT_STATUS_" +
-      "DECOMMISSIONED_CUSTOMER_ID\020\253\002\022\033\n\026PAYMENT" +
-      "_STATUS_SUCCESS\020\254\002\022 \n\033PAYMENT_STATUS_PAS" +
-      "S_THROUGH\020\255\002\022\032\n\025PAYMENT_STATUS_FAILED\020\220\003" +
-      "\022\035\n\030PAYMENT_STATUS_THROTTLED\020\221\003\022\033\n\026PAYME" +
-      "NT_STATUS_EXPIRED\020\222\003\022\034\n\027PAYMENT_STATUS_R" +
-      "EJECTED\020\223\003\022\034\n\027PAYMENT_STATUS_REVERSED\020\364\003" +
-      "*y\n\021TextToSpeechVoice\022$\n TEXT_TO_SPEECH_" +
-      "VOICE_UNSPECIFIED\020\000\022\035\n\031TEXT_TO_SPEECH_VO" +
-      "ICE_MALE\020\001\022\037\n\033TEXT_TO_SPEECH_VOICE_FEMAL" +
-      "E\020\002b\006proto3"
+      "timestamp.proto\"\250\001\n\022AppConnectionProps\022\025" +
+      "\n\rconnection_id\030\001 \001(\t\0223\n\017connection_time" +
+      "\030\002 \001(\0132\032.google.protobuf.Timestamp\0220\n\nip" +
+      "_address\030\003 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022\024\n\014simplex_mode\030\004 \001(\010\"-\n\004Cash\022\025\n\rcu" +
+      "rrency_code\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"\223\001\n\016Cu" +
+      "stomerNumber\022@\n\010provider\030\001 \001(\0162..com.ela" +
+      "rian.hera.proto.CustomerNumberProvider\022\016" +
+      "\n\006number\030\002 \001(\t\022/\n\tpartition\030\003 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\"c\n\026MessagingChan" +
+      "nelNumber\0229\n\007channel\030\001 \001(\0162(.com.elarian" +
+      ".hera.proto.MessagingChannel\022\016\n\006number\030\002" +
+      " \001(\t\"Y\n\021UssdChannelNumber\0224\n\007channel\030\001 \001" +
+      "(\0162#.com.elarian.hera.proto.UssdChannel\022" +
+      "\016\n\006number\030\002 \001(\t\"_\n\024PaymentChannelNumber\022" +
+      "7\n\007channel\030\001 \001(\0162&.com.elarian.hera.prot" +
+      "o.PaymentChannel\022\016\n\006number\030\002 \001(\t\"[\n\022Voic" +
+      "eChannelNumber\0225\n\007channel\030\001 \001(\0162$.com.el" +
+      "arian.hera.proto.VoiceChannel\022\016\n\006number\030" +
+      "\002 \001(\t\"3\n\023TextMessageTemplate\022\014\n\004name\030\001 \001" +
+      "(\t\022\016\n\006params\030\002 \003(\t\"|\n\017TextMessageBody\022*\n" +
+      "\004text\030\001 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022=\n\010template\030\002 \001(\0132+.com.elarian.hera.p" +
+      "roto.TextMessageTemplate\"Q\n\020MediaMessage" +
+      "Body\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001(\0162!.com.e" +
+      "larian.hera.proto.MediaType\":\n\023LocationM" +
+      "essageBody\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitud" +
+      "e\030\002 \001(\001\"\323\001\n\023CustomerMessageBody\0227\n\004text\030" +
+      "\001 \001(\0132\'.com.elarian.hera.proto.TextMessa" +
+      "geBodyH\000\0229\n\005media\030\002 \001(\0132(.com.elarian.he" +
+      "ra.proto.MediaMessageBodyH\000\022?\n\010location\030" +
+      "\003 \001(\0132+.com.elarian.hera.proto.LocationM" +
+      "essageBodyH\000B\007\n\005entry\"-\n\010UssdMenu\022\014\n\004tex" +
+      "t\030\001 \001(\t\022\023\n\013is_terminal\030\002 \001(\010\"\226\001\n\007UssdHop" +
+      "\022+\n\005input\030\001 \001(\0132\034.google.protobuf.String" +
+      "Value\022.\n\004menu\030\002 \001(\0132 .com.elarian.hera.p" +
+      "roto.UssdMenu\022.\n\ncreated_at\030\003 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\"B\n\014DataMapValue\022\024\n" +
+      "\nstring_val\030\002 \001(\tH\000\022\023\n\tbytes_val\030\003 \001(\014H\000" +
+      "B\007\n\005value\"\215\001\n\022VoiceCallDialInput\022\032\n\022dest" +
+      "ination_number\030\001 \001(\t\022.\n\nstarted_at\030\002 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022+\n\010duration" +
+      "\030\003 \001(\0132\031.google.protobuf.Duration\"\241\002\n\023Vo" +
+      "iceCallQueueInput\022/\n\013enqueued_at\030\001 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022/\n\013dequeued_a" +
+      "t\030\002 \001(\0132\032.google.protobuf.Timestamp\0228\n\022d" +
+      "equeued_to_number\030\003 \001(\0132\034.google.protobu" +
+      "f.StringValue\022;\n\025dequeued_to_sessionId\030\004" +
+      " \001(\0132\034.google.protobuf.StringValue\0221\n\016qu" +
+      "eue_duration\030\005 \001(\0132\031.google.protobuf.Dur" +
+      "ation\"\250\003\n\021VoiceCallHopInput\0227\n\006status\030\001 " +
+      "\001(\0162\'.com.elarian.hera.proto.VoiceCallSt" +
+      "atus\022.\n\nstarted_at\030\002 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022B\n\014hangup_cause\030\003 \001(\0162,.com" +
+      ".elarian.hera.proto.VoiceCallHangupCause" +
+      "\0221\n\013dtmf_digits\030\004 \001(\0132\034.google.protobuf." +
+      "StringValue\0223\n\rrecording_url\030\005 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\022=\n\tdial_data\030\006 " +
+      "\001(\0132*.com.elarian.hera.proto.VoiceCallDi" +
+      "alInput\022?\n\nqueue_data\030\007 \001(\0132+.com.elaria" +
+      "n.hera.proto.VoiceCallQueueInput\"\262\001\n\014Voi" +
+      "ceCallHop\0228\n\005input\030\001 \001(\0132).com.elarian.h" +
+      "era.proto.VoiceCallHopInput\0228\n\007actions\030\002" +
+      " \003(\0132\'.com.elarian.hera.proto.VoiceCallA" +
+      "ction\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
+      "buf.Timestamp\"\251\001\n\031PendingPaymentTransact" +
+      "ion\022.\n\ncreated_at\030\001 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022+\n\005value\030\002 \001(\0132\034.com.elarian" +
+      ".hera.proto.Cash\022/\n\tconverted\030\003 \001(\0132\034.co" +
+      "m.elarian.hera.proto.Cash\"\304\002\n\016PaymentBal" +
+      "ance\022\025\n\rcurrency_code\030\001 \001(\t\022/\n\tavailable" +
+      "\030\002 \001(\0132\034.com.elarian.hera.proto.Cash\022,\n\006" +
+      "actual\030\003 \001(\0132\034.com.elarian.hera.proto.Ca" +
+      "sh\022D\n\007pending\030\004 \003(\01323.com.elarian.hera.p" +
+      "roto.PaymentBalance.PendingEntry\022\023\n\013sequ" +
+      "ence_nr\030\005 \001(\004\032a\n\014PendingEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022@\n\005value\030\002 \001(\01321.com.elarian.hera.pro" +
+      "to.PendingPaymentTransaction:\0028\001\",\n\030Paym" +
+      "entPurseCounterParty\022\020\n\010purse_id\030\001 \001(\t\"C" +
+      "\n\031PaymentWalletCounterParty\022\023\n\013customer_" +
+      "id\030\001 \001(\t\022\021\n\twallet_id\030\002 \001(\t\"\244\001\n\033PaymentC" +
+      "ustomerCounterParty\022?\n\017customer_number\030\001" +
+      " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
+      "mber\022D\n\016channel_number\030\002 \001(\0132,.com.elari" +
+      "an.hera.proto.PaymentChannelNumber\"\247\001\n\032P" +
+      "aymentChannelCounterParty\022D\n\016channel_num" +
+      "ber\030\001 \001(\0132,.com.elarian.hera.proto.Payme" +
+      "ntChannelNumber\022\024\n\014channel_code\030\002 \001(\005\022-\n" +
+      "\007account\030\003 \001(\0132\034.google.protobuf.StringV" +
+      "alue\"\266\002\n\023PaymentCounterParty\022G\n\010customer" +
+      "\030\001 \001(\01323.com.elarian.hera.proto.PaymentC" +
+      "ustomerCounterPartyH\000\022A\n\005purse\030\002 \001(\01320.c" +
+      "om.elarian.hera.proto.PaymentPurseCounte" +
+      "rPartyH\000\022C\n\006wallet\030\003 \001(\01321.com.elarian.h" +
+      "era.proto.PaymentWalletCounterPartyH\000\022E\n" +
+      "\007channel\030\004 \001(\01322.com.elarian.hera.proto." +
+      "PaymentChannelCounterPartyH\000B\007\n\005party\"H\n" +
+      "\014IndexMapping\022\013\n\003key\030\001 \001(\t\022+\n\005value\030\002 \001(" +
+      "\0132\034.google.protobuf.StringValue\"v\n\rCusto" +
+      "merIndex\0225\n\007mapping\030\001 \001(\0132$.com.elarian." +
+      "hera.proto.IndexMapping\022.\n\nexpiration\030\002 " +
+      "\001(\0132\032.google.protobuf.Timestamp\"\253\001\n\020Cust" +
+      "omerReminder\022\013\n\003key\030\001 \001(\t\022.\n\nexpiration\030" +
+      "\002 \001(\0132\032.google.protobuf.Timestamp\022+\n\010int" +
+      "erval\030\003 \001(\0132\031.google.protobuf.Duration\022-" +
+      "\n\007payload\030\004 \001(\0132\034.google.protobuf.String" +
+      "Value\"j\n\rSayCallAction\022\014\n\004text\030\001 \001(\t\0228\n\005" +
+      "voice\030\002 \001(\0162).com.elarian.hera.proto.Tex" +
+      "tToSpeechVoice\022\021\n\tplay_beep\030\003 \001(\010\"\035\n\016Pla" +
+      "yCallAction\022\013\n\003url\030\001 \001(\t\"\237\002\n\023GetDigitsCa" +
+      "llAction\0224\n\003say\030\001 \001(\0132%.com.elarian.hera" +
+      ".proto.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.c" +
+      "om.elarian.hera.proto.PlayCallActionH\000\022*" +
+      "\n\007timeout\030\003 \001(\0132\031.google.protobuf.Durati" +
+      "on\0223\n\rfinish_on_key\030\004 \001(\0132\034.google.proto" +
+      "buf.StringValue\022/\n\nnum_digits\030\005 \001(\0132\033.go" +
+      "ogle.protobuf.Int32ValueB\010\n\006prompt\"\311\002\n\026G" +
+      "etRecordingCallAction\0224\n\003say\030\001 \001(\0132%.com" +
+      ".elarian.hera.proto.SayCallActionH\000\0226\n\004p" +
+      "lay\030\002 \001(\0132&.com.elarian.hera.proto.PlayC" +
+      "allActionH\000\022*\n\007timeout\030\003 \001(\0132\031.google.pr" +
+      "otobuf.Duration\022-\n\nmax_length\030\004 \001(\0132\031.go" +
+      "ogle.protobuf.Duration\0223\n\rfinish_on_key\030" +
+      "\005 \001(\0132\034.google.protobuf.StringValue\022\021\n\tp" +
+      "lay_beep\030\006 \001(\010\022\024\n\014trim_silence\030\007 \001(\010B\010\n\006" +
+      "prompt\"\031\n\027RecordSessionCallAction\"\217\002\n\016Di" +
+      "alCallAction\022@\n\020customer_numbers\030\001 \003(\0132&" +
+      ".com.elarian.hera.proto.CustomerNumber\022\016" +
+      "\n\006record\030\002 \001(\010\022\022\n\nsequential\030\003 \001(\010\0223\n\rri" +
+      "ngback_tone\030\004 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\022/\n\tcaller_id\030\005 \001(\0132\034.google.prot" +
+      "obuf.StringValue\0221\n\014max_duration\030\006 \001(\0132\033" +
+      ".google.protobuf.Int32Value\"w\n\021EnqueueCa" +
+      "llAction\0220\n\nhold_music\030\001 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\0220\n\nqueue_name\030\002 \001(\0132\034" +
+      ".google.protobuf.StringValue\"\231\001\n\021Dequeue" +
+      "CallAction\022B\n\016channel_number\030\001 \001(\0132*.com" +
+      ".elarian.hera.proto.VoiceChannelNumber\022\016" +
+      "\n\006record\030\002 \001(\010\0220\n\nqueue_name\030\003 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\"\022\n\020RejectCallAc" +
+      "tion\"!\n\022RedirectCallAction\022\013\n\003url\030\001 \001(\t\"" +
+      "\217\005\n\017VoiceCallAction\0224\n\003say\030\001 \001(\0132%.com.e" +
+      "larian.hera.proto.SayCallActionH\000\0226\n\004pla" +
+      "y\030\002 \001(\0132&.com.elarian.hera.proto.PlayCal" +
+      "lActionH\000\022A\n\nget_digits\030\003 \001(\0132+.com.elar" +
+      "ian.hera.proto.GetDigitsCallActionH\000\0226\n\004" +
+      "dial\030\004 \001(\0132&.com.elarian.hera.proto.Dial" +
+      "CallActionH\000\022I\n\016record_session\030\005 \001(\0132/.c" +
+      "om.elarian.hera.proto.RecordSessionCallA" +
+      "ctionH\000\022G\n\rget_recording\030\006 \001(\0132..com.ela" +
+      "rian.hera.proto.GetRecordingCallActionH\000" +
+      "\022<\n\007enqueue\030\007 \001(\0132).com.elarian.hera.pro" +
+      "to.EnqueueCallActionH\000\022<\n\007dequeue\030\010 \001(\0132" +
+      ").com.elarian.hera.proto.DequeueCallActi" +
+      "onH\000\022:\n\006reject\030\t \001(\0132(.com.elarian.hera." +
+      "proto.RejectCallActionH\000\022>\n\010redirect\030\n \001" +
+      "(\0132*.com.elarian.hera.proto.RedirectCall" +
+      "ActionH\000B\007\n\005entry*\326\001\n\020MessagingChannel\022!" +
+      "\n\035MESSAGING_CHANNEL_UNSPECIFIED\020\000\022 \n\034MES" +
+      "SAGING_CHANNEL_GOOGLE_RCS\020\001\022\"\n\036MESSAGING" +
+      "_CHANNEL_FB_MESSENGER\020\002\022\031\n\025MESSAGING_CHA" +
+      "NNEL_SMS\020\003\022\036\n\032MESSAGING_CHANNEL_TELEGRAM" +
+      "\020\004\022\036\n\032MESSAGING_CHANNEL_WHATSAPP\020\005*L\n\016Pa" +
+      "ymentChannel\022\037\n\033PAYMENT_CHANNEL_UNSPECIF" +
+      "IED\020\000\022\031\n\025PAYMENT_CHANNEL_TELCO\020\001*C\n\013Ussd" +
+      "Channel\022\034\n\030USSD_CHANNEL_UNSPECIFIED\020\000\022\026\n" +
+      "\022USSD_CHANNEL_TELCO\020\001*F\n\014VoiceChannel\022\035\n" +
+      "\031VOICE_CHANNEL_UNSPECIFIED\020\000\022\027\n\023VOICE_CH" +
+      "ANNEL_TELCO\020\001*\264\001\n\026CustomerNumberProvider" +
+      "\022(\n$CUSTOMER_NUMBER_PROVIDER_UNSPECIFIED" +
+      "\020\000\022%\n!CUSTOMER_NUMBER_PROVIDER_FACEBOOK\020" +
+      "\001\022\"\n\036CUSTOMER_NUMBER_PROVIDER_TELCO\020\002\022%\n" +
+      "!CUSTOMER_NUMBER_PROVIDER_TELEGRAM\020\003*\260\001\n" +
+      "\tMediaType\022\032\n\026MEDIA_TYPE_UNSPECIFIED\020\000\022\024" +
+      "\n\020MEDIA_TYPE_IMAGE\020\001\022\024\n\020MEDIA_TYPE_AUDIO" +
+      "\020\002\022\024\n\020MEDIA_TYPE_VIDEO\020\003\022\027\n\023MEDIA_TYPE_D" +
+      "OCUMENT\020\004\022\024\n\020MEDIA_TYPE_VOICE\020\005\022\026\n\022MEDUA" +
+      "_TYPE_STICKER\020\006*\215\001\n\026MessagingConsentActi" +
+      "on\022(\n$MESSAGING_CONSENT_ACTION_UNSPECIFI" +
+      "ED\020\000\022#\n\037MESSAGING_CONSENT_ACTION_OPT_IN\020" +
+      "\001\022$\n MESSAGING_CONSENT_ACTION_OPT_OUT\020\002*" +
+      "\366\002\n\026MessagingConsentStatus\022(\n$MESSAGING_" +
+      "CONSENT_STATUS_UNSPECIFIED\020\000\0220\n,MESSAGIN" +
+      "G_CONSENT_STATUS_OPT_IN_REQUEST_SENT\020e\022." +
+      "\n)MESSAGING_CONSENT_STATUS_OPT_IN_COMPLE" +
+      "TED\020\254\002\022/\n*MESSAGING_CONSENT_STATUS_OPT_O" +
+      "UT_COMPLETED\020\255\002\0224\n/MESSAGING_CONSENT_STA" +
+      "TUS_INVALID_CHANNEL_NUMBER\020\221\003\0228\n3MESSAGI" +
+      "NG_CONSENT_STATUS_DECOMMISSIONED_CUSTOME" +
+      "R_ID\020\222\003\022/\n*MESSAGING_CONSENT_STATUS_APPL" +
+      "ICATION_ERROR\020\365\003*\221\001\n\026MessagingSessionSta" +
+      "tus\022)\n%MESSAGING_SESSION_STATUSN_UNSPECI" +
+      "FIED\020\000\022$\n MESSAGING_SESSION_STATUSN_ACTI" +
+      "VE\020d\022&\n!MESSAGING_SESSION_STATUSN_EXPIRE" +
+      "D\020\310\001*\217\001\n\026CustomerEventDirection\022(\n$CUSTO" +
+      "MER_EVENT_DIRECTION_UNSPECIFIED\020\000\022$\n CUS" +
+      "TOMER_EVENT_DIRECTION_INBOUND\020\001\022%\n!CUSTO" +
+      "MER_EVENT_DIRECTION_OUTBOUND\020\002*\223\001\n\025Custo" +
+      "merRequestOrigin\022\'\n#CUSTOMER_REQUEST_ORI" +
+      "GIN_UNSPECIFIED\020\000\022\'\n#CUSTOMER_REQUEST_OR" +
+      "IGIN_API_REQUEST\020\001\022(\n$CUSTOMER_REQUEST_O" +
+      "RIGIN_CUSTOMER_TAG\020\002*\237\007\n\025MessageDelivery" +
+      "Status\022\'\n#MESSAGE_DELIVERY_STATUS_UNSEPC" +
+      "IFIED\020\000\022 \n\034MESSAGE_DELIVERY_STATUS_SENT\020" +
+      "e\022&\n!MESSAGE_DELIVERY_STATUS_DELIVERED\020\254" +
+      "\002\022!\n\034MESSAGE_DELIVERY_STATUS_READ\020\255\002\022%\n " +
+      "MESSAGE_DELIVERY_STATUS_RECEIVED\020\256\002\022#\n\036M" +
+      "ESSAGE_DELIVERY_STATUS_FAILED\020\220\003\022\'\n\"MESS" +
+      "AGE_DELIVERY_STATUS_NO_CONSENT\020\221\003\022*\n%MES" +
+      "SAGE_DELIVERY_STATUS_NO_CAPABILITY\020\222\003\022$\n" +
+      "\037MESSAGE_DELIVERY_STATUS_EXPIRED\020\223\003\0222\n-M" +
+      "ESSAGE_DELIVERY_STATUS_ONLY_TEMPLATE_ALL" +
+      "OWED\020\224\003\0223\n.MESSAGE_DELIVERY_STATUS_INVAL" +
+      "ID_CHANNEL_NUMBER\020\225\003\022*\n%MESSAGE_DELIVERY" +
+      "_STATUS_NOT_SUPPORTED\020\226\003\0228\n3MESSAGE_DELI" +
+      "VERY_STATUS_INVALID_REPLY_TO_MESSAGE_ID\020" +
+      "\227\003\0220\n+MESSAGE_DELIVERY_STATUS_INVALID_CU" +
+      "STOMER_ID\020\230\003\022.\n)MESSAGE_DELIVERY_STATUS_" +
+      "DUPLICATE_REQUEST\020\231\003\022*\n%MESSAGE_DELIVERY" +
+      "_STATUS_TAG_NOT_FOUND\020\232\003\0226\n1MESSAGE_DELI" +
+      "VERY_STATUS_CUSTOMER_NUMBER_NOT_FOUND\020\233\003" +
+      "\0226\n1MESSAGE_DELIVERY_STATUS_DECOMMISSION" +
+      "ED_CUSTOMERID\020\234\003\022,\n\'MESSAGE_DELIVERY_STA" +
+      "TUS_INVALID_REQUEST\020\235\003\022.\n)MESSAGE_DELIVE" +
+      "RY_STATUS_APPLICATION_ERROR\020\365\003*\311\005\n\024Voice" +
+      "CallHangupCause\022\'\n#VOICE_CALL_HANGUP_CAU" +
+      "SE_UNSPECIFIED\020\000\022.\n*VOICE_CALL_HANGUP_CA" +
+      "USE_UNALLOCATED_NUMBER\020\001\022%\n!VOICE_CALL_H" +
+      "ANGUP_CAUSE_USER_BUSY\020\021\022+\n\'VOICE_CALL_HA" +
+      "NGUP_CAUSE_NORMAL_CLEARING\020\020\022,\n(VOICE_CA" +
+      "LL_HANGUP_CAUSE_NO_USER_RESPONSE\020\022\022%\n!VO" +
+      "ICE_CALL_HANGUP_CAUSE_NO_ANSWER\020\023\022-\n)VOI" +
+      "CE_CALL_HANGUP_CAUSE_SUBSCRIBER_ABSENT\020\024" +
+      "\022)\n%VOICE_CALL_HANGUP_CAUSE_CALL_REJECTE" +
+      "D\020\025\022.\n*VOICE_CALL_HANGUP_CAUSE_NORMAL_UN" +
+      "SPECIFIED\020\037\0224\n0VOICE_CALL_HANGUP_CAUSE_N" +
+      "ORMAL_TEMPORARY_FAILURE\020)\022/\n+VOICE_CALL_" +
+      "HANGUP_CAUSE_SERVICE_UNAVAILABLE\020?\0224\n0VO" +
+      "ICE_CALL_HANGUP_CAUSE_RECOVERY_ON_TIMER_" +
+      "EXPIRE\020f\022.\n)VOICE_CALL_HANGUP_CAUSE_ORIG" +
+      "INATOR_CANCEL\020\347\003\022&\n!VOICE_CALL_HANGUP_CA" +
+      "USE_LOSE_RACE\020\366\003\0220\n+VOICE_CALL_HANGUP_CA" +
+      "USE_USER_NOT_REGISTERED\020\336\004*\245\006\n\017VoiceCall" +
+      "Status\022!\n\035VOICE_CALL_STATUS_UNSPECIFIED\020" +
+      "\000\022\034\n\030VOICE_CALL_STATUS_QUEUED\020d\022\036\n\032VOICE" +
+      "_CALL_STATUS_ANSWERED\020e\022\035\n\031VOICE_CALL_ST" +
+      "ATUS_RINGING\020f\022\035\n\030VOICE_CALL_STATUS_ACTI" +
+      "VE\020\310\001\022\036\n\031VOICE_CALL_STATUS_DIALING\020\311\001\022%\n" +
+      " VOICE_CALL_STATUS_DIAL_COMPLETED\020\312\001\022\036\n\031" +
+      "VOICE_CALL_STATUS_BRIDGED\020\313\001\022\037\n\032VOICE_CA" +
+      "LL_STATUS_ENQUEUED\020\314\001\022\037\n\032VOICE_CALL_STAT" +
+      "US_DEQUEUED\020\315\001\022\"\n\035VOICE_CALL_STATUS_TRAN" +
+      "SFERRED\020\316\001\022)\n$VOICE_CALL_STATUS_TRANSFER" +
+      "_COMPLETED\020\317\001\022 \n\033VOICE_CALL_STATUS_COMPL" +
+      "ETED\020\254\002\022*\n%VOICE_CALL_STATUS_INSUFFICIEN" +
+      "T_CREDIT\020\220\003\022#\n\036VOICE_CALL_STATUS_NOT_ANS" +
+      "WERED\020\221\003\022+\n&VOICE_CALL_STATUS_INVALID_PH" +
+      "ONE_NUMBER\020\222\003\0220\n+VOICE_CALL_STATUS_DESTI" +
+      "NATION_NOT_SUPPORTED\020\223\003\0220\n+VOICE_CALL_ST" +
+      "ATUS_DECOMMISSIONED_CUSTOMERID\020\224\003\022\036\n\031VOI" +
+      "CE_CALL_STATUS_EXPIRED\020\225\003\022-\n(VOICE_CALL_" +
+      "STATUS_INVALID_CHANNEL_NUMBER\020\226\003\022(\n#VOIC" +
+      "E_CALL_STATUS_APPLICATION_ERROR\020\365\003*\341\005\n\rP" +
+      "aymentStatus\022\036\n\032PAYMENT_STATUS_UNSPECIFI" +
+      "ED\020\000\022\031\n\025PAYMENT_STATUS_QUEUED\020e\022\'\n#PAYME" +
+      "NT_STATUS_PENDING_CONFIRMATION\020f\022%\n!PAYM" +
+      "ENT_STATUS_PENDING_VALIDATION\020g\022\034\n\030PAYME" +
+      "NT_STATUS_VALIDATED\020h\022#\n\036PAYMENT_STATUS_" +
+      "INVALID_REQUEST\020\310\001\022!\n\034PAYMENT_STATUS_NOT" +
+      "_SUPPORTED\020\311\001\022&\n!PAYMENT_STATUS_INSUFFIC" +
+      "IENT_FUNDS\020\312\001\022%\n PAYMENT_STATUS_APPLICAT" +
+      "ION_ERROR\020\313\001\022\037\n\032PAYMENT_STATUS_NOT_ALLOW" +
+      "ED\020\314\001\022%\n PAYMENT_STATUS_DUPLICATE_REQUES" +
+      "T\020\315\001\022!\n\034PAYMENT_STATUS_INVALID_PURSE\020\316\001\022" +
+      "\"\n\035PAYMENT_STATUS_INVALID_WALLET\020\317\001\022.\n)P" +
+      "AYMENT_STATUS_DECOMMISSIONED_CUSTOMER_ID" +
+      "\020\253\002\022\033\n\026PAYMENT_STATUS_SUCCESS\020\254\002\022 \n\033PAYM" +
+      "ENT_STATUS_PASS_THROUGH\020\255\002\022\032\n\025PAYMENT_ST" +
+      "ATUS_FAILED\020\220\003\022\035\n\030PAYMENT_STATUS_THROTTL" +
+      "ED\020\221\003\022\033\n\026PAYMENT_STATUS_EXPIRED\020\222\003\022\034\n\027PA" +
+      "YMENT_STATUS_REJECTED\020\223\003\022\034\n\027PAYMENT_STAT" +
+      "US_REVERSED\020\364\003*y\n\021TextToSpeechVoice\022$\n T" +
+      "EXT_TO_SPEECH_VOICE_UNSPECIFIED\020\000\022\035\n\031TEX" +
+      "T_TO_SPEECH_VOICE_MALE\020\001\022\037\n\033TEXT_TO_SPEE" +
+      "CH_VOICE_FEMALE\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -41688,12 +41609,12 @@ public final class Common {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_com_elarian_hera_proto_AppHeaders_descriptor =
+    internal_static_com_elarian_hera_proto_AppConnectionProps_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_elarian_hera_proto_AppHeaders_fieldAccessorTable = new
+    internal_static_com_elarian_hera_proto_AppConnectionProps_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_elarian_hera_proto_AppHeaders_descriptor,
-        new java.lang.String[] { "ConnectionId", "ConnectionTime", "IpAddress", });
+        internal_static_com_elarian_hera_proto_AppConnectionProps_descriptor,
+        new java.lang.String[] { "ConnectionId", "ConnectionTime", "IpAddress", "SimplexMode", });
     internal_static_com_elarian_hera_proto_Cash_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_elarian_hera_proto_Cash_fieldAccessorTable = new
@@ -41867,7 +41788,7 @@ public final class Common {
     internal_static_com_elarian_hera_proto_CustomerReminder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerReminder_descriptor,
-        new java.lang.String[] { "AppId", "Key", "Expiration", "Interval", "Payload", });
+        new java.lang.String[] { "Key", "Expiration", "Interval", "Payload", });
     internal_static_com_elarian_hera_proto_SayCallAction_descriptor =
       getDescriptor().getMessageTypes().get(29);
     internal_static_com_elarian_hera_proto_SayCallAction_fieldAccessorTable = new
