@@ -29241,38 +29241,19 @@ public final class AppSocket {
     com.elarian.hera.proto.Common.IndexMappingOrBuilder getSecondaryIdOrBuilder();
 
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     * @return Whether the update field is set.
      */
-    int getUpdatesCount();
+    boolean hasUpdate();
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     * @return The update.
      */
-    boolean containsUpdates(
-        java.lang.String key);
+    com.elarian.hera.proto.Common.DataMapValue getUpdate();
     /**
-     * Use {@link #getUpdatesMap()} instead.
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getUpdates();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getUpdatesMap();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-
-    com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue);
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-
-    com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
-        java.lang.String key);
+    com.elarian.hera.proto.Common.DataMapValueOrBuilder getUpdateOrBuilder();
 
     public com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
@@ -29311,7 +29292,6 @@ public final class AppSocket {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -29357,16 +29337,16 @@ public final class AppSocket {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                updates_ = com.google.protobuf.MapField.newMapField(
-                    UpdatesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+              com.elarian.hera.proto.Common.DataMapValue.Builder subBuilder = null;
+              if (update_ != null) {
+                subBuilder = update_.toBuilder();
               }
-              com.google.protobuf.MapEntry<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-              updates__ = input.readMessage(
-                  UpdatesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              updates_.getMutableMap().put(
-                  updates__.getKey(), updates__.getValue());
+              update_ = input.readMessage(com.elarian.hera.proto.Common.DataMapValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(update_);
+                update_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -29393,18 +29373,6 @@ public final class AppSocket {
       return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 4:
-          return internalGetUpdates();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -29563,85 +29531,30 @@ public final class AppSocket {
       return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
     }
 
-    public static final int UPDATES_FIELD_NUMBER = 4;
-    private static final class UpdatesDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>newDefaultInstance(
-                  com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_UpdatesEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance());
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, com.elarian.hera.proto.Common.DataMapValue> updates_;
-    private com.google.protobuf.MapField<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    internalGetUpdates() {
-      if (updates_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            UpdatesDefaultEntryHolder.defaultEntry);
-      }
-      return updates_;
-    }
-
-    public int getUpdatesCount() {
-      return internalGetUpdates().getMap().size();
-    }
+    public static final int UPDATE_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.DataMapValue update_;
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsUpdates(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetUpdates().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getUpdatesMap()} instead.
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     * @return Whether the update field is set.
      */
     @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdates() {
-      return getUpdatesMap();
+    public boolean hasUpdate() {
+      return update_ != null;
     }
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     * @return The update.
      */
     @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdatesMap() {
-      return internalGetUpdates().getMap();
+    public com.elarian.hera.proto.Common.DataMapValue getUpdate() {
+      return update_ == null ? com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : update_;
     }
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      */
     @java.lang.Override
-
-    public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-          internalGetUpdates().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-          internalGetUpdates().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
+    public com.elarian.hera.proto.Common.DataMapValueOrBuilder getUpdateOrBuilder() {
+      return getUpdate();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -29667,12 +29580,9 @@ public final class AppSocket {
       if (customerCase_ == 3) {
         output.writeMessage(3, (com.elarian.hera.proto.Common.IndexMapping) customer_);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetUpdates(),
-          UpdatesDefaultEntryHolder.defaultEntry,
-          4);
+      if (update_ != null) {
+        output.writeMessage(4, getUpdate());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -29693,15 +29603,9 @@ public final class AppSocket {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (com.elarian.hera.proto.Common.IndexMapping) customer_);
       }
-      for (java.util.Map.Entry<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> entry
-           : internalGetUpdates().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-        updates__ = UpdatesDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
+      if (update_ != null) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(4, updates__);
+          .computeMessageSize(4, getUpdate());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -29718,8 +29622,11 @@ public final class AppSocket {
       }
       com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand other = (com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand) obj;
 
-      if (!internalGetUpdates().equals(
-          other.internalGetUpdates())) return false;
+      if (hasUpdate() != other.hasUpdate()) return false;
+      if (hasUpdate()) {
+        if (!getUpdate()
+            .equals(other.getUpdate())) return false;
+      }
       if (!getCustomerCase().equals(other.getCustomerCase())) return false;
       switch (customerCase_) {
         case 1:
@@ -29748,9 +29655,9 @@ public final class AppSocket {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetUpdates().getMap().isEmpty()) {
-        hash = (37 * hash) + UPDATES_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetUpdates().hashCode();
+      if (hasUpdate()) {
+        hash = (37 * hash) + UPDATE_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdate().hashCode();
       }
       switch (customerCase_) {
         case 1:
@@ -29875,28 +29782,6 @@ public final class AppSocket {
         return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 4:
-            return internalGetUpdates();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 4:
-            return internalGetMutableUpdates();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -29923,7 +29808,12 @@ public final class AppSocket {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        internalGetMutableUpdates().clear();
+        if (updateBuilder_ == null) {
+          update_ = null;
+        } else {
+          update_ = null;
+          updateBuilder_ = null;
+        }
         customerCase_ = 0;
         customer_ = null;
         return this;
@@ -29952,7 +29842,6 @@ public final class AppSocket {
       @java.lang.Override
       public com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand buildPartial() {
         com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand result = new com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand(this);
-        int from_bitField0_ = bitField0_;
         if (customerCase_ == 1) {
           result.customer_ = customer_;
         }
@@ -29970,8 +29859,11 @@ public final class AppSocket {
             result.customer_ = secondaryIdBuilder_.build();
           }
         }
-        result.updates_ = internalGetUpdates();
-        result.updates_.makeImmutable();
+        if (updateBuilder_ == null) {
+          result.update_ = update_;
+        } else {
+          result.update_ = updateBuilder_.build();
+        }
         result.customerCase_ = customerCase_;
         onBuilt();
         return result;
@@ -30021,8 +29913,9 @@ public final class AppSocket {
 
       public Builder mergeFrom(com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand other) {
         if (other == com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand.getDefaultInstance()) return this;
-        internalGetMutableUpdates().mergeFrom(
-            other.internalGetUpdates());
+        if (other.hasUpdate()) {
+          mergeUpdate(other.getUpdate());
+        }
         switch (other.getCustomerCase()) {
           case CUSTOMER_ID: {
             customerCase_ = 1;
@@ -30085,7 +29978,6 @@ public final class AppSocket {
         return this;
       }
 
-      private int bitField0_;
 
       /**
        * <code>string customer_id = 1;</code>
@@ -30458,132 +30350,123 @@ public final class AppSocket {
         return secondaryIdBuilder_;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> updates_;
-      private com.google.protobuf.MapField<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-      internalGetUpdates() {
-        if (updates_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              UpdatesDefaultEntryHolder.defaultEntry);
+      private com.elarian.hera.proto.Common.DataMapValue update_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.Common.DataMapValue, com.elarian.hera.proto.Common.DataMapValue.Builder, com.elarian.hera.proto.Common.DataMapValueOrBuilder> updateBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       * @return Whether the update field is set.
+       */
+      public boolean hasUpdate() {
+        return updateBuilder_ != null || update_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       * @return The update.
+       */
+      public com.elarian.hera.proto.Common.DataMapValue getUpdate() {
+        if (updateBuilder_ == null) {
+          return update_ == null ? com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : update_;
+        } else {
+          return updateBuilder_.getMessage();
         }
-        return updates_;
       }
-      private com.google.protobuf.MapField<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-      internalGetMutableUpdates() {
-        onChanged();;
-        if (updates_ == null) {
-          updates_ = com.google.protobuf.MapField.newMapField(
-              UpdatesDefaultEntryHolder.defaultEntry);
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       */
+      public Builder setUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
+        if (updateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          update_ = value;
+          onChanged();
+        } else {
+          updateBuilder_.setMessage(value);
         }
-        if (!updates_.isMutable()) {
-          updates_ = updates_.copy();
-        }
-        return updates_;
-      }
 
-      public int getUpdatesCount() {
-        return internalGetUpdates().getMap().size();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsUpdates(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetUpdates().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getUpdatesMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdates() {
-        return getUpdatesMap();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdatesMap() {
-        return internalGetUpdates().getMap();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-      @java.lang.Override
-
-      public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-            internalGetUpdates().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-      @java.lang.Override
-
-      public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-            internalGetUpdates().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearUpdates() {
-        internalGetMutableUpdates().getMutableMap()
-            .clear();
         return this;
       }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
+      public Builder setUpdate(
+          com.elarian.hera.proto.Common.DataMapValue.Builder builderForValue) {
+        if (updateBuilder_ == null) {
+          update_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateBuilder_.setMessage(builderForValue.build());
+        }
 
-      public Builder removeUpdates(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableUpdates().getMutableMap()
-            .remove(key);
         return this;
       }
       /**
-       * Use alternate mutation accessors instead.
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-      getMutableUpdates() {
-        return internalGetMutableUpdates().getMutableMap();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-      public Builder putUpdates(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableUpdates().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
+      public Builder mergeUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
+        if (updateBuilder_ == null) {
+          if (update_ != null) {
+            update_ =
+              com.elarian.hera.proto.Common.DataMapValue.newBuilder(update_).mergeFrom(value).buildPartial();
+          } else {
+            update_ = value;
+          }
+          onChanged();
+        } else {
+          updateBuilder_.mergeFrom(value);
+        }
 
-      public Builder putAllUpdates(
-          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> values) {
-        internalGetMutableUpdates().getMutableMap()
-            .putAll(values);
         return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       */
+      public Builder clearUpdate() {
+        if (updateBuilder_ == null) {
+          update_ = null;
+          onChanged();
+        } else {
+          update_ = null;
+          updateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       */
+      public com.elarian.hera.proto.Common.DataMapValue.Builder getUpdateBuilder() {
+        
+        onChanged();
+        return getUpdateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       */
+      public com.elarian.hera.proto.Common.DataMapValueOrBuilder getUpdateOrBuilder() {
+        if (updateBuilder_ != null) {
+          return updateBuilder_.getMessageOrBuilder();
+        } else {
+          return update_ == null ?
+              com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : update_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.Common.DataMapValue, com.elarian.hera.proto.Common.DataMapValue.Builder, com.elarian.hera.proto.Common.DataMapValueOrBuilder> 
+          getUpdateFieldBuilder() {
+        if (updateBuilder_ == null) {
+          updateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.Common.DataMapValue, com.elarian.hera.proto.Common.DataMapValue.Builder, com.elarian.hera.proto.Common.DataMapValueOrBuilder>(
+                  getUpdate(),
+                  getParentForChildren(),
+                  isClean());
+          update_ = null;
+        }
+        return updateBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -30684,31 +30567,6 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.Common.IndexMappingOrBuilder getSecondaryIdOrBuilder();
 
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @return A list containing the deletions.
-     */
-    java.util.List<java.lang.String>
-        getDeletionsList();
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @return The count of deletions.
-     */
-    int getDeletionsCount();
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index of the element to return.
-     * @return The deletions at the given index.
-     */
-    java.lang.String getDeletions(int index);
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the deletions at the given index.
-     */
-    com.google.protobuf.ByteString
-        getDeletionsBytes(int index);
-
     public com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
   /**
@@ -30724,7 +30582,6 @@ public final class AppSocket {
       super(builder);
     }
     private DeleteCustomerAppDataCommand() {
-      deletions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -30747,7 +30604,6 @@ public final class AppSocket {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -30792,15 +30648,6 @@ public final class AppSocket {
               customerCase_ = 3;
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                deletions_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              deletions_.add(s);
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -30816,9 +30663,6 @@ public final class AppSocket {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          deletions_ = deletions_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -30986,41 +30830,6 @@ public final class AppSocket {
       return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
     }
 
-    public static final int DELETIONS_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList deletions_;
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @return A list containing the deletions.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getDeletionsList() {
-      return deletions_;
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @return The count of deletions.
-     */
-    public int getDeletionsCount() {
-      return deletions_.size();
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index of the element to return.
-     * @return The deletions at the given index.
-     */
-    public java.lang.String getDeletions(int index) {
-      return deletions_.get(index);
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the deletions at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getDeletionsBytes(int index) {
-      return deletions_.getByteString(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -31044,9 +30853,6 @@ public final class AppSocket {
       if (customerCase_ == 3) {
         output.writeMessage(3, (com.elarian.hera.proto.Common.IndexMapping) customer_);
       }
-      for (int i = 0; i < deletions_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deletions_.getRaw(i));
-      }
       unknownFields.writeTo(output);
     }
 
@@ -31067,14 +30873,6 @@ public final class AppSocket {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (com.elarian.hera.proto.Common.IndexMapping) customer_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < deletions_.size(); i++) {
-          dataSize += computeStringSizeNoTag(deletions_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getDeletionsList().size();
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -31090,8 +30888,6 @@ public final class AppSocket {
       }
       com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand other = (com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand) obj;
 
-      if (!getDeletionsList()
-          .equals(other.getDeletionsList())) return false;
       if (!getCustomerCase().equals(other.getCustomerCase())) return false;
       switch (customerCase_) {
         case 1:
@@ -31120,10 +30916,6 @@ public final class AppSocket {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDeletionsCount() > 0) {
-        hash = (37 * hash) + DELETIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getDeletionsList().hashCode();
-      }
       switch (customerCase_) {
         case 1:
           hash = (37 * hash) + CUSTOMER_ID_FIELD_NUMBER;
@@ -31273,8 +31065,6 @@ public final class AppSocket {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        deletions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         customerCase_ = 0;
         customer_ = null;
         return this;
@@ -31303,7 +31093,6 @@ public final class AppSocket {
       @java.lang.Override
       public com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand buildPartial() {
         com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand result = new com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand(this);
-        int from_bitField0_ = bitField0_;
         if (customerCase_ == 1) {
           result.customer_ = customer_;
         }
@@ -31321,11 +31110,6 @@ public final class AppSocket {
             result.customer_ = secondaryIdBuilder_.build();
           }
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          deletions_ = deletions_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.deletions_ = deletions_;
         result.customerCase_ = customerCase_;
         onBuilt();
         return result;
@@ -31375,16 +31159,6 @@ public final class AppSocket {
 
       public Builder mergeFrom(com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand other) {
         if (other == com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand.getDefaultInstance()) return this;
-        if (!other.deletions_.isEmpty()) {
-          if (deletions_.isEmpty()) {
-            deletions_ = other.deletions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureDeletionsIsMutable();
-            deletions_.addAll(other.deletions_);
-          }
-          onChanged();
-        }
         switch (other.getCustomerCase()) {
           case CUSTOMER_ID: {
             customerCase_ = 1;
@@ -31447,7 +31221,6 @@ public final class AppSocket {
         return this;
       }
 
-      private int bitField0_;
 
       /**
        * <code>string customer_id = 1;</code>
@@ -31818,116 +31591,6 @@ public final class AppSocket {
         customerCase_ = 3;
         onChanged();;
         return secondaryIdBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList deletions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureDeletionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          deletions_ = new com.google.protobuf.LazyStringArrayList(deletions_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @return A list containing the deletions.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getDeletionsList() {
-        return deletions_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @return The count of deletions.
-       */
-      public int getDeletionsCount() {
-        return deletions_.size();
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param index The index of the element to return.
-       * @return The deletions at the given index.
-       */
-      public java.lang.String getDeletions(int index) {
-        return deletions_.get(index);
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the deletions at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getDeletionsBytes(int index) {
-        return deletions_.getByteString(index);
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The deletions to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDeletions(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDeletionsIsMutable();
-        deletions_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param value The deletions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addDeletions(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDeletionsIsMutable();
-        deletions_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param values The deletions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllDeletions(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureDeletionsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, deletions_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDeletions() {
-        deletions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param value The bytes of the deletions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addDeletionsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureDeletionsIsMutable();
-        deletions_.add(value);
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -32870,18 +32533,6 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.Common.IndexMappingOrBuilder getSecondaryIdOrBuilder();
 
-    /**
-     * <code>string key = 4;</code>
-     * @return The key.
-     */
-    java.lang.String getKey();
-    /**
-     * <code>string key = 4;</code>
-     * @return The bytes for key.
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
     public com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
   /**
@@ -32897,7 +32548,6 @@ public final class AppSocket {
       super(builder);
     }
     private LeaseCustomerAppDataCommand() {
-      key_ = "";
     }
 
     @java.lang.Override
@@ -32962,12 +32612,6 @@ public final class AppSocket {
                 customer_ = subBuilder.buildPartial();
               }
               customerCase_ = 3;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              key_ = s;
               break;
             }
             default: {
@@ -33152,44 +32796,6 @@ public final class AppSocket {
       return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
     }
 
-    public static final int KEY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object key_;
-    /**
-     * <code>string key = 4;</code>
-     * @return The key.
-     */
-    @java.lang.Override
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        key_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string key = 4;</code>
-     * @return The bytes for key.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        key_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -33213,9 +32819,6 @@ public final class AppSocket {
       if (customerCase_ == 3) {
         output.writeMessage(3, (com.elarian.hera.proto.Common.IndexMapping) customer_);
       }
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, key_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -33236,9 +32839,6 @@ public final class AppSocket {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (com.elarian.hera.proto.Common.IndexMapping) customer_);
       }
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, key_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -33254,8 +32854,6 @@ public final class AppSocket {
       }
       com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataCommand other = (com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataCommand) obj;
 
-      if (!getKey()
-          .equals(other.getKey())) return false;
       if (!getCustomerCase().equals(other.getCustomerCase())) return false;
       switch (customerCase_) {
         case 1:
@@ -33284,8 +32882,6 @@ public final class AppSocket {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
       switch (customerCase_) {
         case 1:
           hash = (37 * hash) + CUSTOMER_ID_FIELD_NUMBER;
@@ -33435,8 +33031,6 @@ public final class AppSocket {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        key_ = "";
-
         customerCase_ = 0;
         customer_ = null;
         return this;
@@ -33482,7 +33076,6 @@ public final class AppSocket {
             result.customer_ = secondaryIdBuilder_.build();
           }
         }
-        result.key_ = key_;
         result.customerCase_ = customerCase_;
         onBuilt();
         return result;
@@ -33532,10 +33125,6 @@ public final class AppSocket {
 
       public Builder mergeFrom(com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataCommand other) {
         if (other == com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataCommand.getDefaultInstance()) return this;
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
-          onChanged();
-        }
         switch (other.getCustomerCase()) {
           case CUSTOMER_ID: {
             customerCase_ = 1;
@@ -33968,82 +33557,6 @@ public final class AppSocket {
         customerCase_ = 3;
         onChanged();;
         return secondaryIdBuilder_;
-      }
-
-      private java.lang.Object key_ = "";
-      /**
-       * <code>string key = 4;</code>
-       * @return The key.
-       */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          key_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string key = 4;</code>
-       * @return The bytes for key.
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string key = 4;</code>
-       * @param value The key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        key_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string key = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKey() {
-        
-        key_ = getDefaultInstance().getKey();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string key = 4;</code>
-       * @param value The bytes for key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        key_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -65611,11 +65124,6 @@ public final class AppSocket {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_UpdatesEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_UpdatesEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_DeleteCustomerAppDataCommand_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -65941,188 +65449,185 @@ public final class AppSocket {
       "\n\tdeletions\030\004 \003(\tB\n\n\010customer\"r\n\030UpdateC" +
       "ustomerStateReply\022\016\n\006status\030\001 \001(\010\022\023\n\013des" +
       "cription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\"\354\002\n\034UpdateCust" +
+      "ogle.protobuf.StringValue\"\370\001\n\034UpdateCust" +
       "omerAppDataCommand\022\025\n\013customer_id\030\001 \001(\tH" +
       "\000\022A\n\017customer_number\030\002 \001(\0132&.com.elarian" +
       ".hera.proto.CustomerNumberH\000\022<\n\014secondar" +
       "y_id\030\003 \001(\0132$.com.elarian.hera.proto.Inde" +
-      "xMappingH\000\022R\n\007updates\030\004 \003(\0132A.com.elaria" +
-      "n.hera.proto.UpdateCustomerAppDataComman" +
-      "d.UpdatesEntry\032T\n\014UpdatesEntry\022\013\n\003key\030\001 " +
-      "\001(\t\0223\n\005value\030\002 \001(\0132$.com.elarian.hera.pr" +
-      "oto.DataMapValue:\0028\001B\n\n\010customer\"\325\001\n\034Del" +
-      "eteCustomerAppDataCommand\022\025\n\013customer_id" +
-      "\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com." +
-      "elarian.hera.proto.CustomerNumberH\000\022<\n\014s" +
-      "econdary_id\030\003 \001(\0132$.com.elarian.hera.pro" +
-      "to.IndexMappingH\000\022\021\n\tdeletions\030\004 \003(\tB\n\n\010" +
-      "customer\"t\n\032UpdateCustomerAppDataReply\022\016" +
-      "\n\006status\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\0221\n\013c" +
-      "ustomer_id\030\003 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\"\316\001\n\033LeaseCustomerAppDataCommand\022\025" +
-      "\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_number" +
-      "\030\002 \001(\0132&.com.elarian.hera.proto.Customer" +
-      "NumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.ela" +
-      "rian.hera.proto.IndexMappingH\000\022\013\n\003key\030\004 " +
-      "\001(\tB\n\n\010customer\"\250\001\n\031LeaseCustomerAppData" +
-      "Reply\022\016\n\006status\030\001 \001(\010\022\023\n\013description\030\002 \001" +
-      "(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.protobu" +
-      "f.StringValue\0223\n\005value\030\004 \001(\0132$.com.elari" +
-      "an.hera.proto.DataMapValue\"\330\001\n\022SendMessa" +
-      "geCommand\022?\n\017customer_number\030\001 \001(\0132&.com" +
-      ".elarian.hera.proto.CustomerNumber\022F\n\016ch" +
-      "annel_number\030\002 \001(\0132..com.elarian.hera.pr" +
-      "oto.MessagingChannelNumber\0229\n\004body\030\003 \001(\013" +
-      "2+.com.elarian.hera.proto.CustomerMessag" +
-      "eBody\"\315\001\n\025SendMessageTagCommand\0221\n\003tag\030\001" +
-      " \001(\0132$.com.elarian.hera.proto.IndexMappi" +
-      "ng\022F\n\016channel_number\030\002 \001(\0132..com.elarian" +
-      ".hera.proto.MessagingChannelNumber\0229\n\004bo" +
-      "dy\030\003 \001(\0132+.com.elarian.hera.proto.Custom" +
-      "erMessageBody\"\204\001\n\025ReplyToMessageCommand\022" +
-      "\023\n\013customer_id\030\001 \001(\t\022\033\n\023reply_to_message" +
-      "_id\030\002 \001(\t\0229\n\004body\030\003 \001(\0132+.com.elarian.he" +
-      "ra.proto.CustomerMessageBody\"\313\001\n\020SendMes" +
-      "sageReply\022=\n\006status\030\001 \001(\0162-.com.elarian." +
-      "hera.proto.MessageDeliveryStatus\022\023\n\013desc" +
-      "ription\030\002 \001(\t\0220\n\nmessage_id\030\003 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0221\n\013customer_id\030\004" +
-      " \001(\0132\034.google.protobuf.StringValue\"\342\001\n\027M" +
-      "essagingConsentCommand\022?\n\017customer_numbe" +
-      "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome" +
-      "rNumber\022F\n\016channel_number\030\002 \001(\0132..com.el" +
-      "arian.hera.proto.MessagingChannelNumber\022" +
-      ">\n\006action\030\003 \001(\0162..com.elarian.hera.proto" +
-      ".MessagingConsentAction\"\237\001\n\025MessagingCon" +
-      "sentReply\022>\n\006status\030\001 \001(\0162..com.elarian." +
-      "hera.proto.MessagingConsentStatus\022\023\n\013des" +
+      "xMappingH\000\0224\n\006update\030\004 \001(\0132$.com.elarian" +
+      ".hera.proto.DataMapValueB\n\n\010customer\"\302\001\n" +
+      "\034DeleteCustomerAppDataCommand\022\025\n\013custome" +
+      "r_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&." +
+      "com.elarian.hera.proto.CustomerNumberH\000\022" +
+      "<\n\014secondary_id\030\003 \001(\0132$.com.elarian.hera" +
+      ".proto.IndexMappingH\000B\n\n\010customer\"t\n\032Upd" +
+      "ateCustomerAppDataReply\022\016\n\006status\030\001 \001(\010\022" +
+      "\023\n\013description\030\002 \001(\t\0221\n\013customer_id\030\003 \001(" +
+      "\0132\034.google.protobuf.StringValue\"\301\001\n\033Leas" +
+      "eCustomerAppDataCommand\022\025\n\013customer_id\030\001" +
+      " \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.el" +
+      "arian.hera.proto.CustomerNumberH\000\022<\n\014sec" +
+      "ondary_id\030\003 \001(\0132$.com.elarian.hera.proto" +
+      ".IndexMappingH\000B\n\n\010customer\"\250\001\n\031LeaseCus" +
+      "tomerAppDataReply\022\016\n\006status\030\001 \001(\010\022\023\n\013des" +
       "cription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\"\312\001\n\026InitiatePa" +
-      "ymentCommand\022@\n\013debit_party\030\001 \001(\0132+.com." +
-      "elarian.hera.proto.PaymentCounterParty\022A" +
-      "\n\014credit_party\030\002 \001(\0132+.com.elarian.hera." +
-      "proto.PaymentCounterParty\022+\n\005value\030\003 \001(\013" +
-      "2\034.com.elarian.hera.proto.Cash\"\213\002\n\024Initi" +
-      "atePaymentReply\0225\n\006status\030\001 \001(\0162%.com.el" +
-      "arian.hera.proto.PaymentStatus\022\023\n\013descri" +
-      "ption\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\0227\n\021debit_custo" +
-      "mer_id\030\004 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\0228\n\022credit_customer_id\030\005 \001(\0132\034.google." +
-      "protobuf.StringValue\"\233\001\n\024MakeVoiceCallCo" +
-      "mmand\022?\n\017customer_number\030\001 \001(\0132&.com.ela" +
-      "rian.hera.proto.CustomerNumber\022B\n\016channe" +
-      "l_number\030\002 \001(\0132*.com.elarian.hera.proto." +
-      "VoiceChannelNumber\"\307\001\n\022MakeVoiceCallRepl" +
-      "y\0227\n\006status\030\001 \001(\0162\'.com.elarian.hera.pro" +
-      "to.VoiceCallStatus\022\023\n\013description\030\002 \001(\t\022" +
-      "0\n\nsession_id\030\003 \001(\0132\034.google.protobuf.St" +
-      "ringValue\0221\n\013customer_id\030\004 \001(\0132\034.google." +
-      "protobuf.StringValue\"e\n\017TagCommandReply\022" +
-      "\016\n\006status\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007" +
-      "work_id\030\003 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\"\266\001\n\027ServerToAppNotification\022K\n\010custo" +
-      "mer\030\001 \001(\01327.com.elarian.hera.proto.Serve" +
-      "rToAppCustomerNotificationH\000\022E\n\005purse\030\002 " +
-      "\001(\01324.com.elarian.hera.proto.ServerToApp" +
-      "PurseNotificationH\000B\007\n\005entry\"\265\007\n\037ServerT" +
-      "oAppCustomerNotification\022\016\n\006org_id\030\001 \001(\t" +
-      "\022\016\n\006app_id\030\002 \001(\t\022\023\n\013customer_id\030\003 \001(\t\022.\n" +
-      "\ncreated_at\030\004 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022@\n\010reminder\030\005 \001(\0132,.com.elarian.he" +
-      "ra.proto.ReminderNotificationH\000\022^\n\030messa" +
-      "ging_consent_status\030\006 \001(\0132:.com.elarian." +
-      "hera.proto.MessagingConsentStatusNotific" +
-      "ationH\000\022^\n\030messaging_session_status\030\007 \001(" +
-      "\0132:.com.elarian.hera.proto.MessagingSess" +
-      "ionStatusNotificationH\000\022O\n\020received_mess" +
-      "age\030\010 \001(\01323.com.elarian.hera.proto.Recei" +
-      "vedMessageNotificationH\000\022K\n\016message_stat" +
-      "us\030\t \001(\01321.com.elarian.hera.proto.Messag" +
-      "eStatusNotificationH\000\022G\n\014ussd_session\030\n " +
-      "\001(\0132/.com.elarian.hera.proto.UssdSession" +
-      "NotificationH\000\022C\n\nvoice_call\030\013 \001(\0132-.com" +
-      ".elarian.hera.proto.VoiceCallNotificatio" +
-      "nH\000\022O\n\020received_payment\030\014 \001(\01323.com.elar" +
-      "ian.hera.proto.ReceivedPaymentNotificati" +
-      "onH\000\022K\n\016payment_status\030\r \001(\01321.com.elari" +
-      "an.hera.proto.PaymentStatusNotificationH" +
-      "\000\022X\n\025wallet_payment_status\030\016 \001(\01327.com.e" +
-      "larian.hera.proto.WalletPaymentStatusNot" +
-      "ificationH\000B\007\n\005entry\"\326\001\n\034ServerToAppPurs" +
-      "eNotification\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030" +
-      "\002 \001(\t\022\020\n\010purse_id\030\003 \001(\t\022.\n\ncreated_at\030\004 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022K\n\016payme" +
-      "nt_status\030\005 \001(\01321.com.elarian.hera.proto" +
-      ".PaymentStatusNotificationH\000B\007\n\005entry\"\277\001" +
-      "\n\034ServerToAppNotificationReply\022L\n\014ussd_s" +
-      "ession\030\001 \001(\01324.com.elarian.hera.proto.Us" +
-      "sdSessionNotificationReplyH\000\022H\n\nvoice_ca" +
-      "ll\030\002 \001(\01322.com.elarian.hera.proto.VoiceC" +
-      "allNotificationReplyH\000B\007\n\005entry\"\355\001\n\"Mess" +
-      "agingConsentStatusNotification\022?\n\017custom" +
-      "er_number\030\001 \001(\0132&.com.elarian.hera.proto" +
-      ".CustomerNumber\022F\n\016channel_number\030\002 \001(\0132" +
-      "..com.elarian.hera.proto.MessagingChanne" +
-      "lNumber\022>\n\006status\030\003 \001(\0162..com.elarian.he" +
-      "ra.proto.MessagingConsentStatus\"\235\002\n\"Mess" +
-      "agingSessionStatusNotification\022?\n\017custom" +
-      "er_number\030\001 \001(\0132&.com.elarian.hera.proto" +
-      ".CustomerNumber\022F\n\016channel_number\030\002 \001(\0132" +
-      "..com.elarian.hera.proto.MessagingChanne" +
-      "lNumber\022.\n\nexpiration\030\003 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022>\n\006status\030\004 \001(\0162..com.el" +
-      "arian.hera.proto.MessagingSessionStatus\"" +
-      "\265\001\n\024ReminderNotification\022:\n\010reminder\030\001 \001" +
-      "(\0132(.com.elarian.hera.proto.CustomerRemi" +
-      "nder\0222\n\003tag\030\002 \001(\0132%.com.elarian.hera.pro" +
-      "to.CustomerIndex\022-\n\007work_id\030\003 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\"\336\002\n\033ReceivedMess" +
-      "ageNotification\022\022\n\nmessage_id\030\001 \001(\t\022?\n\017c" +
-      "ustomer_number\030\002 \001(\0132&.com.elarian.hera." +
-      "proto.CustomerNumber\022F\n\016channel_number\030\003" +
-      " \001(\0132..com.elarian.hera.proto.MessagingC" +
-      "hannelNumber\022*\n\004text\030\004 \001(\0132\034.google.prot" +
-      "obuf.StringValue\0227\n\005media\030\005 \003(\0132(.com.el" +
-      "arian.hera.proto.MediaMessageBody\022=\n\010loc" +
-      "ation\030\006 \001(\0132+.com.elarian.hera.proto.Loc" +
-      "ationMessageBody\"n\n\031MessageStatusNotific" +
-      "ation\022\022\n\nmessage_id\030\001 \001(\t\022=\n\006status\030\002 \001(" +
-      "\0162-.com.elarian.hera.proto.MessageDelive" +
-      "ryStatus\"\336\001\n\027UssdSessionNotification\022\022\n\n" +
-      "session_id\030\001 \001(\t\022A\n\016channel_number\030\002 \001(\013" +
-      "2).com.elarian.hera.proto.UssdChannelNum" +
-      "ber\022?\n\017customer_number\030\003 \001(\0132&.com.elari" +
-      "an.hera.proto.CustomerNumber\022+\n\005input\030\004 " +
-      "\001(\0132\034.google.protobuf.StringValue\"\206\003\n\025Vo" +
-      "iceCallNotification\022\022\n\nsession_id\030\001 \001(\t\022" +
-      "B\n\016channel_number\030\002 \001(\0132*.com.elarian.he" +
-      "ra.proto.VoiceChannelNumber\022?\n\017customer_" +
-      "number\030\003 \001(\0132&.com.elarian.hera.proto.Cu" +
-      "stomerNumber\022A\n\tdirection\030\004 \001(\0162..com.el" +
-      "arian.hera.proto.CustomerEventDirection\022" +
-      "8\n\005input\030\005 \001(\0132).com.elarian.hera.proto." +
-      "VoiceCallHopInput\022+\n\010duration\030\006 \001(\0132\031.go" +
-      "ogle.protobuf.Duration\022*\n\004cost\030\007 \001(\0132\034.c" +
-      "om.elarian.hera.proto.Cash\"\262\002\n\033ReceivedP" +
-      "aymentNotification\022\020\n\010purse_id\030\001 \001(\t\022\026\n\016" +
-      "transaction_id\030\002 \001(\t\022?\n\017customer_number\030" +
-      "\003 \001(\0132&.com.elarian.hera.proto.CustomerN" +
-      "umber\022D\n\016channel_number\030\004 \001(\0132,.com.elar" +
-      "ian.hera.proto.PaymentChannelNumber\022+\n\005v" +
-      "alue\030\005 \001(\0132\034.com.elarian.hera.proto.Cash" +
-      "\0225\n\006status\030\006 \001(\0162%.com.elarian.hera.prot" +
-      "o.PaymentStatus\"j\n\031PaymentStatusNotifica" +
-      "tion\022\026\n\016transaction_id\030\001 \001(\t\0225\n\006status\030\002" +
-      " \001(\0162%.com.elarian.hera.proto.PaymentSta" +
-      "tus\"\203\001\n\037WalletPaymentStatusNotification\022" +
-      "\021\n\twallet_id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001" +
-      "(\t\0225\n\006status\030\003 \001(\0162%.com.elarian.hera.pr" +
-      "oto.PaymentStatus\"N\n\034UssdSessionNotifica" +
-      "tionReply\022.\n\004menu\030\001 \001(\0132 .com.elarian.he" +
-      "ra.proto.UssdMenu\"V\n\032VoiceCallNotificati" +
-      "onReply\0228\n\007actions\030\001 \003(\0132\'.com.elarian.h" +
-      "era.proto.VoiceCallActionb\006proto3"
+      "ogle.protobuf.StringValue\0223\n\005value\030\004 \001(\013" +
+      "2$.com.elarian.hera.proto.DataMapValue\"\330" +
+      "\001\n\022SendMessageCommand\022?\n\017customer_number" +
+      "\030\001 \001(\0132&.com.elarian.hera.proto.Customer" +
+      "Number\022F\n\016channel_number\030\002 \001(\0132..com.ela" +
+      "rian.hera.proto.MessagingChannelNumber\0229" +
+      "\n\004body\030\003 \001(\0132+.com.elarian.hera.proto.Cu" +
+      "stomerMessageBody\"\315\001\n\025SendMessageTagComm" +
+      "and\0221\n\003tag\030\001 \001(\0132$.com.elarian.hera.prot" +
+      "o.IndexMapping\022F\n\016channel_number\030\002 \001(\0132." +
+      ".com.elarian.hera.proto.MessagingChannel" +
+      "Number\0229\n\004body\030\003 \001(\0132+.com.elarian.hera." +
+      "proto.CustomerMessageBody\"\204\001\n\025ReplyToMes" +
+      "sageCommand\022\023\n\013customer_id\030\001 \001(\t\022\033\n\023repl" +
+      "y_to_message_id\030\002 \001(\t\0229\n\004body\030\003 \001(\0132+.co" +
+      "m.elarian.hera.proto.CustomerMessageBody" +
+      "\"\313\001\n\020SendMessageReply\022=\n\006status\030\001 \001(\0162-." +
+      "com.elarian.hera.proto.MessageDeliverySt" +
+      "atus\022\023\n\013description\030\002 \001(\t\0220\n\nmessage_id\030" +
+      "\003 \001(\0132\034.google.protobuf.StringValue\0221\n\013c" +
+      "ustomer_id\030\004 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\"\342\001\n\027MessagingConsentCommand\022?\n\017cu" +
+      "stomer_number\030\001 \001(\0132&.com.elarian.hera.p" +
+      "roto.CustomerNumber\022F\n\016channel_number\030\002 " +
+      "\001(\0132..com.elarian.hera.proto.MessagingCh" +
+      "annelNumber\022>\n\006action\030\003 \001(\0162..com.elaria" +
+      "n.hera.proto.MessagingConsentAction\"\237\001\n\025" +
+      "MessagingConsentReply\022>\n\006status\030\001 \001(\0162.." +
+      "com.elarian.hera.proto.MessagingConsentS" +
+      "tatus\022\023\n\013description\030\002 \001(\t\0221\n\013customer_i" +
+      "d\030\003 \001(\0132\034.google.protobuf.StringValue\"\312\001" +
+      "\n\026InitiatePaymentCommand\022@\n\013debit_party\030" +
+      "\001 \001(\0132+.com.elarian.hera.proto.PaymentCo" +
+      "unterParty\022A\n\014credit_party\030\002 \001(\0132+.com.e" +
+      "larian.hera.proto.PaymentCounterParty\022+\n" +
+      "\005value\030\003 \001(\0132\034.com.elarian.hera.proto.Ca" +
+      "sh\"\213\002\n\024InitiatePaymentReply\0225\n\006status\030\001 " +
+      "\001(\0162%.com.elarian.hera.proto.PaymentStat" +
+      "us\022\023\n\013description\030\002 \001(\t\0224\n\016transaction_i" +
+      "d\030\003 \001(\0132\034.google.protobuf.StringValue\0227\n" +
+      "\021debit_customer_id\030\004 \001(\0132\034.google.protob" +
+      "uf.StringValue\0228\n\022credit_customer_id\030\005 \001" +
+      "(\0132\034.google.protobuf.StringValue\"\233\001\n\024Mak" +
+      "eVoiceCallCommand\022?\n\017customer_number\030\001 \001" +
+      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
+      "er\022B\n\016channel_number\030\002 \001(\0132*.com.elarian" +
+      ".hera.proto.VoiceChannelNumber\"\307\001\n\022MakeV" +
+      "oiceCallReply\0227\n\006status\030\001 \001(\0162\'.com.elar" +
+      "ian.hera.proto.VoiceCallStatus\022\023\n\013descri" +
+      "ption\030\002 \001(\t\0220\n\nsession_id\030\003 \001(\0132\034.google" +
+      ".protobuf.StringValue\0221\n\013customer_id\030\004 \001" +
+      "(\0132\034.google.protobuf.StringValue\"e\n\017TagC" +
+      "ommandReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descripti" +
+      "on\030\002 \001(\t\022-\n\007work_id\030\003 \001(\0132\034.google.proto" +
+      "buf.StringValue\"\266\001\n\027ServerToAppNotificat" +
+      "ion\022K\n\010customer\030\001 \001(\01327.com.elarian.hera" +
+      ".proto.ServerToAppCustomerNotificationH\000" +
+      "\022E\n\005purse\030\002 \001(\01324.com.elarian.hera.proto" +
+      ".ServerToAppPurseNotificationH\000B\007\n\005entry" +
+      "\"\265\007\n\037ServerToAppCustomerNotification\022\016\n\006" +
+      "org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n\013customer" +
+      "_id\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022@\n\010reminder\030\005 \001(\0132,.co" +
+      "m.elarian.hera.proto.ReminderNotificatio" +
+      "nH\000\022^\n\030messaging_consent_status\030\006 \001(\0132:." +
+      "com.elarian.hera.proto.MessagingConsentS" +
+      "tatusNotificationH\000\022^\n\030messaging_session" +
+      "_status\030\007 \001(\0132:.com.elarian.hera.proto.M" +
+      "essagingSessionStatusNotificationH\000\022O\n\020r" +
+      "eceived_message\030\010 \001(\01323.com.elarian.hera" +
+      ".proto.ReceivedMessageNotificationH\000\022K\n\016" +
+      "message_status\030\t \001(\01321.com.elarian.hera." +
+      "proto.MessageStatusNotificationH\000\022G\n\014uss" +
+      "d_session\030\n \001(\0132/.com.elarian.hera.proto" +
+      ".UssdSessionNotificationH\000\022C\n\nvoice_call" +
+      "\030\013 \001(\0132-.com.elarian.hera.proto.VoiceCal" +
+      "lNotificationH\000\022O\n\020received_payment\030\014 \001(" +
+      "\01323.com.elarian.hera.proto.ReceivedPayme" +
+      "ntNotificationH\000\022K\n\016payment_status\030\r \001(\013" +
+      "21.com.elarian.hera.proto.PaymentStatusN" +
+      "otificationH\000\022X\n\025wallet_payment_status\030\016" +
+      " \001(\01327.com.elarian.hera.proto.WalletPaym" +
+      "entStatusNotificationH\000B\007\n\005entry\"\326\001\n\034Ser" +
+      "verToAppPurseNotification\022\016\n\006org_id\030\001 \001(" +
+      "\t\022\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030\003 \001(\t\022.\n\nc" +
+      "reated_at\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022K\n\016payment_status\030\005 \001(\01321.com.elaria" +
+      "n.hera.proto.PaymentStatusNotificationH\000" +
+      "B\007\n\005entry\"\277\001\n\034ServerToAppNotificationRep" +
+      "ly\022L\n\014ussd_session\030\001 \001(\01324.com.elarian.h" +
+      "era.proto.UssdSessionNotificationReplyH\000" +
+      "\022H\n\nvoice_call\030\002 \001(\01322.com.elarian.hera." +
+      "proto.VoiceCallNotificationReplyH\000B\007\n\005en" +
+      "try\"\355\001\n\"MessagingConsentStatusNotificati" +
+      "on\022?\n\017customer_number\030\001 \001(\0132&.com.elaria" +
+      "n.hera.proto.CustomerNumber\022F\n\016channel_n" +
+      "umber\030\002 \001(\0132..com.elarian.hera.proto.Mes" +
+      "sagingChannelNumber\022>\n\006status\030\003 \001(\0162..co" +
+      "m.elarian.hera.proto.MessagingConsentSta" +
+      "tus\"\235\002\n\"MessagingSessionStatusNotificati" +
+      "on\022?\n\017customer_number\030\001 \001(\0132&.com.elaria" +
+      "n.hera.proto.CustomerNumber\022F\n\016channel_n" +
+      "umber\030\002 \001(\0132..com.elarian.hera.proto.Mes" +
+      "sagingChannelNumber\022.\n\nexpiration\030\003 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022>\n\006status\030\004 " +
+      "\001(\0162..com.elarian.hera.proto.MessagingSe" +
+      "ssionStatus\"\265\001\n\024ReminderNotification\022:\n\010" +
+      "reminder\030\001 \001(\0132(.com.elarian.hera.proto." +
+      "CustomerReminder\0222\n\003tag\030\002 \001(\0132%.com.elar" +
+      "ian.hera.proto.CustomerIndex\022-\n\007work_id\030" +
+      "\003 \001(\0132\034.google.protobuf.StringValue\"\336\002\n\033" +
+      "ReceivedMessageNotification\022\022\n\nmessage_i" +
+      "d\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132&.com.e" +
+      "larian.hera.proto.CustomerNumber\022F\n\016chan" +
+      "nel_number\030\003 \001(\0132..com.elarian.hera.prot" +
+      "o.MessagingChannelNumber\022*\n\004text\030\004 \001(\0132\034" +
+      ".google.protobuf.StringValue\0227\n\005media\030\005 " +
+      "\003(\0132(.com.elarian.hera.proto.MediaMessag" +
+      "eBody\022=\n\010location\030\006 \001(\0132+.com.elarian.he" +
+      "ra.proto.LocationMessageBody\"n\n\031MessageS" +
+      "tatusNotification\022\022\n\nmessage_id\030\001 \001(\t\022=\n" +
+      "\006status\030\002 \001(\0162-.com.elarian.hera.proto.M" +
+      "essageDeliveryStatus\"\336\001\n\027UssdSessionNoti" +
+      "fication\022\022\n\nsession_id\030\001 \001(\t\022A\n\016channel_" +
+      "number\030\002 \001(\0132).com.elarian.hera.proto.Us" +
+      "sdChannelNumber\022?\n\017customer_number\030\003 \001(\013" +
+      "2&.com.elarian.hera.proto.CustomerNumber" +
+      "\022+\n\005input\030\004 \001(\0132\034.google.protobuf.String" +
+      "Value\"\206\003\n\025VoiceCallNotification\022\022\n\nsessi" +
+      "on_id\030\001 \001(\t\022B\n\016channel_number\030\002 \001(\0132*.co" +
+      "m.elarian.hera.proto.VoiceChannelNumber\022" +
+      "?\n\017customer_number\030\003 \001(\0132&.com.elarian.h" +
+      "era.proto.CustomerNumber\022A\n\tdirection\030\004 " +
+      "\001(\0162..com.elarian.hera.proto.CustomerEve" +
+      "ntDirection\0228\n\005input\030\005 \001(\0132).com.elarian" +
+      ".hera.proto.VoiceCallHopInput\022+\n\010duratio" +
+      "n\030\006 \001(\0132\031.google.protobuf.Duration\022*\n\004co" +
+      "st\030\007 \001(\0132\034.com.elarian.hera.proto.Cash\"\262" +
+      "\002\n\033ReceivedPaymentNotification\022\020\n\010purse_" +
+      "id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022?\n\017cust" +
+      "omer_number\030\003 \001(\0132&.com.elarian.hera.pro" +
+      "to.CustomerNumber\022D\n\016channel_number\030\004 \001(" +
+      "\0132,.com.elarian.hera.proto.PaymentChanne" +
+      "lNumber\022+\n\005value\030\005 \001(\0132\034.com.elarian.her" +
+      "a.proto.Cash\0225\n\006status\030\006 \001(\0162%.com.elari" +
+      "an.hera.proto.PaymentStatus\"j\n\031PaymentSt" +
+      "atusNotification\022\026\n\016transaction_id\030\001 \001(\t" +
+      "\0225\n\006status\030\002 \001(\0162%.com.elarian.hera.prot" +
+      "o.PaymentStatus\"\203\001\n\037WalletPaymentStatusN" +
+      "otification\022\021\n\twallet_id\030\001 \001(\t\022\026\n\016transa" +
+      "ction_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.ela" +
+      "rian.hera.proto.PaymentStatus\"N\n\034UssdSes" +
+      "sionNotificationReply\022.\n\004menu\030\001 \001(\0132 .co" +
+      "m.elarian.hera.proto.UssdMenu\"V\n\032VoiceCa" +
+      "llNotificationReply\0228\n\007actions\030\001 \003(\0132\'.c" +
+      "om.elarian.hera.proto.VoiceCallActionb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -66268,19 +65773,13 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_descriptor,
-        new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Updates", "Customer", });
-    internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_UpdatesEntry_descriptor =
-      internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_descriptor.getNestedTypes().get(0);
-    internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_UpdatesEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_elarian_hera_proto_UpdateCustomerAppDataCommand_UpdatesEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Update", "Customer", });
     internal_static_com_elarian_hera_proto_DeleteCustomerAppDataCommand_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_com_elarian_hera_proto_DeleteCustomerAppDataCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DeleteCustomerAppDataCommand_descriptor,
-        new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Deletions", "Customer", });
+        new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Customer", });
     internal_static_com_elarian_hera_proto_UpdateCustomerAppDataReply_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_com_elarian_hera_proto_UpdateCustomerAppDataReply_fieldAccessorTable = new
@@ -66292,7 +65791,7 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_LeaseCustomerAppDataCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_LeaseCustomerAppDataCommand_descriptor,
-        new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Key", "Customer", });
+        new java.lang.String[] { "CustomerId", "CustomerNumber", "SecondaryId", "Customer", });
     internal_static_com_elarian_hera_proto_LeaseCustomerAppDataReply_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_com_elarian_hera_proto_LeaseCustomerAppDataReply_fieldAccessorTable = new

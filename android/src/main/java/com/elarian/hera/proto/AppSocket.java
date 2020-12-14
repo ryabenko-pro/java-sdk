@@ -15314,38 +15314,15 @@ public final class AppSocket {
     com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
 
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     * @return Whether the update field is set.
      */
-    int getUpdatesCount();
+    boolean hasUpdate();
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     * @return The update.
      */
-    boolean containsUpdates(
-        java.lang.String key);
-    /**
-     * Use {@link #getUpdatesMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getUpdates();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getUpdatesMap();
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-
-    com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue);
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-
-    com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
-        java.lang.String key);
+    com.elarian.hera.proto.Common.DataMapValue getUpdate();
 
     public com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
@@ -15560,97 +15537,50 @@ public final class AppSocket {
       }
     }
 
-    public static final int UPDATES_FIELD_NUMBER = 4;
-    private static final class UpdatesDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance());
+    public static final int UPDATE_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.DataMapValue update_;
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasUpdate() {
+      return update_ != null;
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.elarian.hera.proto.Common.DataMapValue> updates_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    internalGetUpdates() {
-      return updates_;
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.DataMapValue getUpdate() {
+      return update_ == null ? com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : update_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    internalGetMutableUpdates() {
-      if (!updates_.isMutable()) {
-        updates_ = updates_.mutableCopy();
+    /**
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+     */
+    private void setUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
+      value.getClass();
+  update_ = value;
+      
       }
-      return updates_;
-    }
-    @java.lang.Override
-
-    public int getUpdatesCount() {
-      return internalGetUpdates().size();
-    }
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      */
-    @java.lang.Override
-
-    public boolean containsUpdates(
-        java.lang.String key) {
-      key.getClass();
-      return internalGetUpdates().containsKey(key);
-    }
-    /**
-     * Use {@link #getUpdatesMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdates() {
-      return getUpdatesMap();
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdatesMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetUpdates());
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
-        java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue) {
-      key.getClass();
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-          internalGetUpdates();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-     */
-    @java.lang.Override
-
-    public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
-        java.lang.String key) {
-      key.getClass();
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-          internalGetUpdates();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
+      value.getClass();
+  if (update_ != null &&
+          update_ != com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance()) {
+        update_ =
+          com.elarian.hera.proto.Common.DataMapValue.newBuilder(update_).mergeFrom(value).buildPartial();
+      } else {
+        update_ = value;
       }
-      return map.get(key);
+      
     }
     /**
-     * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+     * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      */
-    private java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
-    getMutableUpdatesMap() {
-      return internalGetMutableUpdates();
+    private void clearUpdate() {  update_ = null;
+      
     }
 
     public static com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand parseFrom(
@@ -15905,101 +15835,50 @@ public final class AppSocket {
         return this;
       }
 
-      @java.lang.Override
-
-      public int getUpdatesCount() {
-        return instance.getUpdatesMap().size();
-      }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
       @java.lang.Override
-
-      public boolean containsUpdates(
-          java.lang.String key) {
-        key.getClass();
-        return instance.getUpdatesMap().containsKey(key);
+      public boolean hasUpdate() {
+        return instance.hasUpdate();
       }
-
-      public Builder clearUpdates() {
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.DataMapValue getUpdate() {
+        return instance.getUpdate();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       */
+      public Builder setUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
         copyOnWrite();
-        instance.getMutableUpdatesMap().clear();
+        instance.setUpdate(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-
-      public Builder removeUpdates(
-          java.lang.String key) {
-        key.getClass();
-        copyOnWrite();
-        instance.getMutableUpdatesMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getUpdatesMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdates() {
-        return getUpdatesMap();
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdatesMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getUpdatesMap());
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-      @java.lang.Override
-
-      public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue defaultValue) {
-        key.getClass();
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-            instance.getUpdatesMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
-       */
-      @java.lang.Override
-
-      public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
-          java.lang.String key) {
-        key.getClass();
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
-            instance.getUpdatesMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
-      public Builder putUpdates(
-          java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue value) {
-        key.getClass();
-        value.getClass();
+      public Builder setUpdate(
+          com.elarian.hera.proto.Common.DataMapValue.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableUpdatesMap().put(key, value);
+        instance.setUpdate(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
-      public Builder putAllUpdates(
-          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> values) {
+      public Builder mergeUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
         copyOnWrite();
-        instance.getMutableUpdatesMap().putAll(values);
+        instance.mergeUpdate(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
+       */
+      public Builder clearUpdate() {  copyOnWrite();
+        instance.clearUpdate();
         return this;
       }
 
@@ -16023,12 +15902,11 @@ public final class AppSocket {
               "customerCase_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
               com.elarian.hera.proto.Common.IndexMapping.class,
-              "updates_",
-              UpdatesDefaultEntryHolder.defaultEntry,
+              "update_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0001\u0000\u0000\u0001\u023b\u0000\u0002" +
-                "<\u0000\u0003<\u0000\u00042";
+                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
+                "<\u0000\u0003<\u0000\u0004\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -16121,31 +15999,6 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
 
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @return A list containing the deletions.
-     */
-    java.util.List<java.lang.String>
-        getDeletionsList();
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @return The count of deletions.
-     */
-    int getDeletionsCount();
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index of the element to return.
-     * @return The deletions at the given index.
-     */
-    java.lang.String getDeletions(int index);
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index of the element to return.
-     * @return The deletions at the given index.
-     */
-    com.google.protobuf.ByteString
-        getDeletionsBytes(int index);
-
     public com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
   /**
@@ -16157,7 +16010,6 @@ public final class AppSocket {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.DeleteCustomerAppDataCommand)
       DeleteCustomerAppDataCommandOrBuilder {
     private DeleteCustomerAppDataCommand() {
-      deletions_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int customerCase_ = 0;
     private java.lang.Object customer_;
@@ -16358,99 +16210,6 @@ public final class AppSocket {
         customerCase_ = 0;
         customer_ = null;
       }
-    }
-
-    public static final int DELETIONS_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.ProtobufList<java.lang.String> deletions_;
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @return A list containing the deletions.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.String> getDeletionsList() {
-      return deletions_;
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @return The count of deletions.
-     */
-    @java.lang.Override
-    public int getDeletionsCount() {
-      return deletions_.size();
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index of the element to return.
-     * @return The deletions at the given index.
-     */
-    @java.lang.Override
-    public java.lang.String getDeletions(int index) {
-      return deletions_.get(index);
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the deletions at the given index.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDeletionsBytes(int index) {
-      return com.google.protobuf.ByteString.copyFromUtf8(
-          deletions_.get(index));
-    }
-    private void ensureDeletionsIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
-          deletions_;  if (!tmp.isModifiable()) {
-        deletions_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param index The index to set the value at.
-     * @param value The deletions to set.
-     */
-    private void setDeletions(
-        int index, java.lang.String value) {
-      value.getClass();
-  ensureDeletionsIsMutable();
-      deletions_.set(index, value);
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param value The deletions to add.
-     */
-    private void addDeletions(
-        java.lang.String value) {
-      value.getClass();
-  ensureDeletionsIsMutable();
-      deletions_.add(value);
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param values The deletions to add.
-     */
-    private void addAllDeletions(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureDeletionsIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, deletions_);
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     */
-    private void clearDeletions() {
-      deletions_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
-    }
-    /**
-     * <code>repeated string deletions = 4;</code>
-     * @param value The bytes of the deletions to add.
-     */
-    private void addDeletionsBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      ensureDeletionsIsMutable();
-      deletions_.add(value.toStringUtf8());
     }
 
     public static com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand parseFrom(
@@ -16705,98 +16464,6 @@ public final class AppSocket {
         return this;
       }
 
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @return A list containing the deletions.
-       */
-      @java.lang.Override
-      public java.util.List<java.lang.String>
-          getDeletionsList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getDeletionsList());
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @return The count of deletions.
-       */
-      @java.lang.Override
-      public int getDeletionsCount() {
-        return instance.getDeletionsCount();
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param index The index of the element to return.
-       * @return The deletions at the given index.
-       */
-      @java.lang.Override
-      public java.lang.String getDeletions(int index) {
-        return instance.getDeletions(index);
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the deletions at the given index.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getDeletionsBytes(int index) {
-        return instance.getDeletionsBytes(index);
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The deletions to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDeletions(
-          int index, java.lang.String value) {
-        copyOnWrite();
-        instance.setDeletions(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param value The deletions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addDeletions(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.addDeletions(value);
-        return this;
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param values The deletions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllDeletions(
-          java.lang.Iterable<java.lang.String> values) {
-        copyOnWrite();
-        instance.addAllDeletions(values);
-        return this;
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDeletions() {
-        copyOnWrite();
-        instance.clearDeletions();
-        return this;
-      }
-      /**
-       * <code>repeated string deletions = 4;</code>
-       * @param value The bytes of the deletions to add.
-       * @return This builder for chaining.
-       */
-      public Builder addDeletionsBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.addDeletionsBytes(value);
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.DeleteCustomerAppDataCommand)
     }
     @java.lang.Override
@@ -16817,11 +16484,10 @@ public final class AppSocket {
               "customerCase_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
               com.elarian.hera.proto.Common.IndexMapping.class,
-              "deletions_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u023b\u0000\u0002" +
-                "<\u0000\u0003<\u0000\u0004\u021a";
+                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
+                "<\u0000\u0003<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -17373,18 +17039,6 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
 
-    /**
-     * <code>string key = 4;</code>
-     * @return The key.
-     */
-    java.lang.String getKey();
-    /**
-     * <code>string key = 4;</code>
-     * @return The bytes for key.
-     */
-    com.google.protobuf.ByteString
-        getKeyBytes();
-
     public com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
   /**
@@ -17396,7 +17050,6 @@ public final class AppSocket {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.LeaseCustomerAppDataCommand)
       LeaseCustomerAppDataCommandOrBuilder {
     private LeaseCustomerAppDataCommand() {
-      key_ = "";
     }
     private int customerCase_ = 0;
     private java.lang.Object customer_;
@@ -17597,53 +17250,6 @@ public final class AppSocket {
         customerCase_ = 0;
         customer_ = null;
       }
-    }
-
-    public static final int KEY_FIELD_NUMBER = 4;
-    private java.lang.String key_;
-    /**
-     * <code>string key = 4;</code>
-     * @return The key.
-     */
-    @java.lang.Override
-    public java.lang.String getKey() {
-      return key_;
-    }
-    /**
-     * <code>string key = 4;</code>
-     * @return The bytes for key.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getKeyBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(key_);
-    }
-    /**
-     * <code>string key = 4;</code>
-     * @param value The key to set.
-     */
-    private void setKey(
-        java.lang.String value) {
-      value.getClass();
-  
-      key_ = value;
-    }
-    /**
-     * <code>string key = 4;</code>
-     */
-    private void clearKey() {
-      
-      key_ = getDefaultInstance().getKey();
-    }
-    /**
-     * <code>string key = 4;</code>
-     * @param value The bytes for key to set.
-     */
-    private void setKeyBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      key_ = value.toStringUtf8();
-      
     }
 
     public static com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataCommand parseFrom(
@@ -17898,55 +17504,6 @@ public final class AppSocket {
         return this;
       }
 
-      /**
-       * <code>string key = 4;</code>
-       * @return The key.
-       */
-      @java.lang.Override
-      public java.lang.String getKey() {
-        return instance.getKey();
-      }
-      /**
-       * <code>string key = 4;</code>
-       * @return The bytes for key.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        return instance.getKeyBytes();
-      }
-      /**
-       * <code>string key = 4;</code>
-       * @param value The key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKey(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setKey(value);
-        return this;
-      }
-      /**
-       * <code>string key = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearKey() {
-        copyOnWrite();
-        instance.clearKey();
-        return this;
-      }
-      /**
-       * <code>string key = 4;</code>
-       * @param value The bytes for key to set.
-       * @return This builder for chaining.
-       */
-      public Builder setKeyBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setKeyBytes(value);
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.LeaseCustomerAppDataCommand)
     }
     @java.lang.Override
@@ -17967,11 +17524,10 @@ public final class AppSocket {
               "customerCase_",
               com.elarian.hera.proto.Common.CustomerNumber.class,
               com.elarian.hera.proto.Common.IndexMapping.class,
-              "key_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
-                "<\u0000\u0003<\u0000\u0004\u0208";
+                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
+                "<\u0000\u0003<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
