@@ -54537,7 +54537,7 @@ public final class AppSocket {
       if (expiration_ != null) {
         output.writeMessage(3, getExpiration());
       }
-      if (status_ != com.elarian.hera.proto.Common.MessagingSessionStatus.MESSAGING_SESSION_STATUSN_UNSPECIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessagingSessionStatus.MESSAGING_SESSION_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(4, status_);
       }
       unknownFields.writeTo(output);
@@ -54561,7 +54561,7 @@ public final class AppSocket {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getExpiration());
       }
-      if (status_ != com.elarian.hera.proto.Common.MessagingSessionStatus.MESSAGING_SESSION_STATUSN_UNSPECIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessagingSessionStatus.MESSAGING_SESSION_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, status_);
       }

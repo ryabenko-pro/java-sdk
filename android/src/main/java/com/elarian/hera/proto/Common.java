@@ -749,6 +749,10 @@ public final class Common {
      */
     MESSAGING_CONSENT_STATUS_UNSPECIFIED(0),
     /**
+     * <code>MESSAGING_CONSENT_STATUS_QUEUED = 100;</code>
+     */
+    MESSAGING_CONSENT_STATUS_QUEUED(100),
+    /**
      * <code>MESSAGING_CONSENT_STATUS_OPT_IN_REQUEST_SENT = 101;</code>
      */
     MESSAGING_CONSENT_STATUS_OPT_IN_REQUEST_SENT(101),
@@ -779,6 +783,10 @@ public final class Common {
      * <code>MESSAGING_CONSENT_STATUS_UNSPECIFIED = 0;</code>
      */
     public static final int MESSAGING_CONSENT_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>MESSAGING_CONSENT_STATUS_QUEUED = 100;</code>
+     */
+    public static final int MESSAGING_CONSENT_STATUS_QUEUED_VALUE = 100;
     /**
      * <code>MESSAGING_CONSENT_STATUS_OPT_IN_REQUEST_SENT = 101;</code>
      */
@@ -827,6 +835,7 @@ public final class Common {
     public static MessagingConsentStatus forNumber(int value) {
       switch (value) {
         case 0: return MESSAGING_CONSENT_STATUS_UNSPECIFIED;
+        case 100: return MESSAGING_CONSENT_STATUS_QUEUED;
         case 101: return MESSAGING_CONSENT_STATUS_OPT_IN_REQUEST_SENT;
         case 300: return MESSAGING_CONSENT_STATUS_OPT_IN_COMPLETED;
         case 301: return MESSAGING_CONSENT_STATUS_OPT_OUT_COMPLETED;
@@ -879,32 +888,32 @@ public final class Common {
   public enum MessagingSessionStatus
       implements com.google.protobuf.Internal.EnumLite {
     /**
-     * <code>MESSAGING_SESSION_STATUSN_UNSPECIFIED = 0;</code>
+     * <code>MESSAGING_SESSION_STATUS_UNSPECIFIED = 0;</code>
      */
-    MESSAGING_SESSION_STATUSN_UNSPECIFIED(0),
+    MESSAGING_SESSION_STATUS_UNSPECIFIED(0),
     /**
-     * <code>MESSAGING_SESSION_STATUSN_ACTIVE = 100;</code>
+     * <code>MESSAGING_SESSION_STATUS_ACTIVE = 100;</code>
      */
-    MESSAGING_SESSION_STATUSN_ACTIVE(100),
+    MESSAGING_SESSION_STATUS_ACTIVE(100),
     /**
-     * <code>MESSAGING_SESSION_STATUSN_EXPIRED = 200;</code>
+     * <code>MESSAGING_SESSION_STATUS_EXPIRED = 200;</code>
      */
-    MESSAGING_SESSION_STATUSN_EXPIRED(200),
+    MESSAGING_SESSION_STATUS_EXPIRED(200),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>MESSAGING_SESSION_STATUSN_UNSPECIFIED = 0;</code>
+     * <code>MESSAGING_SESSION_STATUS_UNSPECIFIED = 0;</code>
      */
-    public static final int MESSAGING_SESSION_STATUSN_UNSPECIFIED_VALUE = 0;
+    public static final int MESSAGING_SESSION_STATUS_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>MESSAGING_SESSION_STATUSN_ACTIVE = 100;</code>
+     * <code>MESSAGING_SESSION_STATUS_ACTIVE = 100;</code>
      */
-    public static final int MESSAGING_SESSION_STATUSN_ACTIVE_VALUE = 100;
+    public static final int MESSAGING_SESSION_STATUS_ACTIVE_VALUE = 100;
     /**
-     * <code>MESSAGING_SESSION_STATUSN_EXPIRED = 200;</code>
+     * <code>MESSAGING_SESSION_STATUS_EXPIRED = 200;</code>
      */
-    public static final int MESSAGING_SESSION_STATUSN_EXPIRED_VALUE = 200;
+    public static final int MESSAGING_SESSION_STATUS_EXPIRED_VALUE = 200;
 
 
     @java.lang.Override
@@ -928,9 +937,9 @@ public final class Common {
 
     public static MessagingSessionStatus forNumber(int value) {
       switch (value) {
-        case 0: return MESSAGING_SESSION_STATUSN_UNSPECIFIED;
-        case 100: return MESSAGING_SESSION_STATUSN_ACTIVE;
-        case 200: return MESSAGING_SESSION_STATUSN_EXPIRED;
+        case 0: return MESSAGING_SESSION_STATUS_UNSPECIFIED;
+        case 100: return MESSAGING_SESSION_STATUS_ACTIVE;
+        case 200: return MESSAGING_SESSION_STATUS_EXPIRED;
         default: return null;
       }
     }
@@ -1177,6 +1186,10 @@ public final class Common {
      */
     MESSAGE_DELIVERY_STATUS_UNSEPCIFIED(0),
     /**
+     * <code>MESSAGE_DELIVERY_STATUS_QUEUED = 100;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_QUEUED(100),
+    /**
      * <code>MESSAGE_DELIVERY_STATUS_SENT = 101;</code>
      */
     MESSAGE_DELIVERY_STATUS_SENT(101),
@@ -1259,6 +1272,10 @@ public final class Common {
      * <code>MESSAGE_DELIVERY_STATUS_UNSEPCIFIED = 0;</code>
      */
     public static final int MESSAGE_DELIVERY_STATUS_UNSEPCIFIED_VALUE = 0;
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_QUEUED = 100;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_QUEUED_VALUE = 100;
     /**
      * <code>MESSAGE_DELIVERY_STATUS_SENT = 101;</code>
      */
@@ -1359,6 +1376,7 @@ public final class Common {
     public static MessageDeliveryStatus forNumber(int value) {
       switch (value) {
         case 0: return MESSAGE_DELIVERY_STATUS_UNSEPCIFIED;
+        case 100: return MESSAGE_DELIVERY_STATUS_QUEUED;
         case 101: return MESSAGE_DELIVERY_STATUS_SENT;
         case 300: return MESSAGE_DELIVERY_STATUS_DELIVERED;
         case 301: return MESSAGE_DELIVERY_STATUS_READ;
@@ -1894,21 +1912,21 @@ public final class Common {
      */
     PAYMENT_STATUS_UNSPECIFIED(0),
     /**
-     * <code>PAYMENT_STATUS_QUEUED = 101;</code>
+     * <code>PAYMENT_STATUS_QUEUED = 100;</code>
      */
-    PAYMENT_STATUS_QUEUED(101),
+    PAYMENT_STATUS_QUEUED(100),
     /**
-     * <code>PAYMENT_STATUS_PENDING_CONFIRMATION = 102;</code>
+     * <code>PAYMENT_STATUS_PENDING_CONFIRMATION = 101;</code>
      */
-    PAYMENT_STATUS_PENDING_CONFIRMATION(102),
+    PAYMENT_STATUS_PENDING_CONFIRMATION(101),
     /**
-     * <code>PAYMENT_STATUS_PENDING_VALIDATION = 103;</code>
+     * <code>PAYMENT_STATUS_PENDING_VALIDATION = 102;</code>
      */
-    PAYMENT_STATUS_PENDING_VALIDATION(103),
+    PAYMENT_STATUS_PENDING_VALIDATION(102),
     /**
-     * <code>PAYMENT_STATUS_VALIDATED = 104;</code>
+     * <code>PAYMENT_STATUS_VALIDATED = 103;</code>
      */
-    PAYMENT_STATUS_VALIDATED(104),
+    PAYMENT_STATUS_VALIDATED(103),
     /**
      * <code>PAYMENT_STATUS_INVALID_REQUEST = 200;</code>
      */
@@ -1981,21 +1999,21 @@ public final class Common {
      */
     public static final int PAYMENT_STATUS_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>PAYMENT_STATUS_QUEUED = 101;</code>
+     * <code>PAYMENT_STATUS_QUEUED = 100;</code>
      */
-    public static final int PAYMENT_STATUS_QUEUED_VALUE = 101;
+    public static final int PAYMENT_STATUS_QUEUED_VALUE = 100;
     /**
-     * <code>PAYMENT_STATUS_PENDING_CONFIRMATION = 102;</code>
+     * <code>PAYMENT_STATUS_PENDING_CONFIRMATION = 101;</code>
      */
-    public static final int PAYMENT_STATUS_PENDING_CONFIRMATION_VALUE = 102;
+    public static final int PAYMENT_STATUS_PENDING_CONFIRMATION_VALUE = 101;
     /**
-     * <code>PAYMENT_STATUS_PENDING_VALIDATION = 103;</code>
+     * <code>PAYMENT_STATUS_PENDING_VALIDATION = 102;</code>
      */
-    public static final int PAYMENT_STATUS_PENDING_VALIDATION_VALUE = 103;
+    public static final int PAYMENT_STATUS_PENDING_VALIDATION_VALUE = 102;
     /**
-     * <code>PAYMENT_STATUS_VALIDATED = 104;</code>
+     * <code>PAYMENT_STATUS_VALIDATED = 103;</code>
      */
-    public static final int PAYMENT_STATUS_VALIDATED_VALUE = 104;
+    public static final int PAYMENT_STATUS_VALIDATED_VALUE = 103;
     /**
      * <code>PAYMENT_STATUS_INVALID_REQUEST = 200;</code>
      */
@@ -2084,10 +2102,10 @@ public final class Common {
     public static PaymentStatus forNumber(int value) {
       switch (value) {
         case 0: return PAYMENT_STATUS_UNSPECIFIED;
-        case 101: return PAYMENT_STATUS_QUEUED;
-        case 102: return PAYMENT_STATUS_PENDING_CONFIRMATION;
-        case 103: return PAYMENT_STATUS_PENDING_VALIDATION;
-        case 104: return PAYMENT_STATUS_VALIDATED;
+        case 100: return PAYMENT_STATUS_QUEUED;
+        case 101: return PAYMENT_STATUS_PENDING_CONFIRMATION;
+        case 102: return PAYMENT_STATUS_PENDING_VALIDATION;
+        case 103: return PAYMENT_STATUS_VALIDATED;
         case 200: return PAYMENT_STATUS_INVALID_REQUEST;
         case 201: return PAYMENT_STATUS_NOT_SUPPORTED;
         case 202: return PAYMENT_STATUS_INSUFFICIENT_FUNDS;

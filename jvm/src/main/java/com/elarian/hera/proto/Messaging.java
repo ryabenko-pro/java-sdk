@@ -16773,7 +16773,7 @@ public final class Messaging {
       if (channelNumber_ != null) {
         output.writeMessage(6, getChannelNumber());
       }
-      if (status_ != com.elarian.hera.proto.Common.MessagingSessionStatus.MESSAGING_SESSION_STATUSN_UNSPECIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessagingSessionStatus.MESSAGING_SESSION_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(7, status_);
       }
       if (expiration_ != null) {
@@ -16810,7 +16810,7 @@ public final class Messaging {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getChannelNumber());
       }
-      if (status_ != com.elarian.hera.proto.Common.MessagingSessionStatus.MESSAGING_SESSION_STATUSN_UNSPECIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessagingSessionStatus.MESSAGING_SESSION_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, status_);
       }
