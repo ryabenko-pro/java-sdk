@@ -503,6 +503,10 @@ public final class Common {
      * <code>CUSTOMER_NUMBER_PROVIDER_TELEGRAM = 3;</code>
      */
     CUSTOMER_NUMBER_PROVIDER_TELEGRAM(3),
+    /**
+     * <code>CUSTOMER_NUMBER_PROVIDER_WEB = 4;</code>
+     */
+    CUSTOMER_NUMBER_PROVIDER_WEB(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -522,6 +526,10 @@ public final class Common {
      * <code>CUSTOMER_NUMBER_PROVIDER_TELEGRAM = 3;</code>
      */
     public static final int CUSTOMER_NUMBER_PROVIDER_TELEGRAM_VALUE = 3;
+    /**
+     * <code>CUSTOMER_NUMBER_PROVIDER_WEB = 4;</code>
+     */
+    public static final int CUSTOMER_NUMBER_PROVIDER_WEB_VALUE = 4;
 
 
     public final int getNumber() {
@@ -552,6 +560,7 @@ public final class Common {
         case 1: return CUSTOMER_NUMBER_PROVIDER_FACEBOOK;
         case 2: return CUSTOMER_NUMBER_PROVIDER_TELCO;
         case 3: return CUSTOMER_NUMBER_PROVIDER_TELEGRAM;
+        case 4: return CUSTOMER_NUMBER_PROVIDER_WEB;
         default: return null;
       }
     }
@@ -7833,6 +7842,574 @@ public final class Common {
 
   }
 
+  public interface WebChannelNumberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebChannelNumber)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string number = 1;</code>
+     * @return The number.
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>string number = 1;</code>
+     * @return The bytes for number.
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.WebChannelNumber}
+   */
+  public static final class WebChannelNumber extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebChannelNumber)
+      WebChannelNumberOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WebChannelNumber.newBuilder() to construct.
+    private WebChannelNumber(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WebChannelNumber() {
+      number_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WebChannelNumber();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WebChannelNumber(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              number_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebChannelNumber_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebChannelNumber_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.elarian.hera.proto.Common.WebChannelNumber.class, com.elarian.hera.proto.Common.WebChannelNumber.Builder.class);
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object number_;
+    /**
+     * <code>string number = 1;</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        number_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string number = 1;</code>
+     * @return The bytes for number.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.elarian.hera.proto.Common.WebChannelNumber)) {
+        return super.equals(obj);
+      }
+      com.elarian.hera.proto.Common.WebChannelNumber other = (com.elarian.hera.proto.Common.WebChannelNumber) obj;
+
+      if (!getNumber()
+          .equals(other.getNumber())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getNumber().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.WebChannelNumber prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.WebChannelNumber}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebChannelNumber)
+        com.elarian.hera.proto.Common.WebChannelNumberOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebChannelNumber_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebChannelNumber_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.elarian.hera.proto.Common.WebChannelNumber.class, com.elarian.hera.proto.Common.WebChannelNumber.Builder.class);
+      }
+
+      // Construct using com.elarian.hera.proto.Common.WebChannelNumber.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        number_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebChannelNumber_descriptor;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebChannelNumber getDefaultInstanceForType() {
+        return com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebChannelNumber build() {
+        com.elarian.hera.proto.Common.WebChannelNumber result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebChannelNumber buildPartial() {
+        com.elarian.hera.proto.Common.WebChannelNumber result = new com.elarian.hera.proto.Common.WebChannelNumber(this);
+        result.number_ = number_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.elarian.hera.proto.Common.WebChannelNumber) {
+          return mergeFrom((com.elarian.hera.proto.Common.WebChannelNumber)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.elarian.hera.proto.Common.WebChannelNumber other) {
+        if (other == com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance()) return this;
+        if (!other.getNumber().isEmpty()) {
+          number_ = other.number_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.elarian.hera.proto.Common.WebChannelNumber parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.elarian.hera.proto.Common.WebChannelNumber) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object number_ = "";
+      /**
+       * <code>string number = 1;</code>
+       * @return The number.
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          number_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @return The bytes for number.
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebChannelNumber)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebChannelNumber)
+    private static final com.elarian.hera.proto.Common.WebChannelNumber DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.Common.WebChannelNumber();
+    }
+
+    public static com.elarian.hera.proto.Common.WebChannelNumber getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WebChannelNumber>
+        PARSER = new com.google.protobuf.AbstractParser<WebChannelNumber>() {
+      @java.lang.Override
+      public WebChannelNumber parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WebChannelNumber(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WebChannelNumber> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WebChannelNumber> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.WebChannelNumber getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface TextMessageTemplateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.TextMessageTemplate)
       com.google.protobuf.MessageOrBuilder {
@@ -13519,6 +14096,1097 @@ public final class Common {
 
     @java.lang.Override
     public com.elarian.hera.proto.Common.UssdHop getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WebActionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebAction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    int getPropertiesCount();
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    boolean containsProperties(
+        java.lang.String key);
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getProperties();
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getPropertiesMap();
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    java.lang.String getPropertiesOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.WebAction}
+   */
+  public static final class WebAction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebAction)
+      WebActionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WebAction.newBuilder() to construct.
+    private WebAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WebAction() {
+      key_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WebAction();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WebAction(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                properties_ = com.google.protobuf.MapField.newMapField(
+                    PropertiesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              properties__ = input.readMessage(
+                  PropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              properties_.getMutableMap().put(
+                  properties__.getKey(), properties__.getValue());
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebAction_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetProperties();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebAction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.elarian.hera.proto.Common.WebAction.class, com.elarian.hera.proto.Common.WebAction.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROPERTIES_FIELD_NUMBER = 2;
+    private static final class PropertiesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebAction_PropertiesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> properties_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetProperties() {
+      if (properties_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            PropertiesDefaultEntryHolder.defaultEntry);
+      }
+      return properties_;
+    }
+
+    public int getPropertiesCount() {
+      return internalGetProperties().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsProperties(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetProperties().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+      return getPropertiesMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+      return internalGetProperties().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPropertiesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetProperties(),
+          PropertiesDefaultEntryHolder.defaultEntry,
+          2);
+      if (createdAt_ != null) {
+        output.writeMessage(3, getCreatedAt());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetProperties().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        properties__ = PropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, properties__);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCreatedAt());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.elarian.hera.proto.Common.WebAction)) {
+        return super.equals(obj);
+      }
+      com.elarian.hera.proto.Common.WebAction other = (com.elarian.hera.proto.Common.WebAction) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!internalGetProperties().equals(
+          other.internalGetProperties())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      if (!internalGetProperties().getMap().isEmpty()) {
+        hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetProperties().hashCode();
+      }
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.WebAction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.WebAction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebAction)
+        com.elarian.hera.proto.Common.WebActionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebAction_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableProperties();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebAction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.elarian.hera.proto.Common.WebAction.class, com.elarian.hera.proto.Common.WebAction.Builder.class);
+      }
+
+      // Construct using com.elarian.hera.proto.Common.WebAction.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+
+        internalGetMutableProperties().clear();
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_WebAction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebAction getDefaultInstanceForType() {
+        return com.elarian.hera.proto.Common.WebAction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebAction build() {
+        com.elarian.hera.proto.Common.WebAction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebAction buildPartial() {
+        com.elarian.hera.proto.Common.WebAction result = new com.elarian.hera.proto.Common.WebAction(this);
+        int from_bitField0_ = bitField0_;
+        result.key_ = key_;
+        result.properties_ = internalGetProperties();
+        result.properties_.makeImmutable();
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.elarian.hera.proto.Common.WebAction) {
+          return mergeFrom((com.elarian.hera.proto.Common.WebAction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.elarian.hera.proto.Common.WebAction other) {
+        if (other == com.elarian.hera.proto.Common.WebAction.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        internalGetMutableProperties().mergeFrom(
+            other.internalGetProperties());
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.elarian.hera.proto.Common.WebAction parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.elarian.hera.proto.Common.WebAction) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1;</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> properties_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetProperties() {
+        if (properties_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              PropertiesDefaultEntryHolder.defaultEntry);
+        }
+        return properties_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableProperties() {
+        onChanged();;
+        if (properties_ == null) {
+          properties_ = com.google.protobuf.MapField.newMapField(
+              PropertiesDefaultEntryHolder.defaultEntry);
+        }
+        if (!properties_.isMutable()) {
+          properties_ = properties_.copy();
+        }
+        return properties_;
+      }
+
+      public int getPropertiesCount() {
+        return internalGetProperties().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsProperties(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetProperties().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+        return getPropertiesMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+        return internalGetProperties().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetProperties().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPropertiesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetProperties().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearProperties() {
+        internalGetMutableProperties().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public Builder removeProperties(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableProperties().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableProperties() {
+        return internalGetMutableProperties().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      public Builder putProperties(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableProperties().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public Builder putAllProperties(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableProperties().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebAction)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebAction)
+    private static final com.elarian.hera.proto.Common.WebAction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.Common.WebAction();
+    }
+
+    public static com.elarian.hera.proto.Common.WebAction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WebAction>
+        PARSER = new com.google.protobuf.AbstractParser<WebAction>() {
+      @java.lang.Override
+      public WebAction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WebAction(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WebAction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WebAction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.WebAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -41153,6 +42821,11 @@ public final class Common {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_VoiceChannelNumber_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_WebChannelNumber_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_WebChannelNumber_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_TextMessageTemplate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -41187,6 +42860,16 @@ public final class Common {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_UssdHop_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_WebAction_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_WebAction_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_WebAction_PropertiesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_WebAction_PropertiesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_DataMapValue_descriptor;
   private static final 
@@ -41353,274 +43036,281 @@ public final class Common {
       "o.PaymentChannel\022\016\n\006number\030\002 \001(\t\"[\n\022Voic" +
       "eChannelNumber\0225\n\007channel\030\001 \001(\0162$.com.el" +
       "arian.hera.proto.VoiceChannel\022\016\n\006number\030" +
-      "\002 \001(\t\"3\n\023TextMessageTemplate\022\014\n\004name\030\001 \001" +
-      "(\t\022\016\n\006params\030\002 \003(\t\"|\n\017TextMessageBody\022*\n" +
-      "\004text\030\001 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022=\n\010template\030\002 \001(\0132+.com.elarian.hera.p" +
-      "roto.TextMessageTemplate\"Q\n\020MediaMessage" +
-      "Body\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001(\0162!.com.e" +
-      "larian.hera.proto.MediaType\":\n\023LocationM" +
-      "essageBody\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitud" +
-      "e\030\002 \001(\001\"\323\001\n\023CustomerMessageBody\0227\n\004text\030" +
-      "\001 \001(\0132\'.com.elarian.hera.proto.TextMessa" +
-      "geBodyH\000\0229\n\005media\030\002 \001(\0132(.com.elarian.he" +
-      "ra.proto.MediaMessageBodyH\000\022?\n\010location\030" +
-      "\003 \001(\0132+.com.elarian.hera.proto.LocationM" +
-      "essageBodyH\000B\007\n\005entry\"-\n\010UssdMenu\022\014\n\004tex" +
-      "t\030\001 \001(\t\022\023\n\013is_terminal\030\002 \001(\010\"\226\001\n\007UssdHop" +
-      "\022+\n\005input\030\001 \001(\0132\034.google.protobuf.String" +
-      "Value\022.\n\004menu\030\002 \001(\0132 .com.elarian.hera.p" +
-      "roto.UssdMenu\022.\n\ncreated_at\030\003 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\"B\n\014DataMapValue\022\024\n" +
-      "\nstring_val\030\002 \001(\tH\000\022\023\n\tbytes_val\030\003 \001(\014H\000" +
-      "B\007\n\005value\"\215\001\n\022VoiceCallDialInput\022\032\n\022dest" +
-      "ination_number\030\001 \001(\t\022.\n\nstarted_at\030\002 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022+\n\010duration" +
-      "\030\003 \001(\0132\031.google.protobuf.Duration\"\241\002\n\023Vo" +
-      "iceCallQueueInput\022/\n\013enqueued_at\030\001 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022/\n\013dequeued_a" +
-      "t\030\002 \001(\0132\032.google.protobuf.Timestamp\0228\n\022d" +
-      "equeued_to_number\030\003 \001(\0132\034.google.protobu" +
-      "f.StringValue\022;\n\025dequeued_to_sessionId\030\004" +
-      " \001(\0132\034.google.protobuf.StringValue\0221\n\016qu" +
-      "eue_duration\030\005 \001(\0132\031.google.protobuf.Dur" +
-      "ation\"\250\003\n\021VoiceCallHopInput\0227\n\006status\030\001 " +
-      "\001(\0162\'.com.elarian.hera.proto.VoiceCallSt" +
-      "atus\022.\n\nstarted_at\030\002 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022B\n\014hangup_cause\030\003 \001(\0162,.com" +
-      ".elarian.hera.proto.VoiceCallHangupCause" +
-      "\0221\n\013dtmf_digits\030\004 \001(\0132\034.google.protobuf." +
-      "StringValue\0223\n\rrecording_url\030\005 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022=\n\tdial_data\030\006 " +
-      "\001(\0132*.com.elarian.hera.proto.VoiceCallDi" +
-      "alInput\022?\n\nqueue_data\030\007 \001(\0132+.com.elaria" +
-      "n.hera.proto.VoiceCallQueueInput\"\262\001\n\014Voi" +
-      "ceCallHop\0228\n\005input\030\001 \001(\0132).com.elarian.h" +
-      "era.proto.VoiceCallHopInput\0228\n\007actions\030\002" +
-      " \003(\0132\'.com.elarian.hera.proto.VoiceCallA" +
-      "ction\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\"\251\001\n\031PendingPaymentTransact" +
-      "ion\022.\n\ncreated_at\030\001 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022+\n\005value\030\002 \001(\0132\034.com.elarian" +
-      ".hera.proto.Cash\022/\n\tconverted\030\003 \001(\0132\034.co" +
-      "m.elarian.hera.proto.Cash\"\304\002\n\016PaymentBal" +
-      "ance\022\025\n\rcurrency_code\030\001 \001(\t\022/\n\tavailable" +
-      "\030\002 \001(\0132\034.com.elarian.hera.proto.Cash\022,\n\006" +
-      "actual\030\003 \001(\0132\034.com.elarian.hera.proto.Ca" +
-      "sh\022D\n\007pending\030\004 \003(\01323.com.elarian.hera.p" +
-      "roto.PaymentBalance.PendingEntry\022\023\n\013sequ" +
-      "ence_nr\030\005 \001(\004\032a\n\014PendingEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022@\n\005value\030\002 \001(\01321.com.elarian.hera.pro" +
-      "to.PendingPaymentTransaction:\0028\001\",\n\030Paym" +
-      "entPurseCounterParty\022\020\n\010purse_id\030\001 \001(\t\"C" +
-      "\n\031PaymentWalletCounterParty\022\023\n\013customer_" +
-      "id\030\001 \001(\t\022\021\n\twallet_id\030\002 \001(\t\"\244\001\n\033PaymentC" +
-      "ustomerCounterParty\022?\n\017customer_number\030\001" +
-      " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
-      "mber\022D\n\016channel_number\030\002 \001(\0132,.com.elari" +
-      "an.hera.proto.PaymentChannelNumber\"\247\001\n\032P" +
-      "aymentChannelCounterParty\022D\n\016channel_num" +
-      "ber\030\001 \001(\0132,.com.elarian.hera.proto.Payme" +
-      "ntChannelNumber\022\024\n\014channel_code\030\002 \001(\005\022-\n" +
-      "\007account\030\003 \001(\0132\034.google.protobuf.StringV" +
-      "alue\"\266\002\n\023PaymentCounterParty\022G\n\010customer" +
-      "\030\001 \001(\01323.com.elarian.hera.proto.PaymentC" +
-      "ustomerCounterPartyH\000\022A\n\005purse\030\002 \001(\01320.c" +
-      "om.elarian.hera.proto.PaymentPurseCounte" +
-      "rPartyH\000\022C\n\006wallet\030\003 \001(\01321.com.elarian.h" +
-      "era.proto.PaymentWalletCounterPartyH\000\022E\n" +
-      "\007channel\030\004 \001(\01322.com.elarian.hera.proto." +
-      "PaymentChannelCounterPartyH\000B\007\n\005party\"H\n" +
-      "\014IndexMapping\022\013\n\003key\030\001 \001(\t\022+\n\005value\030\002 \001(" +
-      "\0132\034.google.protobuf.StringValue\"v\n\rCusto" +
-      "merIndex\0225\n\007mapping\030\001 \001(\0132$.com.elarian." +
-      "hera.proto.IndexMapping\022.\n\nexpiration\030\002 " +
-      "\001(\0132\032.google.protobuf.Timestamp\"\253\001\n\020Cust" +
-      "omerReminder\022\013\n\003key\030\001 \001(\t\022.\n\nexpiration\030" +
-      "\002 \001(\0132\032.google.protobuf.Timestamp\022+\n\010int" +
-      "erval\030\003 \001(\0132\031.google.protobuf.Duration\022-" +
-      "\n\007payload\030\004 \001(\0132\034.google.protobuf.String" +
-      "Value\"j\n\rSayCallAction\022\014\n\004text\030\001 \001(\t\0228\n\005" +
-      "voice\030\002 \001(\0162).com.elarian.hera.proto.Tex" +
-      "tToSpeechVoice\022\021\n\tplay_beep\030\003 \001(\010\"\035\n\016Pla" +
-      "yCallAction\022\013\n\003url\030\001 \001(\t\"\237\002\n\023GetDigitsCa" +
-      "llAction\0224\n\003say\030\001 \001(\0132%.com.elarian.hera" +
-      ".proto.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.c" +
-      "om.elarian.hera.proto.PlayCallActionH\000\022*" +
-      "\n\007timeout\030\003 \001(\0132\031.google.protobuf.Durati" +
-      "on\0223\n\rfinish_on_key\030\004 \001(\0132\034.google.proto" +
-      "buf.StringValue\022/\n\nnum_digits\030\005 \001(\0132\033.go" +
-      "ogle.protobuf.Int32ValueB\010\n\006prompt\"\311\002\n\026G" +
-      "etRecordingCallAction\0224\n\003say\030\001 \001(\0132%.com" +
-      ".elarian.hera.proto.SayCallActionH\000\0226\n\004p" +
-      "lay\030\002 \001(\0132&.com.elarian.hera.proto.PlayC" +
-      "allActionH\000\022*\n\007timeout\030\003 \001(\0132\031.google.pr" +
-      "otobuf.Duration\022-\n\nmax_length\030\004 \001(\0132\031.go" +
-      "ogle.protobuf.Duration\0223\n\rfinish_on_key\030" +
-      "\005 \001(\0132\034.google.protobuf.StringValue\022\021\n\tp" +
-      "lay_beep\030\006 \001(\010\022\024\n\014trim_silence\030\007 \001(\010B\010\n\006" +
-      "prompt\"\031\n\027RecordSessionCallAction\"\217\002\n\016Di" +
-      "alCallAction\022@\n\020customer_numbers\030\001 \003(\0132&" +
-      ".com.elarian.hera.proto.CustomerNumber\022\016" +
-      "\n\006record\030\002 \001(\010\022\022\n\nsequential\030\003 \001(\010\0223\n\rri" +
-      "ngback_tone\030\004 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022/\n\tcaller_id\030\005 \001(\0132\034.google.prot" +
-      "obuf.StringValue\0221\n\014max_duration\030\006 \001(\0132\033" +
-      ".google.protobuf.Int32Value\"w\n\021EnqueueCa" +
-      "llAction\0220\n\nhold_music\030\001 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\0220\n\nqueue_name\030\002 \001(\0132\034" +
-      ".google.protobuf.StringValue\"\231\001\n\021Dequeue" +
-      "CallAction\022B\n\016channel_number\030\001 \001(\0132*.com" +
-      ".elarian.hera.proto.VoiceChannelNumber\022\016" +
-      "\n\006record\030\002 \001(\010\0220\n\nqueue_name\030\003 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\"\022\n\020RejectCallAc" +
-      "tion\"!\n\022RedirectCallAction\022\013\n\003url\030\001 \001(\t\"" +
-      "\217\005\n\017VoiceCallAction\0224\n\003say\030\001 \001(\0132%.com.e" +
-      "larian.hera.proto.SayCallActionH\000\0226\n\004pla" +
-      "y\030\002 \001(\0132&.com.elarian.hera.proto.PlayCal" +
-      "lActionH\000\022A\n\nget_digits\030\003 \001(\0132+.com.elar" +
-      "ian.hera.proto.GetDigitsCallActionH\000\0226\n\004" +
-      "dial\030\004 \001(\0132&.com.elarian.hera.proto.Dial" +
-      "CallActionH\000\022I\n\016record_session\030\005 \001(\0132/.c" +
-      "om.elarian.hera.proto.RecordSessionCallA" +
-      "ctionH\000\022G\n\rget_recording\030\006 \001(\0132..com.ela" +
-      "rian.hera.proto.GetRecordingCallActionH\000" +
-      "\022<\n\007enqueue\030\007 \001(\0132).com.elarian.hera.pro" +
-      "to.EnqueueCallActionH\000\022<\n\007dequeue\030\010 \001(\0132" +
-      ").com.elarian.hera.proto.DequeueCallActi" +
-      "onH\000\022:\n\006reject\030\t \001(\0132(.com.elarian.hera." +
-      "proto.RejectCallActionH\000\022>\n\010redirect\030\n \001" +
-      "(\0132*.com.elarian.hera.proto.RedirectCall" +
-      "ActionH\000B\007\n\005entry*\326\001\n\020MessagingChannel\022!" +
-      "\n\035MESSAGING_CHANNEL_UNSPECIFIED\020\000\022 \n\034MES" +
-      "SAGING_CHANNEL_GOOGLE_RCS\020\001\022\"\n\036MESSAGING" +
-      "_CHANNEL_FB_MESSENGER\020\002\022\031\n\025MESSAGING_CHA" +
-      "NNEL_SMS\020\003\022\036\n\032MESSAGING_CHANNEL_TELEGRAM" +
-      "\020\004\022\036\n\032MESSAGING_CHANNEL_WHATSAPP\020\005*L\n\016Pa" +
-      "ymentChannel\022\037\n\033PAYMENT_CHANNEL_UNSPECIF" +
-      "IED\020\000\022\031\n\025PAYMENT_CHANNEL_TELCO\020\001*C\n\013Ussd" +
-      "Channel\022\034\n\030USSD_CHANNEL_UNSPECIFIED\020\000\022\026\n" +
-      "\022USSD_CHANNEL_TELCO\020\001*F\n\014VoiceChannel\022\035\n" +
-      "\031VOICE_CHANNEL_UNSPECIFIED\020\000\022\027\n\023VOICE_CH" +
-      "ANNEL_TELCO\020\001*\264\001\n\026CustomerNumberProvider" +
-      "\022(\n$CUSTOMER_NUMBER_PROVIDER_UNSPECIFIED" +
-      "\020\000\022%\n!CUSTOMER_NUMBER_PROVIDER_FACEBOOK\020" +
-      "\001\022\"\n\036CUSTOMER_NUMBER_PROVIDER_TELCO\020\002\022%\n" +
-      "!CUSTOMER_NUMBER_PROVIDER_TELEGRAM\020\003*\260\001\n" +
-      "\tMediaType\022\032\n\026MEDIA_TYPE_UNSPECIFIED\020\000\022\024" +
-      "\n\020MEDIA_TYPE_IMAGE\020\001\022\024\n\020MEDIA_TYPE_AUDIO" +
-      "\020\002\022\024\n\020MEDIA_TYPE_VIDEO\020\003\022\027\n\023MEDIA_TYPE_D" +
-      "OCUMENT\020\004\022\024\n\020MEDIA_TYPE_VOICE\020\005\022\026\n\022MEDUA" +
-      "_TYPE_STICKER\020\006*\215\001\n\026MessagingConsentActi" +
-      "on\022(\n$MESSAGING_CONSENT_ACTION_UNSPECIFI" +
-      "ED\020\000\022#\n\037MESSAGING_CONSENT_ACTION_OPT_IN\020" +
-      "\001\022$\n MESSAGING_CONSENT_ACTION_OPT_OUT\020\002*" +
-      "\233\003\n\026MessagingConsentStatus\022(\n$MESSAGING_" +
-      "CONSENT_STATUS_UNSPECIFIED\020\000\022#\n\037MESSAGIN" +
-      "G_CONSENT_STATUS_QUEUED\020d\0220\n,MESSAGING_C" +
-      "ONSENT_STATUS_OPT_IN_REQUEST_SENT\020e\022.\n)M" +
-      "ESSAGING_CONSENT_STATUS_OPT_IN_COMPLETED" +
-      "\020\254\002\022/\n*MESSAGING_CONSENT_STATUS_OPT_OUT_" +
-      "COMPLETED\020\255\002\0224\n/MESSAGING_CONSENT_STATUS" +
-      "_INVALID_CHANNEL_NUMBER\020\221\003\0228\n3MESSAGING_" +
-      "CONSENT_STATUS_DECOMMISSIONED_CUSTOMER_I" +
-      "D\020\222\003\022/\n*MESSAGING_CONSENT_STATUS_APPLICA" +
-      "TION_ERROR\020\365\003*\216\001\n\026MessagingSessionStatus" +
-      "\022(\n$MESSAGING_SESSION_STATUS_UNSPECIFIED" +
-      "\020\000\022#\n\037MESSAGING_SESSION_STATUS_ACTIVE\020d\022" +
-      "%\n MESSAGING_SESSION_STATUS_EXPIRED\020\310\001*\217" +
-      "\001\n\026CustomerEventDirection\022(\n$CUSTOMER_EV" +
-      "ENT_DIRECTION_UNSPECIFIED\020\000\022$\n CUSTOMER_" +
-      "EVENT_DIRECTION_INBOUND\020\001\022%\n!CUSTOMER_EV" +
-      "ENT_DIRECTION_OUTBOUND\020\002*\223\001\n\025CustomerReq" +
-      "uestOrigin\022\'\n#CUSTOMER_REQUEST_ORIGIN_UN" +
-      "SPECIFIED\020\000\022\'\n#CUSTOMER_REQUEST_ORIGIN_A" +
-      "PI_REQUEST\020\001\022(\n$CUSTOMER_REQUEST_ORIGIN_" +
-      "CUSTOMER_TAG\020\002*\303\007\n\025MessageDeliveryStatus" +
-      "\022\'\n#MESSAGE_DELIVERY_STATUS_UNSEPCIFIED\020" +
-      "\000\022\"\n\036MESSAGE_DELIVERY_STATUS_QUEUED\020d\022 \n" +
-      "\034MESSAGE_DELIVERY_STATUS_SENT\020e\022&\n!MESSA" +
-      "GE_DELIVERY_STATUS_DELIVERED\020\254\002\022!\n\034MESSA" +
-      "GE_DELIVERY_STATUS_READ\020\255\002\022%\n MESSAGE_DE" +
-      "LIVERY_STATUS_RECEIVED\020\256\002\022#\n\036MESSAGE_DEL" +
-      "IVERY_STATUS_FAILED\020\220\003\022\'\n\"MESSAGE_DELIVE" +
-      "RY_STATUS_NO_CONSENT\020\221\003\022*\n%MESSAGE_DELIV" +
-      "ERY_STATUS_NO_CAPABILITY\020\222\003\022$\n\037MESSAGE_D" +
-      "ELIVERY_STATUS_EXPIRED\020\223\003\0222\n-MESSAGE_DEL" +
-      "IVERY_STATUS_ONLY_TEMPLATE_ALLOWED\020\224\003\0223\n" +
-      ".MESSAGE_DELIVERY_STATUS_INVALID_CHANNEL" +
-      "_NUMBER\020\225\003\022*\n%MESSAGE_DELIVERY_STATUS_NO" +
-      "T_SUPPORTED\020\226\003\0228\n3MESSAGE_DELIVERY_STATU" +
-      "S_INVALID_REPLY_TO_MESSAGE_ID\020\227\003\0220\n+MESS" +
-      "AGE_DELIVERY_STATUS_INVALID_CUSTOMER_ID\020" +
-      "\230\003\022.\n)MESSAGE_DELIVERY_STATUS_DUPLICATE_" +
-      "REQUEST\020\231\003\022*\n%MESSAGE_DELIVERY_STATUS_TA" +
-      "G_NOT_FOUND\020\232\003\0226\n1MESSAGE_DELIVERY_STATU" +
-      "S_CUSTOMER_NUMBER_NOT_FOUND\020\233\003\0226\n1MESSAG" +
-      "E_DELIVERY_STATUS_DECOMMISSIONED_CUSTOME" +
-      "RID\020\234\003\022,\n\'MESSAGE_DELIVERY_STATUS_INVALI" +
-      "D_REQUEST\020\235\003\022.\n)MESSAGE_DELIVERY_STATUS_" +
-      "APPLICATION_ERROR\020\365\003*\311\005\n\024VoiceCallHangup" +
-      "Cause\022\'\n#VOICE_CALL_HANGUP_CAUSE_UNSPECI" +
-      "FIED\020\000\022.\n*VOICE_CALL_HANGUP_CAUSE_UNALLO" +
-      "CATED_NUMBER\020\001\022%\n!VOICE_CALL_HANGUP_CAUS" +
-      "E_USER_BUSY\020\021\022+\n\'VOICE_CALL_HANGUP_CAUSE" +
-      "_NORMAL_CLEARING\020\020\022,\n(VOICE_CALL_HANGUP_" +
-      "CAUSE_NO_USER_RESPONSE\020\022\022%\n!VOICE_CALL_H" +
-      "ANGUP_CAUSE_NO_ANSWER\020\023\022-\n)VOICE_CALL_HA" +
-      "NGUP_CAUSE_SUBSCRIBER_ABSENT\020\024\022)\n%VOICE_" +
-      "CALL_HANGUP_CAUSE_CALL_REJECTED\020\025\022.\n*VOI" +
-      "CE_CALL_HANGUP_CAUSE_NORMAL_UNSPECIFIED\020" +
-      "\037\0224\n0VOICE_CALL_HANGUP_CAUSE_NORMAL_TEMP" +
-      "ORARY_FAILURE\020)\022/\n+VOICE_CALL_HANGUP_CAU" +
-      "SE_SERVICE_UNAVAILABLE\020?\0224\n0VOICE_CALL_H" +
-      "ANGUP_CAUSE_RECOVERY_ON_TIMER_EXPIRE\020f\022." +
-      "\n)VOICE_CALL_HANGUP_CAUSE_ORIGINATOR_CAN" +
-      "CEL\020\347\003\022&\n!VOICE_CALL_HANGUP_CAUSE_LOSE_R" +
-      "ACE\020\366\003\0220\n+VOICE_CALL_HANGUP_CAUSE_USER_N" +
-      "OT_REGISTERED\020\336\004*\245\006\n\017VoiceCallStatus\022!\n\035" +
-      "VOICE_CALL_STATUS_UNSPECIFIED\020\000\022\034\n\030VOICE" +
-      "_CALL_STATUS_QUEUED\020d\022\036\n\032VOICE_CALL_STAT" +
-      "US_ANSWERED\020e\022\035\n\031VOICE_CALL_STATUS_RINGI" +
-      "NG\020f\022\035\n\030VOICE_CALL_STATUS_ACTIVE\020\310\001\022\036\n\031V" +
-      "OICE_CALL_STATUS_DIALING\020\311\001\022%\n VOICE_CAL" +
-      "L_STATUS_DIAL_COMPLETED\020\312\001\022\036\n\031VOICE_CALL" +
-      "_STATUS_BRIDGED\020\313\001\022\037\n\032VOICE_CALL_STATUS_" +
-      "ENQUEUED\020\314\001\022\037\n\032VOICE_CALL_STATUS_DEQUEUE" +
-      "D\020\315\001\022\"\n\035VOICE_CALL_STATUS_TRANSFERRED\020\316\001" +
-      "\022)\n$VOICE_CALL_STATUS_TRANSFER_COMPLETED" +
-      "\020\317\001\022 \n\033VOICE_CALL_STATUS_COMPLETED\020\254\002\022*\n" +
-      "%VOICE_CALL_STATUS_INSUFFICIENT_CREDIT\020\220" +
-      "\003\022#\n\036VOICE_CALL_STATUS_NOT_ANSWERED\020\221\003\022+" +
-      "\n&VOICE_CALL_STATUS_INVALID_PHONE_NUMBER" +
-      "\020\222\003\0220\n+VOICE_CALL_STATUS_DESTINATION_NOT" +
-      "_SUPPORTED\020\223\003\0220\n+VOICE_CALL_STATUS_DECOM" +
-      "MISSIONED_CUSTOMERID\020\224\003\022\036\n\031VOICE_CALL_ST" +
-      "ATUS_EXPIRED\020\225\003\022-\n(VOICE_CALL_STATUS_INV" +
-      "ALID_CHANNEL_NUMBER\020\226\003\022(\n#VOICE_CALL_STA" +
-      "TUS_APPLICATION_ERROR\020\365\003*\341\005\n\rPaymentStat" +
-      "us\022\036\n\032PAYMENT_STATUS_UNSPECIFIED\020\000\022\031\n\025PA" +
-      "YMENT_STATUS_QUEUED\020d\022\'\n#PAYMENT_STATUS_" +
-      "PENDING_CONFIRMATION\020e\022%\n!PAYMENT_STATUS" +
-      "_PENDING_VALIDATION\020f\022\034\n\030PAYMENT_STATUS_" +
-      "VALIDATED\020g\022#\n\036PAYMENT_STATUS_INVALID_RE" +
-      "QUEST\020\310\001\022!\n\034PAYMENT_STATUS_NOT_SUPPORTED" +
-      "\020\311\001\022&\n!PAYMENT_STATUS_INSUFFICIENT_FUNDS" +
-      "\020\312\001\022%\n PAYMENT_STATUS_APPLICATION_ERROR\020" +
-      "\313\001\022\037\n\032PAYMENT_STATUS_NOT_ALLOWED\020\314\001\022%\n P" +
-      "AYMENT_STATUS_DUPLICATE_REQUEST\020\315\001\022!\n\034PA" +
-      "YMENT_STATUS_INVALID_PURSE\020\316\001\022\"\n\035PAYMENT" +
-      "_STATUS_INVALID_WALLET\020\317\001\022.\n)PAYMENT_STA" +
-      "TUS_DECOMMISSIONED_CUSTOMER_ID\020\253\002\022\033\n\026PAY" +
-      "MENT_STATUS_SUCCESS\020\254\002\022 \n\033PAYMENT_STATUS" +
-      "_PASS_THROUGH\020\255\002\022\032\n\025PAYMENT_STATUS_FAILE" +
-      "D\020\220\003\022\035\n\030PAYMENT_STATUS_THROTTLED\020\221\003\022\033\n\026P" +
-      "AYMENT_STATUS_EXPIRED\020\222\003\022\034\n\027PAYMENT_STAT" +
-      "US_REJECTED\020\223\003\022\034\n\027PAYMENT_STATUS_REVERSE" +
-      "D\020\364\003*y\n\021TextToSpeechVoice\022$\n TEXT_TO_SPE" +
-      "ECH_VOICE_UNSPECIFIED\020\000\022\035\n\031TEXT_TO_SPEEC" +
-      "H_VOICE_MALE\020\001\022\037\n\033TEXT_TO_SPEECH_VOICE_F" +
-      "EMALE\020\002b\006proto3"
+      "\002 \001(\t\"\"\n\020WebChannelNumber\022\016\n\006number\030\001 \001(" +
+      "\t\"3\n\023TextMessageTemplate\022\014\n\004name\030\001 \001(\t\022\016" +
+      "\n\006params\030\002 \003(\t\"|\n\017TextMessageBody\022*\n\004tex" +
+      "t\030\001 \001(\0132\034.google.protobuf.StringValue\022=\n" +
+      "\010template\030\002 \001(\0132+.com.elarian.hera.proto" +
+      ".TextMessageTemplate\"Q\n\020MediaMessageBody" +
+      "\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001(\0162!.com.elari" +
+      "an.hera.proto.MediaType\":\n\023LocationMessa" +
+      "geBody\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitude\030\002 " +
+      "\001(\001\"\323\001\n\023CustomerMessageBody\0227\n\004text\030\001 \001(" +
+      "\0132\'.com.elarian.hera.proto.TextMessageBo" +
+      "dyH\000\0229\n\005media\030\002 \001(\0132(.com.elarian.hera.p" +
+      "roto.MediaMessageBodyH\000\022?\n\010location\030\003 \001(" +
+      "\0132+.com.elarian.hera.proto.LocationMessa" +
+      "geBodyH\000B\007\n\005entry\"-\n\010UssdMenu\022\014\n\004text\030\001 " +
+      "\001(\t\022\023\n\013is_terminal\030\002 \001(\010\"\226\001\n\007UssdHop\022+\n\005" +
+      "input\030\001 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022.\n\004menu\030\002 \001(\0132 .com.elarian.hera.proto" +
+      ".UssdMenu\022.\n\ncreated_at\030\003 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\"\302\001\n\tWebAction\022\013\n\003key\030\001" +
+      " \001(\t\022E\n\nproperties\030\002 \003(\01321.com.elarian.h" +
+      "era.proto.WebAction.PropertiesEntry\022.\n\nc" +
+      "reated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "amp\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"B\n\014DataMapValue\022\024\n\nstring" +
+      "_val\030\002 \001(\tH\000\022\023\n\tbytes_val\030\003 \001(\014H\000B\007\n\005val" +
+      "ue\"\215\001\n\022VoiceCallDialInput\022\032\n\022destination" +
+      "_number\030\001 \001(\t\022.\n\nstarted_at\030\002 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022+\n\010duration\030\003 \001(\0132" +
+      "\031.google.protobuf.Duration\"\241\002\n\023VoiceCall" +
+      "QueueInput\022/\n\013enqueued_at\030\001 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022/\n\013dequeued_at\030\002 \001(\013" +
+      "2\032.google.protobuf.Timestamp\0228\n\022dequeued" +
+      "_to_number\030\003 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022;\n\025dequeued_to_sessionId\030\004 \001(\0132\034." +
+      "google.protobuf.StringValue\0221\n\016queue_dur" +
+      "ation\030\005 \001(\0132\031.google.protobuf.Duration\"\250" +
+      "\003\n\021VoiceCallHopInput\0227\n\006status\030\001 \001(\0162\'.c" +
+      "om.elarian.hera.proto.VoiceCallStatus\022.\n" +
+      "\nstarted_at\030\002 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022B\n\014hangup_cause\030\003 \001(\0162,.com.elaria" +
+      "n.hera.proto.VoiceCallHangupCause\0221\n\013dtm" +
+      "f_digits\030\004 \001(\0132\034.google.protobuf.StringV" +
+      "alue\0223\n\rrecording_url\030\005 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022=\n\tdial_data\030\006 \001(\0132*.c" +
+      "om.elarian.hera.proto.VoiceCallDialInput" +
+      "\022?\n\nqueue_data\030\007 \001(\0132+.com.elarian.hera." +
+      "proto.VoiceCallQueueInput\"\262\001\n\014VoiceCallH" +
+      "op\0228\n\005input\030\001 \001(\0132).com.elarian.hera.pro" +
+      "to.VoiceCallHopInput\0228\n\007actions\030\002 \003(\0132\'." +
+      "com.elarian.hera.proto.VoiceCallAction\022." +
+      "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\"\251\001\n\031PendingPaymentTransaction\022.\n\n" +
+      "created_at\030\001 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022+\n\005value\030\002 \001(\0132\034.com.elarian.hera.p" +
+      "roto.Cash\022/\n\tconverted\030\003 \001(\0132\034.com.elari" +
+      "an.hera.proto.Cash\"\304\002\n\016PaymentBalance\022\025\n" +
+      "\rcurrency_code\030\001 \001(\t\022/\n\tavailable\030\002 \001(\0132" +
+      "\034.com.elarian.hera.proto.Cash\022,\n\006actual\030" +
+      "\003 \001(\0132\034.com.elarian.hera.proto.Cash\022D\n\007p" +
+      "ending\030\004 \003(\01323.com.elarian.hera.proto.Pa" +
+      "ymentBalance.PendingEntry\022\023\n\013sequence_nr" +
+      "\030\005 \001(\004\032a\n\014PendingEntry\022\013\n\003key\030\001 \001(\t\022@\n\005v" +
+      "alue\030\002 \001(\01321.com.elarian.hera.proto.Pend" +
+      "ingPaymentTransaction:\0028\001\",\n\030PaymentPurs" +
+      "eCounterParty\022\020\n\010purse_id\030\001 \001(\t\"C\n\031Payme" +
+      "ntWalletCounterParty\022\023\n\013customer_id\030\001 \001(" +
+      "\t\022\021\n\twallet_id\030\002 \001(\t\"\244\001\n\033PaymentCustomer" +
+      "CounterParty\022?\n\017customer_number\030\001 \001(\0132&." +
+      "com.elarian.hera.proto.CustomerNumber\022D\n" +
+      "\016channel_number\030\002 \001(\0132,.com.elarian.hera" +
+      ".proto.PaymentChannelNumber\"\247\001\n\032PaymentC" +
+      "hannelCounterParty\022D\n\016channel_number\030\001 \001" +
+      "(\0132,.com.elarian.hera.proto.PaymentChann" +
+      "elNumber\022\024\n\014channel_code\030\002 \001(\005\022-\n\007accoun" +
+      "t\030\003 \001(\0132\034.google.protobuf.StringValue\"\266\002" +
+      "\n\023PaymentCounterParty\022G\n\010customer\030\001 \001(\0132" +
+      "3.com.elarian.hera.proto.PaymentCustomer" +
+      "CounterPartyH\000\022A\n\005purse\030\002 \001(\01320.com.elar" +
+      "ian.hera.proto.PaymentPurseCounterPartyH" +
+      "\000\022C\n\006wallet\030\003 \001(\01321.com.elarian.hera.pro" +
+      "to.PaymentWalletCounterPartyH\000\022E\n\007channe" +
+      "l\030\004 \001(\01322.com.elarian.hera.proto.Payment" +
+      "ChannelCounterPartyH\000B\007\n\005party\"H\n\014IndexM" +
+      "apping\022\013\n\003key\030\001 \001(\t\022+\n\005value\030\002 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\"v\n\rCustomerInde" +
+      "x\0225\n\007mapping\030\001 \001(\0132$.com.elarian.hera.pr" +
+      "oto.IndexMapping\022.\n\nexpiration\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"\253\001\n\020CustomerRem" +
+      "inder\022\013\n\003key\030\001 \001(\t\022.\n\nexpiration\030\002 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022+\n\010interval\030\003" +
+      " \001(\0132\031.google.protobuf.Duration\022-\n\007paylo" +
+      "ad\030\004 \001(\0132\034.google.protobuf.StringValue\"j" +
+      "\n\rSayCallAction\022\014\n\004text\030\001 \001(\t\0228\n\005voice\030\002" +
+      " \001(\0162).com.elarian.hera.proto.TextToSpee" +
+      "chVoice\022\021\n\tplay_beep\030\003 \001(\010\"\035\n\016PlayCallAc" +
+      "tion\022\013\n\003url\030\001 \001(\t\"\237\002\n\023GetDigitsCallActio" +
+      "n\0224\n\003say\030\001 \001(\0132%.com.elarian.hera.proto." +
+      "SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com.elar" +
+      "ian.hera.proto.PlayCallActionH\000\022*\n\007timeo" +
+      "ut\030\003 \001(\0132\031.google.protobuf.Duration\0223\n\rf" +
+      "inish_on_key\030\004 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022/\n\nnum_digits\030\005 \001(\0132\033.google.pr" +
+      "otobuf.Int32ValueB\010\n\006prompt\"\311\002\n\026GetRecor" +
+      "dingCallAction\0224\n\003say\030\001 \001(\0132%.com.elaria" +
+      "n.hera.proto.SayCallActionH\000\0226\n\004play\030\002 \001" +
+      "(\0132&.com.elarian.hera.proto.PlayCallActi" +
+      "onH\000\022*\n\007timeout\030\003 \001(\0132\031.google.protobuf." +
+      "Duration\022-\n\nmax_length\030\004 \001(\0132\031.google.pr" +
+      "otobuf.Duration\0223\n\rfinish_on_key\030\005 \001(\0132\034" +
+      ".google.protobuf.StringValue\022\021\n\tplay_bee" +
+      "p\030\006 \001(\010\022\024\n\014trim_silence\030\007 \001(\010B\010\n\006prompt\"" +
+      "\031\n\027RecordSessionCallAction\"\217\002\n\016DialCallA" +
+      "ction\022@\n\020customer_numbers\030\001 \003(\0132&.com.el" +
+      "arian.hera.proto.CustomerNumber\022\016\n\006recor" +
+      "d\030\002 \001(\010\022\022\n\nsequential\030\003 \001(\010\0223\n\rringback_" +
+      "tone\030\004 \001(\0132\034.google.protobuf.StringValue" +
+      "\022/\n\tcaller_id\030\005 \001(\0132\034.google.protobuf.St" +
+      "ringValue\0221\n\014max_duration\030\006 \001(\0132\033.google" +
+      ".protobuf.Int32Value\"w\n\021EnqueueCallActio" +
+      "n\0220\n\nhold_music\030\001 \001(\0132\034.google.protobuf." +
+      "StringValue\0220\n\nqueue_name\030\002 \001(\0132\034.google" +
+      ".protobuf.StringValue\"\231\001\n\021DequeueCallAct" +
+      "ion\022B\n\016channel_number\030\001 \001(\0132*.com.elaria" +
+      "n.hera.proto.VoiceChannelNumber\022\016\n\006recor" +
+      "d\030\002 \001(\010\0220\n\nqueue_name\030\003 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\"\022\n\020RejectCallAction\"!\n" +
+      "\022RedirectCallAction\022\013\n\003url\030\001 \001(\t\"\217\005\n\017Voi" +
+      "ceCallAction\0224\n\003say\030\001 \001(\0132%.com.elarian." +
+      "hera.proto.SayCallActionH\000\0226\n\004play\030\002 \001(\013" +
+      "2&.com.elarian.hera.proto.PlayCallAction" +
+      "H\000\022A\n\nget_digits\030\003 \001(\0132+.com.elarian.her" +
+      "a.proto.GetDigitsCallActionH\000\0226\n\004dial\030\004 " +
+      "\001(\0132&.com.elarian.hera.proto.DialCallAct" +
+      "ionH\000\022I\n\016record_session\030\005 \001(\0132/.com.elar" +
+      "ian.hera.proto.RecordSessionCallActionH\000" +
+      "\022G\n\rget_recording\030\006 \001(\0132..com.elarian.he" +
+      "ra.proto.GetRecordingCallActionH\000\022<\n\007enq" +
+      "ueue\030\007 \001(\0132).com.elarian.hera.proto.Enqu" +
+      "eueCallActionH\000\022<\n\007dequeue\030\010 \001(\0132).com.e" +
+      "larian.hera.proto.DequeueCallActionH\000\022:\n" +
+      "\006reject\030\t \001(\0132(.com.elarian.hera.proto.R" +
+      "ejectCallActionH\000\022>\n\010redirect\030\n \001(\0132*.co" +
+      "m.elarian.hera.proto.RedirectCallActionH" +
+      "\000B\007\n\005entry*\326\001\n\020MessagingChannel\022!\n\035MESSA" +
+      "GING_CHANNEL_UNSPECIFIED\020\000\022 \n\034MESSAGING_" +
+      "CHANNEL_GOOGLE_RCS\020\001\022\"\n\036MESSAGING_CHANNE" +
+      "L_FB_MESSENGER\020\002\022\031\n\025MESSAGING_CHANNEL_SM" +
+      "S\020\003\022\036\n\032MESSAGING_CHANNEL_TELEGRAM\020\004\022\036\n\032M" +
+      "ESSAGING_CHANNEL_WHATSAPP\020\005*L\n\016PaymentCh" +
+      "annel\022\037\n\033PAYMENT_CHANNEL_UNSPECIFIED\020\000\022\031" +
+      "\n\025PAYMENT_CHANNEL_TELCO\020\001*C\n\013UssdChannel" +
+      "\022\034\n\030USSD_CHANNEL_UNSPECIFIED\020\000\022\026\n\022USSD_C" +
+      "HANNEL_TELCO\020\001*F\n\014VoiceChannel\022\035\n\031VOICE_" +
+      "CHANNEL_UNSPECIFIED\020\000\022\027\n\023VOICE_CHANNEL_T" +
+      "ELCO\020\001*\326\001\n\026CustomerNumberProvider\022(\n$CUS" +
+      "TOMER_NUMBER_PROVIDER_UNSPECIFIED\020\000\022%\n!C" +
+      "USTOMER_NUMBER_PROVIDER_FACEBOOK\020\001\022\"\n\036CU" +
+      "STOMER_NUMBER_PROVIDER_TELCO\020\002\022%\n!CUSTOM" +
+      "ER_NUMBER_PROVIDER_TELEGRAM\020\003\022 \n\034CUSTOME" +
+      "R_NUMBER_PROVIDER_WEB\020\004*\260\001\n\tMediaType\022\032\n" +
+      "\026MEDIA_TYPE_UNSPECIFIED\020\000\022\024\n\020MEDIA_TYPE_" +
+      "IMAGE\020\001\022\024\n\020MEDIA_TYPE_AUDIO\020\002\022\024\n\020MEDIA_T" +
+      "YPE_VIDEO\020\003\022\027\n\023MEDIA_TYPE_DOCUMENT\020\004\022\024\n\020" +
+      "MEDIA_TYPE_VOICE\020\005\022\026\n\022MEDUA_TYPE_STICKER" +
+      "\020\006*\215\001\n\026MessagingConsentAction\022(\n$MESSAGI" +
+      "NG_CONSENT_ACTION_UNSPECIFIED\020\000\022#\n\037MESSA" +
+      "GING_CONSENT_ACTION_OPT_IN\020\001\022$\n MESSAGIN" +
+      "G_CONSENT_ACTION_OPT_OUT\020\002*\233\003\n\026Messaging" +
+      "ConsentStatus\022(\n$MESSAGING_CONSENT_STATU" +
+      "S_UNSPECIFIED\020\000\022#\n\037MESSAGING_CONSENT_STA" +
+      "TUS_QUEUED\020d\0220\n,MESSAGING_CONSENT_STATUS" +
+      "_OPT_IN_REQUEST_SENT\020e\022.\n)MESSAGING_CONS" +
+      "ENT_STATUS_OPT_IN_COMPLETED\020\254\002\022/\n*MESSAG" +
+      "ING_CONSENT_STATUS_OPT_OUT_COMPLETED\020\255\002\022" +
+      "4\n/MESSAGING_CONSENT_STATUS_INVALID_CHAN" +
+      "NEL_NUMBER\020\221\003\0228\n3MESSAGING_CONSENT_STATU" +
+      "S_DECOMMISSIONED_CUSTOMER_ID\020\222\003\022/\n*MESSA" +
+      "GING_CONSENT_STATUS_APPLICATION_ERROR\020\365\003" +
+      "*\216\001\n\026MessagingSessionStatus\022(\n$MESSAGING" +
+      "_SESSION_STATUS_UNSPECIFIED\020\000\022#\n\037MESSAGI" +
+      "NG_SESSION_STATUS_ACTIVE\020d\022%\n MESSAGING_" +
+      "SESSION_STATUS_EXPIRED\020\310\001*\217\001\n\026CustomerEv" +
+      "entDirection\022(\n$CUSTOMER_EVENT_DIRECTION" +
+      "_UNSPECIFIED\020\000\022$\n CUSTOMER_EVENT_DIRECTI" +
+      "ON_INBOUND\020\001\022%\n!CUSTOMER_EVENT_DIRECTION" +
+      "_OUTBOUND\020\002*\223\001\n\025CustomerRequestOrigin\022\'\n" +
+      "#CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED\020\000\022\'" +
+      "\n#CUSTOMER_REQUEST_ORIGIN_API_REQUEST\020\001\022" +
+      "(\n$CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG\020" +
+      "\002*\303\007\n\025MessageDeliveryStatus\022\'\n#MESSAGE_D" +
+      "ELIVERY_STATUS_UNSEPCIFIED\020\000\022\"\n\036MESSAGE_" +
+      "DELIVERY_STATUS_QUEUED\020d\022 \n\034MESSAGE_DELI" +
+      "VERY_STATUS_SENT\020e\022&\n!MESSAGE_DELIVERY_S" +
+      "TATUS_DELIVERED\020\254\002\022!\n\034MESSAGE_DELIVERY_S" +
+      "TATUS_READ\020\255\002\022%\n MESSAGE_DELIVERY_STATUS" +
+      "_RECEIVED\020\256\002\022#\n\036MESSAGE_DELIVERY_STATUS_" +
+      "FAILED\020\220\003\022\'\n\"MESSAGE_DELIVERY_STATUS_NO_" +
+      "CONSENT\020\221\003\022*\n%MESSAGE_DELIVERY_STATUS_NO" +
+      "_CAPABILITY\020\222\003\022$\n\037MESSAGE_DELIVERY_STATU" +
+      "S_EXPIRED\020\223\003\0222\n-MESSAGE_DELIVERY_STATUS_" +
+      "ONLY_TEMPLATE_ALLOWED\020\224\003\0223\n.MESSAGE_DELI" +
+      "VERY_STATUS_INVALID_CHANNEL_NUMBER\020\225\003\022*\n" +
+      "%MESSAGE_DELIVERY_STATUS_NOT_SUPPORTED\020\226" +
+      "\003\0228\n3MESSAGE_DELIVERY_STATUS_INVALID_REP" +
+      "LY_TO_MESSAGE_ID\020\227\003\0220\n+MESSAGE_DELIVERY_" +
+      "STATUS_INVALID_CUSTOMER_ID\020\230\003\022.\n)MESSAGE" +
+      "_DELIVERY_STATUS_DUPLICATE_REQUEST\020\231\003\022*\n" +
+      "%MESSAGE_DELIVERY_STATUS_TAG_NOT_FOUND\020\232" +
+      "\003\0226\n1MESSAGE_DELIVERY_STATUS_CUSTOMER_NU" +
+      "MBER_NOT_FOUND\020\233\003\0226\n1MESSAGE_DELIVERY_ST" +
+      "ATUS_DECOMMISSIONED_CUSTOMERID\020\234\003\022,\n\'MES" +
+      "SAGE_DELIVERY_STATUS_INVALID_REQUEST\020\235\003\022" +
+      ".\n)MESSAGE_DELIVERY_STATUS_APPLICATION_E" +
+      "RROR\020\365\003*\311\005\n\024VoiceCallHangupCause\022\'\n#VOIC" +
+      "E_CALL_HANGUP_CAUSE_UNSPECIFIED\020\000\022.\n*VOI" +
+      "CE_CALL_HANGUP_CAUSE_UNALLOCATED_NUMBER\020" +
+      "\001\022%\n!VOICE_CALL_HANGUP_CAUSE_USER_BUSY\020\021" +
+      "\022+\n\'VOICE_CALL_HANGUP_CAUSE_NORMAL_CLEAR" +
+      "ING\020\020\022,\n(VOICE_CALL_HANGUP_CAUSE_NO_USER" +
+      "_RESPONSE\020\022\022%\n!VOICE_CALL_HANGUP_CAUSE_N" +
+      "O_ANSWER\020\023\022-\n)VOICE_CALL_HANGUP_CAUSE_SU" +
+      "BSCRIBER_ABSENT\020\024\022)\n%VOICE_CALL_HANGUP_C" +
+      "AUSE_CALL_REJECTED\020\025\022.\n*VOICE_CALL_HANGU" +
+      "P_CAUSE_NORMAL_UNSPECIFIED\020\037\0224\n0VOICE_CA" +
+      "LL_HANGUP_CAUSE_NORMAL_TEMPORARY_FAILURE" +
+      "\020)\022/\n+VOICE_CALL_HANGUP_CAUSE_SERVICE_UN" +
+      "AVAILABLE\020?\0224\n0VOICE_CALL_HANGUP_CAUSE_R" +
+      "ECOVERY_ON_TIMER_EXPIRE\020f\022.\n)VOICE_CALL_" +
+      "HANGUP_CAUSE_ORIGINATOR_CANCEL\020\347\003\022&\n!VOI" +
+      "CE_CALL_HANGUP_CAUSE_LOSE_RACE\020\366\003\0220\n+VOI" +
+      "CE_CALL_HANGUP_CAUSE_USER_NOT_REGISTERED" +
+      "\020\336\004*\245\006\n\017VoiceCallStatus\022!\n\035VOICE_CALL_ST" +
+      "ATUS_UNSPECIFIED\020\000\022\034\n\030VOICE_CALL_STATUS_" +
+      "QUEUED\020d\022\036\n\032VOICE_CALL_STATUS_ANSWERED\020e" +
+      "\022\035\n\031VOICE_CALL_STATUS_RINGING\020f\022\035\n\030VOICE" +
+      "_CALL_STATUS_ACTIVE\020\310\001\022\036\n\031VOICE_CALL_STA" +
+      "TUS_DIALING\020\311\001\022%\n VOICE_CALL_STATUS_DIAL" +
+      "_COMPLETED\020\312\001\022\036\n\031VOICE_CALL_STATUS_BRIDG" +
+      "ED\020\313\001\022\037\n\032VOICE_CALL_STATUS_ENQUEUED\020\314\001\022\037" +
+      "\n\032VOICE_CALL_STATUS_DEQUEUED\020\315\001\022\"\n\035VOICE" +
+      "_CALL_STATUS_TRANSFERRED\020\316\001\022)\n$VOICE_CAL" +
+      "L_STATUS_TRANSFER_COMPLETED\020\317\001\022 \n\033VOICE_" +
+      "CALL_STATUS_COMPLETED\020\254\002\022*\n%VOICE_CALL_S" +
+      "TATUS_INSUFFICIENT_CREDIT\020\220\003\022#\n\036VOICE_CA" +
+      "LL_STATUS_NOT_ANSWERED\020\221\003\022+\n&VOICE_CALL_" +
+      "STATUS_INVALID_PHONE_NUMBER\020\222\003\0220\n+VOICE_" +
+      "CALL_STATUS_DESTINATION_NOT_SUPPORTED\020\223\003" +
+      "\0220\n+VOICE_CALL_STATUS_DECOMMISSIONED_CUS" +
+      "TOMERID\020\224\003\022\036\n\031VOICE_CALL_STATUS_EXPIRED\020" +
+      "\225\003\022-\n(VOICE_CALL_STATUS_INVALID_CHANNEL_" +
+      "NUMBER\020\226\003\022(\n#VOICE_CALL_STATUS_APPLICATI" +
+      "ON_ERROR\020\365\003*\341\005\n\rPaymentStatus\022\036\n\032PAYMENT" +
+      "_STATUS_UNSPECIFIED\020\000\022\031\n\025PAYMENT_STATUS_" +
+      "QUEUED\020d\022\'\n#PAYMENT_STATUS_PENDING_CONFI" +
+      "RMATION\020e\022%\n!PAYMENT_STATUS_PENDING_VALI" +
+      "DATION\020f\022\034\n\030PAYMENT_STATUS_VALIDATED\020g\022#" +
+      "\n\036PAYMENT_STATUS_INVALID_REQUEST\020\310\001\022!\n\034P" +
+      "AYMENT_STATUS_NOT_SUPPORTED\020\311\001\022&\n!PAYMEN" +
+      "T_STATUS_INSUFFICIENT_FUNDS\020\312\001\022%\n PAYMEN" +
+      "T_STATUS_APPLICATION_ERROR\020\313\001\022\037\n\032PAYMENT" +
+      "_STATUS_NOT_ALLOWED\020\314\001\022%\n PAYMENT_STATUS" +
+      "_DUPLICATE_REQUEST\020\315\001\022!\n\034PAYMENT_STATUS_" +
+      "INVALID_PURSE\020\316\001\022\"\n\035PAYMENT_STATUS_INVAL" +
+      "ID_WALLET\020\317\001\022.\n)PAYMENT_STATUS_DECOMMISS" +
+      "IONED_CUSTOMER_ID\020\253\002\022\033\n\026PAYMENT_STATUS_S" +
+      "UCCESS\020\254\002\022 \n\033PAYMENT_STATUS_PASS_THROUGH" +
+      "\020\255\002\022\032\n\025PAYMENT_STATUS_FAILED\020\220\003\022\035\n\030PAYME" +
+      "NT_STATUS_THROTTLED\020\221\003\022\033\n\026PAYMENT_STATUS" +
+      "_EXPIRED\020\222\003\022\034\n\027PAYMENT_STATUS_REJECTED\020\223" +
+      "\003\022\034\n\027PAYMENT_STATUS_REVERSED\020\364\003*y\n\021TextT" +
+      "oSpeechVoice\022$\n TEXT_TO_SPEECH_VOICE_UNS" +
+      "PECIFIED\020\000\022\035\n\031TEXT_TO_SPEECH_VOICE_MALE\020" +
+      "\001\022\037\n\033TEXT_TO_SPEECH_VOICE_FEMALE\020\002b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -41671,86 +43361,104 @@ public final class Common {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceChannelNumber_descriptor,
         new java.lang.String[] { "Channel", "Number", });
-    internal_static_com_elarian_hera_proto_TextMessageTemplate_descriptor =
+    internal_static_com_elarian_hera_proto_WebChannelNumber_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_com_elarian_hera_proto_WebChannelNumber_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_WebChannelNumber_descriptor,
+        new java.lang.String[] { "Number", });
+    internal_static_com_elarian_hera_proto_TextMessageTemplate_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_com_elarian_hera_proto_TextMessageTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_TextMessageTemplate_descriptor,
         new java.lang.String[] { "Name", "Params", });
     internal_static_com_elarian_hera_proto_TextMessageBody_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_com_elarian_hera_proto_TextMessageBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_TextMessageBody_descriptor,
         new java.lang.String[] { "Text", "Template", });
     internal_static_com_elarian_hera_proto_MediaMessageBody_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_com_elarian_hera_proto_MediaMessageBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MediaMessageBody_descriptor,
         new java.lang.String[] { "Url", "Media", });
     internal_static_com_elarian_hera_proto_LocationMessageBody_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_com_elarian_hera_proto_LocationMessageBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_LocationMessageBody_descriptor,
         new java.lang.String[] { "Latitude", "Longitude", });
     internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_com_elarian_hera_proto_CustomerMessageBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor,
         new java.lang.String[] { "Text", "Media", "Location", "Entry", });
     internal_static_com_elarian_hera_proto_UssdMenu_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_com_elarian_hera_proto_UssdMenu_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UssdMenu_descriptor,
         new java.lang.String[] { "Text", "IsTerminal", });
     internal_static_com_elarian_hera_proto_UssdHop_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_com_elarian_hera_proto_UssdHop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UssdHop_descriptor,
         new java.lang.String[] { "Input", "Menu", "CreatedAt", });
+    internal_static_com_elarian_hera_proto_WebAction_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_com_elarian_hera_proto_WebAction_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_WebAction_descriptor,
+        new java.lang.String[] { "Key", "Properties", "CreatedAt", });
+    internal_static_com_elarian_hera_proto_WebAction_PropertiesEntry_descriptor =
+      internal_static_com_elarian_hera_proto_WebAction_descriptor.getNestedTypes().get(0);
+    internal_static_com_elarian_hera_proto_WebAction_PropertiesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_WebAction_PropertiesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_com_elarian_hera_proto_DataMapValue_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_com_elarian_hera_proto_DataMapValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DataMapValue_descriptor,
         new java.lang.String[] { "StringVal", "BytesVal", "Value", });
     internal_static_com_elarian_hera_proto_VoiceCallDialInput_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_com_elarian_hera_proto_VoiceCallDialInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallDialInput_descriptor,
         new java.lang.String[] { "DestinationNumber", "StartedAt", "Duration", });
     internal_static_com_elarian_hera_proto_VoiceCallQueueInput_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_com_elarian_hera_proto_VoiceCallQueueInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallQueueInput_descriptor,
         new java.lang.String[] { "EnqueuedAt", "DequeuedAt", "DequeuedToNumber", "DequeuedToSessionId", "QueueDuration", });
     internal_static_com_elarian_hera_proto_VoiceCallHopInput_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_com_elarian_hera_proto_VoiceCallHopInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallHopInput_descriptor,
         new java.lang.String[] { "Status", "StartedAt", "HangupCause", "DtmfDigits", "RecordingUrl", "DialData", "QueueData", });
     internal_static_com_elarian_hera_proto_VoiceCallHop_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_com_elarian_hera_proto_VoiceCallHop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallHop_descriptor,
         new java.lang.String[] { "Input", "Actions", "CreatedAt", });
     internal_static_com_elarian_hera_proto_PendingPaymentTransaction_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_com_elarian_hera_proto_PendingPaymentTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PendingPaymentTransaction_descriptor,
         new java.lang.String[] { "CreatedAt", "Value", "Converted", });
     internal_static_com_elarian_hera_proto_PaymentBalance_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_com_elarian_hera_proto_PaymentBalance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentBalance_descriptor,
@@ -41762,115 +43470,115 @@ public final class Common {
         internal_static_com_elarian_hera_proto_PaymentBalance_PendingEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_com_elarian_hera_proto_PaymentPurseCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_com_elarian_hera_proto_PaymentPurseCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentPurseCounterParty_descriptor,
         new java.lang.String[] { "PurseId", });
     internal_static_com_elarian_hera_proto_PaymentWalletCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_com_elarian_hera_proto_PaymentWalletCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentWalletCounterParty_descriptor,
         new java.lang.String[] { "CustomerId", "WalletId", });
     internal_static_com_elarian_hera_proto_PaymentCustomerCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_com_elarian_hera_proto_PaymentCustomerCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentCustomerCounterParty_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", });
     internal_static_com_elarian_hera_proto_PaymentChannelCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_com_elarian_hera_proto_PaymentChannelCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentChannelCounterParty_descriptor,
         new java.lang.String[] { "ChannelNumber", "ChannelCode", "Account", });
     internal_static_com_elarian_hera_proto_PaymentCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_com_elarian_hera_proto_PaymentCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentCounterParty_descriptor,
         new java.lang.String[] { "Customer", "Purse", "Wallet", "Channel", "Party", });
     internal_static_com_elarian_hera_proto_IndexMapping_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_com_elarian_hera_proto_IndexMapping_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_IndexMapping_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_com_elarian_hera_proto_CustomerIndex_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_com_elarian_hera_proto_CustomerIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerIndex_descriptor,
         new java.lang.String[] { "Mapping", "Expiration", });
     internal_static_com_elarian_hera_proto_CustomerReminder_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_com_elarian_hera_proto_CustomerReminder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerReminder_descriptor,
         new java.lang.String[] { "Key", "Expiration", "Interval", "Payload", });
     internal_static_com_elarian_hera_proto_SayCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_com_elarian_hera_proto_SayCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SayCallAction_descriptor,
         new java.lang.String[] { "Text", "Voice", "PlayBeep", });
     internal_static_com_elarian_hera_proto_PlayCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_com_elarian_hera_proto_PlayCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PlayCallAction_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_com_elarian_hera_proto_GetDigitsCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_com_elarian_hera_proto_GetDigitsCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_GetDigitsCallAction_descriptor,
         new java.lang.String[] { "Say", "Play", "Timeout", "FinishOnKey", "NumDigits", "Prompt", });
     internal_static_com_elarian_hera_proto_GetRecordingCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_com_elarian_hera_proto_GetRecordingCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_GetRecordingCallAction_descriptor,
         new java.lang.String[] { "Say", "Play", "Timeout", "MaxLength", "FinishOnKey", "PlayBeep", "TrimSilence", "Prompt", });
     internal_static_com_elarian_hera_proto_RecordSessionCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_com_elarian_hera_proto_RecordSessionCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_RecordSessionCallAction_descriptor,
         new java.lang.String[] { });
     internal_static_com_elarian_hera_proto_DialCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_com_elarian_hera_proto_DialCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DialCallAction_descriptor,
         new java.lang.String[] { "CustomerNumbers", "Record", "Sequential", "RingbackTone", "CallerId", "MaxDuration", });
     internal_static_com_elarian_hera_proto_EnqueueCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_com_elarian_hera_proto_EnqueueCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_EnqueueCallAction_descriptor,
         new java.lang.String[] { "HoldMusic", "QueueName", });
     internal_static_com_elarian_hera_proto_DequeueCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_com_elarian_hera_proto_DequeueCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DequeueCallAction_descriptor,
         new java.lang.String[] { "ChannelNumber", "Record", "QueueName", });
     internal_static_com_elarian_hera_proto_RejectCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_com_elarian_hera_proto_RejectCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_RejectCallAction_descriptor,
         new java.lang.String[] { });
     internal_static_com_elarian_hera_proto_RedirectCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_com_elarian_hera_proto_RedirectCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_RedirectCallAction_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_com_elarian_hera_proto_VoiceCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_com_elarian_hera_proto_VoiceCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallAction_descriptor,

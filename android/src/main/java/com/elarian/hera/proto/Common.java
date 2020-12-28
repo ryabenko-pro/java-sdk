@@ -421,6 +421,10 @@ public final class Common {
      * <code>CUSTOMER_NUMBER_PROVIDER_TELEGRAM = 3;</code>
      */
     CUSTOMER_NUMBER_PROVIDER_TELEGRAM(3),
+    /**
+     * <code>CUSTOMER_NUMBER_PROVIDER_WEB = 4;</code>
+     */
+    CUSTOMER_NUMBER_PROVIDER_WEB(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -440,6 +444,10 @@ public final class Common {
      * <code>CUSTOMER_NUMBER_PROVIDER_TELEGRAM = 3;</code>
      */
     public static final int CUSTOMER_NUMBER_PROVIDER_TELEGRAM_VALUE = 3;
+    /**
+     * <code>CUSTOMER_NUMBER_PROVIDER_WEB = 4;</code>
+     */
+    public static final int CUSTOMER_NUMBER_PROVIDER_WEB_VALUE = 4;
 
 
     @java.lang.Override
@@ -467,6 +475,7 @@ public final class Common {
         case 1: return CUSTOMER_NUMBER_PROVIDER_FACEBOOK;
         case 2: return CUSTOMER_NUMBER_PROVIDER_TELCO;
         case 3: return CUSTOMER_NUMBER_PROVIDER_TELEGRAM;
+        case 4: return CUSTOMER_NUMBER_PROVIDER_WEB;
         default: return null;
       }
     }
@@ -5248,6 +5257,298 @@ public final class Common {
     }
   }
 
+  public interface WebChannelNumberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebChannelNumber)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string number = 1;</code>
+     * @return The number.
+     */
+    java.lang.String getNumber();
+    /**
+     * <code>string number = 1;</code>
+     * @return The bytes for number.
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.WebChannelNumber}
+   */
+  public  static final class WebChannelNumber extends
+      com.google.protobuf.GeneratedMessageLite<
+          WebChannelNumber, WebChannelNumber.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebChannelNumber)
+      WebChannelNumberOrBuilder {
+    private WebChannelNumber() {
+      number_ = "";
+    }
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private java.lang.String number_;
+    /**
+     * <code>string number = 1;</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public java.lang.String getNumber() {
+      return number_;
+    }
+    /**
+     * <code>string number = 1;</code>
+     * @return The bytes for number.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(number_);
+    }
+    /**
+     * <code>string number = 1;</code>
+     * @param value The number to set.
+     */
+    private void setNumber(
+        java.lang.String value) {
+      value.getClass();
+  
+      number_ = value;
+    }
+    /**
+     * <code>string number = 1;</code>
+     */
+    private void clearNumber() {
+      
+      number_ = getDefaultInstance().getNumber();
+    }
+    /**
+     * <code>string number = 1;</code>
+     * @param value The bytes for number to set.
+     */
+    private void setNumberBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      number_ = value.toStringUtf8();
+      
+    }
+
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.WebChannelNumber parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.WebChannelNumber prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.WebChannelNumber}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.WebChannelNumber, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebChannelNumber)
+        com.elarian.hera.proto.Common.WebChannelNumberOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.WebChannelNumber.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string number = 1;</code>
+       * @return The number.
+       */
+      @java.lang.Override
+      public java.lang.String getNumber() {
+        return instance.getNumber();
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @return The bytes for number.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        return instance.getNumberBytes();
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNumber(value);
+        return this;
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        copyOnWrite();
+        instance.clearNumber();
+        return this;
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @param value The bytes for number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNumberBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebChannelNumber)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.WebChannelNumber();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "number_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.WebChannelNumber> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.WebChannelNumber.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.WebChannelNumber>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebChannelNumber)
+    private static final com.elarian.hera.proto.Common.WebChannelNumber DEFAULT_INSTANCE;
+    static {
+      WebChannelNumber defaultInstance = new WebChannelNumber();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        WebChannelNumber.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.WebChannelNumber getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<WebChannelNumber> PARSER;
+
+    public static com.google.protobuf.Parser<WebChannelNumber> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface TextMessageTemplateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.TextMessageTemplate)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -8265,6 +8566,631 @@ public final class Common {
     private static volatile com.google.protobuf.Parser<UssdHop> PARSER;
 
     public static com.google.protobuf.Parser<UssdHop> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface WebActionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebAction)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    int getPropertiesCount();
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    boolean containsProperties(
+        java.lang.String key);
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getProperties();
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getPropertiesMap();
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+
+    java.lang.String getPropertiesOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.WebAction}
+   */
+  public  static final class WebAction extends
+      com.google.protobuf.GeneratedMessageLite<
+          WebAction, WebAction.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebAction)
+      WebActionOrBuilder {
+    private WebAction() {
+      key_ = "";
+    }
+    public static final int KEY_FIELD_NUMBER = 1;
+    private java.lang.String key_;
+    /**
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      return key_;
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(key_);
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @param value The key to set.
+     */
+    private void setKey(
+        java.lang.String value) {
+      value.getClass();
+  
+      key_ = value;
+    }
+    /**
+     * <code>string key = 1;</code>
+     */
+    private void clearKey() {
+      
+      key_ = getDefaultInstance().getKey();
+    }
+    /**
+     * <code>string key = 1;</code>
+     * @param value The bytes for key to set.
+     */
+    private void setKeyBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      key_ = value.toStringUtf8();
+      
+    }
+
+    public static final int PROPERTIES_FIELD_NUMBER = 2;
+    private static final class PropertiesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, java.lang.String> properties_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetProperties() {
+      return properties_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetMutableProperties() {
+      if (!properties_.isMutable()) {
+        properties_ = properties_.mutableCopy();
+      }
+      return properties_;
+    }
+    @java.lang.Override
+
+    public int getPropertiesCount() {
+      return internalGetProperties().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    @java.lang.Override
+
+    public boolean containsProperties(
+        java.lang.String key) {
+      key.getClass();
+      return internalGetProperties().containsKey(key);
+    }
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+      return getPropertiesMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetProperties());
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPropertiesOrThrow(
+        java.lang.String key) {
+      key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 2;</code>
+     */
+    private java.util.Map<java.lang.String, java.lang.String>
+    getMutablePropertiesMap() {
+      return internalGetMutableProperties();
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    private void setCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  createdAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (createdAt_ != null &&
+          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdAt_ =
+          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+      } else {
+        createdAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    private void clearCreatedAt() {  createdAt_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.WebAction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.WebAction prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.WebAction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.WebAction, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebAction)
+        com.elarian.hera.proto.Common.WebActionOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.WebAction.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string key = 1;</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public java.lang.String getKey() {
+        return instance.getKey();
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @return The bytes for key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        return instance.getKeyBytes();
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setKey(value);
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        copyOnWrite();
+        instance.clearKey();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setKeyBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getPropertiesCount() {
+        return instance.getPropertiesMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      @java.lang.Override
+
+      public boolean containsProperties(
+          java.lang.String key) {
+        key.getClass();
+        return instance.getPropertiesMap().containsKey(key);
+      }
+
+      public Builder clearProperties() {
+        copyOnWrite();
+        instance.getMutablePropertiesMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+
+      public Builder removeProperties(
+          java.lang.String key) {
+        key.getClass();
+        copyOnWrite();
+        instance.getMutablePropertiesMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+        return getPropertiesMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getPropertiesMap());
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getPropertiesMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPropertiesOrThrow(
+          java.lang.String key) {
+        key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getPropertiesMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      public Builder putProperties(
+          java.lang.String key,
+          java.lang.String value) {
+        key.getClass();
+        value.getClass();
+        copyOnWrite();
+        instance.getMutablePropertiesMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 2;</code>
+       */
+      public Builder putAllProperties(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        copyOnWrite();
+        instance.getMutablePropertiesMap().putAll(values);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedAt() {
+        return instance.hasCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        return instance.getCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder clearCreatedAt() {  copyOnWrite();
+        instance.clearCreatedAt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebAction)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.WebAction();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "key_",
+              "properties_",
+              PropertiesDefaultEntryHolder.defaultEntry,
+              "createdAt_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0001\u0000\u0000\u0001\u0208\u00022\u0003" +
+                "\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.WebAction> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.WebAction.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.WebAction>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebAction)
+    private static final com.elarian.hera.proto.Common.WebAction DEFAULT_INSTANCE;
+    static {
+      WebAction defaultInstance = new WebAction();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        WebAction.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.WebAction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<WebAction> PARSER;
+
+    public static com.google.protobuf.Parser<WebAction> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

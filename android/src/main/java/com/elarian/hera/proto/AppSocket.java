@@ -928,6 +928,17 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand getMakeVoiceCall();
 
+    /**
+     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+     * @return Whether the webAction field is set.
+     */
+    boolean hasWebAction();
+    /**
+     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+     * @return The webAction.
+     */
+    com.elarian.hera.proto.AppSocket.WebActionCommand getWebAction();
+
     public com.elarian.hera.proto.AppSocket.AppToServerCommand.EntryCase getEntryCase();
   }
   /**
@@ -965,6 +976,7 @@ public final class AppSocket {
       MESSAGING_CONSENT(20),
       INITIATE_PAYMENT(21),
       MAKE_VOICE_CALL(22),
+      WEB_ACTION(23),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -1002,6 +1014,7 @@ public final class AppSocket {
           case 20: return MESSAGING_CONSENT;
           case 21: return INITIATE_PAYMENT;
           case 22: return MAKE_VOICE_CALL;
+          case 23: return WEB_ACTION;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -2118,6 +2131,56 @@ public final class AppSocket {
      */
     private void clearMakeVoiceCall() {
       if (entryCase_ == 22) {
+        entryCase_ = 0;
+        entry_ = null;
+      }
+    }
+
+    public static final int WEB_ACTION_FIELD_NUMBER = 23;
+    /**
+     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+     */
+    @java.lang.Override
+    public boolean hasWebAction() {
+      return entryCase_ == 23;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.WebActionCommand getWebAction() {
+      if (entryCase_ == 23) {
+         return (com.elarian.hera.proto.AppSocket.WebActionCommand) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.WebActionCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+     */
+    private void setWebAction(com.elarian.hera.proto.AppSocket.WebActionCommand value) {
+      value.getClass();
+  entry_ = value;
+      entryCase_ = 23;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+     */
+    private void mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionCommand value) {
+      value.getClass();
+  if (entryCase_ == 23 &&
+          entry_ != com.elarian.hera.proto.AppSocket.WebActionCommand.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.WebActionCommand.newBuilder((com.elarian.hera.proto.AppSocket.WebActionCommand) entry_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        entry_ = value;
+      }
+      entryCase_ = 23;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+     */
+    private void clearWebAction() {
+      if (entryCase_ == 23) {
         entryCase_ = 0;
         entry_ = null;
       }
@@ -3286,6 +3349,54 @@ public final class AppSocket {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+       */
+      @java.lang.Override
+      public boolean hasWebAction() {
+        return instance.hasWebAction();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.WebActionCommand getWebAction() {
+        return instance.getWebAction();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+       */
+      public Builder setWebAction(com.elarian.hera.proto.AppSocket.WebActionCommand value) {
+        copyOnWrite();
+        instance.setWebAction(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+       */
+      public Builder setWebAction(
+          com.elarian.hera.proto.AppSocket.WebActionCommand.Builder builderForValue) {
+        copyOnWrite();
+        instance.setWebAction(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+       */
+      public Builder mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionCommand value) {
+        copyOnWrite();
+        instance.mergeWebAction(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
+       */
+      public Builder clearWebAction() {
+        copyOnWrite();
+        instance.clearWebAction();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppToServerCommand)
     }
     @java.lang.Override
@@ -3326,13 +3437,14 @@ public final class AppSocket {
               com.elarian.hera.proto.AppSocket.MessagingConsentCommand.class,
               com.elarian.hera.proto.AppSocket.InitiatePaymentCommand.class,
               com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand.class,
+              com.elarian.hera.proto.AppSocket.WebActionCommand.class,
             };
             java.lang.String info =
-                "\u0000\u0016\u0001\u0000\u0001\u0016\u0016\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000\u0017\u0001\u0000\u0001\u0017\u0017\u0000\u0000\u0000\u0001<\u0000\u0002<" +
                 "\u0000\u0003<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000" +
                 "\t<\u0000\n<\u0000\u000b<\u0000\f<\u0000\r<\u0000\u000e<\u0000\u000f<\u0000\u0010" +
                 "<\u0000\u0011<\u0000\u0012<\u0000\u0013<\u0000\u0014<\u0000\u0015<\u0000\u0016<\u0000" +
-                "";
+                "\u0017<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3501,6 +3613,17 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.AppSocket.TagCommandReply getTagCommand();
 
+    /**
+     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     * @return Whether the webAction field is set.
+     */
+    boolean hasWebAction();
+    /**
+     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     * @return The webAction.
+     */
+    com.elarian.hera.proto.AppSocket.WebActionReply getWebAction();
+
     public com.elarian.hera.proto.AppSocket.AppToServerCommandReply.EntryCase getEntryCase();
   }
   /**
@@ -3526,6 +3649,7 @@ public final class AppSocket {
       INITIATE_PAYMENT(8),
       MAKE_VOICE_CALL(9),
       TAG_COMMAND(10),
+      WEB_ACTION(11),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -3551,6 +3675,7 @@ public final class AppSocket {
           case 8: return INITIATE_PAYMENT;
           case 9: return MAKE_VOICE_CALL;
           case 10: return TAG_COMMAND;
+          case 11: return WEB_ACTION;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -4067,6 +4192,56 @@ public final class AppSocket {
      */
     private void clearTagCommand() {
       if (entryCase_ == 10) {
+        entryCase_ = 0;
+        entry_ = null;
+      }
+    }
+
+    public static final int WEB_ACTION_FIELD_NUMBER = 11;
+    /**
+     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     */
+    @java.lang.Override
+    public boolean hasWebAction() {
+      return entryCase_ == 11;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.WebActionReply getWebAction() {
+      if (entryCase_ == 11) {
+         return (com.elarian.hera.proto.AppSocket.WebActionReply) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.WebActionReply.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     */
+    private void setWebAction(com.elarian.hera.proto.AppSocket.WebActionReply value) {
+      value.getClass();
+  entry_ = value;
+      entryCase_ = 11;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     */
+    private void mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionReply value) {
+      value.getClass();
+  if (entryCase_ == 11 &&
+          entry_ != com.elarian.hera.proto.AppSocket.WebActionReply.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.WebActionReply.newBuilder((com.elarian.hera.proto.AppSocket.WebActionReply) entry_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        entry_ = value;
+      }
+      entryCase_ = 11;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     */
+    private void clearWebAction() {
+      if (entryCase_ == 11) {
         entryCase_ = 0;
         entry_ = null;
       }
@@ -4659,6 +4834,54 @@ public final class AppSocket {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       */
+      @java.lang.Override
+      public boolean hasWebAction() {
+        return instance.hasWebAction();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.WebActionReply getWebAction() {
+        return instance.getWebAction();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       */
+      public Builder setWebAction(com.elarian.hera.proto.AppSocket.WebActionReply value) {
+        copyOnWrite();
+        instance.setWebAction(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       */
+      public Builder setWebAction(
+          com.elarian.hera.proto.AppSocket.WebActionReply.Builder builderForValue) {
+        copyOnWrite();
+        instance.setWebAction(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       */
+      public Builder mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionReply value) {
+        copyOnWrite();
+        instance.mergeWebAction(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       */
+      public Builder clearWebAction() {
+        copyOnWrite();
+        instance.clearWebAction();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppToServerCommandReply)
     }
     @java.lang.Override
@@ -4687,11 +4910,12 @@ public final class AppSocket {
               com.elarian.hera.proto.AppSocket.InitiatePaymentReply.class,
               com.elarian.hera.proto.AppSocket.MakeVoiceCallReply.class,
               com.elarian.hera.proto.AppSocket.TagCommandReply.class,
+              com.elarian.hera.proto.AppSocket.WebActionReply.class,
             };
             java.lang.String info =
-                "\u0000\n\u0001\u0000\u0001\n\n\u0000\u0000\u0000\u0001<\u0000\u0002<\u0000\u0003" +
-                "<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000\t<\u0000\n<" +
-                "\u0000";
+                "\u0000\u000b\u0001\u0000\u0001\u000b\u000b\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000\u0003<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000" +
+                "\t<\u0000\n<\u0000\u000b<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -23904,6 +24128,1305 @@ public final class AppSocket {
     }
   }
 
+  public interface WebActionCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebActionCommand)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
+     */
+    com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber();
+
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    java.lang.String getSessionId();
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    com.google.protobuf.ByteString
+        getSessionIdBytes();
+
+    /**
+     * <code>string key = 4;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 4;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+    int getPropertiesCount();
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+    boolean containsProperties(
+        java.lang.String key);
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getProperties();
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getPropertiesMap();
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+
+    java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+
+    java.lang.String getPropertiesOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.WebActionCommand}
+   */
+  public  static final class WebActionCommand extends
+      com.google.protobuf.GeneratedMessageLite<
+          WebActionCommand, WebActionCommand.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebActionCommand)
+      WebActionCommandOrBuilder {
+    private WebActionCommand() {
+      sessionId_ = "";
+      key_ = "";
+    }
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  customerNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
+    }
+
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.Common.WebChannelNumber channelNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance() : channelNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    private void setChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+      value.getClass();
+  channelNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.Common.WebChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    private void clearChannelNumber() {  channelNumber_ = null;
+      
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 3;
+    private java.lang.String sessionId_;
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionId() {
+      return sessionId_;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      value.getClass();
+  
+      sessionId_ = value;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     */
+    private void clearSessionId() {
+      
+      sessionId_ = getDefaultInstance().getSessionId();
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int KEY_FIELD_NUMBER = 4;
+    private java.lang.String key_;
+    /**
+     * <code>string key = 4;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      return key_;
+    }
+    /**
+     * <code>string key = 4;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(key_);
+    }
+    /**
+     * <code>string key = 4;</code>
+     * @param value The key to set.
+     */
+    private void setKey(
+        java.lang.String value) {
+      value.getClass();
+  
+      key_ = value;
+    }
+    /**
+     * <code>string key = 4;</code>
+     */
+    private void clearKey() {
+      
+      key_ = getDefaultInstance().getKey();
+    }
+    /**
+     * <code>string key = 4;</code>
+     * @param value The bytes for key to set.
+     */
+    private void setKeyBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      key_ = value.toStringUtf8();
+      
+    }
+
+    public static final int PROPERTIES_FIELD_NUMBER = 5;
+    private static final class PropertiesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, java.lang.String> properties_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetProperties() {
+      return properties_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetMutableProperties() {
+      if (!properties_.isMutable()) {
+        properties_ = properties_.mutableCopy();
+      }
+      return properties_;
+    }
+    @java.lang.Override
+
+    public int getPropertiesCount() {
+      return internalGetProperties().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+    @java.lang.Override
+
+    public boolean containsProperties(
+        java.lang.String key) {
+      key.getClass();
+      return internalGetProperties().containsKey(key);
+    }
+    /**
+     * Use {@link #getPropertiesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+      return getPropertiesMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetProperties());
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPropertiesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPropertiesOrThrow(
+        java.lang.String key) {
+      key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProperties();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, string&gt; properties = 5;</code>
+     */
+    private java.util.Map<java.lang.String, java.lang.String>
+    getMutablePropertiesMap() {
+      return internalGetMutableProperties();
+    }
+
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.WebActionCommand prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.WebActionCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.AppSocket.WebActionCommand, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebActionCommand)
+        com.elarian.hera.proto.AppSocket.WebActionCommandOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.WebActionCommand.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber() {
+        return instance.getChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+        copyOnWrite();
+        instance.setChannelNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.Common.WebChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+        copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
+        return this;
+      }
+
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public java.lang.String getSessionId() {
+        return instance.getSessionId();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The bytes for sessionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSessionIdBytes() {
+        return instance.getSessionIdBytes();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSessionId(value);
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        copyOnWrite();
+        instance.clearSessionId();
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The bytes for sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string key = 4;</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public java.lang.String getKey() {
+        return instance.getKey();
+      }
+      /**
+       * <code>string key = 4;</code>
+       * @return The bytes for key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        return instance.getKeyBytes();
+      }
+      /**
+       * <code>string key = 4;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setKey(value);
+        return this;
+      }
+      /**
+       * <code>string key = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        copyOnWrite();
+        instance.clearKey();
+        return this;
+      }
+      /**
+       * <code>string key = 4;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setKeyBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getPropertiesCount() {
+        return instance.getPropertiesMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 5;</code>
+       */
+      @java.lang.Override
+
+      public boolean containsProperties(
+          java.lang.String key) {
+        key.getClass();
+        return instance.getPropertiesMap().containsKey(key);
+      }
+
+      public Builder clearProperties() {
+        copyOnWrite();
+        instance.getMutablePropertiesMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 5;</code>
+       */
+
+      public Builder removeProperties(
+          java.lang.String key) {
+        key.getClass();
+        copyOnWrite();
+        instance.getMutablePropertiesMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getPropertiesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getProperties() {
+        return getPropertiesMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 5;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getPropertiesMap());
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 5;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPropertiesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getPropertiesMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 5;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPropertiesOrThrow(
+          java.lang.String key) {
+        key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getPropertiesMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 5;</code>
+       */
+      public Builder putProperties(
+          java.lang.String key,
+          java.lang.String value) {
+        key.getClass();
+        value.getClass();
+        copyOnWrite();
+        instance.getMutablePropertiesMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; properties = 5;</code>
+       */
+      public Builder putAllProperties(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        copyOnWrite();
+        instance.getMutablePropertiesMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebActionCommand)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.AppSocket.WebActionCommand();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerNumber_",
+              "channelNumber_",
+              "sessionId_",
+              "key_",
+              "properties_",
+              PropertiesDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0001\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\u0208\u0004\u0208\u00052";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.WebActionCommand> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.AppSocket.WebActionCommand.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.WebActionCommand>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebActionCommand)
+    private static final com.elarian.hera.proto.AppSocket.WebActionCommand DEFAULT_INSTANCE;
+    static {
+      WebActionCommand defaultInstance = new WebActionCommand();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        WebActionCommand.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.AppSocket.WebActionCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<WebActionCommand> PARSER;
+
+    public static com.google.protobuf.Parser<WebActionCommand> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface WebActionReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebActionReply)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>bool status = 1;</code>
+     * @return The status.
+     */
+    boolean getStatus();
+
+    /**
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     * @return Whether the customerId field is set.
+     */
+    boolean hasCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     * @return The customerId.
+     */
+    com.google.protobuf.StringValue getCustomerId();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.WebActionReply}
+   */
+  public  static final class WebActionReply extends
+      com.google.protobuf.GeneratedMessageLite<
+          WebActionReply, WebActionReply.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebActionReply)
+      WebActionReplyOrBuilder {
+    private WebActionReply() {
+      description_ = "";
+    }
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private boolean status_;
+    /**
+     * <code>bool status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public boolean getStatus() {
+      return status_;
+    }
+    /**
+     * <code>bool status = 1;</code>
+     * @param value The status to set.
+     */
+    private void setStatus(boolean value) {
+      
+      status_ = value;
+    }
+    /**
+     * <code>bool status = 1;</code>
+     */
+    private void clearStatus() {
+      
+      status_ = false;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private java.lang.String description_;
+    /**
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      return description_;
+    }
+    /**
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <code>string description = 2;</code>
+     * @param value The description to set.
+     */
+    private void setDescription(
+        java.lang.String value) {
+      value.getClass();
+  
+      description_ = value;
+    }
+    /**
+     * <code>string description = 2;</code>
+     */
+    private void clearDescription() {
+      
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <code>string description = 2;</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+      
+    }
+
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue customerId_;
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerId() {
+      return customerId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getCustomerId() {
+      return customerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    private void setCustomerId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  customerId_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (customerId_ != null &&
+          customerId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        customerId_ =
+          com.google.protobuf.StringValue.newBuilder(customerId_).mergeFrom(value).buildPartial();
+      } else {
+        customerId_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_id = 3;</code>
+     */
+    private void clearCustomerId() {  customerId_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.WebActionReply prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.WebActionReply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.AppSocket.WebActionReply, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebActionReply)
+        com.elarian.hera.proto.AppSocket.WebActionReplyOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.WebActionReply.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>bool status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public boolean getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>bool status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(boolean value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <code>bool status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
+        return this;
+      }
+
+      /**
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      @java.lang.Override
+      public java.lang.String getDescription() {
+        return instance.getDescription();
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        return instance.getDescriptionBytes();
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDescription(value);
+        return this;
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        copyOnWrite();
+        instance.clearDescription();
+        return this;
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerId() {
+        return instance.hasCustomerId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getCustomerId() {
+        return instance.getCustomerId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder setCustomerId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setCustomerId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder setCustomerId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder mergeCustomerId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_id = 3;</code>
+       */
+      public Builder clearCustomerId() {  copyOnWrite();
+        instance.clearCustomerId();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebActionReply)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.AppSocket.WebActionReply();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "status_",
+              "description_",
+              "customerId_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0007\u0002\u0208" +
+                "\u0003\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.WebActionReply> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.AppSocket.WebActionReply.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.WebActionReply>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebActionReply)
+    private static final com.elarian.hera.proto.AppSocket.WebActionReply DEFAULT_INSTANCE;
+    static {
+      WebActionReply defaultInstance = new WebActionReply();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        WebActionReply.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.AppSocket.WebActionReply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<WebActionReply> PARSER;
+
+    public static com.google.protobuf.Parser<WebActionReply> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface ServerToAppNotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ServerToAppNotification)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -24538,6 +26061,17 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification getWalletPaymentStatus();
 
+    /**
+     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     * @return Whether the webAction field is set.
+     */
+    boolean hasWebAction();
+    /**
+     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     * @return The webAction.
+     */
+    com.elarian.hera.proto.AppSocket.WebActionNotification getWebAction();
+
     public com.elarian.hera.proto.AppSocket.ServerToAppCustomerNotification.EntryCase getEntryCase();
   }
   /**
@@ -24566,6 +26100,7 @@ public final class AppSocket {
       RECEIVED_PAYMENT(13),
       PAYMENT_STATUS(14),
       WALLET_PAYMENT_STATUS(15),
+      WEB_ACTION(16),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -24591,6 +26126,7 @@ public final class AppSocket {
           case 13: return RECEIVED_PAYMENT;
           case 14: return PAYMENT_STATUS;
           case 15: return WALLET_PAYMENT_STATUS;
+          case 16: return WEB_ACTION;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -25340,6 +26876,56 @@ public final class AppSocket {
      */
     private void clearWalletPaymentStatus() {
       if (entryCase_ == 15) {
+        entryCase_ = 0;
+        entry_ = null;
+      }
+    }
+
+    public static final int WEB_ACTION_FIELD_NUMBER = 16;
+    /**
+     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     */
+    @java.lang.Override
+    public boolean hasWebAction() {
+      return entryCase_ == 16;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.WebActionNotification getWebAction() {
+      if (entryCase_ == 16) {
+         return (com.elarian.hera.proto.AppSocket.WebActionNotification) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.WebActionNotification.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     */
+    private void setWebAction(com.elarian.hera.proto.AppSocket.WebActionNotification value) {
+      value.getClass();
+  entry_ = value;
+      entryCase_ = 16;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     */
+    private void mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionNotification value) {
+      value.getClass();
+  if (entryCase_ == 16 &&
+          entry_ != com.elarian.hera.proto.AppSocket.WebActionNotification.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.WebActionNotification.newBuilder((com.elarian.hera.proto.AppSocket.WebActionNotification) entry_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        entry_ = value;
+      }
+      entryCase_ = 16;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     */
+    private void clearWebAction() {
+      if (entryCase_ == 16) {
         entryCase_ = 0;
         entry_ = null;
       }
@@ -26173,6 +27759,54 @@ public final class AppSocket {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       */
+      @java.lang.Override
+      public boolean hasWebAction() {
+        return instance.hasWebAction();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.WebActionNotification getWebAction() {
+        return instance.getWebAction();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       */
+      public Builder setWebAction(com.elarian.hera.proto.AppSocket.WebActionNotification value) {
+        copyOnWrite();
+        instance.setWebAction(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       */
+      public Builder setWebAction(
+          com.elarian.hera.proto.AppSocket.WebActionNotification.Builder builderForValue) {
+        copyOnWrite();
+        instance.setWebAction(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       */
+      public Builder mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionNotification value) {
+        copyOnWrite();
+        instance.mergeWebAction(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       */
+      public Builder clearWebAction() {
+        copyOnWrite();
+        instance.clearWebAction();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ServerToAppCustomerNotification)
     }
     @java.lang.Override
@@ -26206,11 +27840,12 @@ public final class AppSocket {
               com.elarian.hera.proto.AppSocket.ReceivedPaymentNotification.class,
               com.elarian.hera.proto.AppSocket.PaymentStatusNotification.class,
               com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.class,
+              com.elarian.hera.proto.AppSocket.WebActionNotification.class,
             };
             java.lang.String info =
-                "\u0000\u000f\u0001\u0000\u0001\u000f\u000f\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0000\u0010\u0001\u0000\u0001\u0010\u0010\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
                 "\u0003\u0208\u0004\t\u0005\t\u0006<\u0000\u0007<\u0000\b<\u0000\t<\u0000\n<\u0000" +
-                "\u000b<\u0000\f<\u0000\r<\u0000\u000e<\u0000\u000f<\u0000";
+                "\u000b<\u0000\f<\u0000\r<\u0000\u000e<\u0000\u000f<\u0000\u0010<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -34048,6 +35683,614 @@ public final class AppSocket {
     private static volatile com.google.protobuf.Parser<WalletPaymentStatusNotification> PARSER;
 
     public static com.google.protobuf.Parser<WalletPaymentStatusNotification> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface WebActionNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebActionNotification)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
+     */
+    com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber();
+
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    java.lang.String getSessionId();
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    com.google.protobuf.ByteString
+        getSessionIdBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     * @return Whether the action field is set.
+     */
+    boolean hasAction();
+    /**
+     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     * @return The action.
+     */
+    com.elarian.hera.proto.Common.WebAction getAction();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.WebActionNotification}
+   */
+  public  static final class WebActionNotification extends
+      com.google.protobuf.GeneratedMessageLite<
+          WebActionNotification, WebActionNotification.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebActionNotification)
+      WebActionNotificationOrBuilder {
+    private WebActionNotification() {
+      sessionId_ = "";
+    }
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  customerNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
+    }
+
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.Common.WebChannelNumber channelNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance() : channelNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    private void setChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+      value.getClass();
+  channelNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.Common.WebChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     */
+    private void clearChannelNumber() {  channelNumber_ = null;
+      
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 3;
+    private java.lang.String sessionId_;
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionId() {
+      return sessionId_;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      value.getClass();
+  
+      sessionId_ = value;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     */
+    private void clearSessionId() {
+      
+      sessionId_ = getDefaultInstance().getSessionId();
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.Common.WebAction action_;
+    /**
+     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasAction() {
+      return action_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.WebAction getAction() {
+      return action_ == null ? com.elarian.hera.proto.Common.WebAction.getDefaultInstance() : action_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     */
+    private void setAction(com.elarian.hera.proto.Common.WebAction value) {
+      value.getClass();
+  action_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAction(com.elarian.hera.proto.Common.WebAction value) {
+      value.getClass();
+  if (action_ != null &&
+          action_ != com.elarian.hera.proto.Common.WebAction.getDefaultInstance()) {
+        action_ =
+          com.elarian.hera.proto.Common.WebAction.newBuilder(action_).mergeFrom(value).buildPartial();
+      } else {
+        action_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     */
+    private void clearAction() {  action_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.WebActionNotification prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.WebActionNotification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.AppSocket.WebActionNotification, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebActionNotification)
+        com.elarian.hera.proto.AppSocket.WebActionNotificationOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.WebActionNotification.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber() {
+        return instance.getChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+        copyOnWrite();
+        instance.setChannelNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.Common.WebChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+        copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
+        return this;
+      }
+
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public java.lang.String getSessionId() {
+        return instance.getSessionId();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The bytes for sessionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSessionIdBytes() {
+        return instance.getSessionIdBytes();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSessionId(value);
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        copyOnWrite();
+        instance.clearSessionId();
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The bytes for sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasAction() {
+        return instance.hasAction();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.WebAction getAction() {
+        return instance.getAction();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       */
+      public Builder setAction(com.elarian.hera.proto.Common.WebAction value) {
+        copyOnWrite();
+        instance.setAction(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       */
+      public Builder setAction(
+          com.elarian.hera.proto.Common.WebAction.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAction(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       */
+      public Builder mergeAction(com.elarian.hera.proto.Common.WebAction value) {
+        copyOnWrite();
+        instance.mergeAction(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       */
+      public Builder clearAction() {  copyOnWrite();
+        instance.clearAction();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebActionNotification)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.AppSocket.WebActionNotification();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerNumber_",
+              "channelNumber_",
+              "sessionId_",
+              "action_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\u0208\u0004\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.WebActionNotification> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.AppSocket.WebActionNotification.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.WebActionNotification>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebActionNotification)
+    private static final com.elarian.hera.proto.AppSocket.WebActionNotification DEFAULT_INSTANCE;
+    static {
+      WebActionNotification defaultInstance = new WebActionNotification();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        WebActionNotification.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.AppSocket.WebActionNotification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<WebActionNotification> PARSER;
+
+    public static com.google.protobuf.Parser<WebActionNotification> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
