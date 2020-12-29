@@ -37,6 +37,10 @@ public final class Common {
      * <code>MESSAGING_CHANNEL_WHATSAPP = 5;</code>
      */
     MESSAGING_CHANNEL_WHATSAPP(5),
+    /**
+     * <code>MESSAGING_CHANNEL_EMAIL = 6;</code>
+     */
+    MESSAGING_CHANNEL_EMAIL(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -64,6 +68,10 @@ public final class Common {
      * <code>MESSAGING_CHANNEL_WHATSAPP = 5;</code>
      */
     public static final int MESSAGING_CHANNEL_WHATSAPP_VALUE = 5;
+    /**
+     * <code>MESSAGING_CHANNEL_EMAIL = 6;</code>
+     */
+    public static final int MESSAGING_CHANNEL_EMAIL_VALUE = 6;
 
 
     @java.lang.Override
@@ -93,6 +101,7 @@ public final class Common {
         case 3: return MESSAGING_CHANNEL_SMS;
         case 4: return MESSAGING_CHANNEL_TELEGRAM;
         case 5: return MESSAGING_CHANNEL_WHATSAPP;
+        case 6: return MESSAGING_CHANNEL_EMAIL;
         default: return null;
       }
     }
@@ -425,6 +434,10 @@ public final class Common {
      * <code>CUSTOMER_NUMBER_PROVIDER_WEB = 4;</code>
      */
     CUSTOMER_NUMBER_PROVIDER_WEB(4),
+    /**
+     * <code>CUSTOMER_NUMBER_PROVIDER_EMAIL = 5;</code>
+     */
+    CUSTOMER_NUMBER_PROVIDER_EMAIL(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -448,6 +461,10 @@ public final class Common {
      * <code>CUSTOMER_NUMBER_PROVIDER_WEB = 4;</code>
      */
     public static final int CUSTOMER_NUMBER_PROVIDER_WEB_VALUE = 4;
+    /**
+     * <code>CUSTOMER_NUMBER_PROVIDER_EMAIL = 5;</code>
+     */
+    public static final int CUSTOMER_NUMBER_PROVIDER_EMAIL_VALUE = 5;
 
 
     @java.lang.Override
@@ -476,6 +493,7 @@ public final class Common {
         case 2: return CUSTOMER_NUMBER_PROVIDER_TELCO;
         case 3: return CUSTOMER_NUMBER_PROVIDER_TELEGRAM;
         case 4: return CUSTOMER_NUMBER_PROVIDER_WEB;
+        case 5: return CUSTOMER_NUMBER_PROVIDER_EMAIL;
         default: return null;
       }
     }
@@ -1191,9 +1209,9 @@ public final class Common {
   public enum MessageDeliveryStatus
       implements com.google.protobuf.Internal.EnumLite {
     /**
-     * <code>MESSAGE_DELIVERY_STATUS_UNSEPCIFIED = 0;</code>
+     * <code>MESSAGE_DELIVERY_STATUS_UNSPECIFIED = 0;</code>
      */
-    MESSAGE_DELIVERY_STATUS_UNSEPCIFIED(0),
+    MESSAGE_DELIVERY_STATUS_UNSPECIFIED(0),
     /**
      * <code>MESSAGE_DELIVERY_STATUS_QUEUED = 100;</code>
      */
@@ -1214,6 +1232,18 @@ public final class Common {
      * <code>MESSAGE_DELIVERY_STATUS_RECEIVED = 302;</code>
      */
     MESSAGE_DELIVERY_STATUS_RECEIVED(302),
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_CLICKED = 303;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_CLICKED(303),
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED = 304;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED(304),
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_COMPLAINED = 305;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_COMPLAINED(305),
     /**
      * <code>MESSAGE_DELIVERY_STATUS_FAILED = 400;</code>
      */
@@ -1271,6 +1301,10 @@ public final class Common {
      */
     MESSAGE_DELIVERY_STATUS_INVALID_REQUEST(413),
     /**
+     * <code>MESSAGE_DELIVERY_STATUS_REJECTED = 414;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_REJECTED(414),
+    /**
      * <code>MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR = 501;</code>
      */
     MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR(501),
@@ -1278,9 +1312,9 @@ public final class Common {
     ;
 
     /**
-     * <code>MESSAGE_DELIVERY_STATUS_UNSEPCIFIED = 0;</code>
+     * <code>MESSAGE_DELIVERY_STATUS_UNSPECIFIED = 0;</code>
      */
-    public static final int MESSAGE_DELIVERY_STATUS_UNSEPCIFIED_VALUE = 0;
+    public static final int MESSAGE_DELIVERY_STATUS_UNSPECIFIED_VALUE = 0;
     /**
      * <code>MESSAGE_DELIVERY_STATUS_QUEUED = 100;</code>
      */
@@ -1301,6 +1335,18 @@ public final class Common {
      * <code>MESSAGE_DELIVERY_STATUS_RECEIVED = 302;</code>
      */
     public static final int MESSAGE_DELIVERY_STATUS_RECEIVED_VALUE = 302;
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_CLICKED = 303;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_CLICKED_VALUE = 303;
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED = 304;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED_VALUE = 304;
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_COMPLAINED = 305;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_COMPLAINED_VALUE = 305;
     /**
      * <code>MESSAGE_DELIVERY_STATUS_FAILED = 400;</code>
      */
@@ -1358,6 +1404,10 @@ public final class Common {
      */
     public static final int MESSAGE_DELIVERY_STATUS_INVALID_REQUEST_VALUE = 413;
     /**
+     * <code>MESSAGE_DELIVERY_STATUS_REJECTED = 414;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_REJECTED_VALUE = 414;
+    /**
      * <code>MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR = 501;</code>
      */
     public static final int MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR_VALUE = 501;
@@ -1384,12 +1434,15 @@ public final class Common {
 
     public static MessageDeliveryStatus forNumber(int value) {
       switch (value) {
-        case 0: return MESSAGE_DELIVERY_STATUS_UNSEPCIFIED;
+        case 0: return MESSAGE_DELIVERY_STATUS_UNSPECIFIED;
         case 100: return MESSAGE_DELIVERY_STATUS_QUEUED;
         case 101: return MESSAGE_DELIVERY_STATUS_SENT;
         case 300: return MESSAGE_DELIVERY_STATUS_DELIVERED;
         case 301: return MESSAGE_DELIVERY_STATUS_READ;
         case 302: return MESSAGE_DELIVERY_STATUS_RECEIVED;
+        case 303: return MESSAGE_DELIVERY_STATUS_CLICKED;
+        case 304: return MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED;
+        case 305: return MESSAGE_DELIVERY_STATUS_COMPLAINED;
         case 400: return MESSAGE_DELIVERY_STATUS_FAILED;
         case 401: return MESSAGE_DELIVERY_STATUS_NO_CONSENT;
         case 402: return MESSAGE_DELIVERY_STATUS_NO_CAPABILITY;
@@ -1404,6 +1457,7 @@ public final class Common {
         case 411: return MESSAGE_DELIVERY_STATUS_CUSTOMER_NUMBER_NOT_FOUND;
         case 412: return MESSAGE_DELIVERY_STATUS_DECOMMISSIONED_CUSTOMERID;
         case 413: return MESSAGE_DELIVERY_STATUS_INVALID_REQUEST;
+        case 414: return MESSAGE_DELIVERY_STATUS_REJECTED;
         case 501: return MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR;
         default: return null;
       }
@@ -5262,16 +5316,16 @@ public final class Common {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string number = 1;</code>
-     * @return The number.
+     * <code>string domain = 1;</code>
+     * @return The domain.
      */
-    java.lang.String getNumber();
+    java.lang.String getDomain();
     /**
-     * <code>string number = 1;</code>
-     * @return The bytes for number.
+     * <code>string domain = 1;</code>
+     * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
-        getNumberBytes();
+        getDomainBytes();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.WebChannelNumber}
@@ -5282,52 +5336,52 @@ public final class Common {
       // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebChannelNumber)
       WebChannelNumberOrBuilder {
     private WebChannelNumber() {
-      number_ = "";
+      domain_ = "";
     }
-    public static final int NUMBER_FIELD_NUMBER = 1;
-    private java.lang.String number_;
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    private java.lang.String domain_;
     /**
-     * <code>string number = 1;</code>
-     * @return The number.
+     * <code>string domain = 1;</code>
+     * @return The domain.
      */
     @java.lang.Override
-    public java.lang.String getNumber() {
-      return number_;
+    public java.lang.String getDomain() {
+      return domain_;
     }
     /**
-     * <code>string number = 1;</code>
-     * @return The bytes for number.
+     * <code>string domain = 1;</code>
+     * @return The bytes for domain.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getNumberBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(number_);
+        getDomainBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(domain_);
     }
     /**
-     * <code>string number = 1;</code>
-     * @param value The number to set.
+     * <code>string domain = 1;</code>
+     * @param value The domain to set.
      */
-    private void setNumber(
+    private void setDomain(
         java.lang.String value) {
       value.getClass();
   
-      number_ = value;
+      domain_ = value;
     }
     /**
-     * <code>string number = 1;</code>
+     * <code>string domain = 1;</code>
      */
-    private void clearNumber() {
+    private void clearDomain() {
       
-      number_ = getDefaultInstance().getNumber();
+      domain_ = getDefaultInstance().getDomain();
     }
     /**
-     * <code>string number = 1;</code>
-     * @param value The bytes for number to set.
+     * <code>string domain = 1;</code>
+     * @param value The bytes for domain to set.
      */
-    private void setNumberBytes(
+    private void setDomainBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
-      number_ = value.toStringUtf8();
+      domain_ = value.toStringUtf8();
       
     }
 
@@ -5427,51 +5481,51 @@ public final class Common {
 
 
       /**
-       * <code>string number = 1;</code>
-       * @return The number.
+       * <code>string domain = 1;</code>
+       * @return The domain.
        */
       @java.lang.Override
-      public java.lang.String getNumber() {
-        return instance.getNumber();
+      public java.lang.String getDomain() {
+        return instance.getDomain();
       }
       /**
-       * <code>string number = 1;</code>
-       * @return The bytes for number.
+       * <code>string domain = 1;</code>
+       * @return The bytes for domain.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString
-          getNumberBytes() {
-        return instance.getNumberBytes();
+          getDomainBytes() {
+        return instance.getDomainBytes();
       }
       /**
-       * <code>string number = 1;</code>
-       * @param value The number to set.
+       * <code>string domain = 1;</code>
+       * @param value The domain to set.
        * @return This builder for chaining.
        */
-      public Builder setNumber(
+      public Builder setDomain(
           java.lang.String value) {
         copyOnWrite();
-        instance.setNumber(value);
+        instance.setDomain(value);
         return this;
       }
       /**
-       * <code>string number = 1;</code>
+       * <code>string domain = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNumber() {
+      public Builder clearDomain() {
         copyOnWrite();
-        instance.clearNumber();
+        instance.clearDomain();
         return this;
       }
       /**
-       * <code>string number = 1;</code>
-       * @param value The bytes for number to set.
+       * <code>string domain = 1;</code>
+       * @param value The bytes for domain to set.
        * @return This builder for chaining.
        */
-      public Builder setNumberBytes(
+      public Builder setDomainBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
-        instance.setNumberBytes(value);
+        instance.setDomainBytes(value);
         return this;
       }
 
@@ -5491,7 +5545,7 @@ public final class Common {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "number_",
+              "domain_",
             };
             java.lang.String info =
                 "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
@@ -7144,6 +7198,1155 @@ public final class Common {
     }
   }
 
+  public interface EmailMessageBodyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.EmailMessageBody)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string subject = 1;</code>
+     * @return The subject.
+     */
+    java.lang.String getSubject();
+    /**
+     * <code>string subject = 1;</code>
+     * @return The bytes for subject.
+     */
+    com.google.protobuf.ByteString
+        getSubjectBytes();
+
+    /**
+     * <code>string body_plain = 2;</code>
+     * @return The bodyPlain.
+     */
+    java.lang.String getBodyPlain();
+    /**
+     * <code>string body_plain = 2;</code>
+     * @return The bytes for bodyPlain.
+     */
+    com.google.protobuf.ByteString
+        getBodyPlainBytes();
+
+    /**
+     * <code>string body_html = 3;</code>
+     * @return The bodyHtml.
+     */
+    java.lang.String getBodyHtml();
+    /**
+     * <code>string body_html = 3;</code>
+     * @return The bytes for bodyHtml.
+     */
+    com.google.protobuf.ByteString
+        getBodyHtmlBytes();
+
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @return A list containing the ccList.
+     */
+    java.util.List<java.lang.String>
+        getCcListList();
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @return The count of ccList.
+     */
+    int getCcListCount();
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index of the element to return.
+     * @return The ccList at the given index.
+     */
+    java.lang.String getCcList(int index);
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index of the element to return.
+     * @return The ccList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCcListBytes(int index);
+
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @return A list containing the bccList.
+     */
+    java.util.List<java.lang.String>
+        getBccListList();
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @return The count of bccList.
+     */
+    int getBccListCount();
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index of the element to return.
+     * @return The bccList at the given index.
+     */
+    java.lang.String getBccList(int index);
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index of the element to return.
+     * @return The bccList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBccListBytes(int index);
+
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @return A list containing the attachments.
+     */
+    java.util.List<java.lang.String>
+        getAttachmentsList();
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @return The count of attachments.
+     */
+    int getAttachmentsCount();
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index of the element to return.
+     * @return The attachments at the given index.
+     */
+    java.lang.String getAttachments(int index);
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index of the element to return.
+     * @return The attachments at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAttachmentsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.EmailMessageBody}
+   */
+  public  static final class EmailMessageBody extends
+      com.google.protobuf.GeneratedMessageLite<
+          EmailMessageBody, EmailMessageBody.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.EmailMessageBody)
+      EmailMessageBodyOrBuilder {
+    private EmailMessageBody() {
+      subject_ = "";
+      bodyPlain_ = "";
+      bodyHtml_ = "";
+      ccList_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      bccList_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      attachments_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    public static final int SUBJECT_FIELD_NUMBER = 1;
+    private java.lang.String subject_;
+    /**
+     * <code>string subject = 1;</code>
+     * @return The subject.
+     */
+    @java.lang.Override
+    public java.lang.String getSubject() {
+      return subject_;
+    }
+    /**
+     * <code>string subject = 1;</code>
+     * @return The bytes for subject.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(subject_);
+    }
+    /**
+     * <code>string subject = 1;</code>
+     * @param value The subject to set.
+     */
+    private void setSubject(
+        java.lang.String value) {
+      value.getClass();
+  
+      subject_ = value;
+    }
+    /**
+     * <code>string subject = 1;</code>
+     */
+    private void clearSubject() {
+      
+      subject_ = getDefaultInstance().getSubject();
+    }
+    /**
+     * <code>string subject = 1;</code>
+     * @param value The bytes for subject to set.
+     */
+    private void setSubjectBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      subject_ = value.toStringUtf8();
+      
+    }
+
+    public static final int BODY_PLAIN_FIELD_NUMBER = 2;
+    private java.lang.String bodyPlain_;
+    /**
+     * <code>string body_plain = 2;</code>
+     * @return The bodyPlain.
+     */
+    @java.lang.Override
+    public java.lang.String getBodyPlain() {
+      return bodyPlain_;
+    }
+    /**
+     * <code>string body_plain = 2;</code>
+     * @return The bytes for bodyPlain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBodyPlainBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(bodyPlain_);
+    }
+    /**
+     * <code>string body_plain = 2;</code>
+     * @param value The bodyPlain to set.
+     */
+    private void setBodyPlain(
+        java.lang.String value) {
+      value.getClass();
+  
+      bodyPlain_ = value;
+    }
+    /**
+     * <code>string body_plain = 2;</code>
+     */
+    private void clearBodyPlain() {
+      
+      bodyPlain_ = getDefaultInstance().getBodyPlain();
+    }
+    /**
+     * <code>string body_plain = 2;</code>
+     * @param value The bytes for bodyPlain to set.
+     */
+    private void setBodyPlainBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      bodyPlain_ = value.toStringUtf8();
+      
+    }
+
+    public static final int BODY_HTML_FIELD_NUMBER = 3;
+    private java.lang.String bodyHtml_;
+    /**
+     * <code>string body_html = 3;</code>
+     * @return The bodyHtml.
+     */
+    @java.lang.Override
+    public java.lang.String getBodyHtml() {
+      return bodyHtml_;
+    }
+    /**
+     * <code>string body_html = 3;</code>
+     * @return The bytes for bodyHtml.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBodyHtmlBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(bodyHtml_);
+    }
+    /**
+     * <code>string body_html = 3;</code>
+     * @param value The bodyHtml to set.
+     */
+    private void setBodyHtml(
+        java.lang.String value) {
+      value.getClass();
+  
+      bodyHtml_ = value;
+    }
+    /**
+     * <code>string body_html = 3;</code>
+     */
+    private void clearBodyHtml() {
+      
+      bodyHtml_ = getDefaultInstance().getBodyHtml();
+    }
+    /**
+     * <code>string body_html = 3;</code>
+     * @param value The bytes for bodyHtml to set.
+     */
+    private void setBodyHtmlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      bodyHtml_ = value.toStringUtf8();
+      
+    }
+
+    public static final int CC_LIST_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> ccList_;
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @return A list containing the ccList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getCcListList() {
+      return ccList_;
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @return The count of ccList.
+     */
+    @java.lang.Override
+    public int getCcListCount() {
+      return ccList_.size();
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index of the element to return.
+     * @return The ccList at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getCcList(int index) {
+      return ccList_.get(index);
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ccList at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCcListBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          ccList_.get(index));
+    }
+    private void ensureCcListIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          ccList_;  if (!tmp.isModifiable()) {
+        ccList_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index to set the value at.
+     * @param value The ccList to set.
+     */
+    private void setCcList(
+        int index, java.lang.String value) {
+      value.getClass();
+  ensureCcListIsMutable();
+      ccList_.set(index, value);
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param value The ccList to add.
+     */
+    private void addCcList(
+        java.lang.String value) {
+      value.getClass();
+  ensureCcListIsMutable();
+      ccList_.add(value);
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param values The ccList to add.
+     */
+    private void addAllCcList(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureCcListIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, ccList_);
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     */
+    private void clearCcList() {
+      ccList_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param value The bytes of the ccList to add.
+     */
+    private void addCcListBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureCcListIsMutable();
+      ccList_.add(value.toStringUtf8());
+    }
+
+    public static final int BCC_LIST_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> bccList_;
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @return A list containing the bccList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getBccListList() {
+      return bccList_;
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @return The count of bccList.
+     */
+    @java.lang.Override
+    public int getBccListCount() {
+      return bccList_.size();
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index of the element to return.
+     * @return The bccList at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getBccList(int index) {
+      return bccList_.get(index);
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the bccList at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBccListBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          bccList_.get(index));
+    }
+    private void ensureBccListIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          bccList_;  if (!tmp.isModifiable()) {
+        bccList_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index to set the value at.
+     * @param value The bccList to set.
+     */
+    private void setBccList(
+        int index, java.lang.String value) {
+      value.getClass();
+  ensureBccListIsMutable();
+      bccList_.set(index, value);
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param value The bccList to add.
+     */
+    private void addBccList(
+        java.lang.String value) {
+      value.getClass();
+  ensureBccListIsMutable();
+      bccList_.add(value);
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param values The bccList to add.
+     */
+    private void addAllBccList(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureBccListIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, bccList_);
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     */
+    private void clearBccList() {
+      bccList_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param value The bytes of the bccList to add.
+     */
+    private void addBccListBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureBccListIsMutable();
+      bccList_.add(value.toStringUtf8());
+    }
+
+    public static final int ATTACHMENTS_FIELD_NUMBER = 6;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> attachments_;
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @return A list containing the attachments.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getAttachmentsList() {
+      return attachments_;
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @return The count of attachments.
+     */
+    @java.lang.Override
+    public int getAttachmentsCount() {
+      return attachments_.size();
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index of the element to return.
+     * @return The attachments at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getAttachments(int index) {
+      return attachments_.get(index);
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the attachments at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAttachmentsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          attachments_.get(index));
+    }
+    private void ensureAttachmentsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          attachments_;  if (!tmp.isModifiable()) {
+        attachments_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index to set the value at.
+     * @param value The attachments to set.
+     */
+    private void setAttachments(
+        int index, java.lang.String value) {
+      value.getClass();
+  ensureAttachmentsIsMutable();
+      attachments_.set(index, value);
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param value The attachments to add.
+     */
+    private void addAttachments(
+        java.lang.String value) {
+      value.getClass();
+  ensureAttachmentsIsMutable();
+      attachments_.add(value);
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param values The attachments to add.
+     */
+    private void addAllAttachments(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureAttachmentsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, attachments_);
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     */
+    private void clearAttachments() {
+      attachments_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param value The bytes of the attachments to add.
+     */
+    private void addAttachmentsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureAttachmentsIsMutable();
+      attachments_.add(value.toStringUtf8());
+    }
+
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.EmailMessageBody prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.EmailMessageBody}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.Common.EmailMessageBody, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.EmailMessageBody)
+        com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder {
+      // Construct using com.elarian.hera.proto.Common.EmailMessageBody.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string subject = 1;</code>
+       * @return The subject.
+       */
+      @java.lang.Override
+      public java.lang.String getSubject() {
+        return instance.getSubject();
+      }
+      /**
+       * <code>string subject = 1;</code>
+       * @return The bytes for subject.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSubjectBytes() {
+        return instance.getSubjectBytes();
+      }
+      /**
+       * <code>string subject = 1;</code>
+       * @param value The subject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubject(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSubject(value);
+        return this;
+      }
+      /**
+       * <code>string subject = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubject() {
+        copyOnWrite();
+        instance.clearSubject();
+        return this;
+      }
+      /**
+       * <code>string subject = 1;</code>
+       * @param value The bytes for subject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSubjectBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string body_plain = 2;</code>
+       * @return The bodyPlain.
+       */
+      @java.lang.Override
+      public java.lang.String getBodyPlain() {
+        return instance.getBodyPlain();
+      }
+      /**
+       * <code>string body_plain = 2;</code>
+       * @return The bytes for bodyPlain.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBodyPlainBytes() {
+        return instance.getBodyPlainBytes();
+      }
+      /**
+       * <code>string body_plain = 2;</code>
+       * @param value The bodyPlain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyPlain(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBodyPlain(value);
+        return this;
+      }
+      /**
+       * <code>string body_plain = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBodyPlain() {
+        copyOnWrite();
+        instance.clearBodyPlain();
+        return this;
+      }
+      /**
+       * <code>string body_plain = 2;</code>
+       * @param value The bytes for bodyPlain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyPlainBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBodyPlainBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string body_html = 3;</code>
+       * @return The bodyHtml.
+       */
+      @java.lang.Override
+      public java.lang.String getBodyHtml() {
+        return instance.getBodyHtml();
+      }
+      /**
+       * <code>string body_html = 3;</code>
+       * @return The bytes for bodyHtml.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBodyHtmlBytes() {
+        return instance.getBodyHtmlBytes();
+      }
+      /**
+       * <code>string body_html = 3;</code>
+       * @param value The bodyHtml to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyHtml(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBodyHtml(value);
+        return this;
+      }
+      /**
+       * <code>string body_html = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBodyHtml() {
+        copyOnWrite();
+        instance.clearBodyHtml();
+        return this;
+      }
+      /**
+       * <code>string body_html = 3;</code>
+       * @param value The bytes for bodyHtml to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyHtmlBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBodyHtmlBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @return A list containing the ccList.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getCcListList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getCcListList());
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @return The count of ccList.
+       */
+      @java.lang.Override
+      public int getCcListCount() {
+        return instance.getCcListCount();
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param index The index of the element to return.
+       * @return The ccList at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getCcList(int index) {
+        return instance.getCcList(index);
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ccList at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCcListBytes(int index) {
+        return instance.getCcListBytes(index);
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The ccList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCcList(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setCcList(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param value The ccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCcList(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addCcList(value);
+        return this;
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param values The ccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCcList(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllCcList(values);
+        return this;
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCcList() {
+        copyOnWrite();
+        instance.clearCcList();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param value The bytes of the ccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCcListBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addCcListBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @return A list containing the bccList.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getBccListList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getBccListList());
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @return The count of bccList.
+       */
+      @java.lang.Override
+      public int getBccListCount() {
+        return instance.getBccListCount();
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param index The index of the element to return.
+       * @return The bccList at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getBccList(int index) {
+        return instance.getBccList(index);
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the bccList at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBccListBytes(int index) {
+        return instance.getBccListBytes(index);
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The bccList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBccList(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setBccList(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param value The bccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBccList(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addBccList(value);
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param values The bccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBccList(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllBccList(values);
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBccList() {
+        copyOnWrite();
+        instance.clearBccList();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param value The bytes of the bccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBccListBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addBccListBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @return A list containing the attachments.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getAttachmentsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getAttachmentsList());
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @return The count of attachments.
+       */
+      @java.lang.Override
+      public int getAttachmentsCount() {
+        return instance.getAttachmentsCount();
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param index The index of the element to return.
+       * @return The attachments at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getAttachments(int index) {
+        return instance.getAttachments(index);
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the attachments at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAttachmentsBytes(int index) {
+        return instance.getAttachmentsBytes(index);
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The attachments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAttachments(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setAttachments(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param value The attachments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAttachments(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addAttachments(value);
+        return this;
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param values The attachments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAttachments(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllAttachments(values);
+        return this;
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAttachments() {
+        copyOnWrite();
+        instance.clearAttachments();
+        return this;
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param value The bytes of the attachments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAttachmentsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addAttachmentsBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.EmailMessageBody)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.Common.EmailMessageBody();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "subject_",
+              "bodyPlain_",
+              "bodyHtml_",
+              "ccList_",
+              "bccList_",
+              "attachments_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0003\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u021a\u0005\u021a\u0006\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.Common.EmailMessageBody> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.Common.EmailMessageBody.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.Common.EmailMessageBody>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.EmailMessageBody)
+    private static final com.elarian.hera.proto.Common.EmailMessageBody DEFAULT_INSTANCE;
+    static {
+      EmailMessageBody defaultInstance = new EmailMessageBody();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        EmailMessageBody.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.Common.EmailMessageBody getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<EmailMessageBody> PARSER;
+
+    public static com.google.protobuf.Parser<EmailMessageBody> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface CustomerMessageBodyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CustomerMessageBody)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -7181,6 +8384,17 @@ public final class Common {
      */
     com.elarian.hera.proto.Common.LocationMessageBody getLocation();
 
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     * @return The email.
+     */
+    com.elarian.hera.proto.Common.EmailMessageBody getEmail();
+
     public com.elarian.hera.proto.Common.CustomerMessageBody.EntryCase getEntryCase();
   }
   /**
@@ -7199,6 +8413,7 @@ public final class Common {
       TEXT(1),
       MEDIA(2),
       LOCATION(3),
+      EMAIL(4),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -7217,6 +8432,7 @@ public final class Common {
           case 1: return TEXT;
           case 2: return MEDIA;
           case 3: return LOCATION;
+          case 4: return EMAIL;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -7383,6 +8599,56 @@ public final class Common {
      */
     private void clearLocation() {
       if (entryCase_ == 3) {
+        entryCase_ = 0;
+        entry_ = null;
+      }
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return entryCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+      if (entryCase_ == 4) {
+         return (com.elarian.hera.proto.Common.EmailMessageBody) entry_;
+      }
+      return com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     */
+    private void setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+      value.getClass();
+  entry_ = value;
+      entryCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     */
+    private void mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+      value.getClass();
+  if (entryCase_ == 4 &&
+          entry_ != com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.Common.EmailMessageBody.newBuilder((com.elarian.hera.proto.Common.EmailMessageBody) entry_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        entry_ = value;
+      }
+      entryCase_ = 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     */
+    private void clearEmail() {
+      if (entryCase_ == 4) {
         entryCase_ = 0;
         entry_ = null;
       }
@@ -7639,6 +8905,54 @@ public final class Common {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasEmail() {
+        return instance.hasEmail();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+        return instance.getEmail();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public Builder setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        copyOnWrite();
+        instance.setEmail(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public Builder setEmail(
+          com.elarian.hera.proto.Common.EmailMessageBody.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEmail(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public Builder mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        copyOnWrite();
+        instance.mergeEmail(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public Builder clearEmail() {
+        copyOnWrite();
+        instance.clearEmail();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CustomerMessageBody)
     }
     @java.lang.Override
@@ -7660,10 +8974,11 @@ public final class Common {
               com.elarian.hera.proto.Common.TextMessageBody.class,
               com.elarian.hera.proto.Common.MediaMessageBody.class,
               com.elarian.hera.proto.Common.LocationMessageBody.class,
+              com.elarian.hera.proto.Common.EmailMessageBody.class,
             };
             java.lang.String info =
-                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001<\u0000\u0002<" +
-                "\u0000\u0003<\u0000";
+                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000\u0003<\u0000\u0004<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

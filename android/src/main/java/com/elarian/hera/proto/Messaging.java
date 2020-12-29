@@ -1604,34 +1604,45 @@ public final class Messaging {
     com.elarian.hera.proto.Common.LocationMessageBody getLocation();
 
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     * @return The email.
+     */
+    com.elarian.hera.proto.Common.EmailMessageBody getEmail();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
 
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
 
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @return The status.
      */
     com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus();
@@ -2107,24 +2118,70 @@ public final class Messaging {
       
     }
 
-    public static final int CREATED_AT_FIELD_NUMBER = 10;
+    public static final int EMAIL_FIELD_NUMBER = 10;
+    private com.elarian.hera.proto.Common.EmailMessageBody email_;
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return email_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+      return email_ == null ? com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     */
+    private void setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+      value.getClass();
+  email_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+      value.getClass();
+  if (email_ != null &&
+          email_ != com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance()) {
+        email_ =
+          com.elarian.hera.proto.Common.EmailMessageBody.newBuilder(email_).mergeFrom(value).buildPartial();
+      } else {
+        email_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     */
+    private void clearEmail() {  email_ = null;
+      
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 11;
     private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      */
     @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      */
     private void setCreatedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
@@ -2132,7 +2189,7 @@ public final class Messaging {
       
       }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2147,30 +2204,30 @@ public final class Messaging {
       
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      */
     private void clearCreatedAt() {  createdAt_ = null;
       
     }
 
-    public static final int UPDATED_AT_FIELD_NUMBER = 11;
+    public static final int UPDATED_AT_FIELD_NUMBER = 12;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      */
     @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      */
     private void setUpdatedAt(com.google.protobuf.Timestamp value) {
       value.getClass();
@@ -2178,7 +2235,7 @@ public final class Messaging {
       
       }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2193,16 +2250,16 @@ public final class Messaging {
       
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      */
     private void clearUpdatedAt() {  updatedAt_ = null;
       
     }
 
-    public static final int STATUS_FIELD_NUMBER = 12;
+    public static final int STATUS_FIELD_NUMBER = 13;
     private int status_;
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override
@@ -2210,7 +2267,7 @@ public final class Messaging {
       return status_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @return The status.
      */
     @java.lang.Override
@@ -2219,14 +2276,14 @@ public final class Messaging {
       return result == null ? com.elarian.hera.proto.Common.MessageDeliveryStatus.UNRECOGNIZED : result;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @param value The enum numeric value on the wire for status to set.
      */
     private void setStatusValue(int value) {
         status_ = value;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @param value The status to set.
      */
     private void setStatus(com.elarian.hera.proto.Common.MessageDeliveryStatus value) {
@@ -2234,7 +2291,7 @@ public final class Messaging {
       
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      */
     private void clearStatus() {
       
@@ -2816,21 +2873,68 @@ public final class Messaging {
       }
 
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      @java.lang.Override
+      public boolean hasEmail() {
+        return instance.hasEmail();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+        return instance.getEmail();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public Builder setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        copyOnWrite();
+        instance.setEmail(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public Builder setEmail(
+          com.elarian.hera.proto.Common.EmailMessageBody.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEmail(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public Builder mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        copyOnWrite();
+        instance.mergeEmail(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public Builder clearEmail() {  copyOnWrite();
+        instance.clearEmail();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       @java.lang.Override
       public boolean hasCreatedAt() {
         return instance.hasCreatedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       @java.lang.Override
       public com.google.protobuf.Timestamp getCreatedAt() {
         return instance.getCreatedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
@@ -2838,7 +2942,7 @@ public final class Messaging {
         return this;
         }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2847,7 +2951,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
@@ -2855,7 +2959,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public Builder clearCreatedAt() {  copyOnWrite();
         instance.clearCreatedAt();
@@ -2863,21 +2967,21 @@ public final class Messaging {
       }
 
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       @java.lang.Override
       public boolean hasUpdatedAt() {
         return instance.hasUpdatedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       @java.lang.Override
       public com.google.protobuf.Timestamp getUpdatedAt() {
         return instance.getUpdatedAt();
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
@@ -2885,7 +2989,7 @@ public final class Messaging {
         return this;
         }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public Builder setUpdatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2894,7 +2998,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
         copyOnWrite();
@@ -2902,7 +3006,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public Builder clearUpdatedAt() {  copyOnWrite();
         instance.clearUpdatedAt();
@@ -2910,7 +3014,7 @@ public final class Messaging {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override
@@ -2918,7 +3022,7 @@ public final class Messaging {
         return instance.getStatusValue();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -2928,7 +3032,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @return The status.
        */
       @java.lang.Override
@@ -2936,7 +3040,7 @@ public final class Messaging {
         return instance.getStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -2946,7 +3050,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -2981,13 +3085,14 @@ public final class Messaging {
               "media_",
               com.elarian.hera.proto.Common.MediaMessageBody.class,
               "location_",
+              "email_",
               "createdAt_",
               "updatedAt_",
               "status_",
             };
             java.lang.String info =
-                "\u0000\f\u0000\u0000\u0001\f\f\u0000\u0001\u0000\u0001\f\u0002\t\u0003\t\u0004\u0208" +
-                "\u0005\t\u0006\t\u0007\t\b\u001b\t\t\n\t\u000b\t\f\f";
+                "\u0000\r\u0000\u0000\u0001\r\r\u0000\u0001\u0000\u0001\f\u0002\t\u0003\t\u0004\u0208" +
+                "\u0005\t\u0006\t\u0007\t\b\u001b\t\t\n\t\u000b\t\f\t\r\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -9970,6 +10075,17 @@ public final class Messaging {
      * @return The location.
      */
     com.elarian.hera.proto.Common.LocationMessageBody getLocation();
+
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     * @return The email.
+     */
+    com.elarian.hera.proto.Common.EmailMessageBody getEmail();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessageReceivedEvent}
@@ -10493,6 +10609,52 @@ public final class Messaging {
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 10;</code>
      */
     private void clearLocation() {  location_ = null;
+      
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 11;
+    private com.elarian.hera.proto.Common.EmailMessageBody email_;
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return email_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+      return email_ == null ? com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     */
+    private void setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+      value.getClass();
+  email_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+      value.getClass();
+  if (email_ != null &&
+          email_ != com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance()) {
+        email_ =
+          com.elarian.hera.proto.Common.EmailMessageBody.newBuilder(email_).mergeFrom(value).buildPartial();
+      } else {
+        email_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     */
+    private void clearEmail() {  email_ = null;
       
     }
 
@@ -11122,6 +11284,53 @@ public final class Messaging {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      @java.lang.Override
+      public boolean hasEmail() {
+        return instance.hasEmail();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+        return instance.getEmail();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public Builder setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        copyOnWrite();
+        instance.setEmail(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public Builder setEmail(
+          com.elarian.hera.proto.Common.EmailMessageBody.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEmail(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public Builder mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        copyOnWrite();
+        instance.mergeEmail(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public Builder clearEmail() {  copyOnWrite();
+        instance.clearEmail();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessageReceivedEvent)
     }
     @java.lang.Override
@@ -11149,10 +11358,11 @@ public final class Messaging {
               "media_",
               com.elarian.hera.proto.Common.MediaMessageBody.class,
               "location_",
+              "email_",
             };
             java.lang.String info =
-                "\u0000\n\u0000\u0000\u0001\n\n\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003\t" +
-                "\u0004\t\u0005\u0208\u0006\t\u0007\t\b\t\t\u001b\n\t";
+                "\u0000\u000b\u0000\u0000\u0001\u000b\u000b\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t\u0004\t\u0005\u0208\u0006\t\u0007\t\b\t\t\u001b\n\t\u000b\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

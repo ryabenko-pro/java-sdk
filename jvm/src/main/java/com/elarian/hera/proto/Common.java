@@ -43,6 +43,10 @@ public final class Common {
      * <code>MESSAGING_CHANNEL_WHATSAPP = 5;</code>
      */
     MESSAGING_CHANNEL_WHATSAPP(5),
+    /**
+     * <code>MESSAGING_CHANNEL_EMAIL = 6;</code>
+     */
+    MESSAGING_CHANNEL_EMAIL(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -70,6 +74,10 @@ public final class Common {
      * <code>MESSAGING_CHANNEL_WHATSAPP = 5;</code>
      */
     public static final int MESSAGING_CHANNEL_WHATSAPP_VALUE = 5;
+    /**
+     * <code>MESSAGING_CHANNEL_EMAIL = 6;</code>
+     */
+    public static final int MESSAGING_CHANNEL_EMAIL_VALUE = 6;
 
 
     public final int getNumber() {
@@ -102,6 +110,7 @@ public final class Common {
         case 3: return MESSAGING_CHANNEL_SMS;
         case 4: return MESSAGING_CHANNEL_TELEGRAM;
         case 5: return MESSAGING_CHANNEL_WHATSAPP;
+        case 6: return MESSAGING_CHANNEL_EMAIL;
         default: return null;
       }
     }
@@ -507,6 +516,10 @@ public final class Common {
      * <code>CUSTOMER_NUMBER_PROVIDER_WEB = 4;</code>
      */
     CUSTOMER_NUMBER_PROVIDER_WEB(4),
+    /**
+     * <code>CUSTOMER_NUMBER_PROVIDER_EMAIL = 5;</code>
+     */
+    CUSTOMER_NUMBER_PROVIDER_EMAIL(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -530,6 +543,10 @@ public final class Common {
      * <code>CUSTOMER_NUMBER_PROVIDER_WEB = 4;</code>
      */
     public static final int CUSTOMER_NUMBER_PROVIDER_WEB_VALUE = 4;
+    /**
+     * <code>CUSTOMER_NUMBER_PROVIDER_EMAIL = 5;</code>
+     */
+    public static final int CUSTOMER_NUMBER_PROVIDER_EMAIL_VALUE = 5;
 
 
     public final int getNumber() {
@@ -561,6 +578,7 @@ public final class Common {
         case 2: return CUSTOMER_NUMBER_PROVIDER_TELCO;
         case 3: return CUSTOMER_NUMBER_PROVIDER_TELEGRAM;
         case 4: return CUSTOMER_NUMBER_PROVIDER_WEB;
+        case 5: return CUSTOMER_NUMBER_PROVIDER_EMAIL;
         default: return null;
       }
     }
@@ -1406,9 +1424,9 @@ public final class Common {
   public enum MessageDeliveryStatus
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>MESSAGE_DELIVERY_STATUS_UNSEPCIFIED = 0;</code>
+     * <code>MESSAGE_DELIVERY_STATUS_UNSPECIFIED = 0;</code>
      */
-    MESSAGE_DELIVERY_STATUS_UNSEPCIFIED(0),
+    MESSAGE_DELIVERY_STATUS_UNSPECIFIED(0),
     /**
      * <code>MESSAGE_DELIVERY_STATUS_QUEUED = 100;</code>
      */
@@ -1429,6 +1447,18 @@ public final class Common {
      * <code>MESSAGE_DELIVERY_STATUS_RECEIVED = 302;</code>
      */
     MESSAGE_DELIVERY_STATUS_RECEIVED(302),
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_CLICKED = 303;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_CLICKED(303),
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED = 304;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED(304),
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_COMPLAINED = 305;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_COMPLAINED(305),
     /**
      * <code>MESSAGE_DELIVERY_STATUS_FAILED = 400;</code>
      */
@@ -1486,6 +1516,10 @@ public final class Common {
      */
     MESSAGE_DELIVERY_STATUS_INVALID_REQUEST(413),
     /**
+     * <code>MESSAGE_DELIVERY_STATUS_REJECTED = 414;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_REJECTED(414),
+    /**
      * <code>MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR = 501;</code>
      */
     MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR(501),
@@ -1493,9 +1527,9 @@ public final class Common {
     ;
 
     /**
-     * <code>MESSAGE_DELIVERY_STATUS_UNSEPCIFIED = 0;</code>
+     * <code>MESSAGE_DELIVERY_STATUS_UNSPECIFIED = 0;</code>
      */
-    public static final int MESSAGE_DELIVERY_STATUS_UNSEPCIFIED_VALUE = 0;
+    public static final int MESSAGE_DELIVERY_STATUS_UNSPECIFIED_VALUE = 0;
     /**
      * <code>MESSAGE_DELIVERY_STATUS_QUEUED = 100;</code>
      */
@@ -1516,6 +1550,18 @@ public final class Common {
      * <code>MESSAGE_DELIVERY_STATUS_RECEIVED = 302;</code>
      */
     public static final int MESSAGE_DELIVERY_STATUS_RECEIVED_VALUE = 302;
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_CLICKED = 303;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_CLICKED_VALUE = 303;
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED = 304;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED_VALUE = 304;
+    /**
+     * <code>MESSAGE_DELIVERY_STATUS_COMPLAINED = 305;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_COMPLAINED_VALUE = 305;
     /**
      * <code>MESSAGE_DELIVERY_STATUS_FAILED = 400;</code>
      */
@@ -1573,6 +1619,10 @@ public final class Common {
      */
     public static final int MESSAGE_DELIVERY_STATUS_INVALID_REQUEST_VALUE = 413;
     /**
+     * <code>MESSAGE_DELIVERY_STATUS_REJECTED = 414;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_REJECTED_VALUE = 414;
+    /**
      * <code>MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR = 501;</code>
      */
     public static final int MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR_VALUE = 501;
@@ -1602,12 +1652,15 @@ public final class Common {
      */
     public static MessageDeliveryStatus forNumber(int value) {
       switch (value) {
-        case 0: return MESSAGE_DELIVERY_STATUS_UNSEPCIFIED;
+        case 0: return MESSAGE_DELIVERY_STATUS_UNSPECIFIED;
         case 100: return MESSAGE_DELIVERY_STATUS_QUEUED;
         case 101: return MESSAGE_DELIVERY_STATUS_SENT;
         case 300: return MESSAGE_DELIVERY_STATUS_DELIVERED;
         case 301: return MESSAGE_DELIVERY_STATUS_READ;
         case 302: return MESSAGE_DELIVERY_STATUS_RECEIVED;
+        case 303: return MESSAGE_DELIVERY_STATUS_CLICKED;
+        case 304: return MESSAGE_DELIVERY_STATUS_UNSUBSCRIBED;
+        case 305: return MESSAGE_DELIVERY_STATUS_COMPLAINED;
         case 400: return MESSAGE_DELIVERY_STATUS_FAILED;
         case 401: return MESSAGE_DELIVERY_STATUS_NO_CONSENT;
         case 402: return MESSAGE_DELIVERY_STATUS_NO_CAPABILITY;
@@ -1622,6 +1675,7 @@ public final class Common {
         case 411: return MESSAGE_DELIVERY_STATUS_CUSTOMER_NUMBER_NOT_FOUND;
         case 412: return MESSAGE_DELIVERY_STATUS_DECOMMISSIONED_CUSTOMERID;
         case 413: return MESSAGE_DELIVERY_STATUS_INVALID_REQUEST;
+        case 414: return MESSAGE_DELIVERY_STATUS_REJECTED;
         case 501: return MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR;
         default: return null;
       }
@@ -7847,16 +7901,16 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string number = 1;</code>
-     * @return The number.
+     * <code>string domain = 1;</code>
+     * @return The domain.
      */
-    java.lang.String getNumber();
+    java.lang.String getDomain();
     /**
-     * <code>string number = 1;</code>
-     * @return The bytes for number.
+     * <code>string domain = 1;</code>
+     * @return The bytes for domain.
      */
     com.google.protobuf.ByteString
-        getNumberBytes();
+        getDomainBytes();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.WebChannelNumber}
@@ -7871,7 +7925,7 @@ public final class Common {
       super(builder);
     }
     private WebChannelNumber() {
-      number_ = "";
+      domain_ = "";
     }
 
     @java.lang.Override
@@ -7907,7 +7961,7 @@ public final class Common {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              number_ = s;
+              domain_ = s;
               break;
             }
             default: {
@@ -7942,38 +7996,38 @@ public final class Common {
               com.elarian.hera.proto.Common.WebChannelNumber.class, com.elarian.hera.proto.Common.WebChannelNumber.Builder.class);
     }
 
-    public static final int NUMBER_FIELD_NUMBER = 1;
-    private volatile java.lang.Object number_;
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    private volatile java.lang.Object domain_;
     /**
-     * <code>string number = 1;</code>
-     * @return The number.
+     * <code>string domain = 1;</code>
+     * @return The domain.
      */
     @java.lang.Override
-    public java.lang.String getNumber() {
-      java.lang.Object ref = number_;
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        number_ = s;
+        domain_ = s;
         return s;
       }
     }
     /**
-     * <code>string number = 1;</code>
-     * @return The bytes for number.
+     * <code>string domain = 1;</code>
+     * @return The bytes for domain.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getNumberBytes() {
-      java.lang.Object ref = number_;
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        number_ = b;
+        domain_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -7994,8 +8048,8 @@ public final class Common {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNumberBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
+      if (!getDomainBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
       }
       unknownFields.writeTo(output);
     }
@@ -8006,8 +8060,8 @@ public final class Common {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNumberBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
+      if (!getDomainBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8024,8 +8078,8 @@ public final class Common {
       }
       com.elarian.hera.proto.Common.WebChannelNumber other = (com.elarian.hera.proto.Common.WebChannelNumber) obj;
 
-      if (!getNumber()
-          .equals(other.getNumber())) return false;
+      if (!getDomain()
+          .equals(other.getDomain())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8037,8 +8091,8 @@ public final class Common {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + getNumber().hashCode();
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8172,7 +8226,7 @@ public final class Common {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        number_ = "";
+        domain_ = "";
 
         return this;
       }
@@ -8200,7 +8254,7 @@ public final class Common {
       @java.lang.Override
       public com.elarian.hera.proto.Common.WebChannelNumber buildPartial() {
         com.elarian.hera.proto.Common.WebChannelNumber result = new com.elarian.hera.proto.Common.WebChannelNumber(this);
-        result.number_ = number_;
+        result.domain_ = domain_;
         onBuilt();
         return result;
       }
@@ -8249,8 +8303,8 @@ public final class Common {
 
       public Builder mergeFrom(com.elarian.hera.proto.Common.WebChannelNumber other) {
         if (other == com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance()) return this;
-        if (!other.getNumber().isEmpty()) {
-          number_ = other.number_;
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8282,78 +8336,78 @@ public final class Common {
         return this;
       }
 
-      private java.lang.Object number_ = "";
+      private java.lang.Object domain_ = "";
       /**
-       * <code>string number = 1;</code>
-       * @return The number.
+       * <code>string domain = 1;</code>
+       * @return The domain.
        */
-      public java.lang.String getNumber() {
-        java.lang.Object ref = number_;
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          number_ = s;
+          domain_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string number = 1;</code>
-       * @return The bytes for number.
+       * <code>string domain = 1;</code>
+       * @return The bytes for domain.
        */
       public com.google.protobuf.ByteString
-          getNumberBytes() {
-        java.lang.Object ref = number_;
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          number_ = b;
+          domain_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string number = 1;</code>
-       * @param value The number to set.
+       * <code>string domain = 1;</code>
+       * @param value The domain to set.
        * @return This builder for chaining.
        */
-      public Builder setNumber(
+      public Builder setDomain(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        number_ = value;
+        domain_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string number = 1;</code>
+       * <code>string domain = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNumber() {
+      public Builder clearDomain() {
         
-        number_ = getDefaultInstance().getNumber();
+        domain_ = getDefaultInstance().getDomain();
         onChanged();
         return this;
       }
       /**
-       * <code>string number = 1;</code>
-       * @param value The bytes for number to set.
+       * <code>string domain = 1;</code>
+       * @param value The bytes for domain to set.
        * @return This builder for chaining.
        */
-      public Builder setNumberBytes(
+      public Builder setDomainBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        number_ = value;
+        domain_ = value;
         onChanged();
         return this;
       }
@@ -11259,6 +11313,1528 @@ public final class Common {
 
   }
 
+  public interface EmailMessageBodyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.EmailMessageBody)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subject = 1;</code>
+     * @return The subject.
+     */
+    java.lang.String getSubject();
+    /**
+     * <code>string subject = 1;</code>
+     * @return The bytes for subject.
+     */
+    com.google.protobuf.ByteString
+        getSubjectBytes();
+
+    /**
+     * <code>string body_plain = 2;</code>
+     * @return The bodyPlain.
+     */
+    java.lang.String getBodyPlain();
+    /**
+     * <code>string body_plain = 2;</code>
+     * @return The bytes for bodyPlain.
+     */
+    com.google.protobuf.ByteString
+        getBodyPlainBytes();
+
+    /**
+     * <code>string body_html = 3;</code>
+     * @return The bodyHtml.
+     */
+    java.lang.String getBodyHtml();
+    /**
+     * <code>string body_html = 3;</code>
+     * @return The bytes for bodyHtml.
+     */
+    com.google.protobuf.ByteString
+        getBodyHtmlBytes();
+
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @return A list containing the ccList.
+     */
+    java.util.List<java.lang.String>
+        getCcListList();
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @return The count of ccList.
+     */
+    int getCcListCount();
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index of the element to return.
+     * @return The ccList at the given index.
+     */
+    java.lang.String getCcList(int index);
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ccList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCcListBytes(int index);
+
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @return A list containing the bccList.
+     */
+    java.util.List<java.lang.String>
+        getBccListList();
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @return The count of bccList.
+     */
+    int getBccListCount();
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index of the element to return.
+     * @return The bccList at the given index.
+     */
+    java.lang.String getBccList(int index);
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the bccList at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBccListBytes(int index);
+
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @return A list containing the attachments.
+     */
+    java.util.List<java.lang.String>
+        getAttachmentsList();
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @return The count of attachments.
+     */
+    int getAttachmentsCount();
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index of the element to return.
+     * @return The attachments at the given index.
+     */
+    java.lang.String getAttachments(int index);
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the attachments at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAttachmentsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.EmailMessageBody}
+   */
+  public static final class EmailMessageBody extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.EmailMessageBody)
+      EmailMessageBodyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EmailMessageBody.newBuilder() to construct.
+    private EmailMessageBody(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EmailMessageBody() {
+      subject_ = "";
+      bodyPlain_ = "";
+      bodyHtml_ = "";
+      ccList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bccList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      attachments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EmailMessageBody();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EmailMessageBody(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subject_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bodyPlain_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bodyHtml_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                ccList_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              ccList_.add(s);
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                bccList_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              bccList_.add(s);
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                attachments_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              attachments_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          ccList_ = ccList_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          bccList_ = bccList_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          attachments_ = attachments_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EmailMessageBody_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EmailMessageBody_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.elarian.hera.proto.Common.EmailMessageBody.class, com.elarian.hera.proto.Common.EmailMessageBody.Builder.class);
+    }
+
+    public static final int SUBJECT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subject_;
+    /**
+     * <code>string subject = 1;</code>
+     * @return The subject.
+     */
+    @java.lang.Override
+    public java.lang.String getSubject() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subject_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subject = 1;</code>
+     * @return The bytes for subject.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectBytes() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subject_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BODY_PLAIN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object bodyPlain_;
+    /**
+     * <code>string body_plain = 2;</code>
+     * @return The bodyPlain.
+     */
+    @java.lang.Override
+    public java.lang.String getBodyPlain() {
+      java.lang.Object ref = bodyPlain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bodyPlain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string body_plain = 2;</code>
+     * @return The bytes for bodyPlain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBodyPlainBytes() {
+      java.lang.Object ref = bodyPlain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bodyPlain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BODY_HTML_FIELD_NUMBER = 3;
+    private volatile java.lang.Object bodyHtml_;
+    /**
+     * <code>string body_html = 3;</code>
+     * @return The bodyHtml.
+     */
+    @java.lang.Override
+    public java.lang.String getBodyHtml() {
+      java.lang.Object ref = bodyHtml_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bodyHtml_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string body_html = 3;</code>
+     * @return The bytes for bodyHtml.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBodyHtmlBytes() {
+      java.lang.Object ref = bodyHtml_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bodyHtml_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CC_LIST_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList ccList_;
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @return A list containing the ccList.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCcListList() {
+      return ccList_;
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @return The count of ccList.
+     */
+    public int getCcListCount() {
+      return ccList_.size();
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index of the element to return.
+     * @return The ccList at the given index.
+     */
+    public java.lang.String getCcList(int index) {
+      return ccList_.get(index);
+    }
+    /**
+     * <code>repeated string cc_list = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ccList at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCcListBytes(int index) {
+      return ccList_.getByteString(index);
+    }
+
+    public static final int BCC_LIST_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList bccList_;
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @return A list containing the bccList.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getBccListList() {
+      return bccList_;
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @return The count of bccList.
+     */
+    public int getBccListCount() {
+      return bccList_.size();
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index of the element to return.
+     * @return The bccList at the given index.
+     */
+    public java.lang.String getBccList(int index) {
+      return bccList_.get(index);
+    }
+    /**
+     * <code>repeated string bcc_list = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the bccList at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getBccListBytes(int index) {
+      return bccList_.getByteString(index);
+    }
+
+    public static final int ATTACHMENTS_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList attachments_;
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @return A list containing the attachments.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAttachmentsList() {
+      return attachments_;
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @return The count of attachments.
+     */
+    public int getAttachmentsCount() {
+      return attachments_.size();
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index of the element to return.
+     * @return The attachments at the given index.
+     */
+    public java.lang.String getAttachments(int index) {
+      return attachments_.get(index);
+    }
+    /**
+     * <code>repeated string attachments = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the attachments at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAttachmentsBytes(int index) {
+      return attachments_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSubjectBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subject_);
+      }
+      if (!getBodyPlainBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bodyPlain_);
+      }
+      if (!getBodyHtmlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bodyHtml_);
+      }
+      for (int i = 0; i < ccList_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ccList_.getRaw(i));
+      }
+      for (int i = 0; i < bccList_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bccList_.getRaw(i));
+      }
+      for (int i = 0; i < attachments_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, attachments_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSubjectBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subject_);
+      }
+      if (!getBodyPlainBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bodyPlain_);
+      }
+      if (!getBodyHtmlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bodyHtml_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ccList_.size(); i++) {
+          dataSize += computeStringSizeNoTag(ccList_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCcListList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < bccList_.size(); i++) {
+          dataSize += computeStringSizeNoTag(bccList_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getBccListList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < attachments_.size(); i++) {
+          dataSize += computeStringSizeNoTag(attachments_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAttachmentsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.elarian.hera.proto.Common.EmailMessageBody)) {
+        return super.equals(obj);
+      }
+      com.elarian.hera.proto.Common.EmailMessageBody other = (com.elarian.hera.proto.Common.EmailMessageBody) obj;
+
+      if (!getSubject()
+          .equals(other.getSubject())) return false;
+      if (!getBodyPlain()
+          .equals(other.getBodyPlain())) return false;
+      if (!getBodyHtml()
+          .equals(other.getBodyHtml())) return false;
+      if (!getCcListList()
+          .equals(other.getCcListList())) return false;
+      if (!getBccListList()
+          .equals(other.getBccListList())) return false;
+      if (!getAttachmentsList()
+          .equals(other.getAttachmentsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getSubject().hashCode();
+      hash = (37 * hash) + BODY_PLAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getBodyPlain().hashCode();
+      hash = (37 * hash) + BODY_HTML_FIELD_NUMBER;
+      hash = (53 * hash) + getBodyHtml().hashCode();
+      if (getCcListCount() > 0) {
+        hash = (37 * hash) + CC_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getCcListList().hashCode();
+      }
+      if (getBccListCount() > 0) {
+        hash = (37 * hash) + BCC_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getBccListList().hashCode();
+      }
+      if (getAttachmentsCount() > 0) {
+        hash = (37 * hash) + ATTACHMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAttachmentsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.Common.EmailMessageBody parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.Common.EmailMessageBody prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.EmailMessageBody}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.EmailMessageBody)
+        com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EmailMessageBody_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EmailMessageBody_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.elarian.hera.proto.Common.EmailMessageBody.class, com.elarian.hera.proto.Common.EmailMessageBody.Builder.class);
+      }
+
+      // Construct using com.elarian.hera.proto.Common.EmailMessageBody.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subject_ = "";
+
+        bodyPlain_ = "";
+
+        bodyHtml_ = "";
+
+        ccList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bccList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        attachments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.elarian.hera.proto.Common.internal_static_com_elarian_hera_proto_EmailMessageBody_descriptor;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBody getDefaultInstanceForType() {
+        return com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBody build() {
+        com.elarian.hera.proto.Common.EmailMessageBody result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBody buildPartial() {
+        com.elarian.hera.proto.Common.EmailMessageBody result = new com.elarian.hera.proto.Common.EmailMessageBody(this);
+        int from_bitField0_ = bitField0_;
+        result.subject_ = subject_;
+        result.bodyPlain_ = bodyPlain_;
+        result.bodyHtml_ = bodyHtml_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          ccList_ = ccList_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.ccList_ = ccList_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          bccList_ = bccList_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.bccList_ = bccList_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          attachments_ = attachments_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.attachments_ = attachments_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.elarian.hera.proto.Common.EmailMessageBody) {
+          return mergeFrom((com.elarian.hera.proto.Common.EmailMessageBody)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.elarian.hera.proto.Common.EmailMessageBody other) {
+        if (other == com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance()) return this;
+        if (!other.getSubject().isEmpty()) {
+          subject_ = other.subject_;
+          onChanged();
+        }
+        if (!other.getBodyPlain().isEmpty()) {
+          bodyPlain_ = other.bodyPlain_;
+          onChanged();
+        }
+        if (!other.getBodyHtml().isEmpty()) {
+          bodyHtml_ = other.bodyHtml_;
+          onChanged();
+        }
+        if (!other.ccList_.isEmpty()) {
+          if (ccList_.isEmpty()) {
+            ccList_ = other.ccList_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureCcListIsMutable();
+            ccList_.addAll(other.ccList_);
+          }
+          onChanged();
+        }
+        if (!other.bccList_.isEmpty()) {
+          if (bccList_.isEmpty()) {
+            bccList_ = other.bccList_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureBccListIsMutable();
+            bccList_.addAll(other.bccList_);
+          }
+          onChanged();
+        }
+        if (!other.attachments_.isEmpty()) {
+          if (attachments_.isEmpty()) {
+            attachments_ = other.attachments_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureAttachmentsIsMutable();
+            attachments_.addAll(other.attachments_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.elarian.hera.proto.Common.EmailMessageBody parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.elarian.hera.proto.Common.EmailMessageBody) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subject_ = "";
+      /**
+       * <code>string subject = 1;</code>
+       * @return The subject.
+       */
+      public java.lang.String getSubject() {
+        java.lang.Object ref = subject_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subject_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subject = 1;</code>
+       * @return The bytes for subject.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectBytes() {
+        java.lang.Object ref = subject_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subject_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subject = 1;</code>
+       * @param value The subject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubject(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subject_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subject = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubject() {
+        
+        subject_ = getDefaultInstance().getSubject();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subject = 1;</code>
+       * @param value The bytes for subject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subject_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bodyPlain_ = "";
+      /**
+       * <code>string body_plain = 2;</code>
+       * @return The bodyPlain.
+       */
+      public java.lang.String getBodyPlain() {
+        java.lang.Object ref = bodyPlain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bodyPlain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string body_plain = 2;</code>
+       * @return The bytes for bodyPlain.
+       */
+      public com.google.protobuf.ByteString
+          getBodyPlainBytes() {
+        java.lang.Object ref = bodyPlain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bodyPlain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string body_plain = 2;</code>
+       * @param value The bodyPlain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyPlain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bodyPlain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string body_plain = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBodyPlain() {
+        
+        bodyPlain_ = getDefaultInstance().getBodyPlain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string body_plain = 2;</code>
+       * @param value The bytes for bodyPlain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyPlainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bodyPlain_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bodyHtml_ = "";
+      /**
+       * <code>string body_html = 3;</code>
+       * @return The bodyHtml.
+       */
+      public java.lang.String getBodyHtml() {
+        java.lang.Object ref = bodyHtml_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bodyHtml_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string body_html = 3;</code>
+       * @return The bytes for bodyHtml.
+       */
+      public com.google.protobuf.ByteString
+          getBodyHtmlBytes() {
+        java.lang.Object ref = bodyHtml_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bodyHtml_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string body_html = 3;</code>
+       * @param value The bodyHtml to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyHtml(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bodyHtml_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string body_html = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBodyHtml() {
+        
+        bodyHtml_ = getDefaultInstance().getBodyHtml();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string body_html = 3;</code>
+       * @param value The bytes for bodyHtml to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBodyHtmlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bodyHtml_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList ccList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureCcListIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          ccList_ = new com.google.protobuf.LazyStringArrayList(ccList_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @return A list containing the ccList.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCcListList() {
+        return ccList_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @return The count of ccList.
+       */
+      public int getCcListCount() {
+        return ccList_.size();
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param index The index of the element to return.
+       * @return The ccList at the given index.
+       */
+      public java.lang.String getCcList(int index) {
+        return ccList_.get(index);
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ccList at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCcListBytes(int index) {
+        return ccList_.getByteString(index);
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The ccList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCcList(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCcListIsMutable();
+        ccList_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param value The ccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCcList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCcListIsMutable();
+        ccList_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param values The ccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCcList(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCcListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ccList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCcList() {
+        ccList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cc_list = 4;</code>
+       * @param value The bytes of the ccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCcListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureCcListIsMutable();
+        ccList_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList bccList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureBccListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          bccList_ = new com.google.protobuf.LazyStringArrayList(bccList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @return A list containing the bccList.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getBccListList() {
+        return bccList_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @return The count of bccList.
+       */
+      public int getBccListCount() {
+        return bccList_.size();
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param index The index of the element to return.
+       * @return The bccList at the given index.
+       */
+      public java.lang.String getBccList(int index) {
+        return bccList_.get(index);
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the bccList at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getBccListBytes(int index) {
+        return bccList_.getByteString(index);
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The bccList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBccList(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureBccListIsMutable();
+        bccList_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param value The bccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBccList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureBccListIsMutable();
+        bccList_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param values The bccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBccList(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureBccListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, bccList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBccList() {
+        bccList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string bcc_list = 5;</code>
+       * @param value The bytes of the bccList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBccListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureBccListIsMutable();
+        bccList_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList attachments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureAttachmentsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          attachments_ = new com.google.protobuf.LazyStringArrayList(attachments_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @return A list containing the attachments.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAttachmentsList() {
+        return attachments_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @return The count of attachments.
+       */
+      public int getAttachmentsCount() {
+        return attachments_.size();
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param index The index of the element to return.
+       * @return The attachments at the given index.
+       */
+      public java.lang.String getAttachments(int index) {
+        return attachments_.get(index);
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the attachments at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAttachmentsBytes(int index) {
+        return attachments_.getByteString(index);
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The attachments to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAttachments(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAttachmentsIsMutable();
+        attachments_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param value The attachments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAttachments(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAttachmentsIsMutable();
+        attachments_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param values The attachments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAttachments(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAttachmentsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, attachments_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAttachments() {
+        attachments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string attachments = 6;</code>
+       * @param value The bytes of the attachments to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAttachmentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureAttachmentsIsMutable();
+        attachments_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.EmailMessageBody)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.EmailMessageBody)
+    private static final com.elarian.hera.proto.Common.EmailMessageBody DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.Common.EmailMessageBody();
+    }
+
+    public static com.elarian.hera.proto.Common.EmailMessageBody getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmailMessageBody>
+        PARSER = new com.google.protobuf.AbstractParser<EmailMessageBody>() {
+      @java.lang.Override
+      public EmailMessageBody parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EmailMessageBody(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmailMessageBody> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmailMessageBody> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBody getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CustomerMessageBodyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CustomerMessageBody)
       com.google.protobuf.MessageOrBuilder {
@@ -11307,6 +12883,21 @@ public final class Common {
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 3;</code>
      */
     com.elarian.hera.proto.Common.LocationMessageBodyOrBuilder getLocationOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     * @return The email.
+     */
+    com.elarian.hera.proto.Common.EmailMessageBody getEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     */
+    com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder();
 
     public com.elarian.hera.proto.Common.CustomerMessageBody.EntryCase getEntryCase();
   }
@@ -11397,6 +12988,20 @@ public final class Common {
               entryCase_ = 3;
               break;
             }
+            case 34: {
+              com.elarian.hera.proto.Common.EmailMessageBody.Builder subBuilder = null;
+              if (entryCase_ == 4) {
+                subBuilder = ((com.elarian.hera.proto.Common.EmailMessageBody) entry_).toBuilder();
+              }
+              entry_ =
+                  input.readMessage(com.elarian.hera.proto.Common.EmailMessageBody.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.elarian.hera.proto.Common.EmailMessageBody) entry_);
+                entry_ = subBuilder.buildPartial();
+              }
+              entryCase_ = 4;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11437,6 +13042,7 @@ public final class Common {
       TEXT(1),
       MEDIA(2),
       LOCATION(3),
+      EMAIL(4),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -11457,6 +13063,7 @@ public final class Common {
           case 1: return TEXT;
           case 2: return MEDIA;
           case 3: return LOCATION;
+          case 4: return EMAIL;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -11565,6 +13172,37 @@ public final class Common {
       return com.elarian.hera.proto.Common.LocationMessageBody.getDefaultInstance();
     }
 
+    public static final int EMAIL_FIELD_NUMBER = 4;
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     * @return Whether the email field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return entryCase_ == 4;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+      if (entryCase_ == 4) {
+         return (com.elarian.hera.proto.Common.EmailMessageBody) entry_;
+      }
+      return com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder() {
+      if (entryCase_ == 4) {
+         return (com.elarian.hera.proto.Common.EmailMessageBody) entry_;
+      }
+      return com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11588,6 +13226,9 @@ public final class Common {
       if (entryCase_ == 3) {
         output.writeMessage(3, (com.elarian.hera.proto.Common.LocationMessageBody) entry_);
       }
+      if (entryCase_ == 4) {
+        output.writeMessage(4, (com.elarian.hera.proto.Common.EmailMessageBody) entry_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11608,6 +13249,10 @@ public final class Common {
       if (entryCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (com.elarian.hera.proto.Common.LocationMessageBody) entry_);
+      }
+      if (entryCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.elarian.hera.proto.Common.EmailMessageBody) entry_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11638,6 +13283,10 @@ public final class Common {
           if (!getLocation()
               .equals(other.getLocation())) return false;
           break;
+        case 4:
+          if (!getEmail()
+              .equals(other.getEmail())) return false;
+          break;
         case 0:
         default:
       }
@@ -11664,6 +13313,10 @@ public final class Common {
         case 3:
           hash = (37 * hash) + LOCATION_FIELD_NUMBER;
           hash = (53 * hash) + getLocation().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+          hash = (53 * hash) + getEmail().hashCode();
           break;
         case 0:
         default:
@@ -11850,6 +13503,13 @@ public final class Common {
             result.entry_ = locationBuilder_.build();
           }
         }
+        if (entryCase_ == 4) {
+          if (emailBuilder_ == null) {
+            result.entry_ = entry_;
+          } else {
+            result.entry_ = emailBuilder_.build();
+          }
+        }
         result.entryCase_ = entryCase_;
         onBuilt();
         return result;
@@ -11910,6 +13570,10 @@ public final class Common {
           }
           case LOCATION: {
             mergeLocation(other.getLocation());
+            break;
+          }
+          case EMAIL: {
+            mergeEmail(other.getEmail());
             break;
           }
           case ENTRY_NOT_SET: {
@@ -12381,6 +14045,147 @@ public final class Common {
         entryCase_ = 3;
         onChanged();;
         return locationBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder> emailBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       * @return Whether the email field is set.
+       */
+      @java.lang.Override
+      public boolean hasEmail() {
+        return entryCase_ == 4;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       * @return The email.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+        if (emailBuilder_ == null) {
+          if (entryCase_ == 4) {
+            return (com.elarian.hera.proto.Common.EmailMessageBody) entry_;
+          }
+          return com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance();
+        } else {
+          if (entryCase_ == 4) {
+            return emailBuilder_.getMessage();
+          }
+          return com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public Builder setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        if (emailBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entry_ = value;
+          onChanged();
+        } else {
+          emailBuilder_.setMessage(value);
+        }
+        entryCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public Builder setEmail(
+          com.elarian.hera.proto.Common.EmailMessageBody.Builder builderForValue) {
+        if (emailBuilder_ == null) {
+          entry_ = builderForValue.build();
+          onChanged();
+        } else {
+          emailBuilder_.setMessage(builderForValue.build());
+        }
+        entryCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public Builder mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        if (emailBuilder_ == null) {
+          if (entryCase_ == 4 &&
+              entry_ != com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance()) {
+            entry_ = com.elarian.hera.proto.Common.EmailMessageBody.newBuilder((com.elarian.hera.proto.Common.EmailMessageBody) entry_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            entry_ = value;
+          }
+          onChanged();
+        } else {
+          if (entryCase_ == 4) {
+            emailBuilder_.mergeFrom(value);
+          }
+          emailBuilder_.setMessage(value);
+        }
+        entryCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public Builder clearEmail() {
+        if (emailBuilder_ == null) {
+          if (entryCase_ == 4) {
+            entryCase_ = 0;
+            entry_ = null;
+            onChanged();
+          }
+        } else {
+          if (entryCase_ == 4) {
+            entryCase_ = 0;
+            entry_ = null;
+          }
+          emailBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      public com.elarian.hera.proto.Common.EmailMessageBody.Builder getEmailBuilder() {
+        return getEmailFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder() {
+        if ((entryCase_ == 4) && (emailBuilder_ != null)) {
+          return emailBuilder_.getMessageOrBuilder();
+        } else {
+          if (entryCase_ == 4) {
+            return (com.elarian.hera.proto.Common.EmailMessageBody) entry_;
+          }
+          return com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder> 
+          getEmailFieldBuilder() {
+        if (emailBuilder_ == null) {
+          if (!(entryCase_ == 4)) {
+            entry_ = com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance();
+          }
+          emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder>(
+                  (com.elarian.hera.proto.Common.EmailMessageBody) entry_,
+                  getParentForChildren(),
+                  isClean());
+          entry_ = null;
+        }
+        entryCase_ = 4;
+        onChanged();;
+        return emailBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -42846,6 +44651,11 @@ public final class Common {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_LocationMessageBody_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_EmailMessageBody_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_EmailMessageBody_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -43036,7 +44846,7 @@ public final class Common {
       "o.PaymentChannel\022\016\n\006number\030\002 \001(\t\"[\n\022Voic" +
       "eChannelNumber\0225\n\007channel\030\001 \001(\0162$.com.el" +
       "arian.hera.proto.VoiceChannel\022\016\n\006number\030" +
-      "\002 \001(\t\"\"\n\020WebChannelNumber\022\016\n\006number\030\001 \001(" +
+      "\002 \001(\t\"\"\n\020WebChannelNumber\022\016\n\006domain\030\001 \001(" +
       "\t\"3\n\023TextMessageTemplate\022\014\n\004name\030\001 \001(\t\022\016" +
       "\n\006params\030\002 \003(\t\"|\n\017TextMessageBody\022*\n\004tex" +
       "t\030\001 \001(\0132\034.google.protobuf.StringValue\022=\n" +
@@ -43045,272 +44855,282 @@ public final class Common {
       "\022\013\n\003url\030\001 \001(\t\0220\n\005media\030\002 \001(\0162!.com.elari" +
       "an.hera.proto.MediaType\":\n\023LocationMessa" +
       "geBody\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitude\030\002 " +
-      "\001(\001\"\323\001\n\023CustomerMessageBody\0227\n\004text\030\001 \001(" +
-      "\0132\'.com.elarian.hera.proto.TextMessageBo" +
-      "dyH\000\0229\n\005media\030\002 \001(\0132(.com.elarian.hera.p" +
-      "roto.MediaMessageBodyH\000\022?\n\010location\030\003 \001(" +
-      "\0132+.com.elarian.hera.proto.LocationMessa" +
-      "geBodyH\000B\007\n\005entry\"-\n\010UssdMenu\022\014\n\004text\030\001 " +
-      "\001(\t\022\023\n\013is_terminal\030\002 \001(\010\"\226\001\n\007UssdHop\022+\n\005" +
-      "input\030\001 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022.\n\004menu\030\002 \001(\0132 .com.elarian.hera.proto" +
-      ".UssdMenu\022.\n\ncreated_at\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\"\302\001\n\tWebAction\022\013\n\003key\030\001" +
-      " \001(\t\022E\n\nproperties\030\002 \003(\01321.com.elarian.h" +
-      "era.proto.WebAction.PropertiesEntry\022.\n\nc" +
-      "reated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
-      "amp\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"B\n\014DataMapValue\022\024\n\nstring" +
-      "_val\030\002 \001(\tH\000\022\023\n\tbytes_val\030\003 \001(\014H\000B\007\n\005val" +
-      "ue\"\215\001\n\022VoiceCallDialInput\022\032\n\022destination" +
-      "_number\030\001 \001(\t\022.\n\nstarted_at\030\002 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022+\n\010duration\030\003 \001(\0132" +
-      "\031.google.protobuf.Duration\"\241\002\n\023VoiceCall" +
-      "QueueInput\022/\n\013enqueued_at\030\001 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022/\n\013dequeued_at\030\002 \001(\013" +
-      "2\032.google.protobuf.Timestamp\0228\n\022dequeued" +
-      "_to_number\030\003 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022;\n\025dequeued_to_sessionId\030\004 \001(\0132\034." +
-      "google.protobuf.StringValue\0221\n\016queue_dur" +
-      "ation\030\005 \001(\0132\031.google.protobuf.Duration\"\250" +
-      "\003\n\021VoiceCallHopInput\0227\n\006status\030\001 \001(\0162\'.c" +
-      "om.elarian.hera.proto.VoiceCallStatus\022.\n" +
-      "\nstarted_at\030\002 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022B\n\014hangup_cause\030\003 \001(\0162,.com.elaria" +
-      "n.hera.proto.VoiceCallHangupCause\0221\n\013dtm" +
-      "f_digits\030\004 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0223\n\rrecording_url\030\005 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022=\n\tdial_data\030\006 \001(\0132*.c" +
-      "om.elarian.hera.proto.VoiceCallDialInput" +
-      "\022?\n\nqueue_data\030\007 \001(\0132+.com.elarian.hera." +
-      "proto.VoiceCallQueueInput\"\262\001\n\014VoiceCallH" +
-      "op\0228\n\005input\030\001 \001(\0132).com.elarian.hera.pro" +
-      "to.VoiceCallHopInput\0228\n\007actions\030\002 \003(\0132\'." +
-      "com.elarian.hera.proto.VoiceCallAction\022." +
-      "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\"\251\001\n\031PendingPaymentTransaction\022.\n\n" +
-      "created_at\030\001 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022+\n\005value\030\002 \001(\0132\034.com.elarian.hera.p" +
-      "roto.Cash\022/\n\tconverted\030\003 \001(\0132\034.com.elari" +
-      "an.hera.proto.Cash\"\304\002\n\016PaymentBalance\022\025\n" +
-      "\rcurrency_code\030\001 \001(\t\022/\n\tavailable\030\002 \001(\0132" +
-      "\034.com.elarian.hera.proto.Cash\022,\n\006actual\030" +
-      "\003 \001(\0132\034.com.elarian.hera.proto.Cash\022D\n\007p" +
-      "ending\030\004 \003(\01323.com.elarian.hera.proto.Pa" +
-      "ymentBalance.PendingEntry\022\023\n\013sequence_nr" +
-      "\030\005 \001(\004\032a\n\014PendingEntry\022\013\n\003key\030\001 \001(\t\022@\n\005v" +
-      "alue\030\002 \001(\01321.com.elarian.hera.proto.Pend" +
-      "ingPaymentTransaction:\0028\001\",\n\030PaymentPurs" +
-      "eCounterParty\022\020\n\010purse_id\030\001 \001(\t\"C\n\031Payme" +
-      "ntWalletCounterParty\022\023\n\013customer_id\030\001 \001(" +
-      "\t\022\021\n\twallet_id\030\002 \001(\t\"\244\001\n\033PaymentCustomer" +
-      "CounterParty\022?\n\017customer_number\030\001 \001(\0132&." +
-      "com.elarian.hera.proto.CustomerNumber\022D\n" +
-      "\016channel_number\030\002 \001(\0132,.com.elarian.hera" +
-      ".proto.PaymentChannelNumber\"\247\001\n\032PaymentC" +
-      "hannelCounterParty\022D\n\016channel_number\030\001 \001" +
-      "(\0132,.com.elarian.hera.proto.PaymentChann" +
-      "elNumber\022\024\n\014channel_code\030\002 \001(\005\022-\n\007accoun" +
-      "t\030\003 \001(\0132\034.google.protobuf.StringValue\"\266\002" +
-      "\n\023PaymentCounterParty\022G\n\010customer\030\001 \001(\0132" +
-      "3.com.elarian.hera.proto.PaymentCustomer" +
-      "CounterPartyH\000\022A\n\005purse\030\002 \001(\01320.com.elar" +
-      "ian.hera.proto.PaymentPurseCounterPartyH" +
-      "\000\022C\n\006wallet\030\003 \001(\01321.com.elarian.hera.pro" +
-      "to.PaymentWalletCounterPartyH\000\022E\n\007channe" +
-      "l\030\004 \001(\01322.com.elarian.hera.proto.Payment" +
-      "ChannelCounterPartyH\000B\007\n\005party\"H\n\014IndexM" +
-      "apping\022\013\n\003key\030\001 \001(\t\022+\n\005value\030\002 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\"v\n\rCustomerInde" +
-      "x\0225\n\007mapping\030\001 \001(\0132$.com.elarian.hera.pr" +
-      "oto.IndexMapping\022.\n\nexpiration\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\"\253\001\n\020CustomerRem" +
-      "inder\022\013\n\003key\030\001 \001(\t\022.\n\nexpiration\030\002 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022+\n\010interval\030\003" +
-      " \001(\0132\031.google.protobuf.Duration\022-\n\007paylo" +
-      "ad\030\004 \001(\0132\034.google.protobuf.StringValue\"j" +
-      "\n\rSayCallAction\022\014\n\004text\030\001 \001(\t\0228\n\005voice\030\002" +
-      " \001(\0162).com.elarian.hera.proto.TextToSpee" +
-      "chVoice\022\021\n\tplay_beep\030\003 \001(\010\"\035\n\016PlayCallAc" +
-      "tion\022\013\n\003url\030\001 \001(\t\"\237\002\n\023GetDigitsCallActio" +
-      "n\0224\n\003say\030\001 \001(\0132%.com.elarian.hera.proto." +
-      "SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com.elar" +
-      "ian.hera.proto.PlayCallActionH\000\022*\n\007timeo" +
-      "ut\030\003 \001(\0132\031.google.protobuf.Duration\0223\n\rf" +
-      "inish_on_key\030\004 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\022/\n\nnum_digits\030\005 \001(\0132\033.google.pr" +
-      "otobuf.Int32ValueB\010\n\006prompt\"\311\002\n\026GetRecor" +
-      "dingCallAction\0224\n\003say\030\001 \001(\0132%.com.elaria" +
-      "n.hera.proto.SayCallActionH\000\0226\n\004play\030\002 \001" +
-      "(\0132&.com.elarian.hera.proto.PlayCallActi" +
-      "onH\000\022*\n\007timeout\030\003 \001(\0132\031.google.protobuf." +
-      "Duration\022-\n\nmax_length\030\004 \001(\0132\031.google.pr" +
-      "otobuf.Duration\0223\n\rfinish_on_key\030\005 \001(\0132\034" +
-      ".google.protobuf.StringValue\022\021\n\tplay_bee" +
-      "p\030\006 \001(\010\022\024\n\014trim_silence\030\007 \001(\010B\010\n\006prompt\"" +
-      "\031\n\027RecordSessionCallAction\"\217\002\n\016DialCallA" +
-      "ction\022@\n\020customer_numbers\030\001 \003(\0132&.com.el" +
-      "arian.hera.proto.CustomerNumber\022\016\n\006recor" +
-      "d\030\002 \001(\010\022\022\n\nsequential\030\003 \001(\010\0223\n\rringback_" +
-      "tone\030\004 \001(\0132\034.google.protobuf.StringValue" +
-      "\022/\n\tcaller_id\030\005 \001(\0132\034.google.protobuf.St" +
-      "ringValue\0221\n\014max_duration\030\006 \001(\0132\033.google" +
-      ".protobuf.Int32Value\"w\n\021EnqueueCallActio" +
-      "n\0220\n\nhold_music\030\001 \001(\0132\034.google.protobuf." +
-      "StringValue\0220\n\nqueue_name\030\002 \001(\0132\034.google" +
-      ".protobuf.StringValue\"\231\001\n\021DequeueCallAct" +
-      "ion\022B\n\016channel_number\030\001 \001(\0132*.com.elaria" +
-      "n.hera.proto.VoiceChannelNumber\022\016\n\006recor" +
-      "d\030\002 \001(\010\0220\n\nqueue_name\030\003 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\"\022\n\020RejectCallAction\"!\n" +
-      "\022RedirectCallAction\022\013\n\003url\030\001 \001(\t\"\217\005\n\017Voi" +
-      "ceCallAction\0224\n\003say\030\001 \001(\0132%.com.elarian." +
-      "hera.proto.SayCallActionH\000\0226\n\004play\030\002 \001(\013" +
-      "2&.com.elarian.hera.proto.PlayCallAction" +
-      "H\000\022A\n\nget_digits\030\003 \001(\0132+.com.elarian.her" +
-      "a.proto.GetDigitsCallActionH\000\0226\n\004dial\030\004 " +
-      "\001(\0132&.com.elarian.hera.proto.DialCallAct" +
-      "ionH\000\022I\n\016record_session\030\005 \001(\0132/.com.elar" +
-      "ian.hera.proto.RecordSessionCallActionH\000" +
-      "\022G\n\rget_recording\030\006 \001(\0132..com.elarian.he" +
-      "ra.proto.GetRecordingCallActionH\000\022<\n\007enq" +
-      "ueue\030\007 \001(\0132).com.elarian.hera.proto.Enqu" +
-      "eueCallActionH\000\022<\n\007dequeue\030\010 \001(\0132).com.e" +
-      "larian.hera.proto.DequeueCallActionH\000\022:\n" +
-      "\006reject\030\t \001(\0132(.com.elarian.hera.proto.R" +
-      "ejectCallActionH\000\022>\n\010redirect\030\n \001(\0132*.co" +
-      "m.elarian.hera.proto.RedirectCallActionH" +
-      "\000B\007\n\005entry*\326\001\n\020MessagingChannel\022!\n\035MESSA" +
-      "GING_CHANNEL_UNSPECIFIED\020\000\022 \n\034MESSAGING_" +
-      "CHANNEL_GOOGLE_RCS\020\001\022\"\n\036MESSAGING_CHANNE" +
-      "L_FB_MESSENGER\020\002\022\031\n\025MESSAGING_CHANNEL_SM" +
-      "S\020\003\022\036\n\032MESSAGING_CHANNEL_TELEGRAM\020\004\022\036\n\032M" +
-      "ESSAGING_CHANNEL_WHATSAPP\020\005*L\n\016PaymentCh" +
-      "annel\022\037\n\033PAYMENT_CHANNEL_UNSPECIFIED\020\000\022\031" +
-      "\n\025PAYMENT_CHANNEL_TELCO\020\001*C\n\013UssdChannel" +
-      "\022\034\n\030USSD_CHANNEL_UNSPECIFIED\020\000\022\026\n\022USSD_C" +
-      "HANNEL_TELCO\020\001*F\n\014VoiceChannel\022\035\n\031VOICE_" +
-      "CHANNEL_UNSPECIFIED\020\000\022\027\n\023VOICE_CHANNEL_T" +
-      "ELCO\020\001*\326\001\n\026CustomerNumberProvider\022(\n$CUS" +
-      "TOMER_NUMBER_PROVIDER_UNSPECIFIED\020\000\022%\n!C" +
-      "USTOMER_NUMBER_PROVIDER_FACEBOOK\020\001\022\"\n\036CU" +
-      "STOMER_NUMBER_PROVIDER_TELCO\020\002\022%\n!CUSTOM" +
-      "ER_NUMBER_PROVIDER_TELEGRAM\020\003\022 \n\034CUSTOME" +
-      "R_NUMBER_PROVIDER_WEB\020\004*\260\001\n\tMediaType\022\032\n" +
-      "\026MEDIA_TYPE_UNSPECIFIED\020\000\022\024\n\020MEDIA_TYPE_" +
-      "IMAGE\020\001\022\024\n\020MEDIA_TYPE_AUDIO\020\002\022\024\n\020MEDIA_T" +
-      "YPE_VIDEO\020\003\022\027\n\023MEDIA_TYPE_DOCUMENT\020\004\022\024\n\020" +
-      "MEDIA_TYPE_VOICE\020\005\022\026\n\022MEDUA_TYPE_STICKER" +
-      "\020\006*\215\001\n\026MessagingConsentAction\022(\n$MESSAGI" +
-      "NG_CONSENT_ACTION_UNSPECIFIED\020\000\022#\n\037MESSA" +
-      "GING_CONSENT_ACTION_OPT_IN\020\001\022$\n MESSAGIN" +
-      "G_CONSENT_ACTION_OPT_OUT\020\002*\233\003\n\026Messaging" +
-      "ConsentStatus\022(\n$MESSAGING_CONSENT_STATU" +
-      "S_UNSPECIFIED\020\000\022#\n\037MESSAGING_CONSENT_STA" +
-      "TUS_QUEUED\020d\0220\n,MESSAGING_CONSENT_STATUS" +
-      "_OPT_IN_REQUEST_SENT\020e\022.\n)MESSAGING_CONS" +
-      "ENT_STATUS_OPT_IN_COMPLETED\020\254\002\022/\n*MESSAG" +
-      "ING_CONSENT_STATUS_OPT_OUT_COMPLETED\020\255\002\022" +
-      "4\n/MESSAGING_CONSENT_STATUS_INVALID_CHAN" +
-      "NEL_NUMBER\020\221\003\0228\n3MESSAGING_CONSENT_STATU" +
-      "S_DECOMMISSIONED_CUSTOMER_ID\020\222\003\022/\n*MESSA" +
-      "GING_CONSENT_STATUS_APPLICATION_ERROR\020\365\003" +
-      "*\216\001\n\026MessagingSessionStatus\022(\n$MESSAGING" +
-      "_SESSION_STATUS_UNSPECIFIED\020\000\022#\n\037MESSAGI" +
-      "NG_SESSION_STATUS_ACTIVE\020d\022%\n MESSAGING_" +
-      "SESSION_STATUS_EXPIRED\020\310\001*\217\001\n\026CustomerEv" +
-      "entDirection\022(\n$CUSTOMER_EVENT_DIRECTION" +
-      "_UNSPECIFIED\020\000\022$\n CUSTOMER_EVENT_DIRECTI" +
-      "ON_INBOUND\020\001\022%\n!CUSTOMER_EVENT_DIRECTION" +
-      "_OUTBOUND\020\002*\223\001\n\025CustomerRequestOrigin\022\'\n" +
-      "#CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED\020\000\022\'" +
-      "\n#CUSTOMER_REQUEST_ORIGIN_API_REQUEST\020\001\022" +
-      "(\n$CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG\020" +
-      "\002*\303\007\n\025MessageDeliveryStatus\022\'\n#MESSAGE_D" +
-      "ELIVERY_STATUS_UNSEPCIFIED\020\000\022\"\n\036MESSAGE_" +
-      "DELIVERY_STATUS_QUEUED\020d\022 \n\034MESSAGE_DELI" +
-      "VERY_STATUS_SENT\020e\022&\n!MESSAGE_DELIVERY_S" +
-      "TATUS_DELIVERED\020\254\002\022!\n\034MESSAGE_DELIVERY_S" +
-      "TATUS_READ\020\255\002\022%\n MESSAGE_DELIVERY_STATUS" +
-      "_RECEIVED\020\256\002\022#\n\036MESSAGE_DELIVERY_STATUS_" +
-      "FAILED\020\220\003\022\'\n\"MESSAGE_DELIVERY_STATUS_NO_" +
-      "CONSENT\020\221\003\022*\n%MESSAGE_DELIVERY_STATUS_NO" +
-      "_CAPABILITY\020\222\003\022$\n\037MESSAGE_DELIVERY_STATU" +
-      "S_EXPIRED\020\223\003\0222\n-MESSAGE_DELIVERY_STATUS_" +
-      "ONLY_TEMPLATE_ALLOWED\020\224\003\0223\n.MESSAGE_DELI" +
-      "VERY_STATUS_INVALID_CHANNEL_NUMBER\020\225\003\022*\n" +
-      "%MESSAGE_DELIVERY_STATUS_NOT_SUPPORTED\020\226" +
-      "\003\0228\n3MESSAGE_DELIVERY_STATUS_INVALID_REP" +
-      "LY_TO_MESSAGE_ID\020\227\003\0220\n+MESSAGE_DELIVERY_" +
-      "STATUS_INVALID_CUSTOMER_ID\020\230\003\022.\n)MESSAGE" +
-      "_DELIVERY_STATUS_DUPLICATE_REQUEST\020\231\003\022*\n" +
-      "%MESSAGE_DELIVERY_STATUS_TAG_NOT_FOUND\020\232" +
-      "\003\0226\n1MESSAGE_DELIVERY_STATUS_CUSTOMER_NU" +
-      "MBER_NOT_FOUND\020\233\003\0226\n1MESSAGE_DELIVERY_ST" +
-      "ATUS_DECOMMISSIONED_CUSTOMERID\020\234\003\022,\n\'MES" +
-      "SAGE_DELIVERY_STATUS_INVALID_REQUEST\020\235\003\022" +
-      ".\n)MESSAGE_DELIVERY_STATUS_APPLICATION_E" +
-      "RROR\020\365\003*\311\005\n\024VoiceCallHangupCause\022\'\n#VOIC" +
-      "E_CALL_HANGUP_CAUSE_UNSPECIFIED\020\000\022.\n*VOI" +
-      "CE_CALL_HANGUP_CAUSE_UNALLOCATED_NUMBER\020" +
-      "\001\022%\n!VOICE_CALL_HANGUP_CAUSE_USER_BUSY\020\021" +
-      "\022+\n\'VOICE_CALL_HANGUP_CAUSE_NORMAL_CLEAR" +
-      "ING\020\020\022,\n(VOICE_CALL_HANGUP_CAUSE_NO_USER" +
-      "_RESPONSE\020\022\022%\n!VOICE_CALL_HANGUP_CAUSE_N" +
-      "O_ANSWER\020\023\022-\n)VOICE_CALL_HANGUP_CAUSE_SU" +
-      "BSCRIBER_ABSENT\020\024\022)\n%VOICE_CALL_HANGUP_C" +
-      "AUSE_CALL_REJECTED\020\025\022.\n*VOICE_CALL_HANGU" +
-      "P_CAUSE_NORMAL_UNSPECIFIED\020\037\0224\n0VOICE_CA" +
-      "LL_HANGUP_CAUSE_NORMAL_TEMPORARY_FAILURE" +
-      "\020)\022/\n+VOICE_CALL_HANGUP_CAUSE_SERVICE_UN" +
-      "AVAILABLE\020?\0224\n0VOICE_CALL_HANGUP_CAUSE_R" +
-      "ECOVERY_ON_TIMER_EXPIRE\020f\022.\n)VOICE_CALL_" +
-      "HANGUP_CAUSE_ORIGINATOR_CANCEL\020\347\003\022&\n!VOI" +
-      "CE_CALL_HANGUP_CAUSE_LOSE_RACE\020\366\003\0220\n+VOI" +
-      "CE_CALL_HANGUP_CAUSE_USER_NOT_REGISTERED" +
-      "\020\336\004*\245\006\n\017VoiceCallStatus\022!\n\035VOICE_CALL_ST" +
-      "ATUS_UNSPECIFIED\020\000\022\034\n\030VOICE_CALL_STATUS_" +
-      "QUEUED\020d\022\036\n\032VOICE_CALL_STATUS_ANSWERED\020e" +
-      "\022\035\n\031VOICE_CALL_STATUS_RINGING\020f\022\035\n\030VOICE" +
-      "_CALL_STATUS_ACTIVE\020\310\001\022\036\n\031VOICE_CALL_STA" +
-      "TUS_DIALING\020\311\001\022%\n VOICE_CALL_STATUS_DIAL" +
-      "_COMPLETED\020\312\001\022\036\n\031VOICE_CALL_STATUS_BRIDG" +
-      "ED\020\313\001\022\037\n\032VOICE_CALL_STATUS_ENQUEUED\020\314\001\022\037" +
-      "\n\032VOICE_CALL_STATUS_DEQUEUED\020\315\001\022\"\n\035VOICE" +
-      "_CALL_STATUS_TRANSFERRED\020\316\001\022)\n$VOICE_CAL" +
-      "L_STATUS_TRANSFER_COMPLETED\020\317\001\022 \n\033VOICE_" +
-      "CALL_STATUS_COMPLETED\020\254\002\022*\n%VOICE_CALL_S" +
-      "TATUS_INSUFFICIENT_CREDIT\020\220\003\022#\n\036VOICE_CA" +
-      "LL_STATUS_NOT_ANSWERED\020\221\003\022+\n&VOICE_CALL_" +
-      "STATUS_INVALID_PHONE_NUMBER\020\222\003\0220\n+VOICE_" +
-      "CALL_STATUS_DESTINATION_NOT_SUPPORTED\020\223\003" +
-      "\0220\n+VOICE_CALL_STATUS_DECOMMISSIONED_CUS" +
-      "TOMERID\020\224\003\022\036\n\031VOICE_CALL_STATUS_EXPIRED\020" +
-      "\225\003\022-\n(VOICE_CALL_STATUS_INVALID_CHANNEL_" +
-      "NUMBER\020\226\003\022(\n#VOICE_CALL_STATUS_APPLICATI" +
-      "ON_ERROR\020\365\003*\341\005\n\rPaymentStatus\022\036\n\032PAYMENT" +
-      "_STATUS_UNSPECIFIED\020\000\022\031\n\025PAYMENT_STATUS_" +
-      "QUEUED\020d\022\'\n#PAYMENT_STATUS_PENDING_CONFI" +
-      "RMATION\020e\022%\n!PAYMENT_STATUS_PENDING_VALI" +
-      "DATION\020f\022\034\n\030PAYMENT_STATUS_VALIDATED\020g\022#" +
-      "\n\036PAYMENT_STATUS_INVALID_REQUEST\020\310\001\022!\n\034P" +
-      "AYMENT_STATUS_NOT_SUPPORTED\020\311\001\022&\n!PAYMEN" +
-      "T_STATUS_INSUFFICIENT_FUNDS\020\312\001\022%\n PAYMEN" +
-      "T_STATUS_APPLICATION_ERROR\020\313\001\022\037\n\032PAYMENT" +
-      "_STATUS_NOT_ALLOWED\020\314\001\022%\n PAYMENT_STATUS" +
-      "_DUPLICATE_REQUEST\020\315\001\022!\n\034PAYMENT_STATUS_" +
-      "INVALID_PURSE\020\316\001\022\"\n\035PAYMENT_STATUS_INVAL" +
-      "ID_WALLET\020\317\001\022.\n)PAYMENT_STATUS_DECOMMISS" +
-      "IONED_CUSTOMER_ID\020\253\002\022\033\n\026PAYMENT_STATUS_S" +
-      "UCCESS\020\254\002\022 \n\033PAYMENT_STATUS_PASS_THROUGH" +
-      "\020\255\002\022\032\n\025PAYMENT_STATUS_FAILED\020\220\003\022\035\n\030PAYME" +
-      "NT_STATUS_THROTTLED\020\221\003\022\033\n\026PAYMENT_STATUS" +
-      "_EXPIRED\020\222\003\022\034\n\027PAYMENT_STATUS_REJECTED\020\223" +
-      "\003\022\034\n\027PAYMENT_STATUS_REVERSED\020\364\003*y\n\021TextT" +
-      "oSpeechVoice\022$\n TEXT_TO_SPEECH_VOICE_UNS" +
-      "PECIFIED\020\000\022\035\n\031TEXT_TO_SPEECH_VOICE_MALE\020" +
-      "\001\022\037\n\033TEXT_TO_SPEECH_VOICE_FEMALE\020\002b\006prot" +
-      "o3"
+      "\001(\001\"\202\001\n\020EmailMessageBody\022\017\n\007subject\030\001 \001(" +
+      "\t\022\022\n\nbody_plain\030\002 \001(\t\022\021\n\tbody_html\030\003 \001(\t" +
+      "\022\017\n\007cc_list\030\004 \003(\t\022\020\n\010bcc_list\030\005 \003(\t\022\023\n\013a" +
+      "ttachments\030\006 \003(\t\"\216\002\n\023CustomerMessageBody" +
+      "\0227\n\004text\030\001 \001(\0132\'.com.elarian.hera.proto." +
+      "TextMessageBodyH\000\0229\n\005media\030\002 \001(\0132(.com.e" +
+      "larian.hera.proto.MediaMessageBodyH\000\022?\n\010" +
+      "location\030\003 \001(\0132+.com.elarian.hera.proto." +
+      "LocationMessageBodyH\000\0229\n\005email\030\004 \001(\0132(.c" +
+      "om.elarian.hera.proto.EmailMessageBodyH\000" +
+      "B\007\n\005entry\"-\n\010UssdMenu\022\014\n\004text\030\001 \001(\t\022\023\n\013i" +
+      "s_terminal\030\002 \001(\010\"\226\001\n\007UssdHop\022+\n\005input\030\001 " +
+      "\001(\0132\034.google.protobuf.StringValue\022.\n\004men" +
+      "u\030\002 \001(\0132 .com.elarian.hera.proto.UssdMen" +
+      "u\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
+      "Timestamp\"\302\001\n\tWebAction\022\013\n\003key\030\001 \001(\t\022E\n\n" +
+      "properties\030\002 \003(\01321.com.elarian.hera.prot" +
+      "o.WebAction.PropertiesEntry\022.\n\ncreated_a" +
+      "t\030\003 \001(\0132\032.google.protobuf.Timestamp\0321\n\017P" +
+      "ropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"B\n\014DataMapValue\022\024\n\nstring_val\030\002 \001" +
+      "(\tH\000\022\023\n\tbytes_val\030\003 \001(\014H\000B\007\n\005value\"\215\001\n\022V" +
+      "oiceCallDialInput\022\032\n\022destination_number\030" +
+      "\001 \001(\t\022.\n\nstarted_at\030\002 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022+\n\010duration\030\003 \001(\0132\031.google" +
+      ".protobuf.Duration\"\241\002\n\023VoiceCallQueueInp" +
+      "ut\022/\n\013enqueued_at\030\001 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022/\n\013dequeued_at\030\002 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\0228\n\022dequeued_to_numb" +
+      "er\030\003 \001(\0132\034.google.protobuf.StringValue\022;" +
+      "\n\025dequeued_to_sessionId\030\004 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\0221\n\016queue_duration\030\005 " +
+      "\001(\0132\031.google.protobuf.Duration\"\250\003\n\021Voice" +
+      "CallHopInput\0227\n\006status\030\001 \001(\0162\'.com.elari" +
+      "an.hera.proto.VoiceCallStatus\022.\n\nstarted" +
+      "_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022B\n" +
+      "\014hangup_cause\030\003 \001(\0162,.com.elarian.hera.p" +
+      "roto.VoiceCallHangupCause\0221\n\013dtmf_digits" +
+      "\030\004 \001(\0132\034.google.protobuf.StringValue\0223\n\r" +
+      "recording_url\030\005 \001(\0132\034.google.protobuf.St" +
+      "ringValue\022=\n\tdial_data\030\006 \001(\0132*.com.elari" +
+      "an.hera.proto.VoiceCallDialInput\022?\n\nqueu" +
+      "e_data\030\007 \001(\0132+.com.elarian.hera.proto.Vo" +
+      "iceCallQueueInput\"\262\001\n\014VoiceCallHop\0228\n\005in" +
+      "put\030\001 \001(\0132).com.elarian.hera.proto.Voice" +
+      "CallHopInput\0228\n\007actions\030\002 \003(\0132\'.com.elar" +
+      "ian.hera.proto.VoiceCallAction\022.\n\ncreate" +
+      "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\"\251" +
+      "\001\n\031PendingPaymentTransaction\022.\n\ncreated_" +
+      "at\030\001 \001(\0132\032.google.protobuf.Timestamp\022+\n\005" +
+      "value\030\002 \001(\0132\034.com.elarian.hera.proto.Cas" +
+      "h\022/\n\tconverted\030\003 \001(\0132\034.com.elarian.hera." +
+      "proto.Cash\"\304\002\n\016PaymentBalance\022\025\n\rcurrenc" +
+      "y_code\030\001 \001(\t\022/\n\tavailable\030\002 \001(\0132\034.com.el" +
+      "arian.hera.proto.Cash\022,\n\006actual\030\003 \001(\0132\034." +
+      "com.elarian.hera.proto.Cash\022D\n\007pending\030\004" +
+      " \003(\01323.com.elarian.hera.proto.PaymentBal" +
+      "ance.PendingEntry\022\023\n\013sequence_nr\030\005 \001(\004\032a" +
+      "\n\014PendingEntry\022\013\n\003key\030\001 \001(\t\022@\n\005value\030\002 \001" +
+      "(\01321.com.elarian.hera.proto.PendingPayme" +
+      "ntTransaction:\0028\001\",\n\030PaymentPurseCounter" +
+      "Party\022\020\n\010purse_id\030\001 \001(\t\"C\n\031PaymentWallet" +
+      "CounterParty\022\023\n\013customer_id\030\001 \001(\t\022\021\n\twal" +
+      "let_id\030\002 \001(\t\"\244\001\n\033PaymentCustomerCounterP" +
+      "arty\022?\n\017customer_number\030\001 \001(\0132&.com.elar" +
+      "ian.hera.proto.CustomerNumber\022D\n\016channel" +
+      "_number\030\002 \001(\0132,.com.elarian.hera.proto.P" +
+      "aymentChannelNumber\"\247\001\n\032PaymentChannelCo" +
+      "unterParty\022D\n\016channel_number\030\001 \001(\0132,.com" +
+      ".elarian.hera.proto.PaymentChannelNumber" +
+      "\022\024\n\014channel_code\030\002 \001(\005\022-\n\007account\030\003 \001(\0132" +
+      "\034.google.protobuf.StringValue\"\266\002\n\023Paymen" +
+      "tCounterParty\022G\n\010customer\030\001 \001(\01323.com.el" +
+      "arian.hera.proto.PaymentCustomerCounterP" +
+      "artyH\000\022A\n\005purse\030\002 \001(\01320.com.elarian.hera" +
+      ".proto.PaymentPurseCounterPartyH\000\022C\n\006wal" +
+      "let\030\003 \001(\01321.com.elarian.hera.proto.Payme" +
+      "ntWalletCounterPartyH\000\022E\n\007channel\030\004 \001(\0132" +
+      "2.com.elarian.hera.proto.PaymentChannelC" +
+      "ounterPartyH\000B\007\n\005party\"H\n\014IndexMapping\022\013" +
+      "\n\003key\030\001 \001(\t\022+\n\005value\030\002 \001(\0132\034.google.prot" +
+      "obuf.StringValue\"v\n\rCustomerIndex\0225\n\007map" +
+      "ping\030\001 \001(\0132$.com.elarian.hera.proto.Inde" +
+      "xMapping\022.\n\nexpiration\030\002 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\"\253\001\n\020CustomerReminder\022\013\n" +
+      "\003key\030\001 \001(\t\022.\n\nexpiration\030\002 \001(\0132\032.google." +
+      "protobuf.Timestamp\022+\n\010interval\030\003 \001(\0132\031.g" +
+      "oogle.protobuf.Duration\022-\n\007payload\030\004 \001(\013" +
+      "2\034.google.protobuf.StringValue\"j\n\rSayCal" +
+      "lAction\022\014\n\004text\030\001 \001(\t\0228\n\005voice\030\002 \001(\0162).c" +
+      "om.elarian.hera.proto.TextToSpeechVoice\022" +
+      "\021\n\tplay_beep\030\003 \001(\010\"\035\n\016PlayCallAction\022\013\n\003" +
+      "url\030\001 \001(\t\"\237\002\n\023GetDigitsCallAction\0224\n\003say" +
+      "\030\001 \001(\0132%.com.elarian.hera.proto.SayCallA" +
+      "ctionH\000\0226\n\004play\030\002 \001(\0132&.com.elarian.hera" +
+      ".proto.PlayCallActionH\000\022*\n\007timeout\030\003 \001(\013" +
+      "2\031.google.protobuf.Duration\0223\n\rfinish_on" +
+      "_key\030\004 \001(\0132\034.google.protobuf.StringValue" +
+      "\022/\n\nnum_digits\030\005 \001(\0132\033.google.protobuf.I" +
+      "nt32ValueB\010\n\006prompt\"\311\002\n\026GetRecordingCall" +
+      "Action\0224\n\003say\030\001 \001(\0132%.com.elarian.hera.p" +
+      "roto.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com" +
+      ".elarian.hera.proto.PlayCallActionH\000\022*\n\007" +
+      "timeout\030\003 \001(\0132\031.google.protobuf.Duration" +
+      "\022-\n\nmax_length\030\004 \001(\0132\031.google.protobuf.D" +
+      "uration\0223\n\rfinish_on_key\030\005 \001(\0132\034.google." +
+      "protobuf.StringValue\022\021\n\tplay_beep\030\006 \001(\010\022" +
+      "\024\n\014trim_silence\030\007 \001(\010B\010\n\006prompt\"\031\n\027Recor" +
+      "dSessionCallAction\"\217\002\n\016DialCallAction\022@\n" +
+      "\020customer_numbers\030\001 \003(\0132&.com.elarian.he" +
+      "ra.proto.CustomerNumber\022\016\n\006record\030\002 \001(\010\022" +
+      "\022\n\nsequential\030\003 \001(\010\0223\n\rringback_tone\030\004 \001" +
+      "(\0132\034.google.protobuf.StringValue\022/\n\tcall" +
+      "er_id\030\005 \001(\0132\034.google.protobuf.StringValu" +
+      "e\0221\n\014max_duration\030\006 \001(\0132\033.google.protobu" +
+      "f.Int32Value\"w\n\021EnqueueCallAction\0220\n\nhol" +
+      "d_music\030\001 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\0220\n\nqueue_name\030\002 \001(\0132\034.google.protobu" +
+      "f.StringValue\"\231\001\n\021DequeueCallAction\022B\n\016c" +
+      "hannel_number\030\001 \001(\0132*.com.elarian.hera.p" +
+      "roto.VoiceChannelNumber\022\016\n\006record\030\002 \001(\010\022" +
+      "0\n\nqueue_name\030\003 \001(\0132\034.google.protobuf.St" +
+      "ringValue\"\022\n\020RejectCallAction\"!\n\022Redirec" +
+      "tCallAction\022\013\n\003url\030\001 \001(\t\"\217\005\n\017VoiceCallAc" +
+      "tion\0224\n\003say\030\001 \001(\0132%.com.elarian.hera.pro" +
+      "to.SayCallActionH\000\0226\n\004play\030\002 \001(\0132&.com.e" +
+      "larian.hera.proto.PlayCallActionH\000\022A\n\nge" +
+      "t_digits\030\003 \001(\0132+.com.elarian.hera.proto." +
+      "GetDigitsCallActionH\000\0226\n\004dial\030\004 \001(\0132&.co" +
+      "m.elarian.hera.proto.DialCallActionH\000\022I\n" +
+      "\016record_session\030\005 \001(\0132/.com.elarian.hera" +
+      ".proto.RecordSessionCallActionH\000\022G\n\rget_" +
+      "recording\030\006 \001(\0132..com.elarian.hera.proto" +
+      ".GetRecordingCallActionH\000\022<\n\007enqueue\030\007 \001" +
+      "(\0132).com.elarian.hera.proto.EnqueueCallA" +
+      "ctionH\000\022<\n\007dequeue\030\010 \001(\0132).com.elarian.h" +
+      "era.proto.DequeueCallActionH\000\022:\n\006reject\030" +
+      "\t \001(\0132(.com.elarian.hera.proto.RejectCal" +
+      "lActionH\000\022>\n\010redirect\030\n \001(\0132*.com.elaria" +
+      "n.hera.proto.RedirectCallActionH\000B\007\n\005ent" +
+      "ry*\363\001\n\020MessagingChannel\022!\n\035MESSAGING_CHA" +
+      "NNEL_UNSPECIFIED\020\000\022 \n\034MESSAGING_CHANNEL_" +
+      "GOOGLE_RCS\020\001\022\"\n\036MESSAGING_CHANNEL_FB_MES" +
+      "SENGER\020\002\022\031\n\025MESSAGING_CHANNEL_SMS\020\003\022\036\n\032M" +
+      "ESSAGING_CHANNEL_TELEGRAM\020\004\022\036\n\032MESSAGING" +
+      "_CHANNEL_WHATSAPP\020\005\022\033\n\027MESSAGING_CHANNEL" +
+      "_EMAIL\020\006*L\n\016PaymentChannel\022\037\n\033PAYMENT_CH" +
+      "ANNEL_UNSPECIFIED\020\000\022\031\n\025PAYMENT_CHANNEL_T" +
+      "ELCO\020\001*C\n\013UssdChannel\022\034\n\030USSD_CHANNEL_UN" +
+      "SPECIFIED\020\000\022\026\n\022USSD_CHANNEL_TELCO\020\001*F\n\014V" +
+      "oiceChannel\022\035\n\031VOICE_CHANNEL_UNSPECIFIED" +
+      "\020\000\022\027\n\023VOICE_CHANNEL_TELCO\020\001*\372\001\n\026Customer" +
+      "NumberProvider\022(\n$CUSTOMER_NUMBER_PROVID" +
+      "ER_UNSPECIFIED\020\000\022%\n!CUSTOMER_NUMBER_PROV" +
+      "IDER_FACEBOOK\020\001\022\"\n\036CUSTOMER_NUMBER_PROVI" +
+      "DER_TELCO\020\002\022%\n!CUSTOMER_NUMBER_PROVIDER_" +
+      "TELEGRAM\020\003\022 \n\034CUSTOMER_NUMBER_PROVIDER_W" +
+      "EB\020\004\022\"\n\036CUSTOMER_NUMBER_PROVIDER_EMAIL\020\005" +
+      "*\260\001\n\tMediaType\022\032\n\026MEDIA_TYPE_UNSPECIFIED" +
+      "\020\000\022\024\n\020MEDIA_TYPE_IMAGE\020\001\022\024\n\020MEDIA_TYPE_A" +
+      "UDIO\020\002\022\024\n\020MEDIA_TYPE_VIDEO\020\003\022\027\n\023MEDIA_TY" +
+      "PE_DOCUMENT\020\004\022\024\n\020MEDIA_TYPE_VOICE\020\005\022\026\n\022M" +
+      "EDUA_TYPE_STICKER\020\006*\215\001\n\026MessagingConsent" +
+      "Action\022(\n$MESSAGING_CONSENT_ACTION_UNSPE" +
+      "CIFIED\020\000\022#\n\037MESSAGING_CONSENT_ACTION_OPT" +
+      "_IN\020\001\022$\n MESSAGING_CONSENT_ACTION_OPT_OU" +
+      "T\020\002*\233\003\n\026MessagingConsentStatus\022(\n$MESSAG" +
+      "ING_CONSENT_STATUS_UNSPECIFIED\020\000\022#\n\037MESS" +
+      "AGING_CONSENT_STATUS_QUEUED\020d\0220\n,MESSAGI" +
+      "NG_CONSENT_STATUS_OPT_IN_REQUEST_SENT\020e\022" +
+      ".\n)MESSAGING_CONSENT_STATUS_OPT_IN_COMPL" +
+      "ETED\020\254\002\022/\n*MESSAGING_CONSENT_STATUS_OPT_" +
+      "OUT_COMPLETED\020\255\002\0224\n/MESSAGING_CONSENT_ST" +
+      "ATUS_INVALID_CHANNEL_NUMBER\020\221\003\0228\n3MESSAG" +
+      "ING_CONSENT_STATUS_DECOMMISSIONED_CUSTOM" +
+      "ER_ID\020\222\003\022/\n*MESSAGING_CONSENT_STATUS_APP" +
+      "LICATION_ERROR\020\365\003*\216\001\n\026MessagingSessionSt" +
+      "atus\022(\n$MESSAGING_SESSION_STATUS_UNSPECI" +
+      "FIED\020\000\022#\n\037MESSAGING_SESSION_STATUS_ACTIV" +
+      "E\020d\022%\n MESSAGING_SESSION_STATUS_EXPIRED\020" +
+      "\310\001*\217\001\n\026CustomerEventDirection\022(\n$CUSTOME" +
+      "R_EVENT_DIRECTION_UNSPECIFIED\020\000\022$\n CUSTO" +
+      "MER_EVENT_DIRECTION_INBOUND\020\001\022%\n!CUSTOME" +
+      "R_EVENT_DIRECTION_OUTBOUND\020\002*\223\001\n\025Custome" +
+      "rRequestOrigin\022\'\n#CUSTOMER_REQUEST_ORIGI" +
+      "N_UNSPECIFIED\020\000\022\'\n#CUSTOMER_REQUEST_ORIG" +
+      "IN_API_REQUEST\020\001\022(\n$CUSTOMER_REQUEST_ORI" +
+      "GIN_CUSTOMER_TAG\020\002*\344\010\n\025MessageDeliverySt" +
+      "atus\022\'\n#MESSAGE_DELIVERY_STATUS_UNSPECIF" +
+      "IED\020\000\022\"\n\036MESSAGE_DELIVERY_STATUS_QUEUED\020" +
+      "d\022 \n\034MESSAGE_DELIVERY_STATUS_SENT\020e\022&\n!M" +
+      "ESSAGE_DELIVERY_STATUS_DELIVERED\020\254\002\022!\n\034M" +
+      "ESSAGE_DELIVERY_STATUS_READ\020\255\002\022%\n MESSAG" +
+      "E_DELIVERY_STATUS_RECEIVED\020\256\002\022$\n\037MESSAGE" +
+      "_DELIVERY_STATUS_CLICKED\020\257\002\022)\n$MESSAGE_D" +
+      "ELIVERY_STATUS_UNSUBSCRIBED\020\260\002\022\'\n\"MESSAG" +
+      "E_DELIVERY_STATUS_COMPLAINED\020\261\002\022#\n\036MESSA" +
+      "GE_DELIVERY_STATUS_FAILED\020\220\003\022\'\n\"MESSAGE_" +
+      "DELIVERY_STATUS_NO_CONSENT\020\221\003\022*\n%MESSAGE" +
+      "_DELIVERY_STATUS_NO_CAPABILITY\020\222\003\022$\n\037MES" +
+      "SAGE_DELIVERY_STATUS_EXPIRED\020\223\003\0222\n-MESSA" +
+      "GE_DELIVERY_STATUS_ONLY_TEMPLATE_ALLOWED" +
+      "\020\224\003\0223\n.MESSAGE_DELIVERY_STATUS_INVALID_C" +
+      "HANNEL_NUMBER\020\225\003\022*\n%MESSAGE_DELIVERY_STA" +
+      "TUS_NOT_SUPPORTED\020\226\003\0228\n3MESSAGE_DELIVERY" +
+      "_STATUS_INVALID_REPLY_TO_MESSAGE_ID\020\227\003\0220" +
+      "\n+MESSAGE_DELIVERY_STATUS_INVALID_CUSTOM" +
+      "ER_ID\020\230\003\022.\n)MESSAGE_DELIVERY_STATUS_DUPL" +
+      "ICATE_REQUEST\020\231\003\022*\n%MESSAGE_DELIVERY_STA" +
+      "TUS_TAG_NOT_FOUND\020\232\003\0226\n1MESSAGE_DELIVERY" +
+      "_STATUS_CUSTOMER_NUMBER_NOT_FOUND\020\233\003\0226\n1" +
+      "MESSAGE_DELIVERY_STATUS_DECOMMISSIONED_C" +
+      "USTOMERID\020\234\003\022,\n\'MESSAGE_DELIVERY_STATUS_" +
+      "INVALID_REQUEST\020\235\003\022%\n MESSAGE_DELIVERY_S" +
+      "TATUS_REJECTED\020\236\003\022.\n)MESSAGE_DELIVERY_ST" +
+      "ATUS_APPLICATION_ERROR\020\365\003*\311\005\n\024VoiceCallH" +
+      "angupCause\022\'\n#VOICE_CALL_HANGUP_CAUSE_UN" +
+      "SPECIFIED\020\000\022.\n*VOICE_CALL_HANGUP_CAUSE_U" +
+      "NALLOCATED_NUMBER\020\001\022%\n!VOICE_CALL_HANGUP" +
+      "_CAUSE_USER_BUSY\020\021\022+\n\'VOICE_CALL_HANGUP_" +
+      "CAUSE_NORMAL_CLEARING\020\020\022,\n(VOICE_CALL_HA" +
+      "NGUP_CAUSE_NO_USER_RESPONSE\020\022\022%\n!VOICE_C" +
+      "ALL_HANGUP_CAUSE_NO_ANSWER\020\023\022-\n)VOICE_CA" +
+      "LL_HANGUP_CAUSE_SUBSCRIBER_ABSENT\020\024\022)\n%V" +
+      "OICE_CALL_HANGUP_CAUSE_CALL_REJECTED\020\025\022." +
+      "\n*VOICE_CALL_HANGUP_CAUSE_NORMAL_UNSPECI" +
+      "FIED\020\037\0224\n0VOICE_CALL_HANGUP_CAUSE_NORMAL" +
+      "_TEMPORARY_FAILURE\020)\022/\n+VOICE_CALL_HANGU" +
+      "P_CAUSE_SERVICE_UNAVAILABLE\020?\0224\n0VOICE_C" +
+      "ALL_HANGUP_CAUSE_RECOVERY_ON_TIMER_EXPIR" +
+      "E\020f\022.\n)VOICE_CALL_HANGUP_CAUSE_ORIGINATO" +
+      "R_CANCEL\020\347\003\022&\n!VOICE_CALL_HANGUP_CAUSE_L" +
+      "OSE_RACE\020\366\003\0220\n+VOICE_CALL_HANGUP_CAUSE_U" +
+      "SER_NOT_REGISTERED\020\336\004*\245\006\n\017VoiceCallStatu" +
+      "s\022!\n\035VOICE_CALL_STATUS_UNSPECIFIED\020\000\022\034\n\030" +
+      "VOICE_CALL_STATUS_QUEUED\020d\022\036\n\032VOICE_CALL" +
+      "_STATUS_ANSWERED\020e\022\035\n\031VOICE_CALL_STATUS_" +
+      "RINGING\020f\022\035\n\030VOICE_CALL_STATUS_ACTIVE\020\310\001" +
+      "\022\036\n\031VOICE_CALL_STATUS_DIALING\020\311\001\022%\n VOIC" +
+      "E_CALL_STATUS_DIAL_COMPLETED\020\312\001\022\036\n\031VOICE" +
+      "_CALL_STATUS_BRIDGED\020\313\001\022\037\n\032VOICE_CALL_ST" +
+      "ATUS_ENQUEUED\020\314\001\022\037\n\032VOICE_CALL_STATUS_DE" +
+      "QUEUED\020\315\001\022\"\n\035VOICE_CALL_STATUS_TRANSFERR" +
+      "ED\020\316\001\022)\n$VOICE_CALL_STATUS_TRANSFER_COMP" +
+      "LETED\020\317\001\022 \n\033VOICE_CALL_STATUS_COMPLETED\020" +
+      "\254\002\022*\n%VOICE_CALL_STATUS_INSUFFICIENT_CRE" +
+      "DIT\020\220\003\022#\n\036VOICE_CALL_STATUS_NOT_ANSWERED" +
+      "\020\221\003\022+\n&VOICE_CALL_STATUS_INVALID_PHONE_N" +
+      "UMBER\020\222\003\0220\n+VOICE_CALL_STATUS_DESTINATIO" +
+      "N_NOT_SUPPORTED\020\223\003\0220\n+VOICE_CALL_STATUS_" +
+      "DECOMMISSIONED_CUSTOMERID\020\224\003\022\036\n\031VOICE_CA" +
+      "LL_STATUS_EXPIRED\020\225\003\022-\n(VOICE_CALL_STATU" +
+      "S_INVALID_CHANNEL_NUMBER\020\226\003\022(\n#VOICE_CAL" +
+      "L_STATUS_APPLICATION_ERROR\020\365\003*\341\005\n\rPaymen" +
+      "tStatus\022\036\n\032PAYMENT_STATUS_UNSPECIFIED\020\000\022" +
+      "\031\n\025PAYMENT_STATUS_QUEUED\020d\022\'\n#PAYMENT_ST" +
+      "ATUS_PENDING_CONFIRMATION\020e\022%\n!PAYMENT_S" +
+      "TATUS_PENDING_VALIDATION\020f\022\034\n\030PAYMENT_ST" +
+      "ATUS_VALIDATED\020g\022#\n\036PAYMENT_STATUS_INVAL" +
+      "ID_REQUEST\020\310\001\022!\n\034PAYMENT_STATUS_NOT_SUPP" +
+      "ORTED\020\311\001\022&\n!PAYMENT_STATUS_INSUFFICIENT_" +
+      "FUNDS\020\312\001\022%\n PAYMENT_STATUS_APPLICATION_E" +
+      "RROR\020\313\001\022\037\n\032PAYMENT_STATUS_NOT_ALLOWED\020\314\001" +
+      "\022%\n PAYMENT_STATUS_DUPLICATE_REQUEST\020\315\001\022" +
+      "!\n\034PAYMENT_STATUS_INVALID_PURSE\020\316\001\022\"\n\035PA" +
+      "YMENT_STATUS_INVALID_WALLET\020\317\001\022.\n)PAYMEN" +
+      "T_STATUS_DECOMMISSIONED_CUSTOMER_ID\020\253\002\022\033" +
+      "\n\026PAYMENT_STATUS_SUCCESS\020\254\002\022 \n\033PAYMENT_S" +
+      "TATUS_PASS_THROUGH\020\255\002\022\032\n\025PAYMENT_STATUS_" +
+      "FAILED\020\220\003\022\035\n\030PAYMENT_STATUS_THROTTLED\020\221\003" +
+      "\022\033\n\026PAYMENT_STATUS_EXPIRED\020\222\003\022\034\n\027PAYMENT" +
+      "_STATUS_REJECTED\020\223\003\022\034\n\027PAYMENT_STATUS_RE" +
+      "VERSED\020\364\003*y\n\021TextToSpeechVoice\022$\n TEXT_T" +
+      "O_SPEECH_VOICE_UNSPECIFIED\020\000\022\035\n\031TEXT_TO_" +
+      "SPEECH_VOICE_MALE\020\001\022\037\n\033TEXT_TO_SPEECH_VO" +
+      "ICE_FEMALE\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43366,7 +45186,7 @@ public final class Common {
     internal_static_com_elarian_hera_proto_WebChannelNumber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_WebChannelNumber_descriptor,
-        new java.lang.String[] { "Number", });
+        new java.lang.String[] { "Domain", });
     internal_static_com_elarian_hera_proto_TextMessageTemplate_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_com_elarian_hera_proto_TextMessageTemplate_fieldAccessorTable = new
@@ -43391,26 +45211,32 @@ public final class Common {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_LocationMessageBody_descriptor,
         new java.lang.String[] { "Latitude", "Longitude", });
-    internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor =
+    internal_static_com_elarian_hera_proto_EmailMessageBody_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_com_elarian_hera_proto_EmailMessageBody_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_EmailMessageBody_descriptor,
+        new java.lang.String[] { "Subject", "BodyPlain", "BodyHtml", "CcList", "BccList", "Attachments", });
+    internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_com_elarian_hera_proto_CustomerMessageBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerMessageBody_descriptor,
-        new java.lang.String[] { "Text", "Media", "Location", "Entry", });
+        new java.lang.String[] { "Text", "Media", "Location", "Email", "Entry", });
     internal_static_com_elarian_hera_proto_UssdMenu_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_com_elarian_hera_proto_UssdMenu_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UssdMenu_descriptor,
         new java.lang.String[] { "Text", "IsTerminal", });
     internal_static_com_elarian_hera_proto_UssdHop_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_com_elarian_hera_proto_UssdHop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UssdHop_descriptor,
         new java.lang.String[] { "Input", "Menu", "CreatedAt", });
     internal_static_com_elarian_hera_proto_WebAction_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_com_elarian_hera_proto_WebAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_WebAction_descriptor,
@@ -43422,43 +45248,43 @@ public final class Common {
         internal_static_com_elarian_hera_proto_WebAction_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_com_elarian_hera_proto_DataMapValue_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_com_elarian_hera_proto_DataMapValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DataMapValue_descriptor,
         new java.lang.String[] { "StringVal", "BytesVal", "Value", });
     internal_static_com_elarian_hera_proto_VoiceCallDialInput_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_com_elarian_hera_proto_VoiceCallDialInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallDialInput_descriptor,
         new java.lang.String[] { "DestinationNumber", "StartedAt", "Duration", });
     internal_static_com_elarian_hera_proto_VoiceCallQueueInput_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_com_elarian_hera_proto_VoiceCallQueueInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallQueueInput_descriptor,
         new java.lang.String[] { "EnqueuedAt", "DequeuedAt", "DequeuedToNumber", "DequeuedToSessionId", "QueueDuration", });
     internal_static_com_elarian_hera_proto_VoiceCallHopInput_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_com_elarian_hera_proto_VoiceCallHopInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallHopInput_descriptor,
         new java.lang.String[] { "Status", "StartedAt", "HangupCause", "DtmfDigits", "RecordingUrl", "DialData", "QueueData", });
     internal_static_com_elarian_hera_proto_VoiceCallHop_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_com_elarian_hera_proto_VoiceCallHop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallHop_descriptor,
         new java.lang.String[] { "Input", "Actions", "CreatedAt", });
     internal_static_com_elarian_hera_proto_PendingPaymentTransaction_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_com_elarian_hera_proto_PendingPaymentTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PendingPaymentTransaction_descriptor,
         new java.lang.String[] { "CreatedAt", "Value", "Converted", });
     internal_static_com_elarian_hera_proto_PaymentBalance_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_com_elarian_hera_proto_PaymentBalance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentBalance_descriptor,
@@ -43470,115 +45296,115 @@ public final class Common {
         internal_static_com_elarian_hera_proto_PaymentBalance_PendingEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_com_elarian_hera_proto_PaymentPurseCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_com_elarian_hera_proto_PaymentPurseCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentPurseCounterParty_descriptor,
         new java.lang.String[] { "PurseId", });
     internal_static_com_elarian_hera_proto_PaymentWalletCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_com_elarian_hera_proto_PaymentWalletCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentWalletCounterParty_descriptor,
         new java.lang.String[] { "CustomerId", "WalletId", });
     internal_static_com_elarian_hera_proto_PaymentCustomerCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_com_elarian_hera_proto_PaymentCustomerCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentCustomerCounterParty_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", });
     internal_static_com_elarian_hera_proto_PaymentChannelCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_com_elarian_hera_proto_PaymentChannelCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentChannelCounterParty_descriptor,
         new java.lang.String[] { "ChannelNumber", "ChannelCode", "Account", });
     internal_static_com_elarian_hera_proto_PaymentCounterParty_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_com_elarian_hera_proto_PaymentCounterParty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentCounterParty_descriptor,
         new java.lang.String[] { "Customer", "Purse", "Wallet", "Channel", "Party", });
     internal_static_com_elarian_hera_proto_IndexMapping_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_com_elarian_hera_proto_IndexMapping_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_IndexMapping_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_com_elarian_hera_proto_CustomerIndex_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_com_elarian_hera_proto_CustomerIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerIndex_descriptor,
         new java.lang.String[] { "Mapping", "Expiration", });
     internal_static_com_elarian_hera_proto_CustomerReminder_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_com_elarian_hera_proto_CustomerReminder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerReminder_descriptor,
         new java.lang.String[] { "Key", "Expiration", "Interval", "Payload", });
     internal_static_com_elarian_hera_proto_SayCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_com_elarian_hera_proto_SayCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SayCallAction_descriptor,
         new java.lang.String[] { "Text", "Voice", "PlayBeep", });
     internal_static_com_elarian_hera_proto_PlayCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_com_elarian_hera_proto_PlayCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PlayCallAction_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_com_elarian_hera_proto_GetDigitsCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_com_elarian_hera_proto_GetDigitsCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_GetDigitsCallAction_descriptor,
         new java.lang.String[] { "Say", "Play", "Timeout", "FinishOnKey", "NumDigits", "Prompt", });
     internal_static_com_elarian_hera_proto_GetRecordingCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_com_elarian_hera_proto_GetRecordingCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_GetRecordingCallAction_descriptor,
         new java.lang.String[] { "Say", "Play", "Timeout", "MaxLength", "FinishOnKey", "PlayBeep", "TrimSilence", "Prompt", });
     internal_static_com_elarian_hera_proto_RecordSessionCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_com_elarian_hera_proto_RecordSessionCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_RecordSessionCallAction_descriptor,
         new java.lang.String[] { });
     internal_static_com_elarian_hera_proto_DialCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_com_elarian_hera_proto_DialCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DialCallAction_descriptor,
         new java.lang.String[] { "CustomerNumbers", "Record", "Sequential", "RingbackTone", "CallerId", "MaxDuration", });
     internal_static_com_elarian_hera_proto_EnqueueCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_com_elarian_hera_proto_EnqueueCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_EnqueueCallAction_descriptor,
         new java.lang.String[] { "HoldMusic", "QueueName", });
     internal_static_com_elarian_hera_proto_DequeueCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_com_elarian_hera_proto_DequeueCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_DequeueCallAction_descriptor,
         new java.lang.String[] { "ChannelNumber", "Record", "QueueName", });
     internal_static_com_elarian_hera_proto_RejectCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_com_elarian_hera_proto_RejectCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_RejectCallAction_descriptor,
         new java.lang.String[] { });
     internal_static_com_elarian_hera_proto_RedirectCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_com_elarian_hera_proto_RedirectCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_RedirectCallAction_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_com_elarian_hera_proto_VoiceCallAction_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_com_elarian_hera_proto_VoiceCallAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallAction_descriptor,

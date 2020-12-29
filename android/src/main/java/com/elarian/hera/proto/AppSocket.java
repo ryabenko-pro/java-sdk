@@ -6658,6 +6658,17 @@ public final class AppSocket {
      * @return The paymentState.
      */
     com.elarian.hera.proto.Payment.PaymentState getPaymentState();
+
+    /**
+     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     * @return Whether the webState field is set.
+     */
+    boolean hasWebState();
+    /**
+     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     * @return The webState.
+     */
+    com.elarian.hera.proto.Web.WebState getWebState();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.CustomerStateReplyData}
@@ -6944,6 +6955,52 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
      */
     private void clearPaymentState() {  paymentState_ = null;
+      
+    }
+
+    public static final int WEB_STATE_FIELD_NUMBER = 7;
+    private com.elarian.hera.proto.Web.WebState webState_;
+    /**
+     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     */
+    @java.lang.Override
+    public boolean hasWebState() {
+      return webState_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Web.WebState getWebState() {
+      return webState_ == null ? com.elarian.hera.proto.Web.WebState.getDefaultInstance() : webState_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     */
+    private void setWebState(com.elarian.hera.proto.Web.WebState value) {
+      value.getClass();
+  webState_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeWebState(com.elarian.hera.proto.Web.WebState value) {
+      value.getClass();
+  if (webState_ != null &&
+          webState_ != com.elarian.hera.proto.Web.WebState.getDefaultInstance()) {
+        webState_ =
+          com.elarian.hera.proto.Web.WebState.newBuilder(webState_).mergeFrom(value).buildPartial();
+      } else {
+        webState_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     */
+    private void clearWebState() {  webState_ = null;
       
     }
 
@@ -7326,6 +7383,53 @@ public final class AppSocket {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       */
+      @java.lang.Override
+      public boolean hasWebState() {
+        return instance.hasWebState();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Web.WebState getWebState() {
+        return instance.getWebState();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       */
+      public Builder setWebState(com.elarian.hera.proto.Web.WebState value) {
+        copyOnWrite();
+        instance.setWebState(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       */
+      public Builder setWebState(
+          com.elarian.hera.proto.Web.WebState.Builder builderForValue) {
+        copyOnWrite();
+        instance.setWebState(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       */
+      public Builder mergeWebState(com.elarian.hera.proto.Web.WebState value) {
+        copyOnWrite();
+        instance.mergeWebState(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       */
+      public Builder clearWebState() {  copyOnWrite();
+        instance.clearWebState();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CustomerStateReplyData)
     }
     @java.lang.Override
@@ -7348,10 +7452,11 @@ public final class AppSocket {
               "ussdState_",
               "voiceState_",
               "paymentState_",
+              "webState_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u0004\t\u0005\t\u0006\t";
+                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\t\u0005\t\u0006\t\u0007\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -31201,6 +31306,17 @@ public final class AppSocket {
      * @return The location.
      */
     com.elarian.hera.proto.Common.LocationMessageBody getLocation();
+
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     * @return The email.
+     */
+    com.elarian.hera.proto.Common.EmailMessageBody getEmail();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReceivedMessageNotification}
@@ -31536,6 +31652,52 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
      */
     private void clearLocation() {  location_ = null;
+      
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 7;
+    private com.elarian.hera.proto.Common.EmailMessageBody email_;
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return email_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+      return email_ == null ? com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     */
+    private void setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+      value.getClass();
+  email_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+      value.getClass();
+  if (email_ != null &&
+          email_ != com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance()) {
+        email_ =
+          com.elarian.hera.proto.Common.EmailMessageBody.newBuilder(email_).mergeFrom(value).buildPartial();
+      } else {
+        email_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     */
+    private void clearEmail() {  email_ = null;
       
     }
 
@@ -31973,6 +32135,53 @@ public final class AppSocket {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+       */
+      @java.lang.Override
+      public boolean hasEmail() {
+        return instance.hasEmail();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+        return instance.getEmail();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+       */
+      public Builder setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        copyOnWrite();
+        instance.setEmail(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+       */
+      public Builder setEmail(
+          com.elarian.hera.proto.Common.EmailMessageBody.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEmail(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+       */
+      public Builder mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        copyOnWrite();
+        instance.mergeEmail(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+       */
+      public Builder clearEmail() {  copyOnWrite();
+        instance.clearEmail();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ReceivedMessageNotification)
     }
     @java.lang.Override
@@ -31996,10 +32205,11 @@ public final class AppSocket {
               "media_",
               com.elarian.hera.proto.Common.MediaMessageBody.class,
               "location_",
+              "email_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u0004\t\u0005\u001b\u0006\t";
+                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\t\u0005\u001b\u0006\t\u0007\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

@@ -3141,42 +3141,57 @@ public final class Messaging {
     com.elarian.hera.proto.Common.LocationMessageBodyOrBuilder getLocationOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     * @return The email.
+     */
+    com.elarian.hera.proto.Common.EmailMessageBody getEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     */
+    com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @return The status.
      */
     com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus();
@@ -3331,6 +3346,19 @@ public final class Messaging {
               break;
             }
             case 82: {
+              com.elarian.hera.proto.Common.EmailMessageBody.Builder subBuilder = null;
+              if (email_ != null) {
+                subBuilder = email_.toBuilder();
+              }
+              email_ = input.readMessage(com.elarian.hera.proto.Common.EmailMessageBody.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(email_);
+                email_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (createdAt_ != null) {
                 subBuilder = createdAt_.toBuilder();
@@ -3343,7 +3371,7 @@ public final class Messaging {
 
               break;
             }
-            case 90: {
+            case 98: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (updatedAt_ != null) {
                 subBuilder = updatedAt_.toBuilder();
@@ -3356,7 +3384,7 @@ public final class Messaging {
 
               break;
             }
-            case 96: {
+            case 104: {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
@@ -3650,10 +3678,36 @@ public final class Messaging {
       return getLocation();
     }
 
-    public static final int CREATED_AT_FIELD_NUMBER = 10;
+    public static final int EMAIL_FIELD_NUMBER = 10;
+    private com.elarian.hera.proto.Common.EmailMessageBody email_;
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     * @return Whether the email field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return email_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+      return email_ == null ? com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder() {
+      return getEmail();
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 11;
     private com.google.protobuf.Timestamp createdAt_;
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      * @return Whether the createdAt field is set.
      */
     @java.lang.Override
@@ -3661,7 +3715,7 @@ public final class Messaging {
       return createdAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      * @return The createdAt.
      */
     @java.lang.Override
@@ -3669,17 +3723,17 @@ public final class Messaging {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
 
-    public static final int UPDATED_AT_FIELD_NUMBER = 11;
+    public static final int UPDATED_AT_FIELD_NUMBER = 12;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      * @return Whether the updatedAt field is set.
      */
     @java.lang.Override
@@ -3687,7 +3741,7 @@ public final class Messaging {
       return updatedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      * @return The updatedAt.
      */
     @java.lang.Override
@@ -3695,24 +3749,24 @@ public final class Messaging {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 12;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
 
-    public static final int STATUS_FIELD_NUMBER = 12;
+    public static final int STATUS_FIELD_NUMBER = 13;
     private int status_;
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
      * @return The status.
      */
     @java.lang.Override public com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus() {
@@ -3762,14 +3816,17 @@ public final class Messaging {
       if (location_ != null) {
         output.writeMessage(9, getLocation());
       }
+      if (email_ != null) {
+        output.writeMessage(10, getEmail());
+      }
       if (createdAt_ != null) {
-        output.writeMessage(10, getCreatedAt());
+        output.writeMessage(11, getCreatedAt());
       }
       if (updatedAt_ != null) {
-        output.writeMessage(11, getUpdatedAt());
+        output.writeMessage(12, getUpdatedAt());
       }
-      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSEPCIFIED.getNumber()) {
-        output.writeEnum(12, status_);
+      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(13, status_);
       }
       unknownFields.writeTo(output);
     }
@@ -3815,17 +3872,21 @@ public final class Messaging {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getLocation());
       }
+      if (email_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getEmail());
+      }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getCreatedAt());
+          .computeMessageSize(11, getCreatedAt());
       }
       if (updatedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getUpdatedAt());
+          .computeMessageSize(12, getUpdatedAt());
       }
-      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSEPCIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(12, status_);
+          .computeEnumSize(13, status_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3876,6 +3937,11 @@ public final class Messaging {
       if (hasLocation()) {
         if (!getLocation()
             .equals(other.getLocation())) return false;
+      }
+      if (hasEmail() != other.hasEmail()) return false;
+      if (hasEmail()) {
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
       }
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
@@ -3930,6 +3996,10 @@ public final class Messaging {
       if (hasLocation()) {
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
         hash = (53 * hash) + getLocation().hashCode();
+      }
+      if (hasEmail()) {
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
       }
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
@@ -4121,6 +4191,12 @@ public final class Messaging {
           location_ = null;
           locationBuilder_ = null;
         }
+        if (emailBuilder_ == null) {
+          email_ = null;
+        } else {
+          email_ = null;
+          emailBuilder_ = null;
+        }
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -4202,6 +4278,11 @@ public final class Messaging {
           result.location_ = location_;
         } else {
           result.location_ = locationBuilder_.build();
+        }
+        if (emailBuilder_ == null) {
+          result.email_ = email_;
+        } else {
+          result.email_ = emailBuilder_.build();
         }
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
@@ -4312,6 +4393,9 @@ public final class Messaging {
         }
         if (other.hasLocation()) {
           mergeLocation(other.getLocation());
+        }
+        if (other.hasEmail()) {
+          mergeEmail(other.getEmail());
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
@@ -5436,18 +5520,137 @@ public final class Messaging {
         return locationBuilder_;
       }
 
+      private com.elarian.hera.proto.Common.EmailMessageBody email_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder> emailBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       * @return Whether the email field is set.
+       */
+      public boolean hasEmail() {
+        return emailBuilder_ != null || email_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       * @return The email.
+       */
+      public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+        if (emailBuilder_ == null) {
+          return email_ == null ? com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+        } else {
+          return emailBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public Builder setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        if (emailBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          email_ = value;
+          onChanged();
+        } else {
+          emailBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public Builder setEmail(
+          com.elarian.hera.proto.Common.EmailMessageBody.Builder builderForValue) {
+        if (emailBuilder_ == null) {
+          email_ = builderForValue.build();
+          onChanged();
+        } else {
+          emailBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public Builder mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        if (emailBuilder_ == null) {
+          if (email_ != null) {
+            email_ =
+              com.elarian.hera.proto.Common.EmailMessageBody.newBuilder(email_).mergeFrom(value).buildPartial();
+          } else {
+            email_ = value;
+          }
+          onChanged();
+        } else {
+          emailBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public Builder clearEmail() {
+        if (emailBuilder_ == null) {
+          email_ = null;
+          onChanged();
+        } else {
+          email_ = null;
+          emailBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public com.elarian.hera.proto.Common.EmailMessageBody.Builder getEmailBuilder() {
+        
+        onChanged();
+        return getEmailFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      public com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder() {
+        if (emailBuilder_ != null) {
+          return emailBuilder_.getMessageOrBuilder();
+        } else {
+          return email_ == null ?
+              com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder> 
+          getEmailFieldBuilder() {
+        if (emailBuilder_ == null) {
+          emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder>(
+                  getEmail(),
+                  getParentForChildren(),
+                  isClean());
+          email_ = null;
+        }
+        return emailBuilder_;
+      }
+
       private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -5458,7 +5661,7 @@ public final class Messaging {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -5474,7 +5677,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public Builder setCreatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -5488,7 +5691,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
@@ -5506,7 +5709,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public Builder clearCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -5520,7 +5723,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
         
@@ -5528,7 +5731,7 @@ public final class Messaging {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
@@ -5539,7 +5742,7 @@ public final class Messaging {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -5559,14 +5762,14 @@ public final class Messaging {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
@@ -5577,7 +5780,7 @@ public final class Messaging {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
         if (updatedAtBuilder_ == null) {
@@ -5593,7 +5796,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public Builder setUpdatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -5607,7 +5810,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
         if (updatedAtBuilder_ == null) {
@@ -5625,7 +5828,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public Builder clearUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -5639,7 +5842,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
         
@@ -5647,7 +5850,7 @@ public final class Messaging {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
         if (updatedAtBuilder_ != null) {
@@ -5658,7 +5861,7 @@ public final class Messaging {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -5676,14 +5879,14 @@ public final class Messaging {
 
       private int status_ = 0;
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -5694,7 +5897,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @return The status.
        */
       @java.lang.Override
@@ -5704,7 +5907,7 @@ public final class Messaging {
         return result == null ? com.elarian.hera.proto.Common.MessageDeliveryStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -5718,7 +5921,7 @@ public final class Messaging {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 12;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -18232,6 +18435,21 @@ public final class Messaging {
      * <code>.com.elarian.hera.proto.LocationMessageBody location = 10;</code>
      */
     com.elarian.hera.proto.Common.LocationMessageBodyOrBuilder getLocationOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     * @return Whether the email field is set.
+     */
+    boolean hasEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     * @return The email.
+     */
+    com.elarian.hera.proto.Common.EmailMessageBody getEmail();
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     */
+    com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessageReceivedEvent}
@@ -18384,6 +18602,19 @@ public final class Messaging {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.elarian.hera.proto.Common.EmailMessageBody.Builder subBuilder = null;
+              if (email_ != null) {
+                subBuilder = email_.toBuilder();
+              }
+              email_ = input.readMessage(com.elarian.hera.proto.Common.EmailMessageBody.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(email_);
+                email_ = subBuilder.buildPartial();
               }
 
               break;
@@ -18733,6 +18964,32 @@ public final class Messaging {
       return getLocation();
     }
 
+    public static final int EMAIL_FIELD_NUMBER = 11;
+    private com.elarian.hera.proto.Common.EmailMessageBody email_;
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     * @return Whether the email field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmail() {
+      return email_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     * @return The email.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+      return email_ == null ? com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder() {
+      return getEmail();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18776,6 +19033,9 @@ public final class Messaging {
       }
       if (location_ != null) {
         output.writeMessage(10, getLocation());
+      }
+      if (email_ != null) {
+        output.writeMessage(11, getEmail());
       }
       unknownFields.writeTo(output);
     }
@@ -18822,6 +19082,10 @@ public final class Messaging {
       if (location_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLocation());
+      }
+      if (email_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getEmail());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18876,6 +19140,11 @@ public final class Messaging {
         if (!getLocation()
             .equals(other.getLocation())) return false;
       }
+      if (hasEmail() != other.hasEmail()) return false;
+      if (hasEmail()) {
+        if (!getEmail()
+            .equals(other.getEmail())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18920,6 +19189,10 @@ public final class Messaging {
       if (hasLocation()) {
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
         hash = (53 * hash) + getLocation().hashCode();
+      }
+      if (hasEmail()) {
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -19103,6 +19376,12 @@ public final class Messaging {
           location_ = null;
           locationBuilder_ = null;
         }
+        if (emailBuilder_ == null) {
+          email_ = null;
+        } else {
+          email_ = null;
+          emailBuilder_ = null;
+        }
         return this;
       }
 
@@ -19171,6 +19450,11 @@ public final class Messaging {
           result.location_ = location_;
         } else {
           result.location_ = locationBuilder_.build();
+        }
+        if (emailBuilder_ == null) {
+          result.email_ = email_;
+        } else {
+          result.email_ = emailBuilder_.build();
         }
         onBuilt();
         return result;
@@ -19275,6 +19559,9 @@ public final class Messaging {
         }
         if (other.hasLocation()) {
           mergeLocation(other.getLocation());
+        }
+        if (other.hasEmail()) {
+          mergeEmail(other.getEmail());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20487,6 +20774,125 @@ public final class Messaging {
         }
         return locationBuilder_;
       }
+
+      private com.elarian.hera.proto.Common.EmailMessageBody email_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder> emailBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       * @return Whether the email field is set.
+       */
+      public boolean hasEmail() {
+        return emailBuilder_ != null || email_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       * @return The email.
+       */
+      public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
+        if (emailBuilder_ == null) {
+          return email_ == null ? com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+        } else {
+          return emailBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public Builder setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        if (emailBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          email_ = value;
+          onChanged();
+        } else {
+          emailBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public Builder setEmail(
+          com.elarian.hera.proto.Common.EmailMessageBody.Builder builderForValue) {
+        if (emailBuilder_ == null) {
+          email_ = builderForValue.build();
+          onChanged();
+        } else {
+          emailBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public Builder mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+        if (emailBuilder_ == null) {
+          if (email_ != null) {
+            email_ =
+              com.elarian.hera.proto.Common.EmailMessageBody.newBuilder(email_).mergeFrom(value).buildPartial();
+          } else {
+            email_ = value;
+          }
+          onChanged();
+        } else {
+          emailBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public Builder clearEmail() {
+        if (emailBuilder_ == null) {
+          email_ = null;
+          onChanged();
+        } else {
+          email_ = null;
+          emailBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public com.elarian.hera.proto.Common.EmailMessageBody.Builder getEmailBuilder() {
+        
+        onChanged();
+        return getEmailFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      public com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder getEmailOrBuilder() {
+        if (emailBuilder_ != null) {
+          return emailBuilder_.getMessageOrBuilder();
+        } else {
+          return email_ == null ?
+              com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.EmailMessageBody email = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder> 
+          getEmailFieldBuilder() {
+        if (emailBuilder_ == null) {
+          emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.Common.EmailMessageBody, com.elarian.hera.proto.Common.EmailMessageBody.Builder, com.elarian.hera.proto.Common.EmailMessageBodyOrBuilder>(
+                  getEmail(),
+                  getParentForChildren(),
+                  isClean());
+          email_ = null;
+        }
+        return emailBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21402,7 +21808,7 @@ public final class Messaging {
       if (origin_ != com.elarian.hera.proto.Common.CustomerRequestOrigin.CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED.getNumber()) {
         output.writeEnum(11, origin_);
       }
-      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSEPCIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(12, status_);
       }
       if (tag_ != null) {
@@ -21460,7 +21866,7 @@ public final class Messaging {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(11, origin_);
       }
-      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSEPCIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, status_);
       }
@@ -23825,7 +24231,7 @@ public final class Messaging {
       if (!getMessageIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, messageId_);
       }
-      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSEPCIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, status_);
       }
       unknownFields.writeTo(output);
@@ -23853,7 +24259,7 @@ public final class Messaging {
       if (!getMessageIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, messageId_);
       }
-      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSEPCIFIED.getNumber()) {
+      if (status_ != com.elarian.hera.proto.Common.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, status_);
       }
@@ -24821,7 +25227,7 @@ public final class Messaging {
       "mber\022I\n\rconsent_state\030\003 \001(\01322.com.elaria" +
       "n.hera.proto.MessagingConsentStateEntry\022" +
       "J\n\016active_session\030\004 \001(\01322.com.elarian.he" +
-      "ra.proto.MessagingSessionStateEntry\"\243\005\n\021" +
+      "ra.proto.MessagingSessionStateEntry\"\334\005\n\021" +
       "MessageStateEntry\022A\n\tdirection\030\001 \001(\0162..c" +
       "om.elarian.hera.proto.CustomerEventDirec" +
       "tion\022?\n\017customer_number\030\002 \001(\0132&.com.elar" +
@@ -24834,114 +25240,117 @@ public final class Messaging {
       "ian.hera.proto.TextMessageTemplate\0227\n\005me" +
       "dia\030\010 \003(\0132(.com.elarian.hera.proto.Media" +
       "MessageBody\022=\n\010location\030\t \001(\0132+.com.elar" +
-      "ian.hera.proto.LocationMessageBody\022.\n\ncr" +
-      "eated_at\030\n \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022.\n\nupdated_at\030\013 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022=\n\006status\030\014 \001(\0162-.com.elarian" +
-      ".hera.proto.MessageDeliveryStatus\"\243\002\n\016Me" +
-      "ssagingState\022I\n\rchannel_state\030\001 \003(\01322.co" +
-      "m.elarian.hera.proto.MessagingChannelSta" +
-      "teEntry\022;\n\010messages\030\002 \003(\0132).com.elarian." +
-      "hera.proto.MessageStateEntry\022@\n\020customer" +
-      "_numbers\030\003 \003(\0132&.com.elarian.hera.proto." +
-      "CustomerNumber\022G\n\017channel_numbers\030\004 \003(\0132" +
-      "..com.elarian.hera.proto.MessagingChanne" +
-      "lNumber\"\323\005\n\016MessagingEvent\022K\n\rstate_adop" +
-      "ted\030\001 \001(\01322.com.elarian.hera.proto.Messa" +
-      "gingStateAdoptedEventH\000\022[\n\025entity_decomm" +
-      "issioned\030\002 \001(\0132:.com.elarian.hera.proto." +
-      "MessagingEntityDecommissionedEventH\000\022]\n\033" +
-      "messaging_consent_requested\030\003 \001(\01326.com." +
-      "elarian.hera.proto.MessagingConsentReque" +
-      "stedEventH\000\022f\n messaging_consent_status_" +
-      "updated\030\004 \001(\0132:.com.elarian.hera.proto.M" +
-      "essagingConsentStatusUpdatedEventH\000\022f\n m" +
-      "essaging_session_status_updated\030\005 \001(\0132:." +
-      "com.elarian.hera.proto.MessagingSessionS" +
-      "tatusUpdatedEventH\000\022H\n\020message_received\030" +
-      "\006 \001(\0132,.com.elarian.hera.proto.MessageRe" +
-      "ceivedEventH\000\022@\n\014message_sent\030\007 \001(\0132(.co" +
-      "m.elarian.hera.proto.MessageSentEventH\000\022" +
-      "S\n\026message_status_updated\030\010 \001(\01321.com.el" +
-      "arian.hera.proto.MessageStatusUpdatedEve" +
-      "ntH\000B\007\n\005event\"\213\002\n\032MessagingStateAdoptedE" +
-      "vent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(" +
-      "\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022=\n\tcxn_props\030\004 \001(\0132*.com.elaria" +
-      "n.hera.proto.AppConnectionProps\022\033\n\023adopt" +
-      "ed_customer_id\030\005 \001(\t\022=\n\radopted_state\030\006 " +
-      "\001(\0132&.com.elarian.hera.proto.MessagingSt" +
-      "ate\"\320\001\n\"MessagingEntityDecommissionedEve" +
-      "nt\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022" +
-      "-\n\ttimestamp\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022=\n\tcxn_props\030\004 \001(\0132*.com.elarian." +
-      "hera.proto.AppConnectionProps\022\027\n\017new_cus" +
-      "tomer_id\030\005 \001(\t\"\314\003\n\036MessagingConsentReque" +
-      "stedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id" +
-      "\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022=\n\tcxn_props\030\004 \001(\0132*.com.e" +
-      "larian.hera.proto.AppConnectionProps\022\016\n\006" +
-      "app_id\030\005 \001(\t\022?\n\017customer_number\030\006 \001(\0132&." +
-      "com.elarian.hera.proto.CustomerNumber\022F\n" +
-      "\016channel_number\030\007 \001(\0132..com.elarian.hera" +
-      ".proto.MessagingChannelNumber\022>\n\006status\030" +
-      "\010 \001(\0162..com.elarian.hera.proto.Messaging" +
-      "ConsentStatus\022>\n\006action\030\t \001(\0162..com.elar" +
-      "ian.hera.proto.MessagingConsentAction\"\321\002" +
-      "\n\"MessagingConsentStatusUpdatedEvent\022\016\n\006" +
-      "org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022-\n\ttim" +
-      "estamp\030\003 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022\016\n\006app_id\030\004 \001(\t\022?\n\017customer_number\030\005 \001(" +
-      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
-      "r\022F\n\016channel_number\030\006 \001(\0132..com.elarian." +
-      "hera.proto.MessagingChannelNumber\022>\n\006sta" +
-      "tus\030\007 \001(\0162..com.elarian.hera.proto.Messa" +
-      "gingConsentStatus\"\237\003\n\"MessagingSessionSt" +
-      "atusUpdatedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013cust" +
-      "omer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022,\n\006app_id\030\004 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\022?\n\017customer_n" +
-      "umber\030\005 \001(\0132&.com.elarian.hera.proto.Cus" +
-      "tomerNumber\022F\n\016channel_number\030\006 \001(\0132..co" +
-      "m.elarian.hera.proto.MessagingChannelNum" +
-      "ber\022>\n\006status\030\007 \001(\0162..com.elarian.hera.p" +
-      "roto.MessagingSessionStatus\022.\n\nexpiratio" +
-      "n\030\010 \001(\0132\032.google.protobuf.Timestamp\"\331\003\n\024" +
-      "MessageReceivedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013" +
-      "customer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022,\n\006app_id\030\004 \001(\013" +
-      "2\034.google.protobuf.StringValue\022\022\n\nmessag" +
-      "e_id\030\005 \001(\t\022?\n\017customer_number\030\006 \001(\0132&.co" +
-      "m.elarian.hera.proto.CustomerNumber\022F\n\016c" +
-      "hannel_number\030\007 \001(\0132..com.elarian.hera.p" +
-      "roto.MessagingChannelNumber\022*\n\004text\030\010 \001(" +
-      "\0132\034.google.protobuf.StringValue\0227\n\005media" +
-      "\030\t \003(\0132(.com.elarian.hera.proto.MediaMes" +
-      "sageBody\022=\n\010location\030\n \001(\0132+.com.elarian" +
-      ".hera.proto.LocationMessageBody\"\251\005\n\020Mess" +
-      "ageSentEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer" +
-      "_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022=\n\tcxn_props\030\004 \001(\0132*.co" +
-      "m.elarian.hera.proto.AppConnectionProps\022" +
-      "\016\n\006app_id\030\005 \001(\t\022\022\n\nmessage_id\030\006 \001(\t\0229\n\023r" +
-      "eply_to_message_id\030\007 \001(\0132\034.google.protob" +
-      "uf.StringValue\022?\n\017customer_number\030\010 \001(\0132" +
-      "&.com.elarian.hera.proto.CustomerNumber\022" +
-      "F\n\016channel_number\030\t \001(\0132..com.elarian.he" +
-      "ra.proto.MessagingChannelNumber\0229\n\004body\030" +
-      "\n \001(\0132+.com.elarian.hera.proto.CustomerM" +
-      "essageBody\022=\n\006origin\030\013 \001(\0162-.com.elarian" +
-      ".hera.proto.CustomerRequestOrigin\022=\n\006sta" +
-      "tus\030\014 \001(\0162-.com.elarian.hera.proto.Messa" +
-      "geDeliveryStatus\0222\n\003tag\030\r \001(\0132%.com.elar" +
-      "ian.hera.proto.CustomerIndex\022-\n\007work_id\030" +
-      "\016 \001(\0132\034.google.protobuf.StringValue\"\322\001\n\031" +
-      "MessageStatusUpdatedEvent\022\016\n\006org_id\030\001 \001(" +
-      "\t\022\023\n\013customer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\016\n\006app_id\030" +
-      "\004 \001(\t\022\022\n\nmessage_id\030\005 \001(\t\022=\n\006status\030\006 \001(" +
-      "\0162-.com.elarian.hera.proto.MessageDelive" +
-      "ryStatusb\006proto3"
+      "ian.hera.proto.LocationMessageBody\0227\n\005em" +
+      "ail\030\n \001(\0132(.com.elarian.hera.proto.Email" +
+      "MessageBody\022.\n\ncreated_at\030\013 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022.\n\nupdated_at\030\014 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022=\n\006status\030\r " +
+      "\001(\0162-.com.elarian.hera.proto.MessageDeli" +
+      "veryStatus\"\243\002\n\016MessagingState\022I\n\rchannel" +
+      "_state\030\001 \003(\01322.com.elarian.hera.proto.Me" +
+      "ssagingChannelStateEntry\022;\n\010messages\030\002 \003" +
+      "(\0132).com.elarian.hera.proto.MessageState" +
+      "Entry\022@\n\020customer_numbers\030\003 \003(\0132&.com.el" +
+      "arian.hera.proto.CustomerNumber\022G\n\017chann" +
+      "el_numbers\030\004 \003(\0132..com.elarian.hera.prot" +
+      "o.MessagingChannelNumber\"\323\005\n\016MessagingEv" +
+      "ent\022K\n\rstate_adopted\030\001 \001(\01322.com.elarian" +
+      ".hera.proto.MessagingStateAdoptedEventH\000" +
+      "\022[\n\025entity_decommissioned\030\002 \001(\0132:.com.el" +
+      "arian.hera.proto.MessagingEntityDecommis" +
+      "sionedEventH\000\022]\n\033messaging_consent_reque" +
+      "sted\030\003 \001(\01326.com.elarian.hera.proto.Mess" +
+      "agingConsentRequestedEventH\000\022f\n messagin" +
+      "g_consent_status_updated\030\004 \001(\0132:.com.ela" +
+      "rian.hera.proto.MessagingConsentStatusUp" +
+      "datedEventH\000\022f\n messaging_session_status" +
+      "_updated\030\005 \001(\0132:.com.elarian.hera.proto." +
+      "MessagingSessionStatusUpdatedEventH\000\022H\n\020" +
+      "message_received\030\006 \001(\0132,.com.elarian.her" +
+      "a.proto.MessageReceivedEventH\000\022@\n\014messag" +
+      "e_sent\030\007 \001(\0132(.com.elarian.hera.proto.Me" +
+      "ssageSentEventH\000\022S\n\026message_status_updat" +
+      "ed\030\010 \001(\01321.com.elarian.hera.proto.Messag" +
+      "eStatusUpdatedEventH\000B\007\n\005event\"\213\002\n\032Messa" +
+      "gingStateAdoptedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n" +
+      "\013customer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032." +
+      "google.protobuf.Timestamp\022=\n\tcxn_props\030\004" +
+      " \001(\0132*.com.elarian.hera.proto.AppConnect" +
+      "ionProps\022\033\n\023adopted_customer_id\030\005 \001(\t\022=\n" +
+      "\radopted_state\030\006 \001(\0132&.com.elarian.hera." +
+      "proto.MessagingState\"\320\001\n\"MessagingEntity" +
+      "DecommissionedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013c" +
+      "ustomer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022=\n\tcxn_props\030\004 \001" +
+      "(\0132*.com.elarian.hera.proto.AppConnectio" +
+      "nProps\022\027\n\017new_customer_id\030\005 \001(\t\"\314\003\n\036Mess" +
+      "agingConsentRequestedEvent\022\016\n\006org_id\030\001 \001" +
+      "(\t\022\023\n\013customer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001" +
+      "(\0132\032.google.protobuf.Timestamp\022=\n\tcxn_pr" +
+      "ops\030\004 \001(\0132*.com.elarian.hera.proto.AppCo" +
+      "nnectionProps\022\016\n\006app_id\030\005 \001(\t\022?\n\017custome" +
+      "r_number\030\006 \001(\0132&.com.elarian.hera.proto." +
+      "CustomerNumber\022F\n\016channel_number\030\007 \001(\0132." +
+      ".com.elarian.hera.proto.MessagingChannel" +
+      "Number\022>\n\006status\030\010 \001(\0162..com.elarian.her" +
+      "a.proto.MessagingConsentStatus\022>\n\006action" +
+      "\030\t \001(\0162..com.elarian.hera.proto.Messagin" +
+      "gConsentAction\"\321\002\n\"MessagingConsentStatu" +
+      "sUpdatedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013custome" +
+      "r_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022\016\n\006app_id\030\004 \001(\t\022?\n\017cus" +
+      "tomer_number\030\005 \001(\0132&.com.elarian.hera.pr" +
+      "oto.CustomerNumber\022F\n\016channel_number\030\006 \001" +
+      "(\0132..com.elarian.hera.proto.MessagingCha" +
+      "nnelNumber\022>\n\006status\030\007 \001(\0162..com.elarian" +
+      ".hera.proto.MessagingConsentStatus\"\237\003\n\"M" +
+      "essagingSessionStatusUpdatedEvent\022\016\n\006org" +
+      "_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022-\n\ttimest" +
+      "amp\030\003 \001(\0132\032.google.protobuf.Timestamp\022,\n" +
+      "\006app_id\030\004 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022?\n\017customer_number\030\005 \001(\0132&.com.elari" +
+      "an.hera.proto.CustomerNumber\022F\n\016channel_" +
+      "number\030\006 \001(\0132..com.elarian.hera.proto.Me" +
+      "ssagingChannelNumber\022>\n\006status\030\007 \001(\0162..c" +
+      "om.elarian.hera.proto.MessagingSessionSt" +
+      "atus\022.\n\nexpiration\030\010 \001(\0132\032.google.protob" +
+      "uf.Timestamp\"\222\004\n\024MessageReceivedEvent\022\016\n" +
+      "\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022-\n\tti" +
+      "mestamp\030\003 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022,\n\006app_id\030\004 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\022\022\n\nmessage_id\030\005 \001(\t\022?\n\017customer_" +
+      "number\030\006 \001(\0132&.com.elarian.hera.proto.Cu" +
+      "stomerNumber\022F\n\016channel_number\030\007 \001(\0132..c" +
+      "om.elarian.hera.proto.MessagingChannelNu" +
+      "mber\022*\n\004text\030\010 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\0227\n\005media\030\t \003(\0132(.com.elarian.he" +
+      "ra.proto.MediaMessageBody\022=\n\010location\030\n " +
+      "\001(\0132+.com.elarian.hera.proto.LocationMes" +
+      "sageBody\0227\n\005email\030\013 \001(\0132(.com.elarian.he" +
+      "ra.proto.EmailMessageBody\"\251\005\n\020MessageSen" +
+      "tEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 " +
+      "\001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022=\n\tcxn_props\030\004 \001(\0132*.com.elar" +
+      "ian.hera.proto.AppConnectionProps\022\016\n\006app" +
+      "_id\030\005 \001(\t\022\022\n\nmessage_id\030\006 \001(\t\0229\n\023reply_t" +
+      "o_message_id\030\007 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022?\n\017customer_number\030\010 \001(\0132&.com." +
+      "elarian.hera.proto.CustomerNumber\022F\n\016cha" +
+      "nnel_number\030\t \001(\0132..com.elarian.hera.pro" +
+      "to.MessagingChannelNumber\0229\n\004body\030\n \001(\0132" +
+      "+.com.elarian.hera.proto.CustomerMessage" +
+      "Body\022=\n\006origin\030\013 \001(\0162-.com.elarian.hera." +
+      "proto.CustomerRequestOrigin\022=\n\006status\030\014 " +
+      "\001(\0162-.com.elarian.hera.proto.MessageDeli" +
+      "veryStatus\0222\n\003tag\030\r \001(\0132%.com.elarian.he" +
+      "ra.proto.CustomerIndex\022-\n\007work_id\030\016 \001(\0132" +
+      "\034.google.protobuf.StringValue\"\322\001\n\031Messag" +
+      "eStatusUpdatedEvent\022\016\n\006org_id\030\001 \001(\t\022\023\n\013c" +
+      "ustomer_id\030\002 \001(\t\022-\n\ttimestamp\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\016\n\006app_id\030\004 \001(\t\022" +
+      "\022\n\nmessage_id\030\005 \001(\t\022=\n\006status\030\006 \001(\0162-.co" +
+      "m.elarian.hera.proto.MessageDeliveryStat" +
+      "usb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24973,7 +25382,7 @@ public final class Messaging {
     internal_static_com_elarian_hera_proto_MessageStateEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessageStateEntry_descriptor,
-        new java.lang.String[] { "Direction", "CustomerNumber", "ChannelNumber", "MessageId", "AppId", "Text", "Template", "Media", "Location", "CreatedAt", "UpdatedAt", "Status", });
+        new java.lang.String[] { "Direction", "CustomerNumber", "ChannelNumber", "MessageId", "AppId", "Text", "Template", "Media", "Location", "Email", "CreatedAt", "UpdatedAt", "Status", });
     internal_static_com_elarian_hera_proto_MessagingState_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_elarian_hera_proto_MessagingState_fieldAccessorTable = new
@@ -25021,7 +25430,7 @@ public final class Messaging {
     internal_static_com_elarian_hera_proto_MessageReceivedEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessageReceivedEvent_descriptor,
-        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "AppId", "MessageId", "CustomerNumber", "ChannelNumber", "Text", "Media", "Location", });
+        new java.lang.String[] { "OrgId", "CustomerId", "Timestamp", "AppId", "MessageId", "CustomerNumber", "ChannelNumber", "Text", "Media", "Location", "Email", });
     internal_static_com_elarian_hera_proto_MessageSentEvent_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_com_elarian_hera_proto_MessageSentEvent_fieldAccessorTable = new
