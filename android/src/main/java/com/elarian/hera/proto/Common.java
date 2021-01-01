@@ -564,9 +564,13 @@ public final class Common {
      */
     MEDIA_TYPE_VOICE(5),
     /**
-     * <code>MEDUA_TYPE_STICKER = 6;</code>
+     * <code>MEDIA_TYPE_STICKER = 6;</code>
      */
-    MEDUA_TYPE_STICKER(6),
+    MEDIA_TYPE_STICKER(6),
+    /**
+     * <code>MEDIA_TYPE_CONTACT = 7;</code>
+     */
+    MEDIA_TYPE_CONTACT(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -595,9 +599,13 @@ public final class Common {
      */
     public static final int MEDIA_TYPE_VOICE_VALUE = 5;
     /**
-     * <code>MEDUA_TYPE_STICKER = 6;</code>
+     * <code>MEDIA_TYPE_STICKER = 6;</code>
      */
-    public static final int MEDUA_TYPE_STICKER_VALUE = 6;
+    public static final int MEDIA_TYPE_STICKER_VALUE = 6;
+    /**
+     * <code>MEDIA_TYPE_CONTACT = 7;</code>
+     */
+    public static final int MEDIA_TYPE_CONTACT_VALUE = 7;
 
 
     @java.lang.Override
@@ -627,7 +635,8 @@ public final class Common {
         case 3: return MEDIA_TYPE_VIDEO;
         case 4: return MEDIA_TYPE_DOCUMENT;
         case 5: return MEDIA_TYPE_VOICE;
-        case 6: return MEDUA_TYPE_STICKER;
+        case 6: return MEDIA_TYPE_STICKER;
+        case 7: return MEDIA_TYPE_CONTACT;
         default: return null;
       }
     }
@@ -6908,6 +6917,28 @@ public final class Common {
      * @return The longitude.
      */
     double getLongitude();
+
+    /**
+     * <code>.google.protobuf.StringValue label = 3;</code>
+     * @return Whether the label field is set.
+     */
+    boolean hasLabel();
+    /**
+     * <code>.google.protobuf.StringValue label = 3;</code>
+     * @return The label.
+     */
+    com.google.protobuf.StringValue getLabel();
+
+    /**
+     * <code>.google.protobuf.StringValue address = 4;</code>
+     * @return Whether the address field is set.
+     */
+    boolean hasAddress();
+    /**
+     * <code>.google.protobuf.StringValue address = 4;</code>
+     * @return The address.
+     */
+    com.google.protobuf.StringValue getAddress();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.LocationMessageBody}
@@ -6969,6 +7000,98 @@ public final class Common {
     private void clearLongitude() {
       
       longitude_ = 0D;
+    }
+
+    public static final int LABEL_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue label_;
+    /**
+     * <code>.google.protobuf.StringValue label = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasLabel() {
+      return label_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue label = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getLabel() {
+      return label_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : label_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue label = 3;</code>
+     */
+    private void setLabel(com.google.protobuf.StringValue value) {
+      value.getClass();
+  label_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue label = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLabel(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (label_ != null &&
+          label_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        label_ =
+          com.google.protobuf.StringValue.newBuilder(label_).mergeFrom(value).buildPartial();
+      } else {
+        label_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue label = 3;</code>
+     */
+    private void clearLabel() {  label_ = null;
+      
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 4;
+    private com.google.protobuf.StringValue address_;
+    /**
+     * <code>.google.protobuf.StringValue address = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasAddress() {
+      return address_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue address = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getAddress() {
+      return address_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : address_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue address = 4;</code>
+     */
+    private void setAddress(com.google.protobuf.StringValue value) {
+      value.getClass();
+  address_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue address = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAddress(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (address_ != null &&
+          address_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        address_ =
+          com.google.protobuf.StringValue.newBuilder(address_).mergeFrom(value).buildPartial();
+      } else {
+        address_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue address = 4;</code>
+     */
+    private void clearAddress() {  address_ = null;
+      
     }
 
     public static com.elarian.hera.proto.Common.LocationMessageBody parseFrom(
@@ -7122,6 +7245,100 @@ public final class Common {
         return this;
       }
 
+      /**
+       * <code>.google.protobuf.StringValue label = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasLabel() {
+        return instance.hasLabel();
+      }
+      /**
+       * <code>.google.protobuf.StringValue label = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getLabel() {
+        return instance.getLabel();
+      }
+      /**
+       * <code>.google.protobuf.StringValue label = 3;</code>
+       */
+      public Builder setLabel(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setLabel(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue label = 3;</code>
+       */
+      public Builder setLabel(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLabel(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue label = 3;</code>
+       */
+      public Builder mergeLabel(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeLabel(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue label = 3;</code>
+       */
+      public Builder clearLabel() {  copyOnWrite();
+        instance.clearLabel();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue address = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasAddress() {
+        return instance.hasAddress();
+      }
+      /**
+       * <code>.google.protobuf.StringValue address = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getAddress() {
+        return instance.getAddress();
+      }
+      /**
+       * <code>.google.protobuf.StringValue address = 4;</code>
+       */
+      public Builder setAddress(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setAddress(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue address = 4;</code>
+       */
+      public Builder setAddress(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAddress(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue address = 4;</code>
+       */
+      public Builder mergeAddress(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeAddress(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue address = 4;</code>
+       */
+      public Builder clearAddress() {  copyOnWrite();
+        instance.clearAddress();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.LocationMessageBody)
     }
     @java.lang.Override
@@ -7140,10 +7357,12 @@ public final class Common {
             java.lang.Object[] objects = new java.lang.Object[] {
               "latitude_",
               "longitude_",
+              "label_",
+              "address_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0000\u0002\u0000" +
-                "";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0000\u0002\u0000" +
+                "\u0003\t\u0004\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
