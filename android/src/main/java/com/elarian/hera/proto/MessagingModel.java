@@ -165,13 +165,13 @@ public final class MessagingModel {
      */
     MESSAGING_CONSENT_UPDATE_UNSPECIFIED(0),
     /**
-     * <code>MESSAGING_CONSENT_UPDATE_OPT_IN = 1;</code>
+     * <code>MESSAGING_CONSENT_UPDATE_ALLOW = 1;</code>
      */
-    MESSAGING_CONSENT_UPDATE_OPT_IN(1),
+    MESSAGING_CONSENT_UPDATE_ALLOW(1),
     /**
-     * <code>MESSAGING_CONSENT_UPDATE_OPT_OUT = 2;</code>
+     * <code>MESSAGING_CONSENT_UPDATE_BLOCK = 2;</code>
      */
-    MESSAGING_CONSENT_UPDATE_OPT_OUT(2),
+    MESSAGING_CONSENT_UPDATE_BLOCK(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -180,13 +180,13 @@ public final class MessagingModel {
      */
     public static final int MESSAGING_CONSENT_UPDATE_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>MESSAGING_CONSENT_UPDATE_OPT_IN = 1;</code>
+     * <code>MESSAGING_CONSENT_UPDATE_ALLOW = 1;</code>
      */
-    public static final int MESSAGING_CONSENT_UPDATE_OPT_IN_VALUE = 1;
+    public static final int MESSAGING_CONSENT_UPDATE_ALLOW_VALUE = 1;
     /**
-     * <code>MESSAGING_CONSENT_UPDATE_OPT_OUT = 2;</code>
+     * <code>MESSAGING_CONSENT_UPDATE_BLOCK = 2;</code>
      */
-    public static final int MESSAGING_CONSENT_UPDATE_OPT_OUT_VALUE = 2;
+    public static final int MESSAGING_CONSENT_UPDATE_BLOCK_VALUE = 2;
 
 
     @java.lang.Override
@@ -211,8 +211,8 @@ public final class MessagingModel {
     public static MessagingConsentUpdate forNumber(int value) {
       switch (value) {
         case 0: return MESSAGING_CONSENT_UPDATE_UNSPECIFIED;
-        case 1: return MESSAGING_CONSENT_UPDATE_OPT_IN;
-        case 2: return MESSAGING_CONSENT_UPDATE_OPT_OUT;
+        case 1: return MESSAGING_CONSENT_UPDATE_ALLOW;
+        case 2: return MESSAGING_CONSENT_UPDATE_BLOCK;
         default: return null;
       }
     }

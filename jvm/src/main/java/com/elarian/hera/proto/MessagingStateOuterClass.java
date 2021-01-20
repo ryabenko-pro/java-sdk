@@ -1949,104 +1949,82 @@ public final class MessagingStateOuterClass {
     com.elarian.hera.proto.CommonModel.ChannelNumberProvider getProvider();
 
     /**
-     * <code>string app_id = 6;</code>
+     * <code>.google.protobuf.StringValue app_id = 6;</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <code>.google.protobuf.StringValue app_id = 6;</code>
      * @return The appId.
      */
-    java.lang.String getAppId();
+    com.google.protobuf.StringValue getAppId();
     /**
-     * <code>string app_id = 6;</code>
-     * @return The bytes for appId.
+     * <code>.google.protobuf.StringValue app_id = 6;</code>
      */
-    com.google.protobuf.ByteString
-        getAppIdBytes();
+    com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder();
 
     /**
-     * <code>repeated string labels = 7;</code>
-     * @return A list containing the labels.
-     */
-    java.util.List<java.lang.String>
-        getLabelsList();
-    /**
-     * <code>repeated string labels = 7;</code>
-     * @return The count of labels.
-     */
-    int getLabelsCount();
-    /**
-     * <code>repeated string labels = 7;</code>
-     * @param index The index of the element to return.
-     * @return The labels at the given index.
-     */
-    java.lang.String getLabels(int index);
-    /**
-     * <code>repeated string labels = 7;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the labels at the given index.
-     */
-    com.google.protobuf.ByteString
-        getLabelsBytes(int index);
-
-    /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
      * @return The status.
      */
     com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     java.util.List<com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState> 
         getReactionsList();
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState getReactions(int index);
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     int getReactionsCount();
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     java.util.List<? extends com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionStateOrBuilder> 
         getReactionsOrBuilderList();
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionStateOrBuilder getReactionsOrBuilder(
         int index);
 
     /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
      * @return Whether the message field is set.
      */
     boolean hasMessage();
     /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
      * @return The message.
      */
     com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
     /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
      */
     com.elarian.hera.proto.MessagingModel.OutboundMessageOrBuilder getMessageOrBuilder();
   }
@@ -2065,8 +2043,6 @@ public final class MessagingStateOuterClass {
     private SentMessage() {
       messageId_ = "";
       provider_ = 0;
-      appId_ = "";
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       status_ = 0;
       reactions_ = java.util.Collections.emptyList();
     }
@@ -2154,21 +2130,19 @@ public final class MessagingStateOuterClass {
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (appId_ != null) {
+                subBuilder = appId_.toBuilder();
+              }
+              appId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(appId_);
+                appId_ = subBuilder.buildPartial();
+              }
 
-              appId_ = s;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                labels_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              labels_.add(s);
-              break;
-            }
-            case 66: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (updatedAt_ != null) {
                 subBuilder = updatedAt_.toBuilder();
@@ -2181,22 +2155,22 @@ public final class MessagingStateOuterClass {
 
               break;
             }
-            case 72: {
+            case 64: {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
               break;
             }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 reactions_ = new java.util.ArrayList<com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               reactions_.add(
                   input.readMessage(com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.parser(), extensionRegistry));
               break;
             }
-            case 90: {
+            case 82: {
               com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder subBuilder = null;
               if (message_ != null) {
                 subBuilder = message_.toBuilder();
@@ -2225,9 +2199,6 @@ public final class MessagingStateOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          labels_ = labels_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           reactions_ = java.util.Collections.unmodifiableList(reactions_);
         }
         this.unknownFields = unknownFields.build();
@@ -2383,82 +2354,35 @@ public final class MessagingStateOuterClass {
     }
 
     public static final int APP_ID_FIELD_NUMBER = 6;
-    private volatile java.lang.Object appId_;
+    private com.google.protobuf.StringValue appId_;
     /**
-     * <code>string app_id = 6;</code>
+     * <code>.google.protobuf.StringValue app_id = 6;</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return appId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue app_id = 6;</code>
      * @return The appId.
      */
     @java.lang.Override
-    public java.lang.String getAppId() {
-      java.lang.Object ref = appId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        appId_ = s;
-        return s;
-      }
+    public com.google.protobuf.StringValue getAppId() {
+      return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
     }
     /**
-     * <code>string app_id = 6;</code>
-     * @return The bytes for appId.
+     * <code>.google.protobuf.StringValue app_id = 6;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAppIdBytes() {
-      java.lang.Object ref = appId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        appId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
+      return getAppId();
     }
 
-    public static final int LABELS_FIELD_NUMBER = 7;
-    private com.google.protobuf.LazyStringList labels_;
-    /**
-     * <code>repeated string labels = 7;</code>
-     * @return A list containing the labels.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getLabelsList() {
-      return labels_;
-    }
-    /**
-     * <code>repeated string labels = 7;</code>
-     * @return The count of labels.
-     */
-    public int getLabelsCount() {
-      return labels_.size();
-    }
-    /**
-     * <code>repeated string labels = 7;</code>
-     * @param index The index of the element to return.
-     * @return The labels at the given index.
-     */
-    public java.lang.String getLabels(int index) {
-      return labels_.get(index);
-    }
-    /**
-     * <code>repeated string labels = 7;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the labels at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getLabelsBytes(int index) {
-      return labels_.getByteString(index);
-    }
-
-    public static final int UPDATED_AT_FIELD_NUMBER = 8;
+    public static final int UPDATED_AT_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return Whether the updatedAt field is set.
      */
     @java.lang.Override
@@ -2466,7 +2390,7 @@ public final class MessagingStateOuterClass {
       return updatedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return The updatedAt.
      */
     @java.lang.Override
@@ -2474,24 +2398,24 @@ public final class MessagingStateOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+     * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
 
-    public static final int STATUS_FIELD_NUMBER = 9;
+    public static final int STATUS_FIELD_NUMBER = 8;
     private int status_;
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+     * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
      * @return The status.
      */
     @java.lang.Override public com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus() {
@@ -2500,17 +2424,17 @@ public final class MessagingStateOuterClass {
       return result == null ? com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.UNRECOGNIZED : result;
     }
 
-    public static final int REACTIONS_FIELD_NUMBER = 10;
+    public static final int REACTIONS_FIELD_NUMBER = 9;
     private java.util.List<com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState> reactions_;
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     @java.lang.Override
     public java.util.List<com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState> getReactionsList() {
       return reactions_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionStateOrBuilder> 
@@ -2518,21 +2442,21 @@ public final class MessagingStateOuterClass {
       return reactions_;
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     @java.lang.Override
     public int getReactionsCount() {
       return reactions_.size();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState getReactions(int index) {
       return reactions_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+     * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionStateOrBuilder getReactionsOrBuilder(
@@ -2540,10 +2464,10 @@ public final class MessagingStateOuterClass {
       return reactions_.get(index);
     }
 
-    public static final int MESSAGE_FIELD_NUMBER = 11;
+    public static final int MESSAGE_FIELD_NUMBER = 10;
     private com.elarian.hera.proto.MessagingModel.OutboundMessage message_;
     /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
      * @return Whether the message field is set.
      */
     @java.lang.Override
@@ -2551,7 +2475,7 @@ public final class MessagingStateOuterClass {
       return message_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
      * @return The message.
      */
     @java.lang.Override
@@ -2559,7 +2483,7 @@ public final class MessagingStateOuterClass {
       return message_ == null ? com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance() : message_;
     }
     /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.MessagingModel.OutboundMessageOrBuilder getMessageOrBuilder() {
@@ -2595,23 +2519,20 @@ public final class MessagingStateOuterClass {
       if (provider_ != com.elarian.hera.proto.CommonModel.ChannelNumberProvider.CHANNEL_NUMBER_PROVIDER_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, provider_);
       }
-      if (!getAppIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, appId_);
-      }
-      for (int i = 0; i < labels_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, labels_.getRaw(i));
+      if (appId_ != null) {
+        output.writeMessage(6, getAppId());
       }
       if (updatedAt_ != null) {
-        output.writeMessage(8, getUpdatedAt());
+        output.writeMessage(7, getUpdatedAt());
       }
       if (status_ != com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(9, status_);
+        output.writeEnum(8, status_);
       }
       for (int i = 0; i < reactions_.size(); i++) {
-        output.writeMessage(10, reactions_.get(i));
+        output.writeMessage(9, reactions_.get(i));
       }
       if (message_ != null) {
-        output.writeMessage(11, getMessage());
+        output.writeMessage(10, getMessage());
       }
       unknownFields.writeTo(output);
     }
@@ -2641,32 +2562,25 @@ public final class MessagingStateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, provider_);
       }
-      if (!getAppIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, appId_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < labels_.size(); i++) {
-          dataSize += computeStringSizeNoTag(labels_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getLabelsList().size();
+      if (appId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getAppId());
       }
       if (updatedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getUpdatedAt());
+          .computeMessageSize(7, getUpdatedAt());
       }
       if (status_ != com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(9, status_);
+          .computeEnumSize(8, status_);
       }
       for (int i = 0; i < reactions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, reactions_.get(i));
+          .computeMessageSize(9, reactions_.get(i));
       }
       if (message_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getMessage());
+          .computeMessageSize(10, getMessage());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2701,10 +2615,11 @@ public final class MessagingStateOuterClass {
             .equals(other.getInReplyTo())) return false;
       }
       if (provider_ != other.provider_) return false;
-      if (!getAppId()
-          .equals(other.getAppId())) return false;
-      if (!getLabelsList()
-          .equals(other.getLabelsList())) return false;
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (!getAppId()
+            .equals(other.getAppId())) return false;
+      }
       if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
         if (!getUpdatedAt()
@@ -2745,11 +2660,9 @@ public final class MessagingStateOuterClass {
       }
       hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
       hash = (53 * hash) + provider_;
-      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getAppId().hashCode();
-      if (getLabelsCount() > 0) {
-        hash = (37 * hash) + LABELS_FIELD_NUMBER;
-        hash = (53 * hash) + getLabelsList().hashCode();
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId().hashCode();
       }
       if (hasUpdatedAt()) {
         hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
@@ -2921,10 +2834,12 @@ public final class MessagingStateOuterClass {
         }
         provider_ = 0;
 
-        appId_ = "";
-
-        labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        if (appIdBuilder_ == null) {
+          appId_ = null;
+        } else {
+          appId_ = null;
+          appIdBuilder_ = null;
+        }
         if (updatedAtBuilder_ == null) {
           updatedAt_ = null;
         } else {
@@ -2935,7 +2850,7 @@ public final class MessagingStateOuterClass {
 
         if (reactionsBuilder_ == null) {
           reactions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           reactionsBuilder_.clear();
         }
@@ -2989,12 +2904,11 @@ public final class MessagingStateOuterClass {
           result.inReplyTo_ = inReplyToBuilder_.build();
         }
         result.provider_ = provider_;
-        result.appId_ = appId_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          labels_ = labels_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        if (appIdBuilder_ == null) {
+          result.appId_ = appId_;
+        } else {
+          result.appId_ = appIdBuilder_.build();
         }
-        result.labels_ = labels_;
         if (updatedAtBuilder_ == null) {
           result.updatedAt_ = updatedAt_;
         } else {
@@ -3002,9 +2916,9 @@ public final class MessagingStateOuterClass {
         }
         result.status_ = status_;
         if (reactionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             reactions_ = java.util.Collections.unmodifiableList(reactions_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.reactions_ = reactions_;
         } else {
@@ -3079,19 +2993,8 @@ public final class MessagingStateOuterClass {
         if (other.provider_ != 0) {
           setProviderValue(other.getProviderValue());
         }
-        if (!other.getAppId().isEmpty()) {
-          appId_ = other.appId_;
-          onChanged();
-        }
-        if (!other.labels_.isEmpty()) {
-          if (labels_.isEmpty()) {
-            labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureLabelsIsMutable();
-            labels_.addAll(other.labels_);
-          }
-          onChanged();
+        if (other.hasAppId()) {
+          mergeAppId(other.getAppId());
         }
         if (other.hasUpdatedAt()) {
           mergeUpdatedAt(other.getUpdatedAt());
@@ -3103,7 +3006,7 @@ public final class MessagingStateOuterClass {
           if (!other.reactions_.isEmpty()) {
             if (reactions_.isEmpty()) {
               reactions_ = other.reactions_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureReactionsIsMutable();
               reactions_.addAll(other.reactions_);
@@ -3116,7 +3019,7 @@ public final class MessagingStateOuterClass {
               reactionsBuilder_.dispose();
               reactionsBuilder_ = null;
               reactions_ = other.reactions_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               reactionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getReactionsFieldBuilder() : null;
@@ -3645,204 +3548,137 @@ public final class MessagingStateOuterClass {
         return this;
       }
 
-      private java.lang.Object appId_ = "";
+      private com.google.protobuf.StringValue appId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> appIdBuilder_;
       /**
-       * <code>string app_id = 6;</code>
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
+       * @return Whether the appId field is set.
+       */
+      public boolean hasAppId() {
+        return appIdBuilder_ != null || appId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
        * @return The appId.
        */
-      public java.lang.String getAppId() {
-        java.lang.Object ref = appId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          appId_ = s;
-          return s;
+      public com.google.protobuf.StringValue getAppId() {
+        if (appIdBuilder_ == null) {
+          return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
         } else {
-          return (java.lang.String) ref;
+          return appIdBuilder_.getMessage();
         }
       }
       /**
-       * <code>string app_id = 6;</code>
-       * @return The bytes for appId.
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
        */
-      public com.google.protobuf.ByteString
-          getAppIdBytes() {
-        java.lang.Object ref = appId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          appId_ = b;
-          return b;
+      public Builder setAppId(com.google.protobuf.StringValue value) {
+        if (appIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          appId_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          appIdBuilder_.setMessage(value);
         }
+
+        return this;
       }
       /**
-       * <code>string app_id = 6;</code>
-       * @param value The appId to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
        */
       public Builder setAppId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        appId_ = value;
-        onChanged();
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (appIdBuilder_ == null) {
+          appId_ = builderForValue.build();
+          onChanged();
+        } else {
+          appIdBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
       }
       /**
-       * <code>string app_id = 6;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
+       */
+      public Builder mergeAppId(com.google.protobuf.StringValue value) {
+        if (appIdBuilder_ == null) {
+          if (appId_ != null) {
+            appId_ =
+              com.google.protobuf.StringValue.newBuilder(appId_).mergeFrom(value).buildPartial();
+          } else {
+            appId_ = value;
+          }
+          onChanged();
+        } else {
+          appIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
        */
       public Builder clearAppId() {
-        
-        appId_ = getDefaultInstance().getAppId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string app_id = 6;</code>
-       * @param value The bytes for appId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAppIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        appId_ = value;
-        onChanged();
-        return this;
-      }
+        if (appIdBuilder_ == null) {
+          appId_ = null;
+          onChanged();
+        } else {
+          appId_ = null;
+          appIdBuilder_ = null;
+        }
 
-      private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureLabelsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string labels = 7;</code>
-       * @return A list containing the labels.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getLabelsList() {
-        return labels_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string labels = 7;</code>
-       * @return The count of labels.
-       */
-      public int getLabelsCount() {
-        return labels_.size();
-      }
-      /**
-       * <code>repeated string labels = 7;</code>
-       * @param index The index of the element to return.
-       * @return The labels at the given index.
-       */
-      public java.lang.String getLabels(int index) {
-        return labels_.get(index);
-      }
-      /**
-       * <code>repeated string labels = 7;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the labels at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getLabelsBytes(int index) {
-        return labels_.getByteString(index);
-      }
-      /**
-       * <code>repeated string labels = 7;</code>
-       * @param index The index to set the value at.
-       * @param value The labels to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLabels(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
-        labels_.set(index, value);
-        onChanged();
         return this;
       }
       /**
-       * <code>repeated string labels = 7;</code>
-       * @param value The labels to add.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
        */
-      public Builder addLabels(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
-        labels_.add(value);
+      public com.google.protobuf.StringValue.Builder getAppIdBuilder() {
+        
         onChanged();
-        return this;
+        return getAppIdFieldBuilder().getBuilder();
       }
       /**
-       * <code>repeated string labels = 7;</code>
-       * @param values The labels to add.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
        */
-      public Builder addAllLabels(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureLabelsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, labels_);
-        onChanged();
-        return this;
+      public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
+        if (appIdBuilder_ != null) {
+          return appIdBuilder_.getMessageOrBuilder();
+        } else {
+          return appId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : appId_;
+        }
       }
       /**
-       * <code>repeated string labels = 7;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.StringValue app_id = 6;</code>
        */
-      public Builder clearLabels() {
-        labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string labels = 7;</code>
-       * @param value The bytes of the labels to add.
-       * @return This builder for chaining.
-       */
-      public Builder addLabelsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureLabelsIsMutable();
-        labels_.add(value);
-        onChanged();
-        return this;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getAppIdFieldBuilder() {
+        if (appIdBuilder_ == null) {
+          appIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getAppId(),
+                  getParentForChildren(),
+                  isClean());
+          appId_ = null;
+        }
+        return appIdBuilder_;
       }
 
       private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
@@ -3853,7 +3689,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
         if (updatedAtBuilder_ == null) {
@@ -3869,7 +3705,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder setUpdatedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -3883,7 +3719,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
         if (updatedAtBuilder_ == null) {
@@ -3901,7 +3737,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder clearUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -3915,7 +3751,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
         
@@ -3923,7 +3759,7 @@ public final class MessagingStateOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
         if (updatedAtBuilder_ != null) {
@@ -3934,7 +3770,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp updated_at = 8;</code>
+       * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -3952,14 +3788,14 @@ public final class MessagingStateOuterClass {
 
       private int status_ = 0;
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -3970,7 +3806,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
        * @return The status.
        */
       @java.lang.Override
@@ -3980,7 +3816,7 @@ public final class MessagingStateOuterClass {
         return result == null ? com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -3994,7 +3830,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 9;</code>
+       * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -4007,9 +3843,9 @@ public final class MessagingStateOuterClass {
       private java.util.List<com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState> reactions_ =
         java.util.Collections.emptyList();
       private void ensureReactionsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           reactions_ = new java.util.ArrayList<com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState>(reactions_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -4017,7 +3853,7 @@ public final class MessagingStateOuterClass {
           com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionStateOrBuilder> reactionsBuilder_;
 
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public java.util.List<com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState> getReactionsList() {
         if (reactionsBuilder_ == null) {
@@ -4027,7 +3863,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public int getReactionsCount() {
         if (reactionsBuilder_ == null) {
@@ -4037,7 +3873,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState getReactions(int index) {
         if (reactionsBuilder_ == null) {
@@ -4047,7 +3883,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder setReactions(
           int index, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState value) {
@@ -4064,7 +3900,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder setReactions(
           int index, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder builderForValue) {
@@ -4078,7 +3914,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder addReactions(com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState value) {
         if (reactionsBuilder_ == null) {
@@ -4094,7 +3930,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder addReactions(
           int index, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState value) {
@@ -4111,7 +3947,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder addReactions(
           com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder builderForValue) {
@@ -4125,7 +3961,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder addReactions(
           int index, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder builderForValue) {
@@ -4139,7 +3975,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder addAllReactions(
           java.lang.Iterable<? extends com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState> values) {
@@ -4154,12 +3990,12 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder clearReactions() {
         if (reactionsBuilder_ == null) {
           reactions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           reactionsBuilder_.clear();
@@ -4167,7 +4003,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public Builder removeReactions(int index) {
         if (reactionsBuilder_ == null) {
@@ -4180,14 +4016,14 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder getReactionsBuilder(
           int index) {
         return getReactionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionStateOrBuilder getReactionsOrBuilder(
           int index) {
@@ -4197,7 +4033,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public java.util.List<? extends com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionStateOrBuilder> 
            getReactionsOrBuilderList() {
@@ -4208,14 +4044,14 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder addReactionsBuilder() {
         return getReactionsFieldBuilder().addBuilder(
             com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder addReactionsBuilder(
           int index) {
@@ -4223,7 +4059,7 @@ public final class MessagingStateOuterClass {
             index, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 10;</code>
+       * <code>repeated .com.elarian.hera.proto.MessageReactionState reactions = 9;</code>
        */
       public java.util.List<com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder> 
            getReactionsBuilderList() {
@@ -4236,7 +4072,7 @@ public final class MessagingStateOuterClass {
           reactionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.Builder, com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionStateOrBuilder>(
                   reactions_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           reactions_ = null;
@@ -4248,14 +4084,14 @@ public final class MessagingStateOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.MessagingModel.OutboundMessage, com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder, com.elarian.hera.proto.MessagingModel.OutboundMessageOrBuilder> messageBuilder_;
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        * @return Whether the message field is set.
        */
       public boolean hasMessage() {
         return messageBuilder_ != null || message_ != null;
       }
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        * @return The message.
        */
       public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
@@ -4266,7 +4102,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        */
       public Builder setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         if (messageBuilder_ == null) {
@@ -4282,7 +4118,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        */
       public Builder setMessage(
           com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder builderForValue) {
@@ -4296,7 +4132,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        */
       public Builder mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         if (messageBuilder_ == null) {
@@ -4314,7 +4150,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        */
       public Builder clearMessage() {
         if (messageBuilder_ == null) {
@@ -4328,7 +4164,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        */
       public com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder getMessageBuilder() {
         
@@ -4336,7 +4172,7 @@ public final class MessagingStateOuterClass {
         return getMessageFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        */
       public com.elarian.hera.proto.MessagingModel.OutboundMessageOrBuilder getMessageOrBuilder() {
         if (messageBuilder_ != null) {
@@ -4347,7 +4183,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 11;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.elarian.hera.proto.MessagingModel.OutboundMessage, com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder, com.elarian.hera.proto.MessagingModel.OutboundMessageOrBuilder> 
@@ -10235,6 +10071,21 @@ public final class MessagingStateOuterClass {
      */
     com.elarian.hera.proto.MessagingStateOuterClass.CompleteMessagingSessionOrBuilder getSessionsOrBuilder(
         int index);
+
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     * @return Whether the allowedAt field is set.
+     */
+    boolean hasAllowedAt();
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     * @return The allowedAt.
+     */
+    com.google.protobuf.Timestamp getAllowedAt();
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getAllowedAtOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ActiveMessagingChannelState}
@@ -10339,6 +10190,19 @@ public final class MessagingStateOuterClass {
               }
               sessions_.add(
                   input.readMessage(com.elarian.hera.proto.MessagingStateOuterClass.CompleteMessagingSession.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (allowedAt_ != null) {
+                subBuilder = allowedAt_.toBuilder();
+              }
+              allowedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(allowedAt_);
+                allowedAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -10537,6 +10401,32 @@ public final class MessagingStateOuterClass {
       return sessions_.get(index);
     }
 
+    public static final int ALLOWED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp allowedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     * @return Whether the allowedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowedAt() {
+      return allowedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     * @return The allowedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getAllowedAt() {
+      return allowedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : allowedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getAllowedAtOrBuilder() {
+      return getAllowedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10566,6 +10456,9 @@ public final class MessagingStateOuterClass {
       for (int i = 0; i < sessions_.size(); i++) {
         output.writeMessage(5, sessions_.get(i));
       }
+      if (allowedAt_ != null) {
+        output.writeMessage(6, getAllowedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10594,6 +10487,10 @@ public final class MessagingStateOuterClass {
       for (int i = 0; i < sessions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, sessions_.get(i));
+      }
+      if (allowedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getAllowedAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10629,6 +10526,11 @@ public final class MessagingStateOuterClass {
       }
       if (!getSessionsList()
           .equals(other.getSessionsList())) return false;
+      if (hasAllowedAt() != other.hasAllowedAt()) return false;
+      if (hasAllowedAt()) {
+        if (!getAllowedAt()
+            .equals(other.getAllowedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10659,6 +10561,10 @@ public final class MessagingStateOuterClass {
       if (getSessionsCount() > 0) {
         hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getSessionsList().hashCode();
+      }
+      if (hasAllowedAt()) {
+        hash = (37 * hash) + ALLOWED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10825,6 +10731,12 @@ public final class MessagingStateOuterClass {
         } else {
           sessionsBuilder_.clear();
         }
+        if (allowedAtBuilder_ == null) {
+          allowedAt_ = null;
+        } else {
+          allowedAt_ = null;
+          allowedAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -10884,6 +10796,11 @@ public final class MessagingStateOuterClass {
           result.sessions_ = sessions_;
         } else {
           result.sessions_ = sessionsBuilder_.build();
+        }
+        if (allowedAtBuilder_ == null) {
+          result.allowedAt_ = allowedAt_;
+        } else {
+          result.allowedAt_ = allowedAtBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10993,6 +10910,9 @@ public final class MessagingStateOuterClass {
               sessionsBuilder_.addAllMessages(other.sessions_);
             }
           }
+        }
+        if (other.hasAllowedAt()) {
+          mergeAllowedAt(other.getAllowedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11860,6 +11780,125 @@ public final class MessagingStateOuterClass {
         }
         return sessionsBuilder_;
       }
+
+      private com.google.protobuf.Timestamp allowedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> allowedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       * @return Whether the allowedAt field is set.
+       */
+      public boolean hasAllowedAt() {
+        return allowedAtBuilder_ != null || allowedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       * @return The allowedAt.
+       */
+      public com.google.protobuf.Timestamp getAllowedAt() {
+        if (allowedAtBuilder_ == null) {
+          return allowedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : allowedAt_;
+        } else {
+          return allowedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public Builder setAllowedAt(com.google.protobuf.Timestamp value) {
+        if (allowedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allowedAt_ = value;
+          onChanged();
+        } else {
+          allowedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public Builder setAllowedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (allowedAtBuilder_ == null) {
+          allowedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          allowedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public Builder mergeAllowedAt(com.google.protobuf.Timestamp value) {
+        if (allowedAtBuilder_ == null) {
+          if (allowedAt_ != null) {
+            allowedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(allowedAt_).mergeFrom(value).buildPartial();
+          } else {
+            allowedAt_ = value;
+          }
+          onChanged();
+        } else {
+          allowedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public Builder clearAllowedAt() {
+        if (allowedAtBuilder_ == null) {
+          allowedAt_ = null;
+          onChanged();
+        } else {
+          allowedAt_ = null;
+          allowedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getAllowedAtBuilder() {
+        
+        onChanged();
+        return getAllowedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getAllowedAtOrBuilder() {
+        if (allowedAtBuilder_ != null) {
+          return allowedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return allowedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : allowedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getAllowedAtFieldBuilder() {
+        if (allowedAtBuilder_ == null) {
+          allowedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getAllowedAt(),
+                  getParentForChildren(),
+                  isClean());
+          allowedAt_ = null;
+        }
+        return allowedAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12011,66 +12050,81 @@ public final class MessagingStateOuterClass {
         int index);
 
     /**
-     * <code>string session_id = 6;</code>
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     * @return Whether the allowedAt field is set.
+     */
+    boolean hasAllowedAt();
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     * @return The allowedAt.
+     */
+    com.google.protobuf.Timestamp getAllowedAt();
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getAllowedAtOrBuilder();
+
+    /**
+     * <code>string session_id = 7;</code>
      * @return The sessionId.
      */
     java.lang.String getSessionId();
     /**
-     * <code>string session_id = 6;</code>
+     * <code>string session_id = 7;</code>
      * @return The bytes for sessionId.
      */
     com.google.protobuf.ByteString
         getSessionIdBytes();
 
     /**
-     * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * <code>.google.protobuf.Timestamp started_at = 8;</code>
      * @return Whether the startedAt field is set.
      */
     boolean hasStartedAt();
     /**
-     * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * <code>.google.protobuf.Timestamp started_at = 8;</code>
      * @return The startedAt.
      */
     com.google.protobuf.Timestamp getStartedAt();
     /**
-     * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * <code>.google.protobuf.Timestamp started_at = 8;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
 
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+     * <code>.google.protobuf.Timestamp expires_at = 9;</code>
      * @return Whether the expiresAt field is set.
      */
     boolean hasExpiresAt();
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+     * <code>.google.protobuf.Timestamp expires_at = 9;</code>
      * @return The expiresAt.
      */
     com.google.protobuf.Timestamp getExpiresAt();
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+     * <code>.google.protobuf.Timestamp expires_at = 9;</code>
      */
     com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
 
     /**
-     * <code>repeated string app_ids = 9;</code>
+     * <code>repeated string app_ids = 10;</code>
      * @return A list containing the appIds.
      */
     java.util.List<java.lang.String>
         getAppIdsList();
     /**
-     * <code>repeated string app_ids = 9;</code>
+     * <code>repeated string app_ids = 10;</code>
      * @return The count of appIds.
      */
     int getAppIdsCount();
     /**
-     * <code>repeated string app_ids = 9;</code>
+     * <code>repeated string app_ids = 10;</code>
      * @param index The index of the element to return.
      * @return The appIds at the given index.
      */
     java.lang.String getAppIds(int index);
     /**
-     * <code>repeated string app_ids = 9;</code>
+     * <code>repeated string app_ids = 10;</code>
      * @param index The index of the value to return.
      * @return The bytes of the appIds at the given index.
      */
@@ -12185,12 +12239,25 @@ public final class MessagingStateOuterClass {
               break;
             }
             case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (allowedAt_ != null) {
+                subBuilder = allowedAt_.toBuilder();
+              }
+              allowedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(allowedAt_);
+                allowedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
               java.lang.String s = input.readStringRequireUtf8();
 
               sessionId_ = s;
               break;
             }
-            case 58: {
+            case 66: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (startedAt_ != null) {
                 subBuilder = startedAt_.toBuilder();
@@ -12203,7 +12270,7 @@ public final class MessagingStateOuterClass {
 
               break;
             }
-            case 66: {
+            case 74: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (expiresAt_ != null) {
                 subBuilder = expiresAt_.toBuilder();
@@ -12216,7 +12283,7 @@ public final class MessagingStateOuterClass {
 
               break;
             }
-            case 74: {
+            case 82: {
               java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 appIds_ = new com.google.protobuf.LazyStringArrayList();
@@ -12424,10 +12491,36 @@ public final class MessagingStateOuterClass {
       return sessions_.get(index);
     }
 
-    public static final int SESSION_ID_FIELD_NUMBER = 6;
+    public static final int ALLOWED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp allowedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     * @return Whether the allowedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowedAt() {
+      return allowedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     * @return The allowedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getAllowedAt() {
+      return allowedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : allowedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getAllowedAtOrBuilder() {
+      return getAllowedAt();
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object sessionId_;
     /**
-     * <code>string session_id = 6;</code>
+     * <code>string session_id = 7;</code>
      * @return The sessionId.
      */
     @java.lang.Override
@@ -12444,7 +12537,7 @@ public final class MessagingStateOuterClass {
       }
     }
     /**
-     * <code>string session_id = 6;</code>
+     * <code>string session_id = 7;</code>
      * @return The bytes for sessionId.
      */
     @java.lang.Override
@@ -12462,10 +12555,10 @@ public final class MessagingStateOuterClass {
       }
     }
 
-    public static final int STARTED_AT_FIELD_NUMBER = 7;
+    public static final int STARTED_AT_FIELD_NUMBER = 8;
     private com.google.protobuf.Timestamp startedAt_;
     /**
-     * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * <code>.google.protobuf.Timestamp started_at = 8;</code>
      * @return Whether the startedAt field is set.
      */
     @java.lang.Override
@@ -12473,7 +12566,7 @@ public final class MessagingStateOuterClass {
       return startedAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * <code>.google.protobuf.Timestamp started_at = 8;</code>
      * @return The startedAt.
      */
     @java.lang.Override
@@ -12481,17 +12574,17 @@ public final class MessagingStateOuterClass {
       return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp started_at = 7;</code>
+     * <code>.google.protobuf.Timestamp started_at = 8;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
       return getStartedAt();
     }
 
-    public static final int EXPIRES_AT_FIELD_NUMBER = 8;
+    public static final int EXPIRES_AT_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp expiresAt_;
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+     * <code>.google.protobuf.Timestamp expires_at = 9;</code>
      * @return Whether the expiresAt field is set.
      */
     @java.lang.Override
@@ -12499,7 +12592,7 @@ public final class MessagingStateOuterClass {
       return expiresAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+     * <code>.google.protobuf.Timestamp expires_at = 9;</code>
      * @return The expiresAt.
      */
     @java.lang.Override
@@ -12507,17 +12600,17 @@ public final class MessagingStateOuterClass {
       return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+     * <code>.google.protobuf.Timestamp expires_at = 9;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
       return getExpiresAt();
     }
 
-    public static final int APP_IDS_FIELD_NUMBER = 9;
+    public static final int APP_IDS_FIELD_NUMBER = 10;
     private com.google.protobuf.LazyStringList appIds_;
     /**
-     * <code>repeated string app_ids = 9;</code>
+     * <code>repeated string app_ids = 10;</code>
      * @return A list containing the appIds.
      */
     public com.google.protobuf.ProtocolStringList
@@ -12525,14 +12618,14 @@ public final class MessagingStateOuterClass {
       return appIds_;
     }
     /**
-     * <code>repeated string app_ids = 9;</code>
+     * <code>repeated string app_ids = 10;</code>
      * @return The count of appIds.
      */
     public int getAppIdsCount() {
       return appIds_.size();
     }
     /**
-     * <code>repeated string app_ids = 9;</code>
+     * <code>repeated string app_ids = 10;</code>
      * @param index The index of the element to return.
      * @return The appIds at the given index.
      */
@@ -12540,7 +12633,7 @@ public final class MessagingStateOuterClass {
       return appIds_.get(index);
     }
     /**
-     * <code>repeated string app_ids = 9;</code>
+     * <code>repeated string app_ids = 10;</code>
      * @param index The index of the value to return.
      * @return The bytes of the appIds at the given index.
      */
@@ -12578,17 +12671,20 @@ public final class MessagingStateOuterClass {
       for (int i = 0; i < sessions_.size(); i++) {
         output.writeMessage(5, sessions_.get(i));
       }
+      if (allowedAt_ != null) {
+        output.writeMessage(6, getAllowedAt());
+      }
       if (!getSessionIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sessionId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sessionId_);
       }
       if (startedAt_ != null) {
-        output.writeMessage(7, getStartedAt());
+        output.writeMessage(8, getStartedAt());
       }
       if (expiresAt_ != null) {
-        output.writeMessage(8, getExpiresAt());
+        output.writeMessage(9, getExpiresAt());
       }
       for (int i = 0; i < appIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, appIds_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, appIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -12619,16 +12715,20 @@ public final class MessagingStateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, sessions_.get(i));
       }
+      if (allowedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getAllowedAt());
+      }
       if (!getSessionIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sessionId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sessionId_);
       }
       if (startedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getStartedAt());
+          .computeMessageSize(8, getStartedAt());
       }
       if (expiresAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getExpiresAt());
+          .computeMessageSize(9, getExpiresAt());
       }
       {
         int dataSize = 0;
@@ -12672,6 +12772,11 @@ public final class MessagingStateOuterClass {
       }
       if (!getSessionsList()
           .equals(other.getSessionsList())) return false;
+      if (hasAllowedAt() != other.hasAllowedAt()) return false;
+      if (hasAllowedAt()) {
+        if (!getAllowedAt()
+            .equals(other.getAllowedAt())) return false;
+      }
       if (!getSessionId()
           .equals(other.getSessionId())) return false;
       if (hasStartedAt() != other.hasStartedAt()) return false;
@@ -12716,6 +12821,10 @@ public final class MessagingStateOuterClass {
       if (getSessionsCount() > 0) {
         hash = (37 * hash) + SESSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getSessionsList().hashCode();
+      }
+      if (hasAllowedAt()) {
+        hash = (37 * hash) + ALLOWED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedAt().hashCode();
       }
       hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSessionId().hashCode();
@@ -12896,6 +13005,12 @@ public final class MessagingStateOuterClass {
         } else {
           sessionsBuilder_.clear();
         }
+        if (allowedAtBuilder_ == null) {
+          allowedAt_ = null;
+        } else {
+          allowedAt_ = null;
+          allowedAtBuilder_ = null;
+        }
         sessionId_ = "";
 
         if (startedAtBuilder_ == null) {
@@ -12971,6 +13086,11 @@ public final class MessagingStateOuterClass {
           result.sessions_ = sessions_;
         } else {
           result.sessions_ = sessionsBuilder_.build();
+        }
+        if (allowedAtBuilder_ == null) {
+          result.allowedAt_ = allowedAt_;
+        } else {
+          result.allowedAt_ = allowedAtBuilder_.build();
         }
         result.sessionId_ = sessionId_;
         if (startedAtBuilder_ == null) {
@@ -13096,6 +13216,9 @@ public final class MessagingStateOuterClass {
               sessionsBuilder_.addAllMessages(other.sessions_);
             }
           }
+        }
+        if (other.hasAllowedAt()) {
+          mergeAllowedAt(other.getAllowedAt());
         }
         if (!other.getSessionId().isEmpty()) {
           sessionId_ = other.sessionId_;
@@ -13984,9 +14107,128 @@ public final class MessagingStateOuterClass {
         return sessionsBuilder_;
       }
 
+      private com.google.protobuf.Timestamp allowedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> allowedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       * @return Whether the allowedAt field is set.
+       */
+      public boolean hasAllowedAt() {
+        return allowedAtBuilder_ != null || allowedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       * @return The allowedAt.
+       */
+      public com.google.protobuf.Timestamp getAllowedAt() {
+        if (allowedAtBuilder_ == null) {
+          return allowedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : allowedAt_;
+        } else {
+          return allowedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public Builder setAllowedAt(com.google.protobuf.Timestamp value) {
+        if (allowedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allowedAt_ = value;
+          onChanged();
+        } else {
+          allowedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public Builder setAllowedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (allowedAtBuilder_ == null) {
+          allowedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          allowedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public Builder mergeAllowedAt(com.google.protobuf.Timestamp value) {
+        if (allowedAtBuilder_ == null) {
+          if (allowedAt_ != null) {
+            allowedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(allowedAt_).mergeFrom(value).buildPartial();
+          } else {
+            allowedAt_ = value;
+          }
+          onChanged();
+        } else {
+          allowedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public Builder clearAllowedAt() {
+        if (allowedAtBuilder_ == null) {
+          allowedAt_ = null;
+          onChanged();
+        } else {
+          allowedAt_ = null;
+          allowedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getAllowedAtBuilder() {
+        
+        onChanged();
+        return getAllowedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getAllowedAtOrBuilder() {
+        if (allowedAtBuilder_ != null) {
+          return allowedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return allowedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : allowedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp allowed_at = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getAllowedAtFieldBuilder() {
+        if (allowedAtBuilder_ == null) {
+          allowedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getAllowedAt(),
+                  getParentForChildren(),
+                  isClean());
+          allowedAt_ = null;
+        }
+        return allowedAtBuilder_;
+      }
+
       private java.lang.Object sessionId_ = "";
       /**
-       * <code>string session_id = 6;</code>
+       * <code>string session_id = 7;</code>
        * @return The sessionId.
        */
       public java.lang.String getSessionId() {
@@ -14002,7 +14244,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>string session_id = 6;</code>
+       * <code>string session_id = 7;</code>
        * @return The bytes for sessionId.
        */
       public com.google.protobuf.ByteString
@@ -14019,7 +14261,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>string session_id = 6;</code>
+       * <code>string session_id = 7;</code>
        * @param value The sessionId to set.
        * @return This builder for chaining.
        */
@@ -14034,7 +14276,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>string session_id = 6;</code>
+       * <code>string session_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearSessionId() {
@@ -14044,7 +14286,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>string session_id = 6;</code>
+       * <code>string session_id = 7;</code>
        * @param value The bytes for sessionId to set.
        * @return This builder for chaining.
        */
@@ -14064,14 +14306,14 @@ public final class MessagingStateOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        * @return Whether the startedAt field is set.
        */
       public boolean hasStartedAt() {
         return startedAtBuilder_ != null || startedAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        * @return The startedAt.
        */
       public com.google.protobuf.Timestamp getStartedAt() {
@@ -14082,7 +14324,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        */
       public Builder setStartedAt(com.google.protobuf.Timestamp value) {
         if (startedAtBuilder_ == null) {
@@ -14098,7 +14340,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        */
       public Builder setStartedAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -14112,7 +14354,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        */
       public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
         if (startedAtBuilder_ == null) {
@@ -14130,7 +14372,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        */
       public Builder clearStartedAt() {
         if (startedAtBuilder_ == null) {
@@ -14144,7 +14386,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartedAtBuilder() {
         
@@ -14152,7 +14394,7 @@ public final class MessagingStateOuterClass {
         return getStartedAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
         if (startedAtBuilder_ != null) {
@@ -14163,7 +14405,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp started_at = 7;</code>
+       * <code>.google.protobuf.Timestamp started_at = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -14183,14 +14425,14 @@ public final class MessagingStateOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        * @return Whether the expiresAt field is set.
        */
       public boolean hasExpiresAt() {
         return expiresAtBuilder_ != null || expiresAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        * @return The expiresAt.
        */
       public com.google.protobuf.Timestamp getExpiresAt() {
@@ -14201,7 +14443,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        */
       public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
@@ -14217,7 +14459,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        */
       public Builder setExpiresAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -14231,7 +14473,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        */
       public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
@@ -14249,7 +14491,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        */
       public Builder clearExpiresAt() {
         if (expiresAtBuilder_ == null) {
@@ -14263,7 +14505,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
         
@@ -14271,7 +14513,7 @@ public final class MessagingStateOuterClass {
         return getExpiresAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
         if (expiresAtBuilder_ != null) {
@@ -14282,7 +14524,7 @@ public final class MessagingStateOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp expires_at = 8;</code>
+       * <code>.google.protobuf.Timestamp expires_at = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -14306,7 +14548,7 @@ public final class MessagingStateOuterClass {
          }
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @return A list containing the appIds.
        */
       public com.google.protobuf.ProtocolStringList
@@ -14314,14 +14556,14 @@ public final class MessagingStateOuterClass {
         return appIds_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @return The count of appIds.
        */
       public int getAppIdsCount() {
         return appIds_.size();
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @param index The index of the element to return.
        * @return The appIds at the given index.
        */
@@ -14329,7 +14571,7 @@ public final class MessagingStateOuterClass {
         return appIds_.get(index);
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @param index The index of the value to return.
        * @return The bytes of the appIds at the given index.
        */
@@ -14338,7 +14580,7 @@ public final class MessagingStateOuterClass {
         return appIds_.getByteString(index);
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @param index The index to set the value at.
        * @param value The appIds to set.
        * @return This builder for chaining.
@@ -14354,7 +14596,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @param value The appIds to add.
        * @return This builder for chaining.
        */
@@ -14369,7 +14611,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @param values The appIds to add.
        * @return This builder for chaining.
        */
@@ -14382,7 +14624,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearAppIds() {
@@ -14392,7 +14634,7 @@ public final class MessagingStateOuterClass {
         return this;
       }
       /**
-       * <code>repeated string app_ids = 9;</code>
+       * <code>repeated string app_ids = 10;</code>
        * @param value The bytes of the appIds to add.
        * @return This builder for chaining.
        */
@@ -16506,75 +16748,78 @@ public final class MessagingStateOuterClass {
       ".elarian.hera.proto.ChannelNumberProvide" +
       "r\022,\n\006app_id\030\006 \001(\0132\034.google.protobuf.Stri" +
       "ngValue\0229\n\005parts\030\007 \003(\0132*.com.elarian.her" +
-      "a.proto.InboundMessageBody\"\201\004\n\013SentMessa" +
+      "a.proto.InboundMessageBody\"\217\004\n\013SentMessa" +
       "ge\022\022\n\nmessage_id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001" +
       "(\0132\032.google.protobuf.Timestamp\0220\n\nsessio" +
       "n_id\030\003 \001(\0132\034.google.protobuf.StringValue" +
       "\0221\n\013in_reply_to\030\004 \001(\0132\034.google.protobuf." +
       "StringValue\022?\n\010provider\030\005 \001(\0162-.com.elar" +
-      "ian.hera.proto.ChannelNumberProvider\022\016\n\006" +
-      "app_id\030\006 \001(\t\022\016\n\006labels\030\007 \003(\t\022.\n\nupdated_" +
-      "at\030\010 \001(\0132\032.google.protobuf.Timestamp\022=\n\006" +
-      "status\030\t \001(\0162-.com.elarian.hera.proto.Me" +
-      "ssageDeliveryStatus\022?\n\treactions\030\n \003(\0132," +
-      ".com.elarian.hera.proto.MessageReactionS" +
-      "tate\0228\n\007message\030\013 \001(\0132\'.com.elarian.hera" +
-      ".proto.OutboundMessage\"\201\001\n\024MessageReacti" +
-      "onState\022.\n\ncreated_at\030\001 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\0229\n\010reaction\030\002 \001(\0162\'.com." +
-      "elarian.hera.proto.MessageReaction\"R\n\021Me" +
-      "ssageReplyToken\022\r\n\005token\030\001 \001(\t\022.\n\nexpire" +
-      "s_at\030\002 \001(\0132\032.google.protobuf.Timestamp\"\213" +
-      "\001\n\016ChannelMessage\022;\n\010received\030\001 \001(\0132\'.co" +
-      "m.elarian.hera.proto.ReceivedMessageH\000\0223" +
-      "\n\004sent\030\002 \001(\0132#.com.elarian.hera.proto.Se" +
-      "ntMessageH\000B\007\n\005entry\"\343\001\n\030CompleteMessagi" +
-      "ngSession\022\022\n\nsession_id\030\001 \001(\t\022.\n\nstarted" +
-      "_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022+\n" +
-      "\010duration\030\003 \001(\0132\031.google.protobuf.Durati" +
-      "on\022\017\n\007app_ids\030\004 \003(\t\022E\n\nend_reason\030\005 \001(\0162" +
-      "1.com.elarian.hera.proto.MessagingSessio" +
-      "nEndReason\"\225\003\n\034BlockedMessagingChannelSt" +
-      "ate\022?\n\017customer_number\030\001 \001(\0132&.com.elari" +
-      "an.hera.proto.CustomerNumber\022F\n\016channel_" +
-      "number\030\002 \001(\0132..com.elarian.hera.proto.Me" +
-      "ssagingChannelNumber\0228\n\010messages\030\003 \003(\0132&" +
-      ".com.elarian.hera.proto.ChannelMessage\022>" +
-      "\n\013reply_token\030\004 \001(\0132).com.elarian.hera.p" +
-      "roto.MessageReplyToken\022B\n\010sessions\030\005 \003(\013" +
-      "20.com.elarian.hera.proto.CompleteMessag" +
-      "ingSession\022.\n\nblocked_at\030\006 \001(\0132\032.google." +
-      "protobuf.Timestamp\"\344\002\n\033ActiveMessagingCh" +
-      "annelState\022?\n\017customer_number\030\001 \001(\0132&.co" +
-      "m.elarian.hera.proto.CustomerNumber\022F\n\016c" +
-      "hannel_number\030\002 \001(\0132..com.elarian.hera.p" +
-      "roto.MessagingChannelNumber\0228\n\010messages\030" +
-      "\003 \003(\0132&.com.elarian.hera.proto.ChannelMe" +
-      "ssage\022>\n\013reply_token\030\004 \001(\0132).com.elarian" +
-      ".hera.proto.MessageReplyToken\022B\n\010session" +
-      "s\030\005 \003(\01320.com.elarian.hera.proto.Complet" +
-      "eMessagingSession\"\354\003\n\036InSessionMessaging" +
-      "ChannelState\022?\n\017customer_number\030\001 \001(\0132&." +
-      "com.elarian.hera.proto.CustomerNumber\022F\n" +
-      "\016channel_number\030\002 \001(\0132..com.elarian.hera" +
-      ".proto.MessagingChannelNumber\0228\n\010message" +
-      "s\030\003 \003(\0132&.com.elarian.hera.proto.Channel" +
-      "Message\022>\n\013reply_token\030\004 \001(\0132).com.elari" +
-      "an.hera.proto.MessageReplyToken\022B\n\010sessi" +
-      "ons\030\005 \003(\01320.com.elarian.hera.proto.Compl" +
-      "eteMessagingSession\022\022\n\nsession_id\030\006 \001(\t\022" +
-      ".\n\nstarted_at\030\007 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022.\n\nexpires_at\030\010 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022\017\n\007app_ids\030\t \003(\t\"\376\001\n\025Mes" +
-      "sagingChannelState\022G\n\007blocked\030\001 \001(\01324.co" +
-      "m.elarian.hera.proto.BlockedMessagingCha" +
-      "nnelStateH\000\022E\n\006active\030\002 \001(\01323.com.elaria" +
-      "n.hera.proto.ActiveMessagingChannelState" +
-      "H\000\022L\n\nin_session\030\003 \001(\01326.com.elarian.her" +
-      "a.proto.InSessionMessagingChannelStateH\000" +
-      "B\007\n\005state\"Q\n\016MessagingState\022?\n\010channels\030" +
-      "\001 \003(\0132-.com.elarian.hera.proto.Messaging" +
-      "ChannelStateb\006proto3"
+      "ian.hera.proto.ChannelNumberProvider\022,\n\006" +
+      "app_id\030\006 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022.\n\nupdated_at\030\007 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022=\n\006status\030\010 \001(\0162-.com.elarian" +
+      ".hera.proto.MessageDeliveryStatus\022?\n\trea" +
+      "ctions\030\t \003(\0132,.com.elarian.hera.proto.Me" +
+      "ssageReactionState\0228\n\007message\030\n \001(\0132\'.co" +
+      "m.elarian.hera.proto.OutboundMessage\"\201\001\n" +
+      "\024MessageReactionState\022.\n\ncreated_at\030\001 \001(" +
+      "\0132\032.google.protobuf.Timestamp\0229\n\010reactio" +
+      "n\030\002 \001(\0162\'.com.elarian.hera.proto.Message" +
+      "Reaction\"R\n\021MessageReplyToken\022\r\n\005token\030\001" +
+      " \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.google.protob" +
+      "uf.Timestamp\"\213\001\n\016ChannelMessage\022;\n\010recei" +
+      "ved\030\001 \001(\0132\'.com.elarian.hera.proto.Recei" +
+      "vedMessageH\000\0223\n\004sent\030\002 \001(\0132#.com.elarian" +
+      ".hera.proto.SentMessageH\000B\007\n\005entry\"\343\001\n\030C" +
+      "ompleteMessagingSession\022\022\n\nsession_id\030\001 " +
+      "\001(\t\022.\n\nstarted_at\030\002 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022+\n\010duration\030\003 \001(\0132\031.google.p" +
+      "rotobuf.Duration\022\017\n\007app_ids\030\004 \003(\t\022E\n\nend" +
+      "_reason\030\005 \001(\01621.com.elarian.hera.proto.M" +
+      "essagingSessionEndReason\"\225\003\n\034BlockedMess" +
+      "agingChannelState\022?\n\017customer_number\030\001 \001" +
+      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
+      "er\022F\n\016channel_number\030\002 \001(\0132..com.elarian" +
+      ".hera.proto.MessagingChannelNumber\0228\n\010me" +
+      "ssages\030\003 \003(\0132&.com.elarian.hera.proto.Ch" +
+      "annelMessage\022>\n\013reply_token\030\004 \001(\0132).com." +
+      "elarian.hera.proto.MessageReplyToken\022B\n\010" +
+      "sessions\030\005 \003(\01320.com.elarian.hera.proto." +
+      "CompleteMessagingSession\022.\n\nblocked_at\030\006" +
+      " \001(\0132\032.google.protobuf.Timestamp\"\224\003\n\033Act" +
+      "iveMessagingChannelState\022?\n\017customer_num" +
+      "ber\030\001 \001(\0132&.com.elarian.hera.proto.Custo" +
+      "merNumber\022F\n\016channel_number\030\002 \001(\0132..com." +
+      "elarian.hera.proto.MessagingChannelNumbe" +
+      "r\0228\n\010messages\030\003 \003(\0132&.com.elarian.hera.p" +
+      "roto.ChannelMessage\022>\n\013reply_token\030\004 \001(\013" +
+      "2).com.elarian.hera.proto.MessageReplyTo" +
+      "ken\022B\n\010sessions\030\005 \003(\01320.com.elarian.hera" +
+      ".proto.CompleteMessagingSession\022.\n\nallow" +
+      "ed_at\030\006 \001(\0132\032.google.protobuf.Timestamp\"" +
+      "\234\004\n\036InSessionMessagingChannelState\022?\n\017cu" +
+      "stomer_number\030\001 \001(\0132&.com.elarian.hera.p" +
+      "roto.CustomerNumber\022F\n\016channel_number\030\002 " +
+      "\001(\0132..com.elarian.hera.proto.MessagingCh" +
+      "annelNumber\0228\n\010messages\030\003 \003(\0132&.com.elar" +
+      "ian.hera.proto.ChannelMessage\022>\n\013reply_t" +
+      "oken\030\004 \001(\0132).com.elarian.hera.proto.Mess" +
+      "ageReplyToken\022B\n\010sessions\030\005 \003(\01320.com.el" +
+      "arian.hera.proto.CompleteMessagingSessio" +
+      "n\022.\n\nallowed_at\030\006 \001(\0132\032.google.protobuf." +
+      "Timestamp\022\022\n\nsession_id\030\007 \001(\t\022.\n\nstarted" +
+      "_at\030\010 \001(\0132\032.google.protobuf.Timestamp\022.\n" +
+      "\nexpires_at\030\t \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\017\n\007app_ids\030\n \003(\t\"\376\001\n\025MessagingChan" +
+      "nelState\022G\n\007blocked\030\001 \001(\01324.com.elarian." +
+      "hera.proto.BlockedMessagingChannelStateH" +
+      "\000\022E\n\006active\030\002 \001(\01323.com.elarian.hera.pro" +
+      "to.ActiveMessagingChannelStateH\000\022L\n\nin_s" +
+      "ession\030\003 \001(\01326.com.elarian.hera.proto.In" +
+      "SessionMessagingChannelStateH\000B\007\n\005state\"" +
+      "Q\n\016MessagingState\022?\n\010channels\030\001 \003(\0132-.co" +
+      "m.elarian.hera.proto.MessagingChannelSta" +
+      "teb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16596,7 +16841,7 @@ public final class MessagingStateOuterClass {
     internal_static_com_elarian_hera_proto_SentMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SentMessage_descriptor,
-        new java.lang.String[] { "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "Labels", "UpdatedAt", "Status", "Reactions", "Message", });
+        new java.lang.String[] { "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "UpdatedAt", "Status", "Reactions", "Message", });
     internal_static_com_elarian_hera_proto_MessageReactionState_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_elarian_hera_proto_MessageReactionState_fieldAccessorTable = new
@@ -16632,13 +16877,13 @@ public final class MessagingStateOuterClass {
     internal_static_com_elarian_hera_proto_ActiveMessagingChannelState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ActiveMessagingChannelState_descriptor,
-        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Messages", "ReplyToken", "Sessions", });
+        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Messages", "ReplyToken", "Sessions", "AllowedAt", });
     internal_static_com_elarian_hera_proto_InSessionMessagingChannelState_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_com_elarian_hera_proto_InSessionMessagingChannelState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_InSessionMessagingChannelState_descriptor,
-        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Messages", "ReplyToken", "Sessions", "SessionId", "StartedAt", "ExpiresAt", "AppIds", });
+        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Messages", "ReplyToken", "Sessions", "AllowedAt", "SessionId", "StartedAt", "ExpiresAt", "AppIds", });
     internal_static_com_elarian_hera_proto_MessagingChannelState_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_com_elarian_hera_proto_MessagingChannelState_fieldAccessorTable = new
