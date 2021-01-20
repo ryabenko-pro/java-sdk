@@ -896,15 +896,15 @@ public final class AppSocket {
     com.elarian.hera.proto.AppSocket.ReplyToMessageCommand getReplyToMessage();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
-     * @return Whether the messagingConsent field is set.
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
+     * @return Whether the updateMessagingConsent field is set.
      */
-    boolean hasMessagingConsent();
+    boolean hasUpdateMessagingConsent();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
-     * @return The messagingConsent.
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
+     * @return The updateMessagingConsent.
      */
-    com.elarian.hera.proto.AppSocket.MessagingConsentCommand getMessagingConsent();
+    com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand getUpdateMessagingConsent();
 
     /**
      * <code>.com.elarian.hera.proto.InitiatePaymentCommand initiate_payment = 21;</code>
@@ -918,26 +918,15 @@ public final class AppSocket {
     com.elarian.hera.proto.AppSocket.InitiatePaymentCommand getInitiatePayment();
 
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
-     * @return Whether the makeVoiceCall field is set.
+     * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
+     * @return Whether the customerActivity field is set.
      */
-    boolean hasMakeVoiceCall();
+    boolean hasCustomerActivity();
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
-     * @return The makeVoiceCall.
+     * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
+     * @return The customerActivity.
      */
-    com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand getMakeVoiceCall();
-
-    /**
-     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-     * @return Whether the webAction field is set.
-     */
-    boolean hasWebAction();
-    /**
-     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-     * @return The webAction.
-     */
-    com.elarian.hera.proto.AppSocket.WebActionCommand getWebAction();
+    com.elarian.hera.proto.AppSocket.CustomerActivityCommand getCustomerActivity();
 
     public com.elarian.hera.proto.AppSocket.AppToServerCommand.EntryCase getEntryCase();
   }
@@ -973,10 +962,9 @@ public final class AppSocket {
       SEND_MESSAGE(17),
       SEND_MESSAGE_TAG(18),
       REPLY_TO_MESSAGE(19),
-      MESSAGING_CONSENT(20),
+      UPDATE_MESSAGING_CONSENT(20),
       INITIATE_PAYMENT(21),
-      MAKE_VOICE_CALL(22),
-      WEB_ACTION(23),
+      CUSTOMER_ACTIVITY(22),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -1011,10 +999,9 @@ public final class AppSocket {
           case 17: return SEND_MESSAGE;
           case 18: return SEND_MESSAGE_TAG;
           case 19: return REPLY_TO_MESSAGE;
-          case 20: return MESSAGING_CONSENT;
+          case 20: return UPDATE_MESSAGING_CONSENT;
           case 21: return INITIATE_PAYMENT;
-          case 22: return MAKE_VOICE_CALL;
-          case 23: return WEB_ACTION;
+          case 22: return CUSTOMER_ACTIVITY;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -1986,40 +1973,40 @@ public final class AppSocket {
       }
     }
 
-    public static final int MESSAGING_CONSENT_FIELD_NUMBER = 20;
+    public static final int UPDATE_MESSAGING_CONSENT_FIELD_NUMBER = 20;
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
      */
     @java.lang.Override
-    public boolean hasMessagingConsent() {
+    public boolean hasUpdateMessagingConsent() {
       return entryCase_ == 20;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.MessagingConsentCommand getMessagingConsent() {
+    public com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand getUpdateMessagingConsent() {
       if (entryCase_ == 20) {
-         return (com.elarian.hera.proto.AppSocket.MessagingConsentCommand) entry_;
+         return (com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand) entry_;
       }
-      return com.elarian.hera.proto.AppSocket.MessagingConsentCommand.getDefaultInstance();
+      return com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
      */
-    private void setMessagingConsent(com.elarian.hera.proto.AppSocket.MessagingConsentCommand value) {
+    private void setUpdateMessagingConsent(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand value) {
       value.getClass();
   entry_ = value;
       entryCase_ = 20;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
      */
-    private void mergeMessagingConsent(com.elarian.hera.proto.AppSocket.MessagingConsentCommand value) {
+    private void mergeUpdateMessagingConsent(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand value) {
       value.getClass();
   if (entryCase_ == 20 &&
-          entry_ != com.elarian.hera.proto.AppSocket.MessagingConsentCommand.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.MessagingConsentCommand.newBuilder((com.elarian.hera.proto.AppSocket.MessagingConsentCommand) entry_)
+          entry_ != com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand.newBuilder((com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
@@ -2027,9 +2014,9 @@ public final class AppSocket {
       entryCase_ = 20;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
      */
-    private void clearMessagingConsent() {
+    private void clearUpdateMessagingConsent() {
       if (entryCase_ == 20) {
         entryCase_ = 0;
         entry_ = null;
@@ -2086,40 +2073,40 @@ public final class AppSocket {
       }
     }
 
-    public static final int MAKE_VOICE_CALL_FIELD_NUMBER = 22;
+    public static final int CUSTOMER_ACTIVITY_FIELD_NUMBER = 22;
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
      */
     @java.lang.Override
-    public boolean hasMakeVoiceCall() {
+    public boolean hasCustomerActivity() {
       return entryCase_ == 22;
     }
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand getMakeVoiceCall() {
+    public com.elarian.hera.proto.AppSocket.CustomerActivityCommand getCustomerActivity() {
       if (entryCase_ == 22) {
-         return (com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand) entry_;
+         return (com.elarian.hera.proto.AppSocket.CustomerActivityCommand) entry_;
       }
-      return com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand.getDefaultInstance();
+      return com.elarian.hera.proto.AppSocket.CustomerActivityCommand.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
      */
-    private void setMakeVoiceCall(com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand value) {
+    private void setCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityCommand value) {
       value.getClass();
   entry_ = value;
       entryCase_ = 22;
     }
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
      */
-    private void mergeMakeVoiceCall(com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand value) {
+    private void mergeCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityCommand value) {
       value.getClass();
   if (entryCase_ == 22 &&
-          entry_ != com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand.newBuilder((com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand) entry_)
+          entry_ != com.elarian.hera.proto.AppSocket.CustomerActivityCommand.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.CustomerActivityCommand.newBuilder((com.elarian.hera.proto.AppSocket.CustomerActivityCommand) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
@@ -2127,60 +2114,10 @@ public final class AppSocket {
       entryCase_ = 22;
     }
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
      */
-    private void clearMakeVoiceCall() {
+    private void clearCustomerActivity() {
       if (entryCase_ == 22) {
-        entryCase_ = 0;
-        entry_ = null;
-      }
-    }
-
-    public static final int WEB_ACTION_FIELD_NUMBER = 23;
-    /**
-     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-     */
-    @java.lang.Override
-    public boolean hasWebAction() {
-      return entryCase_ == 23;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.WebActionCommand getWebAction() {
-      if (entryCase_ == 23) {
-         return (com.elarian.hera.proto.AppSocket.WebActionCommand) entry_;
-      }
-      return com.elarian.hera.proto.AppSocket.WebActionCommand.getDefaultInstance();
-    }
-    /**
-     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-     */
-    private void setWebAction(com.elarian.hera.proto.AppSocket.WebActionCommand value) {
-      value.getClass();
-  entry_ = value;
-      entryCase_ = 23;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-     */
-    private void mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionCommand value) {
-      value.getClass();
-  if (entryCase_ == 23 &&
-          entry_ != com.elarian.hera.proto.AppSocket.WebActionCommand.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.WebActionCommand.newBuilder((com.elarian.hera.proto.AppSocket.WebActionCommand) entry_)
-            .mergeFrom(value).buildPartial();
-      } else {
-        entry_ = value;
-      }
-      entryCase_ = 23;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-     */
-    private void clearWebAction() {
-      if (entryCase_ == 23) {
         entryCase_ = 0;
         entry_ = null;
       }
@@ -3206,50 +3143,50 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
        */
       @java.lang.Override
-      public boolean hasMessagingConsent() {
-        return instance.hasMessagingConsent();
+      public boolean hasUpdateMessagingConsent() {
+        return instance.hasUpdateMessagingConsent();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.MessagingConsentCommand getMessagingConsent() {
-        return instance.getMessagingConsent();
+      public com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand getUpdateMessagingConsent() {
+        return instance.getUpdateMessagingConsent();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
        */
-      public Builder setMessagingConsent(com.elarian.hera.proto.AppSocket.MessagingConsentCommand value) {
+      public Builder setUpdateMessagingConsent(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand value) {
         copyOnWrite();
-        instance.setMessagingConsent(value);
+        instance.setUpdateMessagingConsent(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
        */
-      public Builder setMessagingConsent(
-          com.elarian.hera.proto.AppSocket.MessagingConsentCommand.Builder builderForValue) {
+      public Builder setUpdateMessagingConsent(
+          com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand.Builder builderForValue) {
         copyOnWrite();
-        instance.setMessagingConsent(builderForValue.build());
+        instance.setUpdateMessagingConsent(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
        */
-      public Builder mergeMessagingConsent(com.elarian.hera.proto.AppSocket.MessagingConsentCommand value) {
+      public Builder mergeUpdateMessagingConsent(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand value) {
         copyOnWrite();
-        instance.mergeMessagingConsent(value);
+        instance.mergeUpdateMessagingConsent(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentCommand messaging_consent = 20;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentCommand update_messaging_consent = 20;</code>
        */
-      public Builder clearMessagingConsent() {
+      public Builder clearUpdateMessagingConsent() {
         copyOnWrite();
-        instance.clearMessagingConsent();
+        instance.clearUpdateMessagingConsent();
         return this;
       }
 
@@ -3302,98 +3239,50 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
        */
       @java.lang.Override
-      public boolean hasMakeVoiceCall() {
-        return instance.hasMakeVoiceCall();
+      public boolean hasCustomerActivity() {
+        return instance.hasCustomerActivity();
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand getMakeVoiceCall() {
-        return instance.getMakeVoiceCall();
+      public com.elarian.hera.proto.AppSocket.CustomerActivityCommand getCustomerActivity() {
+        return instance.getCustomerActivity();
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
        */
-      public Builder setMakeVoiceCall(com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand value) {
+      public Builder setCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityCommand value) {
         copyOnWrite();
-        instance.setMakeVoiceCall(value);
+        instance.setCustomerActivity(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
        */
-      public Builder setMakeVoiceCall(
-          com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand.Builder builderForValue) {
+      public Builder setCustomerActivity(
+          com.elarian.hera.proto.AppSocket.CustomerActivityCommand.Builder builderForValue) {
         copyOnWrite();
-        instance.setMakeVoiceCall(builderForValue.build());
+        instance.setCustomerActivity(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
        */
-      public Builder mergeMakeVoiceCall(com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand value) {
+      public Builder mergeCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityCommand value) {
         copyOnWrite();
-        instance.mergeMakeVoiceCall(value);
+        instance.mergeCustomerActivity(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallCommand make_voice_call = 22;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityCommand customer_activity = 22;</code>
        */
-      public Builder clearMakeVoiceCall() {
+      public Builder clearCustomerActivity() {
         copyOnWrite();
-        instance.clearMakeVoiceCall();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-       */
-      @java.lang.Override
-      public boolean hasWebAction() {
-        return instance.hasWebAction();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.WebActionCommand getWebAction() {
-        return instance.getWebAction();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-       */
-      public Builder setWebAction(com.elarian.hera.proto.AppSocket.WebActionCommand value) {
-        copyOnWrite();
-        instance.setWebAction(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-       */
-      public Builder setWebAction(
-          com.elarian.hera.proto.AppSocket.WebActionCommand.Builder builderForValue) {
-        copyOnWrite();
-        instance.setWebAction(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-       */
-      public Builder mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionCommand value) {
-        copyOnWrite();
-        instance.mergeWebAction(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WebActionCommand web_action = 23;</code>
-       */
-      public Builder clearWebAction() {
-        copyOnWrite();
-        instance.clearWebAction();
+        instance.clearCustomerActivity();
         return this;
       }
 
@@ -3434,17 +3323,16 @@ public final class AppSocket {
               com.elarian.hera.proto.AppSocket.SendMessageCommand.class,
               com.elarian.hera.proto.AppSocket.SendMessageTagCommand.class,
               com.elarian.hera.proto.AppSocket.ReplyToMessageCommand.class,
-              com.elarian.hera.proto.AppSocket.MessagingConsentCommand.class,
+              com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand.class,
               com.elarian.hera.proto.AppSocket.InitiatePaymentCommand.class,
-              com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand.class,
-              com.elarian.hera.proto.AppSocket.WebActionCommand.class,
+              com.elarian.hera.proto.AppSocket.CustomerActivityCommand.class,
             };
             java.lang.String info =
-                "\u0000\u0017\u0001\u0000\u0001\u0017\u0017\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000\u0016\u0001\u0000\u0001\u0016\u0016\u0000\u0000\u0000\u0001<\u0000\u0002<" +
                 "\u0000\u0003<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000" +
                 "\t<\u0000\n<\u0000\u000b<\u0000\f<\u0000\r<\u0000\u000e<\u0000\u000f<\u0000\u0010" +
                 "<\u0000\u0011<\u0000\u0012<\u0000\u0013<\u0000\u0014<\u0000\u0015<\u0000\u0016<\u0000" +
-                "\u0017<\u0000";
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3570,15 +3458,15 @@ public final class AppSocket {
     com.elarian.hera.proto.AppSocket.SendMessageReply getSendMessage();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
-     * @return Whether the messagingConsent field is set.
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
+     * @return Whether the updateMessagingConsent field is set.
      */
-    boolean hasMessagingConsent();
+    boolean hasUpdateMessagingConsent();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
-     * @return The messagingConsent.
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
+     * @return The updateMessagingConsent.
      */
-    com.elarian.hera.proto.AppSocket.MessagingConsentReply getMessagingConsent();
+    com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply getUpdateMessagingConsent();
 
     /**
      * <code>.com.elarian.hera.proto.InitiatePaymentReply initiate_payment = 8;</code>
@@ -3592,37 +3480,26 @@ public final class AppSocket {
     com.elarian.hera.proto.AppSocket.InitiatePaymentReply getInitiatePayment();
 
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-     * @return Whether the makeVoiceCall field is set.
-     */
-    boolean hasMakeVoiceCall();
-    /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-     * @return The makeVoiceCall.
-     */
-    com.elarian.hera.proto.AppSocket.MakeVoiceCallReply getMakeVoiceCall();
-
-    /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      * @return Whether the tagCommand field is set.
      */
     boolean hasTagCommand();
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      * @return The tagCommand.
      */
     com.elarian.hera.proto.AppSocket.TagCommandReply getTagCommand();
 
     /**
-     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
-     * @return Whether the webAction field is set.
+     * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
+     * @return Whether the customerActivity field is set.
      */
-    boolean hasWebAction();
+    boolean hasCustomerActivity();
     /**
-     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
-     * @return The webAction.
+     * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
+     * @return The customerActivity.
      */
-    com.elarian.hera.proto.AppSocket.WebActionReply getWebAction();
+    com.elarian.hera.proto.AppSocket.CustomerActivityReply getCustomerActivity();
 
     public com.elarian.hera.proto.AppSocket.AppToServerCommandReply.EntryCase getEntryCase();
   }
@@ -3645,11 +3522,10 @@ public final class AppSocket {
       UPDATE_CUSTOMER_APP_DATA(4),
       LEASE_CUSTOMER_APP_DATA(5),
       SEND_MESSAGE(6),
-      MESSAGING_CONSENT(7),
+      UPDATE_MESSAGING_CONSENT(7),
       INITIATE_PAYMENT(8),
-      MAKE_VOICE_CALL(9),
-      TAG_COMMAND(10),
-      WEB_ACTION(11),
+      TAG_COMMAND(9),
+      CUSTOMER_ACTIVITY(10),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -3671,11 +3547,10 @@ public final class AppSocket {
           case 4: return UPDATE_CUSTOMER_APP_DATA;
           case 5: return LEASE_CUSTOMER_APP_DATA;
           case 6: return SEND_MESSAGE;
-          case 7: return MESSAGING_CONSENT;
+          case 7: return UPDATE_MESSAGING_CONSENT;
           case 8: return INITIATE_PAYMENT;
-          case 9: return MAKE_VOICE_CALL;
-          case 10: return TAG_COMMAND;
-          case 11: return WEB_ACTION;
+          case 9: return TAG_COMMAND;
+          case 10: return CUSTOMER_ACTIVITY;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -3997,40 +3872,40 @@ public final class AppSocket {
       }
     }
 
-    public static final int MESSAGING_CONSENT_FIELD_NUMBER = 7;
+    public static final int UPDATE_MESSAGING_CONSENT_FIELD_NUMBER = 7;
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
      */
     @java.lang.Override
-    public boolean hasMessagingConsent() {
+    public boolean hasUpdateMessagingConsent() {
       return entryCase_ == 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.MessagingConsentReply getMessagingConsent() {
+    public com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply getUpdateMessagingConsent() {
       if (entryCase_ == 7) {
-         return (com.elarian.hera.proto.AppSocket.MessagingConsentReply) entry_;
+         return (com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply) entry_;
       }
-      return com.elarian.hera.proto.AppSocket.MessagingConsentReply.getDefaultInstance();
+      return com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
      */
-    private void setMessagingConsent(com.elarian.hera.proto.AppSocket.MessagingConsentReply value) {
+    private void setUpdateMessagingConsent(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply value) {
       value.getClass();
   entry_ = value;
       entryCase_ = 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
      */
-    private void mergeMessagingConsent(com.elarian.hera.proto.AppSocket.MessagingConsentReply value) {
+    private void mergeUpdateMessagingConsent(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply value) {
       value.getClass();
   if (entryCase_ == 7 &&
-          entry_ != com.elarian.hera.proto.AppSocket.MessagingConsentReply.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.MessagingConsentReply.newBuilder((com.elarian.hera.proto.AppSocket.MessagingConsentReply) entry_)
+          entry_ != com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply.newBuilder((com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
@@ -4038,9 +3913,9 @@ public final class AppSocket {
       entryCase_ = 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+     * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
      */
-    private void clearMessagingConsent() {
+    private void clearUpdateMessagingConsent() {
       if (entryCase_ == 7) {
         entryCase_ = 0;
         entry_ = null;
@@ -4097,151 +3972,101 @@ public final class AppSocket {
       }
     }
 
-    public static final int MAKE_VOICE_CALL_FIELD_NUMBER = 9;
+    public static final int TAG_COMMAND_FIELD_NUMBER = 9;
     /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-     */
-    @java.lang.Override
-    public boolean hasMakeVoiceCall() {
-      return entryCase_ == 9;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.MakeVoiceCallReply getMakeVoiceCall() {
-      if (entryCase_ == 9) {
-         return (com.elarian.hera.proto.AppSocket.MakeVoiceCallReply) entry_;
-      }
-      return com.elarian.hera.proto.AppSocket.MakeVoiceCallReply.getDefaultInstance();
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-     */
-    private void setMakeVoiceCall(com.elarian.hera.proto.AppSocket.MakeVoiceCallReply value) {
-      value.getClass();
-  entry_ = value;
-      entryCase_ = 9;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-     */
-    private void mergeMakeVoiceCall(com.elarian.hera.proto.AppSocket.MakeVoiceCallReply value) {
-      value.getClass();
-  if (entryCase_ == 9 &&
-          entry_ != com.elarian.hera.proto.AppSocket.MakeVoiceCallReply.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.MakeVoiceCallReply.newBuilder((com.elarian.hera.proto.AppSocket.MakeVoiceCallReply) entry_)
-            .mergeFrom(value).buildPartial();
-      } else {
-        entry_ = value;
-      }
-      entryCase_ = 9;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-     */
-    private void clearMakeVoiceCall() {
-      if (entryCase_ == 9) {
-        entryCase_ = 0;
-        entry_ = null;
-      }
-    }
-
-    public static final int TAG_COMMAND_FIELD_NUMBER = 10;
-    /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      */
     @java.lang.Override
     public boolean hasTagCommand() {
-      return entryCase_ == 10;
+      return entryCase_ == 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.AppSocket.TagCommandReply getTagCommand() {
-      if (entryCase_ == 10) {
+      if (entryCase_ == 9) {
          return (com.elarian.hera.proto.AppSocket.TagCommandReply) entry_;
       }
       return com.elarian.hera.proto.AppSocket.TagCommandReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      */
     private void setTagCommand(com.elarian.hera.proto.AppSocket.TagCommandReply value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 10;
+      entryCase_ = 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      */
     private void mergeTagCommand(com.elarian.hera.proto.AppSocket.TagCommandReply value) {
       value.getClass();
-  if (entryCase_ == 10 &&
+  if (entryCase_ == 9 &&
           entry_ != com.elarian.hera.proto.AppSocket.TagCommandReply.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.AppSocket.TagCommandReply.newBuilder((com.elarian.hera.proto.AppSocket.TagCommandReply) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 10;
+      entryCase_ = 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+     * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
      */
     private void clearTagCommand() {
-      if (entryCase_ == 10) {
+      if (entryCase_ == 9) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int WEB_ACTION_FIELD_NUMBER = 11;
+    public static final int CUSTOMER_ACTIVITY_FIELD_NUMBER = 10;
     /**
-     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
      */
     @java.lang.Override
-    public boolean hasWebAction() {
-      return entryCase_ == 11;
+    public boolean hasCustomerActivity() {
+      return entryCase_ == 10;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.WebActionReply getWebAction() {
-      if (entryCase_ == 11) {
-         return (com.elarian.hera.proto.AppSocket.WebActionReply) entry_;
+    public com.elarian.hera.proto.AppSocket.CustomerActivityReply getCustomerActivity() {
+      if (entryCase_ == 10) {
+         return (com.elarian.hera.proto.AppSocket.CustomerActivityReply) entry_;
       }
-      return com.elarian.hera.proto.AppSocket.WebActionReply.getDefaultInstance();
+      return com.elarian.hera.proto.AppSocket.CustomerActivityReply.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
      */
-    private void setWebAction(com.elarian.hera.proto.AppSocket.WebActionReply value) {
+    private void setCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityReply value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 11;
+      entryCase_ = 10;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
      */
-    private void mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionReply value) {
+    private void mergeCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityReply value) {
       value.getClass();
-  if (entryCase_ == 11 &&
-          entry_ != com.elarian.hera.proto.AppSocket.WebActionReply.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.WebActionReply.newBuilder((com.elarian.hera.proto.AppSocket.WebActionReply) entry_)
+  if (entryCase_ == 10 &&
+          entry_ != com.elarian.hera.proto.AppSocket.CustomerActivityReply.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.CustomerActivityReply.newBuilder((com.elarian.hera.proto.AppSocket.CustomerActivityReply) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 11;
+      entryCase_ = 10;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
      */
-    private void clearWebAction() {
-      if (entryCase_ == 11) {
+    private void clearCustomerActivity() {
+      if (entryCase_ == 10) {
         entryCase_ = 0;
         entry_ = null;
       }
@@ -4643,50 +4468,50 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
        */
       @java.lang.Override
-      public boolean hasMessagingConsent() {
-        return instance.hasMessagingConsent();
+      public boolean hasUpdateMessagingConsent() {
+        return instance.hasUpdateMessagingConsent();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.MessagingConsentReply getMessagingConsent() {
-        return instance.getMessagingConsent();
+      public com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply getUpdateMessagingConsent() {
+        return instance.getUpdateMessagingConsent();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
        */
-      public Builder setMessagingConsent(com.elarian.hera.proto.AppSocket.MessagingConsentReply value) {
+      public Builder setUpdateMessagingConsent(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply value) {
         copyOnWrite();
-        instance.setMessagingConsent(value);
+        instance.setUpdateMessagingConsent(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
        */
-      public Builder setMessagingConsent(
-          com.elarian.hera.proto.AppSocket.MessagingConsentReply.Builder builderForValue) {
+      public Builder setUpdateMessagingConsent(
+          com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply.Builder builderForValue) {
         copyOnWrite();
-        instance.setMessagingConsent(builderForValue.build());
+        instance.setUpdateMessagingConsent(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
        */
-      public Builder mergeMessagingConsent(com.elarian.hera.proto.AppSocket.MessagingConsentReply value) {
+      public Builder mergeUpdateMessagingConsent(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply value) {
         copyOnWrite();
-        instance.mergeMessagingConsent(value);
+        instance.mergeUpdateMessagingConsent(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentReply messaging_consent = 7;</code>
+       * <code>.com.elarian.hera.proto.UpdateMessagingConsentReply update_messaging_consent = 7;</code>
        */
-      public Builder clearMessagingConsent() {
+      public Builder clearUpdateMessagingConsent() {
         copyOnWrite();
-        instance.clearMessagingConsent();
+        instance.clearUpdateMessagingConsent();
         return this;
       }
 
@@ -4739,69 +4564,21 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-       */
-      @java.lang.Override
-      public boolean hasMakeVoiceCall() {
-        return instance.hasMakeVoiceCall();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.MakeVoiceCallReply getMakeVoiceCall() {
-        return instance.getMakeVoiceCall();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-       */
-      public Builder setMakeVoiceCall(com.elarian.hera.proto.AppSocket.MakeVoiceCallReply value) {
-        copyOnWrite();
-        instance.setMakeVoiceCall(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-       */
-      public Builder setMakeVoiceCall(
-          com.elarian.hera.proto.AppSocket.MakeVoiceCallReply.Builder builderForValue) {
-        copyOnWrite();
-        instance.setMakeVoiceCall(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-       */
-      public Builder mergeMakeVoiceCall(com.elarian.hera.proto.AppSocket.MakeVoiceCallReply value) {
-        copyOnWrite();
-        instance.mergeMakeVoiceCall(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MakeVoiceCallReply make_voice_call = 9;</code>
-       */
-      public Builder clearMakeVoiceCall() {
-        copyOnWrite();
-        instance.clearMakeVoiceCall();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       @java.lang.Override
       public boolean hasTagCommand() {
         return instance.hasTagCommand();
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.AppSocket.TagCommandReply getTagCommand() {
         return instance.getTagCommand();
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public Builder setTagCommand(com.elarian.hera.proto.AppSocket.TagCommandReply value) {
         copyOnWrite();
@@ -4809,7 +4586,7 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public Builder setTagCommand(
           com.elarian.hera.proto.AppSocket.TagCommandReply.Builder builderForValue) {
@@ -4818,7 +4595,7 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public Builder mergeTagCommand(com.elarian.hera.proto.AppSocket.TagCommandReply value) {
         copyOnWrite();
@@ -4826,7 +4603,7 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 10;</code>
+       * <code>.com.elarian.hera.proto.TagCommandReply tag_command = 9;</code>
        */
       public Builder clearTagCommand() {
         copyOnWrite();
@@ -4835,50 +4612,50 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
        */
       @java.lang.Override
-      public boolean hasWebAction() {
-        return instance.hasWebAction();
+      public boolean hasCustomerActivity() {
+        return instance.hasCustomerActivity();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.WebActionReply getWebAction() {
-        return instance.getWebAction();
+      public com.elarian.hera.proto.AppSocket.CustomerActivityReply getCustomerActivity() {
+        return instance.getCustomerActivity();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
        */
-      public Builder setWebAction(com.elarian.hera.proto.AppSocket.WebActionReply value) {
+      public Builder setCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityReply value) {
         copyOnWrite();
-        instance.setWebAction(value);
+        instance.setCustomerActivity(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
        */
-      public Builder setWebAction(
-          com.elarian.hera.proto.AppSocket.WebActionReply.Builder builderForValue) {
+      public Builder setCustomerActivity(
+          com.elarian.hera.proto.AppSocket.CustomerActivityReply.Builder builderForValue) {
         copyOnWrite();
-        instance.setWebAction(builderForValue.build());
+        instance.setCustomerActivity(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
        */
-      public Builder mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionReply value) {
+      public Builder mergeCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityReply value) {
         copyOnWrite();
-        instance.mergeWebAction(value);
+        instance.mergeCustomerActivity(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionReply web_action = 11;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityReply customer_activity = 10;</code>
        */
-      public Builder clearWebAction() {
+      public Builder clearCustomerActivity() {
         copyOnWrite();
-        instance.clearWebAction();
+        instance.clearCustomerActivity();
         return this;
       }
 
@@ -4906,16 +4683,15 @@ public final class AppSocket {
               com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataReply.class,
               com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataReply.class,
               com.elarian.hera.proto.AppSocket.SendMessageReply.class,
-              com.elarian.hera.proto.AppSocket.MessagingConsentReply.class,
+              com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply.class,
               com.elarian.hera.proto.AppSocket.InitiatePaymentReply.class,
-              com.elarian.hera.proto.AppSocket.MakeVoiceCallReply.class,
               com.elarian.hera.proto.AppSocket.TagCommandReply.class,
-              com.elarian.hera.proto.AppSocket.WebActionReply.class,
+              com.elarian.hera.proto.AppSocket.CustomerActivityReply.class,
             };
             java.lang.String info =
-                "\u0000\u000b\u0001\u0000\u0001\u000b\u000b\u0000\u0000\u0000\u0001<\u0000\u0002<" +
-                "\u0000\u0003<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000" +
-                "\t<\u0000\n<\u0000\u000b<\u0000";
+                "\u0000\n\u0001\u0000\u0001\n\n\u0000\u0000\u0000\u0001<\u0000\u0002<\u0000\u0003" +
+                "<\u0000\u0004<\u0000\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000\t<\u0000\n<" +
+                "\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -5573,7 +5349,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -5584,7 +5360,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     public com.elarian.hera.proto.AppSocket.GetCustomerStateCommand.CustomerCase getCustomerCase();
   }
@@ -5711,16 +5487,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -5728,11 +5504,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -5761,16 +5537,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -5778,11 +5554,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -5966,13 +5742,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -5981,7 +5757,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -5989,7 +5765,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -6014,13 +5790,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -6029,7 +5805,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -6037,7 +5813,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -6069,8 +5845,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
             };
             java.lang.String info =
                 "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
@@ -6613,7 +6389,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
      * @return The identityState.
      */
-    com.elarian.hera.proto.Identity.IdentityState getIdentityState();
+    com.elarian.hera.proto.IdentityStateOuterClass.IdentityState getIdentityState();
 
     /**
      * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
@@ -6624,51 +6400,29 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
      * @return The messagingState.
      */
-    com.elarian.hera.proto.Messaging.MessagingState getMessagingState();
+    com.elarian.hera.proto.MessagingStateOuterClass.MessagingState getMessagingState();
 
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-     * @return Whether the ussdState field is set.
-     */
-    boolean hasUssdState();
-    /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-     * @return The ussdState.
-     */
-    com.elarian.hera.proto.Ussd.UssdState getUssdState();
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-     * @return Whether the voiceState field is set.
-     */
-    boolean hasVoiceState();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-     * @return The voiceState.
-     */
-    com.elarian.hera.proto.Voice.VoiceState getVoiceState();
-
-    /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
      * @return Whether the paymentState field is set.
      */
     boolean hasPaymentState();
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
      * @return The paymentState.
      */
-    com.elarian.hera.proto.Payment.PaymentState getPaymentState();
+    com.elarian.hera.proto.PaymentStateOuterClass.PaymentState getPaymentState();
 
     /**
-     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
-     * @return Whether the webState field is set.
+     * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
+     * @return Whether the activityState field is set.
      */
-    boolean hasWebState();
+    boolean hasActivityState();
     /**
-     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
-     * @return The webState.
+     * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
+     * @return The activityState.
      */
-    com.elarian.hera.proto.Web.WebState getWebState();
+    com.elarian.hera.proto.ActivityStateOuterClass.ActivityState getActivityState();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.CustomerStateReplyData}
@@ -6729,7 +6483,7 @@ public final class AppSocket {
     }
 
     public static final int IDENTITY_STATE_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Identity.IdentityState identityState_;
+    private com.elarian.hera.proto.IdentityStateOuterClass.IdentityState identityState_;
     /**
      * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
      */
@@ -6741,13 +6495,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Identity.IdentityState getIdentityState() {
-      return identityState_ == null ? com.elarian.hera.proto.Identity.IdentityState.getDefaultInstance() : identityState_;
+    public com.elarian.hera.proto.IdentityStateOuterClass.IdentityState getIdentityState() {
+      return identityState_ == null ? com.elarian.hera.proto.IdentityStateOuterClass.IdentityState.getDefaultInstance() : identityState_;
     }
     /**
      * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
      */
-    private void setIdentityState(com.elarian.hera.proto.Identity.IdentityState value) {
+    private void setIdentityState(com.elarian.hera.proto.IdentityStateOuterClass.IdentityState value) {
       value.getClass();
   identityState_ = value;
       
@@ -6756,12 +6510,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeIdentityState(com.elarian.hera.proto.Identity.IdentityState value) {
+    private void mergeIdentityState(com.elarian.hera.proto.IdentityStateOuterClass.IdentityState value) {
       value.getClass();
   if (identityState_ != null &&
-          identityState_ != com.elarian.hera.proto.Identity.IdentityState.getDefaultInstance()) {
+          identityState_ != com.elarian.hera.proto.IdentityStateOuterClass.IdentityState.getDefaultInstance()) {
         identityState_ =
-          com.elarian.hera.proto.Identity.IdentityState.newBuilder(identityState_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.IdentityStateOuterClass.IdentityState.newBuilder(identityState_).mergeFrom(value).buildPartial();
       } else {
         identityState_ = value;
       }
@@ -6775,7 +6529,7 @@ public final class AppSocket {
     }
 
     public static final int MESSAGING_STATE_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Messaging.MessagingState messagingState_;
+    private com.elarian.hera.proto.MessagingStateOuterClass.MessagingState messagingState_;
     /**
      * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
      */
@@ -6787,13 +6541,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Messaging.MessagingState getMessagingState() {
-      return messagingState_ == null ? com.elarian.hera.proto.Messaging.MessagingState.getDefaultInstance() : messagingState_;
+    public com.elarian.hera.proto.MessagingStateOuterClass.MessagingState getMessagingState() {
+      return messagingState_ == null ? com.elarian.hera.proto.MessagingStateOuterClass.MessagingState.getDefaultInstance() : messagingState_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
      */
-    private void setMessagingState(com.elarian.hera.proto.Messaging.MessagingState value) {
+    private void setMessagingState(com.elarian.hera.proto.MessagingStateOuterClass.MessagingState value) {
       value.getClass();
   messagingState_ = value;
       
@@ -6802,12 +6556,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeMessagingState(com.elarian.hera.proto.Messaging.MessagingState value) {
+    private void mergeMessagingState(com.elarian.hera.proto.MessagingStateOuterClass.MessagingState value) {
       value.getClass();
   if (messagingState_ != null &&
-          messagingState_ != com.elarian.hera.proto.Messaging.MessagingState.getDefaultInstance()) {
+          messagingState_ != com.elarian.hera.proto.MessagingStateOuterClass.MessagingState.getDefaultInstance()) {
         messagingState_ =
-          com.elarian.hera.proto.Messaging.MessagingState.newBuilder(messagingState_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.MessagingStateOuterClass.MessagingState.newBuilder(messagingState_).mergeFrom(value).buildPartial();
       } else {
         messagingState_ = value;
       }
@@ -6820,187 +6574,95 @@ public final class AppSocket {
       
     }
 
-    public static final int USSD_STATE_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Ussd.UssdState ussdState_;
+    public static final int PAYMENT_STATE_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.PaymentStateOuterClass.PaymentState paymentState_;
     /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-     */
-    @java.lang.Override
-    public boolean hasUssdState() {
-      return ussdState_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Ussd.UssdState getUssdState() {
-      return ussdState_ == null ? com.elarian.hera.proto.Ussd.UssdState.getDefaultInstance() : ussdState_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-     */
-    private void setUssdState(com.elarian.hera.proto.Ussd.UssdState value) {
-      value.getClass();
-  ussdState_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeUssdState(com.elarian.hera.proto.Ussd.UssdState value) {
-      value.getClass();
-  if (ussdState_ != null &&
-          ussdState_ != com.elarian.hera.proto.Ussd.UssdState.getDefaultInstance()) {
-        ussdState_ =
-          com.elarian.hera.proto.Ussd.UssdState.newBuilder(ussdState_).mergeFrom(value).buildPartial();
-      } else {
-        ussdState_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-     */
-    private void clearUssdState() {  ussdState_ = null;
-      
-    }
-
-    public static final int VOICE_STATE_FIELD_NUMBER = 5;
-    private com.elarian.hera.proto.Voice.VoiceState voiceState_;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-     */
-    @java.lang.Override
-    public boolean hasVoiceState() {
-      return voiceState_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Voice.VoiceState getVoiceState() {
-      return voiceState_ == null ? com.elarian.hera.proto.Voice.VoiceState.getDefaultInstance() : voiceState_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-     */
-    private void setVoiceState(com.elarian.hera.proto.Voice.VoiceState value) {
-      value.getClass();
-  voiceState_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeVoiceState(com.elarian.hera.proto.Voice.VoiceState value) {
-      value.getClass();
-  if (voiceState_ != null &&
-          voiceState_ != com.elarian.hera.proto.Voice.VoiceState.getDefaultInstance()) {
-        voiceState_ =
-          com.elarian.hera.proto.Voice.VoiceState.newBuilder(voiceState_).mergeFrom(value).buildPartial();
-      } else {
-        voiceState_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-     */
-    private void clearVoiceState() {  voiceState_ = null;
-      
-    }
-
-    public static final int PAYMENT_STATE_FIELD_NUMBER = 6;
-    private com.elarian.hera.proto.Payment.PaymentState paymentState_;
-    /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
      */
     @java.lang.Override
     public boolean hasPaymentState() {
       return paymentState_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Payment.PaymentState getPaymentState() {
-      return paymentState_ == null ? com.elarian.hera.proto.Payment.PaymentState.getDefaultInstance() : paymentState_;
+    public com.elarian.hera.proto.PaymentStateOuterClass.PaymentState getPaymentState() {
+      return paymentState_ == null ? com.elarian.hera.proto.PaymentStateOuterClass.PaymentState.getDefaultInstance() : paymentState_;
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
      */
-    private void setPaymentState(com.elarian.hera.proto.Payment.PaymentState value) {
+    private void setPaymentState(com.elarian.hera.proto.PaymentStateOuterClass.PaymentState value) {
       value.getClass();
   paymentState_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergePaymentState(com.elarian.hera.proto.Payment.PaymentState value) {
+    private void mergePaymentState(com.elarian.hera.proto.PaymentStateOuterClass.PaymentState value) {
       value.getClass();
   if (paymentState_ != null &&
-          paymentState_ != com.elarian.hera.proto.Payment.PaymentState.getDefaultInstance()) {
+          paymentState_ != com.elarian.hera.proto.PaymentStateOuterClass.PaymentState.getDefaultInstance()) {
         paymentState_ =
-          com.elarian.hera.proto.Payment.PaymentState.newBuilder(paymentState_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.PaymentStateOuterClass.PaymentState.newBuilder(paymentState_).mergeFrom(value).buildPartial();
       } else {
         paymentState_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+     * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
      */
     private void clearPaymentState() {  paymentState_ = null;
       
     }
 
-    public static final int WEB_STATE_FIELD_NUMBER = 7;
-    private com.elarian.hera.proto.Web.WebState webState_;
+    public static final int ACTIVITY_STATE_FIELD_NUMBER = 5;
+    private com.elarian.hera.proto.ActivityStateOuterClass.ActivityState activityState_;
     /**
-     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
      */
     @java.lang.Override
-    public boolean hasWebState() {
-      return webState_ != null;
+    public boolean hasActivityState() {
+      return activityState_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Web.WebState getWebState() {
-      return webState_ == null ? com.elarian.hera.proto.Web.WebState.getDefaultInstance() : webState_;
+    public com.elarian.hera.proto.ActivityStateOuterClass.ActivityState getActivityState() {
+      return activityState_ == null ? com.elarian.hera.proto.ActivityStateOuterClass.ActivityState.getDefaultInstance() : activityState_;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
      */
-    private void setWebState(com.elarian.hera.proto.Web.WebState value) {
+    private void setActivityState(com.elarian.hera.proto.ActivityStateOuterClass.ActivityState value) {
       value.getClass();
-  webState_ = value;
+  activityState_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeWebState(com.elarian.hera.proto.Web.WebState value) {
+    private void mergeActivityState(com.elarian.hera.proto.ActivityStateOuterClass.ActivityState value) {
       value.getClass();
-  if (webState_ != null &&
-          webState_ != com.elarian.hera.proto.Web.WebState.getDefaultInstance()) {
-        webState_ =
-          com.elarian.hera.proto.Web.WebState.newBuilder(webState_).mergeFrom(value).buildPartial();
+  if (activityState_ != null &&
+          activityState_ != com.elarian.hera.proto.ActivityStateOuterClass.ActivityState.getDefaultInstance()) {
+        activityState_ =
+          com.elarian.hera.proto.ActivityStateOuterClass.ActivityState.newBuilder(activityState_).mergeFrom(value).buildPartial();
       } else {
-        webState_ = value;
+        activityState_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+     * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
      */
-    private void clearWebState() {  webState_ = null;
+    private void clearActivityState() {  activityState_ = null;
       
     }
 
@@ -7159,13 +6821,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Identity.IdentityState getIdentityState() {
+      public com.elarian.hera.proto.IdentityStateOuterClass.IdentityState getIdentityState() {
         return instance.getIdentityState();
       }
       /**
        * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
        */
-      public Builder setIdentityState(com.elarian.hera.proto.Identity.IdentityState value) {
+      public Builder setIdentityState(com.elarian.hera.proto.IdentityStateOuterClass.IdentityState value) {
         copyOnWrite();
         instance.setIdentityState(value);
         return this;
@@ -7174,7 +6836,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
        */
       public Builder setIdentityState(
-          com.elarian.hera.proto.Identity.IdentityState.Builder builderForValue) {
+          com.elarian.hera.proto.IdentityStateOuterClass.IdentityState.Builder builderForValue) {
         copyOnWrite();
         instance.setIdentityState(builderForValue.build());
         return this;
@@ -7182,7 +6844,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IdentityState identity_state = 2;</code>
        */
-      public Builder mergeIdentityState(com.elarian.hera.proto.Identity.IdentityState value) {
+      public Builder mergeIdentityState(com.elarian.hera.proto.IdentityStateOuterClass.IdentityState value) {
         copyOnWrite();
         instance.mergeIdentityState(value);
         return this;
@@ -7206,13 +6868,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Messaging.MessagingState getMessagingState() {
+      public com.elarian.hera.proto.MessagingStateOuterClass.MessagingState getMessagingState() {
         return instance.getMessagingState();
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
        */
-      public Builder setMessagingState(com.elarian.hera.proto.Messaging.MessagingState value) {
+      public Builder setMessagingState(com.elarian.hera.proto.MessagingStateOuterClass.MessagingState value) {
         copyOnWrite();
         instance.setMessagingState(value);
         return this;
@@ -7221,7 +6883,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
        */
       public Builder setMessagingState(
-          com.elarian.hera.proto.Messaging.MessagingState.Builder builderForValue) {
+          com.elarian.hera.proto.MessagingStateOuterClass.MessagingState.Builder builderForValue) {
         copyOnWrite();
         instance.setMessagingState(builderForValue.build());
         return this;
@@ -7229,7 +6891,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.MessagingState messaging_state = 3;</code>
        */
-      public Builder mergeMessagingState(com.elarian.hera.proto.Messaging.MessagingState value) {
+      public Builder mergeMessagingState(com.elarian.hera.proto.MessagingStateOuterClass.MessagingState value) {
         copyOnWrite();
         instance.mergeMessagingState(value);
         return this;
@@ -7243,140 +6905,46 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-       */
-      @java.lang.Override
-      public boolean hasUssdState() {
-        return instance.hasUssdState();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Ussd.UssdState getUssdState() {
-        return instance.getUssdState();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-       */
-      public Builder setUssdState(com.elarian.hera.proto.Ussd.UssdState value) {
-        copyOnWrite();
-        instance.setUssdState(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-       */
-      public Builder setUssdState(
-          com.elarian.hera.proto.Ussd.UssdState.Builder builderForValue) {
-        copyOnWrite();
-        instance.setUssdState(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-       */
-      public Builder mergeUssdState(com.elarian.hera.proto.Ussd.UssdState value) {
-        copyOnWrite();
-        instance.mergeUssdState(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdState ussd_state = 4;</code>
-       */
-      public Builder clearUssdState() {  copyOnWrite();
-        instance.clearUssdState();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-       */
-      @java.lang.Override
-      public boolean hasVoiceState() {
-        return instance.hasVoiceState();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Voice.VoiceState getVoiceState() {
-        return instance.getVoiceState();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-       */
-      public Builder setVoiceState(com.elarian.hera.proto.Voice.VoiceState value) {
-        copyOnWrite();
-        instance.setVoiceState(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-       */
-      public Builder setVoiceState(
-          com.elarian.hera.proto.Voice.VoiceState.Builder builderForValue) {
-        copyOnWrite();
-        instance.setVoiceState(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-       */
-      public Builder mergeVoiceState(com.elarian.hera.proto.Voice.VoiceState value) {
-        copyOnWrite();
-        instance.mergeVoiceState(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceState voice_state = 5;</code>
-       */
-      public Builder clearVoiceState() {  copyOnWrite();
-        instance.clearVoiceState();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
        */
       @java.lang.Override
       public boolean hasPaymentState() {
         return instance.hasPaymentState();
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Payment.PaymentState getPaymentState() {
+      public com.elarian.hera.proto.PaymentStateOuterClass.PaymentState getPaymentState() {
         return instance.getPaymentState();
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
        */
-      public Builder setPaymentState(com.elarian.hera.proto.Payment.PaymentState value) {
+      public Builder setPaymentState(com.elarian.hera.proto.PaymentStateOuterClass.PaymentState value) {
         copyOnWrite();
         instance.setPaymentState(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
        */
       public Builder setPaymentState(
-          com.elarian.hera.proto.Payment.PaymentState.Builder builderForValue) {
+          com.elarian.hera.proto.PaymentStateOuterClass.PaymentState.Builder builderForValue) {
         copyOnWrite();
         instance.setPaymentState(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
        */
-      public Builder mergePaymentState(com.elarian.hera.proto.Payment.PaymentState value) {
+      public Builder mergePaymentState(com.elarian.hera.proto.PaymentStateOuterClass.PaymentState value) {
         copyOnWrite();
         instance.mergePaymentState(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.PaymentState payment_state = 6;</code>
+       * <code>.com.elarian.hera.proto.PaymentState payment_state = 4;</code>
        */
       public Builder clearPaymentState() {  copyOnWrite();
         instance.clearPaymentState();
@@ -7384,49 +6952,49 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
        */
       @java.lang.Override
-      public boolean hasWebState() {
-        return instance.hasWebState();
+      public boolean hasActivityState() {
+        return instance.hasActivityState();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Web.WebState getWebState() {
-        return instance.getWebState();
+      public com.elarian.hera.proto.ActivityStateOuterClass.ActivityState getActivityState() {
+        return instance.getActivityState();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
        */
-      public Builder setWebState(com.elarian.hera.proto.Web.WebState value) {
+      public Builder setActivityState(com.elarian.hera.proto.ActivityStateOuterClass.ActivityState value) {
         copyOnWrite();
-        instance.setWebState(value);
+        instance.setActivityState(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
        */
-      public Builder setWebState(
-          com.elarian.hera.proto.Web.WebState.Builder builderForValue) {
+      public Builder setActivityState(
+          com.elarian.hera.proto.ActivityStateOuterClass.ActivityState.Builder builderForValue) {
         copyOnWrite();
-        instance.setWebState(builderForValue.build());
+        instance.setActivityState(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
        */
-      public Builder mergeWebState(com.elarian.hera.proto.Web.WebState value) {
+      public Builder mergeActivityState(com.elarian.hera.proto.ActivityStateOuterClass.ActivityState value) {
         copyOnWrite();
-        instance.mergeWebState(value);
+        instance.mergeActivityState(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebState web_state = 7;</code>
+       * <code>.com.elarian.hera.proto.ActivityState activity_state = 5;</code>
        */
-      public Builder clearWebState() {  copyOnWrite();
-        instance.clearWebState();
+      public Builder clearActivityState() {  copyOnWrite();
+        instance.clearActivityState();
         return this;
       }
 
@@ -7449,14 +7017,12 @@ public final class AppSocket {
               "customerId_",
               "identityState_",
               "messagingState_",
-              "ussdState_",
-              "voiceState_",
               "paymentState_",
-              "webState_",
+              "activityState_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u0004\t\u0005\t\u0006\t\u0007\t";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\t\u0005\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -7548,7 +7114,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber other_customer_number = 3;</code>
      * @return The otherCustomerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getOtherCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getOtherCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
@@ -7559,7 +7125,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
      * @return The otherSecondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getOtherSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getOtherSecondaryId();
 
     public com.elarian.hera.proto.AppSocket.AdoptCustomerStateCommand.OtherCustomerCase getOtherCustomerCase();
   }
@@ -7734,16 +7300,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber other_customer_number = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getOtherCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getOtherCustomerNumber() {
       if (otherCustomerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) otherCustomer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) otherCustomer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber other_customer_number = 3;</code>
      */
-    private void setOtherCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setOtherCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   otherCustomer_ = value;
       otherCustomerCase_ = 3;
@@ -7751,11 +7317,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber other_customer_number = 3;</code>
      */
-    private void mergeOtherCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeOtherCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (otherCustomerCase_ == 3 &&
-          otherCustomer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        otherCustomer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) otherCustomer_)
+          otherCustomer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        otherCustomer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) otherCustomer_)
             .mergeFrom(value).buildPartial();
       } else {
         otherCustomer_ = value;
@@ -7784,16 +7350,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getOtherSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getOtherSecondaryId() {
       if (otherCustomerCase_ == 4) {
-         return (com.elarian.hera.proto.Common.IndexMapping) otherCustomer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) otherCustomer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
      */
-    private void setOtherSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setOtherSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   otherCustomer_ = value;
       otherCustomerCase_ = 4;
@@ -7801,11 +7367,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
      */
-    private void mergeOtherSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeOtherSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (otherCustomerCase_ == 4 &&
-          otherCustomer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        otherCustomer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) otherCustomer_)
+          otherCustomer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        otherCustomer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) otherCustomer_)
             .mergeFrom(value).buildPartial();
       } else {
         otherCustomer_ = value;
@@ -8038,13 +7604,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber other_customer_number = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getOtherCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getOtherCustomerNumber() {
         return instance.getOtherCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber other_customer_number = 3;</code>
        */
-      public Builder setOtherCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setOtherCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setOtherCustomerNumber(value);
         return this;
@@ -8053,7 +7619,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber other_customer_number = 3;</code>
        */
       public Builder setOtherCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setOtherCustomerNumber(builderForValue.build());
         return this;
@@ -8061,7 +7627,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber other_customer_number = 3;</code>
        */
-      public Builder mergeOtherCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeOtherCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeOtherCustomerNumber(value);
         return this;
@@ -8086,13 +7652,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getOtherSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getOtherSecondaryId() {
         return instance.getOtherSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
        */
-      public Builder setOtherSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setOtherSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setOtherSecondaryId(value);
         return this;
@@ -8101,7 +7667,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
        */
       public Builder setOtherSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setOtherSecondaryId(builderForValue.build());
         return this;
@@ -8109,7 +7675,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping other_secondary_id = 4;</code>
        */
-      public Builder mergeOtherSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeOtherSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeOtherSecondaryId(value);
         return this;
@@ -8142,8 +7708,8 @@ public final class AppSocket {
               "otherCustomer_",
               "otherCustomerCase_",
               "customerId_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
             };
             java.lang.String info =
                 "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u023b" +
@@ -8227,7 +7793,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -8238,7 +7804,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
@@ -8249,7 +7815,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
      * @return The reminder.
      */
-    com.elarian.hera.proto.Common.CustomerReminder getReminder();
+    com.elarian.hera.proto.AppModel.CustomerReminder getReminder();
 
     public com.elarian.hera.proto.AppSocket.AddCustomerReminderCommand.CustomerCase getCustomerCase();
   }
@@ -8376,16 +7942,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -8393,11 +7959,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -8426,16 +7992,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -8443,11 +8009,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -8465,7 +8031,7 @@ public final class AppSocket {
     }
 
     public static final int REMINDER_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.CustomerReminder reminder_;
+    private com.elarian.hera.proto.AppModel.CustomerReminder reminder_;
     /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
      */
@@ -8477,13 +8043,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerReminder getReminder() {
-      return reminder_ == null ? com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance() : reminder_;
+    public com.elarian.hera.proto.AppModel.CustomerReminder getReminder() {
+      return reminder_ == null ? com.elarian.hera.proto.AppModel.CustomerReminder.getDefaultInstance() : reminder_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
      */
-    private void setReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+    private void setReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
       value.getClass();
   reminder_ = value;
       
@@ -8492,12 +8058,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+    private void mergeReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
       value.getClass();
   if (reminder_ != null &&
-          reminder_ != com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance()) {
+          reminder_ != com.elarian.hera.proto.AppModel.CustomerReminder.getDefaultInstance()) {
         reminder_ =
-          com.elarian.hera.proto.Common.CustomerReminder.newBuilder(reminder_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.AppModel.CustomerReminder.newBuilder(reminder_).mergeFrom(value).buildPartial();
       } else {
         reminder_ = value;
       }
@@ -8677,13 +8243,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -8692,7 +8258,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -8700,7 +8266,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -8725,13 +8291,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -8740,7 +8306,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -8748,7 +8314,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -8773,13 +8339,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerReminder getReminder() {
+      public com.elarian.hera.proto.AppModel.CustomerReminder getReminder() {
         return instance.getReminder();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
        */
-      public Builder setReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+      public Builder setReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
         copyOnWrite();
         instance.setReminder(value);
         return this;
@@ -8788,7 +8354,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
        */
       public Builder setReminder(
-          com.elarian.hera.proto.Common.CustomerReminder.Builder builderForValue) {
+          com.elarian.hera.proto.AppModel.CustomerReminder.Builder builderForValue) {
         copyOnWrite();
         instance.setReminder(builderForValue.build());
         return this;
@@ -8796,7 +8362,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 4;</code>
        */
-      public Builder mergeReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+      public Builder mergeReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
         copyOnWrite();
         instance.mergeReminder(value);
         return this;
@@ -8827,8 +8393,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "reminder_",
             };
             java.lang.String info =
@@ -8901,7 +8467,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      * @return The tag.
      */
-    com.elarian.hera.proto.Common.IndexMapping getTag();
+    com.elarian.hera.proto.CommonModel.IndexMapping getTag();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
@@ -8912,7 +8478,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      * @return The reminder.
      */
-    com.elarian.hera.proto.Common.CustomerReminder getReminder();
+    com.elarian.hera.proto.AppModel.CustomerReminder getReminder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.AddCustomerReminderTagCommand}
@@ -8925,7 +8491,7 @@ public final class AppSocket {
     private AddCustomerReminderTagCommand() {
     }
     public static final int TAG_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.IndexMapping tag_;
+    private com.elarian.hera.proto.CommonModel.IndexMapping tag_;
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
@@ -8937,13 +8503,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getTag() {
-      return tag_ == null ? com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance() : tag_;
+    public com.elarian.hera.proto.CommonModel.IndexMapping getTag() {
+      return tag_ == null ? com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance() : tag_;
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
-    private void setTag(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   tag_ = value;
       
@@ -8952,12 +8518,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeTag(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (tag_ != null &&
-          tag_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+          tag_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
         tag_ =
-          com.elarian.hera.proto.Common.IndexMapping.newBuilder(tag_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder(tag_).mergeFrom(value).buildPartial();
       } else {
         tag_ = value;
       }
@@ -8971,7 +8537,7 @@ public final class AppSocket {
     }
 
     public static final int REMINDER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.CustomerReminder reminder_;
+    private com.elarian.hera.proto.AppModel.CustomerReminder reminder_;
     /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
@@ -8983,13 +8549,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerReminder getReminder() {
-      return reminder_ == null ? com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance() : reminder_;
+    public com.elarian.hera.proto.AppModel.CustomerReminder getReminder() {
+      return reminder_ == null ? com.elarian.hera.proto.AppModel.CustomerReminder.getDefaultInstance() : reminder_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
-    private void setReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+    private void setReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
       value.getClass();
   reminder_ = value;
       
@@ -8998,12 +8564,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+    private void mergeReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
       value.getClass();
   if (reminder_ != null &&
-          reminder_ != com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance()) {
+          reminder_ != com.elarian.hera.proto.AppModel.CustomerReminder.getDefaultInstance()) {
         reminder_ =
-          com.elarian.hera.proto.Common.CustomerReminder.newBuilder(reminder_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.AppModel.CustomerReminder.newBuilder(reminder_).mergeFrom(value).buildPartial();
       } else {
         reminder_ = value;
       }
@@ -9122,13 +8688,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getTag() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getTag() {
         return instance.getTag();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
-      public Builder setTag(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setTag(value);
         return this;
@@ -9137,7 +8703,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
       public Builder setTag(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setTag(builderForValue.build());
         return this;
@@ -9145,7 +8711,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
-      public Builder mergeTag(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeTag(value);
         return this;
@@ -9169,13 +8735,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerReminder getReminder() {
+      public com.elarian.hera.proto.AppModel.CustomerReminder getReminder() {
         return instance.getReminder();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
-      public Builder setReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+      public Builder setReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
         copyOnWrite();
         instance.setReminder(value);
         return this;
@@ -9184,7 +8750,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
       public Builder setReminder(
-          com.elarian.hera.proto.Common.CustomerReminder.Builder builderForValue) {
+          com.elarian.hera.proto.AppModel.CustomerReminder.Builder builderForValue) {
         copyOnWrite();
         instance.setReminder(builderForValue.build());
         return this;
@@ -9192,7 +8758,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 2;</code>
        */
-      public Builder mergeReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+      public Builder mergeReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
         copyOnWrite();
         instance.mergeReminder(value);
         return this;
@@ -9305,7 +8871,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -9316,7 +8882,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>string key = 4;</code>
@@ -9456,16 +9022,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -9473,11 +9039,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -9506,16 +9072,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -9523,11 +9089,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -9758,13 +9324,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -9773,7 +9339,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -9781,7 +9347,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -9806,13 +9372,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -9821,7 +9387,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -9829,7 +9395,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -9910,8 +9476,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "key_",
             };
             java.lang.String info =
@@ -9984,7 +9550,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      * @return The tag.
      */
-    com.elarian.hera.proto.Common.IndexMapping getTag();
+    com.elarian.hera.proto.CommonModel.IndexMapping getTag();
 
     /**
      * <code>string key = 2;</code>
@@ -10010,7 +9576,7 @@ public final class AppSocket {
       key_ = "";
     }
     public static final int TAG_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.IndexMapping tag_;
+    private com.elarian.hera.proto.CommonModel.IndexMapping tag_;
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
@@ -10022,13 +9588,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getTag() {
-      return tag_ == null ? com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance() : tag_;
+    public com.elarian.hera.proto.CommonModel.IndexMapping getTag() {
+      return tag_ == null ? com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance() : tag_;
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
-    private void setTag(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   tag_ = value;
       
@@ -10037,12 +9603,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeTag(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (tag_ != null &&
-          tag_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+          tag_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
         tag_ =
-          com.elarian.hera.proto.Common.IndexMapping.newBuilder(tag_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder(tag_).mergeFrom(value).buildPartial();
       } else {
         tag_ = value;
       }
@@ -10208,13 +9774,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getTag() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getTag() {
         return instance.getTag();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
-      public Builder setTag(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setTag(value);
         return this;
@@ -10223,7 +9789,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
       public Builder setTag(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setTag(builderForValue.build());
         return this;
@@ -10231,7 +9797,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
-      public Builder mergeTag(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeTag(value);
         return this;
@@ -10394,7 +9960,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -10405,17 +9971,17 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    java.util.List<com.elarian.hera.proto.Common.CustomerIndex> 
+    java.util.List<com.elarian.hera.proto.CommonModel.CustomerIndex> 
         getUpdatesList();
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    com.elarian.hera.proto.Common.CustomerIndex getUpdates(int index);
+    com.elarian.hera.proto.CommonModel.CustomerIndex getUpdates(int index);
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
@@ -10547,16 +10113,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -10564,11 +10130,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -10597,16 +10163,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -10614,11 +10180,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -10636,18 +10202,18 @@ public final class AppSocket {
     }
 
     public static final int UPDATES_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.CustomerIndex> updates_;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.CommonModel.CustomerIndex> updates_;
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getUpdatesList() {
+    public java.util.List<com.elarian.hera.proto.CommonModel.CustomerIndex> getUpdatesList() {
       return updates_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    public java.util.List<? extends com.elarian.hera.proto.Common.CustomerIndexOrBuilder> 
+    public java.util.List<? extends com.elarian.hera.proto.CommonModel.CustomerIndexOrBuilder> 
         getUpdatesOrBuilderList() {
       return updates_;
     }
@@ -10662,18 +10228,18 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerIndex getUpdates(int index) {
+    public com.elarian.hera.proto.CommonModel.CustomerIndex getUpdates(int index) {
       return updates_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    public com.elarian.hera.proto.Common.CustomerIndexOrBuilder getUpdatesOrBuilder(
+    public com.elarian.hera.proto.CommonModel.CustomerIndexOrBuilder getUpdatesOrBuilder(
         int index) {
       return updates_.get(index);
     }
     private void ensureUpdatesIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.CustomerIndex> tmp = updates_;
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.CommonModel.CustomerIndex> tmp = updates_;
       if (!tmp.isModifiable()) {
         updates_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -10684,7 +10250,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     private void setUpdates(
-        int index, com.elarian.hera.proto.Common.CustomerIndex value) {
+        int index, com.elarian.hera.proto.CommonModel.CustomerIndex value) {
       value.getClass();
   ensureUpdatesIsMutable();
       updates_.set(index, value);
@@ -10692,7 +10258,7 @@ public final class AppSocket {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    private void addUpdates(com.elarian.hera.proto.Common.CustomerIndex value) {
+    private void addUpdates(com.elarian.hera.proto.CommonModel.CustomerIndex value) {
       value.getClass();
   ensureUpdatesIsMutable();
       updates_.add(value);
@@ -10701,7 +10267,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     private void addUpdates(
-        int index, com.elarian.hera.proto.Common.CustomerIndex value) {
+        int index, com.elarian.hera.proto.CommonModel.CustomerIndex value) {
       value.getClass();
   ensureUpdatesIsMutable();
       updates_.add(index, value);
@@ -10710,7 +10276,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     private void addAllUpdates(
-        java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
+        java.lang.Iterable<? extends com.elarian.hera.proto.CommonModel.CustomerIndex> values) {
       ensureUpdatesIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, updates_);
@@ -10896,13 +10462,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -10911,7 +10477,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -10919,7 +10485,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -10944,13 +10510,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -10959,7 +10525,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -10967,7 +10533,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -10985,7 +10551,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       @java.lang.Override
-      public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getUpdatesList() {
+      public java.util.List<com.elarian.hera.proto.CommonModel.CustomerIndex> getUpdatesList() {
         return java.util.Collections.unmodifiableList(
             instance.getUpdatesList());
       }
@@ -10999,14 +10565,14 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerIndex getUpdates(int index) {
+      public com.elarian.hera.proto.CommonModel.CustomerIndex getUpdates(int index) {
         return instance.getUpdates(index);
       }
       /**
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder setUpdates(
-          int index, com.elarian.hera.proto.Common.CustomerIndex value) {
+          int index, com.elarian.hera.proto.CommonModel.CustomerIndex value) {
         copyOnWrite();
         instance.setUpdates(index, value);
         return this;
@@ -11015,7 +10581,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder setUpdates(
-          int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
+          int index, com.elarian.hera.proto.CommonModel.CustomerIndex.Builder builderForValue) {
         copyOnWrite();
         instance.setUpdates(index,
             builderForValue.build());
@@ -11024,7 +10590,7 @@ public final class AppSocket {
       /**
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
-      public Builder addUpdates(com.elarian.hera.proto.Common.CustomerIndex value) {
+      public Builder addUpdates(com.elarian.hera.proto.CommonModel.CustomerIndex value) {
         copyOnWrite();
         instance.addUpdates(value);
         return this;
@@ -11033,7 +10599,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder addUpdates(
-          int index, com.elarian.hera.proto.Common.CustomerIndex value) {
+          int index, com.elarian.hera.proto.CommonModel.CustomerIndex value) {
         copyOnWrite();
         instance.addUpdates(index, value);
         return this;
@@ -11042,7 +10608,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder addUpdates(
-          com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerIndex.Builder builderForValue) {
         copyOnWrite();
         instance.addUpdates(builderForValue.build());
         return this;
@@ -11051,7 +10617,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder addUpdates(
-          int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
+          int index, com.elarian.hera.proto.CommonModel.CustomerIndex.Builder builderForValue) {
         copyOnWrite();
         instance.addUpdates(index,
             builderForValue.build());
@@ -11061,7 +10627,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder addAllUpdates(
-          java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
+          java.lang.Iterable<? extends com.elarian.hera.proto.CommonModel.CustomerIndex> values) {
         copyOnWrite();
         instance.addAllUpdates(values);
         return this;
@@ -11101,10 +10667,10 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "updates_",
-              com.elarian.hera.proto.Common.CustomerIndex.class,
+              com.elarian.hera.proto.CommonModel.CustomerIndex.class,
             };
             java.lang.String info =
                 "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u023b\u0000\u0002" +
@@ -11188,7 +10754,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -11199,7 +10765,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>repeated string deletions = 4;</code>
@@ -11352,16 +10918,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -11369,11 +10935,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -11402,16 +10968,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -11419,11 +10985,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -11700,13 +11266,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -11715,7 +11281,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -11723,7 +11289,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -11748,13 +11314,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -11763,7 +11329,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -11771,7 +11337,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -11895,8 +11461,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "deletions_",
             };
             java.lang.String info =
@@ -11981,7 +11547,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -11992,17 +11558,17 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    java.util.List<com.elarian.hera.proto.Common.CustomerIndex> 
+    java.util.List<com.elarian.hera.proto.CommonModel.CustomerIndex> 
         getUpdatesList();
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    com.elarian.hera.proto.Common.CustomerIndex getUpdates(int index);
+    com.elarian.hera.proto.CommonModel.CustomerIndex getUpdates(int index);
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
@@ -12134,16 +11700,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -12151,11 +11717,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -12184,16 +11750,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -12201,11 +11767,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -12223,18 +11789,18 @@ public final class AppSocket {
     }
 
     public static final int UPDATES_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.CustomerIndex> updates_;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.CommonModel.CustomerIndex> updates_;
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getUpdatesList() {
+    public java.util.List<com.elarian.hera.proto.CommonModel.CustomerIndex> getUpdatesList() {
       return updates_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    public java.util.List<? extends com.elarian.hera.proto.Common.CustomerIndexOrBuilder> 
+    public java.util.List<? extends com.elarian.hera.proto.CommonModel.CustomerIndexOrBuilder> 
         getUpdatesOrBuilderList() {
       return updates_;
     }
@@ -12249,18 +11815,18 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerIndex getUpdates(int index) {
+    public com.elarian.hera.proto.CommonModel.CustomerIndex getUpdates(int index) {
       return updates_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    public com.elarian.hera.proto.Common.CustomerIndexOrBuilder getUpdatesOrBuilder(
+    public com.elarian.hera.proto.CommonModel.CustomerIndexOrBuilder getUpdatesOrBuilder(
         int index) {
       return updates_.get(index);
     }
     private void ensureUpdatesIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.CustomerIndex> tmp = updates_;
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.CommonModel.CustomerIndex> tmp = updates_;
       if (!tmp.isModifiable()) {
         updates_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -12271,7 +11837,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     private void setUpdates(
-        int index, com.elarian.hera.proto.Common.CustomerIndex value) {
+        int index, com.elarian.hera.proto.CommonModel.CustomerIndex value) {
       value.getClass();
   ensureUpdatesIsMutable();
       updates_.set(index, value);
@@ -12279,7 +11845,7 @@ public final class AppSocket {
     /**
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
-    private void addUpdates(com.elarian.hera.proto.Common.CustomerIndex value) {
+    private void addUpdates(com.elarian.hera.proto.CommonModel.CustomerIndex value) {
       value.getClass();
   ensureUpdatesIsMutable();
       updates_.add(value);
@@ -12288,7 +11854,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     private void addUpdates(
-        int index, com.elarian.hera.proto.Common.CustomerIndex value) {
+        int index, com.elarian.hera.proto.CommonModel.CustomerIndex value) {
       value.getClass();
   ensureUpdatesIsMutable();
       updates_.add(index, value);
@@ -12297,7 +11863,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
      */
     private void addAllUpdates(
-        java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
+        java.lang.Iterable<? extends com.elarian.hera.proto.CommonModel.CustomerIndex> values) {
       ensureUpdatesIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, updates_);
@@ -12483,13 +12049,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -12498,7 +12064,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -12506,7 +12072,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -12531,13 +12097,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -12546,7 +12112,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -12554,7 +12120,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -12572,7 +12138,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       @java.lang.Override
-      public java.util.List<com.elarian.hera.proto.Common.CustomerIndex> getUpdatesList() {
+      public java.util.List<com.elarian.hera.proto.CommonModel.CustomerIndex> getUpdatesList() {
         return java.util.Collections.unmodifiableList(
             instance.getUpdatesList());
       }
@@ -12586,14 +12152,14 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerIndex getUpdates(int index) {
+      public com.elarian.hera.proto.CommonModel.CustomerIndex getUpdates(int index) {
         return instance.getUpdates(index);
       }
       /**
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder setUpdates(
-          int index, com.elarian.hera.proto.Common.CustomerIndex value) {
+          int index, com.elarian.hera.proto.CommonModel.CustomerIndex value) {
         copyOnWrite();
         instance.setUpdates(index, value);
         return this;
@@ -12602,7 +12168,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder setUpdates(
-          int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
+          int index, com.elarian.hera.proto.CommonModel.CustomerIndex.Builder builderForValue) {
         copyOnWrite();
         instance.setUpdates(index,
             builderForValue.build());
@@ -12611,7 +12177,7 @@ public final class AppSocket {
       /**
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
-      public Builder addUpdates(com.elarian.hera.proto.Common.CustomerIndex value) {
+      public Builder addUpdates(com.elarian.hera.proto.CommonModel.CustomerIndex value) {
         copyOnWrite();
         instance.addUpdates(value);
         return this;
@@ -12620,7 +12186,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder addUpdates(
-          int index, com.elarian.hera.proto.Common.CustomerIndex value) {
+          int index, com.elarian.hera.proto.CommonModel.CustomerIndex value) {
         copyOnWrite();
         instance.addUpdates(index, value);
         return this;
@@ -12629,7 +12195,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder addUpdates(
-          com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerIndex.Builder builderForValue) {
         copyOnWrite();
         instance.addUpdates(builderForValue.build());
         return this;
@@ -12638,7 +12204,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder addUpdates(
-          int index, com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
+          int index, com.elarian.hera.proto.CommonModel.CustomerIndex.Builder builderForValue) {
         copyOnWrite();
         instance.addUpdates(index,
             builderForValue.build());
@@ -12648,7 +12214,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.CustomerIndex updates = 4;</code>
        */
       public Builder addAllUpdates(
-          java.lang.Iterable<? extends com.elarian.hera.proto.Common.CustomerIndex> values) {
+          java.lang.Iterable<? extends com.elarian.hera.proto.CommonModel.CustomerIndex> values) {
         copyOnWrite();
         instance.addAllUpdates(values);
         return this;
@@ -12688,10 +12254,10 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "updates_",
-              com.elarian.hera.proto.Common.CustomerIndex.class,
+              com.elarian.hera.proto.CommonModel.CustomerIndex.class,
             };
             java.lang.String info =
                 "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u023b\u0000\u0002" +
@@ -12775,7 +12341,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -12786,17 +12352,17 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
-    java.util.List<com.elarian.hera.proto.Common.IndexMapping> 
+    java.util.List<com.elarian.hera.proto.CommonModel.IndexMapping> 
         getDeletionsList();
     /**
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
-    com.elarian.hera.proto.Common.IndexMapping getDeletions(int index);
+    com.elarian.hera.proto.CommonModel.IndexMapping getDeletions(int index);
     /**
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
@@ -12928,16 +12494,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -12945,11 +12511,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -12978,16 +12544,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -12995,11 +12561,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -13017,18 +12583,18 @@ public final class AppSocket {
     }
 
     public static final int DELETIONS_FIELD_NUMBER = 4;
-    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.IndexMapping> deletions_;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.CommonModel.IndexMapping> deletions_;
     /**
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<com.elarian.hera.proto.Common.IndexMapping> getDeletionsList() {
+    public java.util.List<com.elarian.hera.proto.CommonModel.IndexMapping> getDeletionsList() {
       return deletions_;
     }
     /**
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
-    public java.util.List<? extends com.elarian.hera.proto.Common.IndexMappingOrBuilder> 
+    public java.util.List<? extends com.elarian.hera.proto.CommonModel.IndexMappingOrBuilder> 
         getDeletionsOrBuilderList() {
       return deletions_;
     }
@@ -13043,18 +12609,18 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getDeletions(int index) {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getDeletions(int index) {
       return deletions_.get(index);
     }
     /**
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
-    public com.elarian.hera.proto.Common.IndexMappingOrBuilder getDeletionsOrBuilder(
+    public com.elarian.hera.proto.CommonModel.IndexMappingOrBuilder getDeletionsOrBuilder(
         int index) {
       return deletions_.get(index);
     }
     private void ensureDeletionsIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.IndexMapping> tmp = deletions_;
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.CommonModel.IndexMapping> tmp = deletions_;
       if (!tmp.isModifiable()) {
         deletions_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -13065,7 +12631,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
     private void setDeletions(
-        int index, com.elarian.hera.proto.Common.IndexMapping value) {
+        int index, com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   ensureDeletionsIsMutable();
       deletions_.set(index, value);
@@ -13073,7 +12639,7 @@ public final class AppSocket {
     /**
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
-    private void addDeletions(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void addDeletions(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   ensureDeletionsIsMutable();
       deletions_.add(value);
@@ -13082,7 +12648,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
     private void addDeletions(
-        int index, com.elarian.hera.proto.Common.IndexMapping value) {
+        int index, com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   ensureDeletionsIsMutable();
       deletions_.add(index, value);
@@ -13091,7 +12657,7 @@ public final class AppSocket {
      * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
      */
     private void addAllDeletions(
-        java.lang.Iterable<? extends com.elarian.hera.proto.Common.IndexMapping> values) {
+        java.lang.Iterable<? extends com.elarian.hera.proto.CommonModel.IndexMapping> values) {
       ensureDeletionsIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, deletions_);
@@ -13277,13 +12843,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -13292,7 +12858,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -13300,7 +12866,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -13325,13 +12891,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -13340,7 +12906,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -13348,7 +12914,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -13366,7 +12932,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
       @java.lang.Override
-      public java.util.List<com.elarian.hera.proto.Common.IndexMapping> getDeletionsList() {
+      public java.util.List<com.elarian.hera.proto.CommonModel.IndexMapping> getDeletionsList() {
         return java.util.Collections.unmodifiableList(
             instance.getDeletionsList());
       }
@@ -13380,14 +12946,14 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getDeletions(int index) {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getDeletions(int index) {
         return instance.getDeletions(index);
       }
       /**
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
       public Builder setDeletions(
-          int index, com.elarian.hera.proto.Common.IndexMapping value) {
+          int index, com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setDeletions(index, value);
         return this;
@@ -13396,7 +12962,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
       public Builder setDeletions(
-          int index, com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          int index, com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setDeletions(index,
             builderForValue.build());
@@ -13405,7 +12971,7 @@ public final class AppSocket {
       /**
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
-      public Builder addDeletions(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder addDeletions(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.addDeletions(value);
         return this;
@@ -13414,7 +12980,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
       public Builder addDeletions(
-          int index, com.elarian.hera.proto.Common.IndexMapping value) {
+          int index, com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.addDeletions(index, value);
         return this;
@@ -13423,7 +12989,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
       public Builder addDeletions(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.addDeletions(builderForValue.build());
         return this;
@@ -13432,7 +12998,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
       public Builder addDeletions(
-          int index, com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          int index, com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.addDeletions(index,
             builderForValue.build());
@@ -13442,7 +13008,7 @@ public final class AppSocket {
        * <code>repeated .com.elarian.hera.proto.IndexMapping deletions = 4;</code>
        */
       public Builder addAllDeletions(
-          java.lang.Iterable<? extends com.elarian.hera.proto.Common.IndexMapping> values) {
+          java.lang.Iterable<? extends com.elarian.hera.proto.CommonModel.IndexMapping> values) {
         copyOnWrite();
         instance.addAllDeletions(values);
         return this;
@@ -13482,10 +13048,10 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "deletions_",
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
             };
             java.lang.String info =
                 "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u023b\u0000\u0002" +
@@ -13569,7 +13135,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -13580,7 +13146,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
@@ -13595,25 +13161,25 @@ public final class AppSocket {
      * Use {@link #getUpdatesMap()} instead.
      */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
+    java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue>
     getUpdates();
     /**
      * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
      */
-    java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
+    java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue>
     getUpdatesMap();
     /**
      * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
      */
 
-    com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
+    com.elarian.hera.proto.CommonModel.DataMapValue getUpdatesOrDefault(
         java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue);
+        com.elarian.hera.proto.CommonModel.DataMapValue defaultValue);
     /**
      * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
      */
 
-    com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
+    com.elarian.hera.proto.CommonModel.DataMapValue getUpdatesOrThrow(
         java.lang.String key);
 
     public com.elarian.hera.proto.AppSocket.UpdateCustomerMetadataCommand.CustomerCase getCustomerCase();
@@ -13741,16 +13307,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -13758,11 +13324,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -13791,16 +13357,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -13808,11 +13374,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -13832,22 +13398,22 @@ public final class AppSocket {
     public static final int UPDATES_FIELD_NUMBER = 4;
     private static final class UpdatesDefaultEntryHolder {
       static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.elarian.hera.proto.Common.DataMapValue> defaultEntry =
+          java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> defaultEntry =
               com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>newDefaultInstance(
+              .<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue>newDefaultInstance(
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance());
+                  com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance());
     }
     private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.elarian.hera.proto.Common.DataMapValue> updates_ =
+        java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> updates_ =
             com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue>
     internalGetUpdates() {
       return updates_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue>
     internalGetMutableUpdates() {
       if (!updates_.isMutable()) {
         updates_ = updates_.mutableCopy();
@@ -13874,7 +13440,7 @@ public final class AppSocket {
      */
     @java.lang.Override
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdates() {
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> getUpdates() {
       return getUpdatesMap();
     }
     /**
@@ -13882,7 +13448,7 @@ public final class AppSocket {
      */
     @java.lang.Override
 
-    public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdatesMap() {
+    public java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> getUpdatesMap() {
       return java.util.Collections.unmodifiableMap(
           internalGetUpdates());
     }
@@ -13891,11 +13457,11 @@ public final class AppSocket {
      */
     @java.lang.Override
 
-    public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
+    public com.elarian.hera.proto.CommonModel.DataMapValue getUpdatesOrDefault(
         java.lang.String key,
-        com.elarian.hera.proto.Common.DataMapValue defaultValue) {
+        com.elarian.hera.proto.CommonModel.DataMapValue defaultValue) {
       key.getClass();
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
+      java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> map =
           internalGetUpdates();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -13904,10 +13470,10 @@ public final class AppSocket {
      */
     @java.lang.Override
 
-    public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
+    public com.elarian.hera.proto.CommonModel.DataMapValue getUpdatesOrThrow(
         java.lang.String key) {
       key.getClass();
-      java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
+      java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> map =
           internalGetUpdates();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -13917,7 +13483,7 @@ public final class AppSocket {
     /**
      * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
      */
-    private java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue>
+    private java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue>
     getMutableUpdatesMap() {
       return internalGetMutableUpdates();
     }
@@ -14089,13 +13655,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -14104,7 +13670,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -14112,7 +13678,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -14137,13 +13703,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -14152,7 +13718,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -14160,7 +13726,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -14211,14 +13777,14 @@ public final class AppSocket {
        */
       @java.lang.Override
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdates() {
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> getUpdates() {
         return getUpdatesMap();
       }
       /**
        * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> getUpdatesMap() {
+      public java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> getUpdatesMap() {
         return java.util.Collections.unmodifiableMap(
             instance.getUpdatesMap());
       }
@@ -14227,11 +13793,11 @@ public final class AppSocket {
        */
       @java.lang.Override
 
-      public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrDefault(
+      public com.elarian.hera.proto.CommonModel.DataMapValue getUpdatesOrDefault(
           java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue defaultValue) {
+          com.elarian.hera.proto.CommonModel.DataMapValue defaultValue) {
         key.getClass();
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
+        java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> map =
             instance.getUpdatesMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
@@ -14240,10 +13806,10 @@ public final class AppSocket {
        */
       @java.lang.Override
 
-      public com.elarian.hera.proto.Common.DataMapValue getUpdatesOrThrow(
+      public com.elarian.hera.proto.CommonModel.DataMapValue getUpdatesOrThrow(
           java.lang.String key) {
         key.getClass();
-        java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> map =
+        java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> map =
             instance.getUpdatesMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
@@ -14255,7 +13821,7 @@ public final class AppSocket {
        */
       public Builder putUpdates(
           java.lang.String key,
-          com.elarian.hera.proto.Common.DataMapValue value) {
+          com.elarian.hera.proto.CommonModel.DataMapValue value) {
         key.getClass();
         value.getClass();
         copyOnWrite();
@@ -14266,7 +13832,7 @@ public final class AppSocket {
        * <code>map&lt;string, .com.elarian.hera.proto.DataMapValue&gt; updates = 4;</code>
        */
       public Builder putAllUpdates(
-          java.util.Map<java.lang.String, com.elarian.hera.proto.Common.DataMapValue> values) {
+          java.util.Map<java.lang.String, com.elarian.hera.proto.CommonModel.DataMapValue> values) {
         copyOnWrite();
         instance.getMutableUpdatesMap().putAll(values);
         return this;
@@ -14290,8 +13856,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "updates_",
               UpdatesDefaultEntryHolder.defaultEntry,
             };
@@ -14377,7 +13943,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -14388,7 +13954,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>repeated string deletions = 4;</code>
@@ -14541,16 +14107,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -14558,11 +14124,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -14591,16 +14157,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -14608,11 +14174,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -14889,13 +14455,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -14904,7 +14470,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -14912,7 +14478,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -14937,13 +14503,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -14952,7 +14518,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -14960,7 +14526,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -15084,8 +14650,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "deletions_",
             };
             java.lang.String info =
@@ -15629,7 +15195,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -15640,7 +15206,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     /**
      * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
@@ -15651,7 +15217,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      * @return The update.
      */
-    com.elarian.hera.proto.Common.DataMapValue getUpdate();
+    com.elarian.hera.proto.CommonModel.DataMapValue getUpdate();
 
     public com.elarian.hera.proto.AppSocket.UpdateCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
@@ -15778,16 +15344,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -15795,11 +15361,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -15828,16 +15394,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -15845,11 +15411,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -15867,7 +15433,7 @@ public final class AppSocket {
     }
 
     public static final int UPDATE_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.DataMapValue update_;
+    private com.elarian.hera.proto.CommonModel.DataMapValue update_;
     /**
      * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      */
@@ -15879,13 +15445,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.DataMapValue getUpdate() {
-      return update_ == null ? com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : update_;
+    public com.elarian.hera.proto.CommonModel.DataMapValue getUpdate() {
+      return update_ == null ? com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance() : update_;
     }
     /**
      * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      */
-    private void setUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
+    private void setUpdate(com.elarian.hera.proto.CommonModel.DataMapValue value) {
       value.getClass();
   update_ = value;
       
@@ -15894,12 +15460,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
+    private void mergeUpdate(com.elarian.hera.proto.CommonModel.DataMapValue value) {
       value.getClass();
   if (update_ != null &&
-          update_ != com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance()) {
+          update_ != com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance()) {
         update_ =
-          com.elarian.hera.proto.Common.DataMapValue.newBuilder(update_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.DataMapValue.newBuilder(update_).mergeFrom(value).buildPartial();
       } else {
         update_ = value;
       }
@@ -16079,13 +15645,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -16094,7 +15660,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -16102,7 +15668,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -16127,13 +15693,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -16142,7 +15708,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -16150,7 +15716,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -16175,13 +15741,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.DataMapValue getUpdate() {
+      public com.elarian.hera.proto.CommonModel.DataMapValue getUpdate() {
         return instance.getUpdate();
       }
       /**
        * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
-      public Builder setUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
+      public Builder setUpdate(com.elarian.hera.proto.CommonModel.DataMapValue value) {
         copyOnWrite();
         instance.setUpdate(value);
         return this;
@@ -16190,7 +15756,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
       public Builder setUpdate(
-          com.elarian.hera.proto.Common.DataMapValue.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.DataMapValue.Builder builderForValue) {
         copyOnWrite();
         instance.setUpdate(builderForValue.build());
         return this;
@@ -16198,7 +15764,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.DataMapValue update = 4;</code>
        */
-      public Builder mergeUpdate(com.elarian.hera.proto.Common.DataMapValue value) {
+      public Builder mergeUpdate(com.elarian.hera.proto.CommonModel.DataMapValue value) {
         copyOnWrite();
         instance.mergeUpdate(value);
         return this;
@@ -16229,8 +15795,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
               "update_",
             };
             java.lang.String info =
@@ -16315,7 +15881,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -16326,7 +15892,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     public com.elarian.hera.proto.AppSocket.DeleteCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
@@ -16453,16 +16019,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -16470,11 +16036,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -16503,16 +16069,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -16520,11 +16086,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -16708,13 +16274,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -16723,7 +16289,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -16731,7 +16297,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -16756,13 +16322,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -16771,7 +16337,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -16779,7 +16345,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -16811,8 +16377,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
             };
             java.lang.String info =
                 "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
@@ -17355,7 +16921,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
@@ -17366,7 +16932,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      * @return The secondaryId.
      */
-    com.elarian.hera.proto.Common.IndexMapping getSecondaryId();
+    com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId();
 
     public com.elarian.hera.proto.AppSocket.LeaseCustomerAppDataCommand.CustomerCase getCustomerCase();
   }
@@ -17493,16 +17059,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
       if (customerCase_ == 2) {
-         return (com.elarian.hera.proto.Common.CustomerNumber) customer_;
+         return (com.elarian.hera.proto.CommonModel.CustomerNumber) customer_;
       }
-      return com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 2;
@@ -17510,11 +17076,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerCase_ == 2 &&
-          customer_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.CustomerNumber.newBuilder((com.elarian.hera.proto.Common.CustomerNumber) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder((com.elarian.hera.proto.CommonModel.CustomerNumber) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -17543,16 +17109,16 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+    public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
       if (customerCase_ == 3) {
-         return (com.elarian.hera.proto.Common.IndexMapping) customer_;
+         return (com.elarian.hera.proto.CommonModel.IndexMapping) customer_;
       }
-      return com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance();
+      return com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance();
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   customer_ = value;
       customerCase_ = 3;
@@ -17560,11 +17126,11 @@ public final class AppSocket {
     /**
      * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
      */
-    private void mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (customerCase_ == 3 &&
-          customer_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
-        customer_ = com.elarian.hera.proto.Common.IndexMapping.newBuilder((com.elarian.hera.proto.Common.IndexMapping) customer_)
+          customer_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
+        customer_ = com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder((com.elarian.hera.proto.CommonModel.IndexMapping) customer_)
             .mergeFrom(value).buildPartial();
       } else {
         customer_ = value;
@@ -17748,13 +17314,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -17763,7 +17329,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -17771,7 +17337,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -17796,13 +17362,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getSecondaryId() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getSecondaryId() {
         return instance.getSecondaryId();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder setSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setSecondaryId(value);
         return this;
@@ -17811,7 +17377,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
       public Builder setSecondaryId(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setSecondaryId(builderForValue.build());
         return this;
@@ -17819,7 +17385,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping secondary_id = 3;</code>
        */
-      public Builder mergeSecondaryId(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeSecondaryId(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeSecondaryId(value);
         return this;
@@ -17851,8 +17417,8 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customer_",
               "customerCase_",
-              com.elarian.hera.proto.Common.CustomerNumber.class,
-              com.elarian.hera.proto.Common.IndexMapping.class,
+              com.elarian.hera.proto.CommonModel.CustomerNumber.class,
+              com.elarian.hera.proto.CommonModel.IndexMapping.class,
             };
             java.lang.String info =
                 "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +
@@ -17953,7 +17519,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
      * @return The value.
      */
-    com.elarian.hera.proto.Common.DataMapValue getValue();
+    com.elarian.hera.proto.CommonModel.DataMapValue getValue();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.LeaseCustomerAppDataReply}
@@ -18086,7 +17652,7 @@ public final class AppSocket {
     }
 
     public static final int VALUE_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.DataMapValue value_;
+    private com.elarian.hera.proto.CommonModel.DataMapValue value_;
     /**
      * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
      */
@@ -18098,13 +17664,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.DataMapValue getValue() {
-      return value_ == null ? com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : value_;
+    public com.elarian.hera.proto.CommonModel.DataMapValue getValue() {
+      return value_ == null ? com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance() : value_;
     }
     /**
      * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
      */
-    private void setValue(com.elarian.hera.proto.Common.DataMapValue value) {
+    private void setValue(com.elarian.hera.proto.CommonModel.DataMapValue value) {
       value.getClass();
   value_ = value;
       
@@ -18113,12 +17679,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeValue(com.elarian.hera.proto.Common.DataMapValue value) {
+    private void mergeValue(com.elarian.hera.proto.CommonModel.DataMapValue value) {
       value.getClass();
   if (value_ != null &&
-          value_ != com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance()) {
+          value_ != com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance()) {
         value_ =
-          com.elarian.hera.proto.Common.DataMapValue.newBuilder(value_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.DataMapValue.newBuilder(value_).mergeFrom(value).buildPartial();
       } else {
         value_ = value;
       }
@@ -18361,13 +17927,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.DataMapValue getValue() {
+      public com.elarian.hera.proto.CommonModel.DataMapValue getValue() {
         return instance.getValue();
       }
       /**
        * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
        */
-      public Builder setValue(com.elarian.hera.proto.Common.DataMapValue value) {
+      public Builder setValue(com.elarian.hera.proto.CommonModel.DataMapValue value) {
         copyOnWrite();
         instance.setValue(value);
         return this;
@@ -18376,7 +17942,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
        */
       public Builder setValue(
-          com.elarian.hera.proto.Common.DataMapValue.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.DataMapValue.Builder builderForValue) {
         copyOnWrite();
         instance.setValue(builderForValue.build());
         return this;
@@ -18384,7 +17950,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.DataMapValue value = 4;</code>
        */
-      public Builder mergeValue(com.elarian.hera.proto.Common.DataMapValue value) {
+      public Builder mergeValue(com.elarian.hera.proto.CommonModel.DataMapValue value) {
         copyOnWrite();
         instance.mergeValue(value);
         return this;
@@ -18488,7 +18054,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
@@ -18499,18 +18065,29 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      * @return The channelNumber.
      */
-    com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
+    com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
-     * @return Whether the body field is set.
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     * @return Whether the message field is set.
      */
-    boolean hasBody();
+    boolean hasMessage();
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
-     * @return The body.
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     * @return The message.
      */
-    com.elarian.hera.proto.Common.CustomerMessageBody getBody();
+    com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
+
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     * @return Whether the requestId field is set.
+     */
+    boolean hasRequestId();
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     * @return The requestId.
+     */
+    com.google.protobuf.StringValue getRequestId();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SendMessageCommand}
@@ -18523,7 +18100,7 @@ public final class AppSocket {
     private SendMessageCommand() {
     }
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
@@ -18535,13 +18112,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customerNumber_ = value;
       
@@ -18550,12 +18127,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
         customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
         customerNumber_ = value;
       }
@@ -18569,7 +18146,7 @@ public final class AppSocket {
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
+    private com.elarian.hera.proto.MessagingModel.MessagingChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
@@ -18581,13 +18158,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
+    public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
-    private void setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+    private void setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
       value.getClass();
   channelNumber_ = value;
       
@@ -18596,12 +18173,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+    private void mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
       value.getClass();
   if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance()) {
+          channelNumber_ != com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance()) {
         channelNumber_ =
-          com.elarian.hera.proto.Common.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
       } else {
         channelNumber_ = value;
       }
@@ -18614,49 +18191,95 @@ public final class AppSocket {
       
     }
 
-    public static final int BODY_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.CustomerMessageBody body_;
+    public static final int MESSAGE_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.MessagingModel.OutboundMessage message_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.Override
-    public boolean hasBody() {
-      return body_ != null;
+    public boolean hasMessage() {
+      return message_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerMessageBody getBody() {
-      return body_ == null ? com.elarian.hera.proto.Common.CustomerMessageBody.getDefaultInstance() : body_;
+    public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+      return message_ == null ? com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance() : message_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
-    private void setBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+    private void setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
       value.getClass();
-  body_ = value;
+  message_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+    private void mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
       value.getClass();
-  if (body_ != null &&
-          body_ != com.elarian.hera.proto.Common.CustomerMessageBody.getDefaultInstance()) {
-        body_ =
-          com.elarian.hera.proto.Common.CustomerMessageBody.newBuilder(body_).mergeFrom(value).buildPartial();
+  if (message_ != null &&
+          message_ != com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance()) {
+        message_ =
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.newBuilder(message_).mergeFrom(value).buildPartial();
       } else {
-        body_ = value;
+        message_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
-    private void clearBody() {  body_ = null;
+    private void clearMessage() {  message_ = null;
+      
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 4;
+    private com.google.protobuf.StringValue requestId_;
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasRequestId() {
+      return requestId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getRequestId() {
+      return requestId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : requestId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    private void setRequestId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  requestId_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeRequestId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (requestId_ != null &&
+          requestId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        requestId_ =
+          com.google.protobuf.StringValue.newBuilder(requestId_).mergeFrom(value).buildPartial();
+      } else {
+        requestId_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    private void clearRequestId() {  requestId_ = null;
       
     }
 
@@ -18766,13 +18389,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -18781,7 +18404,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -18789,7 +18412,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -18813,13 +18436,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
+      public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
@@ -18828,7 +18451,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
       public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.MessagingChannelNumber.Builder builderForValue) {
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setChannelNumber(builderForValue.build());
         return this;
@@ -18836,7 +18459,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
         copyOnWrite();
         instance.mergeChannelNumber(value);
         return this;
@@ -18850,49 +18473,96 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
       @java.lang.Override
-      public boolean hasBody() {
-        return instance.hasBody();
+      public boolean hasMessage() {
+        return instance.hasMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerMessageBody getBody() {
-        return instance.getBody();
+      public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+        return instance.getMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder setBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+      public Builder setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         copyOnWrite();
-        instance.setBody(value);
+        instance.setMessage(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder setBody(
-          com.elarian.hera.proto.Common.CustomerMessageBody.Builder builderForValue) {
+      public Builder setMessage(
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder builderForValue) {
         copyOnWrite();
-        instance.setBody(builderForValue.build());
+        instance.setMessage(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder mergeBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+      public Builder mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         copyOnWrite();
-        instance.mergeBody(value);
+        instance.mergeMessage(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder clearBody() {  copyOnWrite();
-        instance.clearBody();
+      public Builder clearMessage() {  copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasRequestId() {
+        return instance.hasRequestId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getRequestId() {
+        return instance.getRequestId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      public Builder setRequestId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setRequestId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      public Builder setRequestId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setRequestId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      public Builder mergeRequestId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeRequestId(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      public Builder clearRequestId() {  copyOnWrite();
+        instance.clearRequestId();
         return this;
       }
 
@@ -18914,11 +18584,12 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customerNumber_",
               "channelNumber_",
-              "body_",
+              "message_",
+              "requestId_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
-                "\t";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\t\u0004\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -18986,7 +18657,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      * @return The tag.
      */
-    com.elarian.hera.proto.Common.IndexMapping getTag();
+    com.elarian.hera.proto.CommonModel.IndexMapping getTag();
 
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
@@ -18997,18 +18668,18 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      * @return The channelNumber.
      */
-    com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
+    com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
-     * @return Whether the body field is set.
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     * @return Whether the message field is set.
      */
-    boolean hasBody();
+    boolean hasMessage();
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
-     * @return The body.
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     * @return The message.
      */
-    com.elarian.hera.proto.Common.CustomerMessageBody getBody();
+    com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SendMessageTagCommand}
@@ -19021,7 +18692,7 @@ public final class AppSocket {
     private SendMessageTagCommand() {
     }
     public static final int TAG_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.IndexMapping tag_;
+    private com.elarian.hera.proto.CommonModel.IndexMapping tag_;
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
@@ -19033,13 +18704,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.IndexMapping getTag() {
-      return tag_ == null ? com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance() : tag_;
+    public com.elarian.hera.proto.CommonModel.IndexMapping getTag() {
+      return tag_ == null ? com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance() : tag_;
     }
     /**
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
-    private void setTag(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void setTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   tag_ = value;
       
@@ -19048,12 +18719,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeTag(com.elarian.hera.proto.Common.IndexMapping value) {
+    private void mergeTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
       value.getClass();
   if (tag_ != null &&
-          tag_ != com.elarian.hera.proto.Common.IndexMapping.getDefaultInstance()) {
+          tag_ != com.elarian.hera.proto.CommonModel.IndexMapping.getDefaultInstance()) {
         tag_ =
-          com.elarian.hera.proto.Common.IndexMapping.newBuilder(tag_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.IndexMapping.newBuilder(tag_).mergeFrom(value).buildPartial();
       } else {
         tag_ = value;
       }
@@ -19067,7 +18738,7 @@ public final class AppSocket {
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
+    private com.elarian.hera.proto.MessagingModel.MessagingChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
@@ -19079,13 +18750,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
+    public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
-    private void setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+    private void setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
       value.getClass();
   channelNumber_ = value;
       
@@ -19094,12 +18765,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+    private void mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
       value.getClass();
   if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance()) {
+          channelNumber_ != com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance()) {
         channelNumber_ =
-          com.elarian.hera.proto.Common.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
       } else {
         channelNumber_ = value;
       }
@@ -19112,49 +18783,49 @@ public final class AppSocket {
       
     }
 
-    public static final int BODY_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.CustomerMessageBody body_;
+    public static final int MESSAGE_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.MessagingModel.OutboundMessage message_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.Override
-    public boolean hasBody() {
-      return body_ != null;
+    public boolean hasMessage() {
+      return message_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerMessageBody getBody() {
-      return body_ == null ? com.elarian.hera.proto.Common.CustomerMessageBody.getDefaultInstance() : body_;
+    public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+      return message_ == null ? com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance() : message_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
-    private void setBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+    private void setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
       value.getClass();
-  body_ = value;
+  message_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+    private void mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
       value.getClass();
-  if (body_ != null &&
-          body_ != com.elarian.hera.proto.Common.CustomerMessageBody.getDefaultInstance()) {
-        body_ =
-          com.elarian.hera.proto.Common.CustomerMessageBody.newBuilder(body_).mergeFrom(value).buildPartial();
+  if (message_ != null &&
+          message_ != com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance()) {
+        message_ =
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.newBuilder(message_).mergeFrom(value).buildPartial();
       } else {
-        body_ = value;
+        message_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
-    private void clearBody() {  body_ = null;
+    private void clearMessage() {  message_ = null;
       
     }
 
@@ -19264,13 +18935,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.IndexMapping getTag() {
+      public com.elarian.hera.proto.CommonModel.IndexMapping getTag() {
         return instance.getTag();
       }
       /**
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
-      public Builder setTag(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder setTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.setTag(value);
         return this;
@@ -19279,7 +18950,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
       public Builder setTag(
-          com.elarian.hera.proto.Common.IndexMapping.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.IndexMapping.Builder builderForValue) {
         copyOnWrite();
         instance.setTag(builderForValue.build());
         return this;
@@ -19287,7 +18958,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.IndexMapping tag = 1;</code>
        */
-      public Builder mergeTag(com.elarian.hera.proto.Common.IndexMapping value) {
+      public Builder mergeTag(com.elarian.hera.proto.CommonModel.IndexMapping value) {
         copyOnWrite();
         instance.mergeTag(value);
         return this;
@@ -19311,13 +18982,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
+      public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
@@ -19326,7 +18997,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
       public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.MessagingChannelNumber.Builder builderForValue) {
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setChannelNumber(builderForValue.build());
         return this;
@@ -19334,7 +19005,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
         copyOnWrite();
         instance.mergeChannelNumber(value);
         return this;
@@ -19348,49 +19019,49 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
       @java.lang.Override
-      public boolean hasBody() {
-        return instance.hasBody();
+      public boolean hasMessage() {
+        return instance.hasMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerMessageBody getBody() {
-        return instance.getBody();
+      public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+        return instance.getMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder setBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+      public Builder setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         copyOnWrite();
-        instance.setBody(value);
+        instance.setMessage(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder setBody(
-          com.elarian.hera.proto.Common.CustomerMessageBody.Builder builderForValue) {
+      public Builder setMessage(
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder builderForValue) {
         copyOnWrite();
-        instance.setBody(builderForValue.build());
+        instance.setMessage(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder mergeBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+      public Builder mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         copyOnWrite();
-        instance.mergeBody(value);
+        instance.mergeMessage(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder clearBody() {  copyOnWrite();
-        instance.clearBody();
+      public Builder clearMessage() {  copyOnWrite();
+        instance.clearMessage();
         return this;
       }
 
@@ -19412,7 +19083,7 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "tag_",
               "channelNumber_",
-              "body_",
+              "message_",
             };
             java.lang.String info =
                 "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
@@ -19500,15 +19171,15 @@ public final class AppSocket {
         getReplyToMessageIdBytes();
 
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
-     * @return Whether the body field is set.
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     * @return Whether the message field is set.
      */
-    boolean hasBody();
+    boolean hasMessage();
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
-     * @return The body.
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     * @return The message.
      */
-    com.elarian.hera.proto.Common.CustomerMessageBody getBody();
+    com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReplyToMessageCommand}
@@ -19616,49 +19287,49 @@ public final class AppSocket {
       
     }
 
-    public static final int BODY_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.CustomerMessageBody body_;
+    public static final int MESSAGE_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.MessagingModel.OutboundMessage message_;
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.Override
-    public boolean hasBody() {
-      return body_ != null;
+    public boolean hasMessage() {
+      return message_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerMessageBody getBody() {
-      return body_ == null ? com.elarian.hera.proto.Common.CustomerMessageBody.getDefaultInstance() : body_;
+    public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+      return message_ == null ? com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance() : message_;
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
-    private void setBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+    private void setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
       value.getClass();
-  body_ = value;
+  message_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+    private void mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
       value.getClass();
-  if (body_ != null &&
-          body_ != com.elarian.hera.proto.Common.CustomerMessageBody.getDefaultInstance()) {
-        body_ =
-          com.elarian.hera.proto.Common.CustomerMessageBody.newBuilder(body_).mergeFrom(value).buildPartial();
+  if (message_ != null &&
+          message_ != com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance()) {
+        message_ =
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.newBuilder(message_).mergeFrom(value).buildPartial();
       } else {
-        body_ = value;
+        message_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
-    private void clearBody() {  body_ = null;
+    private void clearMessage() {  message_ = null;
       
     }
 
@@ -19856,49 +19527,49 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
       @java.lang.Override
-      public boolean hasBody() {
-        return instance.hasBody();
+      public boolean hasMessage() {
+        return instance.hasMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerMessageBody getBody() {
-        return instance.getBody();
+      public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+        return instance.getMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder setBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+      public Builder setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         copyOnWrite();
-        instance.setBody(value);
+        instance.setMessage(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder setBody(
-          com.elarian.hera.proto.Common.CustomerMessageBody.Builder builderForValue) {
+      public Builder setMessage(
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder builderForValue) {
         copyOnWrite();
-        instance.setBody(builderForValue.build());
+        instance.setMessage(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder mergeBody(com.elarian.hera.proto.Common.CustomerMessageBody value) {
+      public Builder mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         copyOnWrite();
-        instance.mergeBody(value);
+        instance.mergeMessage(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.CustomerMessageBody body = 3;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
        */
-      public Builder clearBody() {  copyOnWrite();
-        instance.clearBody();
+      public Builder clearMessage() {  copyOnWrite();
+        instance.clearMessage();
         return this;
       }
 
@@ -19920,7 +19591,7 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customerId_",
               "replyToMessageId_",
-              "body_",
+              "message_",
             };
             java.lang.String info =
                 "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
@@ -19992,7 +19663,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 1;</code>
      * @return The status.
      */
-    com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus();
+    com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus();
 
     /**
      * <code>string description = 2;</code>
@@ -20054,9 +19725,9 @@ public final class AppSocket {
      * @return The status.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus() {
-      com.elarian.hera.proto.Common.MessageDeliveryStatus result = com.elarian.hera.proto.Common.MessageDeliveryStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.MessageDeliveryStatus.UNRECOGNIZED : result;
+    public com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus() {
+      com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus result = com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.UNRECOGNIZED : result;
     }
     /**
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 1;</code>
@@ -20069,7 +19740,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 1;</code>
      * @param value The status to set.
      */
-    private void setStatus(com.elarian.hera.proto.Common.MessageDeliveryStatus value) {
+    private void setStatus(com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus value) {
       status_ = value.getNumber();
       
     }
@@ -20338,7 +20009,7 @@ public final class AppSocket {
        * @return The status.
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus() {
+      public com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus() {
         return instance.getStatus();
       }
       /**
@@ -20346,7 +20017,7 @@ public final class AppSocket {
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.elarian.hera.proto.Common.MessageDeliveryStatus value) {
+      public Builder setStatus(com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -20582,8 +20253,8 @@ public final class AppSocket {
     }
   }
 
-  public interface MessagingConsentCommandOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MessagingConsentCommand)
+  public interface UpdateMessagingConsentCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UpdateMessagingConsentCommand)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -20595,7 +20266,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
@@ -20606,31 +20277,31 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      * @return The channelNumber.
      */
-    com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
+    com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-     * @return The enum numeric value on the wire for action.
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @return The enum numeric value on the wire for update.
      */
-    int getActionValue();
+    int getUpdateValue();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-     * @return The action.
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @return The update.
      */
-    com.elarian.hera.proto.Common.MessagingConsentAction getAction();
+    com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate getUpdate();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.MessagingConsentCommand}
+   * Protobuf type {@code com.elarian.hera.proto.UpdateMessagingConsentCommand}
    */
-  public  static final class MessagingConsentCommand extends
+  public  static final class UpdateMessagingConsentCommand extends
       com.google.protobuf.GeneratedMessageLite<
-          MessagingConsentCommand, MessagingConsentCommand.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingConsentCommand)
-      MessagingConsentCommandOrBuilder {
-    private MessagingConsentCommand() {
+          UpdateMessagingConsentCommand, UpdateMessagingConsentCommand.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UpdateMessagingConsentCommand)
+      UpdateMessagingConsentCommandOrBuilder {
+    private UpdateMessagingConsentCommand() {
     }
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
@@ -20642,13 +20313,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customerNumber_ = value;
       
@@ -20657,12 +20328,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
         customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
         customerNumber_ = value;
       }
@@ -20676,7 +20347,7 @@ public final class AppSocket {
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
+    private com.elarian.hera.proto.MessagingModel.MessagingChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
@@ -20688,13 +20359,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
+    public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
-    private void setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+    private void setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
       value.getClass();
   channelNumber_ = value;
       
@@ -20703,12 +20374,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+    private void mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
       value.getClass();
   if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance()) {
+          channelNumber_ != com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance()) {
         channelNumber_ =
-          com.elarian.hera.proto.Common.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
       } else {
         channelNumber_ = value;
       }
@@ -20721,115 +20392,115 @@ public final class AppSocket {
       
     }
 
-    public static final int ACTION_FIELD_NUMBER = 3;
-    private int action_;
+    public static final int UPDATE_FIELD_NUMBER = 3;
+    private int update_;
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-     * @return The enum numeric value on the wire for action.
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @return The enum numeric value on the wire for update.
      */
     @java.lang.Override
-    public int getActionValue() {
-      return action_;
+    public int getUpdateValue() {
+      return update_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-     * @return The action.
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @return The update.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingConsentAction getAction() {
-      com.elarian.hera.proto.Common.MessagingConsentAction result = com.elarian.hera.proto.Common.MessagingConsentAction.forNumber(action_);
-      return result == null ? com.elarian.hera.proto.Common.MessagingConsentAction.UNRECOGNIZED : result;
+    public com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate getUpdate() {
+      com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate result = com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate.forNumber(update_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate.UNRECOGNIZED : result;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-     * @param value The enum numeric value on the wire for action to set.
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @param value The enum numeric value on the wire for update to set.
      */
-    private void setActionValue(int value) {
-        action_ = value;
+    private void setUpdateValue(int value) {
+        update_ = value;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-     * @param value The action to set.
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @param value The update to set.
      */
-    private void setAction(com.elarian.hera.proto.Common.MessagingConsentAction value) {
-      action_ = value.getNumber();
+    private void setUpdate(com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate value) {
+      update_ = value.getNumber();
       
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
      */
-    private void clearAction() {
+    private void clearUpdate() {
       
-      action_ = 0;
+      update_ = 0;
     }
 
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(byte[] data)
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseDelimitedFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20840,19 +20511,19 @@ public final class AppSocket {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MessagingConsentCommand prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.MessagingConsentCommand}
+     * Protobuf type {@code com.elarian.hera.proto.UpdateMessagingConsentCommand}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.MessagingConsentCommand, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MessagingConsentCommand)
-        com.elarian.hera.proto.AppSocket.MessagingConsentCommandOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.MessagingConsentCommand.newBuilder()
+          com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.UpdateMessagingConsentCommand)
+        com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommandOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -20869,13 +20540,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -20884,7 +20555,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -20892,7 +20563,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -20916,13 +20587,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
+      public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
@@ -20931,7 +20602,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
       public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.MessagingChannelNumber.Builder builderForValue) {
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setChannelNumber(builderForValue.build());
         return this;
@@ -20939,7 +20610,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
        */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
         copyOnWrite();
         instance.mergeChannelNumber(value);
         return this;
@@ -20953,52 +20624,52 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-       * @return The enum numeric value on the wire for action.
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @return The enum numeric value on the wire for update.
        */
       @java.lang.Override
-      public int getActionValue() {
-        return instance.getActionValue();
+      public int getUpdateValue() {
+        return instance.getUpdateValue();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-       * @param value The action to set.
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @param value The update to set.
        * @return This builder for chaining.
        */
-      public Builder setActionValue(int value) {
+      public Builder setUpdateValue(int value) {
         copyOnWrite();
-        instance.setActionValue(value);
+        instance.setUpdateValue(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-       * @return The action.
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @return The update.
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingConsentAction getAction() {
-        return instance.getAction();
+      public com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate getUpdate() {
+        return instance.getUpdate();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
-       * @param value The enum numeric value on the wire for action to set.
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @param value The enum numeric value on the wire for update to set.
        * @return This builder for chaining.
        */
-      public Builder setAction(com.elarian.hera.proto.Common.MessagingConsentAction value) {
+      public Builder setUpdate(com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate value) {
         copyOnWrite();
-        instance.setAction(value);
+        instance.setUpdate(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentAction action = 3;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearAction() {
+      public Builder clearUpdate() {
         copyOnWrite();
-        instance.clearAction();
+        instance.clearUpdate();
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingConsentCommand)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.UpdateMessagingConsentCommand)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -21007,7 +20678,7 @@ public final class AppSocket {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.MessagingConsentCommand();
+          return new com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -21016,7 +20687,7 @@ public final class AppSocket {
             java.lang.Object[] objects = new java.lang.Object[] {
               "customerNumber_",
               "channelNumber_",
-              "action_",
+              "update_",
             };
             java.lang.String info =
                 "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
@@ -21028,13 +20699,13 @@ public final class AppSocket {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MessagingConsentCommand> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.MessagingConsentCommand.class) {
+            synchronized (com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MessagingConsentCommand>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -21053,42 +20724,42 @@ public final class AppSocket {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MessagingConsentCommand)
-    private static final com.elarian.hera.proto.AppSocket.MessagingConsentCommand DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.UpdateMessagingConsentCommand)
+    private static final com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand DEFAULT_INSTANCE;
     static {
-      MessagingConsentCommand defaultInstance = new MessagingConsentCommand();
+      UpdateMessagingConsentCommand defaultInstance = new UpdateMessagingConsentCommand();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        MessagingConsentCommand.class, defaultInstance);
+        UpdateMessagingConsentCommand.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentCommand getDefaultInstance() {
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<MessagingConsentCommand> PARSER;
+    private static volatile com.google.protobuf.Parser<UpdateMessagingConsentCommand> PARSER;
 
-    public static com.google.protobuf.Parser<MessagingConsentCommand> parser() {
+    public static com.google.protobuf.Parser<UpdateMessagingConsentCommand> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
 
-  public interface MessagingConsentReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MessagingConsentReply)
+  public interface UpdateMessagingConsentReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UpdateMessagingConsentReply)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
      * @return The status.
      */
-    com.elarian.hera.proto.Common.MessagingConsentStatus getStatus();
+    com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus getStatus();
 
     /**
      * <code>string description = 2;</code>
@@ -21114,20 +20785,20 @@ public final class AppSocket {
     com.google.protobuf.StringValue getCustomerId();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.MessagingConsentReply}
+   * Protobuf type {@code com.elarian.hera.proto.UpdateMessagingConsentReply}
    */
-  public  static final class MessagingConsentReply extends
+  public  static final class UpdateMessagingConsentReply extends
       com.google.protobuf.GeneratedMessageLite<
-          MessagingConsentReply, MessagingConsentReply.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingConsentReply)
-      MessagingConsentReplyOrBuilder {
-    private MessagingConsentReply() {
+          UpdateMessagingConsentReply, UpdateMessagingConsentReply.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UpdateMessagingConsentReply)
+      UpdateMessagingConsentReplyOrBuilder {
+    private UpdateMessagingConsentReply() {
       description_ = "";
     }
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_;
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override
@@ -21135,31 +20806,31 @@ public final class AppSocket {
       return status_;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
      * @return The status.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingConsentStatus getStatus() {
-      com.elarian.hera.proto.Common.MessagingConsentStatus result = com.elarian.hera.proto.Common.MessagingConsentStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.MessagingConsentStatus.UNRECOGNIZED : result;
+    public com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus getStatus() {
+      com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus result = com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus.UNRECOGNIZED : result;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
      * @param value The enum numeric value on the wire for status to set.
      */
     private void setStatusValue(int value) {
         status_ = value;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
      * @param value The status to set.
      */
-    private void setStatus(com.elarian.hera.proto.Common.MessagingConsentStatus value) {
+    private void setStatus(com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus value) {
       status_ = value.getNumber();
       
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
      */
     private void clearStatus() {
       
@@ -21259,73 +20930,73 @@ public final class AppSocket {
       
     }
 
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(byte[] data)
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseDelimitedFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21336,26 +21007,26 @@ public final class AppSocket {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MessagingConsentReply prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.MessagingConsentReply}
+     * Protobuf type {@code com.elarian.hera.proto.UpdateMessagingConsentReply}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.MessagingConsentReply, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MessagingConsentReply)
-        com.elarian.hera.proto.AppSocket.MessagingConsentReplyOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.MessagingConsentReply.newBuilder()
+          com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.UpdateMessagingConsentReply)
+        com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReplyOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
 
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override
@@ -21363,7 +21034,7 @@ public final class AppSocket {
         return instance.getStatusValue();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -21373,25 +21044,25 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
        * @return The status.
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingConsentStatus getStatus() {
+      public com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus getStatus() {
         return instance.getStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.elarian.hera.proto.Common.MessagingConsentStatus value) {
+      public Builder setStatus(com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 1;</code>
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -21496,7 +21167,7 @@ public final class AppSocket {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingConsentReply)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.UpdateMessagingConsentReply)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -21505,7 +21176,7 @@ public final class AppSocket {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.MessagingConsentReply();
+          return new com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -21526,13 +21197,13 @@ public final class AppSocket {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MessagingConsentReply> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.MessagingConsentReply.class) {
+            synchronized (com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MessagingConsentReply>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -21551,24 +21222,24 @@ public final class AppSocket {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MessagingConsentReply)
-    private static final com.elarian.hera.proto.AppSocket.MessagingConsentReply DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.UpdateMessagingConsentReply)
+    private static final com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply DEFAULT_INSTANCE;
     static {
-      MessagingConsentReply defaultInstance = new MessagingConsentReply();
+      UpdateMessagingConsentReply defaultInstance = new UpdateMessagingConsentReply();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        MessagingConsentReply.class, defaultInstance);
+        UpdateMessagingConsentReply.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentReply getDefaultInstance() {
+    public static com.elarian.hera.proto.AppSocket.UpdateMessagingConsentReply getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<MessagingConsentReply> PARSER;
+    private static volatile com.google.protobuf.Parser<UpdateMessagingConsentReply> PARSER;
 
-    public static com.google.protobuf.Parser<MessagingConsentReply> parser() {
+    public static com.google.protobuf.Parser<UpdateMessagingConsentReply> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -21586,7 +21257,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
      * @return The debitParty.
      */
-    com.elarian.hera.proto.Common.PaymentCounterParty getDebitParty();
+    com.elarian.hera.proto.PaymentModel.PaymentCounterParty getDebitParty();
 
     /**
      * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
@@ -21597,7 +21268,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
      * @return The creditParty.
      */
-    com.elarian.hera.proto.Common.PaymentCounterParty getCreditParty();
+    com.elarian.hera.proto.PaymentModel.PaymentCounterParty getCreditParty();
 
     /**
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
@@ -21608,7 +21279,18 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
      * @return The value.
      */
-    com.elarian.hera.proto.Common.Cash getValue();
+    com.elarian.hera.proto.CommonModel.Cash getValue();
+
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     * @return Whether the requestId field is set.
+     */
+    boolean hasRequestId();
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     * @return The requestId.
+     */
+    com.google.protobuf.StringValue getRequestId();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.InitiatePaymentCommand}
@@ -21621,7 +21303,7 @@ public final class AppSocket {
     private InitiatePaymentCommand() {
     }
     public static final int DEBIT_PARTY_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.PaymentCounterParty debitParty_;
+    private com.elarian.hera.proto.PaymentModel.PaymentCounterParty debitParty_;
     /**
      * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
      */
@@ -21633,13 +21315,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentCounterParty getDebitParty() {
-      return debitParty_ == null ? com.elarian.hera.proto.Common.PaymentCounterParty.getDefaultInstance() : debitParty_;
+    public com.elarian.hera.proto.PaymentModel.PaymentCounterParty getDebitParty() {
+      return debitParty_ == null ? com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance() : debitParty_;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
      */
-    private void setDebitParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+    private void setDebitParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
       value.getClass();
   debitParty_ = value;
       
@@ -21648,12 +21330,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeDebitParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+    private void mergeDebitParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
       value.getClass();
   if (debitParty_ != null &&
-          debitParty_ != com.elarian.hera.proto.Common.PaymentCounterParty.getDefaultInstance()) {
+          debitParty_ != com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance()) {
         debitParty_ =
-          com.elarian.hera.proto.Common.PaymentCounterParty.newBuilder(debitParty_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty.newBuilder(debitParty_).mergeFrom(value).buildPartial();
       } else {
         debitParty_ = value;
       }
@@ -21667,7 +21349,7 @@ public final class AppSocket {
     }
 
     public static final int CREDIT_PARTY_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.PaymentCounterParty creditParty_;
+    private com.elarian.hera.proto.PaymentModel.PaymentCounterParty creditParty_;
     /**
      * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
      */
@@ -21679,13 +21361,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentCounterParty getCreditParty() {
-      return creditParty_ == null ? com.elarian.hera.proto.Common.PaymentCounterParty.getDefaultInstance() : creditParty_;
+    public com.elarian.hera.proto.PaymentModel.PaymentCounterParty getCreditParty() {
+      return creditParty_ == null ? com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance() : creditParty_;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
      */
-    private void setCreditParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+    private void setCreditParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
       value.getClass();
   creditParty_ = value;
       
@@ -21694,12 +21376,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCreditParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+    private void mergeCreditParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
       value.getClass();
   if (creditParty_ != null &&
-          creditParty_ != com.elarian.hera.proto.Common.PaymentCounterParty.getDefaultInstance()) {
+          creditParty_ != com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance()) {
         creditParty_ =
-          com.elarian.hera.proto.Common.PaymentCounterParty.newBuilder(creditParty_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty.newBuilder(creditParty_).mergeFrom(value).buildPartial();
       } else {
         creditParty_ = value;
       }
@@ -21713,7 +21395,7 @@ public final class AppSocket {
     }
 
     public static final int VALUE_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.Cash value_;
+    private com.elarian.hera.proto.CommonModel.Cash value_;
     /**
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
      */
@@ -21725,13 +21407,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.Cash getValue() {
-      return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
+    public com.elarian.hera.proto.CommonModel.Cash getValue() {
+      return value_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : value_;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
      */
-    private void setValue(com.elarian.hera.proto.Common.Cash value) {
+    private void setValue(com.elarian.hera.proto.CommonModel.Cash value) {
       value.getClass();
   value_ = value;
       
@@ -21740,12 +21422,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeValue(com.elarian.hera.proto.Common.Cash value) {
+    private void mergeValue(com.elarian.hera.proto.CommonModel.Cash value) {
       value.getClass();
   if (value_ != null &&
-          value_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
+          value_ != com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance()) {
         value_ =
-          com.elarian.hera.proto.Common.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
       } else {
         value_ = value;
       }
@@ -21755,6 +21437,52 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
      */
     private void clearValue() {  value_ = null;
+      
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 4;
+    private com.google.protobuf.StringValue requestId_;
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasRequestId() {
+      return requestId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getRequestId() {
+      return requestId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : requestId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    private void setRequestId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  requestId_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeRequestId(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (requestId_ != null &&
+          requestId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        requestId_ =
+          com.google.protobuf.StringValue.newBuilder(requestId_).mergeFrom(value).buildPartial();
+      } else {
+        requestId_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue request_id = 4;</code>
+     */
+    private void clearRequestId() {  requestId_ = null;
       
     }
 
@@ -21864,13 +21592,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentCounterParty getDebitParty() {
+      public com.elarian.hera.proto.PaymentModel.PaymentCounterParty getDebitParty() {
         return instance.getDebitParty();
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
        */
-      public Builder setDebitParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+      public Builder setDebitParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
         copyOnWrite();
         instance.setDebitParty(value);
         return this;
@@ -21879,7 +21607,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
        */
       public Builder setDebitParty(
-          com.elarian.hera.proto.Common.PaymentCounterParty.Builder builderForValue) {
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder builderForValue) {
         copyOnWrite();
         instance.setDebitParty(builderForValue.build());
         return this;
@@ -21887,7 +21615,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 1;</code>
        */
-      public Builder mergeDebitParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+      public Builder mergeDebitParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
         copyOnWrite();
         instance.mergeDebitParty(value);
         return this;
@@ -21911,13 +21639,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentCounterParty getCreditParty() {
+      public com.elarian.hera.proto.PaymentModel.PaymentCounterParty getCreditParty() {
         return instance.getCreditParty();
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
        */
-      public Builder setCreditParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+      public Builder setCreditParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
         copyOnWrite();
         instance.setCreditParty(value);
         return this;
@@ -21926,7 +21654,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
        */
       public Builder setCreditParty(
-          com.elarian.hera.proto.Common.PaymentCounterParty.Builder builderForValue) {
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder builderForValue) {
         copyOnWrite();
         instance.setCreditParty(builderForValue.build());
         return this;
@@ -21934,7 +21662,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 2;</code>
        */
-      public Builder mergeCreditParty(com.elarian.hera.proto.Common.PaymentCounterParty value) {
+      public Builder mergeCreditParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
         copyOnWrite();
         instance.mergeCreditParty(value);
         return this;
@@ -21958,13 +21686,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.Cash value = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.Cash getValue() {
+      public com.elarian.hera.proto.CommonModel.Cash getValue() {
         return instance.getValue();
       }
       /**
        * <code>.com.elarian.hera.proto.Cash value = 3;</code>
        */
-      public Builder setValue(com.elarian.hera.proto.Common.Cash value) {
+      public Builder setValue(com.elarian.hera.proto.CommonModel.Cash value) {
         copyOnWrite();
         instance.setValue(value);
         return this;
@@ -21973,7 +21701,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.Cash value = 3;</code>
        */
       public Builder setValue(
-          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
         copyOnWrite();
         instance.setValue(builderForValue.build());
         return this;
@@ -21981,7 +21709,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.Cash value = 3;</code>
        */
-      public Builder mergeValue(com.elarian.hera.proto.Common.Cash value) {
+      public Builder mergeValue(com.elarian.hera.proto.CommonModel.Cash value) {
         copyOnWrite();
         instance.mergeValue(value);
         return this;
@@ -21991,6 +21719,53 @@ public final class AppSocket {
        */
       public Builder clearValue() {  copyOnWrite();
         instance.clearValue();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasRequestId() {
+        return instance.hasRequestId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getRequestId() {
+        return instance.getRequestId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      public Builder setRequestId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setRequestId(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      public Builder setRequestId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setRequestId(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      public Builder mergeRequestId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeRequestId(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue request_id = 4;</code>
+       */
+      public Builder clearRequestId() {  copyOnWrite();
+        instance.clearRequestId();
         return this;
       }
 
@@ -22013,10 +21788,11 @@ public final class AppSocket {
               "debitParty_",
               "creditParty_",
               "value_",
+              "requestId_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
-                "\t";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\t\u0004\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -22084,7 +21860,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
      * @return The status.
      */
-    com.elarian.hera.proto.Common.PaymentStatus getStatus();
+    com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus();
 
     /**
      * <code>string description = 2;</code>
@@ -22157,9 +21933,9 @@ public final class AppSocket {
      * @return The status.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
-      com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
+    public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
+      com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
@@ -22172,7 +21948,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentStatus status = 1;</code>
      * @param value The status to set.
      */
-    private void setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+    private void setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
       status_ = value.getNumber();
       
     }
@@ -22487,7 +22263,7 @@ public final class AppSocket {
        * @return The status.
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+      public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
         return instance.getStatus();
       }
       /**
@@ -22495,7 +22271,7 @@ public final class AppSocket {
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+      public Builder setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -22775,1001 +22551,6 @@ public final class AppSocket {
     private static volatile com.google.protobuf.Parser<InitiatePaymentReply> PARSER;
 
     public static com.google.protobuf.Parser<InitiatePaymentReply> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface MakeVoiceCallCommandOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MakeVoiceCallCommand)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     * @return Whether the customerNumber field is set.
-     */
-    boolean hasCustomerNumber();
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     * @return The customerNumber.
-     */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     * @return Whether the channelNumber field is set.
-     */
-    boolean hasChannelNumber();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     * @return The channelNumber.
-     */
-    com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.MakeVoiceCallCommand}
-   */
-  public  static final class MakeVoiceCallCommand extends
-      com.google.protobuf.GeneratedMessageLite<
-          MakeVoiceCallCommand, MakeVoiceCallCommand.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MakeVoiceCallCommand)
-      MakeVoiceCallCommandOrBuilder {
-    private MakeVoiceCallCommand() {
-    }
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.Override
-    public boolean hasCustomerNumber() {
-      return customerNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  customerNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
-      } else {
-        customerNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    private void clearCustomerNumber() {  customerNumber_ = null;
-      
-    }
-
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public boolean hasChannelNumber() {
-      return channelNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance() : channelNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    private void setChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
-      value.getClass();
-  channelNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
-      value.getClass();
-  if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance()) {
-        channelNumber_ =
-          com.elarian.hera.proto.Common.VoiceChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
-      } else {
-        channelNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    private void clearChannelNumber() {  channelNumber_ = null;
-      
-    }
-
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.MakeVoiceCallCommand}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MakeVoiceCallCommand)
-        com.elarian.hera.proto.AppSocket.MakeVoiceCallCommandOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      @java.lang.Override
-      public boolean hasCustomerNumber() {
-        return instance.hasCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-        return instance.getCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.setCustomerNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCustomerNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.mergeCustomerNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder clearCustomerNumber() {  copyOnWrite();
-        instance.clearCustomerNumber();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public boolean hasChannelNumber() {
-        return instance.hasChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
-        return instance.getChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
-        copyOnWrite();
-        instance.setChannelNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.VoiceChannelNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setChannelNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
-        copyOnWrite();
-        instance.mergeChannelNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      public Builder clearChannelNumber() {  copyOnWrite();
-        instance.clearChannelNumber();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MakeVoiceCallCommand)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "customerNumber_",
-              "channelNumber_",
-            };
-            java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\t\u0002\t";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MakeVoiceCallCommand)
-    private static final com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand DEFAULT_INSTANCE;
-    static {
-      MakeVoiceCallCommand defaultInstance = new MakeVoiceCallCommand();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        MakeVoiceCallCommand.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallCommand getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<MakeVoiceCallCommand> PARSER;
-
-    public static com.google.protobuf.Parser<MakeVoiceCallCommand> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface MakeVoiceCallReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MakeVoiceCallReply)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    int getStatusValue();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-     * @return The status.
-     */
-    com.elarian.hera.proto.Common.VoiceCallStatus getStatus();
-
-    /**
-     * <code>string description = 2;</code>
-     * @return The description.
-     */
-    java.lang.String getDescription();
-    /**
-     * <code>string description = 2;</code>
-     * @return The bytes for description.
-     */
-    com.google.protobuf.ByteString
-        getDescriptionBytes();
-
-    /**
-     * <code>.google.protobuf.StringValue session_id = 3;</code>
-     * @return Whether the sessionId field is set.
-     */
-    boolean hasSessionId();
-    /**
-     * <code>.google.protobuf.StringValue session_id = 3;</code>
-     * @return The sessionId.
-     */
-    com.google.protobuf.StringValue getSessionId();
-
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     * @return Whether the customerId field is set.
-     */
-    boolean hasCustomerId();
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     * @return The customerId.
-     */
-    com.google.protobuf.StringValue getCustomerId();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.MakeVoiceCallReply}
-   */
-  public  static final class MakeVoiceCallReply extends
-      com.google.protobuf.GeneratedMessageLite<
-          MakeVoiceCallReply, MakeVoiceCallReply.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MakeVoiceCallReply)
-      MakeVoiceCallReplyOrBuilder {
-    private MakeVoiceCallReply() {
-      description_ = "";
-    }
-    public static final int STATUS_FIELD_NUMBER = 1;
-    private int status_;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override
-    public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-     * @return The status.
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.VoiceCallStatus getStatus() {
-      com.elarian.hera.proto.Common.VoiceCallStatus result = com.elarian.hera.proto.Common.VoiceCallStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.VoiceCallStatus.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-     * @param value The enum numeric value on the wire for status to set.
-     */
-    private void setStatusValue(int value) {
-        status_ = value;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-     * @param value The status to set.
-     */
-    private void setStatus(com.elarian.hera.proto.Common.VoiceCallStatus value) {
-      status_ = value.getNumber();
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-     */
-    private void clearStatus() {
-      
-      status_ = 0;
-    }
-
-    public static final int DESCRIPTION_FIELD_NUMBER = 2;
-    private java.lang.String description_;
-    /**
-     * <code>string description = 2;</code>
-     * @return The description.
-     */
-    @java.lang.Override
-    public java.lang.String getDescription() {
-      return description_;
-    }
-    /**
-     * <code>string description = 2;</code>
-     * @return The bytes for description.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDescriptionBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(description_);
-    }
-    /**
-     * <code>string description = 2;</code>
-     * @param value The description to set.
-     */
-    private void setDescription(
-        java.lang.String value) {
-      value.getClass();
-  
-      description_ = value;
-    }
-    /**
-     * <code>string description = 2;</code>
-     */
-    private void clearDescription() {
-      
-      description_ = getDefaultInstance().getDescription();
-    }
-    /**
-     * <code>string description = 2;</code>
-     * @param value The bytes for description to set.
-     */
-    private void setDescriptionBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      description_ = value.toStringUtf8();
-      
-    }
-
-    public static final int SESSION_ID_FIELD_NUMBER = 3;
-    private com.google.protobuf.StringValue sessionId_;
-    /**
-     * <code>.google.protobuf.StringValue session_id = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasSessionId() {
-      return sessionId_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue session_id = 3;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getSessionId() {
-      return sessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sessionId_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue session_id = 3;</code>
-     */
-    private void setSessionId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  sessionId_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue session_id = 3;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeSessionId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (sessionId_ != null &&
-          sessionId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        sessionId_ =
-          com.google.protobuf.StringValue.newBuilder(sessionId_).mergeFrom(value).buildPartial();
-      } else {
-        sessionId_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue session_id = 3;</code>
-     */
-    private void clearSessionId() {  sessionId_ = null;
-      
-    }
-
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue customerId_;
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    @java.lang.Override
-    public boolean hasCustomerId() {
-      return customerId_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getCustomerId() {
-      return customerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerId_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    private void setCustomerId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  customerId_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (customerId_ != null &&
-          customerId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        customerId_ =
-          com.google.protobuf.StringValue.newBuilder(customerId_).mergeFrom(value).buildPartial();
-      } else {
-        customerId_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue customer_id = 4;</code>
-     */
-    private void clearCustomerId() {  customerId_ = null;
-      
-    }
-
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MakeVoiceCallReply prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.MakeVoiceCallReply}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.MakeVoiceCallReply, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MakeVoiceCallReply)
-        com.elarian.hera.proto.AppSocket.MakeVoiceCallReplyOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.MakeVoiceCallReply.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override
-      public int getStatusValue() {
-        return instance.getStatusValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        copyOnWrite();
-        instance.setStatusValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.VoiceCallStatus getStatus() {
-        return instance.getStatus();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(com.elarian.hera.proto.Common.VoiceCallStatus value) {
-        copyOnWrite();
-        instance.setStatus(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallStatus status = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        copyOnWrite();
-        instance.clearStatus();
-        return this;
-      }
-
-      /**
-       * <code>string description = 2;</code>
-       * @return The description.
-       */
-      @java.lang.Override
-      public java.lang.String getDescription() {
-        return instance.getDescription();
-      }
-      /**
-       * <code>string description = 2;</code>
-       * @return The bytes for description.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getDescriptionBytes() {
-        return instance.getDescriptionBytes();
-      }
-      /**
-       * <code>string description = 2;</code>
-       * @param value The description to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDescription(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setDescription(value);
-        return this;
-      }
-      /**
-       * <code>string description = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDescription() {
-        copyOnWrite();
-        instance.clearDescription();
-        return this;
-      }
-      /**
-       * <code>string description = 2;</code>
-       * @param value The bytes for description to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDescriptionBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setDescriptionBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue session_id = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasSessionId() {
-        return instance.hasSessionId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue session_id = 3;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getSessionId() {
-        return instance.getSessionId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue session_id = 3;</code>
-       */
-      public Builder setSessionId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setSessionId(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue session_id = 3;</code>
-       */
-      public Builder setSessionId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setSessionId(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue session_id = 3;</code>
-       */
-      public Builder mergeSessionId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeSessionId(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue session_id = 3;</code>
-       */
-      public Builder clearSessionId() {  copyOnWrite();
-        instance.clearSessionId();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      @java.lang.Override
-      public boolean hasCustomerId() {
-        return instance.hasCustomerId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getCustomerId() {
-        return instance.getCustomerId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      public Builder setCustomerId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setCustomerId(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      public Builder setCustomerId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCustomerId(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      public Builder mergeCustomerId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeCustomerId(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_id = 4;</code>
-       */
-      public Builder clearCustomerId() {  copyOnWrite();
-        instance.clearCustomerId();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MakeVoiceCallReply)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.MakeVoiceCallReply();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "status_",
-              "description_",
-              "sessionId_",
-              "customerId_",
-            };
-            java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\f\u0002\u0208" +
-                "\u0003\t\u0004\t";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MakeVoiceCallReply> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.MakeVoiceCallReply.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MakeVoiceCallReply>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MakeVoiceCallReply)
-    private static final com.elarian.hera.proto.AppSocket.MakeVoiceCallReply DEFAULT_INSTANCE;
-    static {
-      MakeVoiceCallReply defaultInstance = new MakeVoiceCallReply();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        MakeVoiceCallReply.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.MakeVoiceCallReply getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<MakeVoiceCallReply> PARSER;
-
-    public static com.google.protobuf.Parser<MakeVoiceCallReply> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -24233,8 +23014,8 @@ public final class AppSocket {
     }
   }
 
-  public interface WebActionCommandOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebActionCommand)
+  public interface CustomerActivityCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CustomerActivityCommand)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -24246,18 +23027,18 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      * @return The channelNumber.
      */
-    com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber();
+    com.elarian.hera.proto.ActivityModel.ActivityChannelNumber getChannelNumber();
 
     /**
      * <code>string session_id = 3;</code>
@@ -24318,19 +23099,19 @@ public final class AppSocket {
         java.lang.String key);
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.WebActionCommand}
+   * Protobuf type {@code com.elarian.hera.proto.CustomerActivityCommand}
    */
-  public  static final class WebActionCommand extends
+  public  static final class CustomerActivityCommand extends
       com.google.protobuf.GeneratedMessageLite<
-          WebActionCommand, WebActionCommand.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebActionCommand)
-      WebActionCommandOrBuilder {
-    private WebActionCommand() {
+          CustomerActivityCommand, CustomerActivityCommand.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerActivityCommand)
+      CustomerActivityCommandOrBuilder {
+    private CustomerActivityCommand() {
       sessionId_ = "";
       key_ = "";
     }
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
@@ -24342,13 +23123,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customerNumber_ = value;
       
@@ -24357,12 +23138,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
         customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
         customerNumber_ = value;
       }
@@ -24376,46 +23157,46 @@ public final class AppSocket {
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.WebChannelNumber channelNumber_;
+    private com.elarian.hera.proto.ActivityModel.ActivityChannelNumber channelNumber_;
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance() : channelNumber_;
+    public com.elarian.hera.proto.ActivityModel.ActivityChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.ActivityModel.ActivityChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
-    private void setChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+    private void setChannelNumber(com.elarian.hera.proto.ActivityModel.ActivityChannelNumber value) {
       value.getClass();
   channelNumber_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+    private void mergeChannelNumber(com.elarian.hera.proto.ActivityModel.ActivityChannelNumber value) {
       value.getClass();
   if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance()) {
+          channelNumber_ != com.elarian.hera.proto.ActivityModel.ActivityChannelNumber.getDefaultInstance()) {
         channelNumber_ =
-          com.elarian.hera.proto.Common.WebChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.ActivityModel.ActivityChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
       } else {
         channelNumber_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
     private void clearChannelNumber() {  channelNumber_ = null;
       
@@ -24608,73 +23389,73 @@ public final class AppSocket {
       return internalGetMutableProperties();
     }
 
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(byte[] data)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseDelimitedFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24685,19 +23466,19 @@ public final class AppSocket {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.WebActionCommand prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.CustomerActivityCommand prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.WebActionCommand}
+     * Protobuf type {@code com.elarian.hera.proto.CustomerActivityCommand}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.WebActionCommand, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebActionCommand)
-        com.elarian.hera.proto.AppSocket.WebActionCommandOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.WebActionCommand.newBuilder()
+          com.elarian.hera.proto.AppSocket.CustomerActivityCommand, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.CustomerActivityCommand)
+        com.elarian.hera.proto.AppSocket.CustomerActivityCommandOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.CustomerActivityCommand.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -24714,13 +23495,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -24729,7 +23510,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -24737,7 +23518,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -24751,46 +23532,46 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
       @java.lang.Override
       public boolean hasChannelNumber() {
         return instance.hasChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber() {
+      public com.elarian.hera.proto.ActivityModel.ActivityChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.ActivityModel.ActivityChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
       public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.WebChannelNumber.Builder builderForValue) {
+          com.elarian.hera.proto.ActivityModel.ActivityChannelNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setChannelNumber(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.ActivityModel.ActivityChannelNumber value) {
         copyOnWrite();
         instance.mergeChannelNumber(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
       public Builder clearChannelNumber() {  copyOnWrite();
         instance.clearChannelNumber();
@@ -24993,7 +23774,7 @@ public final class AppSocket {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebActionCommand)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CustomerActivityCommand)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -25002,7 +23783,7 @@ public final class AppSocket {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.WebActionCommand();
+          return new com.elarian.hera.proto.AppSocket.CustomerActivityCommand();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -25026,13 +23807,13 @@ public final class AppSocket {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.WebActionCommand> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.CustomerActivityCommand> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.WebActionCommand.class) {
+            synchronized (com.elarian.hera.proto.AppSocket.CustomerActivityCommand.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.WebActionCommand>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.CustomerActivityCommand>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -25051,30 +23832,30 @@ public final class AppSocket {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebActionCommand)
-    private static final com.elarian.hera.proto.AppSocket.WebActionCommand DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.CustomerActivityCommand)
+    private static final com.elarian.hera.proto.AppSocket.CustomerActivityCommand DEFAULT_INSTANCE;
     static {
-      WebActionCommand defaultInstance = new WebActionCommand();
+      CustomerActivityCommand defaultInstance = new CustomerActivityCommand();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        WebActionCommand.class, defaultInstance);
+        CustomerActivityCommand.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.AppSocket.WebActionCommand getDefaultInstance() {
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityCommand getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<WebActionCommand> PARSER;
+    private static volatile com.google.protobuf.Parser<CustomerActivityCommand> PARSER;
 
-    public static com.google.protobuf.Parser<WebActionCommand> parser() {
+    public static com.google.protobuf.Parser<CustomerActivityCommand> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
 
-  public interface WebActionReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebActionReply)
+  public interface CustomerActivityReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CustomerActivityReply)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -25107,14 +23888,14 @@ public final class AppSocket {
     com.google.protobuf.StringValue getCustomerId();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.WebActionReply}
+   * Protobuf type {@code com.elarian.hera.proto.CustomerActivityReply}
    */
-  public  static final class WebActionReply extends
+  public  static final class CustomerActivityReply extends
       com.google.protobuf.GeneratedMessageLite<
-          WebActionReply, WebActionReply.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebActionReply)
-      WebActionReplyOrBuilder {
-    private WebActionReply() {
+          CustomerActivityReply, CustomerActivityReply.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerActivityReply)
+      CustomerActivityReplyOrBuilder {
+    private CustomerActivityReply() {
       description_ = "";
     }
     public static final int STATUS_FIELD_NUMBER = 1;
@@ -25236,73 +24017,73 @@ public final class AppSocket {
       
     }
 
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(byte[] data)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseDelimitedFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionReply parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -25313,19 +24094,19 @@ public final class AppSocket {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.WebActionReply prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.CustomerActivityReply prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.WebActionReply}
+     * Protobuf type {@code com.elarian.hera.proto.CustomerActivityReply}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.WebActionReply, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebActionReply)
-        com.elarian.hera.proto.AppSocket.WebActionReplyOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.WebActionReply.newBuilder()
+          com.elarian.hera.proto.AppSocket.CustomerActivityReply, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.CustomerActivityReply)
+        com.elarian.hera.proto.AppSocket.CustomerActivityReplyOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.CustomerActivityReply.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -25455,7 +24236,7 @@ public final class AppSocket {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebActionReply)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CustomerActivityReply)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -25464,7 +24245,7 @@ public final class AppSocket {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.WebActionReply();
+          return new com.elarian.hera.proto.AppSocket.CustomerActivityReply();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -25485,13 +24266,13 @@ public final class AppSocket {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.WebActionReply> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.CustomerActivityReply> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.WebActionReply.class) {
+            synchronized (com.elarian.hera.proto.AppSocket.CustomerActivityReply.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.WebActionReply>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.CustomerActivityReply>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -25510,24 +24291,24 @@ public final class AppSocket {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebActionReply)
-    private static final com.elarian.hera.proto.AppSocket.WebActionReply DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.CustomerActivityReply)
+    private static final com.elarian.hera.proto.AppSocket.CustomerActivityReply DEFAULT_INSTANCE;
     static {
-      WebActionReply defaultInstance = new WebActionReply();
+      CustomerActivityReply defaultInstance = new CustomerActivityReply();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        WebActionReply.class, defaultInstance);
+        CustomerActivityReply.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.AppSocket.WebActionReply getDefaultInstance() {
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityReply getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<WebActionReply> PARSER;
+    private static volatile com.google.protobuf.Parser<CustomerActivityReply> PARSER;
 
-    public static com.google.protobuf.Parser<WebActionReply> parser() {
+    public static com.google.protobuf.Parser<CustomerActivityReply> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -26043,7 +24824,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
      * @return The appData.
      */
-    com.elarian.hera.proto.Common.DataMapValue getAppData();
+    com.elarian.hera.proto.CommonModel.DataMapValue getAppData();
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
@@ -26068,70 +24849,70 @@ public final class AppSocket {
     com.elarian.hera.proto.AppSocket.ReminderNotification getReminder();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
-     * @return Whether the messagingConsentStatus field is set.
+     * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
+     * @return Whether the messagingSessionStarted field is set.
      */
-    boolean hasMessagingConsentStatus();
+    boolean hasMessagingSessionStarted();
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
-     * @return The messagingConsentStatus.
+     * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
+     * @return The messagingSessionStarted.
      */
-    com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification getMessagingConsentStatus();
+    com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification getMessagingSessionStarted();
 
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
-     * @return Whether the messagingSessionStatus field is set.
+     * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
+     * @return Whether the messagingSessionRenewed field is set.
      */
-    boolean hasMessagingSessionStatus();
+    boolean hasMessagingSessionRenewed();
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
-     * @return The messagingSessionStatus.
+     * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
+     * @return The messagingSessionRenewed.
      */
-    com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification getMessagingSessionStatus();
+    com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification getMessagingSessionRenewed();
 
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+     * @return Whether the messagingSessionEnded field is set.
+     */
+    boolean hasMessagingSessionEnded();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+     * @return The messagingSessionEnded.
+     */
+    com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification getMessagingSessionEnded();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+     * @return Whether the messagingConsentUpdate field is set.
+     */
+    boolean hasMessagingConsentUpdate();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+     * @return The messagingConsentUpdate.
+     */
+    com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification getMessagingConsentUpdate();
+
+    /**
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
      * @return Whether the receivedMessage field is set.
      */
     boolean hasReceivedMessage();
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
      * @return The receivedMessage.
      */
     com.elarian.hera.proto.AppSocket.ReceivedMessageNotification getReceivedMessage();
 
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
      * @return Whether the messageStatus field is set.
      */
     boolean hasMessageStatus();
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
      * @return The messageStatus.
      */
     com.elarian.hera.proto.AppSocket.MessageStatusNotification getMessageStatus();
-
-    /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-     * @return Whether the ussdSession field is set.
-     */
-    boolean hasUssdSession();
-    /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-     * @return The ussdSession.
-     */
-    com.elarian.hera.proto.AppSocket.UssdSessionNotification getUssdSession();
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-     * @return Whether the voiceCall field is set.
-     */
-    boolean hasVoiceCall();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-     * @return The voiceCall.
-     */
-    com.elarian.hera.proto.AppSocket.VoiceCallNotification getVoiceCall();
 
     /**
      * <code>.com.elarian.hera.proto.ReceivedPaymentNotification received_payment = 13;</code>
@@ -26167,15 +24948,15 @@ public final class AppSocket {
     com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification getWalletPaymentStatus();
 
     /**
-     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
-     * @return Whether the webAction field is set.
+     * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
+     * @return Whether the customerActivity field is set.
      */
-    boolean hasWebAction();
+    boolean hasCustomerActivity();
     /**
-     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
-     * @return The webAction.
+     * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
+     * @return The customerActivity.
      */
-    com.elarian.hera.proto.AppSocket.WebActionNotification getWebAction();
+    com.elarian.hera.proto.AppSocket.CustomerActivityNotification getCustomerActivity();
 
     public com.elarian.hera.proto.AppSocket.ServerToAppCustomerNotification.EntryCase getEntryCase();
   }
@@ -26196,16 +24977,16 @@ public final class AppSocket {
     private java.lang.Object entry_;
     public enum EntryCase {
       REMINDER(6),
-      MESSAGING_CONSENT_STATUS(7),
-      MESSAGING_SESSION_STATUS(8),
-      RECEIVED_MESSAGE(9),
-      MESSAGE_STATUS(10),
-      USSD_SESSION(11),
-      VOICE_CALL(12),
+      MESSAGING_SESSION_STARTED(7),
+      MESSAGING_SESSION_RENEWED(8),
+      MESSAGING_SESSION_ENDED(9),
+      MESSAGING_CONSENT_UPDATE(10),
+      RECEIVED_MESSAGE(11),
+      MESSAGE_STATUS(12),
       RECEIVED_PAYMENT(13),
       PAYMENT_STATUS(14),
       WALLET_PAYMENT_STATUS(15),
-      WEB_ACTION(16),
+      CUSTOMER_ACTIVITY(16),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -26222,16 +25003,16 @@ public final class AppSocket {
       public static EntryCase forNumber(int value) {
         switch (value) {
           case 6: return REMINDER;
-          case 7: return MESSAGING_CONSENT_STATUS;
-          case 8: return MESSAGING_SESSION_STATUS;
-          case 9: return RECEIVED_MESSAGE;
-          case 10: return MESSAGE_STATUS;
-          case 11: return USSD_SESSION;
-          case 12: return VOICE_CALL;
+          case 7: return MESSAGING_SESSION_STARTED;
+          case 8: return MESSAGING_SESSION_RENEWED;
+          case 9: return MESSAGING_SESSION_ENDED;
+          case 10: return MESSAGING_CONSENT_UPDATE;
+          case 11: return RECEIVED_MESSAGE;
+          case 12: return MESSAGE_STATUS;
           case 13: return RECEIVED_PAYMENT;
           case 14: return PAYMENT_STATUS;
           case 15: return WALLET_PAYMENT_STATUS;
-          case 16: return WEB_ACTION;
+          case 16: return CUSTOMER_ACTIVITY;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -26395,7 +25176,7 @@ public final class AppSocket {
     }
 
     public static final int APP_DATA_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.DataMapValue appData_;
+    private com.elarian.hera.proto.CommonModel.DataMapValue appData_;
     /**
      * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
      */
@@ -26407,13 +25188,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.DataMapValue getAppData() {
-      return appData_ == null ? com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : appData_;
+    public com.elarian.hera.proto.CommonModel.DataMapValue getAppData() {
+      return appData_ == null ? com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance() : appData_;
     }
     /**
      * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
      */
-    private void setAppData(com.elarian.hera.proto.Common.DataMapValue value) {
+    private void setAppData(com.elarian.hera.proto.CommonModel.DataMapValue value) {
       value.getClass();
   appData_ = value;
       
@@ -26422,12 +25203,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeAppData(com.elarian.hera.proto.Common.DataMapValue value) {
+    private void mergeAppData(com.elarian.hera.proto.CommonModel.DataMapValue value) {
       value.getClass();
   if (appData_ != null &&
-          appData_ != com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance()) {
+          appData_ != com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance()) {
         appData_ =
-          com.elarian.hera.proto.Common.DataMapValue.newBuilder(appData_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.DataMapValue.newBuilder(appData_).mergeFrom(value).buildPartial();
       } else {
         appData_ = value;
       }
@@ -26536,40 +25317,40 @@ public final class AppSocket {
       }
     }
 
-    public static final int MESSAGING_CONSENT_STATUS_FIELD_NUMBER = 7;
+    public static final int MESSAGING_SESSION_STARTED_FIELD_NUMBER = 7;
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
      */
     @java.lang.Override
-    public boolean hasMessagingConsentStatus() {
+    public boolean hasMessagingSessionStarted() {
       return entryCase_ == 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification getMessagingConsentStatus() {
+    public com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification getMessagingSessionStarted() {
       if (entryCase_ == 7) {
-         return (com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification) entry_;
+         return (com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification) entry_;
       }
-      return com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification.getDefaultInstance();
+      return com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
      */
-    private void setMessagingConsentStatus(com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification value) {
+    private void setMessagingSessionStarted(com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification value) {
       value.getClass();
   entry_ = value;
       entryCase_ = 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
      */
-    private void mergeMessagingConsentStatus(com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification value) {
+    private void mergeMessagingSessionStarted(com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification value) {
       value.getClass();
   if (entryCase_ == 7 &&
-          entry_ != com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification.newBuilder((com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification) entry_)
+          entry_ != com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification.newBuilder((com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
@@ -26577,49 +25358,49 @@ public final class AppSocket {
       entryCase_ = 7;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
      */
-    private void clearMessagingConsentStatus() {
+    private void clearMessagingSessionStarted() {
       if (entryCase_ == 7) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int MESSAGING_SESSION_STATUS_FIELD_NUMBER = 8;
+    public static final int MESSAGING_SESSION_RENEWED_FIELD_NUMBER = 8;
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
      */
     @java.lang.Override
-    public boolean hasMessagingSessionStatus() {
+    public boolean hasMessagingSessionRenewed() {
       return entryCase_ == 8;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification getMessagingSessionStatus() {
+    public com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification getMessagingSessionRenewed() {
       if (entryCase_ == 8) {
-         return (com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification) entry_;
+         return (com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification) entry_;
       }
-      return com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification.getDefaultInstance();
+      return com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
      */
-    private void setMessagingSessionStatus(com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification value) {
+    private void setMessagingSessionRenewed(com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification value) {
       value.getClass();
   entry_ = value;
       entryCase_ = 8;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
      */
-    private void mergeMessagingSessionStatus(com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification value) {
+    private void mergeMessagingSessionRenewed(com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification value) {
       value.getClass();
   if (entryCase_ == 8 &&
-          entry_ != com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification.newBuilder((com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification) entry_)
+          entry_ != com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification.newBuilder((com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
@@ -26627,209 +25408,209 @@ public final class AppSocket {
       entryCase_ = 8;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
      */
-    private void clearMessagingSessionStatus() {
+    private void clearMessagingSessionRenewed() {
       if (entryCase_ == 8) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int RECEIVED_MESSAGE_FIELD_NUMBER = 9;
+    public static final int MESSAGING_SESSION_ENDED_FIELD_NUMBER = 9;
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
      */
     @java.lang.Override
-    public boolean hasReceivedMessage() {
+    public boolean hasMessagingSessionEnded() {
       return entryCase_ == 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.ReceivedMessageNotification getReceivedMessage() {
+    public com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification getMessagingSessionEnded() {
       if (entryCase_ == 9) {
-         return (com.elarian.hera.proto.AppSocket.ReceivedMessageNotification) entry_;
+         return (com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification) entry_;
       }
-      return com.elarian.hera.proto.AppSocket.ReceivedMessageNotification.getDefaultInstance();
+      return com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
      */
-    private void setReceivedMessage(com.elarian.hera.proto.AppSocket.ReceivedMessageNotification value) {
+    private void setMessagingSessionEnded(com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification value) {
       value.getClass();
   entry_ = value;
       entryCase_ = 9;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+     * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+     */
+    private void mergeMessagingSessionEnded(com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification value) {
+      value.getClass();
+  if (entryCase_ == 9 &&
+          entry_ != com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification.newBuilder((com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification) entry_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        entry_ = value;
+      }
+      entryCase_ = 9;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+     */
+    private void clearMessagingSessionEnded() {
+      if (entryCase_ == 9) {
+        entryCase_ = 0;
+        entry_ = null;
+      }
+    }
+
+    public static final int MESSAGING_CONSENT_UPDATE_FIELD_NUMBER = 10;
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+     */
+    @java.lang.Override
+    public boolean hasMessagingConsentUpdate() {
+      return entryCase_ == 10;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification getMessagingConsentUpdate() {
+      if (entryCase_ == 10) {
+         return (com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+     */
+    private void setMessagingConsentUpdate(com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification value) {
+      value.getClass();
+  entry_ = value;
+      entryCase_ = 10;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+     */
+    private void mergeMessagingConsentUpdate(com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification value) {
+      value.getClass();
+  if (entryCase_ == 10 &&
+          entry_ != com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification.newBuilder((com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification) entry_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        entry_ = value;
+      }
+      entryCase_ = 10;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+     */
+    private void clearMessagingConsentUpdate() {
+      if (entryCase_ == 10) {
+        entryCase_ = 0;
+        entry_ = null;
+      }
+    }
+
+    public static final int RECEIVED_MESSAGE_FIELD_NUMBER = 11;
+    /**
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
+     */
+    @java.lang.Override
+    public boolean hasReceivedMessage() {
+      return entryCase_ == 11;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReceivedMessageNotification getReceivedMessage() {
+      if (entryCase_ == 11) {
+         return (com.elarian.hera.proto.AppSocket.ReceivedMessageNotification) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.ReceivedMessageNotification.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
+     */
+    private void setReceivedMessage(com.elarian.hera.proto.AppSocket.ReceivedMessageNotification value) {
+      value.getClass();
+  entry_ = value;
+      entryCase_ = 11;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
      */
     private void mergeReceivedMessage(com.elarian.hera.proto.AppSocket.ReceivedMessageNotification value) {
       value.getClass();
-  if (entryCase_ == 9 &&
+  if (entryCase_ == 11 &&
           entry_ != com.elarian.hera.proto.AppSocket.ReceivedMessageNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.AppSocket.ReceivedMessageNotification.newBuilder((com.elarian.hera.proto.AppSocket.ReceivedMessageNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 9;
+      entryCase_ = 11;
     }
     /**
-     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+     * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
      */
     private void clearReceivedMessage() {
-      if (entryCase_ == 9) {
+      if (entryCase_ == 11) {
         entryCase_ = 0;
         entry_ = null;
       }
     }
 
-    public static final int MESSAGE_STATUS_FIELD_NUMBER = 10;
+    public static final int MESSAGE_STATUS_FIELD_NUMBER = 12;
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
      */
     @java.lang.Override
     public boolean hasMessageStatus() {
-      return entryCase_ == 10;
+      return entryCase_ == 12;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
      */
     @java.lang.Override
     public com.elarian.hera.proto.AppSocket.MessageStatusNotification getMessageStatus() {
-      if (entryCase_ == 10) {
+      if (entryCase_ == 12) {
          return (com.elarian.hera.proto.AppSocket.MessageStatusNotification) entry_;
       }
       return com.elarian.hera.proto.AppSocket.MessageStatusNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
      */
     private void setMessageStatus(com.elarian.hera.proto.AppSocket.MessageStatusNotification value) {
       value.getClass();
   entry_ = value;
-      entryCase_ = 10;
+      entryCase_ = 12;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
      */
     private void mergeMessageStatus(com.elarian.hera.proto.AppSocket.MessageStatusNotification value) {
       value.getClass();
-  if (entryCase_ == 10 &&
+  if (entryCase_ == 12 &&
           entry_ != com.elarian.hera.proto.AppSocket.MessageStatusNotification.getDefaultInstance()) {
         entry_ = com.elarian.hera.proto.AppSocket.MessageStatusNotification.newBuilder((com.elarian.hera.proto.AppSocket.MessageStatusNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
       }
-      entryCase_ = 10;
+      entryCase_ = 12;
     }
     /**
-     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+     * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
      */
     private void clearMessageStatus() {
-      if (entryCase_ == 10) {
-        entryCase_ = 0;
-        entry_ = null;
-      }
-    }
-
-    public static final int USSD_SESSION_FIELD_NUMBER = 11;
-    /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-     */
-    @java.lang.Override
-    public boolean hasUssdSession() {
-      return entryCase_ == 11;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.UssdSessionNotification getUssdSession() {
-      if (entryCase_ == 11) {
-         return (com.elarian.hera.proto.AppSocket.UssdSessionNotification) entry_;
-      }
-      return com.elarian.hera.proto.AppSocket.UssdSessionNotification.getDefaultInstance();
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-     */
-    private void setUssdSession(com.elarian.hera.proto.AppSocket.UssdSessionNotification value) {
-      value.getClass();
-  entry_ = value;
-      entryCase_ = 11;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-     */
-    private void mergeUssdSession(com.elarian.hera.proto.AppSocket.UssdSessionNotification value) {
-      value.getClass();
-  if (entryCase_ == 11 &&
-          entry_ != com.elarian.hera.proto.AppSocket.UssdSessionNotification.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.UssdSessionNotification.newBuilder((com.elarian.hera.proto.AppSocket.UssdSessionNotification) entry_)
-            .mergeFrom(value).buildPartial();
-      } else {
-        entry_ = value;
-      }
-      entryCase_ = 11;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-     */
-    private void clearUssdSession() {
-      if (entryCase_ == 11) {
-        entryCase_ = 0;
-        entry_ = null;
-      }
-    }
-
-    public static final int VOICE_CALL_FIELD_NUMBER = 12;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-     */
-    @java.lang.Override
-    public boolean hasVoiceCall() {
-      return entryCase_ == 12;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.VoiceCallNotification getVoiceCall() {
-      if (entryCase_ == 12) {
-         return (com.elarian.hera.proto.AppSocket.VoiceCallNotification) entry_;
-      }
-      return com.elarian.hera.proto.AppSocket.VoiceCallNotification.getDefaultInstance();
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-     */
-    private void setVoiceCall(com.elarian.hera.proto.AppSocket.VoiceCallNotification value) {
-      value.getClass();
-  entry_ = value;
-      entryCase_ = 12;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-     */
-    private void mergeVoiceCall(com.elarian.hera.proto.AppSocket.VoiceCallNotification value) {
-      value.getClass();
-  if (entryCase_ == 12 &&
-          entry_ != com.elarian.hera.proto.AppSocket.VoiceCallNotification.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.VoiceCallNotification.newBuilder((com.elarian.hera.proto.AppSocket.VoiceCallNotification) entry_)
-            .mergeFrom(value).buildPartial();
-      } else {
-        entry_ = value;
-      }
-      entryCase_ = 12;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-     */
-    private void clearVoiceCall() {
       if (entryCase_ == 12) {
         entryCase_ = 0;
         entry_ = null;
@@ -26986,40 +25767,40 @@ public final class AppSocket {
       }
     }
 
-    public static final int WEB_ACTION_FIELD_NUMBER = 16;
+    public static final int CUSTOMER_ACTIVITY_FIELD_NUMBER = 16;
     /**
-     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
      */
     @java.lang.Override
-    public boolean hasWebAction() {
+    public boolean hasCustomerActivity() {
       return entryCase_ == 16;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.WebActionNotification getWebAction() {
+    public com.elarian.hera.proto.AppSocket.CustomerActivityNotification getCustomerActivity() {
       if (entryCase_ == 16) {
-         return (com.elarian.hera.proto.AppSocket.WebActionNotification) entry_;
+         return (com.elarian.hera.proto.AppSocket.CustomerActivityNotification) entry_;
       }
-      return com.elarian.hera.proto.AppSocket.WebActionNotification.getDefaultInstance();
+      return com.elarian.hera.proto.AppSocket.CustomerActivityNotification.getDefaultInstance();
     }
     /**
-     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
      */
-    private void setWebAction(com.elarian.hera.proto.AppSocket.WebActionNotification value) {
+    private void setCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityNotification value) {
       value.getClass();
   entry_ = value;
       entryCase_ = 16;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
      */
-    private void mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionNotification value) {
+    private void mergeCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityNotification value) {
       value.getClass();
   if (entryCase_ == 16 &&
-          entry_ != com.elarian.hera.proto.AppSocket.WebActionNotification.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.WebActionNotification.newBuilder((com.elarian.hera.proto.AppSocket.WebActionNotification) entry_)
+          entry_ != com.elarian.hera.proto.AppSocket.CustomerActivityNotification.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.AppSocket.CustomerActivityNotification.newBuilder((com.elarian.hera.proto.AppSocket.CustomerActivityNotification) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
@@ -27027,9 +25808,9 @@ public final class AppSocket {
       entryCase_ = 16;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
      */
-    private void clearWebAction() {
+    private void clearCustomerActivity() {
       if (entryCase_ == 16) {
         entryCase_ = 0;
         entry_ = null;
@@ -27301,13 +26082,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.DataMapValue getAppData() {
+      public com.elarian.hera.proto.CommonModel.DataMapValue getAppData() {
         return instance.getAppData();
       }
       /**
        * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
        */
-      public Builder setAppData(com.elarian.hera.proto.Common.DataMapValue value) {
+      public Builder setAppData(com.elarian.hera.proto.CommonModel.DataMapValue value) {
         copyOnWrite();
         instance.setAppData(value);
         return this;
@@ -27316,7 +26097,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
        */
       public Builder setAppData(
-          com.elarian.hera.proto.Common.DataMapValue.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.DataMapValue.Builder builderForValue) {
         copyOnWrite();
         instance.setAppData(builderForValue.build());
         return this;
@@ -27324,7 +26105,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.DataMapValue app_data = 4;</code>
        */
-      public Builder mergeAppData(com.elarian.hera.proto.Common.DataMapValue value) {
+      public Builder mergeAppData(com.elarian.hera.proto.CommonModel.DataMapValue value) {
         copyOnWrite();
         instance.mergeAppData(value);
         return this;
@@ -27433,117 +26214,213 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
        */
       @java.lang.Override
-      public boolean hasMessagingConsentStatus() {
-        return instance.hasMessagingConsentStatus();
+      public boolean hasMessagingSessionStarted() {
+        return instance.hasMessagingSessionStarted();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification getMessagingConsentStatus() {
-        return instance.getMessagingConsentStatus();
+      public com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification getMessagingSessionStarted() {
+        return instance.getMessagingSessionStarted();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
        */
-      public Builder setMessagingConsentStatus(com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification value) {
+      public Builder setMessagingSessionStarted(com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification value) {
         copyOnWrite();
-        instance.setMessagingConsentStatus(value);
+        instance.setMessagingSessionStarted(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
        */
-      public Builder setMessagingConsentStatus(
-          com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification.Builder builderForValue) {
+      public Builder setMessagingSessionStarted(
+          com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification.Builder builderForValue) {
         copyOnWrite();
-        instance.setMessagingConsentStatus(builderForValue.build());
+        instance.setMessagingSessionStarted(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
        */
-      public Builder mergeMessagingConsentStatus(com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification value) {
+      public Builder mergeMessagingSessionStarted(com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification value) {
         copyOnWrite();
-        instance.mergeMessagingConsentStatus(value);
+        instance.mergeMessagingSessionStarted(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatusNotification messaging_consent_status = 7;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionStartedNotification messaging_session_started = 7;</code>
        */
-      public Builder clearMessagingConsentStatus() {
+      public Builder clearMessagingSessionStarted() {
         copyOnWrite();
-        instance.clearMessagingConsentStatus();
+        instance.clearMessagingSessionStarted();
         return this;
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
        */
       @java.lang.Override
-      public boolean hasMessagingSessionStatus() {
-        return instance.hasMessagingSessionStatus();
+      public boolean hasMessagingSessionRenewed() {
+        return instance.hasMessagingSessionRenewed();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification getMessagingSessionStatus() {
-        return instance.getMessagingSessionStatus();
+      public com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification getMessagingSessionRenewed() {
+        return instance.getMessagingSessionRenewed();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
        */
-      public Builder setMessagingSessionStatus(com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification value) {
+      public Builder setMessagingSessionRenewed(com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification value) {
         copyOnWrite();
-        instance.setMessagingSessionStatus(value);
+        instance.setMessagingSessionRenewed(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
        */
-      public Builder setMessagingSessionStatus(
-          com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification.Builder builderForValue) {
+      public Builder setMessagingSessionRenewed(
+          com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification.Builder builderForValue) {
         copyOnWrite();
-        instance.setMessagingSessionStatus(builderForValue.build());
+        instance.setMessagingSessionRenewed(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
        */
-      public Builder mergeMessagingSessionStatus(com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification value) {
+      public Builder mergeMessagingSessionRenewed(com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification value) {
         copyOnWrite();
-        instance.mergeMessagingSessionStatus(value);
+        instance.mergeMessagingSessionRenewed(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatusNotification messaging_session_status = 8;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionRenewedNotification messaging_session_renewed = 8;</code>
        */
-      public Builder clearMessagingSessionStatus() {
+      public Builder clearMessagingSessionRenewed() {
         copyOnWrite();
-        instance.clearMessagingSessionStatus();
+        instance.clearMessagingSessionRenewed();
         return this;
       }
 
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+       * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+       */
+      @java.lang.Override
+      public boolean hasMessagingSessionEnded() {
+        return instance.hasMessagingSessionEnded();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification getMessagingSessionEnded() {
+        return instance.getMessagingSessionEnded();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+       */
+      public Builder setMessagingSessionEnded(com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification value) {
+        copyOnWrite();
+        instance.setMessagingSessionEnded(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+       */
+      public Builder setMessagingSessionEnded(
+          com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMessagingSessionEnded(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+       */
+      public Builder mergeMessagingSessionEnded(com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification value) {
+        copyOnWrite();
+        instance.mergeMessagingSessionEnded(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndedNotification messaging_session_ended = 9;</code>
+       */
+      public Builder clearMessagingSessionEnded() {
+        copyOnWrite();
+        instance.clearMessagingSessionEnded();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+       */
+      @java.lang.Override
+      public boolean hasMessagingConsentUpdate() {
+        return instance.hasMessagingConsentUpdate();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification getMessagingConsentUpdate() {
+        return instance.getMessagingConsentUpdate();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+       */
+      public Builder setMessagingConsentUpdate(com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification value) {
+        copyOnWrite();
+        instance.setMessagingConsentUpdate(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+       */
+      public Builder setMessagingConsentUpdate(
+          com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMessagingConsentUpdate(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+       */
+      public Builder mergeMessagingConsentUpdate(com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification value) {
+        copyOnWrite();
+        instance.mergeMessagingConsentUpdate(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateNotification messaging_consent_update = 10;</code>
+       */
+      public Builder clearMessagingConsentUpdate() {
+        copyOnWrite();
+        instance.clearMessagingConsentUpdate();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
        */
       @java.lang.Override
       public boolean hasReceivedMessage() {
         return instance.hasReceivedMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.AppSocket.ReceivedMessageNotification getReceivedMessage() {
         return instance.getReceivedMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
        */
       public Builder setReceivedMessage(com.elarian.hera.proto.AppSocket.ReceivedMessageNotification value) {
         copyOnWrite();
@@ -27551,7 +26428,7 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
        */
       public Builder setReceivedMessage(
           com.elarian.hera.proto.AppSocket.ReceivedMessageNotification.Builder builderForValue) {
@@ -27560,7 +26437,7 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
        */
       public Builder mergeReceivedMessage(com.elarian.hera.proto.AppSocket.ReceivedMessageNotification value) {
         copyOnWrite();
@@ -27568,7 +26445,7 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 9;</code>
+       * <code>.com.elarian.hera.proto.ReceivedMessageNotification received_message = 11;</code>
        */
       public Builder clearReceivedMessage() {
         copyOnWrite();
@@ -27577,21 +26454,21 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
        */
       @java.lang.Override
       public boolean hasMessageStatus() {
         return instance.hasMessageStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
        */
       @java.lang.Override
       public com.elarian.hera.proto.AppSocket.MessageStatusNotification getMessageStatus() {
         return instance.getMessageStatus();
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
        */
       public Builder setMessageStatus(com.elarian.hera.proto.AppSocket.MessageStatusNotification value) {
         copyOnWrite();
@@ -27599,7 +26476,7 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
        */
       public Builder setMessageStatus(
           com.elarian.hera.proto.AppSocket.MessageStatusNotification.Builder builderForValue) {
@@ -27608,7 +26485,7 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
        */
       public Builder mergeMessageStatus(com.elarian.hera.proto.AppSocket.MessageStatusNotification value) {
         copyOnWrite();
@@ -27616,107 +26493,11 @@ public final class AppSocket {
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 10;</code>
+       * <code>.com.elarian.hera.proto.MessageStatusNotification message_status = 12;</code>
        */
       public Builder clearMessageStatus() {
         copyOnWrite();
         instance.clearMessageStatus();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-       */
-      @java.lang.Override
-      public boolean hasUssdSession() {
-        return instance.hasUssdSession();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.UssdSessionNotification getUssdSession() {
-        return instance.getUssdSession();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-       */
-      public Builder setUssdSession(com.elarian.hera.proto.AppSocket.UssdSessionNotification value) {
-        copyOnWrite();
-        instance.setUssdSession(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-       */
-      public Builder setUssdSession(
-          com.elarian.hera.proto.AppSocket.UssdSessionNotification.Builder builderForValue) {
-        copyOnWrite();
-        instance.setUssdSession(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-       */
-      public Builder mergeUssdSession(com.elarian.hera.proto.AppSocket.UssdSessionNotification value) {
-        copyOnWrite();
-        instance.mergeUssdSession(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotification ussd_session = 11;</code>
-       */
-      public Builder clearUssdSession() {
-        copyOnWrite();
-        instance.clearUssdSession();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-       */
-      @java.lang.Override
-      public boolean hasVoiceCall() {
-        return instance.hasVoiceCall();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.VoiceCallNotification getVoiceCall() {
-        return instance.getVoiceCall();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-       */
-      public Builder setVoiceCall(com.elarian.hera.proto.AppSocket.VoiceCallNotification value) {
-        copyOnWrite();
-        instance.setVoiceCall(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-       */
-      public Builder setVoiceCall(
-          com.elarian.hera.proto.AppSocket.VoiceCallNotification.Builder builderForValue) {
-        copyOnWrite();
-        instance.setVoiceCall(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-       */
-      public Builder mergeVoiceCall(com.elarian.hera.proto.AppSocket.VoiceCallNotification value) {
-        copyOnWrite();
-        instance.mergeVoiceCall(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotification voice_call = 12;</code>
-       */
-      public Builder clearVoiceCall() {
-        copyOnWrite();
-        instance.clearVoiceCall();
         return this;
       }
 
@@ -27865,50 +26646,50 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
        */
       @java.lang.Override
-      public boolean hasWebAction() {
-        return instance.hasWebAction();
+      public boolean hasCustomerActivity() {
+        return instance.hasCustomerActivity();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.WebActionNotification getWebAction() {
-        return instance.getWebAction();
+      public com.elarian.hera.proto.AppSocket.CustomerActivityNotification getCustomerActivity() {
+        return instance.getCustomerActivity();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
        */
-      public Builder setWebAction(com.elarian.hera.proto.AppSocket.WebActionNotification value) {
+      public Builder setCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityNotification value) {
         copyOnWrite();
-        instance.setWebAction(value);
+        instance.setCustomerActivity(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
        */
-      public Builder setWebAction(
-          com.elarian.hera.proto.AppSocket.WebActionNotification.Builder builderForValue) {
+      public Builder setCustomerActivity(
+          com.elarian.hera.proto.AppSocket.CustomerActivityNotification.Builder builderForValue) {
         copyOnWrite();
-        instance.setWebAction(builderForValue.build());
+        instance.setCustomerActivity(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
        */
-      public Builder mergeWebAction(com.elarian.hera.proto.AppSocket.WebActionNotification value) {
+      public Builder mergeCustomerActivity(com.elarian.hera.proto.AppSocket.CustomerActivityNotification value) {
         copyOnWrite();
-        instance.mergeWebAction(value);
+        instance.mergeCustomerActivity(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebActionNotification web_action = 16;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 16;</code>
        */
-      public Builder clearWebAction() {
+      public Builder clearCustomerActivity() {
         copyOnWrite();
-        instance.clearWebAction();
+        instance.clearCustomerActivity();
         return this;
       }
 
@@ -27936,16 +26717,16 @@ public final class AppSocket {
               "appData_",
               "createdAt_",
               com.elarian.hera.proto.AppSocket.ReminderNotification.class,
-              com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification.class,
-              com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification.class,
+              com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification.class,
+              com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification.class,
+              com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification.class,
+              com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification.class,
               com.elarian.hera.proto.AppSocket.ReceivedMessageNotification.class,
               com.elarian.hera.proto.AppSocket.MessageStatusNotification.class,
-              com.elarian.hera.proto.AppSocket.UssdSessionNotification.class,
-              com.elarian.hera.proto.AppSocket.VoiceCallNotification.class,
               com.elarian.hera.proto.AppSocket.ReceivedPaymentNotification.class,
               com.elarian.hera.proto.AppSocket.PaymentStatusNotification.class,
               com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.class,
-              com.elarian.hera.proto.AppSocket.WebActionNotification.class,
+              com.elarian.hera.proto.AppSocket.CustomerActivityNotification.class,
             };
             java.lang.String info =
                 "\u0000\u0010\u0001\u0000\u0001\u0010\u0010\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
@@ -28803,7 +27584,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
      * @return The data.
      */
-    com.elarian.hera.proto.Common.DataMapValue getData();
+    com.elarian.hera.proto.CommonModel.DataMapValue getData();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.AppDataUpdate}
@@ -28816,7 +27597,7 @@ public final class AppSocket {
     private AppDataUpdate() {
     }
     public static final int DATA_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.DataMapValue data_;
+    private com.elarian.hera.proto.CommonModel.DataMapValue data_;
     /**
      * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
      */
@@ -28828,13 +27609,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.DataMapValue getData() {
-      return data_ == null ? com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance() : data_;
+    public com.elarian.hera.proto.CommonModel.DataMapValue getData() {
+      return data_ == null ? com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance() : data_;
     }
     /**
      * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
      */
-    private void setData(com.elarian.hera.proto.Common.DataMapValue value) {
+    private void setData(com.elarian.hera.proto.CommonModel.DataMapValue value) {
       value.getClass();
   data_ = value;
       
@@ -28843,12 +27624,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeData(com.elarian.hera.proto.Common.DataMapValue value) {
+    private void mergeData(com.elarian.hera.proto.CommonModel.DataMapValue value) {
       value.getClass();
   if (data_ != null &&
-          data_ != com.elarian.hera.proto.Common.DataMapValue.getDefaultInstance()) {
+          data_ != com.elarian.hera.proto.CommonModel.DataMapValue.getDefaultInstance()) {
         data_ =
-          com.elarian.hera.proto.Common.DataMapValue.newBuilder(data_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.DataMapValue.newBuilder(data_).mergeFrom(value).buildPartial();
       } else {
         data_ = value;
       }
@@ -28967,13 +27748,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.DataMapValue getData() {
+      public com.elarian.hera.proto.CommonModel.DataMapValue getData() {
         return instance.getData();
       }
       /**
        * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
        */
-      public Builder setData(com.elarian.hera.proto.Common.DataMapValue value) {
+      public Builder setData(com.elarian.hera.proto.CommonModel.DataMapValue value) {
         copyOnWrite();
         instance.setData(value);
         return this;
@@ -28982,7 +27763,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
        */
       public Builder setData(
-          com.elarian.hera.proto.Common.DataMapValue.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.DataMapValue.Builder builderForValue) {
         copyOnWrite();
         instance.setData(builderForValue.build());
         return this;
@@ -28990,7 +27771,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.DataMapValue data = 1;</code>
        */
-      public Builder mergeData(com.elarian.hera.proto.Common.DataMapValue value) {
+      public Builder mergeData(com.elarian.hera.proto.CommonModel.DataMapValue value) {
         copyOnWrite();
         instance.mergeData(value);
         return this;
@@ -29093,28 +27874,15 @@ public final class AppSocket {
     com.elarian.hera.proto.AppSocket.AppDataUpdate getDataUpdate();
 
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
-     * @return Whether the ussdSession field is set.
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
+     * @return Whether the message field is set.
      */
-    boolean hasUssdSession();
+    boolean hasMessage();
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
-     * @return The ussdSession.
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
+     * @return The message.
      */
-    com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply getUssdSession();
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-     * @return Whether the voiceCall field is set.
-     */
-    boolean hasVoiceCall();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-     * @return The voiceCall.
-     */
-    com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply getVoiceCall();
-
-    public com.elarian.hera.proto.AppSocket.ServerToAppNotificationReply.EntryCase getEntryCase();
+    com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ServerToAppNotificationReply}
@@ -29126,49 +27894,6 @@ public final class AppSocket {
       ServerToAppNotificationReplyOrBuilder {
     private ServerToAppNotificationReply() {
     }
-    private int entryCase_ = 0;
-    private java.lang.Object entry_;
-    public enum EntryCase {
-      USSD_SESSION(2),
-      VOICE_CALL(3),
-      ENTRY_NOT_SET(0);
-      private final int value;
-      private EntryCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static EntryCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static EntryCase forNumber(int value) {
-        switch (value) {
-          case 2: return USSD_SESSION;
-          case 3: return VOICE_CALL;
-          case 0: return ENTRY_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    @java.lang.Override
-    public EntryCase
-    getEntryCase() {
-      return EntryCase.forNumber(
-          entryCase_);
-    }
-
-    private void clearEntry() {
-      entryCase_ = 0;
-      entry_ = null;
-    }
-
     public static final int DATA_UPDATE_FIELD_NUMBER = 1;
     private com.elarian.hera.proto.AppSocket.AppDataUpdate dataUpdate_;
     /**
@@ -29215,104 +27940,50 @@ public final class AppSocket {
       
     }
 
-    public static final int USSD_SESSION_FIELD_NUMBER = 2;
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.MessagingModel.OutboundMessage message_;
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
      */
     @java.lang.Override
-    public boolean hasUssdSession() {
-      return entryCase_ == 2;
+    public boolean hasMessage() {
+      return message_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply getUssdSession() {
-      if (entryCase_ == 2) {
-         return (com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply) entry_;
+    public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+      return message_ == null ? com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance() : message_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
+     */
+    private void setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
+      value.getClass();
+  message_ = value;
+      
       }
-      return com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply.getDefaultInstance();
-    }
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
      */
-    private void setUssdSession(com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply value) {
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
       value.getClass();
-  entry_ = value;
-      entryCase_ = 2;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
-     */
-    private void mergeUssdSession(com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply value) {
-      value.getClass();
-  if (entryCase_ == 2 &&
-          entry_ != com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply.newBuilder((com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply) entry_)
-            .mergeFrom(value).buildPartial();
+  if (message_ != null &&
+          message_ != com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance()) {
+        message_ =
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.newBuilder(message_).mergeFrom(value).buildPartial();
       } else {
-        entry_ = value;
+        message_ = value;
       }
-      entryCase_ = 2;
+      
     }
     /**
-     * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
      */
-    private void clearUssdSession() {
-      if (entryCase_ == 2) {
-        entryCase_ = 0;
-        entry_ = null;
-      }
-    }
-
-    public static final int VOICE_CALL_FIELD_NUMBER = 3;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasVoiceCall() {
-      return entryCase_ == 3;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply getVoiceCall() {
-      if (entryCase_ == 3) {
-         return (com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply) entry_;
-      }
-      return com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply.getDefaultInstance();
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-     */
-    private void setVoiceCall(com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply value) {
-      value.getClass();
-  entry_ = value;
-      entryCase_ = 3;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-     */
-    private void mergeVoiceCall(com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply value) {
-      value.getClass();
-  if (entryCase_ == 3 &&
-          entry_ != com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply.getDefaultInstance()) {
-        entry_ = com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply.newBuilder((com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply) entry_)
-            .mergeFrom(value).buildPartial();
-      } else {
-        entry_ = value;
-      }
-      entryCase_ = 3;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-     */
-    private void clearVoiceCall() {
-      if (entryCase_ == 3) {
-        entryCase_ = 0;
-        entry_ = null;
-      }
+    private void clearMessage() {  message_ = null;
+      
     }
 
     public static com.elarian.hera.proto.AppSocket.ServerToAppNotificationReply parseFrom(
@@ -29409,18 +28080,6 @@ public final class AppSocket {
         super(DEFAULT_INSTANCE);
       }
 
-      @java.lang.Override
-      public EntryCase
-          getEntryCase() {
-        return instance.getEntryCase();
-      }
-
-      public Builder clearEntry() {
-        copyOnWrite();
-        instance.clearEntry();
-        return this;
-      }
-
 
       /**
        * <code>.com.elarian.hera.proto.AppDataUpdate data_update = 1;</code>
@@ -29470,98 +28129,49 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
        */
       @java.lang.Override
-      public boolean hasUssdSession() {
-        return instance.hasUssdSession();
+      public boolean hasMessage() {
+        return instance.hasMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply getUssdSession() {
-        return instance.getUssdSession();
+      public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+        return instance.getMessage();
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
        */
-      public Builder setUssdSession(com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply value) {
+      public Builder setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         copyOnWrite();
-        instance.setUssdSession(value);
+        instance.setMessage(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
+       */
+      public Builder setMessage(
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMessage(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
        */
-      public Builder setUssdSession(
-          com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply.Builder builderForValue) {
+      public Builder mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
         copyOnWrite();
-        instance.setUssdSession(builderForValue.build());
+        instance.mergeMessage(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 2;</code>
        */
-      public Builder mergeUssdSession(com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply value) {
-        copyOnWrite();
-        instance.mergeUssdSession(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdSessionNotificationReply ussd_session = 2;</code>
-       */
-      public Builder clearUssdSession() {
-        copyOnWrite();
-        instance.clearUssdSession();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasVoiceCall() {
-        return instance.hasVoiceCall();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply getVoiceCall() {
-        return instance.getVoiceCall();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-       */
-      public Builder setVoiceCall(com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply value) {
-        copyOnWrite();
-        instance.setVoiceCall(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-       */
-      public Builder setVoiceCall(
-          com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply.Builder builderForValue) {
-        copyOnWrite();
-        instance.setVoiceCall(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-       */
-      public Builder mergeVoiceCall(com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply value) {
-        copyOnWrite();
-        instance.mergeVoiceCall(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallNotificationReply voice_call = 3;</code>
-       */
-      public Builder clearVoiceCall() {
-        copyOnWrite();
-        instance.clearVoiceCall();
+      public Builder clearMessage() {  copyOnWrite();
+        instance.clearMessage();
         return this;
       }
 
@@ -29581,15 +28191,11 @@ public final class AppSocket {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "entry_",
-              "entryCase_",
               "dataUpdate_",
-              com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply.class,
-              com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply.class,
+              "message_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002<\u0000" +
-                "\u0003<\u0000";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\t\u0002\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -29644,1097 +28250,6 @@ public final class AppSocket {
     }
   }
 
-  public interface MessagingConsentStatusNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MessagingConsentStatusNotification)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     * @return Whether the customerNumber field is set.
-     */
-    boolean hasCustomerNumber();
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     * @return The customerNumber.
-     */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
-
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     * @return Whether the channelNumber field is set.
-     */
-    boolean hasChannelNumber();
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     * @return The channelNumber.
-     */
-    com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
-
-    /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    int getStatusValue();
-    /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-     * @return The status.
-     */
-    com.elarian.hera.proto.Common.MessagingConsentStatus getStatus();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.MessagingConsentStatusNotification}
-   */
-  public  static final class MessagingConsentStatusNotification extends
-      com.google.protobuf.GeneratedMessageLite<
-          MessagingConsentStatusNotification, MessagingConsentStatusNotification.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingConsentStatusNotification)
-      MessagingConsentStatusNotificationOrBuilder {
-    private MessagingConsentStatusNotification() {
-    }
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.Override
-    public boolean hasCustomerNumber() {
-      return customerNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  customerNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
-      } else {
-        customerNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    private void clearCustomerNumber() {  customerNumber_ = null;
-      
-    }
-
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public boolean hasChannelNumber() {
-      return channelNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    private void setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
-      value.getClass();
-  channelNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
-      value.getClass();
-  if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance()) {
-        channelNumber_ =
-          com.elarian.hera.proto.Common.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
-      } else {
-        channelNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    private void clearChannelNumber() {  channelNumber_ = null;
-      
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 3;
-    private int status_;
-    /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override
-    public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-     * @return The status.
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingConsentStatus getStatus() {
-      com.elarian.hera.proto.Common.MessagingConsentStatus result = com.elarian.hera.proto.Common.MessagingConsentStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.MessagingConsentStatus.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-     * @param value The enum numeric value on the wire for status to set.
-     */
-    private void setStatusValue(int value) {
-        status_ = value;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-     * @param value The status to set.
-     */
-    private void setStatus(com.elarian.hera.proto.Common.MessagingConsentStatus value) {
-      status_ = value.getNumber();
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-     */
-    private void clearStatus() {
-      
-      status_ = 0;
-    }
-
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.MessagingConsentStatusNotification}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MessagingConsentStatusNotification)
-        com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotificationOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      @java.lang.Override
-      public boolean hasCustomerNumber() {
-        return instance.hasCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-        return instance.getCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.setCustomerNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCustomerNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.mergeCustomerNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder clearCustomerNumber() {  copyOnWrite();
-        instance.clearCustomerNumber();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public boolean hasChannelNumber() {
-        return instance.hasChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
-        return instance.getChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
-        copyOnWrite();
-        instance.setChannelNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.MessagingChannelNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setChannelNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
-        copyOnWrite();
-        instance.mergeChannelNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      public Builder clearChannelNumber() {  copyOnWrite();
-        instance.clearChannelNumber();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override
-      public int getStatusValue() {
-        return instance.getStatusValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        copyOnWrite();
-        instance.setStatusValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingConsentStatus getStatus() {
-        return instance.getStatus();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(com.elarian.hera.proto.Common.MessagingConsentStatus value) {
-        copyOnWrite();
-        instance.setStatus(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingConsentStatus status = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        copyOnWrite();
-        instance.clearStatus();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingConsentStatusNotification)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "customerNumber_",
-              "channelNumber_",
-              "status_",
-            };
-            java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
-                "\f";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MessagingConsentStatusNotification)
-    private static final com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification DEFAULT_INSTANCE;
-    static {
-      MessagingConsentStatusNotification defaultInstance = new MessagingConsentStatusNotification();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        MessagingConsentStatusNotification.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.MessagingConsentStatusNotification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<MessagingConsentStatusNotification> PARSER;
-
-    public static com.google.protobuf.Parser<MessagingConsentStatusNotification> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface MessagingSessionStatusNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MessagingSessionStatusNotification)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     * @return Whether the customerNumber field is set.
-     */
-    boolean hasCustomerNumber();
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     * @return The customerNumber.
-     */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
-
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     * @return Whether the channelNumber field is set.
-     */
-    boolean hasChannelNumber();
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     * @return The channelNumber.
-     */
-    com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
-
-    /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
-     * @return Whether the expiration field is set.
-     */
-    boolean hasExpiration();
-    /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
-     * @return The expiration.
-     */
-    com.google.protobuf.Timestamp getExpiration();
-
-    /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    int getStatusValue();
-    /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-     * @return The status.
-     */
-    com.elarian.hera.proto.Common.MessagingSessionStatus getStatus();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.MessagingSessionStatusNotification}
-   */
-  public  static final class MessagingSessionStatusNotification extends
-      com.google.protobuf.GeneratedMessageLite<
-          MessagingSessionStatusNotification, MessagingSessionStatusNotification.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingSessionStatusNotification)
-      MessagingSessionStatusNotificationOrBuilder {
-    private MessagingSessionStatusNotification() {
-    }
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.Override
-    public boolean hasCustomerNumber() {
-      return customerNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  customerNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
-      } else {
-        customerNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-     */
-    private void clearCustomerNumber() {  customerNumber_ = null;
-      
-    }
-
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public boolean hasChannelNumber() {
-      return channelNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    private void setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
-      value.getClass();
-  channelNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
-      value.getClass();
-  if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance()) {
-        channelNumber_ =
-          com.elarian.hera.proto.Common.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
-      } else {
-        channelNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-     */
-    private void clearChannelNumber() {  channelNumber_ = null;
-      
-    }
-
-    public static final int EXPIRATION_FIELD_NUMBER = 3;
-    private com.google.protobuf.Timestamp expiration_;
-    /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasExpiration() {
-      return expiration_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getExpiration() {
-      return expiration_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiration_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
-     */
-    private void setExpiration(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  expiration_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeExpiration(com.google.protobuf.Timestamp value) {
-      value.getClass();
-  if (expiration_ != null &&
-          expiration_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-        expiration_ =
-          com.google.protobuf.Timestamp.newBuilder(expiration_).mergeFrom(value).buildPartial();
-      } else {
-        expiration_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.Timestamp expiration = 3;</code>
-     */
-    private void clearExpiration() {  expiration_ = null;
-      
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 4;
-    private int status_;
-    /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override
-    public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-     * @return The status.
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingSessionStatus getStatus() {
-      com.elarian.hera.proto.Common.MessagingSessionStatus result = com.elarian.hera.proto.Common.MessagingSessionStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.MessagingSessionStatus.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-     * @param value The enum numeric value on the wire for status to set.
-     */
-    private void setStatusValue(int value) {
-        status_ = value;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-     * @param value The status to set.
-     */
-    private void setStatus(com.elarian.hera.proto.Common.MessagingSessionStatus value) {
-      status_ = value.getNumber();
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-     */
-    private void clearStatus() {
-      
-      status_ = 0;
-    }
-
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.MessagingSessionStatusNotification}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MessagingSessionStatusNotification)
-        com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotificationOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      @java.lang.Override
-      public boolean hasCustomerNumber() {
-        return instance.hasCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-        return instance.getCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.setCustomerNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCustomerNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.mergeCustomerNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
-       */
-      public Builder clearCustomerNumber() {  copyOnWrite();
-        instance.clearCustomerNumber();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public boolean hasChannelNumber() {
-        return instance.hasChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
-        return instance.getChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
-        copyOnWrite();
-        instance.setChannelNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.MessagingChannelNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setChannelNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
-        copyOnWrite();
-        instance.mergeChannelNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
-       */
-      public Builder clearChannelNumber() {  copyOnWrite();
-        instance.clearChannelNumber();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasExpiration() {
-        return instance.hasExpiration();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Timestamp getExpiration() {
-        return instance.getExpiration();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
-       */
-      public Builder setExpiration(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.setExpiration(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
-       */
-      public Builder setExpiration(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        copyOnWrite();
-        instance.setExpiration(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
-       */
-      public Builder mergeExpiration(com.google.protobuf.Timestamp value) {
-        copyOnWrite();
-        instance.mergeExpiration(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp expiration = 3;</code>
-       */
-      public Builder clearExpiration() {  copyOnWrite();
-        instance.clearExpiration();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override
-      public int getStatusValue() {
-        return instance.getStatusValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        copyOnWrite();
-        instance.setStatusValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingSessionStatus getStatus() {
-        return instance.getStatus();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(com.elarian.hera.proto.Common.MessagingSessionStatus value) {
-        copyOnWrite();
-        instance.setStatus(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.MessagingSessionStatus status = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        copyOnWrite();
-        instance.clearStatus();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingSessionStatusNotification)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "customerNumber_",
-              "channelNumber_",
-              "expiration_",
-              "status_",
-            };
-            java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
-                "\t\u0004\f";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MessagingSessionStatusNotification)
-    private static final com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification DEFAULT_INSTANCE;
-    static {
-      MessagingSessionStatusNotification defaultInstance = new MessagingSessionStatusNotification();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        MessagingSessionStatusNotification.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.MessagingSessionStatusNotification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<MessagingSessionStatusNotification> PARSER;
-
-    public static com.google.protobuf.Parser<MessagingSessionStatusNotification> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
   public interface ReminderNotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ReminderNotification)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -30748,7 +28263,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
      * @return The reminder.
      */
-    com.elarian.hera.proto.Common.CustomerReminder getReminder();
+    com.elarian.hera.proto.AppModel.CustomerReminder getReminder();
 
     /**
      * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
@@ -30759,7 +28274,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
      * @return The tag.
      */
-    com.elarian.hera.proto.Common.CustomerIndex getTag();
+    com.elarian.hera.proto.CommonModel.CustomerIndex getTag();
 
     /**
      * <code>.google.protobuf.StringValue work_id = 3;</code>
@@ -30783,7 +28298,7 @@ public final class AppSocket {
     private ReminderNotification() {
     }
     public static final int REMINDER_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.CustomerReminder reminder_;
+    private com.elarian.hera.proto.AppModel.CustomerReminder reminder_;
     /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
      */
@@ -30795,13 +28310,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerReminder getReminder() {
-      return reminder_ == null ? com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance() : reminder_;
+    public com.elarian.hera.proto.AppModel.CustomerReminder getReminder() {
+      return reminder_ == null ? com.elarian.hera.proto.AppModel.CustomerReminder.getDefaultInstance() : reminder_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
      */
-    private void setReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+    private void setReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
       value.getClass();
   reminder_ = value;
       
@@ -30810,12 +28325,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+    private void mergeReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
       value.getClass();
   if (reminder_ != null &&
-          reminder_ != com.elarian.hera.proto.Common.CustomerReminder.getDefaultInstance()) {
+          reminder_ != com.elarian.hera.proto.AppModel.CustomerReminder.getDefaultInstance()) {
         reminder_ =
-          com.elarian.hera.proto.Common.CustomerReminder.newBuilder(reminder_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.AppModel.CustomerReminder.newBuilder(reminder_).mergeFrom(value).buildPartial();
       } else {
         reminder_ = value;
       }
@@ -30829,7 +28344,7 @@ public final class AppSocket {
     }
 
     public static final int TAG_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.CustomerIndex tag_;
+    private com.elarian.hera.proto.CommonModel.CustomerIndex tag_;
     /**
      * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
      */
@@ -30841,13 +28356,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerIndex getTag() {
-      return tag_ == null ? com.elarian.hera.proto.Common.CustomerIndex.getDefaultInstance() : tag_;
+    public com.elarian.hera.proto.CommonModel.CustomerIndex getTag() {
+      return tag_ == null ? com.elarian.hera.proto.CommonModel.CustomerIndex.getDefaultInstance() : tag_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
      */
-    private void setTag(com.elarian.hera.proto.Common.CustomerIndex value) {
+    private void setTag(com.elarian.hera.proto.CommonModel.CustomerIndex value) {
       value.getClass();
   tag_ = value;
       
@@ -30856,12 +28371,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeTag(com.elarian.hera.proto.Common.CustomerIndex value) {
+    private void mergeTag(com.elarian.hera.proto.CommonModel.CustomerIndex value) {
       value.getClass();
   if (tag_ != null &&
-          tag_ != com.elarian.hera.proto.Common.CustomerIndex.getDefaultInstance()) {
+          tag_ != com.elarian.hera.proto.CommonModel.CustomerIndex.getDefaultInstance()) {
         tag_ =
-          com.elarian.hera.proto.Common.CustomerIndex.newBuilder(tag_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.CustomerIndex.newBuilder(tag_).mergeFrom(value).buildPartial();
       } else {
         tag_ = value;
       }
@@ -31026,13 +28541,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerReminder getReminder() {
+      public com.elarian.hera.proto.AppModel.CustomerReminder getReminder() {
         return instance.getReminder();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
        */
-      public Builder setReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+      public Builder setReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
         copyOnWrite();
         instance.setReminder(value);
         return this;
@@ -31041,7 +28556,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
        */
       public Builder setReminder(
-          com.elarian.hera.proto.Common.CustomerReminder.Builder builderForValue) {
+          com.elarian.hera.proto.AppModel.CustomerReminder.Builder builderForValue) {
         copyOnWrite();
         instance.setReminder(builderForValue.build());
         return this;
@@ -31049,7 +28564,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerReminder reminder = 1;</code>
        */
-      public Builder mergeReminder(com.elarian.hera.proto.Common.CustomerReminder value) {
+      public Builder mergeReminder(com.elarian.hera.proto.AppModel.CustomerReminder value) {
         copyOnWrite();
         instance.mergeReminder(value);
         return this;
@@ -31073,13 +28588,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerIndex getTag() {
+      public com.elarian.hera.proto.CommonModel.CustomerIndex getTag() {
         return instance.getTag();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
        */
-      public Builder setTag(com.elarian.hera.proto.Common.CustomerIndex value) {
+      public Builder setTag(com.elarian.hera.proto.CommonModel.CustomerIndex value) {
         copyOnWrite();
         instance.setTag(value);
         return this;
@@ -31088,7 +28603,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
        */
       public Builder setTag(
-          com.elarian.hera.proto.Common.CustomerIndex.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerIndex.Builder builderForValue) {
         copyOnWrite();
         instance.setTag(builderForValue.build());
         return this;
@@ -31096,7 +28611,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerIndex tag = 2;</code>
        */
-      public Builder mergeTag(com.elarian.hera.proto.Common.CustomerIndex value) {
+      public Builder mergeTag(com.elarian.hera.proto.CommonModel.CustomerIndex value) {
         copyOnWrite();
         instance.mergeTag(value);
         return this;
@@ -31233,6 +28748,2523 @@ public final class AppSocket {
     }
   }
 
+  public interface MessagingSessionStartedNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MessagingSessionStartedNotification)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
+     */
+    com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber();
+
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    java.lang.String getSessionId();
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    com.google.protobuf.ByteString
+        getSessionIdBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     * @return Whether the expiresAt field is set.
+     */
+    boolean hasExpiresAt();
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     * @return The expiresAt.
+     */
+    com.google.protobuf.Timestamp getExpiresAt();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.MessagingSessionStartedNotification}
+   */
+  public  static final class MessagingSessionStartedNotification extends
+      com.google.protobuf.GeneratedMessageLite<
+          MessagingSessionStartedNotification, MessagingSessionStartedNotification.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingSessionStartedNotification)
+      MessagingSessionStartedNotificationOrBuilder {
+    private MessagingSessionStartedNotification() {
+      sessionId_ = "";
+    }
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+      value.getClass();
+  customerNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
+    }
+
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.MessagingModel.MessagingChannelNumber channelNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    private void setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+      value.getClass();
+  channelNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    private void clearChannelNumber() {  channelNumber_ = null;
+      
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 3;
+    private java.lang.String sessionId_;
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionId() {
+      return sessionId_;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      value.getClass();
+  
+      sessionId_ = value;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     */
+    private void clearSessionId() {
+      
+      sessionId_ = getDefaultInstance().getSessionId();
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int EXPIRES_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp expiresAt_;
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasExpiresAt() {
+      return expiresAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpiresAt() {
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    private void setExpiresAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  expiresAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExpiresAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (expiresAt_ != null &&
+          expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        expiresAt_ =
+          com.google.protobuf.Timestamp.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+      } else {
+        expiresAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    private void clearExpiresAt() {  expiresAt_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.MessagingSessionStartedNotification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MessagingSessionStartedNotification)
+        com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotificationOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+        return instance.getChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+        copyOnWrite();
+        instance.setChannelNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+        copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
+        return this;
+      }
+
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public java.lang.String getSessionId() {
+        return instance.getSessionId();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The bytes for sessionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSessionIdBytes() {
+        return instance.getSessionIdBytes();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSessionId(value);
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        copyOnWrite();
+        instance.clearSessionId();
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The bytes for sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasExpiresAt() {
+        return instance.hasExpiresAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getExpiresAt() {
+        return instance.getExpiresAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setExpiresAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      public Builder setExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExpiresAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeExpiresAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      public Builder clearExpiresAt() {  copyOnWrite();
+        instance.clearExpiresAt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingSessionStartedNotification)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerNumber_",
+              "channelNumber_",
+              "sessionId_",
+              "expiresAt_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\u0208\u0004\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MessagingSessionStartedNotification)
+    private static final com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification DEFAULT_INSTANCE;
+    static {
+      MessagingSessionStartedNotification defaultInstance = new MessagingSessionStartedNotification();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MessagingSessionStartedNotification.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionStartedNotification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MessagingSessionStartedNotification> PARSER;
+
+    public static com.google.protobuf.Parser<MessagingSessionStartedNotification> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MessagingSessionRenewedNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MessagingSessionRenewedNotification)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
+     */
+    com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber();
+
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    java.lang.String getSessionId();
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    com.google.protobuf.ByteString
+        getSessionIdBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     * @return Whether the expiresAt field is set.
+     */
+    boolean hasExpiresAt();
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     * @return The expiresAt.
+     */
+    com.google.protobuf.Timestamp getExpiresAt();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.MessagingSessionRenewedNotification}
+   */
+  public  static final class MessagingSessionRenewedNotification extends
+      com.google.protobuf.GeneratedMessageLite<
+          MessagingSessionRenewedNotification, MessagingSessionRenewedNotification.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingSessionRenewedNotification)
+      MessagingSessionRenewedNotificationOrBuilder {
+    private MessagingSessionRenewedNotification() {
+      sessionId_ = "";
+    }
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+      value.getClass();
+  customerNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
+    }
+
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.MessagingModel.MessagingChannelNumber channelNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    private void setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+      value.getClass();
+  channelNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    private void clearChannelNumber() {  channelNumber_ = null;
+      
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 3;
+    private java.lang.String sessionId_;
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionId() {
+      return sessionId_;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      value.getClass();
+  
+      sessionId_ = value;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     */
+    private void clearSessionId() {
+      
+      sessionId_ = getDefaultInstance().getSessionId();
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int EXPIRES_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp expiresAt_;
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasExpiresAt() {
+      return expiresAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpiresAt() {
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    private void setExpiresAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  expiresAt_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExpiresAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (expiresAt_ != null &&
+          expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        expiresAt_ =
+          com.google.protobuf.Timestamp.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+      } else {
+        expiresAt_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+     */
+    private void clearExpiresAt() {  expiresAt_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.MessagingSessionRenewedNotification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MessagingSessionRenewedNotification)
+        com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotificationOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+        return instance.getChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+        copyOnWrite();
+        instance.setChannelNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+        copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
+        return this;
+      }
+
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public java.lang.String getSessionId() {
+        return instance.getSessionId();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The bytes for sessionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSessionIdBytes() {
+        return instance.getSessionIdBytes();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSessionId(value);
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        copyOnWrite();
+        instance.clearSessionId();
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The bytes for sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasExpiresAt() {
+        return instance.hasExpiresAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getExpiresAt() {
+        return instance.getExpiresAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setExpiresAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      public Builder setExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExpiresAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeExpiresAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 4;</code>
+       */
+      public Builder clearExpiresAt() {  copyOnWrite();
+        instance.clearExpiresAt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingSessionRenewedNotification)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerNumber_",
+              "channelNumber_",
+              "sessionId_",
+              "expiresAt_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\u0208\u0004\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MessagingSessionRenewedNotification)
+    private static final com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification DEFAULT_INSTANCE;
+    static {
+      MessagingSessionRenewedNotification defaultInstance = new MessagingSessionRenewedNotification();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MessagingSessionRenewedNotification.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionRenewedNotification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MessagingSessionRenewedNotification> PARSER;
+
+    public static com.google.protobuf.Parser<MessagingSessionRenewedNotification> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MessagingSessionEndedNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MessagingSessionEndedNotification)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
+     */
+    com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber();
+
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    java.lang.String getSessionId();
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    com.google.protobuf.ByteString
+        getSessionIdBytes();
+
+    /**
+     * <code>.google.protobuf.Duration duration = 4;</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 4;</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    int getReasonValue();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+     * @return The reason.
+     */
+    com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason getReason();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.MessagingSessionEndedNotification}
+   */
+  public  static final class MessagingSessionEndedNotification extends
+      com.google.protobuf.GeneratedMessageLite<
+          MessagingSessionEndedNotification, MessagingSessionEndedNotification.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingSessionEndedNotification)
+      MessagingSessionEndedNotificationOrBuilder {
+    private MessagingSessionEndedNotification() {
+      sessionId_ = "";
+    }
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+      value.getClass();
+  customerNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
+    }
+
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.MessagingModel.MessagingChannelNumber channelNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    private void setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+      value.getClass();
+  channelNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    private void clearChannelNumber() {  channelNumber_ = null;
+      
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 3;
+    private java.lang.String sessionId_;
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionId() {
+      return sessionId_;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @return The bytes for sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The sessionId to set.
+     */
+    private void setSessionId(
+        java.lang.String value) {
+      value.getClass();
+  
+      sessionId_ = value;
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     */
+    private void clearSessionId() {
+      
+      sessionId_ = getDefaultInstance().getSessionId();
+    }
+    /**
+     * <code>string session_id = 3;</code>
+     * @param value The bytes for sessionId to set.
+     */
+    private void setSessionIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sessionId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <code>.google.protobuf.Duration duration = 4;</code>
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 4;</code>
+     */
+    private void setDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  duration_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Duration duration = 4;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (duration_ != null &&
+          duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        duration_ =
+          com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+      } else {
+        duration_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 4;</code>
+     */
+    private void clearDuration() {  duration_ = null;
+      
+    }
+
+    public static final int REASON_FIELD_NUMBER = 5;
+    private int reason_;
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    @java.lang.Override
+    public int getReasonValue() {
+      return reason_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason getReason() {
+      com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason result = com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason.forNumber(reason_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+     * @param value The enum numeric value on the wire for reason to set.
+     */
+    private void setReasonValue(int value) {
+        reason_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+     * @param value The reason to set.
+     */
+    private void setReason(com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason value) {
+      reason_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+     */
+    private void clearReason() {
+      
+      reason_ = 0;
+    }
+
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.MessagingSessionEndedNotification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MessagingSessionEndedNotification)
+        com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotificationOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+        return instance.getChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+        copyOnWrite();
+        instance.setChannelNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+        copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
+        return this;
+      }
+
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public java.lang.String getSessionId() {
+        return instance.getSessionId();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return The bytes for sessionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSessionIdBytes() {
+        return instance.getSessionIdBytes();
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSessionId(value);
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        copyOnWrite();
+        instance.clearSessionId();
+        return this;
+      }
+      /**
+       * <code>string session_id = 3;</code>
+       * @param value The bytes for sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSessionIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Duration duration = 4;</code>
+       */
+      @java.lang.Override
+      public boolean hasDuration() {
+        return instance.hasDuration();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getDuration() {
+        return instance.getDuration();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 4;</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setDuration(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Duration duration = 4;</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDuration(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 4;</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeDuration(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 4;</code>
+       */
+      public Builder clearDuration() {  copyOnWrite();
+        instance.clearDuration();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+       * @return The enum numeric value on the wire for reason.
+       */
+      @java.lang.Override
+      public int getReasonValue() {
+        return instance.getReasonValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonValue(int value) {
+        copyOnWrite();
+        instance.setReasonValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+       * @return The reason.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason getReason() {
+        return instance.getReason();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+       * @param value The enum numeric value on the wire for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason value) {
+        copyOnWrite();
+        instance.setReason(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingSessionEndReason reason = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        copyOnWrite();
+        instance.clearReason();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingSessionEndedNotification)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerNumber_",
+              "channelNumber_",
+              "sessionId_",
+              "duration_",
+              "reason_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\u0208\u0004\t\u0005\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MessagingSessionEndedNotification)
+    private static final com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification DEFAULT_INSTANCE;
+    static {
+      MessagingSessionEndedNotification defaultInstance = new MessagingSessionEndedNotification();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MessagingSessionEndedNotification.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.AppSocket.MessagingSessionEndedNotification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MessagingSessionEndedNotification> PARSER;
+
+    public static com.google.protobuf.Parser<MessagingSessionEndedNotification> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MessagingConsentUpdateNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.MessagingConsentUpdateNotification)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return Whether the channelNumber field is set.
+     */
+    boolean hasChannelNumber();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     * @return The channelNumber.
+     */
+    com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @return The enum numeric value on the wire for update.
+     */
+    int getUpdateValue();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @return The update.
+     */
+    com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate getUpdate();
+
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+     * @return The status.
+     */
+    com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus getStatus();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.MessagingConsentUpdateNotification}
+   */
+  public  static final class MessagingConsentUpdateNotification extends
+      com.google.protobuf.GeneratedMessageLite<
+          MessagingConsentUpdateNotification, MessagingConsentUpdateNotification.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.MessagingConsentUpdateNotification)
+      MessagingConsentUpdateNotificationOrBuilder {
+    private MessagingConsentUpdateNotification() {
+    }
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+      value.getClass();
+  customerNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+      value.getClass();
+  if (customerNumber_ != null &&
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
+        customerNumber_ =
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+      } else {
+        customerNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    private void clearCustomerNumber() {  customerNumber_ = null;
+      
+    }
+
+    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
+    private com.elarian.hera.proto.MessagingModel.MessagingChannelNumber channelNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasChannelNumber() {
+      return channelNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    private void setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+      value.getClass();
+  channelNumber_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+      value.getClass();
+  if (channelNumber_ != null &&
+          channelNumber_ != com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance()) {
+        channelNumber_ =
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+      } else {
+        channelNumber_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+     */
+    private void clearChannelNumber() {  channelNumber_ = null;
+      
+    }
+
+    public static final int UPDATE_FIELD_NUMBER = 3;
+    private int update_;
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @return The enum numeric value on the wire for update.
+     */
+    @java.lang.Override
+    public int getUpdateValue() {
+      return update_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @return The update.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate getUpdate() {
+      com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate result = com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate.forNumber(update_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @param value The enum numeric value on the wire for update to set.
+     */
+    private void setUpdateValue(int value) {
+        update_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     * @param value The update to set.
+     */
+    private void setUpdate(com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate value) {
+      update_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+     */
+    private void clearUpdate() {
+      
+      update_ = 0;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 4;
+    private int status_;
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus getStatus() {
+      com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus result = com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+     * @param value The enum numeric value on the wire for status to set.
+     */
+    private void setStatusValue(int value) {
+        status_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+     * @param value The status to set.
+     */
+    private void setStatus(com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus value) {
+      status_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+     */
+    private void clearStatus() {
+      
+      status_ = 0;
+    }
+
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.MessagingConsentUpdateNotification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.MessagingConsentUpdateNotification)
+        com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotificationOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public boolean hasCustomerNumber() {
+        return instance.hasCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+        return instance.getCustomerNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        copyOnWrite();
+        instance.setCustomerNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCustomerNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        copyOnWrite();
+        instance.mergeCustomerNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder clearCustomerNumber() {  copyOnWrite();
+        instance.clearCustomerNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasChannelNumber() {
+        return instance.hasChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+        return instance.getChannelNumber();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+        copyOnWrite();
+        instance.setChannelNumber(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder setChannelNumber(
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.Builder builderForValue) {
+        copyOnWrite();
+        instance.setChannelNumber(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
+        copyOnWrite();
+        instance.mergeChannelNumber(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;</code>
+       */
+      public Builder clearChannelNumber() {  copyOnWrite();
+        instance.clearChannelNumber();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @return The enum numeric value on the wire for update.
+       */
+      @java.lang.Override
+      public int getUpdateValue() {
+        return instance.getUpdateValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @param value The update to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdateValue(int value) {
+        copyOnWrite();
+        instance.setUpdateValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @return The update.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate getUpdate() {
+        return instance.getUpdate();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @param value The enum numeric value on the wire for update to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdate(com.elarian.hera.proto.MessagingModel.MessagingConsentUpdate value) {
+        copyOnWrite();
+        instance.setUpdate(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdate update = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdate() {
+        copyOnWrite();
+        instance.clearUpdate();
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        copyOnWrite();
+        instance.setStatusValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.elarian.hera.proto.MessagingModel.MessagingConsentUpdateStatus value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.MessagingConsentUpdateStatus status = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.MessagingConsentUpdateNotification)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerNumber_",
+              "channelNumber_",
+              "update_",
+              "status_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\f\u0004\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.MessagingConsentUpdateNotification)
+    private static final com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification DEFAULT_INSTANCE;
+    static {
+      MessagingConsentUpdateNotification defaultInstance = new MessagingConsentUpdateNotification();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MessagingConsentUpdateNotification.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.AppSocket.MessagingConsentUpdateNotification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MessagingConsentUpdateNotification> PARSER;
+
+    public static com.google.protobuf.Parser<MessagingConsentUpdateNotification> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface ReceivedMessageNotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ReceivedMessageNotification)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -31258,7 +31290,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
@@ -31269,54 +31301,43 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
      * @return The channelNumber.
      */
-    com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber();
+    com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber();
 
     /**
-     * <code>.google.protobuf.StringValue text = 4;</code>
-     * @return Whether the text field is set.
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    boolean hasText();
+    java.util.List<com.elarian.hera.proto.MessagingModel.InboundMessageBody> 
+        getPartsList();
     /**
-     * <code>.google.protobuf.StringValue text = 4;</code>
-     * @return The text.
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    com.google.protobuf.StringValue getText();
+    com.elarian.hera.proto.MessagingModel.InboundMessageBody getParts(int index);
+    /**
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+     */
+    int getPartsCount();
 
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>.google.protobuf.StringValue session_id = 5;</code>
+     * @return Whether the sessionId field is set.
      */
-    java.util.List<com.elarian.hera.proto.Common.MediaMessageBody> 
-        getMediaList();
+    boolean hasSessionId();
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>.google.protobuf.StringValue session_id = 5;</code>
+     * @return The sessionId.
      */
-    com.elarian.hera.proto.Common.MediaMessageBody getMedia(int index);
-    /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-     */
-    int getMediaCount();
+    com.google.protobuf.StringValue getSessionId();
 
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-     * @return Whether the location field is set.
+     * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
+     * @return Whether the inReplyTo field is set.
      */
-    boolean hasLocation();
+    boolean hasInReplyTo();
     /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-     * @return The location.
+     * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
+     * @return The inReplyTo.
      */
-    com.elarian.hera.proto.Common.LocationMessageBody getLocation();
-
-    /**
-     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
-     * @return Whether the email field is set.
-     */
-    boolean hasEmail();
-    /**
-     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
-     * @return The email.
-     */
-    com.elarian.hera.proto.Common.EmailMessageBody getEmail();
+    com.google.protobuf.StringValue getInReplyTo();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReceivedMessageNotification}
@@ -31328,7 +31349,7 @@ public final class AppSocket {
       ReceivedMessageNotificationOrBuilder {
     private ReceivedMessageNotification() {
       messageId_ = "";
-      media_ = emptyProtobufList();
+      parts_ = emptyProtobufList();
     }
     public static final int MESSAGE_ID_FIELD_NUMBER = 1;
     private java.lang.String messageId_;
@@ -31378,7 +31399,7 @@ public final class AppSocket {
     }
 
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
@@ -31390,13 +31411,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customerNumber_ = value;
       
@@ -31405,12 +31426,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
         customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
         customerNumber_ = value;
       }
@@ -31424,7 +31445,7 @@ public final class AppSocket {
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.MessagingChannelNumber channelNumber_;
+    private com.elarian.hera.proto.MessagingModel.MessagingChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
      */
@@ -31436,13 +31457,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
+    public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
      */
-    private void setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+    private void setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
       value.getClass();
   channelNumber_ = value;
       
@@ -31451,12 +31472,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+    private void mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
       value.getClass();
   if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.MessagingChannelNumber.getDefaultInstance()) {
+          channelNumber_ != com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.getDefaultInstance()) {
         channelNumber_ =
-          com.elarian.hera.proto.Common.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
       } else {
         channelNumber_ = value;
       }
@@ -31469,235 +31490,189 @@ public final class AppSocket {
       
     }
 
-    public static final int TEXT_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue text_;
+    public static final int PARTS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.MessagingModel.InboundMessageBody> parts_;
     /**
-     * <code>.google.protobuf.StringValue text = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
     @java.lang.Override
-    public boolean hasText() {
-      return text_ != null;
+    public java.util.List<com.elarian.hera.proto.MessagingModel.InboundMessageBody> getPartsList() {
+      return parts_;
     }
     /**
-     * <code>.google.protobuf.StringValue text = 4;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+     */
+    public java.util.List<? extends com.elarian.hera.proto.MessagingModel.InboundMessageBodyOrBuilder> 
+        getPartsOrBuilderList() {
+      return parts_;
+    }
+    /**
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.StringValue getText() {
-      return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
+    public int getPartsCount() {
+      return parts_.size();
     }
     /**
-     * <code>.google.protobuf.StringValue text = 4;</code>
-     */
-    private void setText(com.google.protobuf.StringValue value) {
-      value.getClass();
-  text_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue text = 4;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeText(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (text_ != null &&
-          text_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        text_ =
-          com.google.protobuf.StringValue.newBuilder(text_).mergeFrom(value).buildPartial();
-      } else {
-        text_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue text = 4;</code>
-     */
-    private void clearText() {  text_ = null;
-      
-    }
-
-    public static final int MEDIA_FIELD_NUMBER = 5;
-    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.MediaMessageBody> media_;
-    /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<com.elarian.hera.proto.Common.MediaMessageBody> getMediaList() {
-      return media_;
+    public com.elarian.hera.proto.MessagingModel.InboundMessageBody getParts(int index) {
+      return parts_.get(index);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    public java.util.List<? extends com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder> 
-        getMediaOrBuilderList() {
-      return media_;
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-     */
-    @java.lang.Override
-    public int getMediaCount() {
-      return media_.size();
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.MediaMessageBody getMedia(int index) {
-      return media_.get(index);
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-     */
-    public com.elarian.hera.proto.Common.MediaMessageBodyOrBuilder getMediaOrBuilder(
+    public com.elarian.hera.proto.MessagingModel.InboundMessageBodyOrBuilder getPartsOrBuilder(
         int index) {
-      return media_.get(index);
+      return parts_.get(index);
     }
-    private void ensureMediaIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.MediaMessageBody> tmp = media_;
+    private void ensurePartsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.MessagingModel.InboundMessageBody> tmp = parts_;
       if (!tmp.isModifiable()) {
-        media_ =
+        parts_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
        }
     }
 
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    private void setMedia(
-        int index, com.elarian.hera.proto.Common.MediaMessageBody value) {
+    private void setParts(
+        int index, com.elarian.hera.proto.MessagingModel.InboundMessageBody value) {
       value.getClass();
-  ensureMediaIsMutable();
-      media_.set(index, value);
+  ensurePartsIsMutable();
+      parts_.set(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    private void addMedia(com.elarian.hera.proto.Common.MediaMessageBody value) {
+    private void addParts(com.elarian.hera.proto.MessagingModel.InboundMessageBody value) {
       value.getClass();
-  ensureMediaIsMutable();
-      media_.add(value);
+  ensurePartsIsMutable();
+      parts_.add(value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    private void addMedia(
-        int index, com.elarian.hera.proto.Common.MediaMessageBody value) {
+    private void addParts(
+        int index, com.elarian.hera.proto.MessagingModel.InboundMessageBody value) {
       value.getClass();
-  ensureMediaIsMutable();
-      media_.add(index, value);
+  ensurePartsIsMutable();
+      parts_.add(index, value);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    private void addAllMedia(
-        java.lang.Iterable<? extends com.elarian.hera.proto.Common.MediaMessageBody> values) {
-      ensureMediaIsMutable();
+    private void addAllParts(
+        java.lang.Iterable<? extends com.elarian.hera.proto.MessagingModel.InboundMessageBody> values) {
+      ensurePartsIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
-          values, media_);
+          values, parts_);
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    private void clearMedia() {
-      media_ = emptyProtobufList();
+    private void clearParts() {
+      parts_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+     * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
      */
-    private void removeMedia(int index) {
-      ensureMediaIsMutable();
-      media_.remove(index);
-    }
-
-    public static final int LOCATION_FIELD_NUMBER = 6;
-    private com.elarian.hera.proto.Common.LocationMessageBody location_;
-    /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-     */
-    @java.lang.Override
-    public boolean hasLocation() {
-      return location_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.LocationMessageBody getLocation() {
-      return location_ == null ? com.elarian.hera.proto.Common.LocationMessageBody.getDefaultInstance() : location_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-     */
-    private void setLocation(com.elarian.hera.proto.Common.LocationMessageBody value) {
-      value.getClass();
-  location_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeLocation(com.elarian.hera.proto.Common.LocationMessageBody value) {
-      value.getClass();
-  if (location_ != null &&
-          location_ != com.elarian.hera.proto.Common.LocationMessageBody.getDefaultInstance()) {
-        location_ =
-          com.elarian.hera.proto.Common.LocationMessageBody.newBuilder(location_).mergeFrom(value).buildPartial();
-      } else {
-        location_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-     */
-    private void clearLocation() {  location_ = null;
-      
+    private void removeParts(int index) {
+      ensurePartsIsMutable();
+      parts_.remove(index);
     }
 
-    public static final int EMAIL_FIELD_NUMBER = 7;
-    private com.elarian.hera.proto.Common.EmailMessageBody email_;
+    public static final int SESSION_ID_FIELD_NUMBER = 5;
+    private com.google.protobuf.StringValue sessionId_;
     /**
-     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     * <code>.google.protobuf.StringValue session_id = 5;</code>
      */
     @java.lang.Override
-    public boolean hasEmail() {
-      return email_ != null;
+    public boolean hasSessionId() {
+      return sessionId_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     * <code>.google.protobuf.StringValue session_id = 5;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
-      return email_ == null ? com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance() : email_;
+    public com.google.protobuf.StringValue getSessionId() {
+      return sessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sessionId_;
     }
     /**
-     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     * <code>.google.protobuf.StringValue session_id = 5;</code>
      */
-    private void setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+    private void setSessionId(com.google.protobuf.StringValue value) {
       value.getClass();
-  email_ = value;
+  sessionId_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     * <code>.google.protobuf.StringValue session_id = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
+    private void mergeSessionId(com.google.protobuf.StringValue value) {
       value.getClass();
-  if (email_ != null &&
-          email_ != com.elarian.hera.proto.Common.EmailMessageBody.getDefaultInstance()) {
-        email_ =
-          com.elarian.hera.proto.Common.EmailMessageBody.newBuilder(email_).mergeFrom(value).buildPartial();
+  if (sessionId_ != null &&
+          sessionId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        sessionId_ =
+          com.google.protobuf.StringValue.newBuilder(sessionId_).mergeFrom(value).buildPartial();
       } else {
-        email_ = value;
+        sessionId_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
+     * <code>.google.protobuf.StringValue session_id = 5;</code>
      */
-    private void clearEmail() {  email_ = null;
+    private void clearSessionId() {  sessionId_ = null;
+      
+    }
+
+    public static final int IN_REPLY_TO_FIELD_NUMBER = 6;
+    private com.google.protobuf.StringValue inReplyTo_;
+    /**
+     * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
+     */
+    @java.lang.Override
+    public boolean hasInReplyTo() {
+      return inReplyTo_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getInReplyTo() {
+      return inReplyTo_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : inReplyTo_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
+     */
+    private void setInReplyTo(com.google.protobuf.StringValue value) {
+      value.getClass();
+  inReplyTo_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeInReplyTo(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (inReplyTo_ != null &&
+          inReplyTo_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        inReplyTo_ =
+          com.google.protobuf.StringValue.newBuilder(inReplyTo_).mergeFrom(value).buildPartial();
+      } else {
+        inReplyTo_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
+     */
+    private void clearInReplyTo() {  inReplyTo_ = null;
       
     }
 
@@ -31856,13 +31831,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -31871,7 +31846,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -31879,7 +31854,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 2;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -31903,13 +31878,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.MessagingChannelNumber getChannelNumber() {
+      public com.elarian.hera.proto.MessagingModel.MessagingChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
        */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
@@ -31918,7 +31893,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
        */
       public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.MessagingChannelNumber.Builder builderForValue) {
+          com.elarian.hera.proto.MessagingModel.MessagingChannelNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setChannelNumber(builderForValue.build());
         return this;
@@ -31926,7 +31901,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;</code>
        */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.MessagingChannelNumber value) {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.MessagingModel.MessagingChannelNumber value) {
         copyOnWrite();
         instance.mergeChannelNumber(value);
         return this;
@@ -31940,245 +31915,198 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.google.protobuf.StringValue text = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
        */
       @java.lang.Override
-      public boolean hasText() {
-        return instance.hasText();
+      public java.util.List<com.elarian.hera.proto.MessagingModel.InboundMessageBody> getPartsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPartsList());
       }
       /**
-       * <code>.google.protobuf.StringValue text = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.StringValue getText() {
-        return instance.getText();
+      public int getPartsCount() {
+        return instance.getPartsCount();
+      }/**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.InboundMessageBody getParts(int index) {
+        return instance.getParts(index);
       }
       /**
-       * <code>.google.protobuf.StringValue text = 4;</code>
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
        */
-      public Builder setText(com.google.protobuf.StringValue value) {
+      public Builder setParts(
+          int index, com.elarian.hera.proto.MessagingModel.InboundMessageBody value) {
         copyOnWrite();
-        instance.setText(value);
+        instance.setParts(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      public Builder setParts(
+          int index, com.elarian.hera.proto.MessagingModel.InboundMessageBody.Builder builderForValue) {
+        copyOnWrite();
+        instance.setParts(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      public Builder addParts(com.elarian.hera.proto.MessagingModel.InboundMessageBody value) {
+        copyOnWrite();
+        instance.addParts(value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      public Builder addParts(
+          int index, com.elarian.hera.proto.MessagingModel.InboundMessageBody value) {
+        copyOnWrite();
+        instance.addParts(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      public Builder addParts(
+          com.elarian.hera.proto.MessagingModel.InboundMessageBody.Builder builderForValue) {
+        copyOnWrite();
+        instance.addParts(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      public Builder addParts(
+          int index, com.elarian.hera.proto.MessagingModel.InboundMessageBody.Builder builderForValue) {
+        copyOnWrite();
+        instance.addParts(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      public Builder addAllParts(
+          java.lang.Iterable<? extends com.elarian.hera.proto.MessagingModel.InboundMessageBody> values) {
+        copyOnWrite();
+        instance.addAllParts(values);
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      public Builder clearParts() {
+        copyOnWrite();
+        instance.clearParts();
+        return this;
+      }
+      /**
+       * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 4;</code>
+       */
+      public Builder removeParts(int index) {
+        copyOnWrite();
+        instance.removeParts(index);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue session_id = 5;</code>
+       */
+      @java.lang.Override
+      public boolean hasSessionId() {
+        return instance.hasSessionId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue session_id = 5;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getSessionId() {
+        return instance.getSessionId();
+      }
+      /**
+       * <code>.google.protobuf.StringValue session_id = 5;</code>
+       */
+      public Builder setSessionId(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setSessionId(value);
         return this;
         }
       /**
-       * <code>.google.protobuf.StringValue text = 4;</code>
+       * <code>.google.protobuf.StringValue session_id = 5;</code>
        */
-      public Builder setText(
+      public Builder setSessionId(
           com.google.protobuf.StringValue.Builder builderForValue) {
         copyOnWrite();
-        instance.setText(builderForValue.build());
+        instance.setSessionId(builderForValue.build());
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue text = 4;</code>
+       * <code>.google.protobuf.StringValue session_id = 5;</code>
        */
-      public Builder mergeText(com.google.protobuf.StringValue value) {
+      public Builder mergeSessionId(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.mergeText(value);
+        instance.mergeSessionId(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue text = 4;</code>
+       * <code>.google.protobuf.StringValue session_id = 5;</code>
        */
-      public Builder clearText() {  copyOnWrite();
-        instance.clearText();
+      public Builder clearSessionId() {  copyOnWrite();
+        instance.clearSessionId();
         return this;
       }
 
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+       * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
        */
       @java.lang.Override
-      public java.util.List<com.elarian.hera.proto.Common.MediaMessageBody> getMediaList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getMediaList());
+      public boolean hasInReplyTo() {
+        return instance.hasInReplyTo();
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+       * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
        */
       @java.lang.Override
-      public int getMediaCount() {
-        return instance.getMediaCount();
-      }/**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.MediaMessageBody getMedia(int index) {
-        return instance.getMedia(index);
+      public com.google.protobuf.StringValue getInReplyTo() {
+        return instance.getInReplyTo();
       }
       /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
+       * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
        */
-      public Builder setMedia(
-          int index, com.elarian.hera.proto.Common.MediaMessageBody value) {
+      public Builder setInReplyTo(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.setMedia(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      public Builder setMedia(
-          int index, com.elarian.hera.proto.Common.MediaMessageBody.Builder builderForValue) {
-        copyOnWrite();
-        instance.setMedia(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      public Builder addMedia(com.elarian.hera.proto.Common.MediaMessageBody value) {
-        copyOnWrite();
-        instance.addMedia(value);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      public Builder addMedia(
-          int index, com.elarian.hera.proto.Common.MediaMessageBody value) {
-        copyOnWrite();
-        instance.addMedia(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      public Builder addMedia(
-          com.elarian.hera.proto.Common.MediaMessageBody.Builder builderForValue) {
-        copyOnWrite();
-        instance.addMedia(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      public Builder addMedia(
-          int index, com.elarian.hera.proto.Common.MediaMessageBody.Builder builderForValue) {
-        copyOnWrite();
-        instance.addMedia(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      public Builder addAllMedia(
-          java.lang.Iterable<? extends com.elarian.hera.proto.Common.MediaMessageBody> values) {
-        copyOnWrite();
-        instance.addAllMedia(values);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      public Builder clearMedia() {
-        copyOnWrite();
-        instance.clearMedia();
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.MediaMessageBody media = 5;</code>
-       */
-      public Builder removeMedia(int index) {
-        copyOnWrite();
-        instance.removeMedia(index);
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-       */
-      @java.lang.Override
-      public boolean hasLocation() {
-        return instance.hasLocation();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.LocationMessageBody getLocation() {
-        return instance.getLocation();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
-       */
-      public Builder setLocation(com.elarian.hera.proto.Common.LocationMessageBody value) {
-        copyOnWrite();
-        instance.setLocation(value);
+        instance.setInReplyTo(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
+       * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
        */
-      public Builder setLocation(
-          com.elarian.hera.proto.Common.LocationMessageBody.Builder builderForValue) {
+      public Builder setInReplyTo(
+          com.google.protobuf.StringValue.Builder builderForValue) {
         copyOnWrite();
-        instance.setLocation(builderForValue.build());
+        instance.setInReplyTo(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
+       * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
        */
-      public Builder mergeLocation(com.elarian.hera.proto.Common.LocationMessageBody value) {
+      public Builder mergeInReplyTo(com.google.protobuf.StringValue value) {
         copyOnWrite();
-        instance.mergeLocation(value);
+        instance.mergeInReplyTo(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.LocationMessageBody location = 6;</code>
+       * <code>.google.protobuf.StringValue in_reply_to = 6;</code>
        */
-      public Builder clearLocation() {  copyOnWrite();
-        instance.clearLocation();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
-       */
-      @java.lang.Override
-      public boolean hasEmail() {
-        return instance.hasEmail();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.EmailMessageBody getEmail() {
-        return instance.getEmail();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
-       */
-      public Builder setEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
-        copyOnWrite();
-        instance.setEmail(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
-       */
-      public Builder setEmail(
-          com.elarian.hera.proto.Common.EmailMessageBody.Builder builderForValue) {
-        copyOnWrite();
-        instance.setEmail(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
-       */
-      public Builder mergeEmail(com.elarian.hera.proto.Common.EmailMessageBody value) {
-        copyOnWrite();
-        instance.mergeEmail(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.EmailMessageBody email = 7;</code>
-       */
-      public Builder clearEmail() {  copyOnWrite();
-        instance.clearEmail();
+      public Builder clearInReplyTo() {  copyOnWrite();
+        instance.clearInReplyTo();
         return this;
       }
 
@@ -32201,15 +32129,14 @@ public final class AppSocket {
               "messageId_",
               "customerNumber_",
               "channelNumber_",
-              "text_",
-              "media_",
-              com.elarian.hera.proto.Common.MediaMessageBody.class,
-              "location_",
-              "email_",
+              "parts_",
+              com.elarian.hera.proto.MessagingModel.InboundMessageBody.class,
+              "sessionId_",
+              "inReplyTo_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u0004\t\u0005\u001b\u0006\t\u0007\t";
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\u001b\u0005\t\u0006\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -32289,7 +32216,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 2;</code>
      * @return The status.
      */
-    com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus();
+    com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessageStatusNotification}
@@ -32364,9 +32291,9 @@ public final class AppSocket {
      * @return The status.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus() {
-      com.elarian.hera.proto.Common.MessageDeliveryStatus result = com.elarian.hera.proto.Common.MessageDeliveryStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.MessageDeliveryStatus.UNRECOGNIZED : result;
+    public com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus() {
+      com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus result = com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.UNRECOGNIZED : result;
     }
     /**
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 2;</code>
@@ -32379,7 +32306,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.MessageDeliveryStatus status = 2;</code>
      * @param value The status to set.
      */
-    private void setStatus(com.elarian.hera.proto.Common.MessageDeliveryStatus value) {
+    private void setStatus(com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus value) {
       status_ = value.getNumber();
       
     }
@@ -32558,7 +32485,7 @@ public final class AppSocket {
        * @return The status.
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.MessageDeliveryStatus getStatus() {
+      public com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus() {
         return instance.getStatus();
       }
       /**
@@ -32566,7 +32493,7 @@ public final class AppSocket {
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.elarian.hera.proto.Common.MessageDeliveryStatus value) {
+      public Builder setStatus(com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -32657,1532 +32584,6 @@ public final class AppSocket {
     }
   }
 
-  public interface UssdSessionNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UssdSessionNotification)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>string session_id = 1;</code>
-     * @return The sessionId.
-     */
-    java.lang.String getSessionId();
-    /**
-     * <code>string session_id = 1;</code>
-     * @return The bytes for sessionId.
-     */
-    com.google.protobuf.ByteString
-        getSessionIdBytes();
-
-    /**
-     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-     * @return Whether the channelNumber field is set.
-     */
-    boolean hasChannelNumber();
-    /**
-     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-     * @return The channelNumber.
-     */
-    com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber();
-
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     * @return Whether the customerNumber field is set.
-     */
-    boolean hasCustomerNumber();
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     * @return The customerNumber.
-     */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
-
-    /**
-     * <code>.google.protobuf.StringValue input = 4;</code>
-     * @return Whether the input field is set.
-     */
-    boolean hasInput();
-    /**
-     * <code>.google.protobuf.StringValue input = 4;</code>
-     * @return The input.
-     */
-    com.google.protobuf.StringValue getInput();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.UssdSessionNotification}
-   */
-  public  static final class UssdSessionNotification extends
-      com.google.protobuf.GeneratedMessageLite<
-          UssdSessionNotification, UssdSessionNotification.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdSessionNotification)
-      UssdSessionNotificationOrBuilder {
-    private UssdSessionNotification() {
-      sessionId_ = "";
-    }
-    public static final int SESSION_ID_FIELD_NUMBER = 1;
-    private java.lang.String sessionId_;
-    /**
-     * <code>string session_id = 1;</code>
-     * @return The sessionId.
-     */
-    @java.lang.Override
-    public java.lang.String getSessionId() {
-      return sessionId_;
-    }
-    /**
-     * <code>string session_id = 1;</code>
-     * @return The bytes for sessionId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSessionIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
-    }
-    /**
-     * <code>string session_id = 1;</code>
-     * @param value The sessionId to set.
-     */
-    private void setSessionId(
-        java.lang.String value) {
-      value.getClass();
-  
-      sessionId_ = value;
-    }
-    /**
-     * <code>string session_id = 1;</code>
-     */
-    private void clearSessionId() {
-      
-      sessionId_ = getDefaultInstance().getSessionId();
-    }
-    /**
-     * <code>string session_id = 1;</code>
-     * @param value The bytes for sessionId to set.
-     */
-    private void setSessionIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      sessionId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.UssdChannelNumber channelNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public boolean hasChannelNumber() {
-      return channelNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.UssdChannelNumber.getDefaultInstance() : channelNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-     */
-    private void setChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
-      value.getClass();
-  channelNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
-      value.getClass();
-  if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.UssdChannelNumber.getDefaultInstance()) {
-        channelNumber_ =
-          com.elarian.hera.proto.Common.UssdChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
-      } else {
-        channelNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-     */
-    private void clearChannelNumber() {  channelNumber_ = null;
-      
-    }
-
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasCustomerNumber() {
-      return customerNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  customerNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
-      } else {
-        customerNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    private void clearCustomerNumber() {  customerNumber_ = null;
-      
-    }
-
-    public static final int INPUT_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue input_;
-    /**
-     * <code>.google.protobuf.StringValue input = 4;</code>
-     */
-    @java.lang.Override
-    public boolean hasInput() {
-      return input_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue input = 4;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getInput() {
-      return input_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : input_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue input = 4;</code>
-     */
-    private void setInput(com.google.protobuf.StringValue value) {
-      value.getClass();
-  input_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue input = 4;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeInput(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (input_ != null &&
-          input_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        input_ =
-          com.google.protobuf.StringValue.newBuilder(input_).mergeFrom(value).buildPartial();
-      } else {
-        input_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue input = 4;</code>
-     */
-    private void clearInput() {  input_ = null;
-      
-    }
-
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.UssdSessionNotification prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.UssdSessionNotification}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.UssdSessionNotification, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.UssdSessionNotification)
-        com.elarian.hera.proto.AppSocket.UssdSessionNotificationOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.UssdSessionNotification.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>string session_id = 1;</code>
-       * @return The sessionId.
-       */
-      @java.lang.Override
-      public java.lang.String getSessionId() {
-        return instance.getSessionId();
-      }
-      /**
-       * <code>string session_id = 1;</code>
-       * @return The bytes for sessionId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getSessionIdBytes() {
-        return instance.getSessionIdBytes();
-      }
-      /**
-       * <code>string session_id = 1;</code>
-       * @param value The sessionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSessionId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setSessionId(value);
-        return this;
-      }
-      /**
-       * <code>string session_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSessionId() {
-        copyOnWrite();
-        instance.clearSessionId();
-        return this;
-      }
-      /**
-       * <code>string session_id = 1;</code>
-       * @param value The bytes for sessionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSessionIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setSessionIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public boolean hasChannelNumber() {
-        return instance.hasChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.UssdChannelNumber getChannelNumber() {
-        return instance.getChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
-        copyOnWrite();
-        instance.setChannelNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.UssdChannelNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setChannelNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-       */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.UssdChannelNumber value) {
-        copyOnWrite();
-        instance.mergeChannelNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdChannelNumber channel_number = 2;</code>
-       */
-      public Builder clearChannelNumber() {  copyOnWrite();
-        instance.clearChannelNumber();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasCustomerNumber() {
-        return instance.hasCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-        return instance.getCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.setCustomerNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCustomerNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.mergeCustomerNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      public Builder clearCustomerNumber() {  copyOnWrite();
-        instance.clearCustomerNumber();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.StringValue input = 4;</code>
-       */
-      @java.lang.Override
-      public boolean hasInput() {
-        return instance.hasInput();
-      }
-      /**
-       * <code>.google.protobuf.StringValue input = 4;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getInput() {
-        return instance.getInput();
-      }
-      /**
-       * <code>.google.protobuf.StringValue input = 4;</code>
-       */
-      public Builder setInput(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setInput(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue input = 4;</code>
-       */
-      public Builder setInput(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setInput(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue input = 4;</code>
-       */
-      public Builder mergeInput(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeInput(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue input = 4;</code>
-       */
-      public Builder clearInput() {  copyOnWrite();
-        instance.clearInput();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.UssdSessionNotification)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.UssdSessionNotification();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "sessionId_",
-              "channelNumber_",
-              "customerNumber_",
-              "input_",
-            };
-            java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u0004\t";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.UssdSessionNotification> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.UssdSessionNotification.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.UssdSessionNotification>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.UssdSessionNotification)
-    private static final com.elarian.hera.proto.AppSocket.UssdSessionNotification DEFAULT_INSTANCE;
-    static {
-      UssdSessionNotification defaultInstance = new UssdSessionNotification();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        UssdSessionNotification.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<UssdSessionNotification> PARSER;
-
-    public static com.google.protobuf.Parser<UssdSessionNotification> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface VoiceCallNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.VoiceCallNotification)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>string session_id = 1;</code>
-     * @return The sessionId.
-     */
-    java.lang.String getSessionId();
-    /**
-     * <code>string session_id = 1;</code>
-     * @return The bytes for sessionId.
-     */
-    com.google.protobuf.ByteString
-        getSessionIdBytes();
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     * @return Whether the channelNumber field is set.
-     */
-    boolean hasChannelNumber();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     * @return The channelNumber.
-     */
-    com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber();
-
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     * @return Whether the customerNumber field is set.
-     */
-    boolean hasCustomerNumber();
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     * @return The customerNumber.
-     */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
-
-    /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-     * @return The enum numeric value on the wire for direction.
-     */
-    int getDirectionValue();
-    /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-     * @return The direction.
-     */
-    com.elarian.hera.proto.Common.CustomerEventDirection getDirection();
-
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-     * @return Whether the input field is set.
-     */
-    boolean hasInput();
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-     * @return The input.
-     */
-    com.elarian.hera.proto.Common.VoiceCallHopInput getInput();
-
-    /**
-     * <code>.google.protobuf.Duration duration = 6;</code>
-     * @return Whether the duration field is set.
-     */
-    boolean hasDuration();
-    /**
-     * <code>.google.protobuf.Duration duration = 6;</code>
-     * @return The duration.
-     */
-    com.google.protobuf.Duration getDuration();
-
-    /**
-     * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-     * @return Whether the cost field is set.
-     */
-    boolean hasCost();
-    /**
-     * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-     * @return The cost.
-     */
-    com.elarian.hera.proto.Common.Cash getCost();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.VoiceCallNotification}
-   */
-  public  static final class VoiceCallNotification extends
-      com.google.protobuf.GeneratedMessageLite<
-          VoiceCallNotification, VoiceCallNotification.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallNotification)
-      VoiceCallNotificationOrBuilder {
-    private VoiceCallNotification() {
-      sessionId_ = "";
-    }
-    public static final int SESSION_ID_FIELD_NUMBER = 1;
-    private java.lang.String sessionId_;
-    /**
-     * <code>string session_id = 1;</code>
-     * @return The sessionId.
-     */
-    @java.lang.Override
-    public java.lang.String getSessionId() {
-      return sessionId_;
-    }
-    /**
-     * <code>string session_id = 1;</code>
-     * @return The bytes for sessionId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSessionIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(sessionId_);
-    }
-    /**
-     * <code>string session_id = 1;</code>
-     * @param value The sessionId to set.
-     */
-    private void setSessionId(
-        java.lang.String value) {
-      value.getClass();
-  
-      sessionId_ = value;
-    }
-    /**
-     * <code>string session_id = 1;</code>
-     */
-    private void clearSessionId() {
-      
-      sessionId_ = getDefaultInstance().getSessionId();
-    }
-    /**
-     * <code>string session_id = 1;</code>
-     * @param value The bytes for sessionId to set.
-     */
-    private void setSessionIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      sessionId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.VoiceChannelNumber channelNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public boolean hasChannelNumber() {
-      return channelNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance() : channelNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    private void setChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
-      value.getClass();
-  channelNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
-      value.getClass();
-  if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.VoiceChannelNumber.getDefaultInstance()) {
-        channelNumber_ =
-          com.elarian.hera.proto.Common.VoiceChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
-      } else {
-        channelNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-     */
-    private void clearChannelNumber() {  channelNumber_ = null;
-      
-    }
-
-    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasCustomerNumber() {
-      return customerNumber_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  customerNumber_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-      value.getClass();
-  if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
-        customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
-      } else {
-        customerNumber_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-     */
-    private void clearCustomerNumber() {  customerNumber_ = null;
-      
-    }
-
-    public static final int DIRECTION_FIELD_NUMBER = 4;
-    private int direction_;
-    /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-     * @return The enum numeric value on the wire for direction.
-     */
-    @java.lang.Override
-    public int getDirectionValue() {
-      return direction_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-     * @return The direction.
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
-      com.elarian.hera.proto.Common.CustomerEventDirection result = com.elarian.hera.proto.Common.CustomerEventDirection.forNumber(direction_);
-      return result == null ? com.elarian.hera.proto.Common.CustomerEventDirection.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-     * @param value The enum numeric value on the wire for direction to set.
-     */
-    private void setDirectionValue(int value) {
-        direction_ = value;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-     * @param value The direction to set.
-     */
-    private void setDirection(com.elarian.hera.proto.Common.CustomerEventDirection value) {
-      direction_ = value.getNumber();
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-     */
-    private void clearDirection() {
-      
-      direction_ = 0;
-    }
-
-    public static final int INPUT_FIELD_NUMBER = 5;
-    private com.elarian.hera.proto.Common.VoiceCallHopInput input_;
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-     */
-    @java.lang.Override
-    public boolean hasInput() {
-      return input_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.VoiceCallHopInput getInput() {
-      return input_ == null ? com.elarian.hera.proto.Common.VoiceCallHopInput.getDefaultInstance() : input_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-     */
-    private void setInput(com.elarian.hera.proto.Common.VoiceCallHopInput value) {
-      value.getClass();
-  input_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeInput(com.elarian.hera.proto.Common.VoiceCallHopInput value) {
-      value.getClass();
-  if (input_ != null &&
-          input_ != com.elarian.hera.proto.Common.VoiceCallHopInput.getDefaultInstance()) {
-        input_ =
-          com.elarian.hera.proto.Common.VoiceCallHopInput.newBuilder(input_).mergeFrom(value).buildPartial();
-      } else {
-        input_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-     */
-    private void clearInput() {  input_ = null;
-      
-    }
-
-    public static final int DURATION_FIELD_NUMBER = 6;
-    private com.google.protobuf.Duration duration_;
-    /**
-     * <code>.google.protobuf.Duration duration = 6;</code>
-     */
-    @java.lang.Override
-    public boolean hasDuration() {
-      return duration_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Duration duration = 6;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Duration getDuration() {
-      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
-    }
-    /**
-     * <code>.google.protobuf.Duration duration = 6;</code>
-     */
-    private void setDuration(com.google.protobuf.Duration value) {
-      value.getClass();
-  duration_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.Duration duration = 6;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeDuration(com.google.protobuf.Duration value) {
-      value.getClass();
-  if (duration_ != null &&
-          duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
-        duration_ =
-          com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
-      } else {
-        duration_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.Duration duration = 6;</code>
-     */
-    private void clearDuration() {  duration_ = null;
-      
-    }
-
-    public static final int COST_FIELD_NUMBER = 7;
-    private com.elarian.hera.proto.Common.Cash cost_;
-    /**
-     * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-     */
-    @java.lang.Override
-    public boolean hasCost() {
-      return cost_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.Cash getCost() {
-      return cost_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : cost_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-     */
-    private void setCost(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  cost_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCost(com.elarian.hera.proto.Common.Cash value) {
-      value.getClass();
-  if (cost_ != null &&
-          cost_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
-        cost_ =
-          com.elarian.hera.proto.Common.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
-      } else {
-        cost_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-     */
-    private void clearCost() {  cost_ = null;
-      
-    }
-
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.VoiceCallNotification prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.VoiceCallNotification}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.VoiceCallNotification, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.VoiceCallNotification)
-        com.elarian.hera.proto.AppSocket.VoiceCallNotificationOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.VoiceCallNotification.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>string session_id = 1;</code>
-       * @return The sessionId.
-       */
-      @java.lang.Override
-      public java.lang.String getSessionId() {
-        return instance.getSessionId();
-      }
-      /**
-       * <code>string session_id = 1;</code>
-       * @return The bytes for sessionId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getSessionIdBytes() {
-        return instance.getSessionIdBytes();
-      }
-      /**
-       * <code>string session_id = 1;</code>
-       * @param value The sessionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSessionId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setSessionId(value);
-        return this;
-      }
-      /**
-       * <code>string session_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSessionId() {
-        copyOnWrite();
-        instance.clearSessionId();
-        return this;
-      }
-      /**
-       * <code>string session_id = 1;</code>
-       * @param value The bytes for sessionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSessionIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setSessionIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public boolean hasChannelNumber() {
-        return instance.hasChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.VoiceChannelNumber getChannelNumber() {
-        return instance.getChannelNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
-        copyOnWrite();
-        instance.setChannelNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.VoiceChannelNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setChannelNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.VoiceChannelNumber value) {
-        copyOnWrite();
-        instance.mergeChannelNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceChannelNumber channel_number = 2;</code>
-       */
-      public Builder clearChannelNumber() {  copyOnWrite();
-        instance.clearChannelNumber();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasCustomerNumber() {
-        return instance.hasCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-        return instance.getCustomerNumber();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.setCustomerNumber(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCustomerNumber(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
-        copyOnWrite();
-        instance.mergeCustomerNumber(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
-       */
-      public Builder clearCustomerNumber() {  copyOnWrite();
-        instance.clearCustomerNumber();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-       * @return The enum numeric value on the wire for direction.
-       */
-      @java.lang.Override
-      public int getDirectionValue() {
-        return instance.getDirectionValue();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-       * @param value The direction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDirectionValue(int value) {
-        copyOnWrite();
-        instance.setDirectionValue(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-       * @return The direction.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerEventDirection getDirection() {
-        return instance.getDirection();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-       * @param value The enum numeric value on the wire for direction to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDirection(com.elarian.hera.proto.Common.CustomerEventDirection value) {
-        copyOnWrite();
-        instance.setDirection(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.CustomerEventDirection direction = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDirection() {
-        copyOnWrite();
-        instance.clearDirection();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-       */
-      @java.lang.Override
-      public boolean hasInput() {
-        return instance.hasInput();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.VoiceCallHopInput getInput() {
-        return instance.getInput();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-       */
-      public Builder setInput(com.elarian.hera.proto.Common.VoiceCallHopInput value) {
-        copyOnWrite();
-        instance.setInput(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-       */
-      public Builder setInput(
-          com.elarian.hera.proto.Common.VoiceCallHopInput.Builder builderForValue) {
-        copyOnWrite();
-        instance.setInput(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-       */
-      public Builder mergeInput(com.elarian.hera.proto.Common.VoiceCallHopInput value) {
-        copyOnWrite();
-        instance.mergeInput(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.VoiceCallHopInput input = 5;</code>
-       */
-      public Builder clearInput() {  copyOnWrite();
-        instance.clearInput();
-        return this;
-      }
-
-      /**
-       * <code>.google.protobuf.Duration duration = 6;</code>
-       */
-      @java.lang.Override
-      public boolean hasDuration() {
-        return instance.hasDuration();
-      }
-      /**
-       * <code>.google.protobuf.Duration duration = 6;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Duration getDuration() {
-        return instance.getDuration();
-      }
-      /**
-       * <code>.google.protobuf.Duration duration = 6;</code>
-       */
-      public Builder setDuration(com.google.protobuf.Duration value) {
-        copyOnWrite();
-        instance.setDuration(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.Duration duration = 6;</code>
-       */
-      public Builder setDuration(
-          com.google.protobuf.Duration.Builder builderForValue) {
-        copyOnWrite();
-        instance.setDuration(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Duration duration = 6;</code>
-       */
-      public Builder mergeDuration(com.google.protobuf.Duration value) {
-        copyOnWrite();
-        instance.mergeDuration(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Duration duration = 6;</code>
-       */
-      public Builder clearDuration() {  copyOnWrite();
-        instance.clearDuration();
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-       */
-      @java.lang.Override
-      public boolean hasCost() {
-        return instance.hasCost();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.Cash getCost() {
-        return instance.getCost();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-       */
-      public Builder setCost(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.setCost(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-       */
-      public Builder setCost(
-          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
-        copyOnWrite();
-        instance.setCost(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-       */
-      public Builder mergeCost(com.elarian.hera.proto.Common.Cash value) {
-        copyOnWrite();
-        instance.mergeCost(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.Cash cost = 7;</code>
-       */
-      public Builder clearCost() {  copyOnWrite();
-        instance.clearCost();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.VoiceCallNotification)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.VoiceCallNotification();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "sessionId_",
-              "channelNumber_",
-              "customerNumber_",
-              "direction_",
-              "input_",
-              "duration_",
-              "cost_",
-            };
-            java.lang.String info =
-                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u0004\f\u0005\t\u0006\t\u0007\t";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.VoiceCallNotification> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.VoiceCallNotification.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.VoiceCallNotification>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.VoiceCallNotification)
-    private static final com.elarian.hera.proto.AppSocket.VoiceCallNotification DEFAULT_INSTANCE;
-    static {
-      VoiceCallNotification defaultInstance = new VoiceCallNotification();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        VoiceCallNotification.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<VoiceCallNotification> PARSER;
-
-    public static com.google.protobuf.Parser<VoiceCallNotification> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
   public interface ReceivedPaymentNotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ReceivedPaymentNotification)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -34220,7 +32621,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
@@ -34231,7 +32632,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
      * @return The channelNumber.
      */
-    com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber();
+    com.elarian.hera.proto.PaymentModel.PaymentChannelNumber getChannelNumber();
 
     /**
      * <code>.com.elarian.hera.proto.Cash value = 5;</code>
@@ -34242,7 +32643,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 5;</code>
      * @return The value.
      */
-    com.elarian.hera.proto.Common.Cash getValue();
+    com.elarian.hera.proto.CommonModel.Cash getValue();
 
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
@@ -34253,7 +32654,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
      * @return The status.
      */
-    com.elarian.hera.proto.Common.PaymentStatus getStatus();
+    com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReceivedPaymentNotification}
@@ -34362,7 +32763,7 @@ public final class AppSocket {
     }
 
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
@@ -34374,13 +32775,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customerNumber_ = value;
       
@@ -34389,12 +32790,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
         customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
         customerNumber_ = value;
       }
@@ -34408,7 +32809,7 @@ public final class AppSocket {
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.PaymentChannelNumber channelNumber_;
+    private com.elarian.hera.proto.PaymentModel.PaymentChannelNumber channelNumber_;
     /**
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
      */
@@ -34420,13 +32821,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.PaymentChannelNumber.getDefaultInstance() : channelNumber_;
+    public com.elarian.hera.proto.PaymentModel.PaymentChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.PaymentModel.PaymentChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
      */
-    private void setChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+    private void setChannelNumber(com.elarian.hera.proto.PaymentModel.PaymentChannelNumber value) {
       value.getClass();
   channelNumber_ = value;
       
@@ -34435,12 +32836,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+    private void mergeChannelNumber(com.elarian.hera.proto.PaymentModel.PaymentChannelNumber value) {
       value.getClass();
   if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.PaymentChannelNumber.getDefaultInstance()) {
+          channelNumber_ != com.elarian.hera.proto.PaymentModel.PaymentChannelNumber.getDefaultInstance()) {
         channelNumber_ =
-          com.elarian.hera.proto.Common.PaymentChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.PaymentModel.PaymentChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
       } else {
         channelNumber_ = value;
       }
@@ -34454,7 +32855,7 @@ public final class AppSocket {
     }
 
     public static final int VALUE_FIELD_NUMBER = 5;
-    private com.elarian.hera.proto.Common.Cash value_;
+    private com.elarian.hera.proto.CommonModel.Cash value_;
     /**
      * <code>.com.elarian.hera.proto.Cash value = 5;</code>
      */
@@ -34466,13 +32867,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 5;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.Cash getValue() {
-      return value_ == null ? com.elarian.hera.proto.Common.Cash.getDefaultInstance() : value_;
+    public com.elarian.hera.proto.CommonModel.Cash getValue() {
+      return value_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : value_;
     }
     /**
      * <code>.com.elarian.hera.proto.Cash value = 5;</code>
      */
-    private void setValue(com.elarian.hera.proto.Common.Cash value) {
+    private void setValue(com.elarian.hera.proto.CommonModel.Cash value) {
       value.getClass();
   value_ = value;
       
@@ -34481,12 +32882,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 5;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeValue(com.elarian.hera.proto.Common.Cash value) {
+    private void mergeValue(com.elarian.hera.proto.CommonModel.Cash value) {
       value.getClass();
   if (value_ != null &&
-          value_ != com.elarian.hera.proto.Common.Cash.getDefaultInstance()) {
+          value_ != com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance()) {
         value_ =
-          com.elarian.hera.proto.Common.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
       } else {
         value_ = value;
       }
@@ -34514,9 +32915,9 @@ public final class AppSocket {
      * @return The status.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
-      com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
+    public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
+      com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
@@ -34529,7 +32930,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentStatus status = 6;</code>
      * @param value The status to set.
      */
-    private void setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+    private void setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
       status_ = value.getNumber();
       
     }
@@ -34745,13 +33146,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -34760,7 +33161,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -34768,7 +33169,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 3;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -34792,13 +33193,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentChannelNumber getChannelNumber() {
+      public com.elarian.hera.proto.PaymentModel.PaymentChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
        */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.PaymentModel.PaymentChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
@@ -34807,7 +33208,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
        */
       public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.PaymentChannelNumber.Builder builderForValue) {
+          com.elarian.hera.proto.PaymentModel.PaymentChannelNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setChannelNumber(builderForValue.build());
         return this;
@@ -34815,7 +33216,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.PaymentChannelNumber channel_number = 4;</code>
        */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.PaymentChannelNumber value) {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.PaymentModel.PaymentChannelNumber value) {
         copyOnWrite();
         instance.mergeChannelNumber(value);
         return this;
@@ -34839,13 +33240,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.Cash value = 5;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.Cash getValue() {
+      public com.elarian.hera.proto.CommonModel.Cash getValue() {
         return instance.getValue();
       }
       /**
        * <code>.com.elarian.hera.proto.Cash value = 5;</code>
        */
-      public Builder setValue(com.elarian.hera.proto.Common.Cash value) {
+      public Builder setValue(com.elarian.hera.proto.CommonModel.Cash value) {
         copyOnWrite();
         instance.setValue(value);
         return this;
@@ -34854,7 +33255,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.Cash value = 5;</code>
        */
       public Builder setValue(
-          com.elarian.hera.proto.Common.Cash.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
         copyOnWrite();
         instance.setValue(builderForValue.build());
         return this;
@@ -34862,7 +33263,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.Cash value = 5;</code>
        */
-      public Builder mergeValue(com.elarian.hera.proto.Common.Cash value) {
+      public Builder mergeValue(com.elarian.hera.proto.CommonModel.Cash value) {
         copyOnWrite();
         instance.mergeValue(value);
         return this;
@@ -34898,7 +33299,7 @@ public final class AppSocket {
        * @return The status.
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+      public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
         return instance.getStatus();
       }
       /**
@@ -34906,7 +33307,7 @@ public final class AppSocket {
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+      public Builder setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -35026,7 +33427,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentStatus status = 2;</code>
      * @return The status.
      */
-    com.elarian.hera.proto.Common.PaymentStatus getStatus();
+    com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.PaymentStatusNotification}
@@ -35101,9 +33502,9 @@ public final class AppSocket {
      * @return The status.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
-      com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
+    public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
+      com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 2;</code>
@@ -35116,7 +33517,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentStatus status = 2;</code>
      * @param value The status to set.
      */
-    private void setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+    private void setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
       status_ = value.getNumber();
       
     }
@@ -35295,7 +33696,7 @@ public final class AppSocket {
        * @return The status.
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+      public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
         return instance.getStatus();
       }
       /**
@@ -35303,7 +33704,7 @@ public final class AppSocket {
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+      public Builder setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -35431,7 +33832,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
      * @return The status.
      */
-    com.elarian.hera.proto.Common.PaymentStatus getStatus();
+    com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.WalletPaymentStatusNotification}
@@ -35554,9 +33955,9 @@ public final class AppSocket {
      * @return The status.
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
-      com.elarian.hera.proto.Common.PaymentStatus result = com.elarian.hera.proto.Common.PaymentStatus.forNumber(status_);
-      return result == null ? com.elarian.hera.proto.Common.PaymentStatus.UNRECOGNIZED : result;
+    public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
+      com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
     }
     /**
      * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
@@ -35569,7 +33970,7 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
      * @param value The status to set.
      */
-    private void setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+    private void setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
       status_ = value.getNumber();
       
     }
@@ -35797,7 +34198,7 @@ public final class AppSocket {
        * @return The status.
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.PaymentStatus getStatus() {
+      public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
         return instance.getStatus();
       }
       /**
@@ -35805,7 +34206,7 @@ public final class AppSocket {
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.elarian.hera.proto.Common.PaymentStatus value) {
+      public Builder setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -35897,8 +34298,8 @@ public final class AppSocket {
     }
   }
 
-  public interface WebActionNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WebActionNotification)
+  public interface CustomerActivityNotificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CustomerActivityNotification)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -35910,18 +34311,18 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      * @return The customerNumber.
      */
-    com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber();
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
 
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      * @return Whether the channelNumber field is set.
      */
     boolean hasChannelNumber();
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      * @return The channelNumber.
      */
-    com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber();
+    com.elarian.hera.proto.ActivityModel.ActivityChannelNumber getChannelNumber();
 
     /**
      * <code>string session_id = 3;</code>
@@ -35936,29 +34337,29 @@ public final class AppSocket {
         getSessionIdBytes();
 
     /**
-     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
-     * @return Whether the action field is set.
+     * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
+     * @return Whether the activity field is set.
      */
-    boolean hasAction();
+    boolean hasActivity();
     /**
-     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
-     * @return The action.
+     * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
+     * @return The activity.
      */
-    com.elarian.hera.proto.Common.WebAction getAction();
+    com.elarian.hera.proto.ActivityModel.CustomerActivity getActivity();
   }
   /**
-   * Protobuf type {@code com.elarian.hera.proto.WebActionNotification}
+   * Protobuf type {@code com.elarian.hera.proto.CustomerActivityNotification}
    */
-  public  static final class WebActionNotification extends
+  public  static final class CustomerActivityNotification extends
       com.google.protobuf.GeneratedMessageLite<
-          WebActionNotification, WebActionNotification.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WebActionNotification)
-      WebActionNotificationOrBuilder {
-    private WebActionNotification() {
+          CustomerActivityNotification, CustomerActivityNotification.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.CustomerActivityNotification)
+      CustomerActivityNotificationOrBuilder {
+    private CustomerActivityNotification() {
       sessionId_ = "";
     }
     public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.CustomerNumber customerNumber_;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
@@ -35970,13 +34371,13 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
-      return customerNumber_ == null ? com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance() : customerNumber_;
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
     }
     /**
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
-    private void setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   customerNumber_ = value;
       
@@ -35985,12 +34386,12 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+    private void mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
       value.getClass();
   if (customerNumber_ != null &&
-          customerNumber_ != com.elarian.hera.proto.Common.CustomerNumber.getDefaultInstance()) {
+          customerNumber_ != com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance()) {
         customerNumber_ =
-          com.elarian.hera.proto.Common.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
       } else {
         customerNumber_ = value;
       }
@@ -36004,46 +34405,46 @@ public final class AppSocket {
     }
 
     public static final int CHANNEL_NUMBER_FIELD_NUMBER = 2;
-    private com.elarian.hera.proto.Common.WebChannelNumber channelNumber_;
+    private com.elarian.hera.proto.ActivityModel.ActivityChannelNumber channelNumber_;
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
     public boolean hasChannelNumber() {
       return channelNumber_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber() {
-      return channelNumber_ == null ? com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance() : channelNumber_;
+    public com.elarian.hera.proto.ActivityModel.ActivityChannelNumber getChannelNumber() {
+      return channelNumber_ == null ? com.elarian.hera.proto.ActivityModel.ActivityChannelNumber.getDefaultInstance() : channelNumber_;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
-    private void setChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+    private void setChannelNumber(com.elarian.hera.proto.ActivityModel.ActivityChannelNumber value) {
       value.getClass();
   channelNumber_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+    private void mergeChannelNumber(com.elarian.hera.proto.ActivityModel.ActivityChannelNumber value) {
       value.getClass();
   if (channelNumber_ != null &&
-          channelNumber_ != com.elarian.hera.proto.Common.WebChannelNumber.getDefaultInstance()) {
+          channelNumber_ != com.elarian.hera.proto.ActivityModel.ActivityChannelNumber.getDefaultInstance()) {
         channelNumber_ =
-          com.elarian.hera.proto.Common.WebChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
+          com.elarian.hera.proto.ActivityModel.ActivityChannelNumber.newBuilder(channelNumber_).mergeFrom(value).buildPartial();
       } else {
         channelNumber_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+     * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
      */
     private void clearChannelNumber() {  channelNumber_ = null;
       
@@ -36096,119 +34497,119 @@ public final class AppSocket {
       
     }
 
-    public static final int ACTION_FIELD_NUMBER = 4;
-    private com.elarian.hera.proto.Common.WebAction action_;
+    public static final int ACTIVITY_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.ActivityModel.CustomerActivity activity_;
     /**
-     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
      */
     @java.lang.Override
-    public boolean hasAction() {
-      return action_ != null;
+    public boolean hasActivity() {
+      return activity_ != null;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
      */
     @java.lang.Override
-    public com.elarian.hera.proto.Common.WebAction getAction() {
-      return action_ == null ? com.elarian.hera.proto.Common.WebAction.getDefaultInstance() : action_;
+    public com.elarian.hera.proto.ActivityModel.CustomerActivity getActivity() {
+      return activity_ == null ? com.elarian.hera.proto.ActivityModel.CustomerActivity.getDefaultInstance() : activity_;
     }
     /**
-     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
      */
-    private void setAction(com.elarian.hera.proto.Common.WebAction value) {
+    private void setActivity(com.elarian.hera.proto.ActivityModel.CustomerActivity value) {
       value.getClass();
-  action_ = value;
+  activity_ = value;
       
       }
     /**
-     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeAction(com.elarian.hera.proto.Common.WebAction value) {
+    private void mergeActivity(com.elarian.hera.proto.ActivityModel.CustomerActivity value) {
       value.getClass();
-  if (action_ != null &&
-          action_ != com.elarian.hera.proto.Common.WebAction.getDefaultInstance()) {
-        action_ =
-          com.elarian.hera.proto.Common.WebAction.newBuilder(action_).mergeFrom(value).buildPartial();
+  if (activity_ != null &&
+          activity_ != com.elarian.hera.proto.ActivityModel.CustomerActivity.getDefaultInstance()) {
+        activity_ =
+          com.elarian.hera.proto.ActivityModel.CustomerActivity.newBuilder(activity_).mergeFrom(value).buildPartial();
       } else {
-        action_ = value;
+        activity_ = value;
       }
       
     }
     /**
-     * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+     * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
      */
-    private void clearAction() {  action_ = null;
+    private void clearActivity() {  activity_ = null;
       
     }
 
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(byte[] data)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseDelimitedFrom(java.io.InputStream input)
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseDelimitedFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification parseFrom(
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -36219,19 +34620,19 @@ public final class AppSocket {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.WebActionNotification prototype) {
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.CustomerActivityNotification prototype) {
       return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code com.elarian.hera.proto.WebActionNotification}
+     * Protobuf type {@code com.elarian.hera.proto.CustomerActivityNotification}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.WebActionNotification, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WebActionNotification)
-        com.elarian.hera.proto.AppSocket.WebActionNotificationOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.WebActionNotification.newBuilder()
+          com.elarian.hera.proto.AppSocket.CustomerActivityNotification, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.CustomerActivityNotification)
+        com.elarian.hera.proto.AppSocket.CustomerActivityNotificationOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.CustomerActivityNotification.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -36248,13 +34649,13 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.CustomerNumber getCustomerNumber() {
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
         return instance.getCustomerNumber();
       }
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
-      public Builder setCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.setCustomerNumber(value);
         return this;
@@ -36263,7 +34664,7 @@ public final class AppSocket {
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
       public Builder setCustomerNumber(
-          com.elarian.hera.proto.Common.CustomerNumber.Builder builderForValue) {
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setCustomerNumber(builderForValue.build());
         return this;
@@ -36271,7 +34672,7 @@ public final class AppSocket {
       /**
        * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
        */
-      public Builder mergeCustomerNumber(com.elarian.hera.proto.Common.CustomerNumber value) {
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
         copyOnWrite();
         instance.mergeCustomerNumber(value);
         return this;
@@ -36285,46 +34686,46 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
       @java.lang.Override
       public boolean hasChannelNumber() {
         return instance.hasChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.WebChannelNumber getChannelNumber() {
+      public com.elarian.hera.proto.ActivityModel.ActivityChannelNumber getChannelNumber() {
         return instance.getChannelNumber();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
-      public Builder setChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+      public Builder setChannelNumber(com.elarian.hera.proto.ActivityModel.ActivityChannelNumber value) {
         copyOnWrite();
         instance.setChannelNumber(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
       public Builder setChannelNumber(
-          com.elarian.hera.proto.Common.WebChannelNumber.Builder builderForValue) {
+          com.elarian.hera.proto.ActivityModel.ActivityChannelNumber.Builder builderForValue) {
         copyOnWrite();
         instance.setChannelNumber(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
-      public Builder mergeChannelNumber(com.elarian.hera.proto.Common.WebChannelNumber value) {
+      public Builder mergeChannelNumber(com.elarian.hera.proto.ActivityModel.ActivityChannelNumber value) {
         copyOnWrite();
         instance.mergeChannelNumber(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebChannelNumber channel_number = 2;</code>
+       * <code>.com.elarian.hera.proto.ActivityChannelNumber channel_number = 2;</code>
        */
       public Builder clearChannelNumber() {  copyOnWrite();
         instance.clearChannelNumber();
@@ -36381,53 +34782,53 @@ public final class AppSocket {
       }
 
       /**
-       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
        */
       @java.lang.Override
-      public boolean hasAction() {
-        return instance.hasAction();
+      public boolean hasActivity() {
+        return instance.hasActivity();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
        */
       @java.lang.Override
-      public com.elarian.hera.proto.Common.WebAction getAction() {
-        return instance.getAction();
+      public com.elarian.hera.proto.ActivityModel.CustomerActivity getActivity() {
+        return instance.getActivity();
       }
       /**
-       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
        */
-      public Builder setAction(com.elarian.hera.proto.Common.WebAction value) {
+      public Builder setActivity(com.elarian.hera.proto.ActivityModel.CustomerActivity value) {
         copyOnWrite();
-        instance.setAction(value);
+        instance.setActivity(value);
         return this;
         }
       /**
-       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
        */
-      public Builder setAction(
-          com.elarian.hera.proto.Common.WebAction.Builder builderForValue) {
+      public Builder setActivity(
+          com.elarian.hera.proto.ActivityModel.CustomerActivity.Builder builderForValue) {
         copyOnWrite();
-        instance.setAction(builderForValue.build());
+        instance.setActivity(builderForValue.build());
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
        */
-      public Builder mergeAction(com.elarian.hera.proto.Common.WebAction value) {
+      public Builder mergeActivity(com.elarian.hera.proto.ActivityModel.CustomerActivity value) {
         copyOnWrite();
-        instance.mergeAction(value);
+        instance.mergeActivity(value);
         return this;
       }
       /**
-       * <code>.com.elarian.hera.proto.WebAction action = 4;</code>
+       * <code>.com.elarian.hera.proto.CustomerActivity activity = 4;</code>
        */
-      public Builder clearAction() {  copyOnWrite();
-        instance.clearAction();
+      public Builder clearActivity() {  copyOnWrite();
+        instance.clearActivity();
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WebActionNotification)
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CustomerActivityNotification)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -36436,7 +34837,7 @@ public final class AppSocket {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.WebActionNotification();
+          return new com.elarian.hera.proto.AppSocket.CustomerActivityNotification();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -36446,7 +34847,7 @@ public final class AppSocket {
               "customerNumber_",
               "channelNumber_",
               "sessionId_",
-              "action_",
+              "activity_",
             };
             java.lang.String info =
                 "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
@@ -36458,13 +34859,13 @@ public final class AppSocket {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.WebActionNotification> parser = PARSER;
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.CustomerActivityNotification> parser = PARSER;
           if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.WebActionNotification.class) {
+            synchronized (com.elarian.hera.proto.AppSocket.CustomerActivityNotification.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.WebActionNotification>(
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.CustomerActivityNotification>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -36483,706 +34884,24 @@ public final class AppSocket {
     }
 
 
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WebActionNotification)
-    private static final com.elarian.hera.proto.AppSocket.WebActionNotification DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.CustomerActivityNotification)
+    private static final com.elarian.hera.proto.AppSocket.CustomerActivityNotification DEFAULT_INSTANCE;
     static {
-      WebActionNotification defaultInstance = new WebActionNotification();
+      CustomerActivityNotification defaultInstance = new CustomerActivityNotification();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        WebActionNotification.class, defaultInstance);
+        CustomerActivityNotification.class, defaultInstance);
     }
 
-    public static com.elarian.hera.proto.AppSocket.WebActionNotification getDefaultInstance() {
+    public static com.elarian.hera.proto.AppSocket.CustomerActivityNotification getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<WebActionNotification> PARSER;
+    private static volatile com.google.protobuf.Parser<CustomerActivityNotification> PARSER;
 
-    public static com.google.protobuf.Parser<WebActionNotification> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface UssdSessionNotificationReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UssdSessionNotificationReply)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-     * @return Whether the menu field is set.
-     */
-    boolean hasMenu();
-    /**
-     * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-     * @return The menu.
-     */
-    com.elarian.hera.proto.Common.UssdMenu getMenu();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.UssdSessionNotificationReply}
-   */
-  public  static final class UssdSessionNotificationReply extends
-      com.google.protobuf.GeneratedMessageLite<
-          UssdSessionNotificationReply, UssdSessionNotificationReply.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdSessionNotificationReply)
-      UssdSessionNotificationReplyOrBuilder {
-    private UssdSessionNotificationReply() {
-    }
-    public static final int MENU_FIELD_NUMBER = 1;
-    private com.elarian.hera.proto.Common.UssdMenu menu_;
-    /**
-     * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-     */
-    @java.lang.Override
-    public boolean hasMenu() {
-      return menu_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.UssdMenu getMenu() {
-      return menu_ == null ? com.elarian.hera.proto.Common.UssdMenu.getDefaultInstance() : menu_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-     */
-    private void setMenu(com.elarian.hera.proto.Common.UssdMenu value) {
-      value.getClass();
-  menu_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeMenu(com.elarian.hera.proto.Common.UssdMenu value) {
-      value.getClass();
-  if (menu_ != null &&
-          menu_ != com.elarian.hera.proto.Common.UssdMenu.getDefaultInstance()) {
-        menu_ =
-          com.elarian.hera.proto.Common.UssdMenu.newBuilder(menu_).mergeFrom(value).buildPartial();
-      } else {
-        menu_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-     */
-    private void clearMenu() {  menu_ = null;
-      
-    }
-
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.UssdSessionNotificationReply}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.UssdSessionNotificationReply)
-        com.elarian.hera.proto.AppSocket.UssdSessionNotificationReplyOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-       */
-      @java.lang.Override
-      public boolean hasMenu() {
-        return instance.hasMenu();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.UssdMenu getMenu() {
-        return instance.getMenu();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-       */
-      public Builder setMenu(com.elarian.hera.proto.Common.UssdMenu value) {
-        copyOnWrite();
-        instance.setMenu(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-       */
-      public Builder setMenu(
-          com.elarian.hera.proto.Common.UssdMenu.Builder builderForValue) {
-        copyOnWrite();
-        instance.setMenu(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-       */
-      public Builder mergeMenu(com.elarian.hera.proto.Common.UssdMenu value) {
-        copyOnWrite();
-        instance.mergeMenu(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.UssdMenu menu = 1;</code>
-       */
-      public Builder clearMenu() {  copyOnWrite();
-        instance.clearMenu();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.UssdSessionNotificationReply)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "menu_",
-            };
-            java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\t";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.UssdSessionNotificationReply)
-    private static final com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply DEFAULT_INSTANCE;
-    static {
-      UssdSessionNotificationReply defaultInstance = new UssdSessionNotificationReply();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        UssdSessionNotificationReply.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.UssdSessionNotificationReply getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<UssdSessionNotificationReply> PARSER;
-
-    public static com.google.protobuf.Parser<UssdSessionNotificationReply> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface VoiceCallNotificationReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.VoiceCallNotificationReply)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    java.util.List<com.elarian.hera.proto.Common.VoiceCallAction> 
-        getActionsList();
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    com.elarian.hera.proto.Common.VoiceCallAction getActions(int index);
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    int getActionsCount();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.VoiceCallNotificationReply}
-   */
-  public  static final class VoiceCallNotificationReply extends
-      com.google.protobuf.GeneratedMessageLite<
-          VoiceCallNotificationReply, VoiceCallNotificationReply.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.VoiceCallNotificationReply)
-      VoiceCallNotificationReplyOrBuilder {
-    private VoiceCallNotificationReply() {
-      actions_ = emptyProtobufList();
-    }
-    public static final int ACTIONS_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.VoiceCallAction> actions_;
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.elarian.hera.proto.Common.VoiceCallAction> getActionsList() {
-      return actions_;
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    public java.util.List<? extends com.elarian.hera.proto.Common.VoiceCallActionOrBuilder> 
-        getActionsOrBuilderList() {
-      return actions_;
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    @java.lang.Override
-    public int getActionsCount() {
-      return actions_.size();
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.Common.VoiceCallAction getActions(int index) {
-      return actions_.get(index);
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    public com.elarian.hera.proto.Common.VoiceCallActionOrBuilder getActionsOrBuilder(
-        int index) {
-      return actions_.get(index);
-    }
-    private void ensureActionsIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.elarian.hera.proto.Common.VoiceCallAction> tmp = actions_;
-      if (!tmp.isModifiable()) {
-        actions_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    private void setActions(
-        int index, com.elarian.hera.proto.Common.VoiceCallAction value) {
-      value.getClass();
-  ensureActionsIsMutable();
-      actions_.set(index, value);
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    private void addActions(com.elarian.hera.proto.Common.VoiceCallAction value) {
-      value.getClass();
-  ensureActionsIsMutable();
-      actions_.add(value);
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    private void addActions(
-        int index, com.elarian.hera.proto.Common.VoiceCallAction value) {
-      value.getClass();
-  ensureActionsIsMutable();
-      actions_.add(index, value);
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    private void addAllActions(
-        java.lang.Iterable<? extends com.elarian.hera.proto.Common.VoiceCallAction> values) {
-      ensureActionsIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, actions_);
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    private void clearActions() {
-      actions_ = emptyProtobufList();
-    }
-    /**
-     * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-     */
-    private void removeActions(int index) {
-      ensureActionsIsMutable();
-      actions_.remove(index);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.VoiceCallNotificationReply}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.VoiceCallNotificationReply)
-        com.elarian.hera.proto.AppSocket.VoiceCallNotificationReplyOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      @java.lang.Override
-      public java.util.List<com.elarian.hera.proto.Common.VoiceCallAction> getActionsList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getActionsList());
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      @java.lang.Override
-      public int getActionsCount() {
-        return instance.getActionsCount();
-      }/**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.Common.VoiceCallAction getActions(int index) {
-        return instance.getActions(index);
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder setActions(
-          int index, com.elarian.hera.proto.Common.VoiceCallAction value) {
-        copyOnWrite();
-        instance.setActions(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder setActions(
-          int index, com.elarian.hera.proto.Common.VoiceCallAction.Builder builderForValue) {
-        copyOnWrite();
-        instance.setActions(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder addActions(com.elarian.hera.proto.Common.VoiceCallAction value) {
-        copyOnWrite();
-        instance.addActions(value);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder addActions(
-          int index, com.elarian.hera.proto.Common.VoiceCallAction value) {
-        copyOnWrite();
-        instance.addActions(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder addActions(
-          com.elarian.hera.proto.Common.VoiceCallAction.Builder builderForValue) {
-        copyOnWrite();
-        instance.addActions(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder addActions(
-          int index, com.elarian.hera.proto.Common.VoiceCallAction.Builder builderForValue) {
-        copyOnWrite();
-        instance.addActions(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder addAllActions(
-          java.lang.Iterable<? extends com.elarian.hera.proto.Common.VoiceCallAction> values) {
-        copyOnWrite();
-        instance.addAllActions(values);
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder clearActions() {
-        copyOnWrite();
-        instance.clearActions();
-        return this;
-      }
-      /**
-       * <code>repeated .com.elarian.hera.proto.VoiceCallAction actions = 1;</code>
-       */
-      public Builder removeActions(int index) {
-        copyOnWrite();
-        instance.removeActions(index);
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.VoiceCallNotificationReply)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "actions_",
-              com.elarian.hera.proto.Common.VoiceCallAction.class,
-            };
-            java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.VoiceCallNotificationReply)
-    private static final com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply DEFAULT_INSTANCE;
-    static {
-      VoiceCallNotificationReply defaultInstance = new VoiceCallNotificationReply();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        VoiceCallNotificationReply.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.VoiceCallNotificationReply getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<VoiceCallNotificationReply> PARSER;
-
-    public static com.google.protobuf.Parser<VoiceCallNotificationReply> parser() {
+    public static com.google.protobuf.Parser<CustomerActivityNotification> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
