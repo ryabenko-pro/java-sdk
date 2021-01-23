@@ -77,6 +77,12 @@ public final class AppSocket {
      * @return The simplexMode.
      */
     boolean getSimplexMode();
+
+    /**
+     * <code>bool simulator_mode = 6;</code>
+     * @return The simulatorMode.
+     */
+    boolean getSimulatorMode();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.AppConnectionMetadata}
@@ -166,6 +172,11 @@ public final class AppSocket {
             case 40: {
 
               simplexMode_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              simulatorMode_ = input.readBool();
               break;
             }
             default: {
@@ -339,6 +350,17 @@ public final class AppSocket {
       return simplexMode_;
     }
 
+    public static final int SIMULATOR_MODE_FIELD_NUMBER = 6;
+    private boolean simulatorMode_;
+    /**
+     * <code>bool simulator_mode = 6;</code>
+     * @return The simulatorMode.
+     */
+    @java.lang.Override
+    public boolean getSimulatorMode() {
+      return simulatorMode_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -368,6 +390,9 @@ public final class AppSocket {
       if (simplexMode_ != false) {
         output.writeBool(5, simplexMode_);
       }
+      if (simulatorMode_ != false) {
+        output.writeBool(6, simulatorMode_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -394,6 +419,10 @@ public final class AppSocket {
       if (simplexMode_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, simplexMode_);
+      }
+      if (simulatorMode_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, simulatorMode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -426,6 +455,8 @@ public final class AppSocket {
       }
       if (getSimplexMode()
           != other.getSimplexMode()) return false;
+      if (getSimulatorMode()
+          != other.getSimulatorMode()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -452,6 +483,9 @@ public final class AppSocket {
       hash = (37 * hash) + SIMPLEX_MODE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSimplexMode());
+      hash = (37 * hash) + SIMULATOR_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSimulatorMode());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -603,6 +637,8 @@ public final class AppSocket {
         }
         simplexMode_ = false;
 
+        simulatorMode_ = false;
+
         return this;
       }
 
@@ -642,6 +678,7 @@ public final class AppSocket {
           result.authToken_ = authTokenBuilder_.build();
         }
         result.simplexMode_ = simplexMode_;
+        result.simulatorMode_ = simulatorMode_;
         onBuilt();
         return result;
       }
@@ -706,6 +743,9 @@ public final class AppSocket {
         }
         if (other.getSimplexMode() != false) {
           setSimplexMode(other.getSimplexMode());
+        }
+        if (other.getSimulatorMode() != false) {
+          setSimulatorMode(other.getSimulatorMode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1153,6 +1193,37 @@ public final class AppSocket {
       public Builder clearSimplexMode() {
         
         simplexMode_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean simulatorMode_ ;
+      /**
+       * <code>bool simulator_mode = 6;</code>
+       * @return The simulatorMode.
+       */
+      @java.lang.Override
+      public boolean getSimulatorMode() {
+        return simulatorMode_;
+      }
+      /**
+       * <code>bool simulator_mode = 6;</code>
+       * @param value The simulatorMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSimulatorMode(boolean value) {
+        
+        simulatorMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool simulator_mode = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSimulatorMode() {
+        
+        simulatorMode_ = false;
         onChanged();
         return this;
       }
@@ -67839,362 +67910,363 @@ public final class AppSocket {
       "messaging_model.proto\032\025messaging_state.p" +
       "roto\032\023payment_model.proto\032\023payment_state" +
       ".proto\032\024activity_state.proto\032\024activity_m" +
-      "odel.proto\"\256\001\n\025AppConnectionMetadata\022\016\n\006" +
+      "odel.proto\"\306\001\n\025AppConnectionMetadata\022\016\n\006" +
       "org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022-\n\007api_key\030" +
       "\003 \001(\0132\034.google.protobuf.StringValue\0220\n\na" +
       "uth_token\030\004 \001(\0132\034.google.protobuf.String" +
-      "Value\022\024\n\014simplex_mode\030\005 \001(\010\"\365\016\n\022AppToSer" +
-      "verCommand\022O\n\023generate_auth_token\030\001 \001(\0132" +
-      "0.com.elarian.hera.proto.GenerateAuthTok" +
-      "enCommandH\000\022M\n\022get_customer_state\030\002 \001(\0132" +
-      "/.com.elarian.hera.proto.GetCustomerStat" +
-      "eCommandH\000\022Q\n\024adopt_customer_state\030\003 \001(\013" +
-      "21.com.elarian.hera.proto.AdoptCustomerS" +
-      "tateCommandH\000\022S\n\025add_customer_reminder\030\004" +
-      " \001(\01322.com.elarian.hera.proto.AddCustome" +
-      "rReminderCommandH\000\022Z\n\031add_customer_remin" +
-      "der_tag\030\005 \001(\01325.com.elarian.hera.proto.A" +
-      "ddCustomerReminderTagCommandH\000\022Y\n\030cancel" +
-      "_customer_reminder\030\006 \001(\01325.com.elarian.h" +
-      "era.proto.CancelCustomerReminderCommandH" +
-      "\000\022`\n\034cancel_customer_reminder_tag\030\007 \001(\0132" +
-      "8.com.elarian.hera.proto.CancelCustomerR" +
-      "eminderTagCommandH\000\022O\n\023update_customer_t" +
-      "ag\030\010 \001(\01320.com.elarian.hera.proto.Update" +
-      "CustomerTagCommandH\000\022O\n\023delete_customer_" +
-      "tag\030\t \001(\01320.com.elarian.hera.proto.Delet" +
-      "eCustomerTagCommandH\000\022`\n\034update_customer" +
-      "_secondary_id\030\n \001(\01328.com.elarian.hera.p" +
-      "roto.UpdateCustomerSecondaryIdCommandH\000\022" +
-      "`\n\034delete_customer_secondary_id\030\013 \001(\01328." +
-      "com.elarian.hera.proto.DeleteCustomerSec" +
-      "ondaryIdCommandH\000\022Y\n\030update_customer_met" +
-      "adata\030\014 \001(\01325.com.elarian.hera.proto.Upd" +
-      "ateCustomerMetadataCommandH\000\022Y\n\030delete_c" +
-      "ustomer_metadata\030\r \001(\01325.com.elarian.her" +
-      "a.proto.DeleteCustomerMetadataCommandH\000\022" +
-      "V\n\027lease_customer_app_data\030\016 \001(\01323.com.e" +
-      "larian.hera.proto.LeaseCustomerAppDataCo" +
-      "mmandH\000\022X\n\030update_customer_app_data\030\017 \001(" +
-      "\01324.com.elarian.hera.proto.UpdateCustome" +
-      "rAppDataCommandH\000\022X\n\030delete_customer_app" +
-      "_data\030\020 \001(\01324.com.elarian.hera.proto.Del" +
-      "eteCustomerAppDataCommandH\000\022B\n\014send_mess" +
-      "age\030\021 \001(\0132*.com.elarian.hera.proto.SendM" +
-      "essageCommandH\000\022I\n\020send_message_tag\030\022 \001(" +
-      "\0132-.com.elarian.hera.proto.SendMessageTa" +
-      "gCommandH\000\022I\n\020reply_to_message\030\023 \001(\0132-.c" +
-      "om.elarian.hera.proto.ReplyToMessageComm" +
-      "andH\000\022Y\n\030update_messaging_consent\030\024 \001(\0132" +
-      "5.com.elarian.hera.proto.UpdateMessaging" +
-      "ConsentCommandH\000\022J\n\020initiate_payment\030\025 \001" +
-      "(\0132..com.elarian.hera.proto.InitiatePaym" +
-      "entCommandH\000\022L\n\021customer_activity\030\026 \001(\0132" +
-      "/.com.elarian.hera.proto.CustomerActivit" +
-      "yCommandH\000B\007\n\005entry\"\260\006\n\027AppToServerComma" +
-      "ndReply\022M\n\023generate_auth_token\030\001 \001(\0132..c" +
-      "om.elarian.hera.proto.GenerateAuthTokenR" +
-      "eplyH\000\022K\n\022get_customer_state\030\002 \001(\0132-.com" +
-      ".elarian.hera.proto.GetCustomerStateRepl" +
-      "yH\000\022Q\n\025update_customer_state\030\003 \001(\01320.com" +
-      ".elarian.hera.proto.UpdateCustomerStateR" +
-      "eplyH\000\022V\n\030update_customer_app_data\030\004 \001(\013" +
-      "22.com.elarian.hera.proto.UpdateCustomer" +
-      "AppDataReplyH\000\022T\n\027lease_customer_app_dat" +
-      "a\030\005 \001(\01321.com.elarian.hera.proto.LeaseCu" +
-      "stomerAppDataReplyH\000\022@\n\014send_message\030\006 \001" +
-      "(\0132(.com.elarian.hera.proto.SendMessageR" +
-      "eplyH\000\022W\n\030update_messaging_consent\030\007 \001(\013" +
-      "23.com.elarian.hera.proto.UpdateMessagin" +
-      "gConsentReplyH\000\022H\n\020initiate_payment\030\010 \001(" +
-      "\0132,.com.elarian.hera.proto.InitiatePayme" +
-      "ntReplyH\000\022>\n\013tag_command\030\t \001(\0132\'.com.ela" +
-      "rian.hera.proto.TagCommandReplyH\000\022J\n\021cus" +
-      "tomer_activity\030\n \001(\0132-.com.elarian.hera." +
-      "proto.CustomerActivityReplyH\000B\007\n\005entry\"\032" +
-      "\n\030GenerateAuthTokenCommand\"T\n\026GenerateAu" +
-      "thTokenReply\022\r\n\005token\030\001 \001(\t\022+\n\010lifetime\030" +
-      "\002 \001(\0132\031.google.protobuf.Duration\"\275\001\n\027Get" +
-      "CustomerStateCommand\022\025\n\013customer_id\030\001 \001(" +
+      "Value\022\024\n\014simplex_mode\030\005 \001(\010\022\026\n\016simulator" +
+      "_mode\030\006 \001(\010\"\365\016\n\022AppToServerCommand\022O\n\023ge" +
+      "nerate_auth_token\030\001 \001(\01320.com.elarian.he" +
+      "ra.proto.GenerateAuthTokenCommandH\000\022M\n\022g" +
+      "et_customer_state\030\002 \001(\0132/.com.elarian.he" +
+      "ra.proto.GetCustomerStateCommandH\000\022Q\n\024ad" +
+      "opt_customer_state\030\003 \001(\01321.com.elarian.h" +
+      "era.proto.AdoptCustomerStateCommandH\000\022S\n" +
+      "\025add_customer_reminder\030\004 \001(\01322.com.elari" +
+      "an.hera.proto.AddCustomerReminderCommand" +
+      "H\000\022Z\n\031add_customer_reminder_tag\030\005 \001(\01325." +
+      "com.elarian.hera.proto.AddCustomerRemind" +
+      "erTagCommandH\000\022Y\n\030cancel_customer_remind" +
+      "er\030\006 \001(\01325.com.elarian.hera.proto.Cancel" +
+      "CustomerReminderCommandH\000\022`\n\034cancel_cust" +
+      "omer_reminder_tag\030\007 \001(\01328.com.elarian.he" +
+      "ra.proto.CancelCustomerReminderTagComman" +
+      "dH\000\022O\n\023update_customer_tag\030\010 \001(\01320.com.e" +
+      "larian.hera.proto.UpdateCustomerTagComma" +
+      "ndH\000\022O\n\023delete_customer_tag\030\t \001(\01320.com." +
+      "elarian.hera.proto.DeleteCustomerTagComm" +
+      "andH\000\022`\n\034update_customer_secondary_id\030\n " +
+      "\001(\01328.com.elarian.hera.proto.UpdateCusto" +
+      "merSecondaryIdCommandH\000\022`\n\034delete_custom" +
+      "er_secondary_id\030\013 \001(\01328.com.elarian.hera" +
+      ".proto.DeleteCustomerSecondaryIdCommandH" +
+      "\000\022Y\n\030update_customer_metadata\030\014 \001(\01325.co" +
+      "m.elarian.hera.proto.UpdateCustomerMetad" +
+      "ataCommandH\000\022Y\n\030delete_customer_metadata" +
+      "\030\r \001(\01325.com.elarian.hera.proto.DeleteCu" +
+      "stomerMetadataCommandH\000\022V\n\027lease_custome" +
+      "r_app_data\030\016 \001(\01323.com.elarian.hera.prot" +
+      "o.LeaseCustomerAppDataCommandH\000\022X\n\030updat" +
+      "e_customer_app_data\030\017 \001(\01324.com.elarian." +
+      "hera.proto.UpdateCustomerAppDataCommandH" +
+      "\000\022X\n\030delete_customer_app_data\030\020 \001(\01324.co" +
+      "m.elarian.hera.proto.DeleteCustomerAppDa" +
+      "taCommandH\000\022B\n\014send_message\030\021 \001(\0132*.com." +
+      "elarian.hera.proto.SendMessageCommandH\000\022" +
+      "I\n\020send_message_tag\030\022 \001(\0132-.com.elarian." +
+      "hera.proto.SendMessageTagCommandH\000\022I\n\020re" +
+      "ply_to_message\030\023 \001(\0132-.com.elarian.hera." +
+      "proto.ReplyToMessageCommandH\000\022Y\n\030update_" +
+      "messaging_consent\030\024 \001(\01325.com.elarian.he" +
+      "ra.proto.UpdateMessagingConsentCommandH\000" +
+      "\022J\n\020initiate_payment\030\025 \001(\0132..com.elarian" +
+      ".hera.proto.InitiatePaymentCommandH\000\022L\n\021" +
+      "customer_activity\030\026 \001(\0132/.com.elarian.he" +
+      "ra.proto.CustomerActivityCommandH\000B\007\n\005en" +
+      "try\"\260\006\n\027AppToServerCommandReply\022M\n\023gener" +
+      "ate_auth_token\030\001 \001(\0132..com.elarian.hera." +
+      "proto.GenerateAuthTokenReplyH\000\022K\n\022get_cu" +
+      "stomer_state\030\002 \001(\0132-.com.elarian.hera.pr" +
+      "oto.GetCustomerStateReplyH\000\022Q\n\025update_cu" +
+      "stomer_state\030\003 \001(\01320.com.elarian.hera.pr" +
+      "oto.UpdateCustomerStateReplyH\000\022V\n\030update" +
+      "_customer_app_data\030\004 \001(\01322.com.elarian.h" +
+      "era.proto.UpdateCustomerAppDataReplyH\000\022T" +
+      "\n\027lease_customer_app_data\030\005 \001(\01321.com.el" +
+      "arian.hera.proto.LeaseCustomerAppDataRep" +
+      "lyH\000\022@\n\014send_message\030\006 \001(\0132(.com.elarian" +
+      ".hera.proto.SendMessageReplyH\000\022W\n\030update" +
+      "_messaging_consent\030\007 \001(\01323.com.elarian.h" +
+      "era.proto.UpdateMessagingConsentReplyH\000\022" +
+      "H\n\020initiate_payment\030\010 \001(\0132,.com.elarian." +
+      "hera.proto.InitiatePaymentReplyH\000\022>\n\013tag" +
+      "_command\030\t \001(\0132\'.com.elarian.hera.proto." +
+      "TagCommandReplyH\000\022J\n\021customer_activity\030\n" +
+      " \001(\0132-.com.elarian.hera.proto.CustomerAc" +
+      "tivityReplyH\000B\007\n\005entry\"\032\n\030GenerateAuthTo" +
+      "kenCommand\"T\n\026GenerateAuthTokenReply\022\r\n\005" +
+      "token\030\001 \001(\t\022+\n\010lifetime\030\002 \001(\0132\031.google.p" +
+      "rotobuf.Duration\"\275\001\n\027GetCustomerStateCom" +
+      "mand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_" +
+      "number\030\002 \001(\0132&.com.elarian.hera.proto.Cu" +
+      "stomerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.c" +
+      "om.elarian.hera.proto.IndexMappingH\000B\n\n\010" +
+      "customer\"z\n\025GetCustomerStateReply\022\016\n\006sta" +
+      "tus\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022<\n\004data\030\003" +
+      " \001(\0132..com.elarian.hera.proto.CustomerSt" +
+      "ateReplyData\"\251\002\n\026CustomerStateReplyData\022" +
+      "\023\n\013customer_id\030\001 \001(\t\022=\n\016identity_state\030\002" +
+      " \001(\0132%.com.elarian.hera.proto.IdentitySt" +
+      "ate\022?\n\017messaging_state\030\003 \001(\0132&.com.elari" +
+      "an.hera.proto.MessagingState\022;\n\rpayment_" +
+      "state\030\004 \001(\0132$.com.elarian.hera.proto.Pay" +
+      "mentState\022=\n\016activity_state\030\005 \001(\0132%.com." +
+      "elarian.hera.proto.ActivityState\"\354\001\n\031Ado" +
+      "ptCustomerStateCommand\022\023\n\013customer_id\030\001 " +
+      "\001(\t\022\033\n\021other_customer_id\030\002 \001(\tH\000\022G\n\025othe" +
+      "r_customer_number\030\003 \001(\0132&.com.elarian.he" +
+      "ra.proto.CustomerNumberH\000\022B\n\022other_secon" +
+      "dary_id\030\004 \001(\0132$.com.elarian.hera.proto.I" +
+      "ndexMappingH\000B\020\n\016other_customer\"\374\001\n\032AddC" +
+      "ustomerReminderCommand\022\025\n\013customer_id\030\001 " +
+      "\001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.ela" +
+      "rian.hera.proto.CustomerNumberH\000\022<\n\014seco" +
+      "ndary_id\030\003 \001(\0132$.com.elarian.hera.proto." +
+      "IndexMappingH\000\022:\n\010reminder\030\004 \001(\0132(.com.e" +
+      "larian.hera.proto.CustomerReminderB\n\n\010cu" +
+      "stomer\"\216\001\n\035AddCustomerReminderTagCommand" +
+      "\0221\n\003tag\030\001 \001(\0132$.com.elarian.hera.proto.I" +
+      "ndexMapping\022:\n\010reminder\030\002 \001(\0132(.com.elar" +
+      "ian.hera.proto.CustomerReminder\"\320\001\n\035Canc" +
+      "elCustomerReminderCommand\022\025\n\013customer_id" +
+      "\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com." +
+      "elarian.hera.proto.CustomerNumberH\000\022<\n\014s" +
+      "econdary_id\030\003 \001(\0132$.com.elarian.hera.pro" +
+      "to.IndexMappingH\000\022\013\n\003key\030\004 \001(\tB\n\n\010custom" +
+      "er\"b\n CancelCustomerReminderTagCommand\0221" +
+      "\n\003tag\030\001 \001(\0132$.com.elarian.hera.proto.Ind" +
+      "exMapping\022\013\n\003key\030\002 \001(\t\"\366\001\n\030UpdateCustome" +
+      "rTagCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017cu" +
+      "stomer_number\030\002 \001(\0132&.com.elarian.hera.p" +
+      "roto.CustomerNumberH\000\022<\n\014secondary_id\030\003 " +
+      "\001(\0132$.com.elarian.hera.proto.IndexMappin" +
+      "gH\000\0226\n\007updates\030\004 \003(\0132%.com.elarian.hera." +
+      "proto.CustomerIndexB\n\n\010customer\"\321\001\n\030Dele" +
+      "teCustomerTagCommand\022\025\n\013customer_id\030\001 \001(" +
       "\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.elari" +
       "an.hera.proto.CustomerNumberH\000\022<\n\014second" +
       "ary_id\030\003 \001(\0132$.com.elarian.hera.proto.In" +
-      "dexMappingH\000B\n\n\010customer\"z\n\025GetCustomerS" +
-      "tateReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description" +
-      "\030\002 \001(\t\022<\n\004data\030\003 \001(\0132..com.elarian.hera." +
-      "proto.CustomerStateReplyData\"\251\002\n\026Custome" +
-      "rStateReplyData\022\023\n\013customer_id\030\001 \001(\t\022=\n\016" +
-      "identity_state\030\002 \001(\0132%.com.elarian.hera." +
-      "proto.IdentityState\022?\n\017messaging_state\030\003" +
-      " \001(\0132&.com.elarian.hera.proto.MessagingS" +
-      "tate\022;\n\rpayment_state\030\004 \001(\0132$.com.elaria" +
-      "n.hera.proto.PaymentState\022=\n\016activity_st" +
-      "ate\030\005 \001(\0132%.com.elarian.hera.proto.Activ" +
-      "ityState\"\354\001\n\031AdoptCustomerStateCommand\022\023" +
-      "\n\013customer_id\030\001 \001(\t\022\033\n\021other_customer_id" +
-      "\030\002 \001(\tH\000\022G\n\025other_customer_number\030\003 \001(\0132" +
-      "&.com.elarian.hera.proto.CustomerNumberH" +
-      "\000\022B\n\022other_secondary_id\030\004 \001(\0132$.com.elar" +
-      "ian.hera.proto.IndexMappingH\000B\020\n\016other_c" +
-      "ustomer\"\374\001\n\032AddCustomerReminderCommand\022\025" +
-      "\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_number" +
-      "\030\002 \001(\0132&.com.elarian.hera.proto.Customer" +
-      "NumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.ela" +
-      "rian.hera.proto.IndexMappingH\000\022:\n\010remind" +
-      "er\030\004 \001(\0132(.com.elarian.hera.proto.Custom" +
-      "erReminderB\n\n\010customer\"\216\001\n\035AddCustomerRe" +
-      "minderTagCommand\0221\n\003tag\030\001 \001(\0132$.com.elar" +
-      "ian.hera.proto.IndexMapping\022:\n\010reminder\030" +
-      "\002 \001(\0132(.com.elarian.hera.proto.CustomerR" +
-      "eminder\"\320\001\n\035CancelCustomerReminderComman" +
-      "d\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_num" +
-      "ber\030\002 \001(\0132&.com.elarian.hera.proto.Custo" +
-      "merNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com." +
-      "elarian.hera.proto.IndexMappingH\000\022\013\n\003key" +
-      "\030\004 \001(\tB\n\n\010customer\"b\n CancelCustomerRemi" +
-      "nderTagCommand\0221\n\003tag\030\001 \001(\0132$.com.elaria" +
-      "n.hera.proto.IndexMapping\022\013\n\003key\030\002 \001(\t\"\366" +
-      "\001\n\030UpdateCustomerTagCommand\022\025\n\013customer_" +
-      "id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.co" +
-      "m.elarian.hera.proto.CustomerNumberH\000\022<\n" +
-      "\014secondary_id\030\003 \001(\0132$.com.elarian.hera.p" +
-      "roto.IndexMappingH\000\0226\n\007updates\030\004 \003(\0132%.c" +
-      "om.elarian.hera.proto.CustomerIndexB\n\n\010c" +
-      "ustomer\"\321\001\n\030DeleteCustomerTagCommand\022\025\n\013" +
-      "customer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002" +
-      " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
-      "mberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elari" +
-      "an.hera.proto.IndexMappingH\000\022\021\n\tdeletion" +
-      "s\030\004 \003(\tB\n\n\010customer\"\376\001\n UpdateCustomerSe" +
-      "condaryIdCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022" +
-      "A\n\017customer_number\030\002 \001(\0132&.com.elarian.h" +
-      "era.proto.CustomerNumberH\000\022<\n\014secondary_" +
-      "id\030\003 \001(\0132$.com.elarian.hera.proto.IndexM" +
-      "appingH\000\0226\n\007updates\030\004 \003(\0132%.com.elarian." +
-      "hera.proto.CustomerIndexB\n\n\010customer\"\377\001\n" +
-      " DeleteCustomerSecondaryIdCommand\022\025\n\013cus" +
-      "tomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(" +
-      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
-      "rH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian." +
-      "hera.proto.IndexMappingH\000\0227\n\tdeletions\030\004" +
-      " \003(\0132$.com.elarian.hera.proto.IndexMappi" +
-      "ngB\n\n\010customer\"\356\002\n\035UpdateCustomerMetadat" +
-      "aCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017custo" +
-      "mer_number\030\002 \001(\0132&.com.elarian.hera.prot" +
-      "o.CustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\013" +
-      "2$.com.elarian.hera.proto.IndexMappingH\000" +
-      "\022S\n\007updates\030\004 \003(\0132B.com.elarian.hera.pro" +
-      "to.UpdateCustomerMetadataCommand.Updates" +
-      "Entry\032T\n\014UpdatesEntry\022\013\n\003key\030\001 \001(\t\0223\n\005va" +
-      "lue\030\002 \001(\0132$.com.elarian.hera.proto.DataM" +
-      "apValue:\0028\001B\n\n\010customer\"\326\001\n\035DeleteCustom" +
-      "erMetadataCommand\022\025\n\013customer_id\030\001 \001(\tH\000" +
-      "\022A\n\017customer_number\030\002 \001(\0132&.com.elarian." +
-      "hera.proto.CustomerNumberH\000\022<\n\014secondary" +
-      "_id\030\003 \001(\0132$.com.elarian.hera.proto.Index" +
-      "MappingH\000\022\021\n\tdeletions\030\004 \003(\tB\n\n\010customer" +
-      "\"r\n\030UpdateCustomerStateReply\022\016\n\006status\030\001" +
-      " \001(\010\022\023\n\013description\030\002 \001(\t\0221\n\013customer_id" +
-      "\030\003 \001(\0132\034.google.protobuf.StringValue\"\370\001\n" +
-      "\034UpdateCustomerAppDataCommand\022\025\n\013custome" +
-      "r_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&." +
-      "com.elarian.hera.proto.CustomerNumberH\000\022" +
-      "<\n\014secondary_id\030\003 \001(\0132$.com.elarian.hera" +
-      ".proto.IndexMappingH\000\0224\n\006update\030\004 \001(\0132$." +
-      "com.elarian.hera.proto.DataMapValueB\n\n\010c" +
-      "ustomer\"\302\001\n\034DeleteCustomerAppDataCommand" +
+      "dexMappingH\000\022\021\n\tdeletions\030\004 \003(\tB\n\n\010custo" +
+      "mer\"\376\001\n UpdateCustomerSecondaryIdCommand" +
       "\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_numb" +
       "er\030\002 \001(\0132&.com.elarian.hera.proto.Custom" +
       "erNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.e" +
-      "larian.hera.proto.IndexMappingH\000B\n\n\010cust" +
-      "omer\"t\n\032UpdateCustomerAppDataReply\022\016\n\006st" +
-      "atus\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\0221\n\013custo" +
-      "mer_id\030\003 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\"\301\001\n\033LeaseCustomerAppDataCommand\022\025\n\013cu" +
-      "stomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001" +
-      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
-      "erH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian" +
-      ".hera.proto.IndexMappingH\000B\n\n\010customer\"\250" +
-      "\001\n\031LeaseCustomerAppDataReply\022\016\n\006status\030\001" +
-      " \001(\010\022\023\n\013description\030\002 \001(\t\0221\n\013customer_id" +
-      "\030\003 \001(\0132\034.google.protobuf.StringValue\0223\n\005" +
-      "value\030\004 \001(\0132$.com.elarian.hera.proto.Dat" +
-      "aMapValue\"\211\002\n\022SendMessageCommand\022?\n\017cust" +
-      "omer_number\030\001 \001(\0132&.com.elarian.hera.pro" +
-      "to.CustomerNumber\022F\n\016channel_number\030\002 \001(" +
-      "\0132..com.elarian.hera.proto.MessagingChan" +
-      "nelNumber\0228\n\007message\030\003 \001(\0132\'.com.elarian" +
-      ".hera.proto.OutboundMessage\0220\n\nrequest_i" +
-      "d\030\004 \001(\0132\034.google.protobuf.StringValue\"\314\001" +
-      "\n\025SendMessageTagCommand\0221\n\003tag\030\001 \001(\0132$.c" +
-      "om.elarian.hera.proto.IndexMapping\022F\n\016ch" +
-      "annel_number\030\002 \001(\0132..com.elarian.hera.pr" +
-      "oto.MessagingChannelNumber\0228\n\007message\030\003 " +
-      "\001(\0132\'.com.elarian.hera.proto.OutboundMes" +
-      "sage\"\203\001\n\025ReplyToMessageCommand\022\023\n\013custom" +
-      "er_id\030\001 \001(\t\022\033\n\023reply_to_message_id\030\002 \001(\t" +
-      "\0228\n\007message\030\003 \001(\0132\'.com.elarian.hera.pro" +
-      "to.OutboundMessage\"\375\001\n\020SendMessageReply\022" +
-      "=\n\006status\030\001 \001(\0162-.com.elarian.hera.proto" +
-      ".MessageDeliveryStatus\022\023\n\013description\030\002 " +
-      "\001(\t\0220\n\nmessage_id\030\003 \001(\0132\034.google.protobu" +
-      "f.StringValue\0220\n\nsession_id\030\004 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0221\n\013customer_id\030\005" +
-      " \001(\0132\034.google.protobuf.StringValue\"\350\001\n\035U" +
-      "pdateMessagingConsentCommand\022?\n\017customer" +
+      "larian.hera.proto.IndexMappingH\000\0226\n\007upda" +
+      "tes\030\004 \003(\0132%.com.elarian.hera.proto.Custo" +
+      "merIndexB\n\n\010customer\"\377\001\n DeleteCustomerS" +
+      "econdaryIdCommand\022\025\n\013customer_id\030\001 \001(\tH\000" +
+      "\022A\n\017customer_number\030\002 \001(\0132&.com.elarian." +
+      "hera.proto.CustomerNumberH\000\022<\n\014secondary" +
+      "_id\030\003 \001(\0132$.com.elarian.hera.proto.Index" +
+      "MappingH\000\0227\n\tdeletions\030\004 \003(\0132$.com.elari" +
+      "an.hera.proto.IndexMappingB\n\n\010customer\"\356" +
+      "\002\n\035UpdateCustomerMetadataCommand\022\025\n\013cust" +
+      "omer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\013" +
+      "2&.com.elarian.hera.proto.CustomerNumber" +
+      "H\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian.h" +
+      "era.proto.IndexMappingH\000\022S\n\007updates\030\004 \003(" +
+      "\0132B.com.elarian.hera.proto.UpdateCustome" +
+      "rMetadataCommand.UpdatesEntry\032T\n\014Updates" +
+      "Entry\022\013\n\003key\030\001 \001(\t\0223\n\005value\030\002 \001(\0132$.com." +
+      "elarian.hera.proto.DataMapValue:\0028\001B\n\n\010c" +
+      "ustomer\"\326\001\n\035DeleteCustomerMetadataComman" +
+      "d\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_num" +
+      "ber\030\002 \001(\0132&.com.elarian.hera.proto.Custo" +
+      "merNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com." +
+      "elarian.hera.proto.IndexMappingH\000\022\021\n\tdel" +
+      "etions\030\004 \003(\tB\n\n\010customer\"r\n\030UpdateCustom" +
+      "erStateReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descript" +
+      "ion\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google." +
+      "protobuf.StringValue\"\370\001\n\034UpdateCustomerA" +
+      "ppDataCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017" +
+      "customer_number\030\002 \001(\0132&.com.elarian.hera" +
+      ".proto.CustomerNumberH\000\022<\n\014secondary_id\030" +
+      "\003 \001(\0132$.com.elarian.hera.proto.IndexMapp" +
+      "ingH\000\0224\n\006update\030\004 \001(\0132$.com.elarian.hera" +
+      ".proto.DataMapValueB\n\n\010customer\"\302\001\n\034Dele" +
+      "teCustomerAppDataCommand\022\025\n\013customer_id\030" +
+      "\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.e" +
+      "larian.hera.proto.CustomerNumberH\000\022<\n\014se" +
+      "condary_id\030\003 \001(\0132$.com.elarian.hera.prot" +
+      "o.IndexMappingH\000B\n\n\010customer\"t\n\032UpdateCu" +
+      "stomerAppDataReply\022\016\n\006status\030\001 \001(\010\022\023\n\013de" +
+      "scription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\"\301\001\n\033LeaseCust" +
+      "omerAppDataCommand\022\025\n\013customer_id\030\001 \001(\tH" +
+      "\000\022A\n\017customer_number\030\002 \001(\0132&.com.elarian" +
+      ".hera.proto.CustomerNumberH\000\022<\n\014secondar" +
+      "y_id\030\003 \001(\0132$.com.elarian.hera.proto.Inde" +
+      "xMappingH\000B\n\n\010customer\"\250\001\n\031LeaseCustomer" +
+      "AppDataReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descript" +
+      "ion\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google." +
+      "protobuf.StringValue\0223\n\005value\030\004 \001(\0132$.co" +
+      "m.elarian.hera.proto.DataMapValue\"\211\002\n\022Se" +
+      "ndMessageCommand\022?\n\017customer_number\030\001 \001(" +
+      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
+      "r\022F\n\016channel_number\030\002 \001(\0132..com.elarian." +
+      "hera.proto.MessagingChannelNumber\0228\n\007mes" +
+      "sage\030\003 \001(\0132\'.com.elarian.hera.proto.Outb" +
+      "oundMessage\0220\n\nrequest_id\030\004 \001(\0132\034.google" +
+      ".protobuf.StringValue\"\314\001\n\025SendMessageTag" +
+      "Command\0221\n\003tag\030\001 \001(\0132$.com.elarian.hera." +
+      "proto.IndexMapping\022F\n\016channel_number\030\002 \001" +
+      "(\0132..com.elarian.hera.proto.MessagingCha" +
+      "nnelNumber\0228\n\007message\030\003 \001(\0132\'.com.elaria" +
+      "n.hera.proto.OutboundMessage\"\203\001\n\025ReplyTo" +
+      "MessageCommand\022\023\n\013customer_id\030\001 \001(\t\022\033\n\023r" +
+      "eply_to_message_id\030\002 \001(\t\0228\n\007message\030\003 \001(" +
+      "\0132\'.com.elarian.hera.proto.OutboundMessa" +
+      "ge\"\375\001\n\020SendMessageReply\022=\n\006status\030\001 \001(\0162" +
+      "-.com.elarian.hera.proto.MessageDelivery" +
+      "Status\022\023\n\013description\030\002 \001(\t\0220\n\nmessage_i" +
+      "d\030\003 \001(\0132\034.google.protobuf.StringValue\0220\n" +
+      "\nsession_id\030\004 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\0221\n\013customer_id\030\005 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\"\350\001\n\035UpdateMessagingCo" +
+      "nsentCommand\022?\n\017customer_number\030\001 \001(\0132&." +
+      "com.elarian.hera.proto.CustomerNumber\022F\n" +
+      "\016channel_number\030\002 \001(\0132..com.elarian.hera" +
+      ".proto.MessagingChannelNumber\022>\n\006update\030" +
+      "\003 \001(\0162..com.elarian.hera.proto.Messaging" +
+      "ConsentUpdate\"\253\001\n\033UpdateMessagingConsent" +
+      "Reply\022D\n\006status\030\001 \001(\01624.com.elarian.hera" +
+      ".proto.MessagingConsentUpdateStatus\022\023\n\013d" +
+      "escription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034." +
+      "google.protobuf.StringValue\"\374\001\n\026Initiate" +
+      "PaymentCommand\022@\n\013debit_party\030\001 \001(\0132+.co" +
+      "m.elarian.hera.proto.PaymentCounterParty" +
+      "\022A\n\014credit_party\030\002 \001(\0132+.com.elarian.her" +
+      "a.proto.PaymentCounterParty\022+\n\005value\030\003 \001" +
+      "(\0132\034.com.elarian.hera.proto.Cash\0220\n\nrequ" +
+      "est_id\030\004 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\"\213\002\n\024InitiatePaymentReply\0225\n\006status\030\001 " +
+      "\001(\0162%.com.elarian.hera.proto.PaymentStat" +
+      "us\022\023\n\013description\030\002 \001(\t\0224\n\016transaction_i" +
+      "d\030\003 \001(\0132\034.google.protobuf.StringValue\0227\n" +
+      "\021debit_customer_id\030\004 \001(\0132\034.google.protob" +
+      "uf.StringValue\0228\n\022credit_customer_id\030\005 \001" +
+      "(\0132\034.google.protobuf.StringValue\"e\n\017TagC" +
+      "ommandReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descripti" +
+      "on\030\002 \001(\t\022-\n\007work_id\030\003 \001(\0132\034.google.proto" +
+      "buf.StringValue\"\312\002\n\027CustomerActivityComm" +
+      "and\022?\n\017customer_number\030\001 \001(\0132&.com.elari" +
+      "an.hera.proto.CustomerNumber\022E\n\016channel_" +
+      "number\030\002 \001(\0132-.com.elarian.hera.proto.Ac" +
+      "tivityChannelNumber\022\022\n\nsession_id\030\003 \001(\t\022" +
+      "\013\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003(\0132?.com.e" +
+      "larian.hera.proto.CustomerActivityComman" +
+      "d.PropertiesEntry\0321\n\017PropertiesEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\025Customer" +
+      "ActivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descrip" +
+      "tion\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google" +
+      ".protobuf.StringValue\"\266\001\n\027ServerToAppNot" +
+      "ification\022K\n\010customer\030\001 \001(\01327.com.elaria" +
+      "n.hera.proto.ServerToAppCustomerNotifica" +
+      "tionH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.hera" +
+      ".proto.ServerToAppPurseNotificationH\000B\007\n" +
+      "\005entry\"\316\t\n\037ServerToAppCustomerNotificati" +
+      "on\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n\013cu" +
+      "stomer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.com." +
+      "elarian.hera.proto.DataMapValue\022.\n\ncreat" +
+      "ed_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "@\n\010reminder\030\006 \001(\0132,.com.elarian.hera.pro" +
+      "to.ReminderNotificationH\000\022`\n\031messaging_s" +
+      "ession_started\030\007 \001(\0132;.com.elarian.hera." +
+      "proto.MessagingSessionStartedNotificatio" +
+      "nH\000\022`\n\031messaging_session_renewed\030\010 \001(\0132;" +
+      ".com.elarian.hera.proto.MessagingSession" +
+      "RenewedNotificationH\000\022\\\n\027messaging_sessi" +
+      "on_ended\030\t \001(\01329.com.elarian.hera.proto." +
+      "MessagingSessionEndedNotificationH\000\022^\n\030m" +
+      "essaging_consent_update\030\n \001(\0132:.com.elar" +
+      "ian.hera.proto.MessagingConsentUpdateNot" +
+      "ificationH\000\022O\n\020received_message\030\013 \001(\01323." +
+      "com.elarian.hera.proto.ReceivedMessageNo" +
+      "tificationH\000\022K\n\016message_status\030\014 \001(\01321.c" +
+      "om.elarian.hera.proto.MessageStatusNotif" +
+      "icationH\000\022X\n\025sent_message_reaction\030\r \001(\013" +
+      "27.com.elarian.hera.proto.SentMessageRea" +
+      "ctionNotificationH\000\022O\n\020received_payment\030" +
+      "\016 \001(\01323.com.elarian.hera.proto.ReceivedP" +
+      "aymentNotificationH\000\022K\n\016payment_status\030\017" +
+      " \001(\01321.com.elarian.hera.proto.PaymentSta" +
+      "tusNotificationH\000\022X\n\025wallet_payment_stat" +
+      "us\030\020 \001(\01327.com.elarian.hera.proto.Wallet" +
+      "PaymentStatusNotificationH\000\022Q\n\021customer_" +
+      "activity\030\021 \001(\01324.com.elarian.hera.proto." +
+      "CustomerActivityNotificationH\000B\007\n\005entry\"" +
+      "\326\001\n\034ServerToAppPurseNotification\022\016\n\006org_" +
+      "id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030\003 \001" +
+      "(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022K\n\016payment_status\030\005 \001(\01321.com" +
+      ".elarian.hera.proto.PaymentStatusNotific" +
+      "ationH\000B\007\n\005entry\"C\n\rAppDataUpdate\0222\n\004dat" +
+      "a\030\001 \001(\0132$.com.elarian.hera.proto.DataMap" +
+      "Value\"\224\001\n\034ServerToAppNotificationReply\022:" +
+      "\n\013data_update\030\001 \001(\0132%.com.elarian.hera.p" +
+      "roto.AppDataUpdate\0228\n\007message\030\002 \001(\0132\'.co" +
+      "m.elarian.hera.proto.OutboundMessage\"\265\001\n" +
+      "\024ReminderNotification\022:\n\010reminder\030\001 \001(\0132" +
+      "(.com.elarian.hera.proto.CustomerReminde" +
+      "r\0222\n\003tag\030\002 \001(\0132%.com.elarian.hera.proto." +
+      "CustomerIndex\022-\n\007work_id\030\003 \001(\0132\034.google." +
+      "protobuf.StringValue\"\362\001\n#MessagingSessio" +
+      "nStartedNotification\022?\n\017customer_number\030" +
+      "\001 \001(\0132&.com.elarian.hera.proto.CustomerN" +
+      "umber\022F\n\016channel_number\030\002 \001(\0132..com.elar" +
+      "ian.hera.proto.MessagingChannelNumber\022\022\n" +
+      "\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132\032." +
+      "google.protobuf.Timestamp\"\362\001\n#MessagingS" +
+      "essionRenewedNotification\022?\n\017customer_nu" +
+      "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust" +
+      "omerNumber\022F\n\016channel_number\030\002 \001(\0132..com" +
+      ".elarian.hera.proto.MessagingChannelNumb" +
+      "er\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001" +
+      "(\0132\032.google.protobuf.Timestamp\"\260\002\n!Messa" +
+      "gingSessionEndedNotification\022?\n\017customer" +
       "_number\030\001 \001(\0132&.com.elarian.hera.proto.C" +
       "ustomerNumber\022F\n\016channel_number\030\002 \001(\0132.." +
       "com.elarian.hera.proto.MessagingChannelN" +
-      "umber\022>\n\006update\030\003 \001(\0162..com.elarian.hera" +
-      ".proto.MessagingConsentUpdate\"\253\001\n\033Update" +
-      "MessagingConsentReply\022D\n\006status\030\001 \001(\01624." +
-      "com.elarian.hera.proto.MessagingConsentU" +
-      "pdateStatus\022\023\n\013description\030\002 \001(\t\0221\n\013cust" +
-      "omer_id\030\003 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\"\374\001\n\026InitiatePaymentCommand\022@\n\013debit_" +
-      "party\030\001 \001(\0132+.com.elarian.hera.proto.Pay" +
-      "mentCounterParty\022A\n\014credit_party\030\002 \001(\0132+" +
-      ".com.elarian.hera.proto.PaymentCounterPa" +
-      "rty\022+\n\005value\030\003 \001(\0132\034.com.elarian.hera.pr" +
-      "oto.Cash\0220\n\nrequest_id\030\004 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\"\213\002\n\024InitiatePaymentRe" +
-      "ply\0225\n\006status\030\001 \001(\0162%.com.elarian.hera.p" +
-      "roto.PaymentStatus\022\023\n\013description\030\002 \001(\t\022" +
-      "4\n\016transaction_id\030\003 \001(\0132\034.google.protobu" +
-      "f.StringValue\0227\n\021debit_customer_id\030\004 \001(\013" +
-      "2\034.google.protobuf.StringValue\0228\n\022credit" +
-      "_customer_id\030\005 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\"e\n\017TagCommandReply\022\016\n\006status\030\001 " +
-      "\001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007work_id\030\003 \001(" +
-      "\0132\034.google.protobuf.StringValue\"\312\002\n\027Cust" +
-      "omerActivityCommand\022?\n\017customer_number\030\001" +
+      "umber\022\022\n\nsession_id\030\003 \001(\t\022+\n\010duration\030\004 " +
+      "\001(\0132\031.google.protobuf.Duration\022A\n\006reason" +
+      "\030\005 \001(\01621.com.elarian.hera.proto.Messagin" +
+      "gSessionEndReason\"\263\002\n\"MessagingConsentUp" +
+      "dateNotification\022?\n\017customer_number\030\001 \001(" +
+      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
+      "r\022F\n\016channel_number\030\002 \001(\0132..com.elarian." +
+      "hera.proto.MessagingChannelNumber\022>\n\006upd" +
+      "ate\030\003 \001(\0162..com.elarian.hera.proto.Messa" +
+      "gingConsentUpdate\022D\n\006status\030\004 \001(\01624.com." +
+      "elarian.hera.proto.MessagingConsentUpdat" +
+      "eStatus\"\332\002\n\033ReceivedMessageNotification\022" +
+      "\022\n\nmessage_id\030\001 \001(\t\022?\n\017customer_number\030\002" +
       " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
-      "mber\022E\n\016channel_number\030\002 \001(\0132-.com.elari" +
-      "an.hera.proto.ActivityChannelNumber\022\022\n\ns" +
-      "ession_id\030\003 \001(\t\022\013\n\003key\030\004 \001(\t\022S\n\nproperti" +
-      "es\030\005 \003(\0132?.com.elarian.hera.proto.Custom" +
-      "erActivityCommand.PropertiesEntry\0321\n\017Pro" +
-      "pertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"o\n\025CustomerActivityReply\022\016\n\006status\030" +
-      "\001 \001(\010\022\023\n\013description\030\002 \001(\t\0221\n\013customer_i" +
-      "d\030\003 \001(\0132\034.google.protobuf.StringValue\"\266\001" +
-      "\n\027ServerToAppNotification\022K\n\010customer\030\001 " +
-      "\001(\01327.com.elarian.hera.proto.ServerToApp" +
-      "CustomerNotificationH\000\022E\n\005purse\030\002 \001(\01324." +
-      "com.elarian.hera.proto.ServerToAppPurseN" +
-      "otificationH\000B\007\n\005entry\"\316\t\n\037ServerToAppCu" +
-      "stomerNotification\022\016\n\006org_id\030\001 \001(\t\022\016\n\006ap" +
-      "p_id\030\002 \001(\t\022\023\n\013customer_id\030\003 \001(\t\0226\n\010app_d" +
-      "ata\030\004 \001(\0132$.com.elarian.hera.proto.DataM" +
-      "apValue\022.\n\ncreated_at\030\005 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022@\n\010reminder\030\006 \001(\0132,.com." +
-      "elarian.hera.proto.ReminderNotificationH" +
-      "\000\022`\n\031messaging_session_started\030\007 \001(\0132;.c" +
-      "om.elarian.hera.proto.MessagingSessionSt" +
-      "artedNotificationH\000\022`\n\031messaging_session" +
-      "_renewed\030\010 \001(\0132;.com.elarian.hera.proto." +
-      "MessagingSessionRenewedNotificationH\000\022\\\n" +
-      "\027messaging_session_ended\030\t \001(\01329.com.ela" +
-      "rian.hera.proto.MessagingSessionEndedNot" +
-      "ificationH\000\022^\n\030messaging_consent_update\030" +
-      "\n \001(\0132:.com.elarian.hera.proto.Messaging" +
-      "ConsentUpdateNotificationH\000\022O\n\020received_" +
-      "message\030\013 \001(\01323.com.elarian.hera.proto.R" +
-      "eceivedMessageNotificationH\000\022K\n\016message_" +
-      "status\030\014 \001(\01321.com.elarian.hera.proto.Me" +
-      "ssageStatusNotificationH\000\022X\n\025sent_messag" +
-      "e_reaction\030\r \001(\01327.com.elarian.hera.prot" +
-      "o.SentMessageReactionNotificationH\000\022O\n\020r" +
-      "eceived_payment\030\016 \001(\01323.com.elarian.hera" +
-      ".proto.ReceivedPaymentNotificationH\000\022K\n\016" +
-      "payment_status\030\017 \001(\01321.com.elarian.hera." +
-      "proto.PaymentStatusNotificationH\000\022X\n\025wal" +
-      "let_payment_status\030\020 \001(\01327.com.elarian.h" +
-      "era.proto.WalletPaymentStatusNotificatio" +
-      "nH\000\022Q\n\021customer_activity\030\021 \001(\01324.com.ela" +
-      "rian.hera.proto.CustomerActivityNotifica" +
-      "tionH\000B\007\n\005entry\"\326\001\n\034ServerToAppPurseNoti" +
-      "fication\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t" +
-      "\022\020\n\010purse_id\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022K\n\016payment_st" +
-      "atus\030\005 \001(\01321.com.elarian.hera.proto.Paym" +
-      "entStatusNotificationH\000B\007\n\005entry\"C\n\rAppD" +
-      "ataUpdate\0222\n\004data\030\001 \001(\0132$.com.elarian.he" +
-      "ra.proto.DataMapValue\"\224\001\n\034ServerToAppNot" +
-      "ificationReply\022:\n\013data_update\030\001 \001(\0132%.co" +
-      "m.elarian.hera.proto.AppDataUpdate\0228\n\007me" +
-      "ssage\030\002 \001(\0132\'.com.elarian.hera.proto.Out" +
-      "boundMessage\"\265\001\n\024ReminderNotification\022:\n" +
-      "\010reminder\030\001 \001(\0132(.com.elarian.hera.proto" +
-      ".CustomerReminder\0222\n\003tag\030\002 \001(\0132%.com.ela" +
-      "rian.hera.proto.CustomerIndex\022-\n\007work_id" +
-      "\030\003 \001(\0132\034.google.protobuf.StringValue\"\362\001\n" +
-      "#MessagingSessionStartedNotification\022?\n\017" +
-      "customer_number\030\001 \001(\0132&.com.elarian.hera" +
-      ".proto.CustomerNumber\022F\n\016channel_number\030" +
-      "\002 \001(\0132..com.elarian.hera.proto.Messaging" +
-      "ChannelNumber\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexp" +
-      "ires_at\030\004 \001(\0132\032.google.protobuf.Timestam" +
-      "p\"\362\001\n#MessagingSessionRenewedNotificatio" +
-      "n\022?\n\017customer_number\030\001 \001(\0132&.com.elarian" +
-      ".hera.proto.CustomerNumber\022F\n\016channel_nu" +
-      "mber\030\002 \001(\0132..com.elarian.hera.proto.Mess" +
-      "agingChannelNumber\022\022\n\nsession_id\030\003 \001(\t\022." +
-      "\n\nexpires_at\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\"\260\002\n!MessagingSessionEndedNotifica" +
-      "tion\022?\n\017customer_number\030\001 \001(\0132&.com.elar" +
+      "mber\022F\n\016channel_number\030\003 \001(\0132..com.elari" +
+      "an.hera.proto.MessagingChannelNumber\0229\n\005" +
+      "parts\030\004 \003(\0132*.com.elarian.hera.proto.Inb" +
+      "oundMessageBody\0220\n\nsession_id\030\005 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\0221\n\013in_reply_to" +
+      "\030\006 \001(\0132\034.google.protobuf.StringValue\"n\n\031" +
+      "MessageStatusNotification\022\022\n\nmessage_id\030" +
+      "\001 \001(\t\022=\n\006status\030\002 \001(\0162-.com.elarian.hera" +
+      ".proto.MessageDeliveryStatus\"\371\001\n\037SentMes" +
+      "sageReactionNotification\022\022\n\nmessage_id\030\001" +
+      " \001(\t\022?\n\017customer_number\030\002 \001(\0132&.com.elar" +
       "ian.hera.proto.CustomerNumber\022F\n\016channel" +
-      "_number\030\002 \001(\0132..com.elarian.hera.proto.M" +
-      "essagingChannelNumber\022\022\n\nsession_id\030\003 \001(" +
-      "\t\022+\n\010duration\030\004 \001(\0132\031.google.protobuf.Du" +
-      "ration\022A\n\006reason\030\005 \001(\01621.com.elarian.her" +
-      "a.proto.MessagingSessionEndReason\"\263\002\n\"Me" +
-      "ssagingConsentUpdateNotification\022?\n\017cust" +
-      "omer_number\030\001 \001(\0132&.com.elarian.hera.pro" +
-      "to.CustomerNumber\022F\n\016channel_number\030\002 \001(" +
-      "\0132..com.elarian.hera.proto.MessagingChan" +
-      "nelNumber\022>\n\006update\030\003 \001(\0162..com.elarian." +
-      "hera.proto.MessagingConsentUpdate\022D\n\006sta" +
-      "tus\030\004 \001(\01624.com.elarian.hera.proto.Messa" +
-      "gingConsentUpdateStatus\"\332\002\n\033ReceivedMess" +
-      "ageNotification\022\022\n\nmessage_id\030\001 \001(\t\022?\n\017c" +
-      "ustomer_number\030\002 \001(\0132&.com.elarian.hera." +
-      "proto.CustomerNumber\022F\n\016channel_number\030\003" +
-      " \001(\0132..com.elarian.hera.proto.MessagingC" +
-      "hannelNumber\0229\n\005parts\030\004 \003(\0132*.com.elaria" +
-      "n.hera.proto.InboundMessageBody\0220\n\nsessi" +
-      "on_id\030\005 \001(\0132\034.google.protobuf.StringValu" +
-      "e\0221\n\013in_reply_to\030\006 \001(\0132\034.google.protobuf" +
-      ".StringValue\"n\n\031MessageStatusNotificatio" +
-      "n\022\022\n\nmessage_id\030\001 \001(\t\022=\n\006status\030\002 \001(\0162-." +
-      "com.elarian.hera.proto.MessageDeliverySt" +
-      "atus\"\371\001\n\037SentMessageReactionNotification" +
-      "\022\022\n\nmessage_id\030\001 \001(\t\022?\n\017customer_number\030" +
-      "\002 \001(\0132&.com.elarian.hera.proto.CustomerN" +
-      "umber\022F\n\016channel_number\030\003 \001(\0132..com.elar" +
-      "ian.hera.proto.MessagingChannelNumber\0229\n" +
-      "\010reaction\030\004 \001(\0162\'.com.elarian.hera.proto" +
-      ".MessageReaction\"\262\002\n\033ReceivedPaymentNoti" +
-      "fication\022\020\n\010purse_id\030\001 \001(\t\022\026\n\016transactio" +
-      "n_id\030\002 \001(\t\022?\n\017customer_number\030\003 \001(\0132&.co" +
-      "m.elarian.hera.proto.CustomerNumber\022D\n\016c" +
-      "hannel_number\030\004 \001(\0132,.com.elarian.hera.p" +
-      "roto.PaymentChannelNumber\022+\n\005value\030\005 \001(\013" +
-      "2\034.com.elarian.hera.proto.Cash\0225\n\006status" +
-      "\030\006 \001(\0162%.com.elarian.hera.proto.PaymentS" +
-      "tatus\"j\n\031PaymentStatusNotification\022\026\n\016tr" +
-      "ansaction_id\030\001 \001(\t\0225\n\006status\030\002 \001(\0162%.com" +
-      ".elarian.hera.proto.PaymentStatus\"\203\001\n\037Wa" +
-      "lletPaymentStatusNotification\022\021\n\twallet_" +
-      "id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\0225\n\006stat" +
-      "us\030\003 \001(\0162%.com.elarian.hera.proto.Paymen" +
-      "tStatus\"\366\001\n\034CustomerActivityNotification" +
-      "\022?\n\017customer_number\030\001 \001(\0132&.com.elarian." +
-      "hera.proto.CustomerNumber\022E\n\016channel_num" +
-      "ber\030\002 \001(\0132-.com.elarian.hera.proto.Activ" +
-      "ityChannelNumber\022\022\n\nsession_id\030\003 \001(\t\022:\n\010" +
-      "activity\030\004 \001(\0132(.com.elarian.hera.proto." +
-      "CustomerActivityb\006proto3"
+      "_number\030\003 \001(\0132..com.elarian.hera.proto.M" +
+      "essagingChannelNumber\0229\n\010reaction\030\004 \001(\0162" +
+      "\'.com.elarian.hera.proto.MessageReaction" +
+      "\"\262\002\n\033ReceivedPaymentNotification\022\020\n\010purs" +
+      "e_id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022?\n\017cu" +
+      "stomer_number\030\003 \001(\0132&.com.elarian.hera.p" +
+      "roto.CustomerNumber\022D\n\016channel_number\030\004 " +
+      "\001(\0132,.com.elarian.hera.proto.PaymentChan" +
+      "nelNumber\022+\n\005value\030\005 \001(\0132\034.com.elarian.h" +
+      "era.proto.Cash\0225\n\006status\030\006 \001(\0162%.com.ela" +
+      "rian.hera.proto.PaymentStatus\"j\n\031Payment" +
+      "StatusNotification\022\026\n\016transaction_id\030\001 \001" +
+      "(\t\0225\n\006status\030\002 \001(\0162%.com.elarian.hera.pr" +
+      "oto.PaymentStatus\"\203\001\n\037WalletPaymentStatu" +
+      "sNotification\022\021\n\twallet_id\030\001 \001(\t\022\026\n\016tran" +
+      "saction_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.e" +
+      "larian.hera.proto.PaymentStatus\"\366\001\n\034Cust" +
+      "omerActivityNotification\022?\n\017customer_num" +
+      "ber\030\001 \001(\0132&.com.elarian.hera.proto.Custo" +
+      "merNumber\022E\n\016channel_number\030\002 \001(\0132-.com." +
+      "elarian.hera.proto.ActivityChannelNumber" +
+      "\022\022\n\nsession_id\030\003 \001(\t\022:\n\010activity\030\004 \001(\0132(" +
+      ".com.elarian.hera.proto.CustomerActivity" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -68217,7 +68289,7 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_AppConnectionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AppConnectionMetadata_descriptor,
-        new java.lang.String[] { "OrgId", "AppId", "ApiKey", "AuthToken", "SimplexMode", });
+        new java.lang.String[] { "OrgId", "AppId", "ApiKey", "AuthToken", "SimplexMode", "SimulatorMode", });
     internal_static_com_elarian_hera_proto_AppToServerCommand_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_elarian_hera_proto_AppToServerCommand_fieldAccessorTable = new

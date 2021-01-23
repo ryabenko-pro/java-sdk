@@ -63,6 +63,12 @@ public final class AppSocket {
      * @return The simplexMode.
      */
     boolean getSimplexMode();
+
+    /**
+     * <code>bool simulator_mode = 6;</code>
+     * @return The simulatorMode.
+     */
+    boolean getSimulatorMode();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.AppConnectionMetadata}
@@ -286,6 +292,32 @@ public final class AppSocket {
     private void clearSimplexMode() {
       
       simplexMode_ = false;
+    }
+
+    public static final int SIMULATOR_MODE_FIELD_NUMBER = 6;
+    private boolean simulatorMode_;
+    /**
+     * <code>bool simulator_mode = 6;</code>
+     * @return The simulatorMode.
+     */
+    @java.lang.Override
+    public boolean getSimulatorMode() {
+      return simulatorMode_;
+    }
+    /**
+     * <code>bool simulator_mode = 6;</code>
+     * @param value The simulatorMode to set.
+     */
+    private void setSimulatorMode(boolean value) {
+      
+      simulatorMode_ = value;
+    }
+    /**
+     * <code>bool simulator_mode = 6;</code>
+     */
+    private void clearSimulatorMode() {
+      
+      simulatorMode_ = false;
     }
 
     public static com.elarian.hera.proto.AppSocket.AppConnectionMetadata parseFrom(
@@ -603,6 +635,34 @@ public final class AppSocket {
         return this;
       }
 
+      /**
+       * <code>bool simulator_mode = 6;</code>
+       * @return The simulatorMode.
+       */
+      @java.lang.Override
+      public boolean getSimulatorMode() {
+        return instance.getSimulatorMode();
+      }
+      /**
+       * <code>bool simulator_mode = 6;</code>
+       * @param value The simulatorMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSimulatorMode(boolean value) {
+        copyOnWrite();
+        instance.setSimulatorMode(value);
+        return this;
+      }
+      /**
+       * <code>bool simulator_mode = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSimulatorMode() {
+        copyOnWrite();
+        instance.clearSimulatorMode();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.AppConnectionMetadata)
     }
     @java.lang.Override
@@ -624,10 +684,11 @@ public final class AppSocket {
               "apiKey_",
               "authToken_",
               "simplexMode_",
+              "simulatorMode_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\t\u0004\t\u0005\u0007";
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t\u0004\t\u0005\u0007\u0006\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
