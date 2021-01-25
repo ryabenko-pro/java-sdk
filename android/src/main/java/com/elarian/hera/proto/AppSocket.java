@@ -18138,17 +18138,6 @@ public final class AppSocket {
      * @return The message.
      */
     com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
-
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     * @return Whether the requestId field is set.
-     */
-    boolean hasRequestId();
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     * @return The requestId.
-     */
-    com.google.protobuf.StringValue getRequestId();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SendMessageCommand}
@@ -18295,52 +18284,6 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
      */
     private void clearMessage() {  message_ = null;
-      
-    }
-
-    public static final int REQUEST_ID_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue requestId_;
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    @java.lang.Override
-    public boolean hasRequestId() {
-      return requestId_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getRequestId() {
-      return requestId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : requestId_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    private void setRequestId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  requestId_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeRequestId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (requestId_ != null &&
-          requestId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        requestId_ =
-          com.google.protobuf.StringValue.newBuilder(requestId_).mergeFrom(value).buildPartial();
-      } else {
-        requestId_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    private void clearRequestId() {  requestId_ = null;
       
     }
 
@@ -18580,53 +18523,6 @@ public final class AppSocket {
         return this;
       }
 
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      @java.lang.Override
-      public boolean hasRequestId() {
-        return instance.hasRequestId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getRequestId() {
-        return instance.getRequestId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      public Builder setRequestId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setRequestId(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      public Builder setRequestId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setRequestId(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      public Builder mergeRequestId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeRequestId(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      public Builder clearRequestId() {  copyOnWrite();
-        instance.clearRequestId();
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.SendMessageCommand)
     }
     @java.lang.Override
@@ -18646,11 +18542,10 @@ public final class AppSocket {
               "customerNumber_",
               "channelNumber_",
               "message_",
-              "requestId_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
-                "\t\u0004\t";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -18701,6 +18596,514 @@ public final class AppSocket {
     private static volatile com.google.protobuf.Parser<SendMessageCommand> PARSER;
 
     public static com.google.protobuf.Parser<SendMessageCommand> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ReplyToMessageCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ReplyToMessageCommand)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The customerId.
+     */
+    java.lang.String getCustomerId();
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The bytes for customerId.
+     */
+    com.google.protobuf.ByteString
+        getCustomerIdBytes();
+
+    /**
+     * <code>string message_id = 2;</code>
+     * @return The messageId.
+     */
+    java.lang.String getMessageId();
+    /**
+     * <code>string message_id = 2;</code>
+     * @return The bytes for messageId.
+     */
+    com.google.protobuf.ByteString
+        getMessageIdBytes();
+
+    /**
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     * @return Whether the message field is set.
+     */
+    boolean hasMessage();
+    /**
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     * @return The message.
+     */
+    com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.ReplyToMessageCommand}
+   */
+  public  static final class ReplyToMessageCommand extends
+      com.google.protobuf.GeneratedMessageLite<
+          ReplyToMessageCommand, ReplyToMessageCommand.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReplyToMessageCommand)
+      ReplyToMessageCommandOrBuilder {
+    private ReplyToMessageCommand() {
+      customerId_ = "";
+      messageId_ = "";
+    }
+    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
+    private java.lang.String customerId_;
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The customerId.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerId() {
+      return customerId_;
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @return The bytes for customerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @param value The customerId to set.
+     */
+    private void setCustomerId(
+        java.lang.String value) {
+      value.getClass();
+  
+      customerId_ = value;
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     */
+    private void clearCustomerId() {
+      
+      customerId_ = getDefaultInstance().getCustomerId();
+    }
+    /**
+     * <code>string customer_id = 1;</code>
+     * @param value The bytes for customerId to set.
+     */
+    private void setCustomerIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      customerId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int MESSAGE_ID_FIELD_NUMBER = 2;
+    private java.lang.String messageId_;
+    /**
+     * <code>string message_id = 2;</code>
+     * @return The messageId.
+     */
+    @java.lang.Override
+    public java.lang.String getMessageId() {
+      return messageId_;
+    }
+    /**
+     * <code>string message_id = 2;</code>
+     * @return The bytes for messageId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(messageId_);
+    }
+    /**
+     * <code>string message_id = 2;</code>
+     * @param value The messageId to set.
+     */
+    private void setMessageId(
+        java.lang.String value) {
+      value.getClass();
+  
+      messageId_ = value;
+    }
+    /**
+     * <code>string message_id = 2;</code>
+     */
+    private void clearMessageId() {
+      
+      messageId_ = getDefaultInstance().getMessageId();
+    }
+    /**
+     * <code>string message_id = 2;</code>
+     * @param value The bytes for messageId to set.
+     */
+    private void setMessageIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      messageId_ = value.toStringUtf8();
+      
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.MessagingModel.OutboundMessage message_;
+    /**
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     */
+    @java.lang.Override
+    public boolean hasMessage() {
+      return message_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+      return message_ == null ? com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance() : message_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     */
+    private void setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
+      value.getClass();
+  message_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
+      value.getClass();
+  if (message_ != null &&
+          message_ != com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance()) {
+        message_ =
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.newBuilder(message_).mergeFrom(value).buildPartial();
+      } else {
+        message_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+     */
+    private void clearMessage() {  message_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.ReplyToMessageCommand prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.ReplyToMessageCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.AppSocket.ReplyToMessageCommand, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.ReplyToMessageCommand)
+        com.elarian.hera.proto.AppSocket.ReplyToMessageCommandOrBuilder {
+      // Construct using com.elarian.hera.proto.AppSocket.ReplyToMessageCommand.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string customer_id = 1;</code>
+       * @return The customerId.
+       */
+      @java.lang.Override
+      public java.lang.String getCustomerId() {
+        return instance.getCustomerId();
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @return The bytes for customerId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCustomerIdBytes() {
+        return instance.getCustomerIdBytes();
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @param value The customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCustomerId(value);
+        return this;
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerId() {
+        copyOnWrite();
+        instance.clearCustomerId();
+        return this;
+      }
+      /**
+       * <code>string customer_id = 1;</code>
+       * @param value The bytes for customerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCustomerIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string message_id = 2;</code>
+       * @return The messageId.
+       */
+      @java.lang.Override
+      public java.lang.String getMessageId() {
+        return instance.getMessageId();
+      }
+      /**
+       * <code>string message_id = 2;</code>
+       * @return The bytes for messageId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMessageIdBytes() {
+        return instance.getMessageIdBytes();
+      }
+      /**
+       * <code>string message_id = 2;</code>
+       * @param value The messageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMessageId(value);
+        return this;
+      }
+      /**
+       * <code>string message_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessageId() {
+        copyOnWrite();
+        instance.clearMessageId();
+        return this;
+      }
+      /**
+       * <code>string message_id = 2;</code>
+       * @param value The bytes for messageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMessageIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+       */
+      @java.lang.Override
+      public boolean hasMessage() {
+        return instance.hasMessage();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
+        return instance.getMessage();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+       */
+      public Builder setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
+        copyOnWrite();
+        instance.setMessage(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+       */
+      public Builder setMessage(
+          com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMessage(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+       */
+      public Builder mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
+        copyOnWrite();
+        instance.mergeMessage(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
+       */
+      public Builder clearMessage() {  copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ReplyToMessageCommand)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.AppSocket.ReplyToMessageCommand();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "customerId_",
+              "messageId_",
+              "message_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.ReplyToMessageCommand> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.AppSocket.ReplyToMessageCommand.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.ReplyToMessageCommand>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.ReplyToMessageCommand)
+    private static final com.elarian.hera.proto.AppSocket.ReplyToMessageCommand DEFAULT_INSTANCE;
+    static {
+      ReplyToMessageCommand defaultInstance = new ReplyToMessageCommand();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ReplyToMessageCommand.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ReplyToMessageCommand> PARSER;
+
+    public static com.google.protobuf.Parser<ReplyToMessageCommand> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -19199,514 +19602,6 @@ public final class AppSocket {
     private static volatile com.google.protobuf.Parser<SendMessageTagCommand> PARSER;
 
     public static com.google.protobuf.Parser<SendMessageTagCommand> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface ReplyToMessageCommandOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ReplyToMessageCommand)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>string customer_id = 1;</code>
-     * @return The customerId.
-     */
-    java.lang.String getCustomerId();
-    /**
-     * <code>string customer_id = 1;</code>
-     * @return The bytes for customerId.
-     */
-    com.google.protobuf.ByteString
-        getCustomerIdBytes();
-
-    /**
-     * <code>string reply_to_message_id = 2;</code>
-     * @return The replyToMessageId.
-     */
-    java.lang.String getReplyToMessageId();
-    /**
-     * <code>string reply_to_message_id = 2;</code>
-     * @return The bytes for replyToMessageId.
-     */
-    com.google.protobuf.ByteString
-        getReplyToMessageIdBytes();
-
-    /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-     * @return Whether the message field is set.
-     */
-    boolean hasMessage();
-    /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-     * @return The message.
-     */
-    com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.ReplyToMessageCommand}
-   */
-  public  static final class ReplyToMessageCommand extends
-      com.google.protobuf.GeneratedMessageLite<
-          ReplyToMessageCommand, ReplyToMessageCommand.Builder> implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReplyToMessageCommand)
-      ReplyToMessageCommandOrBuilder {
-    private ReplyToMessageCommand() {
-      customerId_ = "";
-      replyToMessageId_ = "";
-    }
-    public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-    private java.lang.String customerId_;
-    /**
-     * <code>string customer_id = 1;</code>
-     * @return The customerId.
-     */
-    @java.lang.Override
-    public java.lang.String getCustomerId() {
-      return customerId_;
-    }
-    /**
-     * <code>string customer_id = 1;</code>
-     * @return The bytes for customerId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(customerId_);
-    }
-    /**
-     * <code>string customer_id = 1;</code>
-     * @param value The customerId to set.
-     */
-    private void setCustomerId(
-        java.lang.String value) {
-      value.getClass();
-  
-      customerId_ = value;
-    }
-    /**
-     * <code>string customer_id = 1;</code>
-     */
-    private void clearCustomerId() {
-      
-      customerId_ = getDefaultInstance().getCustomerId();
-    }
-    /**
-     * <code>string customer_id = 1;</code>
-     * @param value The bytes for customerId to set.
-     */
-    private void setCustomerIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      customerId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int REPLY_TO_MESSAGE_ID_FIELD_NUMBER = 2;
-    private java.lang.String replyToMessageId_;
-    /**
-     * <code>string reply_to_message_id = 2;</code>
-     * @return The replyToMessageId.
-     */
-    @java.lang.Override
-    public java.lang.String getReplyToMessageId() {
-      return replyToMessageId_;
-    }
-    /**
-     * <code>string reply_to_message_id = 2;</code>
-     * @return The bytes for replyToMessageId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getReplyToMessageIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(replyToMessageId_);
-    }
-    /**
-     * <code>string reply_to_message_id = 2;</code>
-     * @param value The replyToMessageId to set.
-     */
-    private void setReplyToMessageId(
-        java.lang.String value) {
-      value.getClass();
-  
-      replyToMessageId_ = value;
-    }
-    /**
-     * <code>string reply_to_message_id = 2;</code>
-     */
-    private void clearReplyToMessageId() {
-      
-      replyToMessageId_ = getDefaultInstance().getReplyToMessageId();
-    }
-    /**
-     * <code>string reply_to_message_id = 2;</code>
-     * @param value The bytes for replyToMessageId to set.
-     */
-    private void setReplyToMessageIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      replyToMessageId_ = value.toStringUtf8();
-      
-    }
-
-    public static final int MESSAGE_FIELD_NUMBER = 3;
-    private com.elarian.hera.proto.MessagingModel.OutboundMessage message_;
-    /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-     */
-    @java.lang.Override
-    public boolean hasMessage() {
-      return message_ != null;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
-      return message_ == null ? com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance() : message_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-     */
-    private void setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
-      value.getClass();
-  message_ = value;
-      
-      }
-    /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
-      value.getClass();
-  if (message_ != null &&
-          message_ != com.elarian.hera.proto.MessagingModel.OutboundMessage.getDefaultInstance()) {
-        message_ =
-          com.elarian.hera.proto.MessagingModel.OutboundMessage.newBuilder(message_).mergeFrom(value).buildPartial();
-      } else {
-        message_ = value;
-      }
-      
-    }
-    /**
-     * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-     */
-    private void clearMessage() {  message_ = null;
-      
-    }
-
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.ReplyToMessageCommand prototype) {
-      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.ReplyToMessageCommand}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.elarian.hera.proto.AppSocket.ReplyToMessageCommand, Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.ReplyToMessageCommand)
-        com.elarian.hera.proto.AppSocket.ReplyToMessageCommandOrBuilder {
-      // Construct using com.elarian.hera.proto.AppSocket.ReplyToMessageCommand.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>string customer_id = 1;</code>
-       * @return The customerId.
-       */
-      @java.lang.Override
-      public java.lang.String getCustomerId() {
-        return instance.getCustomerId();
-      }
-      /**
-       * <code>string customer_id = 1;</code>
-       * @return The bytes for customerId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getCustomerIdBytes() {
-        return instance.getCustomerIdBytes();
-      }
-      /**
-       * <code>string customer_id = 1;</code>
-       * @param value The customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setCustomerId(value);
-        return this;
-      }
-      /**
-       * <code>string customer_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCustomerId() {
-        copyOnWrite();
-        instance.clearCustomerId();
-        return this;
-      }
-      /**
-       * <code>string customer_id = 1;</code>
-       * @param value The bytes for customerId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCustomerIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setCustomerIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string reply_to_message_id = 2;</code>
-       * @return The replyToMessageId.
-       */
-      @java.lang.Override
-      public java.lang.String getReplyToMessageId() {
-        return instance.getReplyToMessageId();
-      }
-      /**
-       * <code>string reply_to_message_id = 2;</code>
-       * @return The bytes for replyToMessageId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getReplyToMessageIdBytes() {
-        return instance.getReplyToMessageIdBytes();
-      }
-      /**
-       * <code>string reply_to_message_id = 2;</code>
-       * @param value The replyToMessageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReplyToMessageId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setReplyToMessageId(value);
-        return this;
-      }
-      /**
-       * <code>string reply_to_message_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReplyToMessageId() {
-        copyOnWrite();
-        instance.clearReplyToMessageId();
-        return this;
-      }
-      /**
-       * <code>string reply_to_message_id = 2;</code>
-       * @param value The bytes for replyToMessageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReplyToMessageIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setReplyToMessageIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-       */
-      @java.lang.Override
-      public boolean hasMessage() {
-        return instance.hasMessage();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage() {
-        return instance.getMessage();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-       */
-      public Builder setMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
-        copyOnWrite();
-        instance.setMessage(value);
-        return this;
-        }
-      /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-       */
-      public Builder setMessage(
-          com.elarian.hera.proto.MessagingModel.OutboundMessage.Builder builderForValue) {
-        copyOnWrite();
-        instance.setMessage(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-       */
-      public Builder mergeMessage(com.elarian.hera.proto.MessagingModel.OutboundMessage value) {
-        copyOnWrite();
-        instance.mergeMessage(value);
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.OutboundMessage message = 3;</code>
-       */
-      public Builder clearMessage() {  copyOnWrite();
-        instance.clearMessage();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ReplyToMessageCommand)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.elarian.hera.proto.AppSocket.ReplyToMessageCommand();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "customerId_",
-              "replyToMessageId_",
-              "message_",
-            };
-            java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\t";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.elarian.hera.proto.AppSocket.ReplyToMessageCommand> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.elarian.hera.proto.AppSocket.ReplyToMessageCommand.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.elarian.hera.proto.AppSocket.ReplyToMessageCommand>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.ReplyToMessageCommand)
-    private static final com.elarian.hera.proto.AppSocket.ReplyToMessageCommand DEFAULT_INSTANCE;
-    static {
-      ReplyToMessageCommand defaultInstance = new ReplyToMessageCommand();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        ReplyToMessageCommand.class, defaultInstance);
-    }
-
-    public static com.elarian.hera.proto.AppSocket.ReplyToMessageCommand getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<ReplyToMessageCommand> PARSER;
-
-    public static com.google.protobuf.Parser<ReplyToMessageCommand> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -21446,17 +21341,6 @@ public final class AppSocket {
      * @return The value.
      */
     com.elarian.hera.proto.CommonModel.Cash getValue();
-
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     * @return Whether the requestId field is set.
-     */
-    boolean hasRequestId();
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     * @return The requestId.
-     */
-    com.google.protobuf.StringValue getRequestId();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.InitiatePaymentCommand}
@@ -21603,52 +21487,6 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
      */
     private void clearValue() {  value_ = null;
-      
-    }
-
-    public static final int REQUEST_ID_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue requestId_;
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    @java.lang.Override
-    public boolean hasRequestId() {
-      return requestId_ != null;
-    }
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.StringValue getRequestId() {
-      return requestId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : requestId_;
-    }
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    private void setRequestId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  requestId_ = value;
-      
-      }
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeRequestId(com.google.protobuf.StringValue value) {
-      value.getClass();
-  if (requestId_ != null &&
-          requestId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        requestId_ =
-          com.google.protobuf.StringValue.newBuilder(requestId_).mergeFrom(value).buildPartial();
-      } else {
-        requestId_ = value;
-      }
-      
-    }
-    /**
-     * <code>.google.protobuf.StringValue request_id = 4;</code>
-     */
-    private void clearRequestId() {  requestId_ = null;
       
     }
 
@@ -21888,53 +21726,6 @@ public final class AppSocket {
         return this;
       }
 
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      @java.lang.Override
-      public boolean hasRequestId() {
-        return instance.hasRequestId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.StringValue getRequestId() {
-        return instance.getRequestId();
-      }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      public Builder setRequestId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.setRequestId(value);
-        return this;
-        }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      public Builder setRequestId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        copyOnWrite();
-        instance.setRequestId(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      public Builder mergeRequestId(com.google.protobuf.StringValue value) {
-        copyOnWrite();
-        instance.mergeRequestId(value);
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.StringValue request_id = 4;</code>
-       */
-      public Builder clearRequestId() {  copyOnWrite();
-        instance.clearRequestId();
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.InitiatePaymentCommand)
     }
     @java.lang.Override
@@ -21954,11 +21745,10 @@ public final class AppSocket {
               "debitParty_",
               "creditParty_",
               "value_",
-              "requestId_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
-                "\t\u0004\t";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\t\u0002\t\u0003" +
+                "\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
