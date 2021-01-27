@@ -10,7 +10,6 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 group properties.getProperty("bintray.groupId")
 version properties.getProperty("bintray.version")
 
-String grpcVersion = "1.31.0"
 String protobufVersion = "3.12.4"
 
 android {
@@ -24,9 +23,6 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions { abortOnError false }
-    sourceSets {
-        main.java.srcDirs += 'src/main/grpc'
-    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -36,12 +32,7 @@ android {
 configurations.embed.transitive = true
 
 dependencies {
-    api "io.grpc:grpc-stub:$grpcVersion"
-    api "io.grpc:grpc-okhttp:$grpcVersion"
-
-    api "io.grpc:grpc-protobuf-lite:$grpcVersion"
     api "com.google.protobuf:protobuf-javalite:$protobufVersion"
-
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
 

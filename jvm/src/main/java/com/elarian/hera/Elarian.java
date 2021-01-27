@@ -1,13 +1,6 @@
 package com.elarian.hera;
 
-
-import com.elarian.hera.proto.GrpcWebServiceGrpc;
-import com.elarian.hera.proto.GrpcWebServiceGrpc.GrpcWebServiceStub;
-import com.elarian.hera.proto.GrpcWebServiceGrpc.GrpcWebServiceBlockingStub;
-import io.grpc.Channel;
-import io.grpc.ManagedChannelBuilder;
-import io.grpc.Metadata;
-import io.grpc.stub.MetadataUtils;
+import io.rsocket.transport.netty.client.TcpClientTransport;
 
 public final class Elarian {
 
