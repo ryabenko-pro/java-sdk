@@ -1,4 +1,4 @@
-# Elarian SDK for the JVM
+# Elarian
 
 [ ![Download](https://api.bintray.com/packages/elarian/java/com.elarian/images/download.svg) ](https://bintray.com/elarian/java/com.elarian/_latestVersion)
 
@@ -24,7 +24,7 @@ You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/java
 <dependency>
   <groupId>com.elarian</groupId>
   <artifactId>jvm</artifactId>
-  <version>0.0.4</version>
+  <version>0.1.0</version>
 </dependency>
 ```
 or sbt:
@@ -32,7 +32,7 @@ or sbt:
 ```
 resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
 // Get all services
-libraryDependencies += "com.elarian" % "jvm" % "0.0.4"
+libraryDependencies += "com.elarian" % "jvm" % "0.1.0"
 ```
 
 or Gradle:
@@ -44,9 +44,9 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:jvm:0.0.4'
+  implementation 'com.elarian:jvm:0.1.0'
   // Or if you're building for android
-  // implementation 'com.elarian:android:0.0.4'
+  // implementation 'com.elarian:android:0.1.0'
 }
 ```
 
@@ -54,67 +54,29 @@ dependencies{
 
 The SDK needs to be initialized with your API key, which you get from the [dashboard](https://account.elarian.com).
 
-```kotlin
-// Kotlin/Scala
-val elarian = Elarian.newInstance("test_api_key")
-val req = GetCustomerStateRequest
-        .newBuilder()
-        .setOrgId("test_org")
-        .setCustomerId("fake")
-        .build()
-val res = elarian.getCustomerState(req)
-```
-
 ```java
-// Java
-GrpcWebServiceBlockingStub elarian = Elarian.newInstance("test_api_key");
-GetCustomerStateRequest req = GetCustomerStateRequest
-        .newBuilder()
-        .setOrgId("test_org")
-        .setCustomerId("fake")
-        .build();
-GetCustomerStateReply res = elarian.getCustomerState(req);
+String appId = "test_app";
+String orgId = "test_org";
+String apiKey = "test_api_key";
+
+Elarian app = Elarian.newInstance(apiKey, orgId, appId);
+app.sendToMessage(customerNumber, channel, message)
+    .subscribe(new Consumer<SendMessageReply>() {
+        @Override
+        public void accept(SendMessageReply res) {
+            log("Sent the message: " + res.toString());
+        }
+        }, new Consumer<Throwable>() {
+        @Override
+        public void accept(Throwable throwable) {
+            log("Failed to send message");
+            throwable.printStackTrace();
+        }
+    });
 ```
 
 See [examples](examples/) for more usage examples.
 
-## Methods
-
-```
-authToken(AuthTokenRequest) -> AuthTokenReply
-
-getCustomerState(GetCustomerStateRequest) -> GetCustomerStateReply
-adoptCustomerState(AdoptCustomerStateRequest) -> UpdateCustomerStateReply
-
-addCustomerReminder(AddCustomerReminderRequest) -> UpdateCustomerStateReply
-addCustomerReminderByTag(AddCustomerReminderTagRequest) -> TagCommandReply
-cancelCustomerReminder(CancelCustomerReminderRequest) -> UpdateCustomerStateReply
-cancelCustomerReminderByTag(CancelCustomerReminderTagRequest) -> TagCommandReply
-
-updateCustomerTag(UpdateCustomerTagRequest) -> UpdateCustomerStateReply
-deleteCustomerTag(DeleteCustomerTagRequest) -> UpdateCustomerStateReply
-
-updateCustomerSecondaryId(UpdateCustomerSecondaryIdRequest) -> UpdateCustomerStateReply
-deleteCustomerSecondaryId(DeleteCustomerSecondaryIdRequest) -> UpdateCustomerStateReply
-
-leaseCustomerMetadata(LeaseCustomerMetadataRequest) -> LeaseCustomerMetadataReply
-updateCustomerMetadata(UpdateCustomerMetadataRequest) -> UpdateCustomerStateReply
-deleteCustomerMetadata(DeleteCustomerMetadataRequest) -> UpdateCustomerStateReply
-
-sendMessage(SendMessageRequest) -> SendMessageReply
-sendMessageByTag(SendMessageTagRequest) -> TagCommandReply
-replyToMessage(ReplyToMessageRequest) -> SendMessageReply
-messagingConsent(MessagingConsentRequest) -> MessagingConsentReply
-
-sendPayment(SendPaymentRequest) -> InitiatePaymentReply
-checkoutPayment(CheckoutPaymentRequest) -> InitiatePaymentReply
-customerWalletPayment(CustomerWalletPaymentRequest) -> InitiatePaymentReply
-
-makeVoiceCall(MakeVoiceCallRequest) -> MakeVoiceCallReply
-
-streamNotifications(StreamNotificationRequest) -> WebhookRequest
-sendWebhookResponse(WebhookResponse) -> WebhookResponseReply
-```
 
 ## Issues
 

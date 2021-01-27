@@ -9,14 +9,12 @@ apply plugin: "maven-publish"
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.johnrengelman.shadow'
 
-String grpcVersion = "1.31.0"
 String protobufVersion = "3.12.4"
 
 dependencies {
-    compile "io.grpc:grpc-stub:$grpcVersion"
-    compile "io.grpc:grpc-netty-shaded:$grpcVersion"
-    compile "io.grpc:grpc-protobuf:$grpcVersion"
     compile "com.google.protobuf:protobuf-java:$protobufVersion"
+    compile 'io.rsocket:rsocket-core:1.1.0'
+    compile 'io.rsocket:rsocket-transport-netty:1.1.0'
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
 
@@ -25,9 +23,6 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-sourceSets {
-    main.java.srcDirs += 'src/main/grpc'
-}
 
 jar {
     manifest {
