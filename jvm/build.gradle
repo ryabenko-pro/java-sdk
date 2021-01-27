@@ -12,9 +12,9 @@ apply plugin: 'com.github.johnrengelman.shadow'
 String protobufVersion = "3.12.4"
 
 dependencies {
-    implementation "com.google.protobuf:protobuf-java:$protobufVersion"
-    implementation 'io.rsocket:rsocket-core:1.1.0'
-    implementation 'io.rsocket:rsocket-transport-netty:1.1.0'
+    compile "com.google.protobuf:protobuf-java:$protobufVersion"
+    compile 'io.rsocket:rsocket-core:1.1.0'
+    compile 'io.rsocket:rsocket-transport-netty:1.1.0'
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
 

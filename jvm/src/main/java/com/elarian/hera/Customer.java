@@ -1,4 +1,4 @@
 package com.elarian.hera;
 
-public class Customer {
+public final class Customer {
 }

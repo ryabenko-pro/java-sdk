@@ -54,26 +54,25 @@ dependencies{
 
 The SDK needs to be initialized with your API key, which you get from the [dashboard](https://account.elarian.com).
 
-```kotlin
-// Kotlin/Scala
-val elarian = Elarian.newInstance("test_api_key")
-val req = GetCustomerStateRequest
-        .newBuilder()
-        .setOrgId("test_org")
-        .setCustomerId("fake")
-        .build()
-val res = elarian.getCustomerState(req)
-```
-
 ```java
-// Java
-GrpcWebServiceBlockingStub elarian = Elarian.newInstance("test_api_key");
-GetCustomerStateRequest req = GetCustomerStateRequest
-        .newBuilder()
-        .setOrgId("test_org")
-        .setCustomerId("fake")
-        .build();
-GetCustomerStateReply res = elarian.getCustomerState(req);
+String appId = "test_app";
+String orgId = "test_org";
+String apiKey = "test_api_key";
+
+Elarian app = Elarian.newInstance(apiKey, orgId, appId);
+app.sendToMessage(customerNumber, channel, message)
+    .subscribe(new Consumer<SendMessageReply>() {
+        @Override
+        public void accept(SendMessageReply res) {
+            log("Sent the message: " + res.toString());
+        }
+        }, new Consumer<Throwable>() {
+        @Override
+        public void accept(Throwable throwable) {
+            log("Failed to send message");
+            throwable.printStackTrace();
+        }
+    });
 ```
 
 See [examples](examples/) for more usage examples.

@@ -1,6 +1,6 @@
 package com.elarian.hera;
 
-public class ConnectionConfig {
+class ConnectionConfig {
     public final long lifetime, keepAlive, reconnectInterval;
     public final ClientSerializer serializer;
 
