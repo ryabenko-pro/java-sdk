@@ -42,12 +42,16 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
      * @return
      */
     public Mono<SimulatorToServerCommandReply> receiveMessage(String customerNumber, MessagingChannelNumber channelNumber, List<InboundMessageBody> parts, String sessionId) {
-        ReceiveMessageSimulatorCommand req = ReceiveMessageSimulatorCommand
+        ReceiveMessageSimulatorCommand cmd = ReceiveMessageSimulatorCommand
                 .newBuilder()
                 .setCustomerNumber(customerNumber)
                 .setChannelNumber(channelNumber)
                 .addAllParts(parts)
                 .setSessionId(StringValue.newBuilder().setValue(sessionId))
+                .build();
+        SimulatorToServerCommand req = SimulatorToServerCommand
+                .newBuilder()
+                .setReceiveMessage(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), replyDeserializer);
     }
@@ -62,13 +66,17 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
      * @return
      */
     public Mono<SimulatorToServerCommandReply> receivePayment(String transactionId, PaymentChannelNumber channelNumber, String customerNumber, Cash value, PaymentStatus status) {
-        ReceivePaymentSimulatorCommand req = ReceivePaymentSimulatorCommand
+        ReceivePaymentSimulatorCommand cmd = ReceivePaymentSimulatorCommand
                 .newBuilder()
                 .setValue(value)
                 .setStatus(status)
                 .setTransactionId(transactionId)
                 .setChannelNumber(channelNumber)
                 .setCustomerNumber(customerNumber)
+                .build();
+        SimulatorToServerCommand req = SimulatorToServerCommand
+                .newBuilder()
+                .setReceivePayment(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), replyDeserializer);
     }
@@ -80,10 +88,14 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
      * @return
      */
     public Mono<SimulatorToServerCommandReply> updatePaymentStatus(String transactionId, PaymentStatus status) {
-        UpdatePaymentStatusSimulatorCommand req = UpdatePaymentStatusSimulatorCommand
+        UpdatePaymentStatusSimulatorCommand cmd = UpdatePaymentStatusSimulatorCommand
                 .newBuilder()
                 .setTransactionId(transactionId)
                 .setStatus(status)
+                .build();
+        SimulatorToServerCommand req = SimulatorToServerCommand
+                .newBuilder()
+                .setUpdatePaymentStatus(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), replyDeserializer);
     }
@@ -95,6 +107,6 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
 
     @Override
     protected ServerToSimulatorNotification deserializeNotification(byte[] data) throws InvalidProtocolBufferException {
-        return ServerToSimulatorNotification.newBuilder().mergeFrom(data).build();
+        return ServerToSimulatorNotification.parseFrom(data);
     }
 }

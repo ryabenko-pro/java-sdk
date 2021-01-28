@@ -1,22 +1,27 @@
 package com.elarian.hera;
 
-import com.elarian.hera.proto.AppSocket;
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.StringValue;
+import java.time.Duration;
+
+import io.netty.buffer.ByteBuf;
 import io.rsocket.Payload;
 import io.rsocket.RSocket;
-import io.rsocket.SocketAcceptor;
-import io.rsocket.core.RSocketConnector;
 import io.rsocket.core.Resume;
-import io.rsocket.transport.netty.client.TcpClientTransport;
-import io.rsocket.util.DefaultPayload;
-import reactor.core.CoreSubscriber;
-import reactor.core.publisher.Mono;
 import reactor.util.retry.Retry;
+import io.rsocket.SocketAcceptor;
 
-import java.time.Duration;
-import java.util.function.Consumer;
+import java.util.Optional;
 import java.util.function.Function;
+import reactor.core.publisher.Mono;
+import java.util.function.Consumer;
+import reactor.core.CoreSubscriber;
+import io.rsocket.util.ByteBufPayload;
+import com.google.protobuf.StringValue;
+import io.rsocket.core.RSocketConnector;
+import com.elarian.hera.proto.AppSocket;
+import io.rsocket.frame.decoder.PayloadDecoder;
+import com.google.protobuf.InvalidProtocolBufferException;
+import io.rsocket.transport.netty.client.TcpClientTransport;
+
 
 public abstract class Client<B, C> {
 
@@ -43,8 +48,9 @@ public abstract class Client<B, C> {
         transport = TcpClientTransport.create(HOST, PORT);
         resume = new Resume()
                 .sessionDuration(Duration.ofSeconds(connConfig.lifetime))
+                .cleanupStoreOnKeepAlive()
                 .retry(
-                        Retry.fixedDelay(Long.MAX_VALUE, Duration.ofSeconds(1))
+                        Retry.backoff(100, Duration.ofSeconds(2))
                         .doBeforeRetry(s -> log("Disconnected. Retrying..."))
                 );
     }
@@ -55,6 +61,7 @@ public abstract class Client<B, C> {
      */
     public void connect() throws RuntimeException {
         if (isConnected) throw new RuntimeException("Client is already connected");
+
 
         byte[] payload = AppSocket.AppConnectionMetadata.newBuilder()
                 .setAppId(clientOpts.appId)
@@ -71,7 +78,8 @@ public abstract class Client<B, C> {
                 .keepAlive(Duration.ofSeconds(connectionConfig.keepAlive), Duration.ofSeconds(connectionConfig.lifetime))
                 .metadataMimeType("application/octet-stream")
                 .dataMimeType("application/octet-stream")
-                .setupPayload(DefaultPayload.create(payload))
+                .payloadDecoder(PayloadDecoder.ZERO_COPY)
+                .setupPayload(ByteBufPayload.create(payload))
                 .acceptor(SocketAcceptor.forRequestResponse(requestHandler))
                 .resume(resume)
                 .connect(transport)
@@ -102,17 +110,31 @@ public abstract class Client<B, C> {
 
     protected abstract B deserializeNotification(byte[] data) throws InvalidProtocolBufferException;
 
+    private byte[] getBytesFromPayload(Payload payload) {
+        ByteBuf buf = payload.sliceData();
+        byte[] bytes;
+        int length = buf.readableBytes();
+
+        if (buf.hasArray()) {
+            bytes = buf.array();
+        } else {
+            bytes = new byte[length];
+            buf.getBytes(buf.readerIndex(), bytes);
+        }
+        return bytes;
+    }
+
     protected <D> Mono<D> buildCommandReply (byte[] data, Function<byte[], D> deserializer) {
         return new Mono<D>() {
             @Override
             public void subscribe(CoreSubscriber<? super D> subscriber) {
-
-                Mono<Payload> resp = client.requestResponse(DefaultPayload.create(data));
+                Mono<Payload> resp = client.requestResponse(ByteBufPayload.create(data));
                 resp.subscribe(new Consumer<Payload>() {
                     @Override
                     public void accept(Payload payload) {
                         try {
-                            D reply = deserializer.apply(payload.getData().array());
+                            byte[] data = getBytesFromPayload(payload);
+                            D reply = deserializer.apply(data);
                             if (reply == null) {
                                 throw new Error("Failed to deserialize command response!");
                             }
@@ -140,15 +162,15 @@ public abstract class Client<B, C> {
                 @Override
                 public void subscribe(CoreSubscriber<? super Payload> subscriber) {
                     try {
-                        B notification = deserializeNotification(payload.getData().array());
+                        B notification = deserializeNotification(getBytesFromPayload(payload));
                         Mono<C> reply = Mono.error(new Error("notification handler is not setup; you must call subscribe() to receive notifications"));
                         if (notificationHandler != null) {
                             reply = notificationHandler.apply(notification);
                         }
                         reply.subscribe(new Consumer<C>() {
                             @Override
-                            public void accept(C result) {
-                                subscriber.onNext(DefaultPayload.create(serializeNotificationReply(result)));
+                            public void accept(C data) {
+                                subscriber.onNext(ByteBufPayload.create(serializeNotificationReply(data)));
                                 subscriber.onComplete();
                             }
                         }, new Consumer<Throwable>() {

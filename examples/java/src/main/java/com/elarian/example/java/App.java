@@ -3,9 +3,14 @@ package com.elarian.example.java;
 
 import com.elarian.hera.Elarian;
 import com.elarian.hera.Simulator;
+import com.elarian.hera.proto.AppModel;
+import com.google.protobuf.Duration;
+import com.google.protobuf.StringValue;
+import com.google.protobuf.Timestamp;
 import reactor.core.CoreSubscriber;
 import reactor.core.publisher.Mono;
 
+import java.util.Date;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import com.elarian.hera.proto.AppSocket.*;
@@ -15,11 +20,12 @@ import com.elarian.hera.proto.SimulatorSocket.*;
 
 public class App {
 
-    public static void log(String message) {
-        System.out.println(message);
+    private static void log(String msg) {
+        System.out.println(msg);
     }
 
     public static void main(String[] args) {
+
 
         log("Starting...");
 
@@ -57,6 +63,7 @@ public class App {
 
         Elarian app = Elarian.newInstance(apiKey, orgId, appId);
         app.subscribe((notification -> {
+            log("App 1st: Got a notification -> " + notification.toString());
             return new Mono<ServerToAppNotificationReply>(){
                 @Override
                 public void subscribe(CoreSubscriber<? super ServerToAppNotificationReply> callback) {
@@ -67,6 +74,20 @@ public class App {
             };
         }));
 
+        app.generateAuthToken()
+                .subscribe(new Consumer<GenerateAuthTokenReply>() {
+                    @Override
+                    public void accept(GenerateAuthTokenReply res) {
+                        log("Auth token: " + res.toString());
+
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) {
+                        log("Failed to auth token");
+                        throwable.printStackTrace();
+                    }
+                });
 
         OutboundMessage message = OutboundMessage
                 .newBuilder()
@@ -76,7 +97,7 @@ public class App {
                         .build()
                 )
                 .build();
-        app.sendToMessage(customerNumber, channel, message)
+        app.sendMessage(customerNumber, channel, message)
                 .subscribe(new Consumer<SendMessageReply>() {
                     @Override
                     public void accept(SendMessageReply res) {
@@ -91,10 +112,41 @@ public class App {
                     }
                 });
 
-        try {
-            Thread.sleep(20000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        AppModel.CustomerReminder reminder = AppModel.CustomerReminder
+                .newBuilder()
+                .setRemindAt(Timestamp.newBuilder().setSeconds((new Date().getTime() + 10000) / 1000).build())
+                .setKey("Some Key Key")
+                .setPayload(StringValue.newBuilder().setValue("PAYLOAD").build())
+                .setInterval(Duration.newBuilder().setSeconds(60).build())
+                .build();
+        app.addCustomerReminder(customerNumber, reminder).subscribe(
+                new Consumer<UpdateCustomerStateReply>() {
+                    @Override
+                    public void accept(UpdateCustomerStateReply res) {
+                        log("Set the reminder: " + res.getDescription());
+
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) {
+                        log("Failed to set reminder");
+                        throwable.printStackTrace();
+                    }
+                }
+        );
+
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(360000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        t.setDaemon(false);
+        t.start();
+
     }
 }

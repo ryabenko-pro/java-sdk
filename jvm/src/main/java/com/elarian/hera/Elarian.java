@@ -35,7 +35,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
 
     @Override
     protected ServerToAppNotification deserializeNotification(byte[] data) throws InvalidProtocolBufferException {
-        return ServerToAppNotification.newBuilder().mergeFrom(data).build();
+        return ServerToAppNotification.parseFrom(data);
     }
 
 
@@ -44,7 +44,10 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<GenerateAuthTokenReply> generateAuthToken() {
-        GenerateAuthTokenCommand req = GenerateAuthTokenCommand.newBuilder().build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setGenerateAuthToken(GenerateAuthTokenCommand.newBuilder().build())
+                .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
                 return AppToServerCommandReply
@@ -65,9 +68,13 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<GetCustomerStateReply> getCustomerState(CustomerNumber customerNumber) {
-        GetCustomerStateCommand req = GetCustomerStateCommand
+        GetCustomerStateCommand cmd = GetCustomerStateCommand
                 .newBuilder()
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setGetCustomerState(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -90,10 +97,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> adoptCustomerState(String customerId, CustomerNumber otherCustomerNumber) {
-        AdoptCustomerStateCommand req = AdoptCustomerStateCommand
+        AdoptCustomerStateCommand cmd = AdoptCustomerStateCommand
                 .newBuilder()
                 .setCustomerId(customerId)
                 .setOtherCustomerNumber(otherCustomerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setAdoptCustomerState(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -112,10 +123,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> addCustomerReminder(CustomerNumber customerNumber, CustomerReminder reminder) {
-        AddCustomerReminderCommand req = AddCustomerReminderCommand
+        AddCustomerReminderCommand cmd = AddCustomerReminderCommand
                 .newBuilder()
                 .setReminder(reminder)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setAddCustomerReminder(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -134,10 +149,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<TagCommandReply> addCustomerReminderByTag(IndexMapping tag, CustomerReminder reminder) {
-        AddCustomerReminderTagCommand req = AddCustomerReminderTagCommand
+        AddCustomerReminderTagCommand cmd = AddCustomerReminderTagCommand
                 .newBuilder()
                 .setTag(tag)
                 .setReminder(reminder)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setAddCustomerReminderTag(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -156,10 +175,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> cancelCustomerReminder(CustomerNumber customerNumber, String key) {
-        CancelCustomerReminderCommand req = CancelCustomerReminderCommand
+        CancelCustomerReminderCommand cmd = CancelCustomerReminderCommand
                 .newBuilder()
                 .setKey(key)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setCancelCustomerReminder(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -178,10 +201,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<TagCommandReply> cancelCustomerReminderByTag(IndexMapping tag, String key) {
-        CancelCustomerReminderTagCommand req = CancelCustomerReminderTagCommand
+        CancelCustomerReminderTagCommand cmd = CancelCustomerReminderTagCommand
                 .newBuilder()
                 .setTag(tag)
                 .setKey(key)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setCancelCustomerReminderTag(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -200,10 +227,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> updateCustomerTags(CustomerNumber customerNumber, List<CustomerIndex> tags) {
-        UpdateCustomerTagCommand req = UpdateCustomerTagCommand
+        UpdateCustomerTagCommand cmd = UpdateCustomerTagCommand
                 .newBuilder()
                 .addAllUpdates(tags)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setUpdateCustomerTag(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -222,10 +253,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> deleteCustomerTags(CustomerNumber customerNumber, List<String> keys) {
-        DeleteCustomerTagCommand req = DeleteCustomerTagCommand
+        DeleteCustomerTagCommand cmd = DeleteCustomerTagCommand
                 .newBuilder()
                 .addAllDeletions(keys)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setDeleteCustomerTag(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -245,10 +280,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> updateCustomerSecondaryId(CustomerNumber customerNumber, List<CustomerIndex> secondaryIds) {
-        UpdateCustomerSecondaryIdCommand req = UpdateCustomerSecondaryIdCommand
+        UpdateCustomerSecondaryIdCommand cmd = UpdateCustomerSecondaryIdCommand
                 .newBuilder()
                 .addAllUpdates(secondaryIds)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setUpdateCustomerSecondaryId(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -260,7 +299,6 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
         }));
     }
 
-
     /**
      * Delete customer secondary ids
      * @param customerNumber
@@ -268,10 +306,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> deleteCustomerSecondaryIds(CustomerNumber customerNumber, List<IndexMapping> keys) {
-        DeleteCustomerSecondaryIdCommand req = DeleteCustomerSecondaryIdCommand
+        DeleteCustomerSecondaryIdCommand cmd = DeleteCustomerSecondaryIdCommand
                 .newBuilder()
                 .addAllDeletions(keys)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setDeleteCustomerSecondaryId(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -291,10 +333,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> updateCustomerMetadata(CustomerNumber customerNumber, Map<String, DataMapValue> updates) {
-        UpdateCustomerMetadataCommand req = UpdateCustomerMetadataCommand
+        UpdateCustomerMetadataCommand cmd = UpdateCustomerMetadataCommand
                 .newBuilder()
                 .putAllUpdates(updates)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setUpdateCustomerMetadata(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -313,10 +359,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> deleteCustomerMetadata(CustomerNumber customerNumber, List<String> keys) {
-        DeleteCustomerMetadataCommand req = DeleteCustomerMetadataCommand
+        DeleteCustomerMetadataCommand cmd = DeleteCustomerMetadataCommand
                 .newBuilder()
                 .addAllDeletions(keys)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setDeleteCustomerMetadata(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -334,9 +384,13 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<LeaseCustomerAppDataReply> leaseCustomerAppData(CustomerNumber customerNumber) {
-        LeaseCustomerAppDataCommand req = LeaseCustomerAppDataCommand
+        LeaseCustomerAppDataCommand cmd = LeaseCustomerAppDataCommand
                 .newBuilder()
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setLeaseCustomerAppData(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -355,10 +409,14 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerAppDataReply> updateCustomerAppData(CustomerNumber customerNumber, DataMapValue update) {
-        UpdateCustomerAppDataCommand req = UpdateCustomerAppDataCommand
+        UpdateCustomerAppDataCommand cmd = UpdateCustomerAppDataCommand
                 .newBuilder()
                 .setUpdate(update)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setUpdateCustomerAppData(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -376,9 +434,13 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateCustomerStateReply> deleteCustomerAppData(CustomerNumber customerNumber) {
-        DeleteCustomerAppDataCommand req = DeleteCustomerAppDataCommand
+        DeleteCustomerAppDataCommand cmd = DeleteCustomerAppDataCommand
                 .newBuilder()
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setDeleteCustomerAppData(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -398,12 +460,16 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @param message
      * @return
      */
-    public Mono<SendMessageReply> sendToMessage(CustomerNumber customerNumber, MessagingChannelNumber channelNumber, OutboundMessage message) {
-        SendMessageCommand req = SendMessageCommand
+    public Mono<SendMessageReply> sendMessage(CustomerNumber customerNumber, MessagingChannelNumber channelNumber, OutboundMessage message) {
+        SendMessageCommand cmd = SendMessageCommand
                 .newBuilder()
                 .setMessage(message)
                 .setChannelNumber(channelNumber)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setSendMessage(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -422,12 +488,16 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @param message
      * @return
      */
-    public Mono<TagCommandReply> sendToMessageByTag(IndexMapping tag, MessagingChannelNumber channelNumber, OutboundMessage message) {
-        SendMessageTagCommand req = SendMessageTagCommand
+    public Mono<TagCommandReply> sendMessageByTag(IndexMapping tag, MessagingChannelNumber channelNumber, OutboundMessage message) {
+        SendMessageTagCommand cmd = SendMessageTagCommand
                 .newBuilder()
                 .setTag(tag)
                 .setMessage(message)
                 .setChannelNumber(channelNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setSendMessageTag(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -447,11 +517,15 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<SendMessageReply> replyToMessage(String customerId, String messageId, OutboundMessage message) {
-        ReplyToMessageCommand req = ReplyToMessageCommand
+        ReplyToMessageCommand cmd = ReplyToMessageCommand
                 .newBuilder()
                 .setMessage(message)
                 .setMessageId(messageId)
                 .setCustomerId(customerId)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setReplyToMessage(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -471,11 +545,15 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<UpdateMessagingConsentReply> updateMessagingConsent(CustomerNumber customerNumber, MessagingChannelNumber channelNumber, MessagingConsentUpdate update) {
-        UpdateMessagingConsentCommand req = UpdateMessagingConsentCommand
+        UpdateMessagingConsentCommand cmd = UpdateMessagingConsentCommand
                 .newBuilder()
                 .setUpdate(update)
                 .setChannelNumber(channelNumber)
                 .setCustomerNumber(customerNumber)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setUpdateMessagingConsent(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -495,11 +573,15 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<InitiatePaymentReply> initiatePayment(PaymentCounterParty debitParty, PaymentCounterParty creditParty, Cash value) {
-        InitiatePaymentCommand req = InitiatePaymentCommand
+        InitiatePaymentCommand cmd = InitiatePaymentCommand
                 .newBuilder()
                 .setDebitParty(debitParty)
                 .setCreditParty(creditParty)
                 .setValue(value)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setInitiatePayment(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
@@ -521,13 +603,17 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @return
      */
     public Mono<CustomerActivityReply> updateCustomerActivity(CustomerNumber customerNumber, ActivityModel.ActivityChannelNumber channelNumber, String sessionId, String key, Map<String, String> properties) {
-        CustomerActivityCommand req = CustomerActivityCommand
+        CustomerActivityCommand cmd = CustomerActivityCommand
                 .newBuilder()
                 .setCustomerNumber(customerNumber)
                 .setChannelNumber(channelNumber)
                 .setSessionId(sessionId)
                 .setKey(key)
                 .putAllProperties(properties)
+                .build();
+        AppToServerCommand req = AppToServerCommand
+                .newBuilder()
+                .setCustomerActivity(cmd)
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
