@@ -8,11 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.elarian.hera.proto.GrpcWebServiceGrpc.*;
-import com.elarian.hera.Elarian;
-import com.elarian.hera.proto.Web;
-
-import io.grpc.stub.StreamObserver;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,33 +22,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 output.setText("Initializing SDK...");
-
-                String authToken = "test_auth_token"; // Fetch auth token from your server...
-                GrpcWebServiceStub asyncInstance = Elarian.newAsyncInstance(authToken);
-
-                output.setText("Fetching customer state...");
-                Web.GetCustomerStateRequest req =  Web.GetCustomerStateRequest
-                        .newBuilder()
-                        .setCustomerId("fake_id")
-                        .setOrgId("test_org")
-                        .build();
-                asyncInstance.getCustomerState(req, new StreamObserver<Web.GetCustomerStateReply>() {
-                    @Override
-                    public void onNext(Web.GetCustomerStateReply value) {
-                        output.setText(value.toString());
-                    }
-
-                    @Override
-                    public void onError(Throwable t) {
-                        t.printStackTrace();
-                        output.setText(t.getMessage());
-                    }
-
-                    @Override
-                    public void onCompleted() {
-
-                    }
-                });
             }
         });
 
