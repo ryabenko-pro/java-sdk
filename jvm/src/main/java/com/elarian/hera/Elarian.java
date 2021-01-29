@@ -108,7 +108,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -122,7 +122,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
      * @param reminder
      * @return
      */
-    public Mono<UpdateCustomerStateReply> addCustomerReminder(CustomerNumber customerNumber, CustomerReminder reminder) {
+    public Mono<UpdateCustomerAppDataReply> addCustomerReminder(CustomerNumber customerNumber, CustomerReminder reminder) {
         AddCustomerReminderCommand cmd = AddCustomerReminderCommand
                 .newBuilder()
                 .setReminder(reminder)
@@ -134,7 +134,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerAppData();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -160,7 +160,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getTagCommand();
+                return AppToServerCommandReply.parseFrom(bytes).getTagCommand();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -186,7 +186,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -212,7 +212,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getTagCommand();
+                return AppToServerCommandReply.parseFrom(bytes).getTagCommand();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -238,7 +238,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -264,7 +264,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -291,7 +291,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -317,7 +317,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -344,7 +344,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -370,7 +370,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -394,7 +394,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getLeaseCustomerAppData();
+                return AppToServerCommandReply.parseFrom(bytes).getLeaseCustomerAppData();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -420,7 +420,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerAppData();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerAppData();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -444,7 +444,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateCustomerState();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateCustomerState();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -473,7 +473,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getSendMessage();
+                return AppToServerCommandReply.parseFrom(bytes).getSendMessage();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -501,7 +501,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getTagCommand();
+                return AppToServerCommandReply.parseFrom(bytes).getTagCommand();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -529,7 +529,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getSendMessage();
+                return AppToServerCommandReply.parseFrom(bytes).getSendMessage();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -557,7 +557,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getUpdateMessagingConsent();
+                return AppToServerCommandReply.parseFrom(bytes).getUpdateMessagingConsent();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -585,7 +585,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getInitiatePayment();
+                return AppToServerCommandReply.parseFrom(bytes).getInitiatePayment();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;
@@ -617,7 +617,7 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
                 .build();
         return buildCommandReply(req.toByteArray(), (bytes -> {
             try {
-                return AppToServerCommandReply.newBuilder().mergeFrom(bytes).build().getCustomerActivity();
+                return AppToServerCommandReply.parseFrom(bytes).getCustomerActivity();
             } catch (InvalidProtocolBufferException e) {
                 e.printStackTrace();
                 return null;

@@ -2,9 +2,13 @@ package com.elarian.example.java;
 
 
 import com.elarian.hera.Elarian;
-import com.elarian.hera.Simulator;
-import com.elarian.hera.proto.AppModel;
-import com.google.protobuf.Duration;
+import com.elarian.hera.proto.AppModel.CustomerReminder;
+import com.elarian.hera.proto.AppSocket;
+import com.elarian.hera.proto.AppSocket.ServerToAppNotificationReply;
+import com.elarian.hera.proto.CommonModel.CustomerNumber;
+import com.elarian.hera.proto.CommonModel.CustomerNumberProvider;
+import com.elarian.hera.proto.MessagingModel.MessagingChannel;
+import com.elarian.hera.proto.MessagingModel.MessagingChannelNumber;
 import com.google.protobuf.StringValue;
 import com.google.protobuf.Timestamp;
 import reactor.core.CoreSubscriber;
@@ -12,11 +16,6 @@ import reactor.core.publisher.Mono;
 
 import java.util.Date;
 import java.util.function.Consumer;
-import java.util.function.Function;
-import com.elarian.hera.proto.AppSocket.*;
-import com.elarian.hera.proto.CommonModel.*;
-import com.elarian.hera.proto.MessagingModel.*;
-import com.elarian.hera.proto.SimulatorSocket.*;
 
 public class App {
 
@@ -44,93 +43,42 @@ public class App {
                 .setChannel(MessagingChannel.MESSAGING_CHANNEL_SMS)
                 .build();
 
-
-        /*
-        Simulator sim = Simulator.newInstance(apiKey, orgId, appId);
-        sim.subscribe(new Function<ServerToSimulatorNotification, Mono<ServerToSimulatorNotificationReply>>() {
-            @Override
-            public Mono<ServerToSimulatorNotificationReply> apply(ServerToSimulatorNotification notification) {
-                return new Mono<ServerToSimulatorNotificationReply>() {
-                    @Override
-                    public void subscribe(CoreSubscriber<? super ServerToSimulatorNotificationReply> callback) {
-                        log("Simulator: Got a notification -> " + notification.toString());
-                        callback.onNext(ServerToSimulatorNotificationReply.getDefaultInstance());
-                        callback.onComplete();
-                    }
-                };
-            }
-        });*/
-
         Elarian app = Elarian.newInstance(apiKey, orgId, appId);
-        app.subscribe((notification -> {
-            log("App 1st: Got a notification -> " + notification.toString());
-            return new Mono<ServerToAppNotificationReply>(){
-                @Override
-                public void subscribe(CoreSubscriber<? super ServerToAppNotificationReply> callback) {
-                    log("App: Got a notification -> " + notification.toString());
-                    callback.onNext(ServerToAppNotificationReply.getDefaultInstance());
-                    callback.onComplete();
-                }
-            };
+        app.registerNotificationHandler((notification -> new Mono<ServerToAppNotificationReply>(){
+            @Override
+            public void subscribe(CoreSubscriber<? super ServerToAppNotificationReply> callback) {
+                App.log("App: Got a notification -> " + notification.toString());
+                callback.onNext(ServerToAppNotificationReply.getDefaultInstance());
+                callback.onComplete();
+            }
         }));
 
-        app.generateAuthToken()
-                .subscribe(new Consumer<GenerateAuthTokenReply>() {
-                    @Override
-                    public void accept(GenerateAuthTokenReply res) {
-                        log("Auth token: " + res.toString());
 
-                    }
-                }, new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) {
-                        log("Failed to auth token");
-                        throwable.printStackTrace();
-                    }
-                });
-
-        OutboundMessage message = OutboundMessage
-                .newBuilder()
-                .setBody(OutboundMessageBody
-                        .newBuilder()
-                        .setText("Hello from Elarian Java")
-                        .build()
-                )
-                .build();
-        app.sendMessage(customerNumber, channel, message)
-                .subscribe(new Consumer<SendMessageReply>() {
-                    @Override
-                    public void accept(SendMessageReply res) {
-                        log("Send the message: " + res.toString());
-
-                    }
-                }, new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) {
-                        log("Failed to send message");
-                        throwable.printStackTrace();
-                    }
-                });
-
-        AppModel.CustomerReminder reminder = AppModel.CustomerReminder
+        CustomerReminder reminder = CustomerReminder
                 .newBuilder()
                 .setRemindAt(Timestamp.newBuilder().setSeconds((new Date().getTime() + 10000) / 1000).build())
                 .setKey("Some Key Key")
                 .setPayload(StringValue.newBuilder().setValue("PAYLOAD").build())
-                .setInterval(Duration.newBuilder().setSeconds(60).build())
                 .build();
-        app.addCustomerReminder(customerNumber, reminder).subscribe(
-                new Consumer<UpdateCustomerStateReply>() {
-                    @Override
-                    public void accept(UpdateCustomerStateReply res) {
-                        log("Set the reminder: " + res.getDescription());
-
-                    }
-                }, new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) {
+        app.addCustomerReminder(customerNumber, reminder)
+                .subscribe(
+                    res -> log("Set the reminder: " + res.toString()),
+                    throwable -> {
                         log("Failed to set reminder");
                         throwable.printStackTrace();
+                    });
+
+        app.addCustomerReminder(null, null).subscribe(
+                new Consumer<AppSocket.UpdateCustomerAppDataReply>() {
+                    @Override
+                    public void accept(AppSocket.UpdateCustomerAppDataReply updateCustomerAppDataReply) {
+
+                    }
+                },
+                new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) {
+
                     }
                 }
         );

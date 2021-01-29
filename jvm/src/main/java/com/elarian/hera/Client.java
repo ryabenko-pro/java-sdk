@@ -1,29 +1,26 @@
 package com.elarian.hera;
 
-import java.time.Duration;
-
+import com.elarian.hera.proto.AppSocket;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.StringValue;
 import io.netty.buffer.ByteBuf;
 import io.rsocket.Payload;
 import io.rsocket.RSocket;
-import io.rsocket.core.Resume;
-import reactor.util.retry.Retry;
 import io.rsocket.SocketAcceptor;
-
-import java.util.Optional;
-import java.util.function.Function;
-import reactor.core.publisher.Mono;
-import java.util.function.Consumer;
-import reactor.core.CoreSubscriber;
-import io.rsocket.util.ByteBufPayload;
-import com.google.protobuf.StringValue;
 import io.rsocket.core.RSocketConnector;
-import com.elarian.hera.proto.AppSocket;
+import io.rsocket.core.Resume;
 import io.rsocket.frame.decoder.PayloadDecoder;
-import com.google.protobuf.InvalidProtocolBufferException;
 import io.rsocket.transport.netty.client.TcpClientTransport;
+import io.rsocket.util.ByteBufPayload;
+import reactor.core.CoreSubscriber;
+import reactor.core.publisher.Mono;
+import reactor.util.retry.Retry;
+
+import java.time.Duration;
+import java.util.function.Function;
 
 
-public abstract class Client<B, C> {
+abstract class Client<B, C> {
 
     private final ClientOpts clientOpts;
     private final int PORT = 8082;
@@ -102,7 +99,7 @@ public abstract class Client<B, C> {
      * Subscribe to notifications
      * @param notificationHandler
      */
-    public void subscribe(Function<B, Mono<C>> notificationHandler) {
+    public void registerNotificationHandler(Function<B, Mono<C>> notificationHandler) {
         this.notificationHandler = notificationHandler;
     }
 
@@ -121,6 +118,7 @@ public abstract class Client<B, C> {
             bytes = new byte[length];
             buf.getBytes(buf.readerIndex(), bytes);
         }
+        payload.release();
         return bytes;
     }
 
@@ -129,28 +127,19 @@ public abstract class Client<B, C> {
             @Override
             public void subscribe(CoreSubscriber<? super D> subscriber) {
                 Mono<Payload> resp = client.requestResponse(ByteBufPayload.create(data));
-                resp.subscribe(new Consumer<Payload>() {
-                    @Override
-                    public void accept(Payload payload) {
-                        try {
-                            byte[] data = getBytesFromPayload(payload);
-                            D reply = deserializer.apply(data);
-                            if (reply == null) {
-                                throw new Error("Failed to deserialize command response!");
-                            }
-                            subscriber.onNext(reply);
-                            subscriber.onComplete();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                            subscriber.onError(e);
+                resp.subscribe(payload -> {
+                    try {
+                        D reply = deserializer.apply(getBytesFromPayload(payload));
+                        if (reply == null) {
+                            throw new Error("Failed to deserialize command response!");
                         }
+                        subscriber.onNext(reply);
+                        subscriber.onComplete();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        subscriber.onError(e);
                     }
-                }, new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) {
-                        subscriber.onError(throwable);
-                    }
-                });
+                }, subscriber::onError);
             }
         };
     }
@@ -167,18 +156,12 @@ public abstract class Client<B, C> {
                         if (notificationHandler != null) {
                             reply = notificationHandler.apply(notification);
                         }
-                        reply.subscribe(new Consumer<C>() {
-                            @Override
-                            public void accept(C data) {
-                                subscriber.onNext(ByteBufPayload.create(serializeNotificationReply(data)));
-                                subscriber.onComplete();
-                            }
-                        }, new Consumer<Throwable>() {
-                            @Override
-                            public void accept(Throwable throwable) {
-                                throwable.printStackTrace();
-                                subscriber.onError(throwable);
-                            }
+                        reply.subscribe(data -> {
+                            subscriber.onNext(ByteBufPayload.create(serializeNotificationReply(data)));
+                            subscriber.onComplete();
+                        }, throwable -> {
+                            throwable.printStackTrace();
+                            subscriber.onError(throwable);
                         });
                     } catch (Exception ex) {
                         ex.printStackTrace();
