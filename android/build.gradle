@@ -10,7 +10,7 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 group properties.getProperty("bintray.groupId")
 version properties.getProperty("bintray.version")
 
-String protobufVersion = "3.12.4"
+String protobufVersion = "3.14.0"
 
 android {
     compileSdkVersion 30

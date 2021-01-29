@@ -60,19 +60,11 @@ String orgId = "test_org";
 String apiKey = "test_api_key";
 
 Elarian app = Elarian.newInstance(apiKey, orgId, appId);
-app.sendToMessage(customerNumber, channel, message)
-    .subscribe(new Consumer<SendMessageReply>() {
-        @Override
-        public void accept(SendMessageReply res) {
-            log("Sent the message: " + res.toString());
-        }
-        }, new Consumer<Throwable>() {
-        @Override
-        public void accept(Throwable throwable) {
-            log("Failed to send message");
-            throwable.printStackTrace();
-        }
-    });
+app.sendMessage(customerNumber, channelNumber, message)
+    .subscribe(
+        res -> System.out.println(res.toString()),
+        err -> err.printStackTrace()
+    );
 ```
 
 See [examples](examples/) for more usage examples.
