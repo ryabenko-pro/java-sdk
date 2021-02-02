@@ -87,7 +87,7 @@ public class App {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(360000);
+                    Thread.sleep(100000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
