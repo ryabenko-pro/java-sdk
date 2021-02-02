@@ -1,46 +1,46 @@
 package com.elarian.example.kotlin
 
-import kotlinx.coroutines.*
-import com.elarian.hera.Elarian
-import reactor.core.publisher.Mono
+import com.elarian.hera.Simulator
+import com.elarian.hera.proto.CommonModel.Cash
+import com.elarian.hera.proto.PaymentModel.*
+import com.elarian.hera.proto.SimulatorSocket.ServerToSimulatorNotificationReply
+import kotlinx.coroutines.runBlocking
 import reactor.core.CoreSubscriber
-import com.elarian.hera.proto.AppModel.*
-import com.elarian.hera.proto.AppSocket.*
-import com.elarian.hera.proto.CommonModel.*
-import com.google.protobuf.StringValue
-import com.google.protobuf.Timestamp
-import java.util.*
-import java.util.function.Consumer
+import reactor.core.publisher.Mono
 
 fun main() {
     runBlocking {
-        println("Starting...")
-        val elarian = Elarian.newInstance("test_api_key", "test_org", "test_app")
-        println("Connected")
-        elarian.registerNotificationHandler { notif -> object : Mono<ServerToAppNotificationReply>() {
-                override fun subscribe(callback: CoreSubscriber<in ServerToAppNotificationReply?>) {
-                    print("App: Got a notification -> $notif")
-                    callback.onNext(ServerToAppNotificationReply.getDefaultInstance())
+        val elarian = Simulator.newInstance("test_api_key", "test_org", "test_app")
+        elarian.registerNotificationHandler { notif -> object : Mono<ServerToSimulatorNotificationReply>() {
+                override fun subscribe(callback: CoreSubscriber<in ServerToSimulatorNotificationReply?>) {
+                    print("Got a notification -> $notif")
+                    callback.onNext(ServerToSimulatorNotificationReply.getDefaultInstance())
                     callback.onComplete()
                 }
             }
         }
-        val customer = CustomerNumber
+
+        // String transactionId, PaymentChannelNumber channelNumber, String customerNumber, Cash value, PaymentStatus status
+        val channelNumber = PaymentChannelNumber
             .newBuilder()
-            .setNumber("+254718769882")
-            .setProvider(CustomerNumberProvider.CUSTOMER_NUMBER_PROVIDER_CELLULAR)
+            .setNumber("525900")
+            .setChannel(PaymentChannel.PAYMENT_CHANNEL_CELLULAR)
             .build()
-        val reminder = CustomerReminder
+        val cash = Cash
             .newBuilder()
-            .setKey("Some Key")
-            .setRemindAt(Timestamp.newBuilder().setSeconds((Date().time + 5000) / 1000))
-            .setPayload(StringValue.newBuilder().setValue("PPPPP"))
+            .setAmount(100.0)
+            .setCurrencyCode("KES")
             .build()
-        elarian.addCustomerReminder(customer, reminder)
+        elarian.receivePayment("fake-txnzz", channelNumber, "+254718769882", cash, PaymentStatus.PAYMENT_STATUS_PENDING_CONFIRMATION)
             .subscribe(
-                { println(it) },
-                { it.printStackTrace() }
+                {
+                    print(it)
+                },
+                {
+                    it.printStackTrace()
+                }
             )
+
     }
-    Thread.sleep(20000L)
+    Thread.sleep(3000L)
 }

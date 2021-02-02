@@ -27,15 +27,18 @@ abstract class Client<B, C> {
     private final String HOST = "20.50.102.116";
     private final ConnectionConfig connectionConfig;
 
+    protected RSocket socket;
     private final Resume resume;
-    protected RSocket client;
     private boolean isConnected = false;
     private final TcpClientTransport transport;
-
     private Function<B, Mono<C>> notificationHandler;
+    private final static boolean debug = System.getenv().containsKey("DEBUG");
+
 
     private static void log(String message) {
-        System.out.println(message);
+        if (debug) {
+            System.out.println(message);
+        }
     }
 
     public Client(ClientOpts clientOpts, ConnectionConfig connConfig) {
@@ -59,7 +62,6 @@ abstract class Client<B, C> {
     public void connect() throws RuntimeException {
         if (isConnected) throw new RuntimeException("Client is already connected");
 
-
         byte[] payload = AppSocket.AppConnectionMetadata.newBuilder()
                 .setAppId(clientOpts.appId)
                 .setOrgId(clientOpts.orgId)
@@ -70,18 +72,29 @@ abstract class Client<B, C> {
                 .build()
                 .toByteArray();
 
-        client = RSocketConnector
+
+        log("Connecting...");
+        socket = RSocketConnector
                 .create()
                 .keepAlive(Duration.ofSeconds(connectionConfig.keepAlive), Duration.ofSeconds(connectionConfig.lifetime))
                 .metadataMimeType("application/octet-stream")
                 .dataMimeType("application/octet-stream")
                 .payloadDecoder(PayloadDecoder.ZERO_COPY)
+                .keepAlive(Duration.ofSeconds(1), Duration.ofSeconds(60))
                 .setupPayload(ByteBufPayload.create(payload))
                 .acceptor(SocketAcceptor.forRequestResponse(requestHandler))
+                .reconnect(Retry.backoff(100, Duration.ofMillis(2)))
                 .resume(resume)
                 .connect(transport)
-                .block();
+                .block(Duration.ofSeconds(30));
         isConnected = true;
+        log("Connected");
+        socket.onClose().subscribe(unused -> log("Connection closed"), throwable -> log(throwable.getMessage()));
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            log("Disconnecting from server...");
+            socket.dispose();
+        }));
     }
 
     /**
@@ -89,7 +102,7 @@ abstract class Client<B, C> {
      */
     public void disconnect() {
         if (isConnected) {
-            client.dispose();
+            socket.dispose();
             isConnected = false;
         }
     }
@@ -126,7 +139,7 @@ abstract class Client<B, C> {
         return new Mono<D>() {
             @Override
             public void subscribe(CoreSubscriber<? super D> subscriber) {
-                Mono<Payload> resp = client.requestResponse(ByteBufPayload.create(data));
+                Mono<Payload> resp = socket.requestResponse(ByteBufPayload.create(data));
                 resp.subscribe(payload -> {
                     try {
                         D reply = deserializer.apply(getBytesFromPayload(payload));
