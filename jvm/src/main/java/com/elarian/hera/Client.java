@@ -14,6 +14,7 @@ import io.rsocket.transport.netty.client.TcpClientTransport;
 import io.rsocket.util.ByteBufPayload;
 import reactor.core.CoreSubscriber;
 import reactor.core.publisher.Mono;
+import reactor.netty.tcp.TcpClient;
 import reactor.util.retry.Retry;
 
 import java.time.Duration;
@@ -24,7 +25,7 @@ abstract class Client<B, C> {
 
     private final ClientOpts clientOpts;
     private final int PORT = 8082;
-    private final String HOST = "20.50.102.116";
+    private final String HOST = "tcp.elarian.dev";
     private final ConnectionConfig connectionConfig;
 
     protected RSocket socket;
@@ -45,7 +46,13 @@ abstract class Client<B, C> {
         this.clientOpts = clientOpts;
         this.connectionConfig = connConfig;
 
-        transport = TcpClientTransport.create(HOST, PORT);
+        transport = TcpClientTransport.create(
+                TcpClient
+                        .create()
+                        .secure()
+                        .host(HOST)
+                        .port(PORT)
+                );
         resume = new Resume()
                 .sessionDuration(Duration.ofSeconds(connConfig.lifetime))
                 .cleanupStoreOnKeepAlive()
