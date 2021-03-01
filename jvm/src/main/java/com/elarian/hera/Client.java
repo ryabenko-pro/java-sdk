@@ -30,7 +30,6 @@ abstract class Client<B, C> {
 
     protected RSocket socket;
     private final Resume resume;
-    private boolean isConnected = false;
     private final TcpClientTransport transport;
     private Function<B, Mono<C>> notificationHandler;
     private final static boolean debug = System.getenv().containsKey("DEBUG");
@@ -67,7 +66,7 @@ abstract class Client<B, C> {
      * @throws RuntimeException
      */
     public void connect() throws RuntimeException {
-        if (isConnected) throw new RuntimeException("Client is already connected");
+        if (this.isConnected()) throw new RuntimeException("Client is already connected");
 
         byte[] payload = AppSocket.AppConnectionMetadata.newBuilder()
                 .setAppId(clientOpts.appId)
@@ -94,13 +93,22 @@ abstract class Client<B, C> {
                 .resume(resume)
                 .connect(transport)
                 .block(Duration.ofSeconds(30));
-        isConnected = true;
         log("Connected");
-        socket.onClose().subscribe(unused -> log("Connection closed"), throwable -> log(throwable.getMessage()));
+        socket.onClose()
+                .subscribe(
+                        (signal) -> {},
+                        (err) -> {
+                            log("Connection ERROR: " + err.getMessage());
+                            this.disconnect(err.getMessage());
+                            err.printStackTrace();
+                        },
+                        () -> { log("Connection CLOSED"); }
+                );
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            log("Disconnecting from server...");
-            socket.dispose();
+            if (isConnected()){
+                disconnect("Application shutting down!");
+            }
         }));
     }
 
@@ -108,12 +116,23 @@ abstract class Client<B, C> {
      * Disconnect from the elarian server
      */
     public void disconnect() {
-        if (isConnected) {
+        this.disconnect("");
+    }
+
+    public void disconnect(String message) {
+        if (message != null && !message.isEmpty()) {
+            log("Disconnecting from server, REASON: " + message);
+        } else {
+            log("Disconnecting from server... ");
+        }
+        if (!socket.isDisposed()) {
             socket.dispose();
-            isConnected = false;
         }
     }
 
+    protected boolean isConnected() {
+        return socket != null && !socket.isDisposed();
+    }
 
     /**
      * Subscribe to notifications
@@ -143,6 +162,9 @@ abstract class Client<B, C> {
     }
 
     protected <D> Mono<D> buildCommandReply (byte[] data, Function<byte[], D> deserializer) {
+        if (!isConnected()) {
+            return Mono.error(new RuntimeException("Elarian client is not connected!"));
+        }
         return new Mono<D>() {
             @Override
             public void subscribe(CoreSubscriber<? super D> subscriber) {
