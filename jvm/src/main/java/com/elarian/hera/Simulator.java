@@ -9,6 +9,7 @@ import com.elarian.hera.proto.SimulatorSocket.*;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public final class Simulator extends Client<ServerToSimulatorNotification, ServerToSimulatorNotificationReply> {
@@ -18,8 +19,12 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
     }
 
     public static Simulator newInstance(String apiKey, String orgId, String appId) throws RuntimeException {
+        return newInstance(apiKey, orgId, appId, null);
+    }
+
+    public static Simulator newInstance(String apiKey, String orgId, String appId, Consumer<Throwable> onConnectionError) throws RuntimeException {
         Simulator client = new Simulator(apiKey, orgId, appId);
-        client.connect();
+        client.connect(onConnectionError);
         return client;
     }
 

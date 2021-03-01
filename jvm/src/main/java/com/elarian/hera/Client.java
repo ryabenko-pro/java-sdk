@@ -18,14 +18,13 @@ import reactor.netty.tcp.TcpClient;
 import reactor.util.retry.Retry;
 
 import java.time.Duration;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 
 abstract class Client<B, C> {
 
     private final ClientOpts clientOpts;
-    private final int PORT = 8082;
-    private final String HOST = "tcp.elarian.dev";
     private final ConnectionConfig connectionConfig;
 
     protected RSocket socket;
@@ -49,8 +48,8 @@ abstract class Client<B, C> {
                 TcpClient
                         .create()
                         .secure()
-                        .host(HOST)
-                        .port(PORT)
+                        .host("tcp.elarian.dev")
+                        .port(8082)
                 );
         resume = new Resume()
                 .sessionDuration(Duration.ofSeconds(connConfig.lifetime))
@@ -66,6 +65,15 @@ abstract class Client<B, C> {
      * @throws RuntimeException
      */
     public void connect() throws RuntimeException {
+        this.connect(null);
+    }
+
+    /**
+     * Connect to the elarian server
+     * @param onConnectionError
+     * @throws RuntimeException
+     */
+    public void connect(Consumer<Throwable> onConnectionError) throws RuntimeException {
         if (this.isConnected()) throw new RuntimeException("Client is already connected");
 
         byte[] payload = AppSocket.AppConnectionMetadata.newBuilder()
@@ -77,7 +85,6 @@ abstract class Client<B, C> {
                 .setSimulatorMode(clientOpts.isSimulator || !clientOpts.allowNotifications)
                 .build()
                 .toByteArray();
-
 
         log("Connecting...");
         socket = RSocketConnector
@@ -100,7 +107,9 @@ abstract class Client<B, C> {
                         (err) -> {
                             log("Connection ERROR: " + err.getMessage());
                             this.disconnect(err.getMessage());
-                            err.printStackTrace();
+                            if (onConnectionError != null) {
+                                onConnectionError.accept(err);
+                            }
                         },
                         () -> { log("Connection CLOSED"); }
                 );

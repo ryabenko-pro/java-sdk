@@ -11,6 +11,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 public final class Elarian extends Client<ServerToAppNotification, ServerToAppNotificationReply> {
 
@@ -23,8 +24,12 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
     }
 
     public static Elarian newInstance(String apiKey, String orgId, String appId) throws RuntimeException {
+        return newInstance(apiKey, orgId, appId, null);
+    }
+
+    public static Elarian newInstance(String apiKey, String orgId, String appId, Consumer<Throwable> onConnectionError) throws RuntimeException {
         Elarian client = new Elarian(apiKey, orgId, appId, true);
-        client.connect();
+        client.connect(onConnectionError);
         return client;
     }
 
