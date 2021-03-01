@@ -2,31 +2,25 @@ package com.elarian.example.java;
 
 
 import com.elarian.hera.Elarian;
-import com.elarian.hera.proto.AppModel.CustomerReminder;
-import com.elarian.hera.proto.AppSocket;
-import com.elarian.hera.proto.AppSocket.ServerToAppNotificationReply;
-import com.elarian.hera.proto.CommonModel.CustomerNumber;
-import com.elarian.hera.proto.CommonModel.CustomerNumberProvider;
-import com.elarian.hera.proto.MessagingModel.MessagingChannel;
-import com.elarian.hera.proto.MessagingModel.MessagingChannelNumber;
+import com.elarian.hera.proto.AppModel.*;
+import com.elarian.hera.proto.AppSocket.*;
+import com.elarian.hera.proto.CommonModel.*;
+import com.elarian.hera.proto.MessagingModel.*;
 import com.google.protobuf.StringValue;
 import com.google.protobuf.Timestamp;
 import reactor.core.CoreSubscriber;
 import reactor.core.publisher.Mono;
 
 import java.util.Date;
-import java.util.function.Consumer;
+import java.util.logging.Logger;
 
 public class App {
 
-    private static void log(String msg) {
-        System.out.println(msg);
-    }
+    static Logger log = Logger.getLogger(App.class.getName());
 
     public static void main(String[] args) {
 
-
-        log("Starting...");
+        log.info("Starting...");
 
         String appId = "test_app";
         String orgId = "test_org";
@@ -43,11 +37,11 @@ public class App {
                 .setChannel(MessagingChannel.MESSAGING_CHANNEL_SMS)
                 .build();
 
-        Elarian app = Elarian.newInstance(apiKey, orgId, appId);
+        Elarian app = Elarian.newInstance(apiKey, orgId, appId, Throwable::printStackTrace);
         app.registerNotificationHandler((notification -> new Mono<ServerToAppNotificationReply>(){
             @Override
             public void subscribe(CoreSubscriber<? super ServerToAppNotificationReply> callback) {
-                App.log("App: Got a notification -> " + notification.toString());
+                log.info("App: Got a notification -> " + notification.toString());
                 callback.onNext(ServerToAppNotificationReply.getDefaultInstance());
                 callback.onComplete();
             }
@@ -62,26 +56,26 @@ public class App {
                 .build();
         app.addCustomerReminder(customerNumber, reminder)
                 .subscribe(
-                    res -> log("Set the reminder: " + res.toString()),
-                    throwable -> {
-                        log("Failed to set reminder");
-                        throwable.printStackTrace();
-                    });
-
-        app.addCustomerReminder(null, null).subscribe(
-                new Consumer<AppSocket.UpdateCustomerAppDataReply>() {
-                    @Override
-                    public void accept(AppSocket.UpdateCustomerAppDataReply updateCustomerAppDataReply) {
-
-                    }
-                },
-                new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) {
-
-                    }
-                }
-        );
+                        res -> log.info("Set the reminder: " + res.toString()),
+                        throwable -> {
+                            log.warning("Failed to set reminder");
+                            throwable.printStackTrace();
+                        });
+        OutboundMessage msg = OutboundMessage
+                .newBuilder()
+                .setBody(OutboundMessageBody
+                        .newBuilder()
+                        .setText("This is an sms test")
+                        .build()
+                )
+                .build();
+        app.sendMessage(customerNumber, channel, msg)
+                .subscribe(
+                        res -> log.info("Sent message: " + res.toString()),
+                        throwable -> {
+                            log.warning("Failed to sent message");
+                            throwable.printStackTrace();
+                        });
 
         Thread t = new Thread(new Runnable() {
             @Override
