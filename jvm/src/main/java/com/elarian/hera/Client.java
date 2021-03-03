@@ -1,6 +1,6 @@
 package com.elarian.hera;
 
-import com.elarian.hera.proto.AppSocket;
+import com.elarian.hera.proto.AppSocket.*;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.StringValue;
 import io.netty.buffer.ByteBuf;
@@ -8,12 +8,14 @@ import io.rsocket.Payload;
 import io.rsocket.RSocket;
 import io.rsocket.SocketAcceptor;
 import io.rsocket.core.RSocketConnector;
+import io.rsocket.core.Resume;
 import io.rsocket.frame.decoder.PayloadDecoder;
 import io.rsocket.transport.netty.client.TcpClientTransport;
 import io.rsocket.util.ByteBufPayload;
 import reactor.core.CoreSubscriber;
 import reactor.core.publisher.Mono;
 import reactor.netty.tcp.TcpClient;
+import reactor.util.retry.Retry;
 
 import java.time.Duration;
 import java.util.function.Consumer;
@@ -26,8 +28,8 @@ abstract class Client<B, C> {
     private final ConnectionConfig connectionConfig;
 
     protected RSocket socket;
-    private int reconnect = 100;
     private final TcpClientTransport transport;
+    private final Resume resume;
     private Function<B, Mono<C>> notificationHandler;
     private final static boolean debug = System.getenv().containsKey("DEBUG");
 
@@ -49,6 +51,15 @@ abstract class Client<B, C> {
                         .host("tcp.elarian.dev")
                         .port(8082)
                 );
+
+        resume = new Resume()
+                .sessionDuration(Duration.ofMillis(connConfig.lifetime))
+                .cleanupStoreOnKeepAlive()
+                .retry(
+                        Retry.backoff(Long.MAX_VALUE, Duration.ofSeconds(2))
+                        .doBeforeRetry(s -> log("Disconnected. Retrying..."))
+                );
+
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             if (isConnected()){
                 disconnect("Application shutting down!");
@@ -72,15 +83,19 @@ abstract class Client<B, C> {
     public void connect(Consumer<Throwable> onConnectionError) throws RuntimeException {
         if (this.isConnected()) throw new RuntimeException("Client is already connected");
 
-        byte[] payload = AppSocket.AppConnectionMetadata.newBuilder()
+        AppConnectionMetadata.Builder builder = AppConnectionMetadata.newBuilder()
                 .setAppId(clientOpts.appId)
                 .setOrgId(clientOpts.orgId)
-                .setApiKey(StringValue.newBuilder().setValue(clientOpts.apiKey))
-                // .setAuthToken(StringValue.newBuilder().setValue(clientOpts.authToken))
-                .setSimplexMode(!clientOpts.allowNotifications)
-                .setSimulatorMode(clientOpts.isSimulator || !clientOpts.allowNotifications)
-                .build()
-                .toByteArray();
+                .setApiKey(StringValue.newBuilder().setValue(clientOpts.apiKey));
+        if (clientOpts.isSimulator) {
+            builder.setSimulatorMode(true);
+            builder.setSimplexMode(false);
+        } else {
+            builder.setSimplexMode(!clientOpts.allowNotifications);
+            builder.setSimulatorMode(false);
+        }
+
+        byte[] payload = builder.build().toByteArray();
 
         log("Connecting...");
         socket = RSocketConnector
@@ -91,6 +106,7 @@ abstract class Client<B, C> {
                 .setupPayload(ByteBufPayload.create(payload))
                 .acceptor(SocketAcceptor.forRequestResponse(requestHandler))
                 .keepAlive(Duration.ofMillis(connectionConfig.keepAlive), Duration.ofMillis(connectionConfig.lifetime))
+                .resume(connectionConfig.isResumable ? resume : null)
                 .connect(transport)
                 .block(Duration.ofSeconds(30));
         log("Connected");
@@ -108,12 +124,6 @@ abstract class Client<B, C> {
                         },
                         () -> {
                             log("Connection CLOSED");
-                            if (--reconnect > 0) {
-                                log("Reconnecting, attempt #" + reconnect);
-                                socket.dispose();
-                                socket = null;
-                                connect(onConnectionError);
-                            }
                         }
                 );
     }
@@ -126,7 +136,6 @@ abstract class Client<B, C> {
     }
 
     public void disconnect(String message) {
-         this.reconnect = 0;
         if (message != null && !message.isEmpty()) {
             log("Disconnecting from server, REASON: " + message);
         } else {

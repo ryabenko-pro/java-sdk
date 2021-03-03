@@ -4,15 +4,17 @@ class ConnectionConfig {
     public final long lifetime;
     public final long keepAlive;
     public final ClientSerializer serializer;
+    public final boolean isResumable;
 
-    public ConnectionConfig(long lifetime, long keepAlive, ClientSerializer serializer) {
+    public ConnectionConfig(long lifetime, long keepAlive, boolean resumable, ClientSerializer serializer) {
         this.lifetime = lifetime;
         this.keepAlive = keepAlive;
+        this.isResumable = resumable;
         this.serializer = serializer;
     }
 
-    public ConnectionConfig(long lifetime, long keepAlive) {
-        this(lifetime, keepAlive, new ClientSerializer<String>() {
+    public ConnectionConfig(long lifetime, long keepAlive, boolean resumable) {
+        this(lifetime, keepAlive, resumable, new ClientSerializer<String>() {
             @Override
             public byte[] serialize(String data) {
                 return data.getBytes();
@@ -26,7 +28,7 @@ class ConnectionConfig {
     }
 
     public ConnectionConfig() {
-        this(60000, 1000, new ClientSerializer<String>() {
+        this(1500, 500, false, new ClientSerializer<String>() {
             @Override
             public byte[] serialize(String data) {
                 return data.getBytes();
