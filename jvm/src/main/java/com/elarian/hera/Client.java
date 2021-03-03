@@ -8,14 +8,12 @@ import io.rsocket.Payload;
 import io.rsocket.RSocket;
 import io.rsocket.SocketAcceptor;
 import io.rsocket.core.RSocketConnector;
-import io.rsocket.core.Resume;
 import io.rsocket.frame.decoder.PayloadDecoder;
 import io.rsocket.transport.netty.client.TcpClientTransport;
 import io.rsocket.util.ByteBufPayload;
 import reactor.core.CoreSubscriber;
 import reactor.core.publisher.Mono;
 import reactor.netty.tcp.TcpClient;
-import reactor.util.retry.Retry;
 
 import java.time.Duration;
 import java.util.function.Consumer;
@@ -28,7 +26,7 @@ abstract class Client<B, C> {
     private final ConnectionConfig connectionConfig;
 
     protected RSocket socket;
-    private final Resume resume;
+    private int reconnect = 100;
     private final TcpClientTransport transport;
     private Function<B, Mono<C>> notificationHandler;
     private final static boolean debug = System.getenv().containsKey("DEBUG");
@@ -51,13 +49,11 @@ abstract class Client<B, C> {
                         .host("tcp.elarian.dev")
                         .port(8082)
                 );
-        resume = new Resume()
-                .sessionDuration(Duration.ofSeconds(connConfig.lifetime))
-                .cleanupStoreOnKeepAlive()
-                .retry(
-                        Retry.backoff(100, Duration.ofSeconds(2))
-                        .doBeforeRetry(s -> log("Disconnected. Retrying..."))
-                );
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            if (isConnected()){
+                disconnect("Application shutting down!");
+            }
+        }));
     }
 
     /**
@@ -89,21 +85,20 @@ abstract class Client<B, C> {
         log("Connecting...");
         socket = RSocketConnector
                 .create()
-                .keepAlive(Duration.ofSeconds(connectionConfig.keepAlive), Duration.ofSeconds(connectionConfig.lifetime))
                 .metadataMimeType("application/octet-stream")
                 .dataMimeType("application/octet-stream")
                 .payloadDecoder(PayloadDecoder.ZERO_COPY)
-                .keepAlive(Duration.ofSeconds(1), Duration.ofSeconds(60))
                 .setupPayload(ByteBufPayload.create(payload))
                 .acceptor(SocketAcceptor.forRequestResponse(requestHandler))
-                .reconnect(Retry.backoff(100, Duration.ofMillis(2)))
-                .resume(resume)
+                .keepAlive(Duration.ofMillis(connectionConfig.keepAlive), Duration.ofMillis(connectionConfig.lifetime))
                 .connect(transport)
                 .block(Duration.ofSeconds(30));
         log("Connected");
         socket.onClose()
                 .subscribe(
-                        (signal) -> {},
+                        (signal) -> {
+                            log("Connection SIGNAL");
+                        },
                         (err) -> {
                             log("Connection ERROR: " + err.getMessage());
                             this.disconnect(err.getMessage());
@@ -111,14 +106,16 @@ abstract class Client<B, C> {
                                 onConnectionError.accept(err);
                             }
                         },
-                        () -> { log("Connection CLOSED"); }
+                        () -> {
+                            log("Connection CLOSED");
+                            if (--reconnect > 0) {
+                                log("Reconnecting, attempt #" + reconnect);
+                                socket.dispose();
+                                socket = null;
+                                connect(onConnectionError);
+                            }
+                        }
                 );
-
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            if (isConnected()){
-                disconnect("Application shutting down!");
-            }
-        }));
     }
 
     /**
@@ -129,14 +126,13 @@ abstract class Client<B, C> {
     }
 
     public void disconnect(String message) {
+         this.reconnect = 0;
         if (message != null && !message.isEmpty()) {
             log("Disconnecting from server, REASON: " + message);
         } else {
             log("Disconnecting from server... ");
         }
-        if (!socket.isDisposed()) {
-            socket.dispose();
-        }
+        socket.dispose();
     }
 
     protected boolean isConnected() {
