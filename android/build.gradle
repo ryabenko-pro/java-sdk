@@ -16,7 +16,7 @@ android {
     compileSdkVersion 30
     defaultConfig {
         consumerProguardFiles "proguard-rules.txt"
-        minSdkVersion 21
+        minSdkVersion 27
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -27,13 +27,19 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    packagingOptions {
+        exclude "META-INF/INDEX.LIST"
+        exclude "META-INF/io.netty.versions.properties"
+    }
 }
 
 configurations.embed.transitive = true
 
 dependencies {
     api "com.google.protobuf:protobuf-javalite:$protobufVersion"
-    compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
+    api 'io.rsocket:rsocket-core:1.1.0'
+    api 'io.rsocket:rsocket-transport-netty:1.1.0'
 }
 
 

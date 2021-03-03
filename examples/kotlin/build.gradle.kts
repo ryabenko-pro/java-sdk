@@ -1,6 +1,5 @@
 plugins {
     application
-    kotlin("jvm") version "1.4.0"
 }
 
 repositories {
@@ -10,7 +9,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(project(":jvm"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0-M1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.31")
 }
 
 application {

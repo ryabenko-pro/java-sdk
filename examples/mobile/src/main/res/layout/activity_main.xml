@@ -5,19 +5,63 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:padding="10dp">
 
-    <TextView android:id="@+id/response"
-              android:layout_width="match_parent"
-              android:layout_height="250dp"
-        android:padding="20dp"
-        android:hint="No response..."
-        android:layout_gravity="center_horizontal"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/response"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:hint="@string/no_response"
+                />
+        </LinearLayout>
+    </ScrollView>
 
-    <Button android:id="@+id/button"
-        android:layout_width="wrap_content"
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get Customer State"
-        android:layout_gravity="center"/>
+        android:orientation="vertical"
+        android:layout_gravity="bottom|center_horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_number"
+            android:singleLine="true"
+            android:inputType="phone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button android:id="@+id/sendSMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/send_sms"/>
+
+            <Button android:id="@+id/fetchState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fetch_state"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 </FrameLayout>

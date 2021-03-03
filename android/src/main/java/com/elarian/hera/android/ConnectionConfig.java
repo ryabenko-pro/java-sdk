@@ -1,4 +1,4 @@
-package com.elarian.hera;
+package com.elarian.hera.android;
 
 class ConnectionConfig {
     public final long lifetime;

@@ -50,14 +50,14 @@ abstract class Client<B, C> {
                         .secure()
                         .host("tcp.elarian.dev")
                         .port(8082)
-                );
+        );
 
         resume = new Resume()
                 .sessionDuration(Duration.ofMillis(connConfig.lifetime))
                 .cleanupStoreOnKeepAlive()
                 .retry(
                         Retry.backoff(Long.MAX_VALUE, Duration.ofSeconds(2))
-                        .doBeforeRetry(s -> log("Disconnected. Retrying..."))
+                                .doBeforeRetry(s -> log("Disconnected. Retrying..."))
                 );
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {

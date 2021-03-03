@@ -3,4 +3,8 @@
     <string name="name_hint">name</string>
     <string name="say_hello">say hello</string>
     <string name="app_label">Elarian Android</string>
+    <string name="customer_number">Customer Number</string>
+    <string name="fetch_state">Fetch State</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="no_response">No response...</string>
 </resources>
