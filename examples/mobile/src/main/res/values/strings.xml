@@ -7,4 +7,8 @@
     <string name="fetch_state">Fetch State</string>
     <string name="send_sms">Send SMS</string>
     <string name="no_response">No response...</string>
+    <string name="sending_sms">Sending SMS...</string>
+    <string name="fetching_customer_state">Fetching customer state...</string>
+    <string name="initializing_sdk">Initializing SDK...</string>
+    <string name="ready">Connected!</string>
 </resources>

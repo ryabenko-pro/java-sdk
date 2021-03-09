@@ -10,7 +10,7 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 group properties.getProperty("bintray.groupId")
 version properties.getProperty("bintray.version")
 
-String protobufVersion = "3.14.0"
+String protobufVersion = "3.15.5"
 
 android {
     compileSdkVersion 30
@@ -38,8 +38,8 @@ configurations.embed.transitive = true
 
 dependencies {
     api "com.google.protobuf:protobuf-javalite:$protobufVersion"
-    api 'io.rsocket:rsocket-core:1.1.0'
-    api 'io.rsocket:rsocket-transport-netty:1.1.0'
+    api 'io.rsocket:rsocket-core:1.0.4'
+    api 'io.rsocket:rsocket-transport-netty:1.0.4'
 }
 
 

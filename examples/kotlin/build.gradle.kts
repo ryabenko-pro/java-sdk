@@ -9,7 +9,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(project(":jvm"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.31")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
 }
 
 application {

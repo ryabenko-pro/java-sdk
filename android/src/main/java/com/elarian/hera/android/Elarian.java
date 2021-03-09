@@ -19,16 +19,6 @@ public final class Elarian extends Client<ServerToAppNotification, ServerToAppNo
         super(new ClientOpts(authToken, orgId, appId, false), new ConnectionConfig());
     }
 
-    public static Elarian newInstance(String authToken, String orgId, String appId) throws RuntimeException {
-        return newInstance(authToken, orgId, appId, null);
-    }
-
-    public static Elarian newInstance(String authToken, String orgId, String appId, Consumer<Throwable> onConnectionError) throws RuntimeException {
-        Elarian client = new Elarian(authToken, orgId, appId);
-        client.connect(onConnectionError);
-        return client;
-    }
-
     @Override
     protected byte[] serializeNotificationReply(ServerToAppNotificationReply data) {
         return data.toByteArray();

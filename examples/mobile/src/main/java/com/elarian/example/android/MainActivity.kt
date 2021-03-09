@@ -2,23 +2,29 @@ package com.elarian.example.android
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.elarian.example.android.databinding.ActivityMainBinding
 import com.elarian.hera.android.Elarian
 import com.elarian.hera.proto.CommonModel.*
 import com.elarian.hera.proto.MessagingModel.*
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var client: Elarian
+    private lateinit var client: Elarian
+    private lateinit var layout: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        layout = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(layout.root)
 
-        sendSMS.setOnClickListener {
-            response.text = "Sending SMS..."
+        layout.sendSMS.setOnClickListener {
+            layout.response.text = getString(R.string.sending_sms)
             val customer = CustomerNumber.newBuilder()
-            customer.number = number.text.toString()
+            customer.number = layout.number.text.toString()
             customer.provider = CustomerNumberProvider.CUSTOMER_NUMBER_PROVIDER_CELLULAR
 
             val channel = MessagingChannelNumber.newBuilder()
@@ -32,31 +38,29 @@ class MainActivity : AppCompatActivity() {
 
             client.sendMessage(customer.build(), channel.build(), message.build()).subscribe(
                     {
-                        response.text = "${response.text}\n${it}"
+                        layout.response.text = "${layout.response.text}\n${it}"
                     },
                     { err ->
-                        response.text = "${response.text}\n${err.message}"
+                        layout.response.text = "${layout.response.text}\n${err.message}"
                     },
                     {
-                        response.text = "${response.text}\nDone!"
+                        layout.response.text = "${layout.response.text}\nDone!"
                     }
             )
         }
 
-        fetchState.setOnClickListener {
-            response.text = "Fetching customer state..."
+        layout.fetchState.setOnClickListener {
+            layout.response.text = getString(R.string.fetching_customer_state)
         }
 
-        connectToElarian()
-
+        GlobalScope.launch(Dispatchers.IO) {
+            connectToElarian()
+        }
     }
 
-    private fun connectToElarian() {
-        response.text = "Initializing SDK..."
-        client = Elarian("el_tkn_741648465c35fa8916252c05333623dd7c1f9989f71d1cdb6b2ba3a95930e751", "og-uNX0Bf", "drelm_app")
-        client.connect { err ->
-            err.printStackTrace()
-        }
-        response.text = "Ready!"
+    private suspend fun connectToElarian() {
+        layout.response.text = getString(R.string.initializing_sdk)
+        client = Elarian("some-token", "some-org", "some-app")
+        client.connect({ layout.response.text = getString(R.string.ready) }, { layout.response.text = it.message })
     }
 }

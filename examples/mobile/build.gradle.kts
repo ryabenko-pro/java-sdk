@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("kotlin-android-extensions")
 }
 
 repositories {
@@ -12,7 +11,7 @@ repositories {
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.31")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3")
     implementation(project(":android"))
 }
 
@@ -26,6 +25,10 @@ android {
         targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     compileOptions {

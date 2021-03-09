@@ -1,4 +1,4 @@
-package com.elarian.hera;
+package com.elarian.hera.android;
 
 import com.elarian.hera.proto.AppSocket.*;
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -72,26 +72,27 @@ abstract class Client<B, C> {
      * @throws RuntimeException
      */
     public void connect() throws RuntimeException {
-        this.connect(null);
+        this.connect(null, null);
     }
 
     /**
      * Connect to the elarian server
+     * @param onConnectionSuccess
      * @param onConnectionError
      * @throws RuntimeException
      */
-    public void connect(Consumer<Throwable> onConnectionError) throws RuntimeException {
+    public void connect(Consumer<String> onConnectionSuccess, Consumer<Throwable> onConnectionError) throws RuntimeException {
         if (this.isConnected()) throw new RuntimeException("Client is already connected");
 
         AppConnectionMetadata.Builder builder = AppConnectionMetadata.newBuilder()
                 .setAppId(clientOpts.appId)
                 .setOrgId(clientOpts.orgId)
-                .setApiKey(StringValue.newBuilder().setValue(clientOpts.apiKey));
+                .setAuthToken(StringValue.newBuilder().setValue(clientOpts.authToken));
         if (clientOpts.isSimulator) {
             builder.setSimulatorMode(true);
             builder.setSimplexMode(false);
         } else {
-            builder.setSimplexMode(!clientOpts.allowNotifications);
+            builder.setSimplexMode(true);
             builder.setSimulatorMode(false);
         }
 
@@ -129,6 +130,9 @@ abstract class Client<B, C> {
                             log("Connection CLOSED");
                         }
                 );
+        if (onConnectionSuccess != null) {
+            onConnectionSuccess.accept("Connected");
+        }
     }
 
     /**

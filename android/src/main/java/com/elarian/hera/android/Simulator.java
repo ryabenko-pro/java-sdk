@@ -18,16 +18,6 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
         super(new ClientOpts(authToken, orgId, appId, true), new ConnectionConfig());
     }
 
-    public static Simulator newInstance(String authToken, String orgId, String appId) throws RuntimeException {
-        return newInstance(authToken, orgId, appId, null);
-    }
-
-    public static Simulator newInstance(String authToken, String orgId, String appId, Consumer<Throwable> onConnectionError) throws RuntimeException {
-        Simulator client = new Simulator(authToken, orgId, appId);
-        client.connect(onConnectionError);
-        return client;
-    }
-
     private final Function<byte[], SimulatorToServerCommandReply> replyDeserializer = (data) -> {
         try {
             return SimulatorToServerCommandReply.newBuilder().mergeFrom(data).build();
