@@ -5,12 +5,13 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":jvm"))
-    compile "org.slf4j:slf4j-jdk14:1.7.25"
+    implementation(project(':elarian-core'))
+    implementation "org.slf4j:slf4j-jdk14:1.7.25"
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 application {

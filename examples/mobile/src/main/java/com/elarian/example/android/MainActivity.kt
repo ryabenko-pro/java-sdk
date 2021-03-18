@@ -3,9 +3,6 @@ package com.elarian.example.android
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.elarian.example.android.databinding.ActivityMainBinding
-import com.elarian.hera.android.Elarian
-import com.elarian.hera.proto.CommonModel.*
-import com.elarian.hera.proto.MessagingModel.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -13,7 +10,6 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var client: Elarian
     private lateinit var layout: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,30 +19,30 @@ class MainActivity : AppCompatActivity() {
 
         layout.sendSMS.setOnClickListener {
             layout.response.text = getString(R.string.sending_sms)
-            val customer = CustomerNumber.newBuilder()
-            customer.number = layout.number.text.toString()
-            customer.provider = CustomerNumberProvider.CUSTOMER_NUMBER_PROVIDER_CELLULAR
-
-            val channel = MessagingChannelNumber.newBuilder()
-            channel.number = "787878"
-            channel.channel = MessagingChannel.MESSAGING_CHANNEL_SMS
-
-            val message = OutboundMessage.newBuilder()
-            val body = OutboundMessageBody.newBuilder()
-            body.text = "This is a test"
-            message.body = body.build()
-
-            client.sendMessage(customer.build(), channel.build(), message.build()).subscribe(
-                    {
-                        layout.response.text = "${layout.response.text}\n${it}"
-                    },
-                    { err ->
-                        layout.response.text = "${layout.response.text}\n${err.message}"
-                    },
-                    {
-                        layout.response.text = "${layout.response.text}\nDone!"
-                    }
-            )
+//            val customer = CustomerNumber.newBuilder()
+//            customer.number = layout.number.text.toString()
+//            customer.provider = CustomerNumberProvider.CUSTOMER_NUMBER_PROVIDER_CELLULAR
+//
+//            val channel = MessagingChannelNumber.newBuilder()
+//            channel.number = "787878"
+//            channel.channel = MessagingChannel.MESSAGING_CHANNEL_SMS
+//
+//            val message = OutboundMessage.newBuilder()
+//            val body = OutboundMessageBody.newBuilder()
+//            body.text = "This is a test"
+//            message.body = body.build()
+//
+//            client.sendMessage(customer.build(), channel.build(), message.build()).subscribe(
+//                    {
+//                        layout.response.text = "${layout.response.text}\n${it}"
+//                    },
+//                    { err ->
+//                        layout.response.text = "${layout.response.text}\n${err.message}"
+//                    },
+//                    {
+//                        layout.response.text = "${layout.response.text}\nDone!"
+//                    }
+//            )
         }
 
         layout.fetchState.setOnClickListener {
@@ -60,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     private suspend fun connectToElarian() {
         layout.response.text = getString(R.string.initializing_sdk)
-        client = Elarian("some-token", "some-org", "some-app")
-        client.connect({ layout.response.text = getString(R.string.ready) }, { layout.response.text = it.message })
+//        client = Elarian("some-token", "some-org", "some-app")
+//        client.connect({ layout.response.text = getString(R.string.ready) }, { layout.response.text = it.message })
     }
 }

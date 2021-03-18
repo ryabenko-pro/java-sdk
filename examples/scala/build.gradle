@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     implementation 'org.scala-lang:scala-library:2.13.3'
-    implementation(project(":jvm"))
+    implementation(project(':elarian-core'))
 }
 
 java {

@@ -32,7 +32,7 @@ or sbt:
 ```
 resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
 // Get all services
-libraryDependencies += "com.elarian" % "jvm" % "0.1.4"
+libraryDependencies += "com.elarian" % "elarian-core" % "0.2.0"
 ```
 
 or Gradle:
@@ -44,9 +44,9 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:jvm:0.1.4'
+  implementation 'com.elarian:elarian-android:0.2.0'
   // Or if you're building for android
-  // implementation 'com.elarian:android:0.1.4'
+  // implementation 'com.elarian:elarian-android:0.2.0'
 }
 ```
 
@@ -59,16 +59,25 @@ String appId = "test_app";
 String orgId = "test_org";
 String apiKey = "test_api_key";
 
-Elarian app = Elarian.newInstance(apiKey, orgId, appId);
-app.sendMessage(customerNumber, channelNumber, message)
-    .subscribe(
-        res -> System.out.println(res.toString()),
-        err -> err.printStackTrace()
-    );
+Elarian app = new Elarian(apiKey, orgId, appId);
+
+app.connect(success -> {
+    log.info("Connected!");
+    app.sendMessageByTag(tag, channel, message)
+        .subscribe(
+            res -> System.out.println(res.toString()),
+            err -> err.printStackTrace()
+        );
+}, throwable -> {
+    log.warning("Failed to connect: " + throwable.getMessage());
+});
 ```
 
 See [examples](examples/) for more usage examples.
 
+## Development
+
+See [SDK Spec](https://github.com/ElarianLtd/sdk-spec) for reference.
 
 ## Issues
 

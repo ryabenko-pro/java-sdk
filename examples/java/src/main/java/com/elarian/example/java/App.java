@@ -1,17 +1,17 @@
 package com.elarian.example.java;
 
 
-import com.elarian.hera.Elarian;
-import com.elarian.hera.proto.AppModel.*;
-import com.elarian.hera.proto.AppSocket.*;
-import com.elarian.hera.proto.CommonModel.*;
-import com.elarian.hera.proto.MessagingModel.*;
-import com.google.protobuf.StringValue;
-import com.google.protobuf.Timestamp;
-import reactor.core.CoreSubscriber;
+import com.elarian.Elarian;
+import com.elarian.model.CustomerNumber;
+import com.elarian.model.Message;
+import com.elarian.model.MessageBody;
+import com.elarian.model.MessagingChannel;
+import com.elarian.model.Tag;
+
 import reactor.core.publisher.Mono;
 
 import java.util.Date;
+import java.util.function.Consumer;
 import java.util.logging.Logger;
 
 public class App {
@@ -22,66 +22,31 @@ public class App {
 
         log.info("Starting...");
 
-        String appId = "test_app";
-        String orgId = "test_org";
-        String apiKey = "test_api_key";
-        String senderId = "Elarian";
-        CustomerNumber customerNumber = CustomerNumber
-                .newBuilder()
-                .setNumber("+254718769882")
-                .setProvider(CustomerNumberProvider.CUSTOMER_NUMBER_PROVIDER_CELLULAR)
-                .build();
-        MessagingChannelNumber channel = MessagingChannelNumber
-                .newBuilder()
-                .setNumber(senderId)
-                .setChannel(MessagingChannel.MESSAGING_CHANNEL_SMS)
-                .build();
+        String appId = "GithubActions";
+        String orgId = "og-f5OUHn";
+        String apiKey = "el_api_key_db2fc77601f0a075dacfe78d3ab5d5560925a0ae9a1ba5e95f49477b73d09d5a";
 
-        Elarian app = Elarian.newInstance(apiKey, orgId, appId, Throwable::printStackTrace);
-        app.registerNotificationHandler((notification -> new Mono<ServerToAppNotificationReply>(){
-            @Override
-            public void subscribe(CoreSubscriber<? super ServerToAppNotificationReply> callback) {
-                log.info("App: Got a notification -> " + notification.toString());
-                callback.onNext(ServerToAppNotificationReply.getDefaultInstance());
-                callback.onComplete();
-            }
-        }));
+        Elarian app = new Elarian(apiKey, orgId, appId);
 
-
-        CustomerReminder reminder = CustomerReminder
-                .newBuilder()
-                .setRemindAt(Timestamp.newBuilder().setSeconds((new Date().getTime() + 10000) / 1000).build())
-                .setKey("Some Key Key")
-                .setPayload(StringValue.newBuilder().setValue("PAYLOAD").build())
-                .build();
-        app.addCustomerReminder(customerNumber, reminder)
+        app.connect(success -> {
+            log.info("Connected!");
+            Tag tag = new Tag("some-key", "some-value");
+            MessagingChannel channel = new MessagingChannel("2020", MessagingChannel.Channel.SMS);
+            Message message = new Message(new MessageBody("This is a test"));
+            app.sendMessageByTag(tag, channel, message)
                 .subscribe(
-                        res -> log.info("Set the reminder: " + res.toString()),
-                        throwable -> {
-                            log.warning("Failed to set reminder");
-                            throwable.printStackTrace();
-                        });
-        OutboundMessage msg = OutboundMessage
-                .newBuilder()
-                .setBody(OutboundMessageBody
-                        .newBuilder()
-                        .setText("This is an sms test")
-                        .build()
-                )
-                .build();
-        app.sendMessage(customerNumber, channel, msg)
-                .subscribe(
-                        res -> log.info("Sent message: " + res.toString()),
-                        throwable -> {
-                            log.warning("Failed to sent message");
-                            throwable.printStackTrace();
-                        });
+                        res -> log.info(res.description),
+                        err -> err.printStackTrace()
+                );
+        }, throwable -> {
+            log.warning("Failed to connect: " + throwable.getMessage());
+        });
 
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(100000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

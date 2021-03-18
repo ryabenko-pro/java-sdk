@@ -12,7 +12,7 @@ repositories {
 dependencies {
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3")
-    implementation(project(":android"))
+    implementation(project(":elarian-android"))
 }
 
 android {

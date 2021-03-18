@@ -1,8 +1,9 @@
 rootProject.name = "elarian"
 
-include("common")
-include("jvm")
-include("android")
+include("elarian-common")
+include("elarian-core")
+include("elarian-hera")
+include("elarian-android")
 
 Set<String> examples = new HashSet<String>()
 examples << 'java'
