@@ -38,11 +38,13 @@ class Utils {
         return target;
     }
 
-    public static ReceivedMediaNotification fillInMediaMessageNotification(AppSocket.ReceivedMessageNotification notif, ReceivedMediaNotification target) {
+    public static ReceivedMediaNotification fillInMediaMessageNotification(AppSocket.ReceivedMessageNotification notif, ReceivedMediaNotification target, Customer targetCustomer) {
         target.messageId = notif.getMessageId();
         target.sessionId = notif.getSessionId().getValue();
         target.channelNumber = Utils.makeMessagingChannel(notif.getChannelNumber());
         target.customerNumber = Utils.makeCustomerNumber(notif.getCustomerNumber());
+
+        targetCustomer.customerNumber = target.customerNumber;
 
         List<MessagingModel.InboundMessageBody> parts = notif.getPartsList();
         for (MessagingModel.InboundMessageBody part: parts) {

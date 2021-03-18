@@ -377,7 +377,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             appData = notif.getAppData().getStringVal();
         }
 
-        Customer customer = new Customer(notif.getCustomerId());
+        Customer customer = new Customer(this, notif.getCustomerId());
 
         if (notif.hasReminder() && onReminderNotificationHandler != null) {
 
@@ -399,6 +399,8 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
             payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
+            customer.customerNumber = payload.customerNumber;
+
             onMessagingSessionStartedNotificationHandler.handle(payload, customer, appData, callback);
 
         } else if (notif.hasMessagingSessionRenewed() && onMessagingSessionRenewedNotificationHandler != null) {
@@ -409,6 +411,8 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.expiresAt = msg.getExpiresAt().getSeconds();
             payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
             payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+
+            customer.customerNumber = payload.customerNumber;
 
             onMessagingSessionRenewedNotificationHandler.handle(payload, customer, appData, callback);
 
@@ -422,6 +426,8 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
             payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
+            customer.customerNumber = payload.customerNumber;
+
             onMessagingSessionEndedNotificationHandler.handle(payload, customer, appData, callback);
 
         } else if (notif.hasMessagingConsentUpdate() && onMessagingConsentUpdateNotificationHandler != null) {
@@ -432,6 +438,8 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.status = MessagingConsentUpdateNotification.Status.valueOf(msg.getStatusValue());
             payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
             payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+
+            customer.customerNumber = payload.customerNumber;
 
             onMessagingConsentUpdateNotificationHandler.handle(payload, customer, appData, callback);
 
@@ -445,6 +453,9 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                     sms.messageId = msg.getMessageId();
                     sms.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
                     sms.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+
+                    customer.customerNumber = sms.customerNumber;
+
                     sms.text = null;
                     if (msg.getPartsCount() > 0) {
                         sms.text = msg.getParts(0).getText();
@@ -461,6 +472,9 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                         voiceNotif.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
                         voiceNotif.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
                         voiceNotif.sessionId = msg.getSessionId().getValue();
+
+                        customer.customerNumber = voiceNotif.customerNumber;
+
                         voiceNotif.voice = new VoiceCallInput();
                         if (msg.getPartsCount() > 0) {
                             MessagingModel.VoiceCallInputMessageBody input = msg.getParts(0).getVoice();
@@ -497,6 +511,9 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                         ussd.messageId = msg.getMessageId();
                         ussd.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
                         ussd.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+
+                        customer.customerNumber = ussd.customerNumber;
+
                         ussd.sessionId = msg.getSessionId().getValue();
                         ussd.input = null;
                         if (msg.getPartsCount() > 0) {
@@ -513,7 +530,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                 case 4: // MessagingChannel.Channel.FB_MESSENGER
                     if (onReceivedFbMessengerNotificationHandler != null) {
                         ReceivedMediaNotification fb_messenger = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
-                        Utils.fillInMediaMessageNotification(msg, fb_messenger);
+                        Utils.fillInMediaMessageNotification(msg, fb_messenger, customer);
                         onReceivedFbMessengerNotificationHandler.handle(fb_messenger, customer, appData, callback);
                         return;
                     }
@@ -521,7 +538,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                 case 5: // MessagingChannel.Channel.TELEGRAM
                     if (onReceivedTelegramNotificationHandler != null) {
                         ReceivedMediaNotification telegram = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
-                        Utils.fillInMediaMessageNotification(msg, telegram);
+                        Utils.fillInMediaMessageNotification(msg, telegram, customer);
                         onReceivedTelegramNotificationHandler.handle(telegram, customer, appData, callback);
                         return;
                     }
@@ -529,7 +546,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                 case 6: // MessagingChannel.Channel.WHATSAPP
                     if (onReceivedWhatsappNotificationHandler != null) {
                         ReceivedMediaNotification whatsapp = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
-                        Utils.fillInMediaMessageNotification(msg, whatsapp);
+                        Utils.fillInMediaMessageNotification(msg, whatsapp, customer);
                         onReceivedWhatsappNotificationHandler.handle(whatsapp, customer, appData, callback);
                         return;
                     }
@@ -537,7 +554,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                 case 7: // MessagingChannel.Channel.EMAIL
                     if (onReceivedEmailNotificationHandler != null) {
                         ReceivedMediaNotification email = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
-                        Utils.fillInMediaMessageNotification(msg, email);
+                        Utils.fillInMediaMessageNotification(msg, email, customer);
                         onReceivedEmailNotificationHandler.handle(email, customer, appData, callback);
                         return;
                     }
@@ -562,6 +579,8 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.customerNumber = Utils.makeCustomerNumber(notif.getSentMessageReaction().getCustomerNumber());
             payload.reaction = MessageReaction.valueOf(notif.getSentMessageReaction().getReactionValue());
 
+            customer.customerNumber = payload.customerNumber;
+
             onSentMessageReactionNotificationHandler.handle(payload, customer, appData, callback);
 
         } else if (notif.hasReceivedPayment() && onReceivedPaymentNotificationHandler != null) {
@@ -576,6 +595,8 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.value = new Cash();
             payload.value.currencyCode = notif.getReceivedPayment().getValue().getCurrencyCode();
             payload.value.amount = notif.getReceivedPayment().getValue().getAmount();
+
+            customer.customerNumber = payload.customerNumber;
 
             onReceivedPaymentNotificationHandler.handle(payload, customer, appData, callback);
 
@@ -606,6 +627,8 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.activity.properties = notif.getCustomerActivity().getActivity().getPropertiesMap();
             payload.channelNumber = Utils.makeActivityChannel(notif.getCustomerActivity().getChannelNumber());
             payload.customerNumber = Utils.makeCustomerNumber(notif.getCustomerActivity().getCustomerNumber());
+
+            customer.customerNumber = payload.customerNumber;
 
             onCustomerActivityNotificationHandler.handle(payload, customer, appData, callback);
         } else {

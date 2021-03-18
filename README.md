@@ -44,7 +44,7 @@ repositories {
 }
 
 dependencies{
-  implementation 'com.elarian:elarian-android:0.2.0'
+  implementation 'com.elarian:elarian-core:0.2.0'
   // Or if you're building for android
   // implementation 'com.elarian:elarian-android:0.2.0'
 }
