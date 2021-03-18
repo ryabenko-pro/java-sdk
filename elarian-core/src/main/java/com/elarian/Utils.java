@@ -20,8 +20,13 @@ import com.elarian.model.PaymentCounterParty;
 import com.elarian.model.PaymentCustomerCounterParty;
 import com.elarian.model.PaymentPurseCounterParty;
 import com.elarian.model.PaymentWalletCounterParty;
+import com.elarian.model.PromptMessageReplyAction;
 import com.elarian.model.ReceivedMediaNotification;
 import com.elarian.model.ReceivedMessageNotification;
+import com.elarian.model.ReplyTokenPrompt;
+import com.elarian.model.ReplyTokenPromptMenu;
+import com.elarian.model.Template;
+import com.elarian.model.UssdMenu;
 import com.google.protobuf.ProtocolStringList;
 import com.google.protobuf.StringValue;
 
@@ -235,5 +240,58 @@ class Utils {
         outgoing.setBody(body);
 
         return outgoing.build();
+    }
+
+    public static Message makeMessage(MessagingModel.OutboundMessage msg) {
+        MessagingModel.OutboundMessageBody body = msg.getBody();
+        MessageBody content = new MessageBody();
+        content.text = body.getText();
+        content.url = body.getUrl();
+
+        if (body.hasMedia()) {
+            content.media = new Media(
+                    body.getMedia().getUrl(),
+                    Media.MediaType.valueOf(body.getMedia().getMediaValue()));
+        }
+
+        if (body.hasLocation()) {
+            content.location = new Location();
+        }
+
+        if (body.hasEmail()) {
+            content.email = new Email();
+        }
+
+        if (body.hasTemplate()) {
+            content.template = new Template();
+        }
+
+        if (body.hasVoice()) {
+            // FIXME: Implement
+            // TODO: build the correct actions
+        }
+
+        if (body.hasUssd()) {
+            content.ussd = new UssdMenu(body.getUssd().getText(), body.getUssd().getIsTerminal());
+        }
+
+
+        Message result = new Message(content);
+        result.providerTag = msg.getProviderTag().getValue();
+        result.labels = msg.getLabelsList();
+        result.replyPrompt = new ReplyTokenPrompt();
+        result.replyPrompt.action = PromptMessageReplyAction.valueOf(msg.getReplyPrompt().getActionValue());
+        result.replyPrompt.menu = msg.getReplyPrompt().getMenuList().stream().map((item) -> {
+            ReplyTokenPromptMenu menu = new ReplyTokenPromptMenu();
+            menu.text = item.getText();
+            if (item.hasMedia()) {
+                menu.media = new Media(
+                        item.getMedia().getUrl(),
+                        Media.MediaType.valueOf(item.getMedia().getMediaValue()));
+            }
+            return menu;
+        }).collect(Collectors.toList());
+
+        return result;
     }
 }

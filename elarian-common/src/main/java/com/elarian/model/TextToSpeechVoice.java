@@ -14,4 +14,14 @@ public enum TextToSpeechVoice {
     public int getValue() {
         return value;
     }
+
+    public static TextToSpeechVoice valueOf(int value) {
+        TextToSpeechVoice[] values = TextToSpeechVoice.values();
+        for (TextToSpeechVoice status: values) {
+            if (status.value == value) {
+                return status;
+            }
+        }
+        return UNKNOWN;
+    }
 }

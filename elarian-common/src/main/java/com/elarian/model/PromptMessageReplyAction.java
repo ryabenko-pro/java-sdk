@@ -18,4 +18,14 @@ public enum PromptMessageReplyAction {
     public int getValue() {
         return value;
     }
+
+    public static PromptMessageReplyAction valueOf(int value) {
+        PromptMessageReplyAction[] values = PromptMessageReplyAction.values();
+        for (PromptMessageReplyAction status: values) {
+            if (status.value == value) {
+                return status;
+            }
+        }
+        return UNKNOWN;
+    }
 }

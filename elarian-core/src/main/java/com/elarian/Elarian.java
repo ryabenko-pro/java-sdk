@@ -313,48 +313,6 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
         };
     }
 
-
-    /**
-     * Initiate a payment transaction
-     * @param debitParty
-     * @param creditParty
-     * @param value
-     * @return
-     */
-    private Mono<InitiatePaymentReply> initiatePayment(PaymentCounterParty debitParty, PaymentCounterParty creditParty, Cash value) {
-        AppSocket.InitiatePaymentCommand cmd = AppSocket.InitiatePaymentCommand
-                .newBuilder()
-                .setDebitParty(Utils.buildPaymentCounterParty(debitParty))
-                .setCreditParty(Utils.buildPaymentCounterParty(creditParty))
-                .setValue(CommonModel.Cash
-                        .newBuilder()
-                        .setAmount(value.amount)
-                        .setCurrencyCode(value.currencyCode)
-                        .build())
-                .build();
-        AppSocket.AppToServerCommand req = AppSocket.AppToServerCommand
-                .newBuilder()
-                .setInitiatePayment(cmd)
-                .build();
-
-        return new Mono<InitiatePaymentReply>() {
-            @Override
-            public void subscribe(CoreSubscriber<? super InitiatePaymentReply> subscriber) {
-                buildCommandReply(req.toByteArray(), replyDeserializer).subscribe(reply -> {
-                    AppSocket.InitiatePaymentReply res = reply.getInitiatePayment();
-                    InitiatePaymentReply result = new InitiatePaymentReply();
-                    result.status = PaymentStatus.valueOf(res.getStatusValue());
-                    result.transactionId = res.getTransactionId().getValue();
-                    result.description = res.getDescription();
-                    result.debitCustomerId = res.getDebitCustomerId().getValue();
-                    result.creditCustomerId = res.getCreditCustomerId().getValue();
-                    subscriber.onNext(result);
-                    subscriber.onComplete();
-                }, subscriber::onError);
-            }
-        };
-    }
-
     // From customer
     public Mono<InitiatePaymentReply> initiatePayment(PaymentCustomerCounterParty debitParty, PaymentCustomerCounterParty creditParty, Cash value) {
         return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
@@ -423,6 +381,48 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
         return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
     }
 
+    /**
+     * Initiate a payment transaction
+     * @param debitParty
+     * @param creditParty
+     * @param value
+     * @return
+     */
+    private Mono<InitiatePaymentReply> initiatePayment(PaymentCounterParty debitParty, PaymentCounterParty creditParty, Cash value) {
+        AppSocket.InitiatePaymentCommand cmd = AppSocket.InitiatePaymentCommand
+                .newBuilder()
+                .setDebitParty(Utils.buildPaymentCounterParty(debitParty))
+                .setCreditParty(Utils.buildPaymentCounterParty(creditParty))
+                .setValue(CommonModel.Cash
+                        .newBuilder()
+                        .setAmount(value.amount)
+                        .setCurrencyCode(value.currencyCode)
+                        .build())
+                .build();
+        AppSocket.AppToServerCommand req = AppSocket.AppToServerCommand
+                .newBuilder()
+                .setInitiatePayment(cmd)
+                .build();
+
+        return new Mono<InitiatePaymentReply>() {
+            @Override
+            public void subscribe(CoreSubscriber<? super InitiatePaymentReply> subscriber) {
+                buildCommandReply(req.toByteArray(), replyDeserializer).subscribe(reply -> {
+                    AppSocket.InitiatePaymentReply res = reply.getInitiatePayment();
+                    InitiatePaymentReply result = new InitiatePaymentReply();
+                    result.status = PaymentStatus.valueOf(res.getStatusValue());
+                    result.transactionId = res.getTransactionId().getValue();
+                    result.description = res.getDescription();
+                    result.debitCustomerId = res.getDebitCustomerId().getValue();
+                    result.creditCustomerId = res.getCreditCustomerId().getValue();
+                    subscriber.onNext(result);
+                    subscriber.onComplete();
+                }, subscriber::onError);
+            }
+        };
+    }
+
+
 
     private void handlePurseNotificationWithTextSerializer(AppSocket.ServerToAppPurseNotification notif, NotificationCallback<MessageBody, String> callback) {
         if (onPaymentStatusNotificationHandler != null) {
@@ -490,7 +490,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             AppSocket.MessagingSessionEndedNotification msg = notif.getMessagingSessionEnded();
             payload.sessionId = msg.getSessionId();
             payload.duration = msg.getDuration().getSeconds();
-            payload.reason = MessagingSessionEndedNotification.Reason.valueOf(msg.getReasonValue());
+            payload.reason = MessagingSessionEndReason.valueOf(msg.getReasonValue());
             payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
             payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
@@ -660,9 +660,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.channelNumber = Utils.makePaymentChannel(notif.getReceivedPayment().getChannelNumber());
             payload.customerNumber = Utils.makeCustomerNumber(notif.getCustomerActivity().getCustomerNumber());
             payload.status = PaymentStatus.valueOf(notif.getReceivedPayment().getStatus().getNumber());
-            payload.value = new Cash();
-            payload.value.currencyCode = notif.getReceivedPayment().getValue().getCurrencyCode();
-            payload.value.amount = notif.getReceivedPayment().getValue().getAmount();
+            payload.value = new Cash(notif.getReceivedPayment().getValue().getCurrencyCode(), notif.getReceivedPayment().getValue().getAmount());
 
             customer.customerNumber = payload.customerNumber;
 

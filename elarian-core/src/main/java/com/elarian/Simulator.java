@@ -1,34 +1,38 @@
 package com.elarian;
 
-import com.elarian.hera.proto.AppSocket.*;
-import com.elarian.hera.proto.SimulatorSocket.*;
-import com.elarian.hera.proto.PaymentModel.*;
-import com.elarian.hera.proto.CommonModel.*;
-import com.elarian.hera.proto.MessagingModel.*;
-import com.elarian.model.ClientConfig;
-import com.elarian.model.ConnectionConfig;
-import com.elarian.model.NotificationCallback;
-import com.elarian.model.NotificationHandler;
+
+import com.elarian.model.*;
+import com.elarian.hera.proto.AppSocket;
+import com.elarian.hera.proto.CommonModel;
+import com.elarian.hera.proto.MessagingModel;
+import com.elarian.hera.proto.PaymentModel;
+import com.elarian.hera.proto.SimulatorSocket;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.StringValue;
 
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import reactor.core.CoreSubscriber;
 import reactor.core.publisher.Mono;
 
-public final class Simulator extends Client<ServerToSimulatorNotification, ServerToSimulatorNotificationReply> {
+public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNotification, SimulatorSocket.ServerToSimulatorNotificationReply> {
 
-    private NotificationHandler<SendMessageSimulatorNotification, OutboundMessage, String> onSendMessageNotificationHandler;
-    private NotificationHandler<MakeVoiceCallSimulatorNotification, OutboundMessage, String> onMakeVoiceCallNotificationHandler;
-    private NotificationHandler<SendCustomerPaymentSimulatorNotification, OutboundMessage, String> onSendCustomerPaymentNotificationHandler;
-    private NotificationHandler<SendChannelPaymentSimulatorNotification, OutboundMessage, String> onSendChannelPaymentNotificationHandler;
-    private NotificationHandler<CheckoutPaymentSimulatorNotification, OutboundMessage, String> onCheckoutPaymentNotificationHandler;
+    private NotificationHandler<SendMessageSimulatorNotification, MessageBody, String> onSendMessageNotificationHandler;
+    private NotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody, String> onMakeVoiceCallNotificationHandler;
+    private NotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody, String> onSendCustomerPaymentNotificationHandler;
+    private NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody, String> onSendChannelPaymentNotificationHandler;
+    private NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody, String> onCheckoutPaymentNotificationHandler;
 
-    private final Function<byte[], SimulatorToServerCommandReply> replyDeserializer = (data) -> {
+    private final Function<byte[], SimulatorReply> replyDeserializer = (data) -> {
         try {
-            return SimulatorToServerCommandReply.newBuilder().mergeFrom(data).build();
+            SimulatorSocket.SimulatorToServerCommandReply reply = SimulatorSocket.SimulatorToServerCommandReply.newBuilder().mergeFrom(data).build();
+            SimulatorReply res = new SimulatorReply();
+            res.status = reply.getStatus();
+            res.description = reply.getDescription();
+            res.message = Utils.makeMessage(reply.getMessage());
+            return res;
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
             return null;
@@ -42,49 +46,118 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
     public Simulator(String apiKey, String orgId, String appId, ConnectionConfig connectionConfig) {
         super(new ClientConfig(apiKey, orgId, appId, true, connectionConfig));
 
-        registerGlobalNotificationHandler(new Function<ServerToSimulatorNotification, Mono<ServerToSimulatorNotificationReply>>() {
+        registerGlobalNotificationHandler((Function<SimulatorSocket.ServerToSimulatorNotification, Mono<SimulatorSocket.ServerToSimulatorNotificationReply>>) notif -> new Mono<SimulatorSocket.ServerToSimulatorNotificationReply>() {
             @Override
-            public Mono<ServerToSimulatorNotificationReply> apply(ServerToSimulatorNotification notif) {
-                return new Mono<ServerToSimulatorNotificationReply>() {
-                    @Override
-                    public void subscribe(CoreSubscriber<? super ServerToSimulatorNotificationReply> subscriber) {
+            public void subscribe(CoreSubscriber<? super SimulatorSocket.ServerToSimulatorNotificationReply> subscriber) {
 
-                        boolean isSendMessageNotification = notif.hasSendMessage();
-                        boolean isMakeVoiceCallNotification = notif.hasMakeVoiceCall();
-                        boolean isCheckoutPaymentNotification = notif.hasCheckoutPayment();
-                        boolean isSendChannelPaymentNotification = notif.hasSendChannelPayment();
-                        boolean isSendCustomerPaymentNotification = notif.hasSendCustomerPayment();
+                boolean isSendMessageNotification = notif.hasSendMessage();
+                boolean isMakeVoiceCallNotification = notif.hasMakeVoiceCall();
+                boolean isCheckoutPaymentNotification = notif.hasCheckoutPayment();
+                boolean isSendChannelPaymentNotification = notif.hasSendChannelPayment();
+                boolean isSendCustomerPaymentNotification = notif.hasSendCustomerPayment();
 
-                        NotificationCallback<OutboundMessage, String> callback = (message, data) -> {
-                            ServerToSimulatorNotificationReply reply = ServerToSimulatorNotificationReply
-                                    .newBuilder()
-                                    .build();
-                            subscriber.onNext(reply);
-                            subscriber.onComplete();
-                        };
-
-                        if (isSendMessageNotification && onSendMessageNotificationHandler != null) {
-                            onSendMessageNotificationHandler.handle(notif.getSendMessage(), null, null, callback);
-                        } else if (isMakeVoiceCallNotification && onMakeVoiceCallNotificationHandler != null) {
-                            onMakeVoiceCallNotificationHandler.handle(notif.getMakeVoiceCall(), null, null, callback);
-                        } else if (isSendCustomerPaymentNotification && onSendCustomerPaymentNotificationHandler != null) {
-                            onSendCustomerPaymentNotificationHandler.handle(notif.getSendCustomerPayment(), null, null, callback);
-                        } else if (isSendChannelPaymentNotification && onSendChannelPaymentNotificationHandler != null) {
-                            onSendChannelPaymentNotificationHandler.handle(notif.getSendChannelPayment(), null, null, callback);
-                        } else if (isCheckoutPaymentNotification && onCheckoutPaymentNotificationHandler != null){
-                            onCheckoutPaymentNotificationHandler.handle(notif.getCheckoutPayment(), null, null, callback);
-                        } else {
-                            callback.callback(null, null);
-                        }
-                    }
+                NotificationCallback<MessageBody, String> callback = (message, data) -> {
+                    SimulatorSocket.ServerToSimulatorNotificationReply reply = SimulatorSocket.ServerToSimulatorNotificationReply
+                            .newBuilder()
+                            .build();
+                    subscriber.onNext(reply);
+                    subscriber.onComplete();
                 };
+
+                if (isSendMessageNotification && onSendMessageNotificationHandler != null) {
+                    SendMessageSimulatorNotification payload = new SendMessageSimulatorNotification();
+                    SimulatorSocket.SendMessageSimulatorNotification msg = notif.getSendMessage();
+                    payload.orgId = msg.getOrgId();
+                    payload.customerId = msg.getCustomerId();
+                    payload.messageId = msg.getMessageId();
+                    payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+                    payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+                    payload.message = Utils.makeMessage(msg.getMessage());
+
+                    onSendMessageNotificationHandler.handle(payload, null, null, callback);
+
+                } else if (isMakeVoiceCallNotification && onMakeVoiceCallNotificationHandler != null) {
+                    MakeVoiceCallSimulatorNotification payload = new MakeVoiceCallSimulatorNotification();
+                    SimulatorSocket.MakeVoiceCallSimulatorNotification msg = notif.getMakeVoiceCall();
+                    payload.orgId = msg.getOrgId();
+                    payload.customerId = msg.getCustomerId();
+                    payload.sessionId = msg.getSessionId();
+                    payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+                    payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+
+                    onMakeVoiceCallNotificationHandler.handle(payload, null, null, callback);
+
+                } else if (isSendCustomerPaymentNotification && onSendCustomerPaymentNotificationHandler != null) {
+                    SendCustomerPaymentSimulatorNotification payload = new SendCustomerPaymentSimulatorNotification();
+                    SimulatorSocket.SendCustomerPaymentSimulatorNotification msg = notif.getSendCustomerPayment();
+                    payload.orgId = msg.getOrgId();
+                    payload.customerId = msg.getCustomerId();
+                    payload.appId = msg.getAppId();
+                    payload.transactionId = msg.getTransactionId();
+                    payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+                    payload.channelNumber = Utils.makePaymentChannel(msg.getChannelNumber());
+                    payload.value = new Cash(msg.getValue().getCurrencyCode(), msg.getValue().getAmount());
+
+                    if (msg.hasWallet()) {
+                        payload.wallet = new PaymentWalletCounterParty(msg.getWallet().getCustomerId(), msg.getWallet().getWalletId());
+                    }
+
+                    if (msg.hasPurse()) {
+                        payload.purse = new PaymentPurseCounterParty(msg.getPurse().getPurseId());
+                    }
+
+                    onSendCustomerPaymentNotificationHandler.handle(payload, null, null, callback);
+
+                } else if (isSendChannelPaymentNotification && onSendChannelPaymentNotificationHandler != null) {
+                    SendChannelPaymentSimulatorNotification payload = new SendChannelPaymentSimulatorNotification();
+                    SimulatorSocket.SendChannelPaymentSimulatorNotification msg = notif.getSendChannelPayment();
+                    payload.orgId = msg.getOrgId();
+                    payload.appId = msg.getAppId();
+                    payload.transactionId = msg.getTransactionId();
+                    payload.channelNumber = Utils.makePaymentChannel(msg.getChannelNumber());
+                    payload.account = msg.getAccount().getValue();
+                    payload.value = new Cash(msg.getValue().getCurrencyCode(), msg.getValue().getAmount());
+
+                    if (msg.hasWallet()) {
+                        payload.wallet = new PaymentWalletCounterParty(msg.getWallet().getCustomerId(), msg.getWallet().getWalletId());
+                    }
+
+                    if (msg.hasPurse()) {
+                        payload.purse = new PaymentPurseCounterParty(msg.getPurse().getPurseId());
+                    }
+
+                    onSendChannelPaymentNotificationHandler.handle(payload, null, null, callback);
+
+                } else if (isCheckoutPaymentNotification && onCheckoutPaymentNotificationHandler != null){
+
+                    CheckoutPaymentSimulatorNotification payload = new CheckoutPaymentSimulatorNotification();
+                    SimulatorSocket.CheckoutPaymentSimulatorNotification msg = notif.getCheckoutPayment();
+                    payload.orgId = msg.getOrgId();
+                    payload.appId = msg.getAppId();
+                    payload.transactionId = msg.getTransactionId();
+                    payload.channelNumber = Utils.makePaymentChannel(msg.getChannelNumber());
+                    payload.value = new Cash(msg.getValue().getCurrencyCode(), msg.getValue().getAmount());
+
+                    if (msg.hasWallet()) {
+                        payload.wallet = new PaymentWalletCounterParty(msg.getWallet().getCustomerId(), msg.getWallet().getWalletId());
+                    }
+
+                    if (msg.hasPurse()) {
+                        payload.purse = new PaymentPurseCounterParty(msg.getPurse().getPurseId());
+                    }
+
+                    onCheckoutPaymentNotificationHandler.handle(payload, null, null, callback);
+
+                } else {
+                    callback.callback(null, null);
+                }
             }
         });
     }
 
     @Override
     protected byte[] serializeSetupPayload(ClientConfig clientOpts) {
-        AppConnectionMetadata.Builder builder = AppConnectionMetadata.newBuilder()
+        AppSocket.AppConnectionMetadata.Builder builder = AppSocket.AppConnectionMetadata.newBuilder()
                 .setAppId(clientOpts.appId)
                 .setOrgId(clientOpts.orgId)
                 .setApiKey(StringValue.newBuilder().setValue(clientOpts.apiKey));
@@ -94,36 +167,36 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
     }
 
     @Override
-    protected byte[] serializeNotificationReply(ServerToSimulatorNotificationReply data) {
+    protected byte[] serializeNotificationReply(SimulatorSocket.ServerToSimulatorNotificationReply data) {
         return data.toByteArray();
     }
 
     @Override
-    protected ServerToSimulatorNotification deserializeNotification(byte[] data) throws RuntimeException {
+    protected SimulatorSocket.ServerToSimulatorNotification deserializeNotification(byte[] data) throws RuntimeException {
         try {
-            return ServerToSimulatorNotification.parseFrom(data);
+            return SimulatorSocket.ServerToSimulatorNotification.parseFrom(data);
         } catch (InvalidProtocolBufferException e) {
             throw new RuntimeException(e.getMessage());
         }
     }
 
-    public void setOnSendMessageNotificationHandler(NotificationHandler<SendMessageSimulatorNotification, OutboundMessage, String> onSendMessageNotificationHandler) {
+    public void setOnSendMessageNotificationHandler(NotificationHandler<SendMessageSimulatorNotification, MessageBody, String> onSendMessageNotificationHandler) {
         this.onSendMessageNotificationHandler = onSendMessageNotificationHandler;
     }
 
-    public void setOnCheckoutPaymentNotificationHandler(NotificationHandler<CheckoutPaymentSimulatorNotification, OutboundMessage, String> onCheckoutPaymentNotificationHandler) {
+    public void setOnCheckoutPaymentNotificationHandler(NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody, String> onCheckoutPaymentNotificationHandler) {
         this.onCheckoutPaymentNotificationHandler = onCheckoutPaymentNotificationHandler;
     }
 
-    public void setOnMakeVoiceCallNotificationHandler(NotificationHandler<MakeVoiceCallSimulatorNotification, OutboundMessage, String> onMakeVoiceCallNotificationHandler) {
+    public void setOnMakeVoiceCallNotificationHandler(NotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody, String> onMakeVoiceCallNotificationHandler) {
         this.onMakeVoiceCallNotificationHandler = onMakeVoiceCallNotificationHandler;
     }
 
-    public void setOnSendChannelPaymentNotificationHandler(NotificationHandler<SendChannelPaymentSimulatorNotification, OutboundMessage, String> onSendChannelPaymentNotificationHandler) {
+    public void setOnSendChannelPaymentNotificationHandler(NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody, String> onSendChannelPaymentNotificationHandler) {
         this.onSendChannelPaymentNotificationHandler = onSendChannelPaymentNotificationHandler;
     }
 
-    public void setOnSendCustomerPaymentNotificationHandler(NotificationHandler<SendCustomerPaymentSimulatorNotification, OutboundMessage, String> onSendCustomerPaymentNotificationHandler) {
+    public void setOnSendCustomerPaymentNotificationHandler(NotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody, String> onSendCustomerPaymentNotificationHandler) {
         this.onSendCustomerPaymentNotificationHandler = onSendCustomerPaymentNotificationHandler;
     }
 
@@ -135,15 +208,45 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
      * @param sessionId
      * @return
      */
-    public Mono<SimulatorToServerCommandReply> receiveMessage(String customerNumber, MessagingChannelNumber channelNumber, List<InboundMessageBody> parts, String sessionId) {
-        ReceiveMessageSimulatorCommand cmd = ReceiveMessageSimulatorCommand
+    public Mono<SimulatorReply> receiveMessage(String customerNumber, MessagingChannel channelNumber, List<SimulatorMessageBody> parts, String sessionId) {
+        SimulatorSocket.ReceiveMessageSimulatorCommand cmd = SimulatorSocket.ReceiveMessageSimulatorCommand
                 .newBuilder()
                 .setCustomerNumber(customerNumber)
-                .setChannelNumber(channelNumber)
-                .addAllParts(parts)
+                .setChannelNumber(MessagingModel.MessagingChannelNumber
+                        .newBuilder()
+                        .setNumber(channelNumber.number)
+                        .setChannelValue(channelNumber.channel.getValue())
+                        .build())
+                .addAllParts(parts.stream().map((item) -> {
+                    MessagingModel.InboundMessageBody.Builder result = MessagingModel.InboundMessageBody.newBuilder();
+                    if (item.text != null) {
+                        return result.setText(item.text).build();
+                    }
+                    if (item.media != null) {
+                        return result.setMedia(MessagingModel.MediaMessageBody
+                                .newBuilder()
+                                .setUrl(item.media.url)
+                                .setMedia(CommonModel.MediaType.forNumber(item.media.type.getValue()))
+                                .build())
+                                .build();
+                    }
+                    if (item.location != null) {
+                        return result.setText(item.text).build();
+                    }
+                    if (item.email != null) {
+                        return result.setText(item.text).build();
+                    }
+                    if (item.voice != null) {
+                        return result.setText(item.text).build();
+                    }
+                    if (item.ussd != null) {
+                        return result.setUssd(StringValue.of(item.ussd)).build();
+                    }
+                    return result.build();
+                }).collect(Collectors.toList()))
                 .setSessionId(StringValue.newBuilder().setValue(sessionId))
                 .build();
-        SimulatorToServerCommand req = SimulatorToServerCommand
+        SimulatorSocket.SimulatorToServerCommand req = SimulatorSocket.SimulatorToServerCommand
                 .newBuilder()
                 .setReceiveMessage(cmd)
                 .build();
@@ -159,16 +262,24 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
      * @param status
      * @return
      */
-    public Mono<SimulatorToServerCommandReply> receivePayment(String transactionId, PaymentChannelNumber channelNumber, String customerNumber, Cash value, PaymentStatus status) {
-        ReceivePaymentSimulatorCommand cmd = ReceivePaymentSimulatorCommand
+    public Mono<SimulatorReply> receivePayment(String transactionId, PaymentChannel channelNumber, String customerNumber, Cash value, PaymentStatus status) {
+        SimulatorSocket.ReceivePaymentSimulatorCommand cmd = SimulatorSocket.ReceivePaymentSimulatorCommand
                 .newBuilder()
-                .setValue(value)
-                .setStatus(status)
+                .setValue(CommonModel.Cash
+                        .newBuilder()
+                        .setAmount(value.amount)
+                        .setCurrencyCode(value.currencyCode)
+                        .build())
+                .setStatusValue(status.getValue())
                 .setTransactionId(transactionId)
-                .setChannelNumber(channelNumber)
+                .setChannelNumber(PaymentModel.PaymentChannelNumber
+                        .newBuilder()
+                        .setNumber(channelNumber.number)
+                        .setChannelValue(channelNumber.channel.getValue())
+                        .build())
                 .setCustomerNumber(customerNumber)
                 .build();
-        SimulatorToServerCommand req = SimulatorToServerCommand
+        SimulatorSocket.SimulatorToServerCommand req = SimulatorSocket.SimulatorToServerCommand
                 .newBuilder()
                 .setReceivePayment(cmd)
                 .build();
@@ -181,13 +292,13 @@ public final class Simulator extends Client<ServerToSimulatorNotification, Serve
      * @param status
      * @return
      */
-    public Mono<SimulatorToServerCommandReply> updatePaymentStatus(String transactionId, PaymentStatus status) {
-        UpdatePaymentStatusSimulatorCommand cmd = UpdatePaymentStatusSimulatorCommand
+    public Mono<SimulatorReply> updatePaymentStatus(String transactionId, PaymentStatus status) {
+        SimulatorSocket.UpdatePaymentStatusSimulatorCommand cmd = SimulatorSocket.UpdatePaymentStatusSimulatorCommand
                 .newBuilder()
                 .setTransactionId(transactionId)
-                .setStatus(status)
+                .setStatusValue(status.getValue())
                 .build();
-        SimulatorToServerCommand req = SimulatorToServerCommand
+        SimulatorSocket.SimulatorToServerCommand req = SimulatorSocket.SimulatorToServerCommand
                 .newBuilder()
                 .setUpdatePaymentStatus(cmd)
                 .build();
