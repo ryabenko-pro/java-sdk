@@ -95,8 +95,8 @@ class Utils {
 
         PaymentModel.PaymentCounterParty.Builder result = PaymentModel.PaymentCounterParty.newBuilder();
 
-        if (counterParty instanceof PaymentCustomerCounterParty) {
-            PaymentCustomerCounterParty party = (PaymentCustomerCounterParty) counterParty;
+        if (counterParty.customer != null) {
+            PaymentCustomerCounterParty party = counterParty.customer;
             result.setCustomer(PaymentModel.PaymentCustomerCounterParty
                     .newBuilder()
                     .setCustomerNumber(CommonModel.CustomerNumber
@@ -110,14 +110,14 @@ class Utils {
                             .setChannelValue(party.channelNumber.channel.getValue())
                             .build())
                     .build());
-        } else if (counterParty instanceof PaymentPurseCounterParty) {
-            PaymentPurseCounterParty party = (PaymentPurseCounterParty) counterParty;
+        } else if (counterParty.purse != null) {
+            PaymentPurseCounterParty party = counterParty.purse;
             result.setPurse(PaymentModel.PaymentPurseCounterParty
                     .newBuilder()
                     .setPurseId(party.purseId)
                     .build());
-        } else if (counterParty instanceof PaymentChannelCounterParty) {
-            PaymentChannelCounterParty party = (PaymentChannelCounterParty) counterParty;
+        } else if (counterParty.channel != null) {
+            PaymentChannelCounterParty party = counterParty.channel;
             result.setChannel(PaymentModel.PaymentChannelCounterParty
                     .newBuilder()
                     .setAccount(StringValue.of(party.account))
@@ -128,8 +128,8 @@ class Utils {
                         .setChannelValue(party.channelNumber.channel.getValue())
                         .build())
                     .build());
-        } else if (counterParty instanceof PaymentWalletCounterParty) {
-            PaymentWalletCounterParty party = (PaymentWalletCounterParty) counterParty;
+        } else if (counterParty.wallet != null) {
+            PaymentWalletCounterParty party = counterParty.wallet;
             result.setWallet(PaymentModel.PaymentWalletCounterParty
                     .newBuilder()
                     .setCustomerId(party.customerId)

@@ -1,6 +1,6 @@
 package com.elarian.model;
 
-public class PaymentWalletCounterParty extends PaymentCounterParty {
+public class PaymentWalletCounterParty {
     public String customerId;
     public String walletId;
 }

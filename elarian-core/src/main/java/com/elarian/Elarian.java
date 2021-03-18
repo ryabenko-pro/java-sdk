@@ -321,7 +321,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
      * @param value
      * @return
      */
-    public Mono<InitiatePaymentReply> initiatePayment(PaymentCounterParty debitParty, PaymentCounterParty creditParty, Cash value) {
+    private Mono<InitiatePaymentReply> initiatePayment(PaymentCounterParty debitParty, PaymentCounterParty creditParty, Cash value) {
         AppSocket.InitiatePaymentCommand cmd = AppSocket.InitiatePaymentCommand
                 .newBuilder()
                 .setDebitParty(Utils.buildPaymentCounterParty(debitParty))
@@ -353,6 +353,74 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                 }, subscriber::onError);
             }
         };
+    }
+
+    // From customer
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentCustomerCounterParty debitParty, PaymentCustomerCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentCustomerCounterParty debitParty, PaymentPurseCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentCustomerCounterParty debitParty, PaymentWalletCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentCustomerCounterParty debitParty, PaymentChannelCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    // From purse
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentPurseCounterParty debitParty, PaymentCustomerCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentPurseCounterParty debitParty, PaymentPurseCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentPurseCounterParty debitParty, PaymentWalletCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentPurseCounterParty debitParty, PaymentChannelCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    // From Wallet
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentWalletCounterParty debitParty, PaymentCustomerCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentWalletCounterParty debitParty, PaymentPurseCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentWalletCounterParty debitParty, PaymentWalletCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentWalletCounterParty debitParty, PaymentChannelCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    // From Channel
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentChannelCounterParty debitParty, PaymentCustomerCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentChannelCounterParty debitParty, PaymentPurseCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentChannelCounterParty debitParty, PaymentWalletCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
+    }
+
+    public Mono<InitiatePaymentReply> initiatePayment(PaymentChannelCounterParty debitParty, PaymentChannelCounterParty creditParty, Cash value) {
+        return initiatePayment(new PaymentCounterParty(debitParty), new PaymentCounterParty(creditParty), value);
     }
 
 
@@ -435,7 +503,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             MessagingConsentUpdateNotification payload = Utils.fillInCustomerNotification(notif, new MessagingConsentUpdateNotification());
             AppSocket.MessagingConsentUpdateNotification msg = notif.getMessagingConsentUpdate();
             payload.update = ConsentAction.valueOf(msg.getUpdateValue());
-            payload.status = MessagingConsentUpdateNotification.Status.valueOf(msg.getStatusValue());
+            payload.status = MessagingConsentUpdateStatus.valueOf(msg.getStatusValue());
             payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
             payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
