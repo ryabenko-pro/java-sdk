@@ -7,5 +7,9 @@ public final class CustomerState {
     public MessagingState messagingState;
     public PaymentState paymentState;
     public ActivityState activityState;
+
+    public CustomerState(String customerId) {
+        this.customerId = customerId;
+    }
 }
 

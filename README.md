@@ -73,7 +73,7 @@ app.connect(success -> {
 });
 ```
 
-See [examples](examples/) for more usage examples.
+See [examples](elarian-examples/) for more usage examples.
 
 ## Development
 

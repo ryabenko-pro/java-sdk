@@ -9,9 +9,9 @@ Set<String> examples = new HashSet<String>()
 examples << 'java'
 examples << 'kotlin'
 examples << 'scala'
-examples << "mobile"
+examples << "android"
 
 examples.each { example ->
     include example
-    project(":${example}").projectDir = file("examples/${example}")
+    project(":${example}").projectDir = file("elarian-examples/${example}")
 }

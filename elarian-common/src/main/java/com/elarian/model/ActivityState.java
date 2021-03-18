@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class ActivityState {
-    List<ActivityState.Session> sessions = new ArrayList<>();
+    List<Session> sessions = new ArrayList<>();
     List<CustomerNumber> customerNumbers = new ArrayList<>();
 
     public final class Session {
