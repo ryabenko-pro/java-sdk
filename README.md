@@ -24,7 +24,7 @@ You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/java
 <dependency>
   <groupId>com.elarian</groupId>
   <artifactId>jvm</artifactId>
-  <version>0.1.4</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 or sbt:
