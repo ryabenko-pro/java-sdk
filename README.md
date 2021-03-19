@@ -61,15 +61,38 @@ String apiKey = "test_api_key";
 
 Elarian app = new Elarian(apiKey, orgId, appId);
 
-app.connect(success -> {
-    log.info("Connected!");
-    app.sendMessageByTag(tag, channel, message)
-        .subscribe(
-            res -> System.out.println(res.toString()),
-            err -> err.printStackTrace()
-        );
-}, throwable -> {
-    log.warning("Failed to connect: " + throwable.getMessage());
+app.connect(new ConnectionListener() {
+    @Override
+    public void onPending() {
+        log.info("Pending...");
+    }
+
+    @Override
+    public void onConnecting() {
+        log.info("Connecting...");
+    }
+
+    @Override
+    public void onClosed() {
+        log.info("Connection Closed");
+    }
+
+    @Override
+    public void onConnected() {
+        log.info("Connected!");
+        Tag tag = new Tag("some-key", "some-value");
+        MessagingChannel channel = new MessagingChannel("2020", MessagingChannel.Channel.SMS);
+        Message message = new Message(new MessageBody("This is a test"));
+        app.sendMessageByTag(tag, channel, message)
+                .subscribe(
+                        res -> log.info(res.description),
+                        err -> err.printStackTrace()
+                );
+    }
+    @Override
+    public void onError(Throwable throwable) {
+        log.warning("Failed to connect: " + throwable.getMessage());
+    }
 });
 ```
 

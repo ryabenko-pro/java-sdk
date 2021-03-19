@@ -1,5 +1,7 @@
 package com.elarian.model;
 
+import reactor.util.annotation.NonNull;
+
 public final class ClientConfig {
     public final String appId;
     public final String orgId;
@@ -8,7 +10,7 @@ public final class ClientConfig {
     public ConnectionConfig connectionConfig = new ConnectionConfig();
 
 
-    public ClientConfig(String apiKey, String orgId, String appId, boolean allowNotifications, ConnectionConfig connectionConfig) {
+    public ClientConfig(@NonNull String apiKey, @NonNull String orgId, @NonNull String appId, boolean allowNotifications, ConnectionConfig connectionConfig) {
         this.orgId = orgId;
         this.appId = appId;
         this.apiKey = apiKey;
@@ -16,7 +18,7 @@ public final class ClientConfig {
         this.connectionConfig = connectionConfig;
     }
 
-    public ClientConfig(String apiKey, String orgId, String appId) {
+    public ClientConfig(@NonNull String apiKey, @NonNull String orgId, @NonNull String appId) {
         this.orgId = orgId;
         this.appId = appId;
         this.apiKey = apiKey;

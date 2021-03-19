@@ -1,7 +1,6 @@
 package com.elarian;
 
 import com.elarian.model.ClientConfig;
-import com.elarian.model.NotificationHandler;
 
 import java.time.Duration;
 import java.util.function.Consumer;
@@ -18,7 +17,9 @@ import io.rsocket.transport.netty.client.TcpClientTransport;
 import io.rsocket.util.ByteBufPayload;
 import reactor.core.CoreSubscriber;
 import reactor.core.publisher.Mono;
+import reactor.netty.Connection;
 import reactor.netty.tcp.TcpClient;
+import reactor.netty.tcp.TcpClientConfig;
 import reactor.util.retry.Retry;
 
 abstract class Client<B, C> {
@@ -26,8 +27,8 @@ abstract class Client<B, C> {
     private final ClientConfig clientOpts;
 
     protected RSocket socket;
-    private final TcpClientTransport transport;
-    private final Resume resume;
+    private TcpClientTransport transport;
+    private Resume resume;
     private Function<B, Mono<C>> globalNotificationHandler;
     private final static boolean debug = System.getenv().containsKey("DEBUG");
 
@@ -68,22 +69,6 @@ abstract class Client<B, C> {
     protected Client(ClientConfig clientOpts) {
         this.clientOpts = clientOpts;
 
-        transport = TcpClientTransport.create(
-                TcpClient
-                        .create()
-                        .secure()
-                        .host("tcp.elarian.dev")
-                        .port(8082)
-                );
-
-        resume = new Resume()
-                .sessionDuration(Duration.ofMillis(clientOpts.connectionConfig.lifetime))
-                .cleanupStoreOnKeepAlive()
-                .retry(
-                        Retry.backoff(Long.MAX_VALUE, Duration.ofSeconds(2))
-                        .doBeforeRetry(s -> log("Disconnected. Retrying..."))
-                );
-
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             if (isConnected()){
                 disconnect("Application shutting down!");
@@ -91,26 +76,46 @@ abstract class Client<B, C> {
         }));
     }
 
-    /**
-     * Connect to the elarian server
-     * @throws RuntimeException
-     */
-    public void connect() throws RuntimeException {
-        this.connect(null, null);
-    }
 
     /**
      * Connect to the elarian server
-     * @param onConnectionSuccess
-     * @param onConnectionError
+     * @param listener ConnectionListener
      * @throws RuntimeException
      */
-    public void connect(Consumer<Boolean> onConnectionSuccess, Consumer<Throwable> onConnectionError) throws RuntimeException {
+    public void connect(ConnectionListener listener) throws RuntimeException {
         if (this.isConnected()) throw new RuntimeException("Client is already connected");
+        if (listener == null) throw new RuntimeException("listener is required");
 
         byte[] payload = serializeSetupPayload(clientOpts);
 
-        log("Connecting...");
+        transport = TcpClientTransport.create(
+                TcpClient
+                    .create()
+                    .secure()
+                    .host("tcp.elarian.dev")
+                    .port(8082)
+                    .doOnConnect(tcpClientConfig -> {
+                        log("Connecting");
+                        listener.onConnecting();
+
+                    })
+                    .doOnConnected(connection -> {
+                        log("Connected");
+                        listener.onConnected();
+                    })
+                    .doOnDisconnected(connection -> {
+                        log("Disconnected");
+                        listener.onClosed();
+                    })
+        );
+
+        resume = new Resume()
+                .sessionDuration(Duration.ofMillis(clientOpts.connectionConfig.lifetime))
+                .cleanupStoreOnKeepAlive()
+                .retry(
+                        Retry.backoff(Long.MAX_VALUE, Duration.ofSeconds(2))
+                                .doBeforeRetry(s -> log("Disconnected. Retrying..."))
+                );
         RSocketConnector connector = RSocketConnector
                 .create()
                 .metadataMimeType("application/octet-stream")
@@ -122,29 +127,25 @@ abstract class Client<B, C> {
         if (this.clientOpts.connectionConfig.isResumable) {
             connector.resume(resume);
         }
-        socket = connector
-                .connect(transport)
-                .block(Duration.ofSeconds(30));
-        log("Connected");
-        socket.onClose()
-                .subscribe(
-                        (signal) -> {
-                            log("Connection SIGNAL");
-                        },
-                        (err) -> {
-                            log("Connection ERROR: " + err.getMessage());
-                            this.disconnect(err.getMessage());
-                            if (onConnectionError != null) {
-                                onConnectionError.accept(err);
+
+        listener.onPending();
+        connector.connect(transport).subscribe(soc -> {
+            socket = soc;
+            socket.onClose()
+                    .subscribe(
+                            (signal) -> {
+                                log("Connection SIGNAL");
+                            },
+                            (err) -> {
+                                log("Connection ERROR: " + err.getMessage());
+                                this.disconnect(err.getMessage());
+                                listener.onError(err);
+                            },
+                            () -> {
+                                log("Connection CLOSED");
                             }
-                        },
-                        () -> {
-                            log("Connection CLOSED");
-                        }
-                );
-        if (onConnectionSuccess != null) {
-            onConnectionSuccess.accept(true);
-        }
+                    );
+            }, listener::onError);
     }
 
     /**

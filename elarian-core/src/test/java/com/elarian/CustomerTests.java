@@ -1,35 +1,55 @@
 package com.elarian;
 
+import static org.junit.jupiter.api.Assertions.*;
 import com.elarian.model.CustomerNumber;
+import com.elarian.model.CustomerState;
+import com.elarian.model.CustomerStateUpdateReply;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+
+import static org.awaitility.Awaitility.await;
+
 public class CustomerTests {
 
-    private final Elarian client = new Elarian(Fixtures.API_KEY, Fixtures.ORG_ID, Fixtures.APP_ID);
-    private final Simulator simulator = new Simulator(Fixtures.API_KEY, Fixtures.ORG_ID, Fixtures.APP_ID);
-    private Customer customer;
+    private static final Elarian client = new Elarian(Fixtures.API_KEY, Fixtures.ORG_ID, Fixtures.APP_ID);
+    private static final Simulator simulator = new Simulator(Fixtures.API_KEY, Fixtures.ORG_ID, Fixtures.APP_ID);
+    private static Customer customer;
 
     @BeforeAll
-    void connect() {
-        client.connect();
-        simulator.connect();
-        customer = new Customer(client, new CustomerNumber("+254718769882", CustomerNumber.Provider.CELLULAR));
+    static void connect() {
+        client.connect(Fixtures.connectionListener);
+        simulator.connect(Fixtures.connectionListener);
+        customer = new Customer(client, new CustomerNumber("+254718769000", CustomerNumber.Provider.CELLULAR));
+        await().until(client::isConnected);
+        await().until(simulator::isConnected);
     }
 
     @AfterAll
-    void disconnect() {
+    static void disconnect() {
         simulator.disconnect();
         client.disconnect();
+        await().until(() -> !client.isConnected());
+        await().until(() -> !simulator.isConnected());
     }
 
     @Test
-    void getState() {}
+    void getState() {
+        CustomerState state = customer.getState().block(Duration.ofSeconds(5));
+        assertNotNull(state);
+        assertNotNull(state.customerId);
+    }
 
     @Test
-    void adoptState() {}
+    void adoptState() {
+        CustomerStateUpdateReply reply = customer.adoptState(
+                new Customer(client, new CustomerNumber("+2547187690001", CustomerNumber.Provider.CELLULAR)))
+                .block(Duration.ofSeconds(5));
+        assertNotNull(reply);
+    }
 
     @Test
     void sendMessage() {}
@@ -75,6 +95,5 @@ public class CustomerTests {
 
     @Test
     void cancelReminder() {}
-
 
 }

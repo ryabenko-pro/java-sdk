@@ -1,6 +1,7 @@
 package com.elarian.example.java;
 
 
+import com.elarian.ConnectionListener;
 import com.elarian.Elarian;
 import com.elarian.model.CustomerNumber;
 import com.elarian.model.Message;
@@ -28,18 +29,38 @@ public class App {
 
         Elarian app = new Elarian(apiKey, orgId, appId);
 
-        app.connect(success -> {
-            log.info("Connected!");
-            Tag tag = new Tag("some-key", "some-value");
-            MessagingChannel channel = new MessagingChannel("2020", MessagingChannel.Channel.SMS);
-            Message message = new Message(new MessageBody("This is a test"));
-            app.sendMessageByTag(tag, channel, message)
-                .subscribe(
-                        res -> log.info(res.description),
-                        err -> err.printStackTrace()
-                );
-        }, throwable -> {
-            log.warning("Failed to connect: " + throwable.getMessage());
+        app.connect(new ConnectionListener() {
+            @Override
+            public void onPending() {
+                log.warning("Pending...");
+            }
+
+            @Override
+            public void onConnecting() {
+                log.warning("Connecting...");
+            }
+
+            @Override
+            public void onClosed() {
+                log.warning("Connection Closed");
+            }
+
+            @Override
+            public void onConnected() {
+                log.info("Connected!");
+                Tag tag = new Tag("some-key", "some-value");
+                MessagingChannel channel = new MessagingChannel("2020", MessagingChannel.Channel.SMS);
+                Message message = new Message(new MessageBody("This is a test"));
+                app.sendMessageByTag(tag, channel, message)
+                        .subscribe(
+                                res -> log.info(res.description),
+                                err -> err.printStackTrace()
+                        );
+            }
+            @Override
+            public void onError(Throwable throwable) {
+                log.warning("Failed to connect: " + throwable.getMessage());
+            }
         });
 
         Thread t = new Thread(new Runnable() {

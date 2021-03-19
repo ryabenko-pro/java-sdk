@@ -13,4 +13,31 @@ public class Fixtures {
     public static final String MESSENNGER_NUMBER = System.getenv("MESSENNGER_NUMBER");
     public static final String MPESA_PAYBILL = System.getenv("MPESA_PAYBILL");
     public static final String WHATSAPP_NUMBER = System.getenv("WHATSAPP_NUMBER");
+
+    public static final ConnectionListener connectionListener = new ConnectionListener() {
+        @Override
+        public void onPending() {
+
+        }
+
+        @Override
+        public void onConnecting() {
+
+        }
+
+        @Override
+        public void onClosed() {
+
+        }
+
+        @Override
+        public void onConnected() {
+
+        }
+
+        @Override
+        public void onError(Throwable throwable) {
+            throw new Error(throwable);
+        }
+    };
 }
