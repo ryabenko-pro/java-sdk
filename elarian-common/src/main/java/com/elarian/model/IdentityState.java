@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public final class IdentityState {
-    List<Tag> tags = new ArrayList<>();
-    Map<String, String> metadata = new HashMap<>();
-    List<SecondaryId> secondaryIds = new ArrayList<>();
+    public List<Tag> tags = new ArrayList<>();
+    public Map<String, DataMapValue> metadata = new HashMap<>();
+    public List<SecondaryId> secondaryIds = new ArrayList<>();
 }

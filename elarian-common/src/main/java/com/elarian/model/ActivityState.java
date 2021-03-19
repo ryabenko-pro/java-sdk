@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class ActivityState {
-    List<Session> sessions = new ArrayList<>();
-    List<CustomerNumber> customerNumbers = new ArrayList<>();
+    public List<Session> sessions = new ArrayList<>();
+    public List<CustomerNumber> customerNumbers = new ArrayList<>();
 
-    public final class Session {
+    public static final class Session {
         public CustomerNumber customerNumber;
         public ActivityChannel channelNumber;
         public String sessionId;

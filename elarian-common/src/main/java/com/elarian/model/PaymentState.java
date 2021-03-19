@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.Map;
 
 public final class PaymentState {
-    List<CustomerNumber> customerNumbers = new ArrayList<>();
-    List<PaymentChannel> paymentChannels = new ArrayList<>();
-    List<PaymentTransaction> transactionLog = new ArrayList<>();
-    List<PaymentTransaction> pendingTransactions = new ArrayList<>();
-    Map<String, PaymentBalance> wallets = new HashMap<>();
+    public List<CustomerNumber> customerNumbers = new ArrayList<>();
+    public List<PaymentChannel> paymentChannels = new ArrayList<>();
+    public List<PaymentTransaction> transactionLog = new ArrayList<>();
+    public List<PaymentTransaction> pendingTransactions = new ArrayList<>();
+    public Map<String, PaymentBalance> wallets = new HashMap<>();
 
 
-    public final class PaymentTransaction {
+    public static final class PaymentTransaction {
         public String transactionId;
         public String appId;
         public PaymentCounterParty debitParty;
@@ -24,17 +24,23 @@ public final class PaymentState {
         public long updatedAt;
     }
 
-    public final class PaymentBalance {
+    public static final class PaymentBalance {
         public String currencyCode;
         public Cash available;
         public Cash actual;
-        Map<String, PendingPaymentTransaction> pending = new HashMap<>();
-        long sequenceNr;
+        public long sequenceNr;
+        public Map<String, PendingPaymentTransaction> pending = new HashMap<>();
     }
 
-    public final class PendingPaymentTransaction {
+    public static final class PendingPaymentTransaction {
         public long createdAt;
         public Cash value;
         public Cash converted;
+
+        public PendingPaymentTransaction(long createdAt, Cash value, Cash converted) {
+            this.createdAt = createdAt;
+            this.value = value;
+            this.converted = converted;
+        }
     }
 }

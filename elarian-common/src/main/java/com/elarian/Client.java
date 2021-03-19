@@ -23,7 +23,7 @@ import reactor.util.retry.Retry;
 
 abstract class Client<B, C> {
 
-    protected final ClientConfig clientOpts;
+    private final ClientConfig clientOpts;
 
     protected RSocket socket;
     private final TcpClientTransport transport;

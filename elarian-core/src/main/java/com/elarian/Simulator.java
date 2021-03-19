@@ -1,6 +1,5 @@
 package com.elarian;
 
-
 import com.elarian.model.*;
 import com.elarian.hera.proto.AppSocket;
 import com.elarian.hera.proto.CommonModel;
@@ -19,12 +18,6 @@ import reactor.core.publisher.Mono;
 
 public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNotification, SimulatorSocket.ServerToSimulatorNotificationReply> {
 
-    private NotificationHandler<SendMessageSimulatorNotification, MessageBody, String> onSendMessageNotificationHandler;
-    private NotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody, String> onMakeVoiceCallNotificationHandler;
-    private NotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody, String> onSendCustomerPaymentNotificationHandler;
-    private NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody, String> onSendChannelPaymentNotificationHandler;
-    private NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody, String> onCheckoutPaymentNotificationHandler;
-
     private final Function<byte[], SimulatorReply> replyDeserializer = (data) -> {
         try {
             SimulatorSocket.SimulatorToServerCommandReply reply = SimulatorSocket.SimulatorToServerCommandReply.newBuilder().mergeFrom(data).build();
@@ -38,6 +31,11 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
             return null;
         }
     };
+    private NotificationHandler<SendMessageSimulatorNotification, MessageBody> onSendMessageNotificationHandler;
+    private NotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody> onMakeVoiceCallNotificationHandler;
+    private NotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody> onSendCustomerPaymentNotificationHandler;
+    private NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody> onSendChannelPaymentNotificationHandler;
+    private NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody> onCheckoutPaymentNotificationHandler;
 
     public Simulator(String apiKey, String orgId, String appId) {
         this(apiKey, orgId, appId, new ConnectionConfig());
@@ -56,7 +54,7 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                 boolean isSendChannelPaymentNotification = notif.hasSendChannelPayment();
                 boolean isSendCustomerPaymentNotification = notif.hasSendCustomerPayment();
 
-                NotificationCallback<MessageBody, String> callback = (message, data) -> {
+                NotificationCallback<MessageBody> callback = (message, data) -> {
                     SimulatorSocket.ServerToSimulatorNotificationReply reply = SimulatorSocket.ServerToSimulatorNotificationReply
                             .newBuilder()
                             .build();
@@ -128,7 +126,7 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
 
                     onSendChannelPaymentNotificationHandler.handle(payload, null, null, callback);
 
-                } else if (isCheckoutPaymentNotification && onCheckoutPaymentNotificationHandler != null){
+                } else if (isCheckoutPaymentNotification && onCheckoutPaymentNotificationHandler != null) {
 
                     CheckoutPaymentSimulatorNotification payload = new CheckoutPaymentSimulatorNotification();
                     SimulatorSocket.CheckoutPaymentSimulatorNotification msg = notif.getCheckoutPayment();
@@ -180,28 +178,29 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
         }
     }
 
-    public void setOnSendMessageNotificationHandler(NotificationHandler<SendMessageSimulatorNotification, MessageBody, String> onSendMessageNotificationHandler) {
+    public void setOnSendMessageNotificationHandler(NotificationHandler<SendMessageSimulatorNotification, MessageBody> onSendMessageNotificationHandler) {
         this.onSendMessageNotificationHandler = onSendMessageNotificationHandler;
     }
 
-    public void setOnCheckoutPaymentNotificationHandler(NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody, String> onCheckoutPaymentNotificationHandler) {
+    public void setOnCheckoutPaymentNotificationHandler(NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody> onCheckoutPaymentNotificationHandler) {
         this.onCheckoutPaymentNotificationHandler = onCheckoutPaymentNotificationHandler;
     }
 
-    public void setOnMakeVoiceCallNotificationHandler(NotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody, String> onMakeVoiceCallNotificationHandler) {
+    public void setOnMakeVoiceCallNotificationHandler(NotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody> onMakeVoiceCallNotificationHandler) {
         this.onMakeVoiceCallNotificationHandler = onMakeVoiceCallNotificationHandler;
     }
 
-    public void setOnSendChannelPaymentNotificationHandler(NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody, String> onSendChannelPaymentNotificationHandler) {
+    public void setOnSendChannelPaymentNotificationHandler(NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody> onSendChannelPaymentNotificationHandler) {
         this.onSendChannelPaymentNotificationHandler = onSendChannelPaymentNotificationHandler;
     }
 
-    public void setOnSendCustomerPaymentNotificationHandler(NotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody, String> onSendCustomerPaymentNotificationHandler) {
+    public void setOnSendCustomerPaymentNotificationHandler(NotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody> onSendCustomerPaymentNotificationHandler) {
         this.onSendCustomerPaymentNotificationHandler = onSendCustomerPaymentNotificationHandler;
     }
 
     /**
      * Receive a message
+     *
      * @param customerNumber
      * @param channelNumber
      * @param parts
@@ -255,6 +254,7 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
 
     /**
      * Receive payment
+     *
      * @param transactionId
      * @param channelNumber
      * @param customerNumber
@@ -288,6 +288,7 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
 
     /**
      * Update payment status
+     *
      * @param transactionId
      * @param status
      * @return
