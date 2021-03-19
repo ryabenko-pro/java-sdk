@@ -105,3 +105,8 @@ See [SDK Spec](https://github.com/ElarianLtd/sdk-spec) for reference.
 ## Issues
 
 If you find a bug, please file an issue on [our issue tracker on GitHub](https://github.com/ElarianLtd/kotlin-sdk/issues).
+
+## Known Issues
+
+- [ ] Android module not fully implemented
+- [ ] Test cases not fully implemented
