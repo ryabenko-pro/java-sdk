@@ -38,8 +38,8 @@ configurations.embed.transitive = true
 
 dependencies {
     api "com.google.protobuf:protobuf-javalite:$protobufVersion"
-    api 'io.rsocket:rsocket-core:1.0.4'
-    api 'io.rsocket:rsocket-transport-netty:1.0.4'
+    api 'io.rsocket:rsocket-core:1.1.0'
+    api 'io.rsocket:rsocket-transport-netty:1.1.0'
 }
 
 
@@ -50,6 +50,7 @@ task sourcesJar(type: Jar) {
 
 task javadoc(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
+    failOnError = false
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
 

@@ -37,11 +37,18 @@ jar {
     }
 }
 
-javadoc {
-    source = sourceSets.main.allJava
-    classpath = configurations.compile
+def exportedProjects = [
+    ":elarian-common",
+    ":elarian-core",
+]
+
+task javadoc(overwrite: true, type: Javadoc) {
+    destinationDir = new File("${project.rootDir}/docs")
+    source exportedProjects.collect { project(it).sourceSets.main.allJava }
+    classpath = files(exportedProjects.collect { project(it).sourceSets.main.compileClasspath })
+    title = "Elarian Java SDK"
     options {
-        links "http://docs.oracle.com/javase/7/docs/api/"
+        links "http://docs.oracle.com/javase/8/docs/api/"
     }
 }
 

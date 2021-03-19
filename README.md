@@ -7,7 +7,7 @@
 >
 
 ## Documentation
-Take a look at the [API docs here](https://docs.elarian.com).
+Take a look at the [API docs here](https://docs.elarian.com). For detailed info on this SDK, see the [reference](https://elarianltd.github.io/java-sdk/).
 
 ## Install
 
