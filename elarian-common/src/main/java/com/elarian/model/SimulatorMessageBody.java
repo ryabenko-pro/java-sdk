@@ -7,5 +7,43 @@ public final class SimulatorMessageBody {
     public Email email = null;
     public VoiceCallInput voice = null;
     public String ussd = null;
+
+    enum StringType {
+        TEXT,
+        USSD
+    }
+
+    public SimulatorMessageBody() {}
+
+    public SimulatorMessageBody(String entry, SimulatorMessageBody.StringType type) {
+        switch (type) {
+            case USSD:
+                this.ussd = entry;
+                break;
+            case TEXT:
+                this.text = entry;
+                break;
+        }
+    }
+
+    public SimulatorMessageBody(String text) {
+        this(text, StringType.TEXT);
+    }
+
+    public SimulatorMessageBody(Media media) {
+        this.media = media;
+    }
+
+    public SimulatorMessageBody(Location location) {
+        this.location = location;
+    }
+
+    public SimulatorMessageBody(Email email) {
+        this.email = email;
+    }
+
+    public SimulatorMessageBody(VoiceCallInput voice) {
+        this.voice = voice;
+    }
 }
 

@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -88,13 +88,13 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -143,6 +143,29 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<section role="region">
+<ul class="blockList">
+<li class="blockList"><a id="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Field</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="model/CustomerNumber.html" title="class in com.elarian.model">CustomerNumber</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#customerNumber">customerNumber</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+</section>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <section role="region">
 <ul class="blockList">
@@ -193,7 +216,7 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#adoptState(com.elarian.Customer)">adoptState</a></span>&#8203;(<a href="Customer.html" title="class in com.elarian">Customer</a>&nbsp;otherCustomer)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#adoptState(com.elarian.ICustomer)">adoptState</a></span>&#8203;(<a href="ICustomer.html" title="interface in com.elarian">ICustomer</a>&nbsp;otherCustomer)</code></th>
 <td class="colLast">
 <div class="block">Adopt another customer's state</div>
 </td>
@@ -232,20 +255,30 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;java.lang.String&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCustomerId()">getCustomerId</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerNumber.html" title="class in com.elarian.model">CustomerNumber</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCustomerNumber()">getCustomerNumber</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerState.html" title="class in com.elarian.model">CustomerState</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getState()">getState</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Fetch the customer state</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#leaseAppData()">leaseAppData</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Lease app data</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/MessageReply.html" title="class in com.elarian.model">MessageReply</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#replyToMessage(java.lang.String,com.elarian.model.Message)">replyToMessage</a></span>&#8203;(java.lang.String&nbsp;messageId,
               <a href="model/Message.html" title="class in com.elarian.model">Message</a>&nbsp;message)</code></th>
@@ -253,7 +286,7 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <div class="block">Reply to a message</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/MessageReply.html" title="class in com.elarian.model">MessageReply</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sendMessage(com.elarian.model.MessagingChannel,com.elarian.model.Message)">sendMessage</a></span>&#8203;(<a href="model/MessagingChannel.html" title="class in com.elarian.model">MessagingChannel</a>&nbsp;channel,
            <a href="model/Message.html" title="class in com.elarian.model">Message</a>&nbsp;message)</code></th>
@@ -261,7 +294,7 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <div class="block">Send a message</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateActivity(com.elarian.model.ActivityChannel,com.elarian.model.Activity)">updateActivity</a></span>&#8203;(<a href="model/ActivityChannel.html" title="class in com.elarian.model">ActivityChannel</a>&nbsp;channel,
               <a href="model/Activity.html" title="class in com.elarian.model">Activity</a>&nbsp;activity)</code></th>
@@ -269,34 +302,36 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <div class="block">Update customer activity</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateAppData(com.elarian.model.DataMapValue)">updateAppData</a></span>&#8203;(<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&nbsp;data)</code></th>
 <td class="colLast">
 <div class="block">Update customer app data</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/ConsentUpdateReply.html" title="class in com.elarian.model">ConsentUpdateReply</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateMessagingConsent(com.elarian.model.MessagingChannel,com.elarian.model.ConsentAction)">updateMessagingConsent</a></span>&#8203;(<a href="model/MessagingChannel.html" title="class in com.elarian.model">MessagingChannel</a>&nbsp;channel,
                       <a href="model/ConsentAction.html" title="enum in com.elarian.model">ConsentAction</a>&nbsp;action)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Update messaging consent for given channel</div>
+</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateMetadata(java.util.Map)">updateMetadata</a></span>&#8203;(java.util.Map&lt;java.lang.String,&#8203;<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&gt;&nbsp;metadata)</code></th>
 <td class="colLast">
 <div class="block">Update customer metadata</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateSecondaryIds(java.util.List)">updateSecondaryIds</a></span>&#8203;(java.util.List&lt;<a href="model/SecondaryId.html" title="class in com.elarian.model">SecondaryId</a>&gt;&nbsp;secondaryIds)</code></th>
 <td class="colLast">
 <div class="block">Update secondary Ids</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateTags(java.util.List)">updateTags</a></span>&#8203;(java.util.List&lt;<a href="model/Tag.html" title="class in com.elarian.model">Tag</a>&gt;&nbsp;tags)</code></th>
 <td class="colLast">
@@ -320,6 +355,25 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<section role="region">
+<ul class="blockList">
+<li class="blockList"><a id="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a id="customerNumber">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>customerNumber</h4>
+<pre>protected&nbsp;<a href="model/CustomerNumber.html" title="class in com.elarian.model">CustomerNumber</a> customerNumber</pre>
+</li>
+</ul>
+</li>
+</ul>
+</section>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <section role="region">
 <ul class="blockList">
@@ -357,6 +411,34 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a id="getCustomerId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCustomerId</h4>
+<pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;java.lang.String&gt;&nbsp;getCustomerId()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#getCustomerId()">getCustomerId</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a id="getCustomerNumber()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCustomerNumber</h4>
+<pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerNumber.html" title="class in com.elarian.model">CustomerNumber</a>&gt;&nbsp;getCustomerNumber()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#getCustomerNumber()">getCustomerNumber</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
 <a id="getState()">
 <!--   -->
 </a>
@@ -366,19 +448,23 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerState.html" title="class in com.elarian.model">CustomerState</a>&gt;&nbsp;getState()</pre>
 <div class="block">Fetch the customer state</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 </dl>
 </li>
 </ul>
-<a id="adoptState(com.elarian.Customer)">
+<a id="adoptState(com.elarian.ICustomer)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>adoptState</h4>
-<pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;adoptState&#8203;(<a href="Customer.html" title="class in com.elarian">Customer</a>&nbsp;otherCustomer)</pre>
+<pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;adoptState&#8203;(<a href="ICustomer.html" title="interface in com.elarian">ICustomer</a>&nbsp;otherCustomer)</pre>
 <div class="block">Adopt another customer's state</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#adoptState(com.elarian.ICustomer)">adoptState</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>otherCustomer</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -395,6 +481,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
                                                              <a href="model/Message.html" title="class in com.elarian.model">Message</a>&nbsp;message)</pre>
 <div class="block">Send a message</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#sendMessage(com.elarian.model.MessagingChannel,com.elarian.model.Message)">sendMessage</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>channel</code> - </dd>
 <dd><code>message</code> - </dd>
@@ -412,6 +500,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
                                                                 <a href="model/Message.html" title="class in com.elarian.model">Message</a>&nbsp;message)</pre>
 <div class="block">Reply to a message</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#replyToMessage(java.lang.String,com.elarian.model.Message)">replyToMessage</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>messageId</code> - </dd>
 <dd><code>message</code> - </dd>
@@ -429,6 +519,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
                                                                             <a href="model/Activity.html" title="class in com.elarian.model">Activity</a>&nbsp;activity)</pre>
 <div class="block">Update customer activity</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#updateActivity(com.elarian.model.ActivityChannel,com.elarian.model.Activity)">updateActivity</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>channel</code> - </dd>
 <dd><code>activity</code> - </dd>
@@ -444,6 +536,15 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <h4>updateMessagingConsent</h4>
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/ConsentUpdateReply.html" title="class in com.elarian.model">ConsentUpdateReply</a>&gt;&nbsp;updateMessagingConsent&#8203;(<a href="model/MessagingChannel.html" title="class in com.elarian.model">MessagingChannel</a>&nbsp;channel,
                                                                               <a href="model/ConsentAction.html" title="enum in com.elarian.model">ConsentAction</a>&nbsp;action)</pre>
+<div class="block">Update messaging consent for given channel</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#updateMessagingConsent(com.elarian.model.MessagingChannel,com.elarian.model.ConsentAction)">updateMessagingConsent</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>channel</code> - </dd>
+<dd><code>action</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="leaseAppData()">
@@ -455,6 +556,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&gt;&nbsp;leaseAppData()</pre>
 <div class="block">Lease app data</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#leaseAppData()">leaseAppData</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 </dl>
 </li>
@@ -468,6 +571,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateAppData&#8203;(<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&nbsp;data)</pre>
 <div class="block">Update customer app data</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#updateAppData(com.elarian.model.DataMapValue)">updateAppData</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>data</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -483,6 +588,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;deleteAppData()</pre>
 <div class="block">Delete customer app data</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#deleteAppData()">deleteAppData</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 </dl>
 </li>
@@ -496,6 +603,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateMetadata&#8203;(java.util.Map&lt;java.lang.String,&#8203;<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&gt;&nbsp;metadata)</pre>
 <div class="block">Update customer metadata</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#updateMetadata(java.util.Map)">updateMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>metadata</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -511,6 +620,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;deleteMetadata&#8203;(java.util.List&lt;java.lang.String&gt;&nbsp;keys)</pre>
 <div class="block">Delete customer metadata</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#deleteMetadata(java.util.List)">deleteMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>keys</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -526,6 +637,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateSecondaryIds&#8203;(java.util.List&lt;<a href="model/SecondaryId.html" title="class in com.elarian.model">SecondaryId</a>&gt;&nbsp;secondaryIds)</pre>
 <div class="block">Update secondary Ids</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#updateSecondaryIds(java.util.List)">updateSecondaryIds</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>secondaryIds</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -541,6 +654,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;deleteSecondaryIds&#8203;(java.util.List&lt;<a href="model/SecondaryId.html" title="class in com.elarian.model">SecondaryId</a>&gt;&nbsp;secondaryIds)</pre>
 <div class="block">Delete secondary ids</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#deleteSecondaryIds(java.util.List)">deleteSecondaryIds</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>secondaryIds</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -556,6 +671,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateTags&#8203;(java.util.List&lt;<a href="model/Tag.html" title="class in com.elarian.model">Tag</a>&gt;&nbsp;tags)</pre>
 <div class="block">Update customer tags</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#updateTags(java.util.List)">updateTags</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tags</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -570,6 +687,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <h4>deleteTags</h4>
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;deleteTags&#8203;(java.util.List&lt;java.lang.String&gt;&nbsp;keys)</pre>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#deleteTags(java.util.List)">deleteTags</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>keys</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -585,6 +704,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;addReminder&#8203;(<a href="model/Reminder.html" title="class in com.elarian.model">Reminder</a>&nbsp;reminder)</pre>
 <div class="block">Add a customer reminder</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#addReminder(com.elarian.model.Reminder)">addReminder</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reminder</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -600,6 +721,8 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <pre class="methodSignature">public&nbsp;reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;cancelReminder&#8203;(java.lang.String&nbsp;key)</pre>
 <div class="block">Cancel a customer reminder</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="ICustomer.html#cancelReminder(java.lang.String)">cancelReminder</a></code>&nbsp;in interface&nbsp;<code><a href="ICustomer.html" title="interface in com.elarian">ICustomer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -658,13 +781,13 @@ implements <a href="ICustomer.html" title="interface in com.elarian">ICustomer</
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

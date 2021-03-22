@@ -1,4 +1,9 @@
-package com.elarian;
+package com.elarian.test;
+
+import com.elarian.ConnectionListener;
+import com.elarian.model.ActivityChannel;
+import com.elarian.model.MessagingChannel;
+import com.elarian.model.PaymentChannel;
 
 public class Fixtures {
 
@@ -13,6 +18,15 @@ public class Fixtures {
     public static final String MESSENNGER_NUMBER = System.getenv("MESSENNGER_NUMBER");
     public static final String MPESA_PAYBILL = System.getenv("MPESA_PAYBILL");
     public static final String WHATSAPP_NUMBER = System.getenv("WHATSAPP_NUMBER");
+    public static final String PURSE_ID = System.getenv("PURSE_ID");
+
+    public static final MessagingChannel smsChannel = new MessagingChannel(SMS_SHORT_CODE, MessagingChannel.Channel.SMS);
+    public static final MessagingChannel telegramChannel = new MessagingChannel(TELEGRAM_NUMBER, MessagingChannel.Channel.TELEGRAM);
+    public static final MessagingChannel whatsappChannel = new MessagingChannel(WHATSAPP_NUMBER, MessagingChannel.Channel.WHATSAPP);
+    public static final MessagingChannel messenngerChannel = new MessagingChannel(MESSENNGER_NUMBER, MessagingChannel.Channel.FB_MESSENGER);
+    public static final MessagingChannel voiceChannel = new MessagingChannel(VOICE_NUMBER, MessagingChannel.Channel.VOICE);
+    public static final PaymentChannel mpesaChannel = new PaymentChannel(MPESA_PAYBILL, PaymentChannel.Channel.CELLULAR);
+    public static final ActivityChannel activityChannel = new ActivityChannel("fake-web-app.com", ActivityChannel.Channel.WEB);
 
     public static final ConnectionListener connectionListener = new ConnectionListener() {
         @Override

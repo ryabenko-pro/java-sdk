@@ -44,7 +44,6 @@ import com.elarian.model.Play;
 import com.elarian.model.PromptMessageReplyAction;
 import com.elarian.model.ReceivedMediaNotification;
 import com.elarian.model.ReceivedMessage;
-import com.elarian.model.ReceivedMessageNotification;
 import com.elarian.model.RecordSession;
 import com.elarian.model.Redirect;
 import com.elarian.model.Reject;
@@ -53,6 +52,7 @@ import com.elarian.model.ReplyTokenPromptMenu;
 import com.elarian.model.Say;
 import com.elarian.model.SentMessage;
 import com.elarian.model.Template;
+import com.elarian.model.TextToSpeechVoice;
 import com.elarian.model.UssdMenu;
 import com.elarian.model.VoiceCallDialInput;
 import com.elarian.model.VoiceCallDirection;
@@ -62,10 +62,8 @@ import com.elarian.model.VoiceCallQueueInput;
 import com.elarian.model.VoiceCallStatus;
 import com.google.protobuf.Duration;
 import com.google.protobuf.Int32Value;
-import com.google.protobuf.ProtocolStringList;
 import com.google.protobuf.StringValue;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Function;
@@ -98,21 +96,23 @@ class Utils {
             }
 
             if (part.hasEmail()) {
-                target.email = new Email();
-                target.email.subject = part.getEmail().getSubject();
-                target.email.plain = part.getEmail().getBodyPlain();
-                target.email.html = part.getEmail().getBodyHtml();
+                target.email = new Email(
+                        part.getEmail().getSubject(),
+                        part.getEmail().getBodyPlain(),
+                        part.getEmail().getBodyHtml()
+                );
                 target.email.cc = part.getEmail().getCcListList();
                 target.email.bcc = part.getEmail().getBccListList();
                 target.email.attachments = part.getEmail().getAttachmentsList();
             }
 
             if (part.hasLocation()) {
-                target.location = new Location();
-                target.location.label = part.getLocation().getLabel().getValue();
-                target.location.address = part.getLocation().getAddress().getValue();
-                target.location.latitude = part.getLocation().getLatitude();
-                target.location.longitude = part.getLocation().getLongitude();
+                target.location = new Location(
+                        part.getLocation().getLatitude(),
+                        part.getLocation().getLongitude(),
+                        part.getLocation().getLabel().getValue(),
+                        part.getLocation().getAddress().getValue()
+                );
             }
         }
         return target;
@@ -209,19 +209,21 @@ class Utils {
                                 }
 
                                 if (part.hasLocation()) {
-                                    Location loc = new Location();
-                                    loc.longitude = part.getLocation().getLongitude();
-                                    loc.latitude = part.getLocation().getLatitude();
-                                    loc.label = part.getLocation().getLabel().getValue();
-                                    loc.address = part.getLocation().getAddress().getValue();
+                                    Location loc = new Location(
+                                            part.getLocation().getLatitude(),
+                                            part.getLocation().getLongitude(),
+                                            part.getLocation().getLabel().getValue(),
+                                            part.getLocation().getAddress().getValue()
+                                    );
                                     target.locations.add(loc);
                                 }
 
                                 if (part.hasEmail()) {
-                                    Email email = new Email();
-                                    email.subject = part.getEmail().getSubject();
-                                    email.plain = part.getEmail().getBodyPlain();
-                                    email.html = part.getEmail().getBodyHtml();
+                                    Email email = new Email(
+                                            part.getEmail().getSubject(),
+                                            part.getEmail().getBodyPlain(),
+                                            part.getEmail().getBodyHtml()
+                                    );
                                     email.cc = part.getEmail().getCcListList();
                                     email.bcc = part.getEmail().getBccListList();
                                     email.attachments = part.getEmail().getAttachmentsList();
@@ -310,19 +312,21 @@ class Utils {
                                 }
 
                                 if (part.hasLocation()) {
-                                    Location loc = new Location();
-                                    loc.longitude = part.getLocation().getLongitude();
-                                    loc.latitude = part.getLocation().getLatitude();
-                                    loc.label = part.getLocation().getLabel().getValue();
-                                    loc.address = part.getLocation().getAddress().getValue();
+                                    Location loc = new Location(
+                                            part.getLocation().getLatitude(),
+                                            part.getLocation().getLongitude(),
+                                            part.getLocation().getLabel().getValue(),
+                                            part.getLocation().getAddress().getValue()
+                                    );
                                     target.locations.add(loc);
                                 }
 
                                 if (part.hasEmail()) {
-                                    Email email = new Email();
-                                    email.subject = part.getEmail().getSubject();
-                                    email.plain = part.getEmail().getBodyPlain();
-                                    email.html = part.getEmail().getBodyHtml();
+                                    Email email = new Email(
+                                            part.getEmail().getSubject(),
+                                            part.getEmail().getBodyPlain(),
+                                            part.getEmail().getBodyHtml()
+                                    );
                                     email.cc = part.getEmail().getCcListList();
                                     email.bcc = part.getEmail().getBccListList();
                                     email.attachments = part.getEmail().getAttachmentsList();
@@ -415,19 +419,21 @@ class Utils {
                                 }
 
                                 if (part.hasLocation()) {
-                                    Location loc = new Location();
-                                    loc.longitude = part.getLocation().getLongitude();
-                                    loc.latitude = part.getLocation().getLatitude();
-                                    loc.label = part.getLocation().getLabel().getValue();
-                                    loc.address = part.getLocation().getAddress().getValue();
+                                    Location loc = new Location(
+                                            part.getLocation().getLatitude(),
+                                            part.getLocation().getLongitude(),
+                                            part.getLocation().getLabel().getValue(),
+                                            part.getLocation().getAddress().getValue()
+                                    );
                                     target.locations.add(loc);
                                 }
 
                                 if (part.hasEmail()) {
-                                    Email email = new Email();
-                                    email.subject = part.getEmail().getSubject();
-                                    email.plain = part.getEmail().getBodyPlain();
-                                    email.html = part.getEmail().getBodyHtml();
+                                    Email email = new Email(
+                                            part.getEmail().getSubject(),
+                                            part.getEmail().getBodyPlain(),
+                                            part.getEmail().getBodyHtml()
+                                    );
                                     email.cc = part.getEmail().getCcListList();
                                     email.bcc = part.getEmail().getBccListList();
                                     email.attachments = part.getEmail().getAttachmentsList();
@@ -790,20 +796,146 @@ class Utils {
         }
 
         if (body.hasLocation()) {
-            content.location = new Location();
+            content.location = new Location(
+                    body.getLocation().getLatitude(),
+                    body.getLocation().getLongitude(),
+                    body.getLocation().getLabel().getValue(),
+                    body.getLocation().getAddress().getValue()
+            );
         }
 
         if (body.hasEmail()) {
-            content.email = new Email();
+            MessagingModel.EmailMessageBody email = body.getEmail();
+            content.email = new Email(email.getSubject(), email.getBodyPlain(), email.getBodyHtml());
+            content.email.cc.addAll(email.getCcListList());
+            content.email.bcc.addAll(email.getBccListList());
+            content.email.attachments.addAll(email.getAttachmentsList());
         }
 
         if (body.hasTemplate()) {
-            content.template = new Template();
+            content.template = new Template(body.getTemplate().getId(), body.getTemplate().getParamsMap());
         }
 
         if (body.hasVoice()) {
-            // FIXME: Implement
-            // TODO: build the correct actions
+      content.voice.addAll(
+          body.getVoice().getActionsList().stream()
+              .map(
+                  action -> {
+                    if (action.hasSay()) {
+                      MessagingModel.SayCallAction sayAction = action.getSay();
+                      return new Say(
+                          sayAction.getText(),
+                          sayAction.getPlayBeep(),
+                          TextToSpeechVoice.valueOf(sayAction.getVoiceValue()));
+                    }
+
+                    if (action.hasPlay()) {
+                      return new Play(action.getPlay().getUrl());
+                    }
+
+                    if (action.hasGetDigits()) {
+                      MessagingModel.GetDigitsCallAction getDigitsAction = action.getGetDigits();
+                      GetDigits getDigits = null;
+                      if (getDigitsAction.hasSay()) {
+                        getDigits =
+                            new GetDigits(
+                                new Say(
+                                    getDigitsAction.getSay().getText(),
+                                    getDigitsAction.getSay().getPlayBeep(),
+                                    TextToSpeechVoice.valueOf(
+                                        getDigitsAction.getSay().getVoiceValue())),
+                                getDigitsAction.getTimeout().getSeconds(),
+                                getDigitsAction.getFinishOnKey().getValue(),
+                                getDigitsAction.getNumDigits().getValue());
+                      } else if (getDigitsAction.hasPlay()) {
+                        getDigits =
+                            new GetDigits(
+                                new Play(getDigitsAction.getPlay().getUrl()),
+                                getDigitsAction.getTimeout().getSeconds(),
+                                getDigitsAction.getFinishOnKey().getValue(),
+                                getDigitsAction.getNumDigits().getValue());
+                      }
+                      return getDigits;
+                    }
+
+                    if (action.hasDial()) {
+                        MessagingModel.DialCallAction dialAction = action.getDial();
+                        return new Dial(
+                                dialAction.getCustomerNumbersList().stream()
+                                        .map(item -> new CustomerNumber(
+                                                item.getNumber(),
+                                                CustomerNumber.Provider.valueOf(item.getProviderValue())))
+                                        .collect(Collectors.toList()),
+                                dialAction.getRecord(),
+                                dialAction.getSequential(),
+                                dialAction.getRingbackTone().getValue(),
+                                dialAction.getCallerId().getValue(),
+                                dialAction.getMaxDuration().getValue()
+                        );
+                    }
+
+                    if (action.hasRecordSession()) {
+                        return new RecordSession();
+                    }
+
+                    if (action.hasGetRecording()) {
+                      MessagingModel.GetRecordingCallAction getRecordingAction =
+                          action.getGetRecording();
+                      GetRecording getRecording = null;
+                      if (getRecordingAction.hasSay()) {
+                          getRecording = new GetRecording(
+                                  new Say(
+                                          getRecordingAction.getSay().getText(),
+                                          getRecordingAction.getSay().getPlayBeep(),
+                                          TextToSpeechVoice.valueOf(
+                                                  getRecordingAction.getSay().getVoiceValue())),
+                                  getRecordingAction.getTimeout().getSeconds(),
+                                  getRecordingAction.getMaxLength().getSeconds(),
+                                  getRecordingAction.getFinishOnKey().getValue(),
+                                  getRecordingAction.getPlayBeep(),
+                                  getRecordingAction.getTrimSilence()
+                          );
+                      } else if (getRecordingAction.hasPlay()) {
+                          getRecording = new GetRecording(
+                                  new Play(getRecordingAction.getPlay().getUrl()),
+                                  getRecordingAction.getTimeout().getSeconds(),
+                                  getRecordingAction.getMaxLength().getSeconds(),
+                                  getRecordingAction.getFinishOnKey().getValue(),
+                                  getRecordingAction.getPlayBeep(),
+                                  getRecordingAction.getTrimSilence()
+                          );
+                      }
+                      return getRecording;
+                    }
+
+                    if (action.hasEnqueue()) {
+                      return new Enqueue(
+                          action.getEnqueue().getQueueName().getValue(),
+                          action.getEnqueue().getHoldMusic().getValue());
+                    }
+
+                    if (action.hasDequeue()) {
+                      return new Dequeue(
+                          action.getDequeue().getQueueName().getValue(),
+                          new MessagingChannel(
+                              action.getDequeue().getChannelNumber().getNumber(),
+                              MessagingChannel.Channel.valueOf(
+                                  action.getDequeue().getChannelNumber().getChannelValue())),
+                          action.getDequeue().getRecord());
+                    }
+
+                    if (action.hasReject()) {
+                      return new Reject();
+                    }
+
+                    if (action.hasRedirect()) {
+                      return new Redirect(action.getRedirect().getUrl());
+                    }
+
+                    return null;
+                  })
+              .filter(Objects::nonNull)
+              .collect(Collectors.toList()));
         }
 
         if (body.hasUssd()) {

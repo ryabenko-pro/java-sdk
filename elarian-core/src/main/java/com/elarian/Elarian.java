@@ -61,10 +61,12 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                 NotificationCallback<MessageBody> responder = (incoming, appData) -> {
                     MessagingModel.OutboundMessage message = Utils.buildOutgoingMessage(new Message(incoming));
                     CommonModel.DataMapValue.Builder data = CommonModel.DataMapValue.newBuilder();
-                    if (appData.bytes != null) {
-                        data.setBytesVal(ByteString.copyFrom(appData.bytes));
-                    } else if (appData.string != null) {
-                        data.setStringVal(appData.string);
+                    if (appData != null) {
+                        if (appData.bytes != null) {
+                            data.setBytesVal(ByteString.copyFrom(appData.bytes));
+                        } else if (appData.string != null) {
+                            data.setStringVal(appData.string);
+                        }
                     }
                     AppSocket.ServerToAppNotificationReply reply = AppSocket.ServerToAppNotificationReply.newBuilder()
                             .setMessage(message)
@@ -193,6 +195,24 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
      * @return
      */
     public Mono<TagUpdateReply> addCustomerReminderByTag(Tag tag, Reminder reminder) {
+
+        AppModel.CustomerReminder.Builder rem = AppModel.CustomerReminder
+                .newBuilder()
+                .setKey(reminder.key)
+                .setRemindAt(Timestamp.newBuilder()
+                        .setSeconds(reminder.remindAt)
+                        .build());
+
+        if (reminder.payload != null) {
+            rem.setPayload(StringValue.of(reminder.payload));
+        }
+
+        if (reminder.interval >= 60) {
+            rem.setInterval(Duration.newBuilder()
+                    .setSeconds(reminder.interval)
+                    .build());
+        }
+
         AppSocket.AddCustomerReminderTagCommand cmd = AppSocket.AddCustomerReminderTagCommand
                 .newBuilder()
                 .setTag(CommonModel.IndexMapping
@@ -200,17 +220,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                         .setKey(tag.key)
                         .setValue(StringValue.of(tag.value))
                         .build())
-                .setReminder(AppModel.CustomerReminder
-                        .newBuilder()
-                        .setKey(reminder.key)
-                        .setPayload(StringValue.of(reminder.payload))
-                        .setRemindAt(Timestamp.newBuilder()
-                                .setSeconds(reminder.remindAt)
-                                .build())
-                        .setInterval(Duration.newBuilder()
-                                .setSeconds(reminder.interval)
-                                .build())
-                        .build())
+                .setReminder(rem)
                 .build();
         AppSocket.AppToServerCommand req = AppSocket.AppToServerCommand
                 .newBuilder()
@@ -437,9 +447,9 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             String strVal = notif.getAppData().getStringVal();
             ByteString byteString = notif.getAppData().getBytesVal();
             if (byteString != null && !byteString.isEmpty()) {
-                appData = new DataMapValue(byteString.toByteArray());
+                appData = DataMapValue.of(byteString.toByteArray());
             } else if (strVal != null && !strVal.isEmpty()) {
-                appData = new DataMapValue(strVal);
+                appData = DataMapValue.of(strVal);
             }
         }
 

@@ -26,6 +26,12 @@
     catch(err) {
     }
 //-->
+var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
 var pathtoroot = "../../";
 var useModuleDirectories = true;
 loadScripts(document, 'script');</script>
@@ -84,13 +90,13 @@ loadScripts(document, 'script');</script>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <a id="skip.navbar.top">
@@ -121,6 +127,320 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">ICustomer</span></pre>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========== METHOD SUMMARY =========== -->
+<section role="region">
+<ul class="blockList">
+<li class="blockList"><a id="method.summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Method</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addReminder(com.elarian.model.Reminder)">addReminder</a></span>&#8203;(<a href="model/Reminder.html" title="class in com.elarian.model">Reminder</a>&nbsp;reminder)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#adoptState(com.elarian.ICustomer)">adoptState</a></span>&#8203;(<a href="ICustomer.html" title="interface in com.elarian">ICustomer</a>&nbsp;otherCustomer)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cancelReminder(java.lang.String)">cancelReminder</a></span>&#8203;(java.lang.String&nbsp;key)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteAppData()">deleteAppData</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteMetadata(java.util.List)">deleteMetadata</a></span>&#8203;(java.util.List&lt;java.lang.String&gt;&nbsp;keys)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteSecondaryIds(java.util.List)">deleteSecondaryIds</a></span>&#8203;(java.util.List&lt;<a href="model/SecondaryId.html" title="class in com.elarian.model">SecondaryId</a>&gt;&nbsp;secondaryIds)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteTags(java.util.List)">deleteTags</a></span>&#8203;(java.util.List&lt;java.lang.String&gt;&nbsp;keys)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;java.lang.String&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCustomerId()">getCustomerId</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerNumber.html" title="class in com.elarian.model">CustomerNumber</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCustomerNumber()">getCustomerNumber</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerState.html" title="class in com.elarian.model">CustomerState</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getState()">getState</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#leaseAppData()">leaseAppData</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/MessageReply.html" title="class in com.elarian.model">MessageReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#replyToMessage(java.lang.String,com.elarian.model.Message)">replyToMessage</a></span>&#8203;(java.lang.String&nbsp;messageId,
+              <a href="model/Message.html" title="class in com.elarian.model">Message</a>&nbsp;message)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/MessageReply.html" title="class in com.elarian.model">MessageReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sendMessage(com.elarian.model.MessagingChannel,com.elarian.model.Message)">sendMessage</a></span>&#8203;(<a href="model/MessagingChannel.html" title="class in com.elarian.model">MessagingChannel</a>&nbsp;channel,
+           <a href="model/Message.html" title="class in com.elarian.model">Message</a>&nbsp;message)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateActivity(com.elarian.model.ActivityChannel,com.elarian.model.Activity)">updateActivity</a></span>&#8203;(<a href="model/ActivityChannel.html" title="class in com.elarian.model">ActivityChannel</a>&nbsp;channel,
+              <a href="model/Activity.html" title="class in com.elarian.model">Activity</a>&nbsp;activity)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateAppData(com.elarian.model.DataMapValue)">updateAppData</a></span>&#8203;(<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&nbsp;data)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/ConsentUpdateReply.html" title="class in com.elarian.model">ConsentUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateMessagingConsent(com.elarian.model.MessagingChannel,com.elarian.model.ConsentAction)">updateMessagingConsent</a></span>&#8203;(<a href="model/MessagingChannel.html" title="class in com.elarian.model">MessagingChannel</a>&nbsp;channel,
+                      <a href="model/ConsentAction.html" title="enum in com.elarian.model">ConsentAction</a>&nbsp;action)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateMetadata(java.util.Map)">updateMetadata</a></span>&#8203;(java.util.Map&lt;java.lang.String,&#8203;<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&gt;&nbsp;metadata)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateSecondaryIds(java.util.List)">updateSecondaryIds</a></span>&#8203;(java.util.List&lt;<a href="model/SecondaryId.html" title="class in com.elarian.model">SecondaryId</a>&gt;&nbsp;secondaryIds)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateTags(java.util.List)">updateTags</a></span>&#8203;(java.util.List&lt;<a href="model/Tag.html" title="class in com.elarian.model">Tag</a>&gt;&nbsp;tags)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ METHOD DETAIL ========== -->
+<section role="region">
+<ul class="blockList">
+<li class="blockList"><a id="method.detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a id="getCustomerId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCustomerId</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;java.lang.String&gt;&nbsp;getCustomerId()</pre>
+</li>
+</ul>
+<a id="getCustomerNumber()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCustomerNumber</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerNumber.html" title="class in com.elarian.model">CustomerNumber</a>&gt;&nbsp;getCustomerNumber()</pre>
+</li>
+</ul>
+<a id="getState()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getState</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerState.html" title="class in com.elarian.model">CustomerState</a>&gt;&nbsp;getState()</pre>
+</li>
+</ul>
+<a id="adoptState(com.elarian.ICustomer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>adoptState</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;adoptState&#8203;(<a href="ICustomer.html" title="interface in com.elarian">ICustomer</a>&nbsp;otherCustomer)</pre>
+</li>
+</ul>
+<a id="replyToMessage(java.lang.String,com.elarian.model.Message)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>replyToMessage</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/MessageReply.html" title="class in com.elarian.model">MessageReply</a>&gt;&nbsp;replyToMessage&#8203;(java.lang.String&nbsp;messageId,
+                                                         <a href="model/Message.html" title="class in com.elarian.model">Message</a>&nbsp;message)</pre>
+</li>
+</ul>
+<a id="sendMessage(com.elarian.model.MessagingChannel,com.elarian.model.Message)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendMessage</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/MessageReply.html" title="class in com.elarian.model">MessageReply</a>&gt;&nbsp;sendMessage&#8203;(<a href="model/MessagingChannel.html" title="class in com.elarian.model">MessagingChannel</a>&nbsp;channel,
+                                                      <a href="model/Message.html" title="class in com.elarian.model">Message</a>&nbsp;message)</pre>
+</li>
+</ul>
+<a id="updateActivity(com.elarian.model.ActivityChannel,com.elarian.model.Activity)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateActivity</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateActivity&#8203;(<a href="model/ActivityChannel.html" title="class in com.elarian.model">ActivityChannel</a>&nbsp;channel,
+                                                                     <a href="model/Activity.html" title="class in com.elarian.model">Activity</a>&nbsp;activity)</pre>
+</li>
+</ul>
+<a id="updateMessagingConsent(com.elarian.model.MessagingChannel,com.elarian.model.ConsentAction)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateMessagingConsent</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/ConsentUpdateReply.html" title="class in com.elarian.model">ConsentUpdateReply</a>&gt;&nbsp;updateMessagingConsent&#8203;(<a href="model/MessagingChannel.html" title="class in com.elarian.model">MessagingChannel</a>&nbsp;channel,
+                                                                       <a href="model/ConsentAction.html" title="enum in com.elarian.model">ConsentAction</a>&nbsp;action)</pre>
+</li>
+</ul>
+<a id="leaseAppData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>leaseAppData</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&gt;&nbsp;leaseAppData()</pre>
+</li>
+</ul>
+<a id="deleteAppData()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteAppData</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;deleteAppData()</pre>
+</li>
+</ul>
+<a id="updateAppData(com.elarian.model.DataMapValue)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateAppData</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateAppData&#8203;(<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&nbsp;data)</pre>
+</li>
+</ul>
+<a id="deleteMetadata(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteMetadata</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;deleteMetadata&#8203;(java.util.List&lt;java.lang.String&gt;&nbsp;keys)</pre>
+</li>
+</ul>
+<a id="updateMetadata(java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateMetadata</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateMetadata&#8203;(java.util.Map&lt;java.lang.String,&#8203;<a href="model/DataMapValue.html" title="class in com.elarian.model">DataMapValue</a>&gt;&nbsp;metadata)</pre>
+</li>
+</ul>
+<a id="updateSecondaryIds(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateSecondaryIds</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateSecondaryIds&#8203;(java.util.List&lt;<a href="model/SecondaryId.html" title="class in com.elarian.model">SecondaryId</a>&gt;&nbsp;secondaryIds)</pre>
+</li>
+</ul>
+<a id="deleteSecondaryIds(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteSecondaryIds</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;deleteSecondaryIds&#8203;(java.util.List&lt;<a href="model/SecondaryId.html" title="class in com.elarian.model">SecondaryId</a>&gt;&nbsp;secondaryIds)</pre>
+</li>
+</ul>
+<a id="updateTags(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateTags</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;updateTags&#8203;(java.util.List&lt;<a href="model/Tag.html" title="class in com.elarian.model">Tag</a>&gt;&nbsp;tags)</pre>
+</li>
+</ul>
+<a id="deleteTags(java.util.List)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteTags</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;deleteTags&#8203;(java.util.List&lt;java.lang.String&gt;&nbsp;keys)</pre>
+</li>
+</ul>
+<a id="cancelReminder(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cancelReminder</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;cancelReminder&#8203;(java.lang.String&nbsp;key)</pre>
+</li>
+</ul>
+<a id="addReminder(com.elarian.model.Reminder)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>addReminder</h4>
+<pre class="methodSignature">reactor.core.publisher.Mono&lt;<a href="model/CustomerStateUpdateReply.html" title="class in com.elarian.model">CustomerStateUpdateReply</a>&gt;&nbsp;addReminder&#8203;(<a href="model/Reminder.html" title="class in com.elarian.model">Reminder</a>&nbsp;reminder)</pre>
+</li>
+</ul>
+</li>
+</ul>
+</section>
 </li>
 </ul>
 </div>
@@ -172,13 +492,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
 <a id="skip.navbar.bottom">

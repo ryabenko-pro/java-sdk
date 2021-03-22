@@ -10,4 +10,10 @@ public final class Email {
     public List<String> cc = new ArrayList<>();
     public List<String> bcc = new ArrayList<>();
     public List<String> attachments = new ArrayList<>();
+
+    public Email(String subject, String plain, String html) {
+        this.subject = subject;
+        this.plain = plain;
+        this.html = html;
+    }
 }

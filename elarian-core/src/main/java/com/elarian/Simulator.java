@@ -6,8 +6,10 @@ import com.elarian.hera.proto.CommonModel;
 import com.elarian.hera.proto.MessagingModel;
 import com.elarian.hera.proto.PaymentModel;
 import com.elarian.hera.proto.SimulatorSocket;
+import com.google.protobuf.Duration;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.StringValue;
+import com.google.protobuf.Timestamp;
 
 import java.util.List;
 import java.util.function.Function;
@@ -203,11 +205,11 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
      *
      * @param customerNumber
      * @param channelNumber
-     * @param parts
+     * @param messageParts
      * @param sessionId
      * @return
      */
-    public Mono<SimulatorReply> receiveMessage(String customerNumber, MessagingChannel channelNumber, List<SimulatorMessageBody> parts, String sessionId) {
+    public Mono<SimulatorReply> receiveMessage(String customerNumber, MessagingChannel channelNumber, List<SimulatorMessageBody> messageParts, String sessionId) {
         SimulatorSocket.ReceiveMessageSimulatorCommand cmd = SimulatorSocket.ReceiveMessageSimulatorCommand
                 .newBuilder()
                 .setCustomerNumber(customerNumber)
@@ -216,7 +218,7 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                         .setNumber(channelNumber.number)
                         .setChannelValue(channelNumber.channel.getValue())
                         .build())
-                .addAllParts(parts.stream().map((item) -> {
+                .addAllParts(messageParts.stream().map((item) -> {
                     MessagingModel.InboundMessageBody.Builder result = MessagingModel.InboundMessageBody.newBuilder();
                     if (item.text != null) {
                         return result.setText(item.text).build();
@@ -230,13 +232,49 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                                 .build();
                     }
                     if (item.location != null) {
-                        return result.setText(item.text).build();
+                        return result.setLocation(MessagingModel.LocationMessageBody
+                                .newBuilder()
+                                .setLongitude(item.location.longitude)
+                                .setLatitude(item.location.latitude)
+                                .setLabel(StringValue.of(item.location.label))
+                                .setAddress(StringValue.of(item.location.address))
+                                .build()).build();
                     }
                     if (item.email != null) {
-                        return result.setText(item.text).build();
+                        return result.setEmail(MessagingModel.EmailMessageBody
+                                .newBuilder()
+                                .setBodyPlain(item.email.plain)
+                                .setBodyHtml(item.email.html)
+                                .setSubject(item.email.subject)
+                                .addAllCcList(item.email.cc)
+                                .addAllBccList(item.email.bcc)
+                                .addAllAttachments(item.email.attachments)
+                                .build()).build();
                     }
                     if (item.voice != null) {
-                        return result.setText(item.text).build();
+                        return result.setVoice(MessagingModel.VoiceCallInputMessageBody
+                                .newBuilder()
+                                .setDirectionValue(item.voice.direction.getValue())
+                                .setStatusValue(item.voice.status.getValue())
+                                .setStartedAt(Timestamp.newBuilder().setSeconds(item.voice.startedAt).build())
+                                .setHangupCauseValue(item.voice.hangupCause.getValue())
+                                .setDtmfDigits(item.voice.dtmfDigits == null ? StringValue.getDefaultInstance() : StringValue.of(item.voice.dtmfDigits))
+                                .setRecordingUrl(item.voice.recordingUrl == null ? StringValue.getDefaultInstance()  : StringValue.of(item.voice.recordingUrl))
+                                .setDialData(MessagingModel.VoiceCallDialInput
+                                        .newBuilder()
+                                        .setDestinationNumber(item.voice.dialData.destinationNumber)
+                                        .setStartedAt(Timestamp.newBuilder().setSeconds(item.voice.dialData.startedAt).build())
+                                        .setDuration(Duration.newBuilder().setSeconds(item.voice.dialData.duration).build())
+                                        .build())
+                                .setQueueData(MessagingModel.VoiceCallQueueInput
+                                        .newBuilder()
+                                        .setEnqueuedAt(Timestamp.newBuilder().setSeconds(item.voice.queueData.enqueuedAt).build())
+                                        .setDequeuedAt(Timestamp.newBuilder().setSeconds(item.voice.queueData.dequeuedAt).build())
+                                        .setDequeuedToNumber(StringValue.of(item.voice.queueData.dequeuedToNumber))
+                                        .setDequeuedToSessionId(StringValue.of(item.voice.queueData.dequeuedToSessionId))
+                                        .setQueueDuration(Duration.newBuilder().setSeconds(item.voice.queueData.queueDuration).build())
+                                        .build())
+                                .build()).build();
                     }
                     if (item.ussd != null) {
                         return result.setUssd(StringValue.of(item.ussd)).build();

@@ -9,7 +9,27 @@ import com.elarian.hera.proto.CommonModel;
 import com.elarian.hera.proto.IdentityStateOuterClass;
 import com.elarian.hera.proto.MessagingModel;
 import com.elarian.hera.proto.PaymentStateOuterClass;
-import com.elarian.model.*;
+import com.elarian.model.Activity;
+import com.elarian.model.ActivityChannel;
+import com.elarian.model.ActivityState;
+import com.elarian.model.Cash;
+import com.elarian.model.ConsentAction;
+import com.elarian.model.ConsentUpdateReply;
+import com.elarian.model.CustomerNumber;
+import com.elarian.model.CustomerState;
+import com.elarian.model.CustomerStateUpdateReply;
+import com.elarian.model.DataMapValue;
+import com.elarian.model.IdentityState;
+import com.elarian.model.Message;
+import com.elarian.model.MessageDeliveryStatus;
+import com.elarian.model.MessageReply;
+import com.elarian.model.MessagingChannel;
+import com.elarian.model.MessagingConsentUpdateStatus;
+import com.elarian.model.MessagingState;
+import com.elarian.model.PaymentState;
+import com.elarian.model.Reminder;
+import com.elarian.model.SecondaryId;
+import com.elarian.model.Tag;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.Duration;
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -19,6 +39,7 @@ import com.google.protobuf.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -35,9 +56,9 @@ public final class Customer implements ICustomer {
             return null;
         }
     };
-    String customerId;
-    CustomerNumber customerNumber;
-    Elarian client;
+    private String customerId;
+    protected CustomerNumber customerNumber;
+    private final Elarian client;
 
     public Customer(Elarian client, String customerId) {
         this.client = client;
@@ -51,10 +72,78 @@ public final class Customer implements ICustomer {
 
 
     /**
+     *
+     * @return
+     */
+    @Override
+    public Mono<String> getCustomerId() {
+        if (customerId != null) {
+            return Mono.just(customerId);
+        }
+
+        return new Mono<String>() {
+            @Override
+            public void subscribe(CoreSubscriber<? super String> subscriber) {
+                getState().subscribe(customerState -> {
+                    subscriber.onNext(customerState.customerId);
+                    subscriber.onComplete();
+                }, subscriber::onError);
+            }
+        };
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public Mono<CustomerNumber> getCustomerNumber() {
+        if (customerNumber != null) {
+            return Mono.just(customerNumber);
+        }
+
+        return new Mono<CustomerNumber>() {
+            @Override
+            public void subscribe(CoreSubscriber<? super CustomerNumber> subscriber) {
+                getState().subscribe(state -> {
+                    if (!state.paymentState.customerNumbers.isEmpty()) {
+                        customerNumber = state.paymentState.customerNumbers.get(0);
+                    } else if (!state.activityState.customerNumbers.isEmpty()) {
+                        customerNumber = state.activityState.customerNumbers.get(0);
+                    } else {
+                        List<CustomerNumber> candidates = state.messagingState.channels.stream().map(it -> {
+                            if (it.inSession != null) {
+                                return it.inSession.customerNumber;
+                            }
+                            if (it.blocked != null) {
+                                return it.blocked.customerNumber;
+                            }
+                            if (it.active != null) {
+                                return it.active.customerNumber;
+                            }
+                            return null;
+                        }).filter(Objects::nonNull).collect(Collectors.toList());
+                        if (!candidates.isEmpty()) {
+                            customerNumber = candidates.get(0);
+                        }
+                    }
+                    if (customerNumber == null) {
+                        subscriber.onError(new RuntimeException("Could not find a number associated with this customer"));
+                    } else {
+                        subscriber.onNext(customerNumber);
+                        subscriber.onComplete();
+                    }
+                }, subscriber::onError);
+            }
+        };
+    }
+
+    /**
      * Fetch the customer state
      *
      * @return
      */
+    @Override
     public Mono<CustomerState> getState() {
         AppSocket.GetCustomerStateCommand.Builder cmd = AppSocket.GetCustomerStateCommand
                 .newBuilder();
@@ -115,9 +204,9 @@ public final class Customer implements ICustomer {
                             String strVal = value.getStringVal();
                             ByteString byteString = value.getBytesVal();
                             if (byteString != null && !byteString.isEmpty()) {
-                                val = new DataMapValue(byteString.toByteArray());
+                                val = DataMapValue.of(byteString.toByteArray());
                             } else if (strVal != null && !strVal.isEmpty()) {
-                                val = new DataMapValue(strVal);
+                                val = DataMapValue.of(strVal);
                             }
                             state.identityState.metadata.put(key, val);
                         });
@@ -220,7 +309,8 @@ public final class Customer implements ICustomer {
      * @param otherCustomer
      * @return
      */
-    public Mono<CustomerStateUpdateReply> adoptState(Customer otherCustomer) {
+    @Override
+    public Mono<CustomerStateUpdateReply> adoptState(ICustomer otherCustomer) {
 
         AppSocket.AdoptCustomerStateCommand.Builder cmd = AppSocket.AdoptCustomerStateCommand
                 .newBuilder();
@@ -230,13 +320,14 @@ public final class Customer implements ICustomer {
         }
 
         cmd.setCustomerId(customerId);
-        if (otherCustomer.customerId != null) {
-            cmd.setOtherCustomerId(otherCustomer.customerId);
-        } else if (otherCustomer.customerNumber != null) {
+        Customer target = (Customer) otherCustomer;
+        if (target.customerId != null) {
+            cmd.setOtherCustomerId(target.customerId);
+        } else if (target.customerNumber != null) {
             cmd.setOtherCustomerNumber(CommonModel.CustomerNumber
                     .newBuilder()
-                    .setNumber(otherCustomer.customerNumber.number)
-                    .setProviderValue(otherCustomer.customerNumber.provider.getValue())
+                    .setNumber(target.customerNumber.number)
+                    .setProviderValue(target.customerNumber.provider.getValue())
                     .build());
         }
 
@@ -272,6 +363,7 @@ public final class Customer implements ICustomer {
      * @param message
      * @return
      */
+    @Override
     public Mono<MessageReply> sendMessage(MessagingChannel channel, Message message) {
         AppSocket.SendMessageCommand.Builder cmd = AppSocket.SendMessageCommand
                 .newBuilder();
@@ -324,6 +416,7 @@ public final class Customer implements ICustomer {
      * @param message
      * @return
      */
+    @Override
     public Mono<MessageReply> replyToMessage(String messageId, Message message) {
 
         AppSocket.ReplyToMessageCommand.Builder cmd = AppSocket.ReplyToMessageCommand
@@ -364,6 +457,7 @@ public final class Customer implements ICustomer {
      * @param activity
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> updateActivity(ActivityChannel channel, Activity activity) {
 
         if (customerNumber == null) {
@@ -398,7 +492,7 @@ public final class Customer implements ICustomer {
             @Override
             public void subscribe(CoreSubscriber<? super CustomerStateUpdateReply> subscriber) {
                 client.buildCommandReply(req.toByteArray(), replyDeserializer).subscribe(reply -> {
-                    AppSocket.UpdateCustomerStateReply res = reply.getUpdateCustomerState();
+                    AppSocket.CustomerActivityReply res = reply.getCustomerActivity();
                     if (!res.getStatus()) {
                         subscriber.onError(new RuntimeException(res.getDescription()));
                         return;
@@ -414,6 +508,13 @@ public final class Customer implements ICustomer {
 
     }
 
+    /**
+     * Update messaging consent for given channel
+     * @param channel
+     * @param action
+     * @return
+     */
+    @Override
     public Mono<ConsentUpdateReply> updateMessagingConsent(MessagingChannel channel, ConsentAction action) {
 
         if (customerNumber == null) {
@@ -463,6 +564,7 @@ public final class Customer implements ICustomer {
      *
      * @return
      */
+    @Override
     public Mono<DataMapValue> leaseAppData() {
 
         AppSocket.LeaseCustomerAppDataCommand.Builder cmd = AppSocket.LeaseCustomerAppDataCommand
@@ -501,9 +603,9 @@ public final class Customer implements ICustomer {
                         String strVal = res.getValue().getStringVal();
                         ByteString byteString = res.getValue().getBytesVal();
                         if (byteString != null && !byteString.isEmpty()) {
-                            appData = new DataMapValue(byteString.toByteArray());
+                            appData = DataMapValue.of(byteString.toByteArray());
                         } else if (strVal != null && !strVal.isEmpty()) {
-                            appData = new DataMapValue(strVal);
+                            appData = DataMapValue.of(strVal);
                         }
                     }
 
@@ -521,6 +623,7 @@ public final class Customer implements ICustomer {
      * @param data
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> updateAppData(DataMapValue data) {
 
         AppSocket.UpdateCustomerAppDataCommand.Builder cmd = AppSocket.UpdateCustomerAppDataCommand
@@ -555,7 +658,7 @@ public final class Customer implements ICustomer {
             @Override
             public void subscribe(CoreSubscriber<? super CustomerStateUpdateReply> subscriber) {
                 client.buildCommandReply(req.toByteArray(), replyDeserializer).subscribe(reply -> {
-                    AppSocket.UpdateCustomerStateReply res = reply.getUpdateCustomerState();
+                    AppSocket.UpdateCustomerAppDataReply res = reply.getUpdateCustomerAppData();
                     if (!res.getStatus()) {
                         subscriber.onError(new RuntimeException(res.getDescription()));
                         return;
@@ -576,6 +679,7 @@ public final class Customer implements ICustomer {
      *
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> deleteAppData() {
 
         AppSocket.DeleteCustomerAppDataCommand.Builder cmd = AppSocket.DeleteCustomerAppDataCommand
@@ -602,7 +706,7 @@ public final class Customer implements ICustomer {
             @Override
             public void subscribe(CoreSubscriber<? super CustomerStateUpdateReply> subscriber) {
                 client.buildCommandReply(req.toByteArray(), replyDeserializer).subscribe(reply -> {
-                    AppSocket.UpdateCustomerStateReply res = reply.getUpdateCustomerState();
+                    AppSocket.UpdateCustomerAppDataReply res = reply.getUpdateCustomerAppData();
                     if (!res.getStatus()) {
                         subscriber.onError(new RuntimeException(res.getDescription()));
                         return;
@@ -624,6 +728,7 @@ public final class Customer implements ICustomer {
      * @param metadata
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> updateMetadata(Map<String, DataMapValue> metadata) {
 
         AppSocket.UpdateCustomerMetadataCommand.Builder cmd = AppSocket.UpdateCustomerMetadataCommand
@@ -685,6 +790,7 @@ public final class Customer implements ICustomer {
      * @param keys
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> deleteMetadata(List<String> keys) {
 
         AppSocket.DeleteCustomerMetadataCommand.Builder cmd = AppSocket.DeleteCustomerMetadataCommand
@@ -734,6 +840,7 @@ public final class Customer implements ICustomer {
      * @param secondaryIds
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> updateSecondaryIds(List<SecondaryId> secondaryIds) {
 
         AppSocket.UpdateCustomerSecondaryIdCommand.Builder cmd = AppSocket.UpdateCustomerSecondaryIdCommand
@@ -791,6 +898,7 @@ public final class Customer implements ICustomer {
      * @param secondaryIds
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> deleteSecondaryIds(List<SecondaryId> secondaryIds) {
 
         AppSocket.DeleteCustomerSecondaryIdCommand.Builder cmd = AppSocket.DeleteCustomerSecondaryIdCommand
@@ -846,6 +954,7 @@ public final class Customer implements ICustomer {
      * @param tags
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> updateTags(List<Tag> tags) {
 
         AppSocket.UpdateCustomerTagCommand.Builder cmd = AppSocket.UpdateCustomerTagCommand
@@ -863,20 +972,23 @@ public final class Customer implements ICustomer {
             throw new RuntimeException("Invalid customer. customerId and/or customerNumber need to be set");
         }
 
-        cmd.addAllUpdates(tags.stream().map((tag) -> CommonModel.CustomerIndex
-                .newBuilder()
-                .setMapping(CommonModel.IndexMapping
-                        .newBuilder()
-                        .setKey(tag.key)
-                        .setValue(StringValue.of(tag.value))
-                        .build())
-                .setExpiresAt(Timestamp.newBuilder().setSeconds(tag.expiresAt).build())
-                .build())
-                .collect(Collectors.toList()));
+        tags.forEach(tag -> {
+            CommonModel.CustomerIndex.Builder idx = CommonModel.CustomerIndex
+                    .newBuilder()
+                    .setMapping(CommonModel.IndexMapping
+                            .newBuilder()
+                            .setKey(tag.key)
+                            .setValue(StringValue.of(tag.value))
+                            .build());
+            if (tag.expiresAt > 0) {
+                idx.setExpiresAt(Timestamp.newBuilder().setSeconds(tag.expiresAt).build());
+            }
+            cmd.addUpdates(idx);
+        });
 
         AppSocket.AppToServerCommand req = AppSocket.AppToServerCommand
                 .newBuilder()
-                .setUpdateCustomerTag(cmd)
+                .setUpdateCustomerTag(cmd.build())
                 .build();
 
         return new Mono<CustomerStateUpdateReply>() {
@@ -903,6 +1015,7 @@ public final class Customer implements ICustomer {
      * @param keys
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> deleteTags(List<String> keys) {
 
         AppSocket.DeleteCustomerTagCommand.Builder cmd = AppSocket.DeleteCustomerTagCommand
@@ -952,6 +1065,7 @@ public final class Customer implements ICustomer {
      * @param reminder
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> addReminder(Reminder reminder) {
         AppModel.CustomerReminder.Builder rem = AppModel.CustomerReminder
                 .newBuilder()
@@ -965,7 +1079,7 @@ public final class Customer implements ICustomer {
             rem.setPayload(StringValue.of(reminder.payload));
         }
 
-        if (reminder.interval > 0) {
+        if (reminder.interval >= 60) {
             rem.setInterval(Duration
                     .newBuilder()
                     .setSeconds(reminder.interval)
@@ -998,7 +1112,7 @@ public final class Customer implements ICustomer {
             @Override
             public void subscribe(CoreSubscriber<? super CustomerStateUpdateReply> subscriber) {
                 client.buildCommandReply(req.toByteArray(), replyDeserializer).subscribe(reply -> {
-                    AppSocket.UpdateCustomerStateReply res = reply.getUpdateCustomerState();
+                    AppSocket.UpdateCustomerAppDataReply res = reply.getUpdateCustomerAppData();
                     if (!res.getStatus()) {
                         subscriber.onError(new RuntimeException(res.getDescription()));
                         return;
@@ -1020,6 +1134,7 @@ public final class Customer implements ICustomer {
      * @param key
      * @return
      */
+    @Override
     public Mono<CustomerStateUpdateReply> cancelReminder(String key) {
 
         AppSocket.CancelCustomerReminderCommand.Builder cmd = AppSocket.CancelCustomerReminderCommand
@@ -1048,7 +1163,7 @@ public final class Customer implements ICustomer {
             @Override
             public void subscribe(CoreSubscriber<? super CustomerStateUpdateReply> subscriber) {
                 client.buildCommandReply(req.toByteArray(), replyDeserializer).subscribe(reply -> {
-                    AppSocket.UpdateCustomerStateReply res = reply.getUpdateCustomerState();
+                    AppSocket.UpdateCustomerAppDataReply res = reply.getUpdateCustomerAppData();
                     if (!res.getStatus()) {
                         subscriber.onError(new RuntimeException(res.getDescription()));
                         return;

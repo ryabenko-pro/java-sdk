@@ -8,6 +8,7 @@ apply plugin: 'java'
 apply plugin: "maven-publish"
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'com.adarshr.test-logger'
 
 dependencies {
     compile(project(':elarian-common'))
@@ -22,12 +23,36 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-test {
-    useJUnitPlatform()
-    testLogging {
-        events "passed", "skipped", "failed"
+task testEnvVar {
+    doLast {
+        exec {
+            file("${project.rootDir}/.env").readLines().each() {
+                def (key, value) = it.tokenize('=')
+                environment key, value
+            }
+        }
     }
 }
+
+test {
+    useJUnitPlatform()
+
+    maxParallelForks 1
+
+    testlogger {
+        theme 'mocha'
+        slowThreshold 5000
+        showSimpleNames true
+        showExceptions true
+        showStackTraces true
+        showFullStackTraces true
+        showCauses true
+        logLevel 'debug'
+        showStandardStreams true
+    }
+}
+
+test.dependsOn("testEnvVar")
 
 
 jar {

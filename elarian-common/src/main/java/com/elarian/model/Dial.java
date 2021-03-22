@@ -11,7 +11,12 @@ public final class Dial implements VoiceAction {
     public String callerId = "";
     public int maxDuration;
 
-    public Dial(List<CustomerNumber> customerNumbers) {
+    public Dial(List<CustomerNumber> customerNumbers, boolean record, boolean sequential, String ringbackTone, String callerId, int maxDuration) {
         this.customerNumbers = customerNumbers;
+        this.record = record;
+        this.sequential = sequential;
+        this.ringbackTone = ringbackTone;
+        this.callerId = callerId;
+        this.maxDuration = maxDuration;
     }
 }

@@ -8,5 +8,11 @@ public final class Say implements VoiceAction {
     public Say(String text) {
         this.text = text;
     }
+
+    public Say(String text, boolean playBeep, TextToSpeechVoice voice) {
+        this.text = text;
+        this.playBeep = playBeep;
+        this.voice = voice;
+    }
 }
 
