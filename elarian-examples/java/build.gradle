@@ -1,9 +1,5 @@
 apply plugin: 'application'
 
-repositories {
-    jcenter()
-}
-
 dependencies {
     implementation(project(':elarian-core'))
     implementation "org.slf4j:slf4j-jdk14:1.7.25"

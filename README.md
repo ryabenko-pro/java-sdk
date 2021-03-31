@@ -11,38 +11,22 @@ Take a look at the [API docs here](https://docs.elarian.com). For detailed info 
 
 ## Install
 
-You can depend on the [.jar](http://dl.bintray.com/elarian/java/com/elarian/java) through Maven (from `http://dl.bintray.com/elarian/java`):
+You can depend on the [.jar]() through Maven:
 ```xml
-<repositories>
-   <repository>
-      <id>elarian</id>
-      <name>Elarian</name>
-      <url>http://dl.bintray.com/elarian/java</url>
-   </repository>
-</repositories>
-...
 <dependency>
   <groupId>com.elarian</groupId>
-  <artifactId>jvm</artifactId>
+  <artifactId>elarian-core</artifactId>
   <version>0.2.1</version>
 </dependency>
 ```
 or sbt:
 
 ```
-resolvers += "elarian maven repository" at "http://dl.bintray.com/elarian/java"
-// Get all services
 libraryDependencies += "com.elarian" % "elarian-core" % "0.2.1"
 ```
 
 or Gradle:
 ```groovy
-repositories {
-  maven {
-    url  "http://dl.bintray.com/elarian/java"
-  }
-}
-
 dependencies{
   implementation 'com.elarian:elarian-core:0.2.1'
   // Or if you're building for android
@@ -104,7 +88,7 @@ See [SDK Spec](https://github.com/ElarianLtd/sdk-spec) for reference.
 
 ## Issues
 
-If you find a bug, please file an issue on [our issue tracker on GitHub](https://github.com/ElarianLtd/kotlin-sdk/issues).
+If you find a bug, please file an issue on [our issue tracker on GitHub](https://github.com/ElarianLtd/java-sdk/issues).
 
 ## Known Issues
 

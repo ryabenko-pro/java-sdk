@@ -26,7 +26,7 @@ public final class Reminder {
      * @param key Unique reminder key
      * @param payload Payload associated with the reminder
      * @param remindAt Timestamp in seconds
-     * @param interval Repeat interval in seconds. Must be >= 60
+     * @param interval Repeat interval in seconds. Must be greater than 60
      */
     public Reminder(String key, String payload, long remindAt, long interval) {
         this.key = key;

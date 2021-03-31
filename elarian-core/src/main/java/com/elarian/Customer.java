@@ -72,7 +72,7 @@ public final class Customer implements ICustomer {
 
 
     /**
-     *
+     * Get customer id
      * @return
      */
     @Override

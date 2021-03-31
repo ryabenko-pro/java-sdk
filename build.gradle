@@ -1,5 +1,12 @@
 buildscript {
-    ext.kotlin_version = '1.4.31'
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    ext.kotlin_version = '1.4.32'
+    ext.maven_username = properties.getProperty("maven.repo.username")
+    ext.maven_password = properties.getProperty("maven.repo.password")
+    ext.maven_group_id = properties.getProperty("maven.groupId")
+    ext.maven_url = project.version.endsWith('-SNAPSHOT') ? properties.getProperty("maven.repo.snapshots") : properties.getProperty("maven.repo.releases")
     repositories {
         google()
         mavenCentral()

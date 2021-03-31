@@ -2,10 +2,6 @@ plugins {
     application
 }
 
-repositories {
-    jcenter()
-}
-
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(project(":elarian-core"))

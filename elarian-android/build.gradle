@@ -2,13 +2,12 @@
 apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
 apply plugin: 'com.kezong.fat-aar'
-apply plugin: 'com.jfrog.bintray'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-group properties.getProperty("bintray.groupId")
-version properties.getProperty("bintray.version")
+group properties.getProperty("maven.groupId")
+version properties.getProperty("maven.version")
 
 String protobufVersion = "3.15.5"
 
@@ -68,32 +67,46 @@ task findConventions {
         println project.getConvention()
     }
 }
-
-bintray {
-    dryRun = false
-    publish = true
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.key")
-
-    publications = ['release']
-    pkg {
-        repo = properties.getProperty("bintray.repo")
-        name = properties.getProperty("bintray.package")
-        userOrg = properties.getProperty("bintray.organization")
-        vcsUrl = properties.getProperty("bintray.vcsUrl")
-        licenses = ['MIT']
-        labels = ['android', 'elarian', 'sms', 'telegram', 'whatsapp', 'voice', 'ussd', 'airtime', 'payment']
-    }
-}
-
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
+            mavenJava(MavenPublication) {
+                groupId maven_group_id
+                artifactId project.name
+                version project.version
                 from components.release
-                groupId = properties.getProperty("bintray.groupId")
-                artifactId = project.name
-                version = project.version
+                pom {
+                    name = 'Elarian'
+                    description = 'Convenient access to the Elarian APIs from applications written in Kotlin, Java, and Scala.'
+                    url = 'https://developers.elarian.com'
+                    properties = []
+                    licenses {
+                        license {
+                            name = 'MIT'
+                            url = 'https://raw.githubusercontent.com/ElarianLtd/java-sdk/master/LICENSE'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'aksalj'
+                            name = 'Salama AB'
+                            email = 'salama@elarian.com'
+                        }
+                    }
+                    scm {
+                        connection = 'scm:git:git@github.com:ElarianLtd/java-sdk.git'
+                        url = 'https://github.com/ElarianLtd/java-sdk'
+                    }
+                }
+            }
+        }
+        repositories {
+            maven {
+                credentials {
+                    username maven_username
+                    password maven_password
+                }
+                url maven_url
             }
         }
     }

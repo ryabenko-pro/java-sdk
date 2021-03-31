@@ -1,12 +1,12 @@
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-group properties.getProperty("bintray.groupId")
-version properties.getProperty("bintray.version")
+group properties.getProperty("maven.groupId")
+version properties.getProperty("maven.version")
 
 apply plugin: 'java'
-apply plugin: "maven-publish"
-apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'com.adarshr.test-logger'
 
@@ -21,6 +21,8 @@ dependencies {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
+    withJavadocJar()
+    withSourcesJar()
 }
 
 task testEnvVar {
@@ -74,17 +76,8 @@ task javadoc(overwrite: true, type: Javadoc) {
     title = "Elarian Java SDK"
     options {
         links "http://docs.oracle.com/javase/8/docs/api/"
+        addBooleanOption('html5', true)
     }
-}
-
-task sourcesJar(type: Jar) {
-    from sourceSets.main.allJava
-    classifier = 'sources'
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
 }
 
 shadowJar {
@@ -98,32 +91,43 @@ artifacts {
 
 publishing {
     publications {
-        SDK(MavenPublication) {
+        mavenJava(MavenPublication) {
             artifact shadowJar
-            groupId properties.getProperty("bintray.groupId")
+            groupId maven_group_id
             artifactId project.name
             version project.version
+            pom {
+                name = 'Elarian'
+                description = 'Convenient access to the Elarian APIs from applications written in Kotlin, Java, and Scala.'
+                url = 'https://developers.elarian.com'
+                properties = []
+                licenses {
+                    license {
+                        name = 'MIT'
+                        url = 'https://raw.githubusercontent.com/ElarianLtd/java-sdk/master/LICENSE'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'aksalj'
+                        name = 'Salama AB'
+                        email = 'salama@elarian.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git@github.com:ElarianLtd/java-sdk.git'
+                    url = 'https://github.com/ElarianLtd/java-sdk'
+                }
+            }
         }
     }
-}
-
-bintray {
-    dryRun = false
-    publish = true
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.key")
-    publications = ['SDK']
-    pkg {
-        repo = properties.getProperty("bintray.repo")
-        name = properties.getProperty("bintray.package")
-        userOrg = properties.getProperty("bintray.organization")
-        vcsUrl = properties.getProperty("bintray.vcsUrl")
-        licenses = ['MIT']
-        version {
-            name = project.version
-            desc = 'Official Elarian SDK'
-            released  = new Date()
-            attributes = ['maturity': 'Official']
+    repositories {
+        maven {
+            credentials {
+                username maven_username
+                password maven_password
+            }
+            url maven_url
         }
     }
 }
