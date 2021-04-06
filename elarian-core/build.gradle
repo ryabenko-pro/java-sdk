@@ -5,7 +5,7 @@ group properties.getProperty("maven.groupId")
 version properties.getProperty("maven.version")
 
 apply plugin: 'java'
-apply plugin: 'maven-publish'
+apply plugin: 'maven'
 apply plugin: 'signing'
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'com.adarshr.test-logger'
@@ -25,21 +25,8 @@ java {
     withSourcesJar()
 }
 
-task testEnvVar {
-    doLast {
-        exec {
-            file("${project.rootDir}/.env").readLines().each() {
-                def (key, value) = it.tokenize('=')
-                environment key, value
-            }
-        }
-    }
-}
-
 test {
     useJUnitPlatform()
-
-    maxParallelForks 1
 
     testlogger {
         theme 'mocha'
@@ -49,12 +36,23 @@ test {
         showStackTraces true
         showFullStackTraces true
         showCauses true
-        logLevel 'debug'
+        logLevel 'info'
         showStandardStreams true
     }
-}
 
-test.dependsOn("testEnvVar")
+    environment 'APP_ID', properties.getProperty('APP_ID')
+    environment 'ORG_ID', properties.getProperty('ORG_ID')
+    environment 'API_KEY', properties.getProperty('API_KEY')
+    environment 'PURSE_ID', properties.getProperty('PURSE_ID')
+    environment 'USSD_CODE', properties.getProperty('USSD_CODE')
+    environment 'VOICE_NUMBER', properties.getProperty('VOICE_NUMBER')
+    environment 'SMS_SENDER_ID', properties.getProperty('SMS_SENDER_ID')
+    environment 'MPESA_PAYBILL', properties.getProperty('MPESA_PAYBILL')
+    environment 'SMS_SHORT_CODE', properties.getProperty('SMS_SHORT_CODE')
+    environment 'TELEGRAM_NUMBER', properties.getProperty('TELEGRAM_NUMBER')
+    environment 'WHATSAPP_NUMBER', properties.getProperty('WHATSAPP_NUMBER')
+    environment 'MESSENNGER_NUMBER', properties.getProperty('MESSENNGER_NUMBER')
+}
 
 
 jar {
@@ -85,49 +83,53 @@ shadowJar {
 }
 
 artifacts {
-    archives javadocJar
-    archives sourcesJar
+    archives javadocJar, sourcesJar
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact shadowJar
-            groupId maven_group_id
-            artifactId project.name
-            version project.version
-            pom {
-                name = 'Elarian'
-                description = 'Convenient access to the Elarian APIs from applications written in Kotlin, Java, and Scala.'
-                url = 'https://developers.elarian.com'
-                properties = []
-                licenses {
-                    license {
-                        name = 'MIT'
-                        url = 'https://raw.githubusercontent.com/ElarianLtd/java-sdk/master/LICENSE'
-                    }
-                }
-                developers {
-                    developer {
-                        id = 'aksalj'
-                        name = 'Salama AB'
-                        email = 'salama@elarian.com'
-                    }
-                }
-                scm {
-                    connection = 'scm:git:git@github.com:ElarianLtd/java-sdk.git'
-                    url = 'https://github.com/ElarianLtd/java-sdk'
-                }
-            }
+signing {
+    sign configurations.archives
+}
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+      repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+        authentication(userName: ossrhUsername, password: ossrhPassword)
+      }
+
+      snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+        authentication(userName: ossrhUsername, password: ossrhPassword)
+      }
+
+      pom.project {
+        name 'Elarian'
+        packaging 'jar'
+        description 'Elarian is a customer engagement runtime that let\'s you code against customer data allowing you to track, schedule, execute and analyze engagement actions from a customer POV.'
+        url 'https://developers.elarian.com'
+
+        scm {
+          connection 'scm:git:git@github.com:ElarianLtd/java-sdk.git'
+          developerConnection 'scm:git:https://github.com:ElarianLtd/java-sdk'
+          url 'https://github.com/ElarianLtd/java-sdk'
         }
-    }
-    repositories {
-        maven {
-            credentials {
-                username maven_username
-                password maven_password
-            }
-            url maven_url
+
+        licenses {
+          license {
+            name 'MIT'
+            url 'https://raw.githubusercontent.com/ElarianLtd/java-sdk/master/LICENSE'
+          }
         }
+
+        developers {
+          developer {
+            id 'salama'
+            name 'Salama Balekage'
+            email 'salama@elarian.com'
+          }
+        }
+      }
     }
+  }
 }
