@@ -16,12 +16,12 @@ buildscript {
         }
     }
     dependencies {
+        classpath 'com.kezong:fat-aar:1.2.15'
         classpath 'com.android.tools.build:gradle:4.2.0-beta06'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.github.jengelman.gradle.plugins:shadow:5.2.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
         classpath 'gradle.plugin.de.fuerstenau:BuildConfigPlugin:1.1.8'
-        classpath 'com.kezong:fat-aar:1.2.15'
         classpath 'com.adarshr:gradle-test-logger-plugin:2.1.1'
     }
 }

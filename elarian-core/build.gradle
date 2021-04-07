@@ -83,11 +83,7 @@ shadowJar {
 }
 
 artifacts {
-    archives javadocJar, sourcesJar
-}
-
-signing {
-    sign configurations.archives
+    archives javadocJar, sourcesJar, shadowJar
 }
 
 uploadArchives {
@@ -96,11 +92,11 @@ uploadArchives {
       beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
       repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
-        authentication(userName: ossrhUsername, password: ossrhPassword)
+        authentication(userName: findProperty('ossrhUsername'), password: findProperty('ossrhPassword'))
       }
 
       snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
-        authentication(userName: ossrhUsername, password: ossrhPassword)
+        authentication(userName: findProperty('ossrhUsername'), password: findProperty('ossrhPassword'))
       }
 
       pom.project {
@@ -132,4 +128,8 @@ uploadArchives {
       }
     }
   }
+}
+
+signing {
+    sign configurations.archives
 }
