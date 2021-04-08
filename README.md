@@ -16,21 +16,21 @@ You can depend on the [.jar]() through Maven:
 <dependency>
   <groupId>com.elarian</groupId>
   <artifactId>elarian-core</artifactId>
-  <version>0.2.1</version>
+  <version>0.2.2</version>
 </dependency>
 ```
 or sbt:
 
 ```
-libraryDependencies += "com.elarian" % "elarian-core" % "0.2.1"
+libraryDependencies += "com.elarian" % "elarian-core" % "0.2.2"
 ```
 
 or Gradle:
 ```groovy
 dependencies{
-  implementation 'com.elarian:elarian-core:0.2.1'
+  implementation 'com.elarian:elarian-core:0.2.2'
   // Or if you're building for android
-  // implementation 'com.elarian:elarian-android:0.2.1'
+  // implementation 'com.elarian:elarian-android:0.2.2'
 }
 ```
 
@@ -92,4 +92,4 @@ If you find a bug, please file an issue on [our issue tracker on GitHub](https:/
 
 ## Known Issues
 
-- [ ] Android module not fully implemented
+- Elarian domain name not resolving on Android

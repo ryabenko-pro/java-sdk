@@ -1,5 +1,5 @@
 
-apply plugin: 'maven-publish'
+apply plugin: 'maven'
 apply plugin: 'com.android.library'
 apply plugin: 'signing'
 
@@ -67,50 +67,48 @@ task findConventions {
 }
 
 signing {
-    sign publishing.publications
+    sign configurations.archives
 }
 
 afterEvaluate {
-    publishing {
-        publications {
-            mavenJava(MavenPublication) {
-                groupId maven_group_id
-                artifactId project.name
-                version project.version
-                from components.release
-                pom {
-                    name = 'Elarian'
-                    description = 'Elarian is a customer engagement runtime that let\'s you code against customer data allowing you to track, schedule, execute and analyze engagement actions from a customer POV.'
-                    url = 'https://developers.elarian.com'
-                    properties = []
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+                repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                    authentication(userName: findProperty('ossrhUsername'), password: findProperty('ossrhPassword'))
+                }
+
+                snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+                    authentication(userName: findProperty('ossrhUsername'), password: findProperty('ossrhPassword'))
+                }
+
+                pom.project {
+                    name 'Elarian'
+                    packaging 'jar'
+                    description 'Elarian is a customer engagement runtime that let\'s you code against customer data allowing you to track, schedule, execute and analyze engagement actions from a customer POV.'
+                    url 'https://developers.elarian.com'
+
+                    scm {
+                        connection 'scm:git:git@github.com:ElarianLtd/java-sdk.git'
+                        developerConnection 'scm:git:https://github.com:ElarianLtd/java-sdk'
+                        url 'https://github.com/ElarianLtd/java-sdk'
+                    }
+
                     licenses {
                         license {
-                            name = 'MIT'
-                            url = 'https://raw.githubusercontent.com/ElarianLtd/java-sdk/master/LICENSE'
+                            name 'MIT'
+                            url 'https://raw.githubusercontent.com/ElarianLtd/java-sdk/master/LICENSE'
                         }
                     }
+
                     developers {
                         developer {
-                            id = 'salama'
-                            name = 'Salama Balekage'
-                            email = 'salama@elarian.com'
+                            id 'salama'
+                            name 'Salama Balekage'
+                            email 'salama@elarian.com'
                         }
-                    }
-                    scm {
-                        connection = 'scm:git:git@github.com:ElarianLtd/java-sdk.git'
-                        url = 'https://github.com/ElarianLtd/java-sdk'
-                    }
-                }
-            }
-        }
-        repositories {
-            repositories {
-                maven {
-                    name = "mavencentral"
-                    url = maven_url
-                    credentials {
-                        username ossrhUsername
-                        password ossrhPassword
                     }
                 }
             }
