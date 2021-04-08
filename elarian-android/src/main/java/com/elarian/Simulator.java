@@ -39,12 +39,12 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
     private NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody> onSendChannelPaymentNotificationHandler;
     private NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody> onCheckoutPaymentNotificationHandler;
 
-    public Simulator(String apiKey, String orgId, String appId) {
-        this(apiKey, orgId, appId, new ConnectionConfig());
+    public Simulator(String authToken, String orgId, String appId) {
+        this(authToken, orgId, appId, new ConnectionConfig());
     }
 
-    public Simulator(String apiKey, String orgId, String appId, ConnectionConfig connectionConfig) {
-        super(new ClientConfig(apiKey, orgId, appId, connectionConfig, true));
+    public Simulator(String authToken, String orgId, String appId, ConnectionConfig connectionConfig) {
+        super(new ClientConfig(authToken, orgId, appId, connectionConfig));
 
         registerGlobalNotificationHandler((Function<SimulatorSocket.ServerToSimulatorNotification, Mono<SimulatorSocket.ServerToSimulatorNotificationReply>>) notif -> new Mono<SimulatorSocket.ServerToSimulatorNotificationReply>() {
             @Override
@@ -160,9 +160,9 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
         AppSocket.AppConnectionMetadata.Builder builder = AppSocket.AppConnectionMetadata.newBuilder()
                 .setAppId(clientOpts.appId)
                 .setOrgId(clientOpts.orgId)
-                .setApiKey(StringValue.newBuilder().setValue(clientOpts.apiKey));
-        builder.setSimulatorMode(true);
-        builder.setSimplexMode(false);
+                .setAuthToken(StringValue.newBuilder().setValue(clientOpts.authToken));
+        builder.setSimulatorMode(false);
+        builder.setSimplexMode(true);
         return builder.build().toByteArray();
     }
 

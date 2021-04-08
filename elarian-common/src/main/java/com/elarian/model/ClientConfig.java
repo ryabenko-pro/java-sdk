@@ -6,21 +6,34 @@ public final class ClientConfig {
     public final String appId;
     public final String orgId;
     public final String apiKey;
-    public boolean allowNotifications = true;
-    public ConnectionConfig connectionConfig = new ConnectionConfig();
-
-
-    public ClientConfig(@NonNull String apiKey, @NonNull String orgId, @NonNull String appId, boolean allowNotifications, ConnectionConfig connectionConfig) {
-        this.orgId = orgId;
-        this.appId = appId;
-        this.apiKey = apiKey;
-        this.allowNotifications = allowNotifications;
-        this.connectionConfig = connectionConfig;
-    }
+    public String authToken;
+    public boolean allowNotifications;
+    public ConnectionConfig connectionConfig;
 
     public ClientConfig(@NonNull String apiKey, @NonNull String orgId, @NonNull String appId) {
         this.orgId = orgId;
         this.appId = appId;
         this.apiKey = apiKey;
+        this.authToken = null;
+        this.allowNotifications = true;
+        this.connectionConfig = new ConnectionConfig();
+    }
+
+    public ClientConfig(@NonNull String apiKey, @NonNull String orgId, @NonNull String appId, ConnectionConfig connectionConfig, boolean allowNotifications) {
+        this.orgId = orgId;
+        this.appId = appId;
+        this.apiKey = apiKey;
+        this.authToken = null;
+        this.allowNotifications = allowNotifications;
+        this.connectionConfig = connectionConfig;
+    }
+
+    public ClientConfig(@NonNull String authToken, @NonNull String orgId, @NonNull String appId, ConnectionConfig connectionConfig) {
+        this.orgId = orgId;
+        this.appId = appId;
+        this.authToken = authToken;
+        this.apiKey = null;
+        this.allowNotifications = false;
+        this.connectionConfig = connectionConfig;
     }
 }

@@ -1,7 +1,7 @@
 
 apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
-apply plugin: 'com.kezong.fat-aar'
+apply plugin: 'signing'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
@@ -23,6 +23,7 @@ android {
     }
     lintOptions { abortOnError false }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -33,12 +34,10 @@ android {
     }
 }
 
-configurations.embed.transitive = true
-
 dependencies {
-    api "com.google.protobuf:protobuf-javalite:$protobufVersion"
-    api 'io.rsocket:rsocket-core:1.1.0'
-    api 'io.rsocket:rsocket-transport-netty:1.1.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    compile "com.google.protobuf:protobuf-javalite:$protobufVersion"
+    compile(project(':elarian-common'))
 }
 
 
@@ -58,8 +57,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
 }
 artifacts {
-    archives javadocJar
-    archives sourcesJar
+    archives javadocJar, sourcesJar
 }
 
 task findConventions {
@@ -67,6 +65,11 @@ task findConventions {
         println project.getConvention()
     }
 }
+
+signing {
+    sign publishing.publications
+}
+
 afterEvaluate {
     publishing {
         publications {
@@ -77,7 +80,7 @@ afterEvaluate {
                 from components.release
                 pom {
                     name = 'Elarian'
-                    description = 'Convenient access to the Elarian APIs from applications written in Kotlin, Java, and Scala.'
+                    description = 'Elarian is a customer engagement runtime that let\'s you code against customer data allowing you to track, schedule, execute and analyze engagement actions from a customer POV.'
                     url = 'https://developers.elarian.com'
                     properties = []
                     licenses {
@@ -88,8 +91,8 @@ afterEvaluate {
                     }
                     developers {
                         developer {
-                            id = 'aksalj'
-                            name = 'Salama AB'
+                            id = 'salama'
+                            name = 'Salama Balekage'
                             email = 'salama@elarian.com'
                         }
                     }
@@ -101,12 +104,15 @@ afterEvaluate {
             }
         }
         repositories {
-            maven {
-                credentials {
-                    username maven_username
-                    password maven_password
+            repositories {
+                maven {
+                    name = "mavencentral"
+                    url = maven_url
+                    credentials {
+                        username ossrhUsername
+                        password ossrhPassword
+                    }
                 }
-                url maven_url
             }
         }
     }

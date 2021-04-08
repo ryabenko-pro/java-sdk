@@ -47,12 +47,12 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
     private NotificationHandler<WalletPaymentStatusNotification, MessageBody> onWalletPaymentStatusNotificationHandler;
     private NotificationHandler<CustomerActivityNotification, MessageBody> onCustomerActivityNotificationHandler;
 
-    public Elarian(String apiKey, String orgId, String appId) {
-        this(apiKey, orgId, appId, new ConnectionConfig(), true);
+    public Elarian(String authToken, String orgId, String appId) {
+        this(authToken, orgId, appId, new ConnectionConfig());
     }
 
-    public Elarian(String apiKey, String orgId, String appId, ConnectionConfig connectionConfig, boolean allowNotifications) {
-        super(new ClientConfig(apiKey, orgId, appId, connectionConfig, allowNotifications));
+    public Elarian(String authToken, String orgId, String appId, ConnectionConfig connectionConfig) {
+        super(new ClientConfig(authToken, orgId, appId, connectionConfig));
 
         registerGlobalNotificationHandler(notif -> new Mono<AppSocket.ServerToAppNotificationReply>() {
             @Override
@@ -704,9 +704,9 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
         AppSocket.AppConnectionMetadata.Builder builder = AppSocket.AppConnectionMetadata.newBuilder()
                 .setAppId(opts.appId)
                 .setOrgId(opts.orgId)
-                .setApiKey(StringValue.newBuilder().setValue(opts.apiKey));
+                .setAuthToken(StringValue.newBuilder().setValue(opts.authToken));
 
-        builder.setSimplexMode(!opts.allowNotifications);
+        builder.setSimplexMode(true);
         builder.setSimulatorMode(false);
         return builder.build().toByteArray();
     }

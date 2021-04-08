@@ -93,4 +93,3 @@ If you find a bug, please file an issue on [our issue tracker on GitHub](https:/
 ## Known Issues
 
 - [ ] Android module not fully implemented
-- [ ] Test cases not fully implemented
