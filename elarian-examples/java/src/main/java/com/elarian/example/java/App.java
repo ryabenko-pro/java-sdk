@@ -17,9 +17,9 @@ public class App {
 
         log.info("Starting...");
 
-        String appId = "GithubActions";
-        String orgId = "og-f5OUHn";
-        String apiKey = "el_api_key_db2fc77601f0a075dacfe78d3ab5d5560925a0ae9a1ba5e95f49477b73d09d5a";
+        String appId = System.getenv("APP_ID");
+        String orgId = System.getenv("ORG_ID");
+        String apiKey = System.getenv("API_KEY");
 
         Elarian app = new Elarian(apiKey, orgId, appId);
 
