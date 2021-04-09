@@ -111,6 +111,14 @@ afterEvaluate {
                         }
                     }
                 }
+
+                pom.withXml {
+                    asNode().dependencies.dependency.each { dep ->
+                        if(dep.artifactId.last().value().last() in ["elarian-common"]) {
+                            assert dep.parent().remove(dep)
+                        }
+                    }
+                }
             }
         }
     }

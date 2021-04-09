@@ -1,18 +1,12 @@
 package com.elarian.example.java;
 
-
 import com.elarian.ConnectionListener;
 import com.elarian.Elarian;
-import com.elarian.model.CustomerNumber;
 import com.elarian.model.Message;
 import com.elarian.model.MessageBody;
 import com.elarian.model.MessagingChannel;
 import com.elarian.model.Tag;
 
-import reactor.core.publisher.Mono;
-
-import java.util.Date;
-import java.util.function.Consumer;
 import java.util.logging.Logger;
 
 public class App {
