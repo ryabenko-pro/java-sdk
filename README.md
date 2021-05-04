@@ -1,7 +1,5 @@
 # Elarian
 
-[ ![Download](https://api.bintray.com/packages/elarian/java/com.elarian/images/download.svg) ](https://bintray.com/elarian/java/com.elarian/_latestVersion)
-
 >
 > The SDK provides convenient access to the Elarian APIs from applications written in Kotlin, Java, and Scala.
 >
