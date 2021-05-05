@@ -37,6 +37,11 @@ dependencies{
 The SDK needs to be initialized with your API key, which you get from the [dashboard](https://account.elarian.com).
 
 ```java
+import com.elarian.*;
+import com.elarian.model.*;
+
+// ...
+
 String appId = "test_app";
 String orgId = "test_org";
 String apiKey = "test_api_key";
@@ -60,6 +65,11 @@ app.connect(new ConnectionListener() {
     }
 
     @Override
+    public void onError(Throwable throwable) {
+        log.error("Failed to connect: " + throwable.getMessage());
+    }
+
+    @Override
     public void onConnected() {
         log.info("Connected!");
         Tag tag = new Tag("some-key", "some-value");
@@ -71,11 +81,12 @@ app.connect(new ConnectionListener() {
                         err -> err.printStackTrace()
                 );
     }
-    @Override
-    public void onError(Throwable throwable) {
-        log.warning("Failed to connect: " + throwable.getMessage());
-    }
 });
+try {
+    Thread.currentThread().join();
+} catch (InterruptedException e) {
+    e.printStackTrace();
+}
 ```
 
 See [examples](elarian-examples/) for more usage examples.

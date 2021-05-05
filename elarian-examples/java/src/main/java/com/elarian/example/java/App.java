@@ -1,11 +1,7 @@
 package com.elarian.example.java;
 
-import com.elarian.ConnectionListener;
-import com.elarian.Elarian;
-import com.elarian.model.Message;
-import com.elarian.model.MessageBody;
-import com.elarian.model.MessagingChannel;
-import com.elarian.model.Tag;
+import com.elarian.*;
+import com.elarian.model.*;
 
 import java.util.logging.Logger;
 
@@ -57,18 +53,10 @@ public class App {
             }
         });
 
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(10000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        t.setDaemon(false);
-        t.start();
-
+        try {
+            Thread.currentThread().join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
