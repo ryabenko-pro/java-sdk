@@ -819,6 +819,10 @@ public final class MessagingModel {
      */
     MESSAGE_DELIVERY_STATUS_INVALID_REQUEST(416),
     /**
+     * <code>MESSAGE_DELIVERY_STATUS_INSUFFICIENT_CREDITS = 417;</code>
+     */
+    MESSAGE_DELIVERY_STATUS_INSUFFICIENT_CREDITS(417),
+    /**
      * <code>MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR = 501;</code>
      */
     MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR(501),
@@ -922,6 +926,10 @@ public final class MessagingModel {
      */
     public static final int MESSAGE_DELIVERY_STATUS_INVALID_REQUEST_VALUE = 416;
     /**
+     * <code>MESSAGE_DELIVERY_STATUS_INSUFFICIENT_CREDITS = 417;</code>
+     */
+    public static final int MESSAGE_DELIVERY_STATUS_INSUFFICIENT_CREDITS_VALUE = 417;
+    /**
      * <code>MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR = 501;</code>
      */
     public static final int MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR_VALUE = 501;
@@ -972,6 +980,7 @@ public final class MessagingModel {
         case 414: return MESSAGE_DELIVERY_STATUS_DECOMMISSIONED_CUSTOMERID;
         case 415: return MESSAGE_DELIVERY_STATUS_REJECTED;
         case 416: return MESSAGE_DELIVERY_STATUS_INVALID_REQUEST;
+        case 417: return MESSAGE_DELIVERY_STATUS_INSUFFICIENT_CREDITS;
         case 501: return MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR;
         default: return null;
       }
