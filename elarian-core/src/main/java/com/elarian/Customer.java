@@ -36,6 +36,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.StringValue;
 import com.google.protobuf.Timestamp;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -723,6 +724,30 @@ public final class Customer implements ICustomer {
 
 
     /**
+     * Get customer's metadata
+     * @return
+     */
+    public Mono<Map<String, DataMapValue>> getMetadata() {
+        return new Mono<Map<String, DataMapValue>>() {
+          @Override
+          public void subscribe(CoreSubscriber<? super Map<String, DataMapValue>> subscriber) {
+            getState()
+                .subscribe(
+                    state -> {
+                      if (state.identityState != null) {
+                        subscriber.onNext(state.identityState.metadata);
+                      } else {
+                          subscriber.onNext(new HashMap<>());
+                      }
+                      subscriber.onComplete();
+                    },
+                    subscriber::onError);
+              }
+        };
+    }
+
+
+    /**
      * Update customer metadata
      *
      * @param metadata
@@ -830,6 +855,30 @@ public final class Customer implements ICustomer {
                             res.getDescription()));
                     subscriber.onComplete();
                 }, subscriber::onError);
+            }
+        };
+    }
+
+
+    /**
+     * Get customer's secondary Ids
+     * @return
+     */
+    public Mono<List<SecondaryId>> getSecondaryIds() {
+        return new Mono<List<SecondaryId>>() {
+            @Override
+            public void subscribe(CoreSubscriber<? super List<SecondaryId>> subscriber) {
+                getState()
+                        .subscribe(
+                                state -> {
+                                    if (state.identityState != null) {
+                                        subscriber.onNext(state.identityState.secondaryIds);
+                                    } else {
+                                        subscriber.onNext(new ArrayList<>());
+                                    }
+                                    subscriber.onComplete();
+                                },
+                                subscriber::onError);
             }
         };
     }
@@ -947,6 +996,29 @@ public final class Customer implements ICustomer {
         };
     }
 
+
+    /**
+     * Get customer's tags
+     * @return
+     */
+    public Mono<List<Tag>> getTags() {
+        return new Mono<List<Tag>>() {
+            @Override
+            public void subscribe(CoreSubscriber<? super List<Tag>> subscriber) {
+                getState()
+                        .subscribe(
+                                state -> {
+                                    if (state.identityState != null) {
+                                        subscriber.onNext(state.identityState.tags);
+                                    } else {
+                                        subscriber.onNext(new ArrayList<>());
+                                    }
+                                    subscriber.onComplete();
+                                },
+                                subscriber::onError);
+            }
+        };
+    }
 
     /**
      * Update customer tags

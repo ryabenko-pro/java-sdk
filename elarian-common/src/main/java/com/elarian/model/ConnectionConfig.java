@@ -12,6 +12,6 @@ public final class ConnectionConfig {
     }
 
     public ConnectionConfig() {
-        this(60000, 1000, false);
+        this(60000, 1000, true);
     }
 }

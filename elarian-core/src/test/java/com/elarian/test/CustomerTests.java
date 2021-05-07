@@ -28,6 +28,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static org.awaitility.Awaitility.await;
@@ -161,6 +162,14 @@ public class CustomerTests {
 
     @Test
     @Order(11)
+    void getMetadata() {
+        Map<String, DataMapValue> metadata = customer.getMetadata().block(Duration.ofSeconds(5));
+        assertArrayEquals(new byte[] { 0, 3, 22, 86, 99 }, metadata.get("bio_data").bytes);
+        assertEquals("123", metadata.get("id_number").string);
+    }
+
+    @Test
+    @Order(12)
     void deleteMetadata() {
         CustomerState state = customer.getState().block(Duration.ofSeconds(5));
         assertNotNull(state);
@@ -179,7 +188,7 @@ public class CustomerTests {
     }
 
     @Test
-    @Order(12)
+    @Order(13)
     void updateSecondaryIds() {
         List<SecondaryId> secondaryIds = Arrays.asList(
                 new SecondaryId("passport", "8367333"),
@@ -194,11 +203,17 @@ public class CustomerTests {
         assertNotNull(state);
         assertTrue(state.identityState.secondaryIds.stream().map(i -> i.key).collect(Collectors.toList()).containsAll(Arrays.asList("passport", "driver_license")));
         assertTrue(state.identityState.secondaryIds.stream().map(i -> i.value).collect(Collectors.toList()).containsAll(Arrays.asList("8367333", "2341234")));
-
     }
 
     @Test
-    @Order(13)
+    @Order(14)
+    void getSecondaryIds() {
+        List<SecondaryId> secondaryIds = customer.getSecondaryIds().block(Duration.ofSeconds(5));
+        assertTrue(secondaryIds.stream().map(i -> i.key).collect(Collectors.toList()).containsAll(Arrays.asList("passport", "driver_license")));
+    }
+
+    @Test
+    @Order(15)
     void deleteSecondaryIds() {
         List<SecondaryId> secondaryIds = Arrays.asList(
                 new SecondaryId("passport", "8367333"),
@@ -214,7 +229,7 @@ public class CustomerTests {
     }
 
     @Test
-    @Order(14)
+    @Order(16)
     void updateTags() {
         List<Tag> tags = Arrays.asList(
                 new Tag("user_segment", "money"),
@@ -232,7 +247,14 @@ public class CustomerTests {
     }
 
     @Test
-    @Order(15)
+    @Order(17)
+    void getTags() {
+        List<Tag> tags = customer.getTags().block(Duration.ofSeconds(5));
+        assertTrue(tags.stream().map(i -> i.key).collect(Collectors.toList()).containsAll(Arrays.asList("user_segment", "user_target")));
+    }
+
+    @Test
+    @Order(18)
     void deleteTags() {
         CustomerStateUpdateReply reply = customer.deleteTags(Arrays.asList("user_segment", "user_target")).block(Duration.ofSeconds(5));
         assertNotNull(reply);
@@ -244,7 +266,7 @@ public class CustomerTests {
     }
 
     @Test
-    @Order(16)
+    @Order(19)
     void addReminder() {
         Reminder reminder = new Reminder("rem-key", "some-payload", (System.currentTimeMillis() + 60000) / 1000);
         CustomerStateUpdateReply reply = customer.addReminder(reminder).block(Duration.ofSeconds(5));
@@ -253,7 +275,7 @@ public class CustomerTests {
     }
 
     @Test
-    @Order(17)
+    @Order(20)
     void cancelReminder() {
         CustomerStateUpdateReply reply = customer.cancelReminder("rem-key").block(Duration.ofSeconds(5));
         assertNotNull(reply);

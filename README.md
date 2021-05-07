@@ -5,7 +5,7 @@
 >
 
 ## Documentation
-Take a look at the [API docs here](https://docs.elarian.com). For detailed info on this SDK, see the [reference](https://elarianltd.github.io/java-sdk/).
+Take a look at the [API docs here](https://developers.elarian.com). For detailed info on this SDK, see the [reference](https://elarianltd.github.io/java-sdk/).
 
 ## Install
 
@@ -14,21 +14,21 @@ You can depend on the [.jar]() through Maven:
 <dependency>
   <groupId>com.elarian</groupId>
   <artifactId>elarian-core</artifactId>
-  <version>0.2.2</version>
+  <version>0.2.3</version>
 </dependency>
 ```
 or sbt:
 
 ```
-libraryDependencies += "com.elarian" % "elarian-core" % "0.2.2"
+libraryDependencies += "com.elarian" % "elarian-core" % "0.2.3"
 ```
 
 or Gradle:
 ```groovy
 dependencies{
-  implementation 'com.elarian:elarian-core:0.2.2'
+  implementation 'com.elarian:elarian-core:0.2.3'
   // Or if you're building for android
-  // implementation 'com.elarian:elarian-android:0.2.2'
+  // implementation 'com.elarian:elarian-android:0.2.3'
 }
 ```
 
