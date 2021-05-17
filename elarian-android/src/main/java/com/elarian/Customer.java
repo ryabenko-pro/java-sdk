@@ -18,7 +18,7 @@ import com.elarian.model.ConsentUpdateReply;
 import com.elarian.model.CustomerNumber;
 import com.elarian.model.CustomerState;
 import com.elarian.model.CustomerStateUpdateReply;
-import com.elarian.model.DataMapValue;
+import com.elarian.model.DataValue;
 import com.elarian.model.IdentityState;
 import com.elarian.model.Message;
 import com.elarian.model.MessageDeliveryStatus;
@@ -36,6 +36,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.StringValue;
 import com.google.protobuf.Timestamp;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -200,13 +201,13 @@ public final class Customer implements ICustomer {
                                 .collect(Collectors.toList());
 
                         identity.getMetadataMap().forEach((key, value) -> {
-                            DataMapValue val = null;
+                            DataValue val = null;
                             String strVal = value.getStringVal();
                             ByteString byteString = value.getBytesVal();
                             if (byteString != null && !byteString.isEmpty()) {
-                                val = DataMapValue.of(byteString.toByteArray());
+                                val = DataValue.of(byteString.toByteArray());
                             } else if (strVal != null && !strVal.isEmpty()) {
-                                val = DataMapValue.of(strVal);
+                                val = DataValue.of(strVal);
                             }
                             state.identityState.metadata.put(key, val);
                         });
@@ -565,7 +566,7 @@ public final class Customer implements ICustomer {
      * @return
      */
     @Override
-    public Mono<DataMapValue> leaseAppData() {
+    public Mono<DataValue> leaseAppData() {
 
         AppSocket.LeaseCustomerAppDataCommand.Builder cmd = AppSocket.LeaseCustomerAppDataCommand
                 .newBuilder();
@@ -588,9 +589,9 @@ public final class Customer implements ICustomer {
                 .setLeaseCustomerAppData(cmd)
                 .build();
 
-        return new Mono<DataMapValue>() {
+        return new Mono<DataValue>() {
             @Override
-            public void subscribe(CoreSubscriber<? super DataMapValue> subscriber) {
+            public void subscribe(CoreSubscriber<? super DataValue> subscriber) {
                 client.buildCommandReply(req.toByteArray(), replyDeserializer).subscribe(reply -> {
                     AppSocket.LeaseCustomerAppDataReply res = reply.getLeaseCustomerAppData();
                     if (!res.getStatus()) {
@@ -598,14 +599,14 @@ public final class Customer implements ICustomer {
                         return;
                     }
 
-                    DataMapValue appData = null;
+                    DataValue appData = null;
                     if (res.hasValue()) {
                         String strVal = res.getValue().getStringVal();
                         ByteString byteString = res.getValue().getBytesVal();
                         if (byteString != null && !byteString.isEmpty()) {
-                            appData = DataMapValue.of(byteString.toByteArray());
+                            appData = DataValue.of(byteString.toByteArray());
                         } else if (strVal != null && !strVal.isEmpty()) {
-                            appData = DataMapValue.of(strVal);
+                            appData = DataValue.of(strVal);
                         }
                     }
 
@@ -624,7 +625,7 @@ public final class Customer implements ICustomer {
      * @return
      */
     @Override
-    public Mono<CustomerStateUpdateReply> updateAppData(DataMapValue data) {
+    public Mono<CustomerStateUpdateReply> updateAppData(DataValue data) {
 
         AppSocket.UpdateCustomerAppDataCommand.Builder cmd = AppSocket.UpdateCustomerAppDataCommand
                 .newBuilder();
@@ -723,13 +724,37 @@ public final class Customer implements ICustomer {
 
 
     /**
+     *
+     * @return
+     */
+    @Override
+    public Mono<Map<String, DataValue>> getMetadata() {
+        return new Mono<Map<String, DataValue>>() {
+            @Override
+            public void subscribe(CoreSubscriber<? super Map<String, DataValue>> subscriber) {
+                getState()
+                        .subscribe(
+                                state -> {
+                                    if (state.identityState != null) {
+                                        subscriber.onNext(state.identityState.metadata);
+                                    } else {
+                                        subscriber.onNext(new HashMap<>());
+                                    }
+                                    subscriber.onComplete();
+                                },
+                                subscriber::onError);
+            }
+        };
+    }
+
+    /**
      * Update customer metadata
      *
      * @param metadata
      * @return
      */
     @Override
-    public Mono<CustomerStateUpdateReply> updateMetadata(Map<String, DataMapValue> metadata) {
+    public Mono<CustomerStateUpdateReply> updateMetadata(Map<String, DataValue> metadata) {
 
         AppSocket.UpdateCustomerMetadataCommand.Builder cmd = AppSocket.UpdateCustomerMetadataCommand
                 .newBuilder();
@@ -943,6 +968,31 @@ public final class Customer implements ICustomer {
                             res.getDescription()));
                     subscriber.onComplete();
                 }, subscriber::onError);
+            }
+        };
+    }
+
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public Mono<List<Tag>> getTags() {
+        return new Mono<List<Tag>>() {
+            @Override
+            public void subscribe(CoreSubscriber<? super List<Tag>> subscriber) {
+                getState()
+                        .subscribe(
+                                state -> {
+                                    if (state.identityState != null) {
+                                        subscriber.onNext(state.identityState.tags);
+                                    } else {
+                                        subscriber.onNext(new ArrayList<>());
+                                    }
+                                    subscriber.onComplete();
+                                },
+                                subscriber::onError);
             }
         };
     }

@@ -3,7 +3,6 @@ package com.elarian;
 import com.elarian.model.ClientConfig;
 
 import java.time.Duration;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 import io.netty.buffer.ByteBuf;
@@ -17,9 +16,7 @@ import io.rsocket.transport.netty.client.TcpClientTransport;
 import io.rsocket.util.ByteBufPayload;
 import reactor.core.CoreSubscriber;
 import reactor.core.publisher.Mono;
-import reactor.netty.Connection;
 import reactor.netty.tcp.TcpClient;
-import reactor.netty.tcp.TcpClientConfig;
 import reactor.util.retry.Retry;
 
 abstract class Client<B, C> {
@@ -213,7 +210,7 @@ abstract class Client<B, C> {
             bytes = new byte[length];
             buf.getBytes(buf.readerIndex(), bytes);
         }
-        payload.release();
+        buf.release();
         return bytes;
     }
 

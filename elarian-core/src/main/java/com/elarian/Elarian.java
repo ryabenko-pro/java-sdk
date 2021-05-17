@@ -28,24 +28,24 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             return null;
         }
     };
-    private NotificationHandler<ReminderNotification, MessageBody> onReminderNotificationHandler;
-    private NotificationHandler<MessagingSessionInitializedNotification, MessageBody> onMessagingSessionStartedNotificationHandler;
-    private NotificationHandler<MessagingSessionInitializedNotification, MessageBody> onMessagingSessionRenewedNotificationHandler;
-    private NotificationHandler<MessagingSessionEndedNotification, MessageBody> onMessagingSessionEndedNotificationHandler;
-    private NotificationHandler<MessagingConsentUpdateNotification, MessageBody> onMessagingConsentUpdateNotificationHandler;
-    private NotificationHandler<ReceivedSmsNotification, MessageBody> onReceivedSmsNotificationHandler;
-    private NotificationHandler<ReceivedMediaNotification, MessageBody> onReceivedFbMessengerNotificationHandler;
-    private NotificationHandler<ReceivedMediaNotification, MessageBody> onReceivedTelegramNotificationHandler;
-    private NotificationHandler<ReceivedMediaNotification, MessageBody> onReceivedWhatsappNotificationHandler;
-    private NotificationHandler<ReceivedMediaNotification, MessageBody> onReceivedEmailNotificationHandler;
+    private NotificationHandler<ReminderNotification, Message> onReminderNotificationHandler;
+    private NotificationHandler<MessagingSessionInitializedNotification, Message> onMessagingSessionStartedNotificationHandler;
+    private NotificationHandler<MessagingSessionInitializedNotification, Message> onMessagingSessionRenewedNotificationHandler;
+    private NotificationHandler<MessagingSessionEndedNotification, Message> onMessagingSessionEndedNotificationHandler;
+    private NotificationHandler<MessagingConsentUpdateNotification, Message> onMessagingConsentUpdateNotificationHandler;
+    private NotificationHandler<ReceivedSmsNotification, Message> onReceivedSmsNotificationHandler;
+    private NotificationHandler<ReceivedMediaNotification, Message> onReceivedFbMessengerNotificationHandler;
+    private NotificationHandler<ReceivedMediaNotification, Message> onReceivedTelegramNotificationHandler;
+    private NotificationHandler<ReceivedMediaNotification, Message> onReceivedWhatsappNotificationHandler;
+    private NotificationHandler<ReceivedMediaNotification, Message> onReceivedEmailNotificationHandler;
     private NotificationHandler<VoiceCallNotification, List<VoiceAction>> onVoiceCallNotificationHandler;
     private NotificationHandler<UssdSessionNotification, UssdMenu> onUssdSessionNotificationHandler;
-    private NotificationHandler<MessageStatusNotification, MessageBody> onMessageStatusNotificationHandler;
-    private NotificationHandler<SentMessageReactionNotification, MessageBody> onSentMessageReactionNotificationHandler;
-    private NotificationHandler<ReceivedPaymentNotification, MessageBody> onReceivedPaymentNotificationHandler;
-    private NotificationHandler<PaymentStatusNotification, MessageBody> onPaymentStatusNotificationHandler;
-    private NotificationHandler<WalletPaymentStatusNotification, MessageBody> onWalletPaymentStatusNotificationHandler;
-    private NotificationHandler<CustomerActivityNotification, MessageBody> onCustomerActivityNotificationHandler;
+    private NotificationHandler<MessageStatusNotification, Message> onMessageStatusNotificationHandler;
+    private NotificationHandler<SentMessageReactionNotification, Message> onSentMessageReactionNotificationHandler;
+    private NotificationHandler<ReceivedPaymentNotification, Message> onReceivedPaymentNotificationHandler;
+    private NotificationHandler<PaymentStatusNotification, Message> onPaymentStatusNotificationHandler;
+    private NotificationHandler<WalletPaymentStatusNotification, Message> onWalletPaymentStatusNotificationHandler;
+    private NotificationHandler<CustomerActivityNotification, Message> onCustomerActivityNotificationHandler;
 
     public Elarian(String apiKey, String orgId, String appId) {
         this(apiKey, orgId, appId, new ConnectionConfig(), true);
@@ -57,24 +57,25 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
         registerGlobalNotificationHandler(notif -> new Mono<AppSocket.ServerToAppNotificationReply>() {
             @Override
             public void subscribe(CoreSubscriber<? super AppSocket.ServerToAppNotificationReply> subscriber) {
-
-                NotificationCallback<MessageBody> responder = (incoming, appData) -> {
-                    MessagingModel.OutboundMessage message = Utils.buildOutgoingMessage(new Message(incoming));
-                    CommonModel.DataMapValue.Builder data = CommonModel.DataMapValue.newBuilder();
+                NotificationCallback<Message> responder = (incoming, appData) -> {
+                    AppSocket.ServerToAppNotificationReply.Builder reply = AppSocket.ServerToAppNotificationReply.newBuilder();
                     if (appData != null) {
+                        CommonModel.DataMapValue.Builder data = CommonModel.DataMapValue.newBuilder();
                         if (appData.bytes != null) {
                             data.setBytesVal(ByteString.copyFrom(appData.bytes));
                         } else if (appData.string != null) {
                             data.setStringVal(appData.string);
                         }
+                        reply.setDataUpdate(AppSocket.AppDataUpdate.newBuilder()
+                                .setData(data)
+                                .build());
                     }
-                    AppSocket.ServerToAppNotificationReply reply = AppSocket.ServerToAppNotificationReply.newBuilder()
-                            .setMessage(message)
-                            .setDataUpdate(AppSocket.AppDataUpdate.newBuilder()
-                                    .setData(data)
-                                    .build())
-                            .build();
-                    subscriber.onNext(reply);
+
+                    if (incoming != null) {
+                        MessagingModel.OutboundMessage message = Utils.buildOutgoingMessage(new Message(incoming));
+                        reply.setMessage(message);
+                    }
+                    subscriber.onNext(reply.build());
                     subscriber.onComplete();
                 };
 
@@ -93,7 +94,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
         this.onVoiceCallNotificationHandler = onVoiceCallNotificationHandler;
     }
 
-    public void setOnWalletPaymentStatusNotificationHandler(NotificationHandler<WalletPaymentStatusNotification, MessageBody> onWalletPaymentStatusNotificationHandler) {
+    public void setOnWalletPaymentStatusNotificationHandler(NotificationHandler<WalletPaymentStatusNotification, Message> onWalletPaymentStatusNotificationHandler) {
         this.onWalletPaymentStatusNotificationHandler = onWalletPaymentStatusNotificationHandler;
     }
 
@@ -102,63 +103,63 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
         this.onUssdSessionNotificationHandler = onUssdSessionNotificationHandler;
     }
 
-    public void setOnSentMessageReactionNotificationHandler(NotificationHandler<SentMessageReactionNotification, MessageBody> onSentMessageReactionNotificationHandler) {
+    public void setOnSentMessageReactionNotificationHandler(NotificationHandler<SentMessageReactionNotification, Message> onSentMessageReactionNotificationHandler) {
         this.onSentMessageReactionNotificationHandler = onSentMessageReactionNotificationHandler;
     }
 
-    public void setOnReminderNotificationHandler(NotificationHandler<ReminderNotification, MessageBody> onReminderNotificationHandler) {
+    public void setOnReminderNotificationHandler(NotificationHandler<ReminderNotification, Message> onReminderNotificationHandler) {
         this.onReminderNotificationHandler = onReminderNotificationHandler;
     }
 
-    public void setOnReceivedWhatsappNotificationHandler(NotificationHandler<ReceivedMediaNotification, MessageBody> onReceivedWhatsappNotificationHandler) {
+    public void setOnReceivedWhatsappNotificationHandler(NotificationHandler<ReceivedMediaNotification, Message> onReceivedWhatsappNotificationHandler) {
         this.onReceivedWhatsappNotificationHandler = onReceivedWhatsappNotificationHandler;
     }
 
-    public void setOnReceivedTelegramNotificationHandler(NotificationHandler<ReceivedMediaNotification, MessageBody> onReceivedTelegramNotificationHandler) {
+    public void setOnReceivedTelegramNotificationHandler(NotificationHandler<ReceivedMediaNotification, Message> onReceivedTelegramNotificationHandler) {
         this.onReceivedTelegramNotificationHandler = onReceivedTelegramNotificationHandler;
     }
 
-    public void setOnReceivedPaymentNotificationHandler(NotificationHandler<ReceivedPaymentNotification, MessageBody> onReceivedPaymentNotificationHandler) {
+    public void setOnReceivedPaymentNotificationHandler(NotificationHandler<ReceivedPaymentNotification, Message> onReceivedPaymentNotificationHandler) {
         this.onReceivedPaymentNotificationHandler = onReceivedPaymentNotificationHandler;
     }
 
-    public void setOnReceivedSmsNotificationHandler(NotificationHandler<ReceivedSmsNotification, MessageBody> onReceivedSmsNotificationHandler) {
+    public void setOnReceivedSmsNotificationHandler(NotificationHandler<ReceivedSmsNotification, Message> onReceivedSmsNotificationHandler) {
         this.onReceivedSmsNotificationHandler = onReceivedSmsNotificationHandler;
     }
 
-    public void setOnReceivedEmailNotificationHandler(NotificationHandler<ReceivedMediaNotification, MessageBody> onReceivedEmailNotificationHandler) {
+    public void setOnReceivedEmailNotificationHandler(NotificationHandler<ReceivedMediaNotification, Message> onReceivedEmailNotificationHandler) {
         this.onReceivedEmailNotificationHandler = onReceivedEmailNotificationHandler;
     }
 
-    public void setOnPaymentStatusNotificationHandler(NotificationHandler<PaymentStatusNotification, MessageBody> onPaymentStatusNotificationHandler) {
+    public void setOnPaymentStatusNotificationHandler(NotificationHandler<PaymentStatusNotification, Message> onPaymentStatusNotificationHandler) {
         this.onPaymentStatusNotificationHandler = onPaymentStatusNotificationHandler;
     }
 
-    public void setOnReceivedFbMessengerNotificationHandler(NotificationHandler<ReceivedMediaNotification, MessageBody> onReceivedFbMessengerNotificationHandler) {
+    public void setOnReceivedFbMessengerNotificationHandler(NotificationHandler<ReceivedMediaNotification, Message> onReceivedFbMessengerNotificationHandler) {
         this.onReceivedFbMessengerNotificationHandler = onReceivedFbMessengerNotificationHandler;
     }
 
-    public void setOnMessagingSessionStartedNotificationHandler(NotificationHandler<MessagingSessionInitializedNotification, MessageBody> onMessagingSessionStartedNotificationHandler) {
+    public void setOnMessagingSessionStartedNotificationHandler(NotificationHandler<MessagingSessionInitializedNotification, Message> onMessagingSessionStartedNotificationHandler) {
         this.onMessagingSessionStartedNotificationHandler = onMessagingSessionStartedNotificationHandler;
     }
 
-    public void setOnMessagingSessionRenewedNotificationHandler(NotificationHandler<MessagingSessionInitializedNotification, MessageBody> onMessagingSessionRenewedNotificationHandler) {
+    public void setOnMessagingSessionRenewedNotificationHandler(NotificationHandler<MessagingSessionInitializedNotification, Message> onMessagingSessionRenewedNotificationHandler) {
         this.onMessagingSessionRenewedNotificationHandler = onMessagingSessionRenewedNotificationHandler;
     }
 
-    public void setOnMessagingSessionEndedNotificationHandler(NotificationHandler<MessagingSessionEndedNotification, MessageBody> onMessagingSessionEndedNotificationHandler) {
+    public void setOnMessagingSessionEndedNotificationHandler(NotificationHandler<MessagingSessionEndedNotification, Message> onMessagingSessionEndedNotificationHandler) {
         this.onMessagingSessionEndedNotificationHandler = onMessagingSessionEndedNotificationHandler;
     }
 
-    public void setOnCustomerActivityNotificationHandler(NotificationHandler<CustomerActivityNotification, MessageBody> onCustomerActivityNotificationHandler) {
+    public void setOnCustomerActivityNotificationHandler(NotificationHandler<CustomerActivityNotification, Message> onCustomerActivityNotificationHandler) {
         this.onCustomerActivityNotificationHandler = onCustomerActivityNotificationHandler;
     }
 
-    public void setOnMessageStatusNotificationHandler(NotificationHandler<MessageStatusNotification, MessageBody> onMessageStatusNotificationHandler) {
+    public void setOnMessageStatusNotificationHandler(NotificationHandler<MessageStatusNotification, Message> onMessageStatusNotificationHandler) {
         this.onMessageStatusNotificationHandler = onMessageStatusNotificationHandler;
     }
 
-    public void setOnMessagingConsentUpdateNotificationHandler(NotificationHandler<MessagingConsentUpdateNotification, MessageBody> onMessagingConsentUpdateNotificationHandler) {
+    public void setOnMessagingConsentUpdateNotificationHandler(NotificationHandler<MessagingConsentUpdateNotification, Message> onMessagingConsentUpdateNotificationHandler) {
         this.onMessagingConsentUpdateNotificationHandler = onMessagingConsentUpdateNotificationHandler;
     }
 
@@ -426,7 +427,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
     }
 
 
-    private void handlePurseNotification(AppSocket.ServerToAppPurseNotification notif, NotificationCallback<MessageBody> callback) {
+    private void handlePurseNotification(AppSocket.ServerToAppPurseNotification notif, NotificationCallback<Message> responder) {
         if (onPaymentStatusNotificationHandler != null) {
             PaymentStatusNotification payload = new PaymentStatusNotification();
             payload.orgId = notif.getOrgId();
@@ -435,21 +436,21 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.createdAt = notif.getCreatedAt().getSeconds();
             payload.transactionId = notif.getPaymentStatus().getTransactionId();
             payload.status = PaymentStatus.valueOf(notif.getPaymentStatus().getStatusValue());
-            onPaymentStatusNotificationHandler.handle(payload, null, null, callback);
+            onPaymentStatusNotificationHandler.handle(payload, null, null, responder);
         } else {
-            callback.callback(null, null);
+            responder.callback(null, null);
         }
     }
 
-    private void handleCustomerNotification(AppSocket.ServerToAppCustomerNotification notif, NotificationCallback<MessageBody> callback) {
-        DataMapValue appData = null;
+    private void handleCustomerNotification(AppSocket.ServerToAppCustomerNotification notif, NotificationCallback<Message> responder) {
+        DataValue appData = null;
         if (notif.hasAppData()) {
             String strVal = notif.getAppData().getStringVal();
             ByteString byteString = notif.getAppData().getBytesVal();
             if (byteString != null && !byteString.isEmpty()) {
-                appData = DataMapValue.of(byteString.toByteArray());
+                appData = DataValue.of(byteString.toByteArray());
             } else if (strVal != null && !strVal.isEmpty()) {
-                appData = DataMapValue.of(strVal);
+                appData = DataValue.of(strVal);
             }
         }
 
@@ -464,7 +465,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             CommonModel.CustomerIndex tag = notif.getReminder().getTag();
             payload.tag = new Tag(tag.getMapping().getKey(), tag.getMapping().getValue().getValue(), tag.getExpiresAt().getSeconds());
 
-            onReminderNotificationHandler.handle(payload, customer, appData, callback);
+            onReminderNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasMessagingSessionStarted() && onMessagingSessionStartedNotificationHandler != null) {
 
@@ -477,7 +478,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
 
             customer.customerNumber = payload.customerNumber;
 
-            onMessagingSessionStartedNotificationHandler.handle(payload, customer, appData, callback);
+            onMessagingSessionStartedNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasMessagingSessionRenewed() && onMessagingSessionRenewedNotificationHandler != null) {
 
@@ -490,7 +491,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
 
             customer.customerNumber = payload.customerNumber;
 
-            onMessagingSessionRenewedNotificationHandler.handle(payload, customer, appData, callback);
+            onMessagingSessionRenewedNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasMessagingSessionEnded() && onMessagingSessionEndedNotificationHandler != null) {
 
@@ -504,7 +505,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
 
             customer.customerNumber = payload.customerNumber;
 
-            onMessagingSessionEndedNotificationHandler.handle(payload, customer, appData, callback);
+            onMessagingSessionEndedNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasMessagingConsentUpdate() && onMessagingConsentUpdateNotificationHandler != null) {
 
@@ -517,7 +518,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
 
             customer.customerNumber = payload.customerNumber;
 
-            onMessagingConsentUpdateNotificationHandler.handle(payload, customer, appData, callback);
+            onMessagingConsentUpdateNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasReceivedMessage()) {
             AppSocket.ReceivedMessageNotification msg = notif.getReceivedMessage();
@@ -537,7 +538,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                         sms.text = msg.getParts(0).getText();
                     }
                     if (onReceivedSmsNotificationHandler != null) {
-                        onReceivedSmsNotificationHandler.handle(sms, customer, appData, callback);
+                        onReceivedSmsNotificationHandler.handle(sms, customer, appData, responder);
                         return;
                     }
                     break;
@@ -558,7 +559,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                         onVoiceCallNotificationHandler.handle(voiceNotif, customer, appData, (actions, data) -> {
                             MessageBody body = new MessageBody();
                             body.voice = actions;
-                            callback.callback(body, data);
+                            responder.callback(new Message(body), data);
                         });
                         return;
                     }
@@ -580,7 +581,8 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                         onUssdSessionNotificationHandler.handle(ussd, customer, appData, (message, data) -> {
                             MessageBody body = new MessageBody();
                             body.ussd = message;
-                            callback.callback(body, data);
+                            System.err.println("Respondinng to USSD...");
+                            responder.callback(new Message(body), data);
                         });
                         return;
                     }
@@ -589,7 +591,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                     if (onReceivedFbMessengerNotificationHandler != null) {
                         ReceivedMediaNotification fb_messenger = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
                         Utils.fillInMediaMessageNotification(msg, fb_messenger, customer);
-                        onReceivedFbMessengerNotificationHandler.handle(fb_messenger, customer, appData, callback);
+                        onReceivedFbMessengerNotificationHandler.handle(fb_messenger, customer, appData, responder);
                         return;
                     }
                     break;
@@ -597,7 +599,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                     if (onReceivedTelegramNotificationHandler != null) {
                         ReceivedMediaNotification telegram = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
                         Utils.fillInMediaMessageNotification(msg, telegram, customer);
-                        onReceivedTelegramNotificationHandler.handle(telegram, customer, appData, callback);
+                        onReceivedTelegramNotificationHandler.handle(telegram, customer, appData, responder);
                         return;
                     }
                     break;
@@ -605,7 +607,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                     if (onReceivedWhatsappNotificationHandler != null) {
                         ReceivedMediaNotification whatsapp = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
                         Utils.fillInMediaMessageNotification(msg, whatsapp, customer);
-                        onReceivedWhatsappNotificationHandler.handle(whatsapp, customer, appData, callback);
+                        onReceivedWhatsappNotificationHandler.handle(whatsapp, customer, appData, responder);
                         return;
                     }
                     break;
@@ -613,12 +615,13 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
                     if (onReceivedEmailNotificationHandler != null) {
                         ReceivedMediaNotification email = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
                         Utils.fillInMediaMessageNotification(msg, email, customer);
-                        onReceivedEmailNotificationHandler.handle(email, customer, appData, callback);
+                        onReceivedEmailNotificationHandler.handle(email, customer, appData, responder);
                         return;
                     }
                     break;
             }
-            callback.callback(null, appData);
+
+            responder.callback(null, appData);
 
         } else if (notif.hasMessageStatus() && onMessageStatusNotificationHandler != null) {
 
@@ -626,7 +629,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.messageId = notif.getMessageStatus().getMessageId();
             payload.status = MessageDeliveryStatus.valueOf(notif.getMessageStatus().getStatusValue());
 
-            onMessageStatusNotificationHandler.handle(payload, customer, appData, callback);
+            onMessageStatusNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasSentMessageReaction() && onSentMessageReactionNotificationHandler != null) {
 
@@ -639,7 +642,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
 
             customer.customerNumber = payload.customerNumber;
 
-            onSentMessageReactionNotificationHandler.handle(payload, customer, appData, callback);
+            onSentMessageReactionNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasReceivedPayment() && onReceivedPaymentNotificationHandler != null) {
 
@@ -654,7 +657,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
 
             customer.customerNumber = payload.customerNumber;
 
-            onReceivedPaymentNotificationHandler.handle(payload, customer, appData, callback);
+            onReceivedPaymentNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasPaymentStatus() && onPaymentStatusNotificationHandler != null) {
 
@@ -662,7 +665,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.transactionId = notif.getPaymentStatus().getTransactionId();
             payload.status = PaymentStatus.valueOf(notif.getPaymentStatus().getStatusValue());
 
-            onPaymentStatusNotificationHandler.handle(payload, customer, appData, callback);
+            onPaymentStatusNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasWalletPaymentStatus() && onWalletPaymentStatusNotificationHandler != null) {
 
@@ -671,7 +674,7 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             payload.transactionId = notif.getWalletPaymentStatus().getTransactionId();
             payload.status = PaymentStatus.valueOf(notif.getWalletPaymentStatus().getStatusValue());
 
-            onWalletPaymentStatusNotificationHandler.handle(payload, customer, appData, callback);
+            onWalletPaymentStatusNotificationHandler.handle(payload, customer, appData, responder);
 
         } else if (notif.hasCustomerActivity() && onCustomerActivityNotificationHandler != null) {
 
@@ -688,9 +691,9 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
 
             customer.customerNumber = payload.customerNumber;
 
-            onCustomerActivityNotificationHandler.handle(payload, customer, appData, callback);
+            onCustomerActivityNotificationHandler.handle(payload, customer, appData, responder);
         } else {
-            callback.callback(null, appData);
+            responder.callback(null, appData);
         }
     }
 

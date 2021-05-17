@@ -3,15 +3,15 @@ package com.elarian.model;
 /**
  *
  */
-public class DataMapValue {
+public class DataValue {
     public String string = null;
     public byte[] bytes = null;
 
-    private DataMapValue(String stringValue) {
+    private DataValue(String stringValue) {
         this.string = stringValue;
     }
 
-    private DataMapValue(byte[] byteValue) {
+    private DataValue(byte[] byteValue) {
         this.bytes = byteValue;
     }
 
@@ -20,8 +20,8 @@ public class DataMapValue {
      * @param string
      * @return
      */
-    public static DataMapValue of(String string) {
-        return new DataMapValue(string);
+    public static DataValue of(String string) {
+        return new DataValue(string);
     }
 
     /**
@@ -29,8 +29,8 @@ public class DataMapValue {
      * @param bytes
      * @return
      */
-    public static DataMapValue of(byte[] bytes) {
-        return new DataMapValue(bytes);
+    public static DataValue of(byte[] bytes) {
+        return new DataValue(bytes);
     }
 
 }

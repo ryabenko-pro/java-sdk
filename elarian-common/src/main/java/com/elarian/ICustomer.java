@@ -7,7 +7,7 @@ import com.elarian.model.ConsentUpdateReply;
 import com.elarian.model.CustomerNumber;
 import com.elarian.model.CustomerState;
 import com.elarian.model.CustomerStateUpdateReply;
-import com.elarian.model.DataMapValue;
+import com.elarian.model.DataValue;
 import com.elarian.model.Message;
 import com.elarian.model.MessageReply;
 import com.elarian.model.MessagingChannel;
@@ -34,16 +34,18 @@ public interface ICustomer {
     Mono<CustomerStateUpdateReply> updateActivity(ActivityChannel channel, Activity activity);
     Mono<ConsentUpdateReply> updateMessagingConsent(MessagingChannel channel, ConsentAction action);
 
-    Mono<DataMapValue> leaseAppData();
+    Mono<DataValue> leaseAppData();
     Mono<CustomerStateUpdateReply> deleteAppData();
-    Mono<CustomerStateUpdateReply> updateAppData(DataMapValue data);
+    Mono<CustomerStateUpdateReply> updateAppData(DataValue data);
 
+    Mono<Map<String, DataValue>> getMetadata();
     Mono<CustomerStateUpdateReply> deleteMetadata(List<String> keys);
-    Mono<CustomerStateUpdateReply> updateMetadata(Map<String, DataMapValue> metadata);
+    Mono<CustomerStateUpdateReply> updateMetadata(Map<String, DataValue> metadata);
 
     Mono<CustomerStateUpdateReply> updateSecondaryIds(List<SecondaryId> secondaryIds);
     Mono<CustomerStateUpdateReply> deleteSecondaryIds(List<SecondaryId> secondaryIds);
 
+    Mono<List<Tag>> getTags();
     Mono<CustomerStateUpdateReply> updateTags(List<Tag> tags);
     Mono<CustomerStateUpdateReply> deleteTags(List<String> keys);
 

@@ -442,14 +442,14 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
     }
 
     private void handleCustomerNotification(AppSocket.ServerToAppCustomerNotification notif, NotificationCallback<MessageBody> callback) {
-        DataMapValue appData = null;
+        DataValue appData = null;
         if (notif.hasAppData()) {
             String strVal = notif.getAppData().getStringVal();
             ByteString byteString = notif.getAppData().getBytesVal();
             if (byteString != null && !byteString.isEmpty()) {
-                appData = DataMapValue.of(byteString.toByteArray());
+                appData = DataValue.of(byteString.toByteArray());
             } else if (strVal != null && !strVal.isEmpty()) {
-                appData = DataMapValue.of(strVal);
+                appData = DataValue.of(strVal);
             }
         }
 

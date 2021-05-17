@@ -12,5 +12,12 @@ public final class Message {
     public Message(MessageBody body) {
         this.body = body;
     }
+
+    public Message(Message msg) {
+        this.body = msg.body;
+        this.labels = msg.labels;
+        this.providerTag = msg.providerTag;
+        this.replyPrompt = msg.replyPrompt;
+    }
 }
 

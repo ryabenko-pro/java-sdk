@@ -9,7 +9,7 @@ import com.elarian.model.ConsentUpdateReply;
 import com.elarian.model.CustomerNumber;
 import com.elarian.model.CustomerState;
 import com.elarian.model.CustomerStateUpdateReply;
-import com.elarian.model.DataMapValue;
+import com.elarian.model.DataValue;
 import com.elarian.model.Message;
 import com.elarian.model.MessageBody;
 import com.elarian.model.MessageReply;
@@ -116,7 +116,7 @@ public class CustomerTests {
     @Test
     @Order(7)
     void updateAppData() {
-        DataMapValue data = DataMapValue.of("some-string-payload");
+        DataValue data = DataValue.of("some-string-payload");
         CustomerStateUpdateReply reply = customer.updateAppData(data).block(Duration.ofSeconds(5));
         assertNotNull(reply);
         assertTrue(reply.status);
@@ -125,7 +125,7 @@ public class CustomerTests {
     @Test
     @Order(8)
     void leaseAppData() {
-        DataMapValue reply = customer.leaseAppData().block(Duration.ofSeconds(5));
+        DataValue reply = customer.leaseAppData().block(Duration.ofSeconds(5));
         assertNotNull(reply);
         assertEquals(reply.string, "some-string-payload");
     }
@@ -141,16 +141,16 @@ public class CustomerTests {
     @Test
     @Order(10)
     void updateMetadata() {
-        HashMap<String, DataMapValue> metadata = new HashMap<>();
-        metadata.put("passport_number", DataMapValue.of("xyz"));
-        metadata.put("id_number", DataMapValue.of("abc"));
-        metadata.put("bio_data", DataMapValue.of(new byte[] { 0, 3, 22, 86, 99 }));
+        HashMap<String, DataValue> metadata = new HashMap<>();
+        metadata.put("passport_number", DataValue.of("xyz"));
+        metadata.put("id_number", DataValue.of("abc"));
+        metadata.put("bio_data", DataValue.of(new byte[] { 0, 3, 22, 86, 99 }));
         CustomerStateUpdateReply reply = customer.updateMetadata(metadata).block(Duration.ofSeconds(5));
         assertNotNull(reply);
         assertTrue(reply.status);
 
-        HashMap<String, DataMapValue> updated = new HashMap<>();
-        updated.put("id_number", DataMapValue.of("123"));
+        HashMap<String, DataValue> updated = new HashMap<>();
+        updated.put("id_number", DataValue.of("123"));
         reply = customer.updateMetadata(updated).block(Duration.ofSeconds(5));
         assertNotNull(reply);
         assertTrue(reply.status);
@@ -163,7 +163,7 @@ public class CustomerTests {
     @Test
     @Order(11)
     void getMetadata() {
-        Map<String, DataMapValue> metadata = customer.getMetadata().block(Duration.ofSeconds(5));
+        Map<String, DataValue> metadata = customer.getMetadata().block(Duration.ofSeconds(5));
         assertArrayEquals(new byte[] { 0, 3, 22, 86, 99 }, metadata.get("bio_data").bytes);
         assertEquals("123", metadata.get("id_number").string);
     }
