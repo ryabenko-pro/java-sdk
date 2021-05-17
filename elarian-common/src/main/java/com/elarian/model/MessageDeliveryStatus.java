@@ -25,6 +25,7 @@ public enum MessageDeliveryStatus {
     DECOMMISSIONED_CUSTOMER_ID(414),
     REJECTED(415),
     INVALID_REQUEST(416),
+    INSUFFICIENT_CREDITS(417),
     APPLICATION_ERROR(501);
 
     private final int value;
