@@ -28,24 +28,25 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
             return null;
         }
     };
-    private NotificationHandler<ReminderNotification, Message> onReminderNotificationHandler;
-    private NotificationHandler<MessagingSessionInitializedNotification, Message> onMessagingSessionStartedNotificationHandler;
-    private NotificationHandler<MessagingSessionInitializedNotification, Message> onMessagingSessionRenewedNotificationHandler;
-    private NotificationHandler<MessagingSessionEndedNotification, Message> onMessagingSessionEndedNotificationHandler;
-    private NotificationHandler<MessagingConsentUpdateNotification, Message> onMessagingConsentUpdateNotificationHandler;
-    private NotificationHandler<ReceivedSmsNotification, Message> onReceivedSmsNotificationHandler;
-    private NotificationHandler<ReceivedMediaNotification, Message> onReceivedFbMessengerNotificationHandler;
-    private NotificationHandler<ReceivedMediaNotification, Message> onReceivedTelegramNotificationHandler;
-    private NotificationHandler<ReceivedMediaNotification, Message> onReceivedWhatsappNotificationHandler;
-    private NotificationHandler<ReceivedMediaNotification, Message> onReceivedEmailNotificationHandler;
-    private NotificationHandler<VoiceCallNotification, List<VoiceAction>> onVoiceCallNotificationHandler;
-    private NotificationHandler<UssdSessionNotification, UssdMenu> onUssdSessionNotificationHandler;
-    private NotificationHandler<MessageStatusNotification, Message> onMessageStatusNotificationHandler;
-    private NotificationHandler<SentMessageReactionNotification, Message> onSentMessageReactionNotificationHandler;
-    private NotificationHandler<ReceivedPaymentNotification, Message> onReceivedPaymentNotificationHandler;
-    private NotificationHandler<PaymentStatusNotification, Message> onPaymentStatusNotificationHandler;
-    private NotificationHandler<WalletPaymentStatusNotification, Message> onWalletPaymentStatusNotificationHandler;
-    private NotificationHandler<CustomerActivityNotification, Message> onCustomerActivityNotificationHandler;
+
+    private NotificationHandler<ReminderNotification> onReminderNotificationHandler;
+    private NotificationHandler<MessagingSessionInitializedNotification> onMessagingSessionStartedNotificationHandler;
+    private NotificationHandler<MessagingSessionInitializedNotification> onMessagingSessionRenewedNotificationHandler;
+    private NotificationHandler<MessagingSessionEndedNotification> onMessagingSessionEndedNotificationHandler;
+    private NotificationHandler<MessagingConsentUpdateNotification> onMessagingConsentUpdateNotificationHandler;
+    private NotificationHandler<ReceivedSmsNotification> onReceivedSmsNotificationHandler;
+    private NotificationHandler<ReceivedMediaNotification> onReceivedFbMessengerNotificationHandler;
+    private NotificationHandler<ReceivedMediaNotification> onReceivedTelegramNotificationHandler;
+    private NotificationHandler<ReceivedMediaNotification> onReceivedWhatsappNotificationHandler;
+    private NotificationHandler<ReceivedMediaNotification> onReceivedEmailNotificationHandler;
+    private BaseNotificationHandler<VoiceCallNotification, List<VoiceAction>> onVoiceCallBaseNotificationHandler;
+    private BaseNotificationHandler<UssdSessionNotification, UssdMenu> onUssdSessionBaseNotificationHandler;
+    private NotificationHandler<MessageStatusNotification> onMessageStatusNotificationHandler;
+    private NotificationHandler<SentMessageReactionNotification> onSentMessageReactionNotificationHandler;
+    private NotificationHandler<ReceivedPaymentNotification> onReceivedPaymentNotificationHandler;
+    private NotificationHandler<PaymentStatusNotification> onPaymentStatusNotificationHandler;
+    private NotificationHandler<WalletPaymentStatusNotification> onWalletPaymentStatusNotificationHandler;
+    private NotificationHandler<CustomerActivityNotification> onCustomerActivityNotificationHandler;
 
     public Elarian(String apiKey, String orgId, String appId) {
         this(apiKey, orgId, appId, new ConnectionConfig(), true);
@@ -90,76 +91,76 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
         });
     }
 
-    public void setOnVoiceCallNotificationHandler(NotificationHandler<VoiceCallNotification, List<VoiceAction>> onVoiceCallNotificationHandler) {
-        this.onVoiceCallNotificationHandler = onVoiceCallNotificationHandler;
+    public void setOnVoiceCallNotificationHandler(BaseNotificationHandler<VoiceCallNotification, List<VoiceAction>> onVoiceCallBaseNotificationHandler) {
+        this.onVoiceCallBaseNotificationHandler = onVoiceCallBaseNotificationHandler;
     }
 
-    public void setOnWalletPaymentStatusNotificationHandler(NotificationHandler<WalletPaymentStatusNotification, Message> onWalletPaymentStatusNotificationHandler) {
+    public void setOnWalletPaymentStatusNotificationHandler(NotificationHandler<WalletPaymentStatusNotification> onWalletPaymentStatusNotificationHandler) {
         this.onWalletPaymentStatusNotificationHandler = onWalletPaymentStatusNotificationHandler;
     }
 
 
-    public void setOnUssdSessionNotificationHandler(NotificationHandler<UssdSessionNotification, UssdMenu> onUssdSessionNotificationHandler) {
-        this.onUssdSessionNotificationHandler = onUssdSessionNotificationHandler;
+    public void setOnUssdSessionNotificationHandler(BaseNotificationHandler<UssdSessionNotification, UssdMenu> onUssdSessionBaseNotificationHandler) {
+        this.onUssdSessionBaseNotificationHandler = onUssdSessionBaseNotificationHandler;
     }
 
-    public void setOnSentMessageReactionNotificationHandler(NotificationHandler<SentMessageReactionNotification, Message> onSentMessageReactionNotificationHandler) {
+    public void setOnSentMessageReactionNotificationHandler(NotificationHandler<SentMessageReactionNotification> onSentMessageReactionNotificationHandler) {
         this.onSentMessageReactionNotificationHandler = onSentMessageReactionNotificationHandler;
     }
 
-    public void setOnReminderNotificationHandler(NotificationHandler<ReminderNotification, Message> onReminderNotificationHandler) {
+    public void setOnReminderNotificationHandler(NotificationHandler<ReminderNotification> onReminderNotificationHandler) {
         this.onReminderNotificationHandler = onReminderNotificationHandler;
     }
 
-    public void setOnReceivedWhatsappNotificationHandler(NotificationHandler<ReceivedMediaNotification, Message> onReceivedWhatsappNotificationHandler) {
+    public void setOnReceivedWhatsappNotificationHandler(NotificationHandler<ReceivedMediaNotification> onReceivedWhatsappNotificationHandler) {
         this.onReceivedWhatsappNotificationHandler = onReceivedWhatsappNotificationHandler;
     }
 
-    public void setOnReceivedTelegramNotificationHandler(NotificationHandler<ReceivedMediaNotification, Message> onReceivedTelegramNotificationHandler) {
+    public void setOnReceivedTelegramNotificationHandler(NotificationHandler<ReceivedMediaNotification> onReceivedTelegramNotificationHandler) {
         this.onReceivedTelegramNotificationHandler = onReceivedTelegramNotificationHandler;
     }
 
-    public void setOnReceivedPaymentNotificationHandler(NotificationHandler<ReceivedPaymentNotification, Message> onReceivedPaymentNotificationHandler) {
+    public void setOnReceivedPaymentNotificationHandler(NotificationHandler<ReceivedPaymentNotification> onReceivedPaymentNotificationHandler) {
         this.onReceivedPaymentNotificationHandler = onReceivedPaymentNotificationHandler;
     }
 
-    public void setOnReceivedSmsNotificationHandler(NotificationHandler<ReceivedSmsNotification, Message> onReceivedSmsNotificationHandler) {
+    public void setOnReceivedSmsNotificationHandler(NotificationHandler<ReceivedSmsNotification> onReceivedSmsNotificationHandler) {
         this.onReceivedSmsNotificationHandler = onReceivedSmsNotificationHandler;
     }
 
-    public void setOnReceivedEmailNotificationHandler(NotificationHandler<ReceivedMediaNotification, Message> onReceivedEmailNotificationHandler) {
+    public void setOnReceivedEmailNotificationHandler(NotificationHandler<ReceivedMediaNotification> onReceivedEmailNotificationHandler) {
         this.onReceivedEmailNotificationHandler = onReceivedEmailNotificationHandler;
     }
 
-    public void setOnPaymentStatusNotificationHandler(NotificationHandler<PaymentStatusNotification, Message> onPaymentStatusNotificationHandler) {
+    public void setOnPaymentStatusNotificationHandler(NotificationHandler<PaymentStatusNotification> onPaymentStatusNotificationHandler) {
         this.onPaymentStatusNotificationHandler = onPaymentStatusNotificationHandler;
     }
 
-    public void setOnReceivedFbMessengerNotificationHandler(NotificationHandler<ReceivedMediaNotification, Message> onReceivedFbMessengerNotificationHandler) {
+    public void setOnReceivedFbMessengerNotificationHandler(NotificationHandler<ReceivedMediaNotification> onReceivedFbMessengerNotificationHandler) {
         this.onReceivedFbMessengerNotificationHandler = onReceivedFbMessengerNotificationHandler;
     }
 
-    public void setOnMessagingSessionStartedNotificationHandler(NotificationHandler<MessagingSessionInitializedNotification, Message> onMessagingSessionStartedNotificationHandler) {
+    public void setOnMessagingSessionStartedNotificationHandler(NotificationHandler<MessagingSessionInitializedNotification> onMessagingSessionStartedNotificationHandler) {
         this.onMessagingSessionStartedNotificationHandler = onMessagingSessionStartedNotificationHandler;
     }
 
-    public void setOnMessagingSessionRenewedNotificationHandler(NotificationHandler<MessagingSessionInitializedNotification, Message> onMessagingSessionRenewedNotificationHandler) {
+    public void setOnMessagingSessionRenewedNotificationHandler(NotificationHandler<MessagingSessionInitializedNotification> onMessagingSessionRenewedNotificationHandler) {
         this.onMessagingSessionRenewedNotificationHandler = onMessagingSessionRenewedNotificationHandler;
     }
 
-    public void setOnMessagingSessionEndedNotificationHandler(NotificationHandler<MessagingSessionEndedNotification, Message> onMessagingSessionEndedNotificationHandler) {
+    public void setOnMessagingSessionEndedNotificationHandler(NotificationHandler<MessagingSessionEndedNotification> onMessagingSessionEndedNotificationHandler) {
         this.onMessagingSessionEndedNotificationHandler = onMessagingSessionEndedNotificationHandler;
     }
 
-    public void setOnCustomerActivityNotificationHandler(NotificationHandler<CustomerActivityNotification, Message> onCustomerActivityNotificationHandler) {
+    public void setOnCustomerActivityNotificationHandler(NotificationHandler<CustomerActivityNotification> onCustomerActivityNotificationHandler) {
         this.onCustomerActivityNotificationHandler = onCustomerActivityNotificationHandler;
     }
 
-    public void setOnMessageStatusNotificationHandler(NotificationHandler<MessageStatusNotification, Message> onMessageStatusNotificationHandler) {
+    public void setOnMessageStatusNotificationHandler(NotificationHandler<MessageStatusNotification> onMessageStatusNotificationHandler) {
         this.onMessageStatusNotificationHandler = onMessageStatusNotificationHandler;
     }
 
-    public void setOnMessagingConsentUpdateNotificationHandler(NotificationHandler<MessagingConsentUpdateNotification, Message> onMessagingConsentUpdateNotificationHandler) {
+    public void setOnMessagingConsentUpdateNotificationHandler(NotificationHandler<MessagingConsentUpdateNotification> onMessagingConsentUpdateNotificationHandler) {
         this.onMessagingConsentUpdateNotificationHandler = onMessagingConsentUpdateNotificationHandler;
     }
 
@@ -444,255 +445,278 @@ public final class Elarian extends Client<AppSocket.ServerToAppNotification, App
 
     private void handleCustomerNotification(AppSocket.ServerToAppCustomerNotification notif, NotificationCallback<Message> responder) {
         DataValue appData = null;
-        if (notif.hasAppData()) {
-            String strVal = notif.getAppData().getStringVal();
-            ByteString byteString = notif.getAppData().getBytesVal();
-            if (byteString != null && !byteString.isEmpty()) {
-                appData = DataValue.of(byteString.toByteArray());
-            } else if (strVal != null && !strVal.isEmpty()) {
-                appData = DataValue.of(strVal);
-            }
-        }
-
-        Customer customer = new Customer(this, notif.getCustomerId());
-
-        if (notif.hasReminder() && onReminderNotificationHandler != null) {
-
-            ReminderNotification payload = Utils.fillInCustomerNotification(notif, new ReminderNotification());
-            payload.workId = notif.getReminder().getWorkId().getValue();
-            AppModel.CustomerReminder reminder = notif.getReminder().getReminder();
-            payload.reminder = new Reminder(reminder.getKey(), reminder.getPayload().getValue(), reminder.getRemindAt().getSeconds(), reminder.getInterval().getSeconds());
-            CommonModel.CustomerIndex tag = notif.getReminder().getTag();
-            payload.tag = new Tag(tag.getMapping().getKey(), tag.getMapping().getValue().getValue(), tag.getExpiresAt().getSeconds());
-
-            onReminderNotificationHandler.handle(payload, customer, appData, responder);
-
-        } else if (notif.hasMessagingSessionStarted() && onMessagingSessionStartedNotificationHandler != null) {
-
-            MessagingSessionInitializedNotification payload = Utils.fillInCustomerNotification(notif, new MessagingSessionInitializedNotification());
-            AppSocket.MessagingSessionStartedNotification msg = notif.getMessagingSessionStarted();
-            payload.sessionId = msg.getSessionId();
-            payload.expiresAt = msg.getExpiresAt().getSeconds();
-            payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
-            payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
-
-            customer.customerNumber = payload.customerNumber;
-
-            onMessagingSessionStartedNotificationHandler.handle(payload, customer, appData, responder);
-
-        } else if (notif.hasMessagingSessionRenewed() && onMessagingSessionRenewedNotificationHandler != null) {
-
-            MessagingSessionInitializedNotification payload = Utils.fillInCustomerNotification(notif, new MessagingSessionInitializedNotification());
-            AppSocket.MessagingSessionRenewedNotification msg = notif.getMessagingSessionRenewed();
-            payload.sessionId = msg.getSessionId();
-            payload.expiresAt = msg.getExpiresAt().getSeconds();
-            payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
-            payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
-
-            customer.customerNumber = payload.customerNumber;
-
-            onMessagingSessionRenewedNotificationHandler.handle(payload, customer, appData, responder);
-
-        } else if (notif.hasMessagingSessionEnded() && onMessagingSessionEndedNotificationHandler != null) {
-
-            MessagingSessionEndedNotification payload = Utils.fillInCustomerNotification(notif, new MessagingSessionEndedNotification());
-            AppSocket.MessagingSessionEndedNotification msg = notif.getMessagingSessionEnded();
-            payload.sessionId = msg.getSessionId();
-            payload.duration = msg.getDuration().getSeconds();
-            payload.reason = MessagingSessionEndReason.valueOf(msg.getReasonValue());
-            payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
-            payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
-
-            customer.customerNumber = payload.customerNumber;
-
-            onMessagingSessionEndedNotificationHandler.handle(payload, customer, appData, responder);
-
-        } else if (notif.hasMessagingConsentUpdate() && onMessagingConsentUpdateNotificationHandler != null) {
-
-            MessagingConsentUpdateNotification payload = Utils.fillInCustomerNotification(notif, new MessagingConsentUpdateNotification());
-            AppSocket.MessagingConsentUpdateNotification msg = notif.getMessagingConsentUpdate();
-            payload.update = ConsentAction.valueOf(msg.getUpdateValue());
-            payload.status = MessagingConsentUpdateStatus.valueOf(msg.getStatusValue());
-            payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
-            payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
-
-            customer.customerNumber = payload.customerNumber;
-
-            onMessagingConsentUpdateNotificationHandler.handle(payload, customer, appData, responder);
-
-        } else if (notif.hasReceivedMessage()) {
-            AppSocket.ReceivedMessageNotification msg = notif.getReceivedMessage();
-            MessagingChannel.Channel channel = MessagingChannel.Channel.valueOf(msg.getChannelNumber().getChannel().getNumber());
-
-            switch (channel.getValue()) {
-                case 1: // MessagingChannel.Channel.SMS
-                    ReceivedSmsNotification sms = Utils.fillInCustomerNotification(notif, new ReceivedSmsNotification());
-                    sms.messageId = msg.getMessageId();
-                    sms.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
-                    sms.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
-
-                    customer.customerNumber = sms.customerNumber;
-
-                    sms.text = null;
-                    if (msg.getPartsCount() > 0) {
-                        sms.text = msg.getParts(0).getText();
-                    }
-                    if (onReceivedSmsNotificationHandler != null) {
-                        onReceivedSmsNotificationHandler.handle(sms, customer, appData, responder);
-                        return;
-                    }
-                    break;
-                case 2: // MessagingChannel.Channel.VOICE
-                    if (onVoiceCallNotificationHandler != null) {
-                        VoiceCallNotification voiceNotif = Utils.fillInCustomerNotification(notif, new VoiceCallNotification());
-                        voiceNotif.messageId = msg.getMessageId();
-                        voiceNotif.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
-                        voiceNotif.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
-                        voiceNotif.sessionId = msg.getSessionId().getValue();
-
-                        customer.customerNumber = voiceNotif.customerNumber;
-
-                        if (msg.getPartsCount() > 0) {
-                            voiceNotif.voice = Utils.makeVoiceCallInput(msg.getParts(0).getVoice());
-                        }
-
-                        onVoiceCallNotificationHandler.handle(voiceNotif, customer, appData, (actions, data) -> {
-                            MessageBody body = new MessageBody();
-                            body.voice = actions;
-                            responder.callback(new Message(body), data);
-                        });
-                        return;
-                    }
-                    break;
-                case 3: // MessagingChannel.Channel.USSD:
-                    if (onUssdSessionNotificationHandler != null) {
-                        UssdSessionNotification ussd = Utils.fillInCustomerNotification(notif, new UssdSessionNotification());
-                        ussd.messageId = msg.getMessageId();
-                        ussd.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
-                        ussd.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
-
-                        customer.customerNumber = ussd.customerNumber;
-
-                        ussd.sessionId = msg.getSessionId().getValue();
-                        ussd.input = null;
-                        if (msg.getPartsCount() > 0) {
-                            ussd.input = msg.getParts(0).getUssd().getValue();
-                        }
-                        onUssdSessionNotificationHandler.handle(ussd, customer, appData, (message, data) -> {
-                            MessageBody body = new MessageBody();
-                            body.ussd = message;
-                            System.err.println("Respondinng to USSD...");
-                            responder.callback(new Message(body), data);
-                        });
-                        return;
-                    }
-                    break;
-                case 4: // MessagingChannel.Channel.FB_MESSENGER
-                    if (onReceivedFbMessengerNotificationHandler != null) {
-                        ReceivedMediaNotification fb_messenger = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
-                        Utils.fillInMediaMessageNotification(msg, fb_messenger, customer);
-                        onReceivedFbMessengerNotificationHandler.handle(fb_messenger, customer, appData, responder);
-                        return;
-                    }
-                    break;
-                case 5: // MessagingChannel.Channel.TELEGRAM
-                    if (onReceivedTelegramNotificationHandler != null) {
-                        ReceivedMediaNotification telegram = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
-                        Utils.fillInMediaMessageNotification(msg, telegram, customer);
-                        onReceivedTelegramNotificationHandler.handle(telegram, customer, appData, responder);
-                        return;
-                    }
-                    break;
-                case 6: // MessagingChannel.Channel.WHATSAPP
-                    if (onReceivedWhatsappNotificationHandler != null) {
-                        ReceivedMediaNotification whatsapp = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
-                        Utils.fillInMediaMessageNotification(msg, whatsapp, customer);
-                        onReceivedWhatsappNotificationHandler.handle(whatsapp, customer, appData, responder);
-                        return;
-                    }
-                    break;
-                case 7: // MessagingChannel.Channel.EMAIL
-                    if (onReceivedEmailNotificationHandler != null) {
-                        ReceivedMediaNotification email = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
-                        Utils.fillInMediaMessageNotification(msg, email, customer);
-                        onReceivedEmailNotificationHandler.handle(email, customer, appData, responder);
-                        return;
-                    }
-                    break;
+        try {
+            if (notif.hasAppData()) {
+                String strVal = notif.getAppData().getStringVal();
+                ByteString byteString = notif.getAppData().getBytesVal();
+                if (byteString != null && !byteString.isEmpty()) {
+                    appData = DataValue.of(byteString.toByteArray());
+                } else if (strVal != null && !strVal.isEmpty()) {
+                    appData = DataValue.of(strVal);
+                }
             }
 
-            responder.callback(null, appData);
+            Customer customer = new Customer(this, notif.getCustomerId());
 
-        } else if (notif.hasMessageStatus() && onMessageStatusNotificationHandler != null) {
+            if (notif.hasReminder() && onReminderNotificationHandler != null) {
 
-            MessageStatusNotification payload = Utils.fillInCustomerNotification(notif, new MessageStatusNotification());
-            payload.messageId = notif.getMessageStatus().getMessageId();
-            payload.status = MessageDeliveryStatus.valueOf(notif.getMessageStatus().getStatusValue());
+                ReminderNotification payload = Utils.fillInCustomerNotification(notif, new ReminderNotification());
+                payload.workId = notif.getReminder().getWorkId().getValue();
+                AppModel.CustomerReminder reminder = notif.getReminder().getReminder();
+                payload.reminder = new Reminder(reminder.getKey(), reminder.getPayload().getValue(), reminder.getRemindAt().getSeconds());
+                payload.reminder.interval = reminder.getInterval().getSeconds();
+                CommonModel.CustomerIndex tag = notif.getReminder().getTag();
+                payload.tag = new Tag(tag.getMapping().getKey(), tag.getMapping().getValue().getValue(), tag.getExpiresAt().getSeconds());
 
-            onMessageStatusNotificationHandler.handle(payload, customer, appData, responder);
+                responder.callback(null, appData);
+                onReminderNotificationHandler.handle(payload, customer, appData);
 
-        } else if (notif.hasSentMessageReaction() && onSentMessageReactionNotificationHandler != null) {
+            } else if (notif.hasMessagingSessionStarted() && onMessagingSessionStartedNotificationHandler != null) {
 
-            SentMessageReactionNotification payload = Utils.fillInCustomerNotification(notif, new SentMessageReactionNotification());
+                MessagingSessionInitializedNotification payload = Utils.fillInCustomerNotification(notif, new MessagingSessionInitializedNotification());
+                AppSocket.MessagingSessionStartedNotification msg = notif.getMessagingSessionStarted();
+                payload.sessionId = msg.getSessionId();
+                payload.expiresAt = msg.getExpiresAt().getSeconds();
+                payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+                payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
-            payload.messageId = notif.getSentMessageReaction().getMessageId();
-            payload.channelNumber = Utils.makeMessagingChannel(notif.getSentMessageReaction().getChannelNumber());
-            payload.customerNumber = Utils.makeCustomerNumber(notif.getSentMessageReaction().getCustomerNumber());
-            payload.reaction = MessageReaction.valueOf(notif.getSentMessageReaction().getReactionValue());
+                customer.customerNumber = payload.customerNumber;
 
-            customer.customerNumber = payload.customerNumber;
+                responder.callback(null, appData);
+                onMessagingSessionStartedNotificationHandler.handle(payload, customer, appData);
 
-            onSentMessageReactionNotificationHandler.handle(payload, customer, appData, responder);
+            } else if (notif.hasMessagingSessionRenewed() && onMessagingSessionRenewedNotificationHandler != null) {
 
-        } else if (notif.hasReceivedPayment() && onReceivedPaymentNotificationHandler != null) {
+                MessagingSessionInitializedNotification payload = Utils.fillInCustomerNotification(notif, new MessagingSessionInitializedNotification());
+                AppSocket.MessagingSessionRenewedNotification msg = notif.getMessagingSessionRenewed();
+                payload.sessionId = msg.getSessionId();
+                payload.expiresAt = msg.getExpiresAt().getSeconds();
+                payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+                payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
-            ReceivedPaymentNotification payload = Utils.fillInCustomerNotification(notif, new ReceivedPaymentNotification());
+                customer.customerNumber = payload.customerNumber;
 
-            payload.purseId = notif.getReceivedPayment().getPurseId();
-            payload.transactionId = notif.getReceivedPayment().getTransactionId();
-            payload.channelNumber = Utils.makePaymentChannel(notif.getReceivedPayment().getChannelNumber());
-            payload.customerNumber = Utils.makeCustomerNumber(notif.getCustomerActivity().getCustomerNumber());
-            payload.status = PaymentStatus.valueOf(notif.getReceivedPayment().getStatus().getNumber());
-            payload.value = new Cash(notif.getReceivedPayment().getValue().getCurrencyCode(), notif.getReceivedPayment().getValue().getAmount());
+                responder.callback(null, appData);
+                onMessagingSessionRenewedNotificationHandler.handle(payload, customer, appData);
 
-            customer.customerNumber = payload.customerNumber;
+            } else if (notif.hasMessagingSessionEnded() && onMessagingSessionEndedNotificationHandler != null) {
 
-            onReceivedPaymentNotificationHandler.handle(payload, customer, appData, responder);
+                MessagingSessionEndedNotification payload = Utils.fillInCustomerNotification(notif, new MessagingSessionEndedNotification());
+                AppSocket.MessagingSessionEndedNotification msg = notif.getMessagingSessionEnded();
+                payload.sessionId = msg.getSessionId();
+                payload.duration = msg.getDuration().getSeconds();
+                payload.reason = MessagingSessionEndReason.valueOf(msg.getReasonValue());
+                payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+                payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
-        } else if (notif.hasPaymentStatus() && onPaymentStatusNotificationHandler != null) {
+                customer.customerNumber = payload.customerNumber;
 
-            PaymentStatusNotification payload = Utils.fillInCustomerNotification(notif, new PaymentStatusNotification());
-            payload.transactionId = notif.getPaymentStatus().getTransactionId();
-            payload.status = PaymentStatus.valueOf(notif.getPaymentStatus().getStatusValue());
+                responder.callback(null, appData);
+                onMessagingSessionEndedNotificationHandler.handle(payload, customer, appData);
 
-            onPaymentStatusNotificationHandler.handle(payload, customer, appData, responder);
+            } else if (notif.hasMessagingConsentUpdate() && onMessagingConsentUpdateNotificationHandler != null) {
 
-        } else if (notif.hasWalletPaymentStatus() && onWalletPaymentStatusNotificationHandler != null) {
+                MessagingConsentUpdateNotification payload = Utils.fillInCustomerNotification(notif, new MessagingConsentUpdateNotification());
+                AppSocket.MessagingConsentUpdateNotification msg = notif.getMessagingConsentUpdate();
+                payload.update = ConsentAction.valueOf(msg.getUpdateValue());
+                payload.status = MessagingConsentUpdateStatus.valueOf(msg.getStatusValue());
+                payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+                payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
-            WalletPaymentStatusNotification payload = Utils.fillInCustomerNotification(notif, new WalletPaymentStatusNotification());
-            payload.walletId = notif.getWalletPaymentStatus().getWalletId();
-            payload.transactionId = notif.getWalletPaymentStatus().getTransactionId();
-            payload.status = PaymentStatus.valueOf(notif.getWalletPaymentStatus().getStatusValue());
+                customer.customerNumber = payload.customerNumber;
 
-            onWalletPaymentStatusNotificationHandler.handle(payload, customer, appData, responder);
+                responder.callback(null, appData);
+                onMessagingConsentUpdateNotificationHandler.handle(payload, customer, appData);
 
-        } else if (notif.hasCustomerActivity() && onCustomerActivityNotificationHandler != null) {
+            } else if (notif.hasReceivedMessage()) {
+                AppSocket.ReceivedMessageNotification msg = notif.getReceivedMessage();
+                MessagingChannel.Channel channel = MessagingChannel.Channel.valueOf(msg.getChannelNumber().getChannel().getNumber());
 
-            CustomerActivityNotification payload = Utils.fillInCustomerNotification(notif, new CustomerActivityNotification());
-            payload.sessionId = notif.getCustomerActivity().getSessionId();
-            payload.activity = new Activity(
-                    notif.getCustomerActivity().getActivity().getKey(),
-                    notif.getCustomerActivity().getActivity().getPropertiesMap(),
-                    notif.getCustomerActivity().getSessionId(),
-                    notif.getCustomerActivity().getActivity().getCreatedAt().getSeconds()
-            );
-            payload.channelNumber = Utils.makeActivityChannel(notif.getCustomerActivity().getChannelNumber());
-            payload.customerNumber = Utils.makeCustomerNumber(notif.getCustomerActivity().getCustomerNumber());
+                switch (channel.getValue()) {
+                    case 1: // MessagingChannel.Channel.SMS
+                        ReceivedSmsNotification sms = Utils.fillInCustomerNotification(notif, new ReceivedSmsNotification());
+                        sms.messageId = msg.getMessageId();
+                        sms.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+                        sms.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
 
-            customer.customerNumber = payload.customerNumber;
+                        customer.customerNumber = sms.customerNumber;
 
-            onCustomerActivityNotificationHandler.handle(payload, customer, appData, responder);
-        } else {
+                        sms.text = null;
+                        if (msg.getPartsCount() > 0) {
+                            sms.text = msg.getParts(0).getText();
+                        }
+
+                        if (onReceivedSmsNotificationHandler != null) {
+                            responder.callback(null, appData);
+                            onReceivedSmsNotificationHandler.handle(sms, customer, appData);
+                            return;
+                        }
+                        break;
+                    case 2: // MessagingChannel.Channel.VOICE
+                        if (onVoiceCallBaseNotificationHandler != null) {
+                            VoiceCallNotification voiceNotif = Utils.fillInCustomerNotification(notif, new VoiceCallNotification());
+                            voiceNotif.messageId = msg.getMessageId();
+                            voiceNotif.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+                            voiceNotif.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+                            voiceNotif.sessionId = msg.getSessionId().getValue();
+
+                            customer.customerNumber = voiceNotif.customerNumber;
+
+                            if (msg.getPartsCount() > 0) {
+                                voiceNotif.voice = Utils.makeVoiceCallInput(msg.getParts(0).getVoice());
+                            }
+
+                            onVoiceCallBaseNotificationHandler.handle(voiceNotif, customer, appData, (actions, data) -> {
+                                MessageBody body = new MessageBody();
+                                body.voice = actions;
+                                responder.callback(new Message(body), data);
+                            });
+                            return;
+                        }
+                        break;
+                    case 3: // MessagingChannel.Channel.USSD:
+                        if (onUssdSessionBaseNotificationHandler != null) {
+                            UssdSessionNotification ussd = Utils.fillInCustomerNotification(notif, new UssdSessionNotification());
+                            ussd.messageId = msg.getMessageId();
+                            ussd.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
+                            ussd.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
+
+                            customer.customerNumber = ussd.customerNumber;
+
+                            ussd.sessionId = msg.getSessionId().getValue();
+                            ussd.input = null;
+                            if (msg.getPartsCount() > 0) {
+                                ussd.input = msg.getParts(0).getUssd().getValue();
+                            }
+                            onUssdSessionBaseNotificationHandler.handle(ussd, customer, appData, (message, data) -> {
+                                MessageBody body = new MessageBody();
+                                body.ussd = message;
+                                Message resp = new Message(body);
+                                responder.callback(resp, data);
+                            });
+                            return;
+                        }
+                        break;
+                    case 4: // MessagingChannel.Channel.FB_MESSENGER
+                        if (onReceivedFbMessengerNotificationHandler != null) {
+                            ReceivedMediaNotification fb_messenger = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
+                            Utils.fillInMediaMessageNotification(msg, fb_messenger, customer);
+                            responder.callback(null, appData);
+                            onReceivedFbMessengerNotificationHandler.handle(fb_messenger, customer, appData);
+                            return;
+                        }
+                        break;
+                    case 5: // MessagingChannel.Channel.TELEGRAM
+                        if (onReceivedTelegramNotificationHandler != null) {
+                            ReceivedMediaNotification telegram = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
+                            Utils.fillInMediaMessageNotification(msg, telegram, customer);
+                            responder.callback(null, appData);
+                            onReceivedTelegramNotificationHandler.handle(telegram, customer, appData);
+                            return;
+                        }
+                        break;
+                    case 6: // MessagingChannel.Channel.WHATSAPP
+                        if (onReceivedWhatsappNotificationHandler != null) {
+                            ReceivedMediaNotification whatsapp = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
+                            Utils.fillInMediaMessageNotification(msg, whatsapp, customer);
+                            responder.callback(null, appData);
+                            onReceivedWhatsappNotificationHandler.handle(whatsapp, customer, appData);
+                            return;
+                        }
+                        break;
+                    case 7: // MessagingChannel.Channel.EMAIL
+                        if (onReceivedEmailNotificationHandler != null) {
+                            ReceivedMediaNotification email = Utils.fillInCustomerNotification(notif, new ReceivedMediaNotification());
+                            Utils.fillInMediaMessageNotification(msg, email, customer);
+                            responder.callback(null, appData);
+                            onReceivedEmailNotificationHandler.handle(email, customer, appData);
+                            return;
+                        }
+                        break;
+                }
+
+                responder.callback(null, appData);
+
+            } else if (notif.hasMessageStatus() && onMessageStatusNotificationHandler != null) {
+
+                MessageStatusNotification payload = Utils.fillInCustomerNotification(notif, new MessageStatusNotification());
+                payload.messageId = notif.getMessageStatus().getMessageId();
+                payload.status = MessageDeliveryStatus.valueOf(notif.getMessageStatus().getStatusValue());
+
+                responder.callback(null, appData);
+                onMessageStatusNotificationHandler.handle(payload, customer, appData);
+
+            } else if (notif.hasSentMessageReaction() && onSentMessageReactionNotificationHandler != null) {
+
+                SentMessageReactionNotification payload = Utils.fillInCustomerNotification(notif, new SentMessageReactionNotification());
+
+                payload.messageId = notif.getSentMessageReaction().getMessageId();
+                payload.channelNumber = Utils.makeMessagingChannel(notif.getSentMessageReaction().getChannelNumber());
+                payload.customerNumber = Utils.makeCustomerNumber(notif.getSentMessageReaction().getCustomerNumber());
+                payload.reaction = MessageReaction.valueOf(notif.getSentMessageReaction().getReactionValue());
+
+                customer.customerNumber = payload.customerNumber;
+
+                responder.callback(null, appData);
+                onSentMessageReactionNotificationHandler.handle(payload, customer, appData);
+
+            } else if (notif.hasReceivedPayment() && onReceivedPaymentNotificationHandler != null) {
+
+                ReceivedPaymentNotification payload = Utils.fillInCustomerNotification(notif, new ReceivedPaymentNotification());
+
+                payload.purseId = notif.getReceivedPayment().getPurseId();
+                payload.transactionId = notif.getReceivedPayment().getTransactionId();
+                payload.channelNumber = Utils.makePaymentChannel(notif.getReceivedPayment().getChannelNumber());
+                payload.customerNumber = Utils.makeCustomerNumber(notif.getReceivedPayment().getCustomerNumber());
+                payload.status = PaymentStatus.valueOf(notif.getReceivedPayment().getStatus().getNumber());
+                payload.value = new Cash(notif.getReceivedPayment().getValue().getCurrencyCode(), notif.getReceivedPayment().getValue().getAmount());
+
+                customer.customerNumber = payload.customerNumber;
+
+                responder.callback(null, appData);
+                onReceivedPaymentNotificationHandler.handle(payload, customer, appData);
+
+            } else if (notif.hasPaymentStatus() && onPaymentStatusNotificationHandler != null) {
+
+                PaymentStatusNotification payload = Utils.fillInCustomerNotification(notif, new PaymentStatusNotification());
+                payload.transactionId = notif.getPaymentStatus().getTransactionId();
+                payload.status = PaymentStatus.valueOf(notif.getPaymentStatus().getStatusValue());
+
+                responder.callback(null, appData);
+                onPaymentStatusNotificationHandler.handle(payload, customer, appData);
+
+            } else if (notif.hasWalletPaymentStatus() && onWalletPaymentStatusNotificationHandler != null) {
+
+                WalletPaymentStatusNotification payload = Utils.fillInCustomerNotification(notif, new WalletPaymentStatusNotification());
+                payload.walletId = notif.getWalletPaymentStatus().getWalletId();
+                payload.transactionId = notif.getWalletPaymentStatus().getTransactionId();
+                payload.status = PaymentStatus.valueOf(notif.getWalletPaymentStatus().getStatusValue());
+
+                responder.callback(null, appData);
+                onWalletPaymentStatusNotificationHandler.handle(payload, customer, appData);
+
+            } else if (notif.hasCustomerActivity() && onCustomerActivityNotificationHandler != null) {
+
+                CustomerActivityNotification payload = Utils.fillInCustomerNotification(notif, new CustomerActivityNotification());
+                payload.sessionId = notif.getCustomerActivity().getSessionId();
+                payload.activity = new Activity(
+                        notif.getCustomerActivity().getActivity().getKey(),
+                        notif.getCustomerActivity().getActivity().getPropertiesMap(),
+                        notif.getCustomerActivity().getSessionId(),
+                        notif.getCustomerActivity().getActivity().getCreatedAt().getSeconds()
+                );
+                payload.channelNumber = Utils.makeActivityChannel(notif.getCustomerActivity().getChannelNumber());
+                payload.customerNumber = Utils.makeCustomerNumber(notif.getCustomerActivity().getCustomerNumber());
+
+                customer.customerNumber = payload.customerNumber;
+
+                responder.callback(null, appData);
+                onCustomerActivityNotificationHandler.handle(payload, customer, appData);
+            } else {
+                responder.callback(null, appData);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
             responder.callback(null, appData);
         }
     }

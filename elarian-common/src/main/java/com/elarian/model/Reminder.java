@@ -1,13 +1,10 @@
 package com.elarian.model;
 
-import java.time.Duration;
-
 public final class Reminder {
     public String key;
     public String payload;
     public long remindAt;
     public long interval;
-
 
     /**
      *
@@ -37,6 +34,4 @@ public final class Reminder {
         }
         this.interval = interval;
     }
-
-
 }

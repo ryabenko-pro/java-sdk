@@ -33,11 +33,11 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
             return null;
         }
     };
-    private NotificationHandler<SendMessageSimulatorNotification, MessageBody> onSendMessageNotificationHandler;
-    private NotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody> onMakeVoiceCallNotificationHandler;
-    private NotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody> onSendCustomerPaymentNotificationHandler;
-    private NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody> onSendChannelPaymentNotificationHandler;
-    private NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody> onCheckoutPaymentNotificationHandler;
+    private BaseNotificationHandler<SendMessageSimulatorNotification, MessageBody> onSendMessageBaseNotificationHandler;
+    private BaseNotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody> onMakeVoiceCallBaseNotificationHandler;
+    private BaseNotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody> onSendCustomerPaymentBaseNotificationHandler;
+    private BaseNotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody> onSendChannelPaymentBaseNotificationHandler;
+    private BaseNotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody> onCheckoutPaymentBaseNotificationHandler;
 
     public Simulator(String authToken, String orgId, String appId) {
         this(authToken, orgId, appId, new ConnectionConfig());
@@ -64,7 +64,7 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                     subscriber.onComplete();
                 };
 
-                if (isSendMessageNotification && onSendMessageNotificationHandler != null) {
+                if (isSendMessageNotification && onSendMessageBaseNotificationHandler != null) {
                     SendMessageSimulatorNotification payload = new SendMessageSimulatorNotification();
                     SimulatorSocket.SendMessageSimulatorNotification msg = notif.getSendMessage();
                     payload.orgId = msg.getOrgId();
@@ -74,9 +74,9 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                     payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
                     payload.message = Utils.makeMessage(msg.getMessage());
 
-                    onSendMessageNotificationHandler.handle(payload, null, null, callback);
+                    onSendMessageBaseNotificationHandler.handle(payload, null, null, callback);
 
-                } else if (isMakeVoiceCallNotification && onMakeVoiceCallNotificationHandler != null) {
+                } else if (isMakeVoiceCallNotification && onMakeVoiceCallBaseNotificationHandler != null) {
                     MakeVoiceCallSimulatorNotification payload = new MakeVoiceCallSimulatorNotification();
                     SimulatorSocket.MakeVoiceCallSimulatorNotification msg = notif.getMakeVoiceCall();
                     payload.orgId = msg.getOrgId();
@@ -85,9 +85,9 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                     payload.customerNumber = Utils.makeCustomerNumber(msg.getCustomerNumber());
                     payload.channelNumber = Utils.makeMessagingChannel(msg.getChannelNumber());
 
-                    onMakeVoiceCallNotificationHandler.handle(payload, null, null, callback);
+                    onMakeVoiceCallBaseNotificationHandler.handle(payload, null, null, callback);
 
-                } else if (isSendCustomerPaymentNotification && onSendCustomerPaymentNotificationHandler != null) {
+                } else if (isSendCustomerPaymentNotification && onSendCustomerPaymentBaseNotificationHandler != null) {
                     SendCustomerPaymentSimulatorNotification payload = new SendCustomerPaymentSimulatorNotification();
                     SimulatorSocket.SendCustomerPaymentSimulatorNotification msg = notif.getSendCustomerPayment();
                     payload.orgId = msg.getOrgId();
@@ -106,9 +106,9 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                         payload.purse = new PaymentPurseCounterParty(msg.getPurse().getPurseId());
                     }
 
-                    onSendCustomerPaymentNotificationHandler.handle(payload, null, null, callback);
+                    onSendCustomerPaymentBaseNotificationHandler.handle(payload, null, null, callback);
 
-                } else if (isSendChannelPaymentNotification && onSendChannelPaymentNotificationHandler != null) {
+                } else if (isSendChannelPaymentNotification && onSendChannelPaymentBaseNotificationHandler != null) {
                     SendChannelPaymentSimulatorNotification payload = new SendChannelPaymentSimulatorNotification();
                     SimulatorSocket.SendChannelPaymentSimulatorNotification msg = notif.getSendChannelPayment();
                     payload.orgId = msg.getOrgId();
@@ -126,9 +126,9 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                         payload.purse = new PaymentPurseCounterParty(msg.getPurse().getPurseId());
                     }
 
-                    onSendChannelPaymentNotificationHandler.handle(payload, null, null, callback);
+                    onSendChannelPaymentBaseNotificationHandler.handle(payload, null, null, callback);
 
-                } else if (isCheckoutPaymentNotification && onCheckoutPaymentNotificationHandler != null) {
+                } else if (isCheckoutPaymentNotification && onCheckoutPaymentBaseNotificationHandler != null) {
 
                     CheckoutPaymentSimulatorNotification payload = new CheckoutPaymentSimulatorNotification();
                     SimulatorSocket.CheckoutPaymentSimulatorNotification msg = notif.getCheckoutPayment();
@@ -146,7 +146,7 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
                         payload.purse = new PaymentPurseCounterParty(msg.getPurse().getPurseId());
                     }
 
-                    onCheckoutPaymentNotificationHandler.handle(payload, null, null, callback);
+                    onCheckoutPaymentBaseNotificationHandler.handle(payload, null, null, callback);
 
                 } else {
                     callback.callback(null, null);
@@ -180,24 +180,24 @@ public final class Simulator extends Client<SimulatorSocket.ServerToSimulatorNot
         }
     }
 
-    public void setOnSendMessageNotificationHandler(NotificationHandler<SendMessageSimulatorNotification, MessageBody> onSendMessageNotificationHandler) {
-        this.onSendMessageNotificationHandler = onSendMessageNotificationHandler;
+    public void setOnSendMessageNotificationHandler(BaseNotificationHandler<SendMessageSimulatorNotification, MessageBody> onSendMessageBaseNotificationHandler) {
+        this.onSendMessageBaseNotificationHandler = onSendMessageBaseNotificationHandler;
     }
 
-    public void setOnCheckoutPaymentNotificationHandler(NotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody> onCheckoutPaymentNotificationHandler) {
-        this.onCheckoutPaymentNotificationHandler = onCheckoutPaymentNotificationHandler;
+    public void setOnCheckoutPaymentNotificationHandler(BaseNotificationHandler<CheckoutPaymentSimulatorNotification, MessageBody> onCheckoutPaymentBaseNotificationHandler) {
+        this.onCheckoutPaymentBaseNotificationHandler = onCheckoutPaymentBaseNotificationHandler;
     }
 
-    public void setOnMakeVoiceCallNotificationHandler(NotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody> onMakeVoiceCallNotificationHandler) {
-        this.onMakeVoiceCallNotificationHandler = onMakeVoiceCallNotificationHandler;
+    public void setOnMakeVoiceCallNotificationHandler(BaseNotificationHandler<MakeVoiceCallSimulatorNotification, MessageBody> onMakeVoiceCallBaseNotificationHandler) {
+        this.onMakeVoiceCallBaseNotificationHandler = onMakeVoiceCallBaseNotificationHandler;
     }
 
-    public void setOnSendChannelPaymentNotificationHandler(NotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody> onSendChannelPaymentNotificationHandler) {
-        this.onSendChannelPaymentNotificationHandler = onSendChannelPaymentNotificationHandler;
+    public void setOnSendChannelPaymentNotificationHandler(BaseNotificationHandler<SendChannelPaymentSimulatorNotification, MessageBody> onSendChannelPaymentBaseNotificationHandler) {
+        this.onSendChannelPaymentBaseNotificationHandler = onSendChannelPaymentBaseNotificationHandler;
     }
 
-    public void setOnSendCustomerPaymentNotificationHandler(NotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody> onSendCustomerPaymentNotificationHandler) {
-        this.onSendCustomerPaymentNotificationHandler = onSendCustomerPaymentNotificationHandler;
+    public void setOnSendCustomerPaymentNotificationHandler(BaseNotificationHandler<SendCustomerPaymentSimulatorNotification, MessageBody> onSendCustomerPaymentBaseNotificationHandler) {
+        this.onSendCustomerPaymentBaseNotificationHandler = onSendCustomerPaymentBaseNotificationHandler;
     }
 
     /**

@@ -254,6 +254,11 @@ public final class Customer implements ICustomer {
                                 .stream()
                                 .map(Utils::makeCustomerNumber)
                                 .collect(Collectors.toList());
+
+                        if (customerNumber == null && state.paymentState.customerNumbers.size() > 0) {
+                            customerNumber = state.paymentState.customerNumbers.get(0);
+                        }
+
                         state.paymentState.paymentChannels = paymentState
                                 .getChannelNumbersList()
                                 .stream()
@@ -294,6 +299,29 @@ public final class Customer implements ICustomer {
                                 .stream()
                                 .map(Utils::makeMessagingChannelState)
                                 .collect(Collectors.toList());
+
+                        if (customerNumber == null && state.messagingState.channels.size() > 0) {
+                            List<CustomerNumber> numbers = state.messagingState.channels.stream().map(st -> {
+                                if (st.active != null) {
+                                    return st.active.customerNumber;
+                                }
+
+                                if (st.blocked != null) {
+                                    return st.blocked.customerNumber;
+                                }
+
+                                if (st.inSession != null) {
+                                    return st.inSession.customerNumber;
+                                }
+
+                                return null;
+                            })
+                            .filter(Objects::nonNull)
+                            .collect(Collectors.toList());
+                            if (numbers.size() > 0) {
+                                customerNumber = numbers.get(0);
+                            }
+                        }
                     }
 
                     subscriber.onNext(state);
