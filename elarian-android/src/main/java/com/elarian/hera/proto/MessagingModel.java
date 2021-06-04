@@ -1489,6 +1489,122 @@ public final class MessagingModel {
   }
 
   /**
+   * Protobuf enum {@code com.elarian.hera.proto.UssdSessionStatus}
+   */
+  public enum UssdSessionStatus
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>USSD_SESSION_STATUS_UNSPECIFIED = 0;</code>
+     */
+    USSD_SESSION_STATUS_UNSPECIFIED(0),
+    /**
+     * <code>USSD_SESSION_STATUS_ACTIVE = 100;</code>
+     */
+    USSD_SESSION_STATUS_ACTIVE(100),
+    /**
+     * <code>USSD_SESSION_STATUS_INCOMPLETE = 200;</code>
+     */
+    USSD_SESSION_STATUS_INCOMPLETE(200),
+    /**
+     * <code>USSD_SESSION_STATUS_COMPLETED = 201;</code>
+     */
+    USSD_SESSION_STATUS_COMPLETED(201),
+    /**
+     * <code>USSD_SESSION_STATUS_APP_ERROR = 300;</code>
+     */
+    USSD_SESSION_STATUS_APP_ERROR(300),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>USSD_SESSION_STATUS_UNSPECIFIED = 0;</code>
+     */
+    public static final int USSD_SESSION_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>USSD_SESSION_STATUS_ACTIVE = 100;</code>
+     */
+    public static final int USSD_SESSION_STATUS_ACTIVE_VALUE = 100;
+    /**
+     * <code>USSD_SESSION_STATUS_INCOMPLETE = 200;</code>
+     */
+    public static final int USSD_SESSION_STATUS_INCOMPLETE_VALUE = 200;
+    /**
+     * <code>USSD_SESSION_STATUS_COMPLETED = 201;</code>
+     */
+    public static final int USSD_SESSION_STATUS_COMPLETED_VALUE = 201;
+    /**
+     * <code>USSD_SESSION_STATUS_APP_ERROR = 300;</code>
+     */
+    public static final int USSD_SESSION_STATUS_APP_ERROR_VALUE = 300;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UssdSessionStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static UssdSessionStatus forNumber(int value) {
+      switch (value) {
+        case 0: return USSD_SESSION_STATUS_UNSPECIFIED;
+        case 100: return USSD_SESSION_STATUS_ACTIVE;
+        case 200: return USSD_SESSION_STATUS_INCOMPLETE;
+        case 201: return USSD_SESSION_STATUS_COMPLETED;
+        case 300: return USSD_SESSION_STATUS_APP_ERROR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UssdSessionStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UssdSessionStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UssdSessionStatus>() {
+            @java.lang.Override
+            public UssdSessionStatus findValueByNumber(int number) {
+              return UssdSessionStatus.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return UssdSessionStatusVerifier.INSTANCE;
+    }
+
+    private static final class UssdSessionStatusVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new UssdSessionStatusVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return UssdSessionStatus.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private UssdSessionStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.UssdSessionStatus)
+  }
+
+  /**
    * Protobuf enum {@code com.elarian.hera.proto.TextToSpeechVoice}
    */
   public enum TextToSpeechVoice
@@ -13281,6 +13397,393 @@ public final class MessagingModel {
     }
   }
 
+  public interface UssdInputMessageBodyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UssdInputMessageBody)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @return The status.
+     */
+    com.elarian.hera.proto.MessagingModel.UssdSessionStatus getStatus();
+
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     * @return Whether the text field is set.
+     */
+    boolean hasText();
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     * @return The text.
+     */
+    com.google.protobuf.StringValue getText();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.UssdInputMessageBody}
+   */
+  public  static final class UssdInputMessageBody extends
+      com.google.protobuf.GeneratedMessageLite<
+          UssdInputMessageBody, UssdInputMessageBody.Builder> implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdInputMessageBody)
+      UssdInputMessageBodyOrBuilder {
+    private UssdInputMessageBody() {
+    }
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.UssdSessionStatus getStatus() {
+      com.elarian.hera.proto.MessagingModel.UssdSessionStatus result = com.elarian.hera.proto.MessagingModel.UssdSessionStatus.forNumber(status_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.UssdSessionStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @param value The enum numeric value on the wire for status to set.
+     */
+    private void setStatusValue(int value) {
+        status_ = value;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @param value The status to set.
+     */
+    private void setStatus(com.elarian.hera.proto.MessagingModel.UssdSessionStatus value) {
+      status_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     */
+    private void clearStatus() {
+      
+      status_ = 0;
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private com.google.protobuf.StringValue text_;
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     */
+    @java.lang.Override
+    public boolean hasText() {
+      return text_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getText() {
+      return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     */
+    private void setText(com.google.protobuf.StringValue value) {
+      value.getClass();
+  text_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeText(com.google.protobuf.StringValue value) {
+      value.getClass();
+  if (text_ != null &&
+          text_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+        text_ =
+          com.google.protobuf.StringValue.newBuilder(text_).mergeFrom(value).buildPartial();
+      } else {
+        text_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     */
+    private void clearText() {  text_ = null;
+      
+    }
+
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.UssdInputMessageBody}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.elarian.hera.proto.MessagingModel.UssdInputMessageBody, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.UssdInputMessageBody)
+        com.elarian.hera.proto.MessagingModel.UssdInputMessageBodyOrBuilder {
+      // Construct using com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        copyOnWrite();
+        instance.setStatusValue(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.UssdSessionStatus getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.elarian.hera.proto.MessagingModel.UssdSessionStatus value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      @java.lang.Override
+      public boolean hasText() {
+        return instance.hasText();
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StringValue getText() {
+        return instance.getText();
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public Builder setText(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.setText(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public Builder setText(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        copyOnWrite();
+        instance.setText(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public Builder mergeText(com.google.protobuf.StringValue value) {
+        copyOnWrite();
+        instance.mergeText(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public Builder clearText() {  copyOnWrite();
+        instance.clearText();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.UssdInputMessageBody)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.elarian.hera.proto.MessagingModel.UssdInputMessageBody();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "status_",
+              "text_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\t";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.elarian.hera.proto.MessagingModel.UssdInputMessageBody> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.elarian.hera.proto.MessagingModel.UssdInputMessageBody>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.UssdInputMessageBody)
+    private static final com.elarian.hera.proto.MessagingModel.UssdInputMessageBody DEFAULT_INSTANCE;
+    static {
+      UssdInputMessageBody defaultInstance = new UssdInputMessageBody();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UssdInputMessageBody.class, defaultInstance);
+    }
+
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UssdInputMessageBody> PARSER;
+
+    public static com.google.protobuf.Parser<UssdInputMessageBody> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface UssdMenuMessageBodyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UssdMenuMessageBody)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -15313,15 +15816,15 @@ public final class MessagingModel {
     com.elarian.hera.proto.MessagingModel.VoiceCallInputMessageBody getVoice();
 
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      * @return Whether the ussd field is set.
      */
     boolean hasUssd();
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      * @return The ussd.
      */
-    com.google.protobuf.StringValue getUssd();
+    com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getUssd();
 
     public com.elarian.hera.proto.MessagingModel.InboundMessageBody.EntryCase getEntryCase();
   }
@@ -15644,38 +16147,38 @@ public final class MessagingModel {
 
     public static final int USSD_FIELD_NUMBER = 6;
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      */
     @java.lang.Override
     public boolean hasUssd() {
       return entryCase_ == 6;
     }
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.StringValue getUssd() {
+    public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getUssd() {
       if (entryCase_ == 6) {
-         return (com.google.protobuf.StringValue) entry_;
+         return (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_;
       }
-      return com.google.protobuf.StringValue.getDefaultInstance();
+      return com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance();
     }
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      */
-    private void setUssd(com.google.protobuf.StringValue value) {
+    private void setUssd(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody value) {
       value.getClass();
   entry_ = value;
       entryCase_ = 6;
     }
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      */
-    private void mergeUssd(com.google.protobuf.StringValue value) {
+    private void mergeUssd(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody value) {
       value.getClass();
   if (entryCase_ == 6 &&
-          entry_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-        entry_ = com.google.protobuf.StringValue.newBuilder((com.google.protobuf.StringValue) entry_)
+          entry_ != com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance()) {
+        entry_ = com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.newBuilder((com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_)
             .mergeFrom(value).buildPartial();
       } else {
         entry_ = value;
@@ -15683,7 +16186,7 @@ public final class MessagingModel {
       entryCase_ = 6;
     }
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      */
     private void clearUssd() {
       if (entryCase_ == 6) {
@@ -16041,46 +16544,46 @@ public final class MessagingModel {
       }
 
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
       @java.lang.Override
       public boolean hasUssd() {
         return instance.hasUssd();
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.StringValue getUssd() {
+      public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getUssd() {
         return instance.getUssd();
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
-      public Builder setUssd(com.google.protobuf.StringValue value) {
+      public Builder setUssd(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody value) {
         copyOnWrite();
         instance.setUssd(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
       public Builder setUssd(
-          com.google.protobuf.StringValue.Builder builderForValue) {
+          com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder builderForValue) {
         copyOnWrite();
         instance.setUssd(builderForValue.build());
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
-      public Builder mergeUssd(com.google.protobuf.StringValue value) {
+      public Builder mergeUssd(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody value) {
         copyOnWrite();
         instance.mergeUssd(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
       public Builder clearUssd() {
         copyOnWrite();
@@ -16110,7 +16613,7 @@ public final class MessagingModel {
               com.elarian.hera.proto.MessagingModel.LocationMessageBody.class,
               com.elarian.hera.proto.MessagingModel.EmailMessageBody.class,
               com.elarian.hera.proto.MessagingModel.VoiceCallInputMessageBody.class,
-              com.google.protobuf.StringValue.class,
+              com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.class,
             };
             java.lang.String info =
                 "\u0000\u0006\u0001\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u023b\u0000\u0002" +

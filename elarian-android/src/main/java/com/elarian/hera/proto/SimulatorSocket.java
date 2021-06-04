@@ -633,6 +633,28 @@ public final class SimulatorSocket {
      * @return The sessionId.
      */
     com.google.protobuf.StringValue getSessionId();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     * @return Whether the cost field is set.
+     */
+    boolean hasCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     * @return The cost.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getCost();
+
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReceiveMessageSimulatorCommand}
@@ -876,6 +898,98 @@ public final class SimulatorSocket {
      * <code>.google.protobuf.StringValue session_id = 4;</code>
      */
     private void clearSessionId() {  sessionId_ = null;
+      
+    }
+
+    public static final int COST_FIELD_NUMBER = 5;
+    private com.elarian.hera.proto.CommonModel.Cash cost_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     */
+    @java.lang.Override
+    public boolean hasCost() {
+      return cost_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getCost() {
+      return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     */
+    private void setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+      value.getClass();
+  cost_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+      value.getClass();
+  if (cost_ != null &&
+          cost_ != com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance()) {
+        cost_ =
+          com.elarian.hera.proto.CommonModel.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
+      } else {
+        cost_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     */
+    private void clearCost() {  cost_ = null;
+      
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 6;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     */
+    private void setDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  duration_ = value;
+      
+      }
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDuration(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (duration_ != null &&
+          duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        duration_ =
+          com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+      } else {
+        duration_ = value;
+      }
+      
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     */
+    private void clearDuration() {  duration_ = null;
       
     }
 
@@ -1219,6 +1333,100 @@ public final class SimulatorSocket {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      @java.lang.Override
+      public boolean hasCost() {
+        return instance.hasCost();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.CommonModel.Cash getCost() {
+        return instance.getCost();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public Builder setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        copyOnWrite();
+        instance.setCost(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public Builder setCost(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCost(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public Builder mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        copyOnWrite();
+        instance.mergeCost(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public Builder clearCost() {  copyOnWrite();
+        instance.clearCost();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      @java.lang.Override
+      public boolean hasDuration() {
+        return instance.hasDuration();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getDuration() {
+        return instance.getDuration();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setDuration(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDuration(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeDuration(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public Builder clearDuration() {  copyOnWrite();
+        instance.clearDuration();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ReceiveMessageSimulatorCommand)
     }
     @java.lang.Override
@@ -1240,10 +1448,12 @@ public final class SimulatorSocket {
               "parts_",
               com.elarian.hera.proto.MessagingModel.InboundMessageBody.class,
               "sessionId_",
+              "cost_",
+              "duration_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\t" +
-                "\u0003\u001b\u0004\t";
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\t" +
+                "\u0003\u001b\u0004\t\u0005\t\u0006\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

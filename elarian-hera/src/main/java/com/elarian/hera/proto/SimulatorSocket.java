@@ -1259,6 +1259,36 @@ public final class SimulatorSocket {
      * <code>.google.protobuf.StringValue session_id = 4;</code>
      */
     com.google.protobuf.StringValueOrBuilder getSessionIdOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     * @return Whether the cost field is set.
+     */
+    boolean hasCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     * @return The cost.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     */
+    com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReceiveMessageSimulatorCommand}
@@ -1345,6 +1375,32 @@ public final class SimulatorSocket {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(sessionId_);
                 sessionId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.elarian.hera.proto.CommonModel.Cash.Builder subBuilder = null;
+              if (cost_ != null) {
+                subBuilder = cost_.toBuilder();
+              }
+              cost_ = input.readMessage(com.elarian.hera.proto.CommonModel.Cash.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cost_);
+                cost_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (duration_ != null) {
+                subBuilder = duration_.toBuilder();
+              }
+              duration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(duration_);
+                duration_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1514,6 +1570,58 @@ public final class SimulatorSocket {
       return getSessionId();
     }
 
+    public static final int COST_FIELD_NUMBER = 5;
+    private com.elarian.hera.proto.CommonModel.Cash cost_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     * @return Whether the cost field is set.
+     */
+    @java.lang.Override
+    public boolean hasCost() {
+      return cost_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     * @return The cost.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getCost() {
+      return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder() {
+      return getCost();
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 6;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return getDuration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1540,6 +1648,12 @@ public final class SimulatorSocket {
       if (sessionId_ != null) {
         output.writeMessage(4, getSessionId());
       }
+      if (cost_ != null) {
+        output.writeMessage(5, getCost());
+      }
+      if (duration_ != null) {
+        output.writeMessage(6, getDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1563,6 +1677,14 @@ public final class SimulatorSocket {
       if (sessionId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSessionId());
+      }
+      if (cost_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCost());
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDuration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1593,6 +1715,16 @@ public final class SimulatorSocket {
         if (!getSessionId()
             .equals(other.getSessionId())) return false;
       }
+      if (hasCost() != other.hasCost()) return false;
+      if (hasCost()) {
+        if (!getCost()
+            .equals(other.getCost())) return false;
+      }
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1617,6 +1749,14 @@ public final class SimulatorSocket {
       if (hasSessionId()) {
         hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
         hash = (53 * hash) + getSessionId().hashCode();
+      }
+      if (hasCost()) {
+        hash = (37 * hash) + COST_FIELD_NUMBER;
+        hash = (53 * hash) + getCost().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1772,6 +1912,18 @@ public final class SimulatorSocket {
           sessionId_ = null;
           sessionIdBuilder_ = null;
         }
+        if (costBuilder_ == null) {
+          cost_ = null;
+        } else {
+          cost_ = null;
+          costBuilder_ = null;
+        }
+        if (durationBuilder_ == null) {
+          duration_ = null;
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
         return this;
       }
 
@@ -1818,6 +1970,16 @@ public final class SimulatorSocket {
           result.sessionId_ = sessionId_;
         } else {
           result.sessionId_ = sessionIdBuilder_.build();
+        }
+        if (costBuilder_ == null) {
+          result.cost_ = cost_;
+        } else {
+          result.cost_ = costBuilder_.build();
+        }
+        if (durationBuilder_ == null) {
+          result.duration_ = duration_;
+        } else {
+          result.duration_ = durationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1902,6 +2064,12 @@ public final class SimulatorSocket {
         }
         if (other.hasSessionId()) {
           mergeSessionId(other.getSessionId());
+        }
+        if (other.hasCost()) {
+          mergeCost(other.getCost());
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2485,6 +2653,244 @@ public final class SimulatorSocket {
           sessionId_ = null;
         }
         return sessionIdBuilder_;
+      }
+
+      private com.elarian.hera.proto.CommonModel.Cash cost_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> costBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       * @return Whether the cost field is set.
+       */
+      public boolean hasCost() {
+        return costBuilder_ != null || cost_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       * @return The cost.
+       */
+      public com.elarian.hera.proto.CommonModel.Cash getCost() {
+        if (costBuilder_ == null) {
+          return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+        } else {
+          return costBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public Builder setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (costBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cost_ = value;
+          onChanged();
+        } else {
+          costBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public Builder setCost(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        if (costBuilder_ == null) {
+          cost_ = builderForValue.build();
+          onChanged();
+        } else {
+          costBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public Builder mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (costBuilder_ == null) {
+          if (cost_ != null) {
+            cost_ =
+              com.elarian.hera.proto.CommonModel.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
+          } else {
+            cost_ = value;
+          }
+          onChanged();
+        } else {
+          costBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public Builder clearCost() {
+        if (costBuilder_ == null) {
+          cost_ = null;
+          onChanged();
+        } else {
+          cost_ = null;
+          costBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.Cash.Builder getCostBuilder() {
+        
+        onChanged();
+        return getCostFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder() {
+        if (costBuilder_ != null) {
+          return costBuilder_.getMessageOrBuilder();
+        } else {
+          return cost_ == null ?
+              com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> 
+          getCostFieldBuilder() {
+        if (costBuilder_ == null) {
+          costBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder>(
+                  getCost(),
+                  getParentForChildren(),
+                  isClean());
+          cost_ = null;
+        }
+        return costBuilder_;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return durationBuilder_ != null || duration_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (duration_ != null) {
+            duration_ =
+              com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+          } else {
+            duration_ = value;
+          }
+          onChanged();
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public Builder clearDuration() {
+        if (durationBuilder_ == null) {
+          duration_ = null;
+          onChanged();
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16478,99 +16884,103 @@ public final class SimulatorSocket {
   static {
     java.lang.String[] descriptorData = {
       "\n\026simulator_socket.proto\022\026com.elarian.he" +
-      "ra.proto\032\036google/protobuf/wrappers.proto" +
-      "\032\022common_model.proto\032\025messaging_model.pr" +
-      "oto\032\023payment_model.proto\"\247\002\n\030SimulatorTo" +
-      "ServerCommand\022Q\n\017receive_message\030\001 \001(\01326" +
-      ".com.elarian.hera.proto.ReceiveMessageSi" +
-      "mulatorCommandH\000\022Q\n\017receive_payment\030\002 \001(" +
-      "\01326.com.elarian.hera.proto.ReceivePaymen" +
-      "tSimulatorCommandH\000\022\\\n\025update_payment_st" +
-      "atus\030\003 \001(\0132;.com.elarian.hera.proto.Upda" +
-      "tePaymentStatusSimulatorCommandH\000B\007\n\005ent" +
-      "ry\"\356\001\n\036ReceiveMessageSimulatorCommand\022\027\n" +
-      "\017customer_number\030\001 \001(\t\022F\n\016channel_number" +
-      "\030\002 \001(\0132..com.elarian.hera.proto.Messagin" +
-      "gChannelNumber\0229\n\005parts\030\003 \003(\0132*.com.elar" +
-      "ian.hera.proto.InboundMessageBody\0220\n\nses" +
-      "sion_id\030\004 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\"\373\001\n\036ReceivePaymentSimulatorCommand\022\026" +
-      "\n\016transaction_id\030\001 \001(\t\022D\n\016channel_number" +
-      "\030\002 \001(\0132,.com.elarian.hera.proto.PaymentC" +
-      "hannelNumber\022\027\n\017customer_number\030\003 \001(\t\022+\n" +
-      "\005value\030\004 \001(\0132\034.com.elarian.hera.proto.Ca" +
-      "sh\0225\n\006status\030\005 \001(\0162%.com.elarian.hera.pr" +
-      "oto.PaymentStatus\"t\n#UpdatePaymentStatus" +
-      "SimulatorCommand\022\026\n\016transaction_id\030\001 \001(\t" +
-      "\0225\n\006status\030\002 \001(\0162%.com.elarian.hera.prot" +
-      "o.PaymentStatus\"~\n\035SimulatorToServerComm" +
-      "andReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description\030" +
-      "\002 \001(\t\0228\n\007message\030\003 \001(\0132\'.com.elarian.her" +
-      "a.proto.OutboundMessage\"\357\003\n\035ServerToSimu" +
-      "latorNotification\022P\n\014send_message\030\001 \001(\0132" +
-      "8.com.elarian.hera.proto.SendMessageSimu" +
-      "latorNotificationH\000\022U\n\017make_voice_call\030\002" +
-      " \001(\0132:.com.elarian.hera.proto.MakeVoiceC" +
-      "allSimulatorNotificationH\000\022a\n\025send_custo" +
-      "mer_payment\030\003 \001(\0132@.com.elarian.hera.pro" +
-      "to.SendCustomerPaymentSimulatorNotificat" +
-      "ionH\000\022_\n\024send_channel_payment\030\004 \001(\0132?.co" +
-      "m.elarian.hera.proto.SendChannelPaymentS" +
-      "imulatorNotificationH\000\022X\n\020checkout_payme" +
-      "nt\030\005 \001(\0132<.com.elarian.hera.proto.Checko" +
-      "utPaymentSimulatorNotificationH\000B\007\n\005entr" +
-      "y\"$\n\"ServerToSimulatorNotificationReply\"" +
-      "\236\002\n SendMessageSimulatorNotification\022\016\n\006" +
-      "org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022\022\n\nmes" +
-      "sage_id\030\003 \001(\t\022?\n\017customer_number\030\004 \001(\0132&" +
-      ".com.elarian.hera.proto.CustomerNumber\022F" +
-      "\n\016channel_number\030\005 \001(\0132..com.elarian.her" +
-      "a.proto.MessagingChannelNumber\0228\n\007messag" +
-      "e\030\006 \001(\0132\'.com.elarian.hera.proto.Outboun" +
-      "dMessage\"\346\001\n\"MakeVoiceCallSimulatorNotif" +
+      "ra.proto\032\036google/protobuf/duration.proto" +
+      "\032\036google/protobuf/wrappers.proto\032\022common" +
+      "_model.proto\032\025messaging_model.proto\032\023pay" +
+      "ment_model.proto\"\247\002\n\030SimulatorToServerCo" +
+      "mmand\022Q\n\017receive_message\030\001 \001(\01326.com.ela" +
+      "rian.hera.proto.ReceiveMessageSimulatorC" +
+      "ommandH\000\022Q\n\017receive_payment\030\002 \001(\01326.com." +
+      "elarian.hera.proto.ReceivePaymentSimulat" +
+      "orCommandH\000\022\\\n\025update_payment_status\030\003 \001" +
+      "(\0132;.com.elarian.hera.proto.UpdatePaymen" +
+      "tStatusSimulatorCommandH\000B\007\n\005entry\"\307\002\n\036R" +
+      "eceiveMessageSimulatorCommand\022\027\n\017custome" +
+      "r_number\030\001 \001(\t\022F\n\016channel_number\030\002 \001(\0132." +
+      ".com.elarian.hera.proto.MessagingChannel" +
+      "Number\0229\n\005parts\030\003 \003(\0132*.com.elarian.hera" +
+      ".proto.InboundMessageBody\0220\n\nsession_id\030" +
+      "\004 \001(\0132\034.google.protobuf.StringValue\022*\n\004c" +
+      "ost\030\005 \001(\0132\034.com.elarian.hera.proto.Cash\022" +
+      "+\n\010duration\030\006 \001(\0132\031.google.protobuf.Dura" +
+      "tion\"\373\001\n\036ReceivePaymentSimulatorCommand\022" +
+      "\026\n\016transaction_id\030\001 \001(\t\022D\n\016channel_numbe" +
+      "r\030\002 \001(\0132,.com.elarian.hera.proto.Payment" +
+      "ChannelNumber\022\027\n\017customer_number\030\003 \001(\t\022+" +
+      "\n\005value\030\004 \001(\0132\034.com.elarian.hera.proto.C" +
+      "ash\0225\n\006status\030\005 \001(\0162%.com.elarian.hera.p" +
+      "roto.PaymentStatus\"t\n#UpdatePaymentStatu" +
+      "sSimulatorCommand\022\026\n\016transaction_id\030\001 \001(" +
+      "\t\0225\n\006status\030\002 \001(\0162%.com.elarian.hera.pro" +
+      "to.PaymentStatus\"~\n\035SimulatorToServerCom" +
+      "mandReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description" +
+      "\030\002 \001(\t\0228\n\007message\030\003 \001(\0132\'.com.elarian.he" +
+      "ra.proto.OutboundMessage\"\357\003\n\035ServerToSim" +
+      "ulatorNotification\022P\n\014send_message\030\001 \001(\013" +
+      "28.com.elarian.hera.proto.SendMessageSim" +
+      "ulatorNotificationH\000\022U\n\017make_voice_call\030" +
+      "\002 \001(\0132:.com.elarian.hera.proto.MakeVoice" +
+      "CallSimulatorNotificationH\000\022a\n\025send_cust" +
+      "omer_payment\030\003 \001(\0132@.com.elarian.hera.pr" +
+      "oto.SendCustomerPaymentSimulatorNotifica" +
+      "tionH\000\022_\n\024send_channel_payment\030\004 \001(\0132?.c" +
+      "om.elarian.hera.proto.SendChannelPayment" +
+      "SimulatorNotificationH\000\022X\n\020checkout_paym" +
+      "ent\030\005 \001(\0132<.com.elarian.hera.proto.Check" +
+      "outPaymentSimulatorNotificationH\000B\007\n\005ent" +
+      "ry\"$\n\"ServerToSimulatorNotificationReply" +
+      "\"\236\002\n SendMessageSimulatorNotification\022\016\n" +
+      "\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022\022\n\nme" +
+      "ssage_id\030\003 \001(\t\022?\n\017customer_number\030\004 \001(\0132" +
+      "&.com.elarian.hera.proto.CustomerNumber\022" +
+      "F\n\016channel_number\030\005 \001(\0132..com.elarian.he" +
+      "ra.proto.MessagingChannelNumber\0228\n\007messa" +
+      "ge\030\006 \001(\0132\'.com.elarian.hera.proto.Outbou" +
+      "ndMessage\"\346\001\n\"MakeVoiceCallSimulatorNoti" +
+      "fication\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030" +
+      "\002 \001(\t\022\022\n\nsession_id\030\003 \001(\t\022?\n\017customer_nu" +
+      "mber\030\004 \001(\0132&.com.elarian.hera.proto.Cust" +
+      "omerNumber\022F\n\016channel_number\030\005 \001(\0132..com" +
+      ".elarian.hera.proto.MessagingChannelNumb" +
+      "er\"\302\003\n(SendCustomerPaymentSimulatorNotif" +
       "ication\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002" +
-      " \001(\t\022\022\n\nsession_id\030\003 \001(\t\022?\n\017customer_num" +
-      "ber\030\004 \001(\0132&.com.elarian.hera.proto.Custo" +
-      "merNumber\022F\n\016channel_number\030\005 \001(\0132..com." +
-      "elarian.hera.proto.MessagingChannelNumbe" +
-      "r\"\302\003\n(SendCustomerPaymentSimulatorNotifi" +
-      "cation\022\016\n\006org_id\030\001 \001(\t\022\023\n\013customer_id\030\002 " +
-      "\001(\t\022\016\n\006app_id\030\003 \001(\t\022C\n\006wallet\030\004 \001(\01321.co" +
-      "m.elarian.hera.proto.PaymentWalletCounte" +
-      "rPartyH\000\022A\n\005purse\030\005 \001(\01320.com.elarian.he" +
-      "ra.proto.PaymentPurseCounterPartyH\000\022\026\n\016t" +
-      "ransaction_id\030\006 \001(\t\022?\n\017customer_number\030\007" +
-      " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
-      "mber\022D\n\016channel_number\030\010 \001(\0132,.com.elari" +
-      "an.hera.proto.PaymentChannelNumber\022+\n\005va" +
-      "lue\030\t \001(\0132\034.com.elarian.hera.proto.CashB" +
-      "\r\n\013debit_party\"\232\003\n\'SendChannelPaymentSim" +
-      "ulatorNotification\022\016\n\006org_id\030\001 \001(\t\022\016\n\006ap" +
-      "p_id\030\002 \001(\t\022C\n\006wallet\030\003 \001(\01321.com.elarian" +
-      ".hera.proto.PaymentWalletCounterPartyH\000\022" +
-      "A\n\005purse\030\004 \001(\01320.com.elarian.hera.proto." +
-      "PaymentPurseCounterPartyH\000\022\026\n\016transactio" +
-      "n_id\030\005 \001(\t\022D\n\016channel_number\030\006 \001(\0132,.com" +
-      ".elarian.hera.proto.PaymentChannelNumber" +
-      "\022-\n\007account\030\007 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022+\n\005value\030\010 \001(\0132\034.com.elarian.her" +
-      "a.proto.CashB\r\n\013debit_party\"\277\003\n$Checkout" +
-      "PaymentSimulatorNotification\022\016\n\006org_id\030\001" +
-      " \001(\t\022\023\n\013customer_id\030\002 \001(\t\022\016\n\006app_id\030\003 \001(" +
-      "\t\022C\n\006wallet\030\004 \001(\01321.com.elarian.hera.pro" +
-      "to.PaymentWalletCounterPartyH\000\022A\n\005purse\030" +
-      "\005 \001(\01320.com.elarian.hera.proto.PaymentPu" +
-      "rseCounterPartyH\000\022\026\n\016transaction_id\030\006 \001(" +
-      "\t\022?\n\017customer_number\030\007 \001(\0132&.com.elarian" +
-      ".hera.proto.CustomerNumber\022D\n\016channel_nu" +
-      "mber\030\010 \001(\0132,.com.elarian.hera.proto.Paym" +
-      "entChannelNumber\022+\n\005value\030\t \001(\0132\034.com.el" +
-      "arian.hera.proto.CashB\016\n\014credit_partyb\006p" +
-      "roto3"
+      " \001(\t\022\016\n\006app_id\030\003 \001(\t\022C\n\006wallet\030\004 \001(\01321.c" +
+      "om.elarian.hera.proto.PaymentWalletCount" +
+      "erPartyH\000\022A\n\005purse\030\005 \001(\01320.com.elarian.h" +
+      "era.proto.PaymentPurseCounterPartyH\000\022\026\n\016" +
+      "transaction_id\030\006 \001(\t\022?\n\017customer_number\030" +
+      "\007 \001(\0132&.com.elarian.hera.proto.CustomerN" +
+      "umber\022D\n\016channel_number\030\010 \001(\0132,.com.elar" +
+      "ian.hera.proto.PaymentChannelNumber\022+\n\005v" +
+      "alue\030\t \001(\0132\034.com.elarian.hera.proto.Cash" +
+      "B\r\n\013debit_party\"\232\003\n\'SendChannelPaymentSi" +
+      "mulatorNotification\022\016\n\006org_id\030\001 \001(\t\022\016\n\006a" +
+      "pp_id\030\002 \001(\t\022C\n\006wallet\030\003 \001(\01321.com.elaria" +
+      "n.hera.proto.PaymentWalletCounterPartyH\000" +
+      "\022A\n\005purse\030\004 \001(\01320.com.elarian.hera.proto" +
+      ".PaymentPurseCounterPartyH\000\022\026\n\016transacti" +
+      "on_id\030\005 \001(\t\022D\n\016channel_number\030\006 \001(\0132,.co" +
+      "m.elarian.hera.proto.PaymentChannelNumbe" +
+      "r\022-\n\007account\030\007 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022+\n\005value\030\010 \001(\0132\034.com.elarian.he" +
+      "ra.proto.CashB\r\n\013debit_party\"\277\003\n$Checkou" +
+      "tPaymentSimulatorNotification\022\016\n\006org_id\030" +
+      "\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t\022\016\n\006app_id\030\003 \001" +
+      "(\t\022C\n\006wallet\030\004 \001(\01321.com.elarian.hera.pr" +
+      "oto.PaymentWalletCounterPartyH\000\022A\n\005purse" +
+      "\030\005 \001(\01320.com.elarian.hera.proto.PaymentP" +
+      "urseCounterPartyH\000\022\026\n\016transaction_id\030\006 \001" +
+      "(\t\022?\n\017customer_number\030\007 \001(\0132&.com.elaria" +
+      "n.hera.proto.CustomerNumber\022D\n\016channel_n" +
+      "umber\030\010 \001(\0132,.com.elarian.hera.proto.Pay" +
+      "mentChannelNumber\022+\n\005value\030\t \001(\0132\034.com.e" +
+      "larian.hera.proto.CashB\016\n\014credit_partyb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.elarian.hera.proto.CommonModel.getDescriptor(),
           com.elarian.hera.proto.MessagingModel.getDescriptor(),
@@ -16587,7 +16997,7 @@ public final class SimulatorSocket {
     internal_static_com_elarian_hera_proto_ReceiveMessageSimulatorCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReceiveMessageSimulatorCommand_descriptor,
-        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Parts", "SessionId", });
+        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Parts", "SessionId", "Cost", "Duration", });
     internal_static_com_elarian_hera_proto_ReceivePaymentSimulatorCommand_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_elarian_hera_proto_ReceivePaymentSimulatorCommand_fieldAccessorTable = new
@@ -16648,6 +17058,7 @@ public final class SimulatorSocket {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CheckoutPaymentSimulatorNotification_descriptor,
         new java.lang.String[] { "OrgId", "CustomerId", "AppId", "Wallet", "Purse", "TransactionId", "CustomerNumber", "ChannelNumber", "Value", "CreditParty", });
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.elarian.hera.proto.CommonModel.getDescriptor();
     com.elarian.hera.proto.MessagingModel.getDescriptor();
