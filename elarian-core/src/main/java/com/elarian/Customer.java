@@ -450,6 +450,7 @@ public final class Customer implements ICustomer {
 
         AppSocket.ReplyToMessageCommand.Builder cmd = AppSocket.ReplyToMessageCommand
                 .newBuilder()
+                .setCustomerId(customerId)
                 .setMessageId(messageId);
 
         cmd.setMessage(Utils.buildOutgoingMessage(message));
