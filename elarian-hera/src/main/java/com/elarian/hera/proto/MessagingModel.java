@@ -1666,6 +1666,141 @@ public final class MessagingModel {
   }
 
   /**
+   * Protobuf enum {@code com.elarian.hera.proto.UssdSessionStatus}
+   */
+  public enum UssdSessionStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>USSD_SESSION_STATUS_UNSPECIFIED = 0;</code>
+     */
+    USSD_SESSION_STATUS_UNSPECIFIED(0),
+    /**
+     * <code>USSD_SESSION_STATUS_ACTIVE = 100;</code>
+     */
+    USSD_SESSION_STATUS_ACTIVE(100),
+    /**
+     * <code>USSD_SESSION_STATUS_INCOMPLETE = 200;</code>
+     */
+    USSD_SESSION_STATUS_INCOMPLETE(200),
+    /**
+     * <code>USSD_SESSION_STATUS_COMPLETED = 201;</code>
+     */
+    USSD_SESSION_STATUS_COMPLETED(201),
+    /**
+     * <code>USSD_SESSION_STATUS_APP_ERROR = 300;</code>
+     */
+    USSD_SESSION_STATUS_APP_ERROR(300),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>USSD_SESSION_STATUS_UNSPECIFIED = 0;</code>
+     */
+    public static final int USSD_SESSION_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>USSD_SESSION_STATUS_ACTIVE = 100;</code>
+     */
+    public static final int USSD_SESSION_STATUS_ACTIVE_VALUE = 100;
+    /**
+     * <code>USSD_SESSION_STATUS_INCOMPLETE = 200;</code>
+     */
+    public static final int USSD_SESSION_STATUS_INCOMPLETE_VALUE = 200;
+    /**
+     * <code>USSD_SESSION_STATUS_COMPLETED = 201;</code>
+     */
+    public static final int USSD_SESSION_STATUS_COMPLETED_VALUE = 201;
+    /**
+     * <code>USSD_SESSION_STATUS_APP_ERROR = 300;</code>
+     */
+    public static final int USSD_SESSION_STATUS_APP_ERROR_VALUE = 300;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UssdSessionStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static UssdSessionStatus forNumber(int value) {
+      switch (value) {
+        case 0: return USSD_SESSION_STATUS_UNSPECIFIED;
+        case 100: return USSD_SESSION_STATUS_ACTIVE;
+        case 200: return USSD_SESSION_STATUS_INCOMPLETE;
+        case 201: return USSD_SESSION_STATUS_COMPLETED;
+        case 300: return USSD_SESSION_STATUS_APP_ERROR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UssdSessionStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UssdSessionStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UssdSessionStatus>() {
+            public UssdSessionStatus findValueByNumber(int number) {
+              return UssdSessionStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.MessagingModel.getDescriptor().getEnumTypes().get(9);
+    }
+
+    private static final UssdSessionStatus[] VALUES = values();
+
+    public static UssdSessionStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private UssdSessionStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.elarian.hera.proto.UssdSessionStatus)
+  }
+
+  /**
    * Protobuf enum {@code com.elarian.hera.proto.TextToSpeechVoice}
    */
   public enum TextToSpeechVoice
@@ -1756,7 +1891,7 @@ public final class MessagingModel {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.elarian.hera.proto.MessagingModel.getDescriptor().getEnumTypes().get(9);
+      return com.elarian.hera.proto.MessagingModel.getDescriptor().getEnumTypes().get(10);
     }
 
     private static final TextToSpeechVoice[] VALUES = values();
@@ -23478,6 +23613,734 @@ public final class MessagingModel {
 
   }
 
+  public interface UssdInputMessageBodyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UssdInputMessageBody)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @return The status.
+     */
+    com.elarian.hera.proto.MessagingModel.UssdSessionStatus getStatus();
+
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     * @return Whether the text field is set.
+     */
+    boolean hasText();
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     * @return The text.
+     */
+    com.google.protobuf.StringValue getText();
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getTextOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.UssdInputMessageBody}
+   */
+  public static final class UssdInputMessageBody extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.UssdInputMessageBody)
+      UssdInputMessageBodyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UssdInputMessageBody.newBuilder() to construct.
+    private UssdInputMessageBody(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UssdInputMessageBody() {
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UssdInputMessageBody();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UssdInputMessageBody(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (text_ != null) {
+                subBuilder = text_.toBuilder();
+              }
+              text_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(text_);
+                text_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.MessagingModel.internal_static_com_elarian_hera_proto_UssdInputMessageBody_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.elarian.hera.proto.MessagingModel.internal_static_com_elarian_hera_proto_UssdInputMessageBody_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.class, com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.elarian.hera.proto.MessagingModel.UssdSessionStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      com.elarian.hera.proto.MessagingModel.UssdSessionStatus result = com.elarian.hera.proto.MessagingModel.UssdSessionStatus.valueOf(status_);
+      return result == null ? com.elarian.hera.proto.MessagingModel.UssdSessionStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private com.google.protobuf.StringValue text_;
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     * @return Whether the text field is set.
+     */
+    @java.lang.Override
+    public boolean hasText() {
+      return text_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getText() {
+      return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue text = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
+      return getText();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != com.elarian.hera.proto.MessagingModel.UssdSessionStatus.USSD_SESSION_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, status_);
+      }
+      if (text_ != null) {
+        output.writeMessage(2, getText());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != com.elarian.hera.proto.MessagingModel.UssdSessionStatus.USSD_SESSION_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_);
+      }
+      if (text_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getText());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.elarian.hera.proto.MessagingModel.UssdInputMessageBody)) {
+        return super.equals(obj);
+      }
+      com.elarian.hera.proto.MessagingModel.UssdInputMessageBody other = (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) obj;
+
+      if (status_ != other.status_) return false;
+      if (hasText() != other.hasText()) return false;
+      if (hasText()) {
+        if (!getText()
+            .equals(other.getText())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasText()) {
+        hash = (37 * hash) + TEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getText().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.UssdInputMessageBody}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.UssdInputMessageBody)
+        com.elarian.hera.proto.MessagingModel.UssdInputMessageBodyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.elarian.hera.proto.MessagingModel.internal_static_com_elarian_hera_proto_UssdInputMessageBody_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.elarian.hera.proto.MessagingModel.internal_static_com_elarian_hera_proto_UssdInputMessageBody_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.class, com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder.class);
+      }
+
+      // Construct using com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        status_ = 0;
+
+        if (textBuilder_ == null) {
+          text_ = null;
+        } else {
+          text_ = null;
+          textBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.elarian.hera.proto.MessagingModel.internal_static_com_elarian_hera_proto_UssdInputMessageBody_descriptor;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getDefaultInstanceForType() {
+        return com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody build() {
+        com.elarian.hera.proto.MessagingModel.UssdInputMessageBody result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody buildPartial() {
+        com.elarian.hera.proto.MessagingModel.UssdInputMessageBody result = new com.elarian.hera.proto.MessagingModel.UssdInputMessageBody(this);
+        result.status_ = status_;
+        if (textBuilder_ == null) {
+          result.text_ = text_;
+        } else {
+          result.text_ = textBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) {
+          return mergeFrom((com.elarian.hera.proto.MessagingModel.UssdInputMessageBody)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody other) {
+        if (other == com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance()) return this;
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasText()) {
+          mergeText(other.getText());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.elarian.hera.proto.MessagingModel.UssdInputMessageBody parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.MessagingModel.UssdSessionStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        com.elarian.hera.proto.MessagingModel.UssdSessionStatus result = com.elarian.hera.proto.MessagingModel.UssdSessionStatus.valueOf(status_);
+        return result == null ? com.elarian.hera.proto.MessagingModel.UssdSessionStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.elarian.hera.proto.MessagingModel.UssdSessionStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.UssdSessionStatus status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.StringValue text_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> textBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       * @return Whether the text field is set.
+       */
+      public boolean hasText() {
+        return textBuilder_ != null || text_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       * @return The text.
+       */
+      public com.google.protobuf.StringValue getText() {
+        if (textBuilder_ == null) {
+          return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
+        } else {
+          return textBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public Builder setText(com.google.protobuf.StringValue value) {
+        if (textBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          text_ = value;
+          onChanged();
+        } else {
+          textBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public Builder setText(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (textBuilder_ == null) {
+          text_ = builderForValue.build();
+          onChanged();
+        } else {
+          textBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public Builder mergeText(com.google.protobuf.StringValue value) {
+        if (textBuilder_ == null) {
+          if (text_ != null) {
+            text_ =
+              com.google.protobuf.StringValue.newBuilder(text_).mergeFrom(value).buildPartial();
+          } else {
+            text_ = value;
+          }
+          onChanged();
+        } else {
+          textBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public Builder clearText() {
+        if (textBuilder_ == null) {
+          text_ = null;
+          onChanged();
+        } else {
+          text_ = null;
+          textBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getTextBuilder() {
+        
+        onChanged();
+        return getTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
+        if (textBuilder_ != null) {
+          return textBuilder_.getMessageOrBuilder();
+        } else {
+          return text_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : text_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue text = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getTextFieldBuilder() {
+        if (textBuilder_ == null) {
+          textBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getText(),
+                  getParentForChildren(),
+                  isClean());
+          text_ = null;
+        }
+        return textBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.UssdInputMessageBody)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.UssdInputMessageBody)
+    private static final com.elarian.hera.proto.MessagingModel.UssdInputMessageBody DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.MessagingModel.UssdInputMessageBody();
+    }
+
+    public static com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UssdInputMessageBody>
+        PARSER = new com.google.protobuf.AbstractParser<UssdInputMessageBody>() {
+      @java.lang.Override
+      public UssdInputMessageBody parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UssdInputMessageBody(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UssdInputMessageBody> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UssdInputMessageBody> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface UssdMenuMessageBodyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.UssdMenuMessageBody)
       com.google.protobuf.MessageOrBuilder {
@@ -27306,19 +28169,19 @@ public final class MessagingModel {
     com.elarian.hera.proto.MessagingModel.VoiceCallInputMessageBodyOrBuilder getVoiceOrBuilder();
 
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      * @return Whether the ussd field is set.
      */
     boolean hasUssd();
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      * @return The ussd.
      */
-    com.google.protobuf.StringValue getUssd();
+    com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getUssd();
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      */
-    com.google.protobuf.StringValueOrBuilder getUssdOrBuilder();
+    com.elarian.hera.proto.MessagingModel.UssdInputMessageBodyOrBuilder getUssdOrBuilder();
 
     public com.elarian.hera.proto.MessagingModel.InboundMessageBody.EntryCase getEntryCase();
   }
@@ -27430,14 +28293,14 @@ public final class MessagingModel {
               break;
             }
             case 50: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
+              com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder subBuilder = null;
               if (entryCase_ == 6) {
-                subBuilder = ((com.google.protobuf.StringValue) entry_).toBuilder();
+                subBuilder = ((com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_).toBuilder();
               }
               entry_ =
-                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+                  input.readMessage(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.google.protobuf.StringValue) entry_);
+                subBuilder.mergeFrom((com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_);
                 entry_ = subBuilder.buildPartial();
               }
               entryCase_ = 6;
@@ -27695,7 +28558,7 @@ public final class MessagingModel {
 
     public static final int USSD_FIELD_NUMBER = 6;
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      * @return Whether the ussd field is set.
      */
     @java.lang.Override
@@ -27703,25 +28566,25 @@ public final class MessagingModel {
       return entryCase_ == 6;
     }
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      * @return The ussd.
      */
     @java.lang.Override
-    public com.google.protobuf.StringValue getUssd() {
+    public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getUssd() {
       if (entryCase_ == 6) {
-         return (com.google.protobuf.StringValue) entry_;
+         return (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_;
       }
-      return com.google.protobuf.StringValue.getDefaultInstance();
+      return com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance();
     }
     /**
-     * <code>.google.protobuf.StringValue ussd = 6;</code>
+     * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.StringValueOrBuilder getUssdOrBuilder() {
+    public com.elarian.hera.proto.MessagingModel.UssdInputMessageBodyOrBuilder getUssdOrBuilder() {
       if (entryCase_ == 6) {
-         return (com.google.protobuf.StringValue) entry_;
+         return (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_;
       }
-      return com.google.protobuf.StringValue.getDefaultInstance();
+      return com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -27754,7 +28617,7 @@ public final class MessagingModel {
         output.writeMessage(5, (com.elarian.hera.proto.MessagingModel.VoiceCallInputMessageBody) entry_);
       }
       if (entryCase_ == 6) {
-        output.writeMessage(6, (com.google.protobuf.StringValue) entry_);
+        output.writeMessage(6, (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_);
       }
       unknownFields.writeTo(output);
     }
@@ -27786,7 +28649,7 @@ public final class MessagingModel {
       }
       if (entryCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.google.protobuf.StringValue) entry_);
+          .computeMessageSize(6, (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -28848,9 +29711,9 @@ public final class MessagingModel {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ussdBuilder_;
+          com.elarian.hera.proto.MessagingModel.UssdInputMessageBody, com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder, com.elarian.hera.proto.MessagingModel.UssdInputMessageBodyOrBuilder> ussdBuilder_;
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        * @return Whether the ussd field is set.
        */
       @java.lang.Override
@@ -28858,27 +29721,27 @@ public final class MessagingModel {
         return entryCase_ == 6;
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        * @return The ussd.
        */
       @java.lang.Override
-      public com.google.protobuf.StringValue getUssd() {
+      public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody getUssd() {
         if (ussdBuilder_ == null) {
           if (entryCase_ == 6) {
-            return (com.google.protobuf.StringValue) entry_;
+            return (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_;
           }
-          return com.google.protobuf.StringValue.getDefaultInstance();
+          return com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance();
         } else {
           if (entryCase_ == 6) {
             return ussdBuilder_.getMessage();
           }
-          return com.google.protobuf.StringValue.getDefaultInstance();
+          return com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance();
         }
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
-      public Builder setUssd(com.google.protobuf.StringValue value) {
+      public Builder setUssd(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody value) {
         if (ussdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -28892,10 +29755,10 @@ public final class MessagingModel {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
       public Builder setUssd(
-          com.google.protobuf.StringValue.Builder builderForValue) {
+          com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder builderForValue) {
         if (ussdBuilder_ == null) {
           entry_ = builderForValue.build();
           onChanged();
@@ -28906,13 +29769,13 @@ public final class MessagingModel {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
-      public Builder mergeUssd(com.google.protobuf.StringValue value) {
+      public Builder mergeUssd(com.elarian.hera.proto.MessagingModel.UssdInputMessageBody value) {
         if (ussdBuilder_ == null) {
           if (entryCase_ == 6 &&
-              entry_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-            entry_ = com.google.protobuf.StringValue.newBuilder((com.google.protobuf.StringValue) entry_)
+              entry_ != com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance()) {
+            entry_ = com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.newBuilder((com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_)
                 .mergeFrom(value).buildPartial();
           } else {
             entry_ = value;
@@ -28928,7 +29791,7 @@ public final class MessagingModel {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
       public Builder clearUssd() {
         if (ussdBuilder_ == null) {
@@ -28947,38 +29810,38 @@ public final class MessagingModel {
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
-      public com.google.protobuf.StringValue.Builder getUssdBuilder() {
+      public com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder getUssdBuilder() {
         return getUssdFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
       @java.lang.Override
-      public com.google.protobuf.StringValueOrBuilder getUssdOrBuilder() {
+      public com.elarian.hera.proto.MessagingModel.UssdInputMessageBodyOrBuilder getUssdOrBuilder() {
         if ((entryCase_ == 6) && (ussdBuilder_ != null)) {
           return ussdBuilder_.getMessageOrBuilder();
         } else {
           if (entryCase_ == 6) {
-            return (com.google.protobuf.StringValue) entry_;
+            return (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_;
           }
-          return com.google.protobuf.StringValue.getDefaultInstance();
+          return com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance();
         }
       }
       /**
-       * <code>.google.protobuf.StringValue ussd = 6;</code>
+       * <code>.com.elarian.hera.proto.UssdInputMessageBody ussd = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          com.elarian.hera.proto.MessagingModel.UssdInputMessageBody, com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder, com.elarian.hera.proto.MessagingModel.UssdInputMessageBodyOrBuilder> 
           getUssdFieldBuilder() {
         if (ussdBuilder_ == null) {
           if (!(entryCase_ == 6)) {
-            entry_ = com.google.protobuf.StringValue.getDefaultInstance();
+            entry_ = com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.getDefaultInstance();
           }
           ussdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  (com.google.protobuf.StringValue) entry_,
+              com.elarian.hera.proto.MessagingModel.UssdInputMessageBody, com.elarian.hera.proto.MessagingModel.UssdInputMessageBody.Builder, com.elarian.hera.proto.MessagingModel.UssdInputMessageBodyOrBuilder>(
+                  (com.elarian.hera.proto.MessagingModel.UssdInputMessageBody) entry_,
                   getParentForChildren(),
                   isClean());
           entry_ = null;
@@ -31496,6 +32359,11 @@ public final class MessagingModel {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_VoiceCallInputMessageBody_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_UssdInputMessageBody_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_UssdInputMessageBody_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_UssdMenuMessageBody_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -31630,149 +32498,158 @@ public final class MessagingModel {
       "oogle.protobuf.StringValue\022=\n\tdial_data\030" +
       "\007 \001(\0132*.com.elarian.hera.proto.VoiceCall" +
       "DialInput\022?\n\nqueue_data\030\010 \001(\0132+.com.elar" +
-      "ian.hera.proto.VoiceCallQueueInput\"8\n\023Us" +
-      "sdMenuMessageBody\022\014\n\004text\030\001 \001(\t\022\023\n\013is_te" +
-      "rminal\030\002 \001(\010\"\271\003\n\023OutboundMessageBody\022\016\n\004" +
-      "text\030\001 \001(\tH\000\0229\n\005media\030\002 \001(\0132(.com.elaria" +
-      "n.hera.proto.MediaMessageBodyH\000\022?\n\010locat" +
-      "ion\030\003 \001(\0132+.com.elarian.hera.proto.Locat" +
-      "ionMessageBodyH\000\0229\n\005email\030\004 \001(\0132(.com.el" +
-      "arian.hera.proto.EmailMessageBodyH\000\022?\n\010t" +
-      "emplate\030\005 \001(\0132+.com.elarian.hera.proto.T" +
-      "emplateMessageBodyH\000\022\r\n\003url\030\006 \001(\tH\000\022E\n\005v" +
-      "oice\030\007 \001(\01324.com.elarian.hera.proto.Voic" +
-      "eCallDialplanMessageBodyH\000\022;\n\004ussd\030\010 \001(\013" +
-      "2+.com.elarian.hera.proto.UssdMenuMessag" +
-      "eBodyH\000B\007\n\005entry\"o\n\031PromptMessageMenuIte" +
-      "mBody\022\016\n\004text\030\002 \001(\tH\000\0229\n\005media\030\003 \001(\0132(.c" +
-      "om.elarian.hera.proto.MediaMessageBodyH\000" +
-      "B\007\n\005entry\"\326\002\n\022InboundMessageBody\022\016\n\004text" +
-      "\030\001 \001(\tH\000\0229\n\005media\030\002 \001(\0132(.com.elarian.he" +
-      "ra.proto.MediaMessageBodyH\000\022?\n\010location\030" +
-      "\003 \001(\0132+.com.elarian.hera.proto.LocationM" +
-      "essageBodyH\000\0229\n\005email\030\004 \001(\0132(.com.elaria" +
-      "n.hera.proto.EmailMessageBodyH\000\022B\n\005voice" +
-      "\030\005 \001(\01321.com.elarian.hera.proto.VoiceCal" +
-      "lInputMessageBodyH\000\022,\n\004ussd\030\006 \001(\0132\034.goog" +
-      "le.protobuf.StringValueH\000B\007\n\005entry\"\237\001\n\032O" +
-      "utboundMessageReplyPrompt\022@\n\006action\030\001 \001(" +
-      "\01620.com.elarian.hera.proto.PromptMessage" +
-      "ReplyAction\022?\n\004menu\030\002 \003(\01321.com.elarian." +
-      "hera.proto.PromptMessageMenuItemBody\"\215\002\n" +
-      "\017OutboundMessage\0229\n\004body\030\001 \001(\0132+.com.ela" +
-      "rian.hera.proto.OutboundMessageBody\022\016\n\006l" +
-      "abels\030\002 \003(\t\0222\n\014provider_tag\030\003 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0221\n\013reply_token\030\004" +
-      " \001(\0132\034.google.protobuf.StringValue\022H\n\014re" +
-      "ply_prompt\030\005 \001(\01322.com.elarian.hera.prot" +
-      "o.OutboundMessageReplyPrompt*\212\002\n\020Messagi" +
-      "ngChannel\022!\n\035MESSAGING_CHANNEL_UNSPECIFI" +
-      "ED\020\000\022\031\n\025MESSAGING_CHANNEL_SMS\020\001\022\033\n\027MESSA" +
-      "GING_CHANNEL_VOICE\020\002\022\032\n\026MESSAGING_CHANNE" +
-      "L_USSD\020\003\022\"\n\036MESSAGING_CHANNEL_FB_MESSENG" +
-      "ER\020\004\022\036\n\032MESSAGING_CHANNEL_TELEGRAM\020\005\022\036\n\032" +
-      "MESSAGING_CHANNEL_WHATSAPP\020\006\022\033\n\027MESSAGIN" +
-      "G_CHANNEL_EMAIL\020\007*\212\001\n\026MessagingConsentUp" +
-      "date\022(\n$MESSAGING_CONSENT_UPDATE_UNSPECI" +
-      "FIED\020\000\022\"\n\036MESSAGING_CONSENT_UPDATE_ALLOW" +
-      "\020\001\022\"\n\036MESSAGING_CONSENT_UPDATE_BLOCK\020\002*\341" +
-      "\002\n\034MessagingConsentUpdateStatus\022/\n+MESSA" +
-      "GING_CONSENT_UPDATE_STATUS_UNSPECIFIED\020\000" +
-      "\022*\n&MESSAGING_CONSENT_UPDATE_STATUS_QUEU" +
-      "ED\020d\022.\n)MESSAGING_CONSENT_UPDATE_STATUS_" +
-      "COMPLETED\020\254\002\022;\n6MESSAGING_CONSENT_UPDATE" +
-      "_STATUS_INVALID_CHANNEL_NUMBER\020\221\003\022?\n:MES" +
-      "SAGING_CONSENT_UPDATE_STATUS_DECOMMISSIO" +
-      "NED_CUSTOMER_ID\020\222\003\0226\n1MESSAGING_CONSENT_" +
-      "UPDATE_STATUS_APPLICATION_ERROR\020\365\003*\324\001\n\031M" +
-      "essagingSessionEndReason\022,\n(MESSAGING_SE" +
-      "SSION_END_REASON_UNSPECIFIED\020\000\0220\n,MESSAG" +
-      "ING_SESSION_END_REASON_NORMAL_CLEARING\020d" +
-      "\022,\n\'MESSAGING_SESSION_END_REASON_INACTIV" +
-      "ITY\020\310\001\022)\n$MESSAGING_SESSION_END_REASON_F" +
-      "AILURE\020\254\002*\227\001\n\017MessageReaction\022 \n\034MESSAGE" +
-      "_REACTION_UNSPECIFIED\020\000\022\034\n\030MESSAGE_REACT" +
-      "ION_CLICKED\020d\022\"\n\035MESSAGE_REACTION_UNSUBS" +
-      "CRIBED\020\310\001\022 \n\033MESSAGE_REACTION_COMPLAINED" +
-      "\020\311\001*\221\002\n\030PromptMessageReplyAction\022+\n\'PROM" +
-      "PT_MESSAGE_REPLY_ACTION_UNSPECIFIED\020\000\022$\n" +
-      " PROMPT_MESSAGE_REPLY_ACTION_TEXT\020\001\022,\n(P" +
-      "ROMPT_MESSAGE_REPLY_ACTION_PHONE_NUMBER\020" +
-      "\002\022%\n!PROMPT_MESSAGE_REPLY_ACTION_EMAIL\020\003" +
-      "\022(\n$PROMPT_MESSAGE_REPLY_ACTION_LOCATION" +
-      "\020\004\022#\n\037PROMPT_MESSAGE_REPLY_ACTION_URL\020\005*" +
-      "\270\t\n\025MessageDeliveryStatus\022\'\n#MESSAGE_DEL" +
-      "IVERY_STATUS_UNSPECIFIED\020\000\022\"\n\036MESSAGE_DE" +
-      "LIVERY_STATUS_QUEUED\020d\022 \n\034MESSAGE_DELIVE" +
-      "RY_STATUS_SENT\020e\022&\n!MESSAGE_DELIVERY_STA" +
-      "TUS_DELIVERED\020\254\002\022!\n\034MESSAGE_DELIVERY_STA" +
-      "TUS_READ\020\255\002\022%\n MESSAGE_DELIVERY_STATUS_R" +
-      "ECEIVED\020\256\002\022.\n)MESSAGE_DELIVERY_STATUS_SE" +
-      "SSION_INITIATED\020\257\002\022#\n\036MESSAGE_DELIVERY_S" +
-      "TATUS_FAILED\020\220\003\022\'\n\"MESSAGE_DELIVERY_STAT" +
-      "US_NO_CONSENT\020\221\003\022*\n%MESSAGE_DELIVERY_STA" +
-      "TUS_NO_CAPABILITY\020\222\003\022$\n\037MESSAGE_DELIVERY" +
-      "_STATUS_EXPIRED\020\223\003\0223\n.MESSAGE_DELIVERY_S" +
-      "TATUS_NO_SESSION_IN_PROGRESS\020\224\003\0226\n1MESSA" +
-      "GE_DELIVERY_STATUS_OTHER_SESSION_IN_PROG" +
-      "RESS\020\225\003\0220\n+MESSAGE_DELIVERY_STATUS_INVAL" +
-      "ID_REPLY_TOKEN\020\226\003\0223\n.MESSAGE_DELIVERY_ST" +
-      "ATUS_INVALID_CHANNEL_NUMBER\020\227\003\022*\n%MESSAG" +
-      "E_DELIVERY_STATUS_NOT_SUPPORTED\020\230\003\0228\n3ME" +
-      "SSAGE_DELIVERY_STATUS_INVALID_REPLY_TO_M" +
-      "ESSAGE_ID\020\231\003\0220\n+MESSAGE_DELIVERY_STATUS_" +
-      "INVALID_CUSTOMER_ID\020\232\003\022.\n)MESSAGE_DELIVE" +
-      "RY_STATUS_DUPLICATE_REQUEST\020\233\003\022*\n%MESSAG" +
-      "E_DELIVERY_STATUS_TAG_NOT_FOUND\020\234\003\0226\n1ME" +
-      "SSAGE_DELIVERY_STATUS_CUSTOMER_NUMBER_NO" +
-      "T_FOUND\020\235\003\0226\n1MESSAGE_DELIVERY_STATUS_DE" +
-      "COMMISSIONED_CUSTOMERID\020\236\003\022%\n MESSAGE_DE" +
-      "LIVERY_STATUS_REJECTED\020\237\003\022,\n\'MESSAGE_DEL" +
-      "IVERY_STATUS_INVALID_REQUEST\020\240\003\0221\n,MESSA" +
-      "GE_DELIVERY_STATUS_INSUFFICIENT_CREDITS\020" +
-      "\241\003\022.\n)MESSAGE_DELIVERY_STATUS_APPLICATIO" +
-      "N_ERROR\020\365\003*\245\006\n\017VoiceCallStatus\022!\n\035VOICE_" +
-      "CALL_STATUS_UNSPECIFIED\020\000\022\034\n\030VOICE_CALL_" +
-      "STATUS_QUEUED\020d\022\036\n\032VOICE_CALL_STATUS_ANS" +
-      "WERED\020e\022\035\n\031VOICE_CALL_STATUS_RINGING\020f\022\035" +
-      "\n\030VOICE_CALL_STATUS_ACTIVE\020\310\001\022\036\n\031VOICE_C" +
-      "ALL_STATUS_DIALING\020\311\001\022%\n VOICE_CALL_STAT" +
-      "US_DIAL_COMPLETED\020\312\001\022\036\n\031VOICE_CALL_STATU" +
-      "S_BRIDGED\020\313\001\022\037\n\032VOICE_CALL_STATUS_ENQUEU" +
-      "ED\020\314\001\022\037\n\032VOICE_CALL_STATUS_DEQUEUED\020\315\001\022\"" +
-      "\n\035VOICE_CALL_STATUS_TRANSFERRED\020\316\001\022)\n$VO" +
-      "ICE_CALL_STATUS_TRANSFER_COMPLETED\020\317\001\022 \n" +
-      "\033VOICE_CALL_STATUS_COMPLETED\020\254\002\022*\n%VOICE" +
-      "_CALL_STATUS_INSUFFICIENT_CREDIT\020\220\003\022#\n\036V" +
-      "OICE_CALL_STATUS_NOT_ANSWERED\020\221\003\022+\n&VOIC" +
-      "E_CALL_STATUS_INVALID_PHONE_NUMBER\020\222\003\0220\n" +
-      "+VOICE_CALL_STATUS_DESTINATION_NOT_SUPPO" +
-      "RTED\020\223\003\0220\n+VOICE_CALL_STATUS_DECOMMISSIO" +
-      "NED_CUSTOMERID\020\224\003\022\036\n\031VOICE_CALL_STATUS_E" +
-      "XPIRED\020\225\003\022-\n(VOICE_CALL_STATUS_INVALID_C" +
-      "HANNEL_NUMBER\020\226\003\022(\n#VOICE_CALL_STATUS_AP" +
-      "PLICATION_ERROR\020\365\003*\311\005\n\024VoiceCallHangupCa" +
-      "use\022\'\n#VOICE_CALL_HANGUP_CAUSE_UNSPECIFI" +
-      "ED\020\000\022.\n*VOICE_CALL_HANGUP_CAUSE_UNALLOCA" +
-      "TED_NUMBER\020\001\022%\n!VOICE_CALL_HANGUP_CAUSE_" +
-      "USER_BUSY\020\021\022+\n\'VOICE_CALL_HANGUP_CAUSE_N" +
-      "ORMAL_CLEARING\020\020\022,\n(VOICE_CALL_HANGUP_CA" +
-      "USE_NO_USER_RESPONSE\020\022\022%\n!VOICE_CALL_HAN" +
-      "GUP_CAUSE_NO_ANSWER\020\023\022-\n)VOICE_CALL_HANG" +
-      "UP_CAUSE_SUBSCRIBER_ABSENT\020\024\022)\n%VOICE_CA" +
-      "LL_HANGUP_CAUSE_CALL_REJECTED\020\025\022.\n*VOICE" +
-      "_CALL_HANGUP_CAUSE_NORMAL_UNSPECIFIED\020\037\022" +
-      "4\n0VOICE_CALL_HANGUP_CAUSE_NORMAL_TEMPOR" +
-      "ARY_FAILURE\020)\022/\n+VOICE_CALL_HANGUP_CAUSE" +
-      "_SERVICE_UNAVAILABLE\020?\0224\n0VOICE_CALL_HAN" +
-      "GUP_CAUSE_RECOVERY_ON_TIMER_EXPIRE\020f\022.\n)" +
-      "VOICE_CALL_HANGUP_CAUSE_ORIGINATOR_CANCE" +
-      "L\020\347\003\022&\n!VOICE_CALL_HANGUP_CAUSE_LOSE_RAC" +
-      "E\020\366\003\0220\n+VOICE_CALL_HANGUP_CAUSE_USER_NOT" +
-      "_REGISTERED\020\336\004*y\n\021TextToSpeechVoice\022$\n T" +
-      "EXT_TO_SPEECH_VOICE_UNSPECIFIED\020\000\022\035\n\031TEX" +
-      "T_TO_SPEECH_VOICE_MALE\020\001\022\037\n\033TEXT_TO_SPEE" +
-      "CH_VOICE_FEMALE\020\002b\006proto3"
+      "ian.hera.proto.VoiceCallQueueInput\"}\n\024Us" +
+      "sdInputMessageBody\0229\n\006status\030\001 \001(\0162).com" +
+      ".elarian.hera.proto.UssdSessionStatus\022*\n" +
+      "\004text\030\002 \001(\0132\034.google.protobuf.StringValu" +
+      "e\"8\n\023UssdMenuMessageBody\022\014\n\004text\030\001 \001(\t\022\023" +
+      "\n\013is_terminal\030\002 \001(\010\"\271\003\n\023OutboundMessageB" +
+      "ody\022\016\n\004text\030\001 \001(\tH\000\0229\n\005media\030\002 \001(\0132(.com" +
+      ".elarian.hera.proto.MediaMessageBodyH\000\022?" +
+      "\n\010location\030\003 \001(\0132+.com.elarian.hera.prot" +
+      "o.LocationMessageBodyH\000\0229\n\005email\030\004 \001(\0132(" +
+      ".com.elarian.hera.proto.EmailMessageBody" +
+      "H\000\022?\n\010template\030\005 \001(\0132+.com.elarian.hera." +
+      "proto.TemplateMessageBodyH\000\022\r\n\003url\030\006 \001(\t" +
+      "H\000\022E\n\005voice\030\007 \001(\01324.com.elarian.hera.pro" +
+      "to.VoiceCallDialplanMessageBodyH\000\022;\n\004uss" +
+      "d\030\010 \001(\0132+.com.elarian.hera.proto.UssdMen" +
+      "uMessageBodyH\000B\007\n\005entry\"o\n\031PromptMessage" +
+      "MenuItemBody\022\016\n\004text\030\002 \001(\tH\000\0229\n\005media\030\003 " +
+      "\001(\0132(.com.elarian.hera.proto.MediaMessag" +
+      "eBodyH\000B\007\n\005entry\"\346\002\n\022InboundMessageBody\022" +
+      "\016\n\004text\030\001 \001(\tH\000\0229\n\005media\030\002 \001(\0132(.com.ela" +
+      "rian.hera.proto.MediaMessageBodyH\000\022?\n\010lo" +
+      "cation\030\003 \001(\0132+.com.elarian.hera.proto.Lo" +
+      "cationMessageBodyH\000\0229\n\005email\030\004 \001(\0132(.com" +
+      ".elarian.hera.proto.EmailMessageBodyH\000\022B" +
+      "\n\005voice\030\005 \001(\01321.com.elarian.hera.proto.V" +
+      "oiceCallInputMessageBodyH\000\022<\n\004ussd\030\006 \001(\013" +
+      "2,.com.elarian.hera.proto.UssdInputMessa" +
+      "geBodyH\000B\007\n\005entry\"\237\001\n\032OutboundMessageRep" +
+      "lyPrompt\022@\n\006action\030\001 \001(\01620.com.elarian.h" +
+      "era.proto.PromptMessageReplyAction\022?\n\004me" +
+      "nu\030\002 \003(\01321.com.elarian.hera.proto.Prompt" +
+      "MessageMenuItemBody\"\215\002\n\017OutboundMessage\022" +
+      "9\n\004body\030\001 \001(\0132+.com.elarian.hera.proto.O" +
+      "utboundMessageBody\022\016\n\006labels\030\002 \003(\t\0222\n\014pr" +
+      "ovider_tag\030\003 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\0221\n\013reply_token\030\004 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022H\n\014reply_prompt\030\005 \001(\0132" +
+      "2.com.elarian.hera.proto.OutboundMessage" +
+      "ReplyPrompt*\212\002\n\020MessagingChannel\022!\n\035MESS" +
+      "AGING_CHANNEL_UNSPECIFIED\020\000\022\031\n\025MESSAGING" +
+      "_CHANNEL_SMS\020\001\022\033\n\027MESSAGING_CHANNEL_VOIC" +
+      "E\020\002\022\032\n\026MESSAGING_CHANNEL_USSD\020\003\022\"\n\036MESSA" +
+      "GING_CHANNEL_FB_MESSENGER\020\004\022\036\n\032MESSAGING" +
+      "_CHANNEL_TELEGRAM\020\005\022\036\n\032MESSAGING_CHANNEL" +
+      "_WHATSAPP\020\006\022\033\n\027MESSAGING_CHANNEL_EMAIL\020\007" +
+      "*\212\001\n\026MessagingConsentUpdate\022(\n$MESSAGING" +
+      "_CONSENT_UPDATE_UNSPECIFIED\020\000\022\"\n\036MESSAGI" +
+      "NG_CONSENT_UPDATE_ALLOW\020\001\022\"\n\036MESSAGING_C" +
+      "ONSENT_UPDATE_BLOCK\020\002*\341\002\n\034MessagingConse" +
+      "ntUpdateStatus\022/\n+MESSAGING_CONSENT_UPDA" +
+      "TE_STATUS_UNSPECIFIED\020\000\022*\n&MESSAGING_CON" +
+      "SENT_UPDATE_STATUS_QUEUED\020d\022.\n)MESSAGING" +
+      "_CONSENT_UPDATE_STATUS_COMPLETED\020\254\002\022;\n6M" +
+      "ESSAGING_CONSENT_UPDATE_STATUS_INVALID_C" +
+      "HANNEL_NUMBER\020\221\003\022?\n:MESSAGING_CONSENT_UP" +
+      "DATE_STATUS_DECOMMISSIONED_CUSTOMER_ID\020\222" +
+      "\003\0226\n1MESSAGING_CONSENT_UPDATE_STATUS_APP" +
+      "LICATION_ERROR\020\365\003*\324\001\n\031MessagingSessionEn" +
+      "dReason\022,\n(MESSAGING_SESSION_END_REASON_" +
+      "UNSPECIFIED\020\000\0220\n,MESSAGING_SESSION_END_R" +
+      "EASON_NORMAL_CLEARING\020d\022,\n\'MESSAGING_SES" +
+      "SION_END_REASON_INACTIVITY\020\310\001\022)\n$MESSAGI" +
+      "NG_SESSION_END_REASON_FAILURE\020\254\002*\227\001\n\017Mes" +
+      "sageReaction\022 \n\034MESSAGE_REACTION_UNSPECI" +
+      "FIED\020\000\022\034\n\030MESSAGE_REACTION_CLICKED\020d\022\"\n\035" +
+      "MESSAGE_REACTION_UNSUBSCRIBED\020\310\001\022 \n\033MESS" +
+      "AGE_REACTION_COMPLAINED\020\311\001*\221\002\n\030PromptMes" +
+      "sageReplyAction\022+\n\'PROMPT_MESSAGE_REPLY_" +
+      "ACTION_UNSPECIFIED\020\000\022$\n PROMPT_MESSAGE_R" +
+      "EPLY_ACTION_TEXT\020\001\022,\n(PROMPT_MESSAGE_REP" +
+      "LY_ACTION_PHONE_NUMBER\020\002\022%\n!PROMPT_MESSA" +
+      "GE_REPLY_ACTION_EMAIL\020\003\022(\n$PROMPT_MESSAG" +
+      "E_REPLY_ACTION_LOCATION\020\004\022#\n\037PROMPT_MESS" +
+      "AGE_REPLY_ACTION_URL\020\005*\270\t\n\025MessageDelive" +
+      "ryStatus\022\'\n#MESSAGE_DELIVERY_STATUS_UNSP" +
+      "ECIFIED\020\000\022\"\n\036MESSAGE_DELIVERY_STATUS_QUE" +
+      "UED\020d\022 \n\034MESSAGE_DELIVERY_STATUS_SENT\020e\022" +
+      "&\n!MESSAGE_DELIVERY_STATUS_DELIVERED\020\254\002\022" +
+      "!\n\034MESSAGE_DELIVERY_STATUS_READ\020\255\002\022%\n ME" +
+      "SSAGE_DELIVERY_STATUS_RECEIVED\020\256\002\022.\n)MES" +
+      "SAGE_DELIVERY_STATUS_SESSION_INITIATED\020\257" +
+      "\002\022#\n\036MESSAGE_DELIVERY_STATUS_FAILED\020\220\003\022\'" +
+      "\n\"MESSAGE_DELIVERY_STATUS_NO_CONSENT\020\221\003\022" +
+      "*\n%MESSAGE_DELIVERY_STATUS_NO_CAPABILITY" +
+      "\020\222\003\022$\n\037MESSAGE_DELIVERY_STATUS_EXPIRED\020\223" +
+      "\003\0223\n.MESSAGE_DELIVERY_STATUS_NO_SESSION_" +
+      "IN_PROGRESS\020\224\003\0226\n1MESSAGE_DELIVERY_STATU" +
+      "S_OTHER_SESSION_IN_PROGRESS\020\225\003\0220\n+MESSAG" +
+      "E_DELIVERY_STATUS_INVALID_REPLY_TOKEN\020\226\003" +
+      "\0223\n.MESSAGE_DELIVERY_STATUS_INVALID_CHAN" +
+      "NEL_NUMBER\020\227\003\022*\n%MESSAGE_DELIVERY_STATUS" +
+      "_NOT_SUPPORTED\020\230\003\0228\n3MESSAGE_DELIVERY_ST" +
+      "ATUS_INVALID_REPLY_TO_MESSAGE_ID\020\231\003\0220\n+M" +
+      "ESSAGE_DELIVERY_STATUS_INVALID_CUSTOMER_" +
+      "ID\020\232\003\022.\n)MESSAGE_DELIVERY_STATUS_DUPLICA" +
+      "TE_REQUEST\020\233\003\022*\n%MESSAGE_DELIVERY_STATUS" +
+      "_TAG_NOT_FOUND\020\234\003\0226\n1MESSAGE_DELIVERY_ST" +
+      "ATUS_CUSTOMER_NUMBER_NOT_FOUND\020\235\003\0226\n1MES" +
+      "SAGE_DELIVERY_STATUS_DECOMMISSIONED_CUST" +
+      "OMERID\020\236\003\022%\n MESSAGE_DELIVERY_STATUS_REJ" +
+      "ECTED\020\237\003\022,\n\'MESSAGE_DELIVERY_STATUS_INVA" +
+      "LID_REQUEST\020\240\003\0221\n,MESSAGE_DELIVERY_STATU" +
+      "S_INSUFFICIENT_CREDITS\020\241\003\022.\n)MESSAGE_DEL" +
+      "IVERY_STATUS_APPLICATION_ERROR\020\365\003*\245\006\n\017Vo" +
+      "iceCallStatus\022!\n\035VOICE_CALL_STATUS_UNSPE" +
+      "CIFIED\020\000\022\034\n\030VOICE_CALL_STATUS_QUEUED\020d\022\036" +
+      "\n\032VOICE_CALL_STATUS_ANSWERED\020e\022\035\n\031VOICE_" +
+      "CALL_STATUS_RINGING\020f\022\035\n\030VOICE_CALL_STAT" +
+      "US_ACTIVE\020\310\001\022\036\n\031VOICE_CALL_STATUS_DIALIN" +
+      "G\020\311\001\022%\n VOICE_CALL_STATUS_DIAL_COMPLETED" +
+      "\020\312\001\022\036\n\031VOICE_CALL_STATUS_BRIDGED\020\313\001\022\037\n\032V" +
+      "OICE_CALL_STATUS_ENQUEUED\020\314\001\022\037\n\032VOICE_CA" +
+      "LL_STATUS_DEQUEUED\020\315\001\022\"\n\035VOICE_CALL_STAT" +
+      "US_TRANSFERRED\020\316\001\022)\n$VOICE_CALL_STATUS_T" +
+      "RANSFER_COMPLETED\020\317\001\022 \n\033VOICE_CALL_STATU" +
+      "S_COMPLETED\020\254\002\022*\n%VOICE_CALL_STATUS_INSU" +
+      "FFICIENT_CREDIT\020\220\003\022#\n\036VOICE_CALL_STATUS_" +
+      "NOT_ANSWERED\020\221\003\022+\n&VOICE_CALL_STATUS_INV" +
+      "ALID_PHONE_NUMBER\020\222\003\0220\n+VOICE_CALL_STATU" +
+      "S_DESTINATION_NOT_SUPPORTED\020\223\003\0220\n+VOICE_" +
+      "CALL_STATUS_DECOMMISSIONED_CUSTOMERID\020\224\003" +
+      "\022\036\n\031VOICE_CALL_STATUS_EXPIRED\020\225\003\022-\n(VOIC" +
+      "E_CALL_STATUS_INVALID_CHANNEL_NUMBER\020\226\003\022" +
+      "(\n#VOICE_CALL_STATUS_APPLICATION_ERROR\020\365" +
+      "\003*\311\005\n\024VoiceCallHangupCause\022\'\n#VOICE_CALL" +
+      "_HANGUP_CAUSE_UNSPECIFIED\020\000\022.\n*VOICE_CAL" +
+      "L_HANGUP_CAUSE_UNALLOCATED_NUMBER\020\001\022%\n!V" +
+      "OICE_CALL_HANGUP_CAUSE_USER_BUSY\020\021\022+\n\'VO" +
+      "ICE_CALL_HANGUP_CAUSE_NORMAL_CLEARING\020\020\022" +
+      ",\n(VOICE_CALL_HANGUP_CAUSE_NO_USER_RESPO" +
+      "NSE\020\022\022%\n!VOICE_CALL_HANGUP_CAUSE_NO_ANSW" +
+      "ER\020\023\022-\n)VOICE_CALL_HANGUP_CAUSE_SUBSCRIB" +
+      "ER_ABSENT\020\024\022)\n%VOICE_CALL_HANGUP_CAUSE_C" +
+      "ALL_REJECTED\020\025\022.\n*VOICE_CALL_HANGUP_CAUS" +
+      "E_NORMAL_UNSPECIFIED\020\037\0224\n0VOICE_CALL_HAN" +
+      "GUP_CAUSE_NORMAL_TEMPORARY_FAILURE\020)\022/\n+" +
+      "VOICE_CALL_HANGUP_CAUSE_SERVICE_UNAVAILA" +
+      "BLE\020?\0224\n0VOICE_CALL_HANGUP_CAUSE_RECOVER" +
+      "Y_ON_TIMER_EXPIRE\020f\022.\n)VOICE_CALL_HANGUP" +
+      "_CAUSE_ORIGINATOR_CANCEL\020\347\003\022&\n!VOICE_CAL" +
+      "L_HANGUP_CAUSE_LOSE_RACE\020\366\003\0220\n+VOICE_CAL" +
+      "L_HANGUP_CAUSE_USER_NOT_REGISTERED\020\336\004*\305\001" +
+      "\n\021UssdSessionStatus\022#\n\037USSD_SESSION_STAT" +
+      "US_UNSPECIFIED\020\000\022\036\n\032USSD_SESSION_STATUS_" +
+      "ACTIVE\020d\022#\n\036USSD_SESSION_STATUS_INCOMPLE" +
+      "TE\020\310\001\022\"\n\035USSD_SESSION_STATUS_COMPLETED\020\311" +
+      "\001\022\"\n\035USSD_SESSION_STATUS_APP_ERROR\020\254\002*y\n" +
+      "\021TextToSpeechVoice\022$\n TEXT_TO_SPEECH_VOI" +
+      "CE_UNSPECIFIED\020\000\022\035\n\031TEXT_TO_SPEECH_VOICE" +
+      "_MALE\020\001\022\037\n\033TEXT_TO_SPEECH_VOICE_FEMALE\020\002" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -31908,38 +32785,44 @@ public final class MessagingModel {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_VoiceCallInputMessageBody_descriptor,
         new java.lang.String[] { "Direction", "Status", "StartedAt", "HangupCause", "DtmfDigits", "RecordingUrl", "DialData", "QueueData", });
-    internal_static_com_elarian_hera_proto_UssdMenuMessageBody_descriptor =
+    internal_static_com_elarian_hera_proto_UssdInputMessageBody_descriptor =
       getDescriptor().getMessageTypes().get(20);
+    internal_static_com_elarian_hera_proto_UssdInputMessageBody_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_UssdInputMessageBody_descriptor,
+        new java.lang.String[] { "Status", "Text", });
+    internal_static_com_elarian_hera_proto_UssdMenuMessageBody_descriptor =
+      getDescriptor().getMessageTypes().get(21);
     internal_static_com_elarian_hera_proto_UssdMenuMessageBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_UssdMenuMessageBody_descriptor,
         new java.lang.String[] { "Text", "IsTerminal", });
     internal_static_com_elarian_hera_proto_OutboundMessageBody_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_com_elarian_hera_proto_OutboundMessageBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_OutboundMessageBody_descriptor,
         new java.lang.String[] { "Text", "Media", "Location", "Email", "Template", "Url", "Voice", "Ussd", "Entry", });
     internal_static_com_elarian_hera_proto_PromptMessageMenuItemBody_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_com_elarian_hera_proto_PromptMessageMenuItemBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PromptMessageMenuItemBody_descriptor,
         new java.lang.String[] { "Text", "Media", "Entry", });
     internal_static_com_elarian_hera_proto_InboundMessageBody_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_com_elarian_hera_proto_InboundMessageBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_InboundMessageBody_descriptor,
         new java.lang.String[] { "Text", "Media", "Location", "Email", "Voice", "Ussd", "Entry", });
     internal_static_com_elarian_hera_proto_OutboundMessageReplyPrompt_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_com_elarian_hera_proto_OutboundMessageReplyPrompt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_OutboundMessageReplyPrompt_descriptor,
         new java.lang.String[] { "Action", "Menu", });
     internal_static_com_elarian_hera_proto_OutboundMessage_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_com_elarian_hera_proto_OutboundMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_OutboundMessage_descriptor,

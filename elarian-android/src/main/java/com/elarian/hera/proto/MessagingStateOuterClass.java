@@ -92,6 +92,17 @@ public final class MessagingStateOuterClass {
      * <code>repeated .com.elarian.hera.proto.InboundMessageBody parts = 7;</code>
      */
     int getPartsCount();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     * @return Whether the cost field is set.
+     */
+    boolean hasCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     * @return The cost.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getCost();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReceivedMessage}
@@ -470,6 +481,52 @@ public final class MessagingStateOuterClass {
     private void removeParts(int index) {
       ensurePartsIsMutable();
       parts_.remove(index);
+    }
+
+    public static final int COST_FIELD_NUMBER = 8;
+    private com.elarian.hera.proto.CommonModel.Cash cost_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     */
+    @java.lang.Override
+    public boolean hasCost() {
+      return cost_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getCost() {
+      return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     */
+    private void setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+      value.getClass();
+  cost_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+      value.getClass();
+  if (cost_ != null &&
+          cost_ != com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance()) {
+        cost_ =
+          com.elarian.hera.proto.CommonModel.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
+      } else {
+        cost_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     */
+    private void clearCost() {  cost_ = null;
+      
     }
 
     public static com.elarian.hera.proto.MessagingStateOuterClass.ReceivedMessage parseFrom(
@@ -952,6 +1009,53 @@ public final class MessagingStateOuterClass {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      @java.lang.Override
+      public boolean hasCost() {
+        return instance.hasCost();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.CommonModel.Cash getCost() {
+        return instance.getCost();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public Builder setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        copyOnWrite();
+        instance.setCost(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public Builder setCost(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCost(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public Builder mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        copyOnWrite();
+        instance.mergeCost(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public Builder clearCost() {  copyOnWrite();
+        instance.clearCost();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ReceivedMessage)
     }
     @java.lang.Override
@@ -976,10 +1080,11 @@ public final class MessagingStateOuterClass {
               "appId_",
               "parts_",
               com.elarian.hera.proto.MessagingModel.InboundMessageBody.class,
+              "cost_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u0004\t\u0005\f\u0006\t\u0007\u001b";
+                "\u0000\b\u0000\u0000\u0001\b\b\u0000\u0001\u0000\u0001\u0208\u0002\t\u0003\t\u0004" +
+                "\t\u0005\f\u0006\t\u0007\u001b\b\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -1151,6 +1256,17 @@ public final class MessagingStateOuterClass {
      * @return The message.
      */
     com.elarian.hera.proto.MessagingModel.OutboundMessage getMessage();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     * @return Whether the cost field is set.
+     */
+    boolean hasCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     * @return The cost.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getCost();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SentMessage}
@@ -1662,6 +1778,52 @@ public final class MessagingStateOuterClass {
      * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
      */
     private void clearMessage() {  message_ = null;
+      
+    }
+
+    public static final int COST_FIELD_NUMBER = 11;
+    private com.elarian.hera.proto.CommonModel.Cash cost_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     */
+    @java.lang.Override
+    public boolean hasCost() {
+      return cost_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getCost() {
+      return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     */
+    private void setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+      value.getClass();
+  cost_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+      value.getClass();
+  if (cost_ != null &&
+          cost_ != com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance()) {
+        cost_ =
+          com.elarian.hera.proto.CommonModel.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
+      } else {
+        cost_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     */
+    private void clearCost() {  cost_ = null;
       
     }
 
@@ -2285,6 +2447,53 @@ public final class MessagingStateOuterClass {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      @java.lang.Override
+      public boolean hasCost() {
+        return instance.hasCost();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.CommonModel.Cash getCost() {
+        return instance.getCost();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public Builder setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        copyOnWrite();
+        instance.setCost(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public Builder setCost(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCost(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public Builder mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        copyOnWrite();
+        instance.mergeCost(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public Builder clearCost() {  copyOnWrite();
+        instance.clearCost();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.SentMessage)
     }
     @java.lang.Override
@@ -2312,10 +2521,11 @@ public final class MessagingStateOuterClass {
               "reactions_",
               com.elarian.hera.proto.MessagingStateOuterClass.MessageReactionState.class,
               "message_",
+              "cost_",
             };
             java.lang.String info =
-                "\u0000\n\u0000\u0000\u0001\n\n\u0000\u0001\u0000\u0001\u0208\u0002\t\u0003\t\u0004" +
-                "\t\u0005\f\u0006\t\u0007\t\b\f\t\u001b\n\t";
+                "\u0000\u000b\u0000\u0000\u0001\u000b\u000b\u0000\u0001\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\t\u0005\f\u0006\t\u0007\t\b\f\t\u001b\n\t\u000b\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3690,6 +3900,17 @@ public final class MessagingStateOuterClass {
      * @return The endReason.
      */
     com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason getEndReason();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     * @return Whether the cost field is set.
+     */
+    boolean hasCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     * @return The cost.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getCost();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.CompleteMessagingSession}
@@ -3975,6 +4196,52 @@ public final class MessagingStateOuterClass {
     private void clearEndReason() {
       
       endReason_ = 0;
+    }
+
+    public static final int COST_FIELD_NUMBER = 6;
+    private com.elarian.hera.proto.CommonModel.Cash cost_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     */
+    @java.lang.Override
+    public boolean hasCost() {
+      return cost_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getCost() {
+      return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     */
+    private void setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+      value.getClass();
+  cost_ = value;
+      
+      }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+      value.getClass();
+  if (cost_ != null &&
+          cost_ != com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance()) {
+        cost_ =
+          com.elarian.hera.proto.CommonModel.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
+      } else {
+        cost_ = value;
+      }
+      
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     */
+    private void clearCost() {  cost_ = null;
+      
     }
 
     public static com.elarian.hera.proto.MessagingStateOuterClass.CompleteMessagingSession parseFrom(
@@ -4353,6 +4620,53 @@ public final class MessagingStateOuterClass {
         return this;
       }
 
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      @java.lang.Override
+      public boolean hasCost() {
+        return instance.hasCost();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.CommonModel.Cash getCost() {
+        return instance.getCost();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public Builder setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        copyOnWrite();
+        instance.setCost(value);
+        return this;
+        }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public Builder setCost(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCost(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public Builder mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        copyOnWrite();
+        instance.mergeCost(value);
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public Builder clearCost() {  copyOnWrite();
+        instance.clearCost();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.CompleteMessagingSession)
     }
     @java.lang.Override
@@ -4374,10 +4688,11 @@ public final class MessagingStateOuterClass {
               "duration_",
               "appIds_",
               "endReason_",
+              "cost_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\t" +
-                "\u0003\t\u0004\u021a\u0005\f";
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\t" +
+                "\u0003\t\u0004\u021a\u0005\f\u0006\t";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

@@ -124,6 +124,21 @@ public final class MessagingStateOuterClass {
      */
     com.elarian.hera.proto.MessagingModel.InboundMessageBodyOrBuilder getPartsOrBuilder(
         int index);
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     * @return Whether the cost field is set.
+     */
+    boolean hasCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     * @return The cost.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     */
+    com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReceivedMessage}
@@ -245,6 +260,19 @@ public final class MessagingStateOuterClass {
               }
               parts_.add(
                   input.readMessage(com.elarian.hera.proto.MessagingModel.InboundMessageBody.parser(), extensionRegistry));
+              break;
+            }
+            case 66: {
+              com.elarian.hera.proto.CommonModel.Cash.Builder subBuilder = null;
+              if (cost_ != null) {
+                subBuilder = cost_.toBuilder();
+              }
+              cost_ = input.readMessage(com.elarian.hera.proto.CommonModel.Cash.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cost_);
+                cost_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -483,6 +511,32 @@ public final class MessagingStateOuterClass {
       return parts_.get(index);
     }
 
+    public static final int COST_FIELD_NUMBER = 8;
+    private com.elarian.hera.proto.CommonModel.Cash cost_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     * @return Whether the cost field is set.
+     */
+    @java.lang.Override
+    public boolean hasCost() {
+      return cost_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     * @return The cost.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getCost() {
+      return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder() {
+      return getCost();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -517,6 +571,9 @@ public final class MessagingStateOuterClass {
       }
       for (int i = 0; i < parts_.size(); i++) {
         output.writeMessage(7, parts_.get(i));
+      }
+      if (cost_ != null) {
+        output.writeMessage(8, getCost());
       }
       unknownFields.writeTo(output);
     }
@@ -553,6 +610,10 @@ public final class MessagingStateOuterClass {
       for (int i = 0; i < parts_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, parts_.get(i));
+      }
+      if (cost_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getCost());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -594,6 +655,11 @@ public final class MessagingStateOuterClass {
       }
       if (!getPartsList()
           .equals(other.getPartsList())) return false;
+      if (hasCost() != other.hasCost()) return false;
+      if (hasCost()) {
+        if (!getCost()
+            .equals(other.getCost())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -628,6 +694,10 @@ public final class MessagingStateOuterClass {
       if (getPartsCount() > 0) {
         hash = (37 * hash) + PARTS_FIELD_NUMBER;
         hash = (53 * hash) + getPartsList().hashCode();
+      }
+      if (hasCost()) {
+        hash = (37 * hash) + COST_FIELD_NUMBER;
+        hash = (53 * hash) + getCost().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -797,6 +867,12 @@ public final class MessagingStateOuterClass {
         } else {
           partsBuilder_.clear();
         }
+        if (costBuilder_ == null) {
+          cost_ = null;
+        } else {
+          cost_ = null;
+          costBuilder_ = null;
+        }
         return this;
       }
 
@@ -854,6 +930,11 @@ public final class MessagingStateOuterClass {
           result.parts_ = parts_;
         } else {
           result.parts_ = partsBuilder_.build();
+        }
+        if (costBuilder_ == null) {
+          result.cost_ = cost_;
+        } else {
+          result.cost_ = costBuilder_.build();
         }
         onBuilt();
         return result;
@@ -947,6 +1028,9 @@ public final class MessagingStateOuterClass {
               partsBuilder_.addAllMessages(other.parts_);
             }
           }
+        }
+        if (other.hasCost()) {
+          mergeCost(other.getCost());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1823,6 +1907,125 @@ public final class MessagingStateOuterClass {
         }
         return partsBuilder_;
       }
+
+      private com.elarian.hera.proto.CommonModel.Cash cost_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> costBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       * @return Whether the cost field is set.
+       */
+      public boolean hasCost() {
+        return costBuilder_ != null || cost_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       * @return The cost.
+       */
+      public com.elarian.hera.proto.CommonModel.Cash getCost() {
+        if (costBuilder_ == null) {
+          return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+        } else {
+          return costBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public Builder setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (costBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cost_ = value;
+          onChanged();
+        } else {
+          costBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public Builder setCost(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        if (costBuilder_ == null) {
+          cost_ = builderForValue.build();
+          onChanged();
+        } else {
+          costBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public Builder mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (costBuilder_ == null) {
+          if (cost_ != null) {
+            cost_ =
+              com.elarian.hera.proto.CommonModel.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
+          } else {
+            cost_ = value;
+          }
+          onChanged();
+        } else {
+          costBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public Builder clearCost() {
+        if (costBuilder_ == null) {
+          cost_ = null;
+          onChanged();
+        } else {
+          cost_ = null;
+          costBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.Cash.Builder getCostBuilder() {
+        
+        onChanged();
+        return getCostFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder() {
+        if (costBuilder_ != null) {
+          return costBuilder_.getMessageOrBuilder();
+        } else {
+          return cost_ == null ?
+              com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> 
+          getCostFieldBuilder() {
+        if (costBuilder_ == null) {
+          costBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder>(
+                  getCost(),
+                  getParentForChildren(),
+                  isClean());
+          cost_ = null;
+        }
+        return costBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2027,6 +2230,21 @@ public final class MessagingStateOuterClass {
      * <code>.com.elarian.hera.proto.OutboundMessage message = 10;</code>
      */
     com.elarian.hera.proto.MessagingModel.OutboundMessageOrBuilder getMessageOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     * @return Whether the cost field is set.
+     */
+    boolean hasCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     * @return The cost.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     */
+    com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SentMessage}
@@ -2179,6 +2397,19 @@ public final class MessagingStateOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(message_);
                 message_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.elarian.hera.proto.CommonModel.Cash.Builder subBuilder = null;
+              if (cost_ != null) {
+                subBuilder = cost_.toBuilder();
+              }
+              cost_ = input.readMessage(com.elarian.hera.proto.CommonModel.Cash.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cost_);
+                cost_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2490,6 +2721,32 @@ public final class MessagingStateOuterClass {
       return getMessage();
     }
 
+    public static final int COST_FIELD_NUMBER = 11;
+    private com.elarian.hera.proto.CommonModel.Cash cost_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     * @return Whether the cost field is set.
+     */
+    @java.lang.Override
+    public boolean hasCost() {
+      return cost_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     * @return The cost.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getCost() {
+      return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder() {
+      return getCost();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2533,6 +2790,9 @@ public final class MessagingStateOuterClass {
       }
       if (message_ != null) {
         output.writeMessage(10, getMessage());
+      }
+      if (cost_ != null) {
+        output.writeMessage(11, getCost());
       }
       unknownFields.writeTo(output);
     }
@@ -2581,6 +2841,10 @@ public final class MessagingStateOuterClass {
       if (message_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getMessage());
+      }
+      if (cost_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getCost());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2633,6 +2897,11 @@ public final class MessagingStateOuterClass {
         if (!getMessage()
             .equals(other.getMessage())) return false;
       }
+      if (hasCost() != other.hasCost()) return false;
+      if (hasCost()) {
+        if (!getCost()
+            .equals(other.getCost())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2677,6 +2946,10 @@ public final class MessagingStateOuterClass {
       if (hasMessage()) {
         hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getMessage().hashCode();
+      }
+      if (hasCost()) {
+        hash = (37 * hash) + COST_FIELD_NUMBER;
+        hash = (53 * hash) + getCost().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2860,6 +3133,12 @@ public final class MessagingStateOuterClass {
           message_ = null;
           messageBuilder_ = null;
         }
+        if (costBuilder_ == null) {
+          cost_ = null;
+        } else {
+          cost_ = null;
+          costBuilder_ = null;
+        }
         return this;
       }
 
@@ -2928,6 +3207,11 @@ public final class MessagingStateOuterClass {
           result.message_ = message_;
         } else {
           result.message_ = messageBuilder_.build();
+        }
+        if (costBuilder_ == null) {
+          result.cost_ = cost_;
+        } else {
+          result.cost_ = costBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3030,6 +3314,9 @@ public final class MessagingStateOuterClass {
         }
         if (other.hasMessage()) {
           mergeMessage(other.getMessage());
+        }
+        if (other.hasCost()) {
+          mergeCost(other.getCost());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4197,6 +4484,125 @@ public final class MessagingStateOuterClass {
           message_ = null;
         }
         return messageBuilder_;
+      }
+
+      private com.elarian.hera.proto.CommonModel.Cash cost_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> costBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       * @return Whether the cost field is set.
+       */
+      public boolean hasCost() {
+        return costBuilder_ != null || cost_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       * @return The cost.
+       */
+      public com.elarian.hera.proto.CommonModel.Cash getCost() {
+        if (costBuilder_ == null) {
+          return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+        } else {
+          return costBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public Builder setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (costBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cost_ = value;
+          onChanged();
+        } else {
+          costBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public Builder setCost(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        if (costBuilder_ == null) {
+          cost_ = builderForValue.build();
+          onChanged();
+        } else {
+          costBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public Builder mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (costBuilder_ == null) {
+          if (cost_ != null) {
+            cost_ =
+              com.elarian.hera.proto.CommonModel.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
+          } else {
+            cost_ = value;
+          }
+          onChanged();
+        } else {
+          costBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public Builder clearCost() {
+        if (costBuilder_ == null) {
+          cost_ = null;
+          onChanged();
+        } else {
+          cost_ = null;
+          costBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.Cash.Builder getCostBuilder() {
+        
+        onChanged();
+        return getCostFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder() {
+        if (costBuilder_ != null) {
+          return costBuilder_.getMessageOrBuilder();
+        } else {
+          return cost_ == null ?
+              com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> 
+          getCostFieldBuilder() {
+        if (costBuilder_ == null) {
+          costBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder>(
+                  getCost(),
+                  getParentForChildren(),
+                  isClean());
+          cost_ = null;
+        }
+        return costBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6778,6 +7184,21 @@ public final class MessagingStateOuterClass {
      * @return The endReason.
      */
     com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason getEndReason();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     * @return Whether the cost field is set.
+     */
+    boolean hasCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     * @return The cost.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getCost();
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     */
+    com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.CompleteMessagingSession}
@@ -6873,6 +7294,19 @@ public final class MessagingStateOuterClass {
               int rawValue = input.readEnum();
 
               endReason_ = rawValue;
+              break;
+            }
+            case 50: {
+              com.elarian.hera.proto.CommonModel.Cash.Builder subBuilder = null;
+              if (cost_ != null) {
+                subBuilder = cost_.toBuilder();
+              }
+              cost_ = input.readMessage(com.elarian.hera.proto.CommonModel.Cash.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cost_);
+                cost_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7054,6 +7488,32 @@ public final class MessagingStateOuterClass {
       return result == null ? com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason.UNRECOGNIZED : result;
     }
 
+    public static final int COST_FIELD_NUMBER = 6;
+    private com.elarian.hera.proto.CommonModel.Cash cost_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     * @return Whether the cost field is set.
+     */
+    @java.lang.Override
+    public boolean hasCost() {
+      return cost_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     * @return The cost.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getCost() {
+      return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder() {
+      return getCost();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7082,6 +7542,9 @@ public final class MessagingStateOuterClass {
       }
       if (endReason_ != com.elarian.hera.proto.MessagingModel.MessagingSessionEndReason.MESSAGING_SESSION_END_REASON_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, endReason_);
+      }
+      if (cost_ != null) {
+        output.writeMessage(6, getCost());
       }
       unknownFields.writeTo(output);
     }
@@ -7115,6 +7578,10 @@ public final class MessagingStateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, endReason_);
       }
+      if (cost_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getCost());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7145,6 +7612,11 @@ public final class MessagingStateOuterClass {
       if (!getAppIdsList()
           .equals(other.getAppIdsList())) return false;
       if (endReason_ != other.endReason_) return false;
+      if (hasCost() != other.hasCost()) return false;
+      if (hasCost()) {
+        if (!getCost()
+            .equals(other.getCost())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7172,6 +7644,10 @@ public final class MessagingStateOuterClass {
       }
       hash = (37 * hash) + END_REASON_FIELD_NUMBER;
       hash = (53 * hash) + endReason_;
+      if (hasCost()) {
+        hash = (37 * hash) + COST_FIELD_NUMBER;
+        hash = (53 * hash) + getCost().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7323,6 +7799,12 @@ public final class MessagingStateOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         endReason_ = 0;
 
+        if (costBuilder_ == null) {
+          cost_ = null;
+        } else {
+          cost_ = null;
+          costBuilder_ = null;
+        }
         return this;
       }
 
@@ -7367,6 +7849,11 @@ public final class MessagingStateOuterClass {
         }
         result.appIds_ = appIds_;
         result.endReason_ = endReason_;
+        if (costBuilder_ == null) {
+          result.cost_ = cost_;
+        } else {
+          result.cost_ = costBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -7437,6 +7924,9 @@ public final class MessagingStateOuterClass {
         }
         if (other.endReason_ != 0) {
           setEndReasonValue(other.getEndReasonValue());
+        }
+        if (other.hasCost()) {
+          mergeCost(other.getCost());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7944,6 +8434,125 @@ public final class MessagingStateOuterClass {
         endReason_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.elarian.hera.proto.CommonModel.Cash cost_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> costBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       * @return Whether the cost field is set.
+       */
+      public boolean hasCost() {
+        return costBuilder_ != null || cost_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       * @return The cost.
+       */
+      public com.elarian.hera.proto.CommonModel.Cash getCost() {
+        if (costBuilder_ == null) {
+          return cost_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+        } else {
+          return costBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public Builder setCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (costBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cost_ = value;
+          onChanged();
+        } else {
+          costBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public Builder setCost(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        if (costBuilder_ == null) {
+          cost_ = builderForValue.build();
+          onChanged();
+        } else {
+          costBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public Builder mergeCost(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (costBuilder_ == null) {
+          if (cost_ != null) {
+            cost_ =
+              com.elarian.hera.proto.CommonModel.Cash.newBuilder(cost_).mergeFrom(value).buildPartial();
+          } else {
+            cost_ = value;
+          }
+          onChanged();
+        } else {
+          costBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public Builder clearCost() {
+        if (costBuilder_ == null) {
+          cost_ = null;
+          onChanged();
+        } else {
+          cost_ = null;
+          costBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.Cash.Builder getCostBuilder() {
+        
+        onChanged();
+        return getCostFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder() {
+        if (costBuilder_ != null) {
+          return costBuilder_.getMessageOrBuilder();
+        } else {
+          return cost_ == null ?
+              com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : cost_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash cost = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> 
+          getCostFieldBuilder() {
+        if (costBuilder_ == null) {
+          costBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder>(
+                  getCost(),
+                  getParentForChildren(),
+                  isClean());
+          cost_ = null;
+        }
+        return costBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16739,7 +17348,7 @@ public final class MessagingStateOuterClass {
       "a.proto\032\036google/protobuf/duration.proto\032" +
       "\037google/protobuf/timestamp.proto\032\036google" +
       "/protobuf/wrappers.proto\032\022common_model.p" +
-      "roto\032\025messaging_model.proto\"\344\002\n\017Received" +
+      "roto\032\025messaging_model.proto\"\220\003\n\017Received" +
       "Message\022\022\n\nmessage_id\030\001 \001(\t\022.\n\ncreated_a" +
       "t\030\002 \001(\0132\032.google.protobuf.Timestamp\0220\n\ns" +
       "ession_id\030\003 \001(\0132\034.google.protobuf.String" +
@@ -16748,78 +17357,81 @@ public final class MessagingStateOuterClass {
       ".elarian.hera.proto.ChannelNumberProvide" +
       "r\022,\n\006app_id\030\006 \001(\0132\034.google.protobuf.Stri" +
       "ngValue\0229\n\005parts\030\007 \003(\0132*.com.elarian.her" +
-      "a.proto.InboundMessageBody\"\217\004\n\013SentMessa" +
-      "ge\022\022\n\nmessage_id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001" +
-      "(\0132\032.google.protobuf.Timestamp\0220\n\nsessio" +
-      "n_id\030\003 \001(\0132\034.google.protobuf.StringValue" +
-      "\0221\n\013in_reply_to\030\004 \001(\0132\034.google.protobuf." +
-      "StringValue\022?\n\010provider\030\005 \001(\0162-.com.elar" +
-      "ian.hera.proto.ChannelNumberProvider\022,\n\006" +
-      "app_id\030\006 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022.\n\nupdated_at\030\007 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022=\n\006status\030\010 \001(\0162-.com.elarian" +
-      ".hera.proto.MessageDeliveryStatus\022?\n\trea" +
-      "ctions\030\t \003(\0132,.com.elarian.hera.proto.Me" +
-      "ssageReactionState\0228\n\007message\030\n \001(\0132\'.co" +
-      "m.elarian.hera.proto.OutboundMessage\"\201\001\n" +
-      "\024MessageReactionState\022.\n\ncreated_at\030\001 \001(" +
-      "\0132\032.google.protobuf.Timestamp\0229\n\010reactio" +
-      "n\030\002 \001(\0162\'.com.elarian.hera.proto.Message" +
-      "Reaction\"R\n\021MessageReplyToken\022\r\n\005token\030\001" +
-      " \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.google.protob" +
-      "uf.Timestamp\"\213\001\n\016ChannelMessage\022;\n\010recei" +
-      "ved\030\001 \001(\0132\'.com.elarian.hera.proto.Recei" +
-      "vedMessageH\000\0223\n\004sent\030\002 \001(\0132#.com.elarian" +
-      ".hera.proto.SentMessageH\000B\007\n\005entry\"\343\001\n\030C" +
-      "ompleteMessagingSession\022\022\n\nsession_id\030\001 " +
-      "\001(\t\022.\n\nstarted_at\030\002 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022+\n\010duration\030\003 \001(\0132\031.google.p" +
-      "rotobuf.Duration\022\017\n\007app_ids\030\004 \003(\t\022E\n\nend" +
-      "_reason\030\005 \001(\01621.com.elarian.hera.proto.M" +
-      "essagingSessionEndReason\"\225\003\n\034BlockedMess" +
-      "agingChannelState\022?\n\017customer_number\030\001 \001" +
-      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
-      "er\022F\n\016channel_number\030\002 \001(\0132..com.elarian" +
-      ".hera.proto.MessagingChannelNumber\0228\n\010me" +
-      "ssages\030\003 \003(\0132&.com.elarian.hera.proto.Ch" +
-      "annelMessage\022>\n\013reply_token\030\004 \001(\0132).com." +
-      "elarian.hera.proto.MessageReplyToken\022B\n\010" +
-      "sessions\030\005 \003(\01320.com.elarian.hera.proto." +
-      "CompleteMessagingSession\022.\n\nblocked_at\030\006" +
-      " \001(\0132\032.google.protobuf.Timestamp\"\224\003\n\033Act" +
-      "iveMessagingChannelState\022?\n\017customer_num" +
-      "ber\030\001 \001(\0132&.com.elarian.hera.proto.Custo" +
-      "merNumber\022F\n\016channel_number\030\002 \001(\0132..com." +
-      "elarian.hera.proto.MessagingChannelNumbe" +
-      "r\0228\n\010messages\030\003 \003(\0132&.com.elarian.hera.p" +
-      "roto.ChannelMessage\022>\n\013reply_token\030\004 \001(\013" +
-      "2).com.elarian.hera.proto.MessageReplyTo" +
-      "ken\022B\n\010sessions\030\005 \003(\01320.com.elarian.hera" +
-      ".proto.CompleteMessagingSession\022.\n\nallow" +
-      "ed_at\030\006 \001(\0132\032.google.protobuf.Timestamp\"" +
-      "\234\004\n\036InSessionMessagingChannelState\022?\n\017cu" +
-      "stomer_number\030\001 \001(\0132&.com.elarian.hera.p" +
-      "roto.CustomerNumber\022F\n\016channel_number\030\002 " +
-      "\001(\0132..com.elarian.hera.proto.MessagingCh" +
-      "annelNumber\0228\n\010messages\030\003 \003(\0132&.com.elar" +
-      "ian.hera.proto.ChannelMessage\022>\n\013reply_t" +
-      "oken\030\004 \001(\0132).com.elarian.hera.proto.Mess" +
-      "ageReplyToken\022B\n\010sessions\030\005 \003(\01320.com.el" +
-      "arian.hera.proto.CompleteMessagingSessio" +
-      "n\022.\n\nallowed_at\030\006 \001(\0132\032.google.protobuf." +
-      "Timestamp\022\022\n\nsession_id\030\007 \001(\t\022.\n\nstarted" +
-      "_at\030\010 \001(\0132\032.google.protobuf.Timestamp\022.\n" +
-      "\nexpires_at\030\t \001(\0132\032.google.protobuf.Time" +
-      "stamp\022\017\n\007app_ids\030\n \003(\t\"\376\001\n\025MessagingChan" +
-      "nelState\022G\n\007blocked\030\001 \001(\01324.com.elarian." +
-      "hera.proto.BlockedMessagingChannelStateH" +
-      "\000\022E\n\006active\030\002 \001(\01323.com.elarian.hera.pro" +
-      "to.ActiveMessagingChannelStateH\000\022L\n\nin_s" +
-      "ession\030\003 \001(\01326.com.elarian.hera.proto.In" +
-      "SessionMessagingChannelStateH\000B\007\n\005state\"" +
-      "Q\n\016MessagingState\022?\n\010channels\030\001 \003(\0132-.co" +
-      "m.elarian.hera.proto.MessagingChannelSta" +
-      "teb\006proto3"
+      "a.proto.InboundMessageBody\022*\n\004cost\030\010 \001(\013" +
+      "2\034.com.elarian.hera.proto.Cash\"\273\004\n\013SentM" +
+      "essage\022\022\n\nmessage_id\030\001 \001(\t\022.\n\ncreated_at" +
+      "\030\002 \001(\0132\032.google.protobuf.Timestamp\0220\n\nse" +
+      "ssion_id\030\003 \001(\0132\034.google.protobuf.StringV" +
+      "alue\0221\n\013in_reply_to\030\004 \001(\0132\034.google.proto" +
+      "buf.StringValue\022?\n\010provider\030\005 \001(\0162-.com." +
+      "elarian.hera.proto.ChannelNumberProvider" +
+      "\022,\n\006app_id\030\006 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022.\n\nupdated_at\030\007 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022=\n\006status\030\010 \001(\0162-.com.ela" +
+      "rian.hera.proto.MessageDeliveryStatus\022?\n" +
+      "\treactions\030\t \003(\0132,.com.elarian.hera.prot" +
+      "o.MessageReactionState\0228\n\007message\030\n \001(\0132" +
+      "\'.com.elarian.hera.proto.OutboundMessage" +
+      "\022*\n\004cost\030\013 \001(\0132\034.com.elarian.hera.proto." +
+      "Cash\"\201\001\n\024MessageReactionState\022.\n\ncreated" +
+      "_at\030\001 \001(\0132\032.google.protobuf.Timestamp\0229\n" +
+      "\010reaction\030\002 \001(\0162\'.com.elarian.hera.proto" +
+      ".MessageReaction\"R\n\021MessageReplyToken\022\r\n" +
+      "\005token\030\001 \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"\213\001\n\016ChannelMessage\022" +
+      ";\n\010received\030\001 \001(\0132\'.com.elarian.hera.pro" +
+      "to.ReceivedMessageH\000\0223\n\004sent\030\002 \001(\0132#.com" +
+      ".elarian.hera.proto.SentMessageH\000B\007\n\005ent" +
+      "ry\"\217\002\n\030CompleteMessagingSession\022\022\n\nsessi" +
+      "on_id\030\001 \001(\t\022.\n\nstarted_at\030\002 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022+\n\010duration\030\003 \001(\0132\031." +
+      "google.protobuf.Duration\022\017\n\007app_ids\030\004 \003(" +
+      "\t\022E\n\nend_reason\030\005 \001(\01621.com.elarian.hera" +
+      ".proto.MessagingSessionEndReason\022*\n\004cost" +
+      "\030\006 \001(\0132\034.com.elarian.hera.proto.Cash\"\225\003\n" +
+      "\034BlockedMessagingChannelState\022?\n\017custome" +
+      "r_number\030\001 \001(\0132&.com.elarian.hera.proto." +
+      "CustomerNumber\022F\n\016channel_number\030\002 \001(\0132." +
+      ".com.elarian.hera.proto.MessagingChannel" +
+      "Number\0228\n\010messages\030\003 \003(\0132&.com.elarian.h" +
+      "era.proto.ChannelMessage\022>\n\013reply_token\030" +
+      "\004 \001(\0132).com.elarian.hera.proto.MessageRe" +
+      "plyToken\022B\n\010sessions\030\005 \003(\01320.com.elarian" +
+      ".hera.proto.CompleteMessagingSession\022.\n\n" +
+      "blocked_at\030\006 \001(\0132\032.google.protobuf.Times" +
+      "tamp\"\224\003\n\033ActiveMessagingChannelState\022?\n\017" +
+      "customer_number\030\001 \001(\0132&.com.elarian.hera" +
+      ".proto.CustomerNumber\022F\n\016channel_number\030" +
+      "\002 \001(\0132..com.elarian.hera.proto.Messaging" +
+      "ChannelNumber\0228\n\010messages\030\003 \003(\0132&.com.el" +
+      "arian.hera.proto.ChannelMessage\022>\n\013reply" +
+      "_token\030\004 \001(\0132).com.elarian.hera.proto.Me" +
+      "ssageReplyToken\022B\n\010sessions\030\005 \003(\01320.com." +
+      "elarian.hera.proto.CompleteMessagingSess" +
+      "ion\022.\n\nallowed_at\030\006 \001(\0132\032.google.protobu" +
+      "f.Timestamp\"\234\004\n\036InSessionMessagingChanne" +
+      "lState\022?\n\017customer_number\030\001 \001(\0132&.com.el" +
+      "arian.hera.proto.CustomerNumber\022F\n\016chann" +
+      "el_number\030\002 \001(\0132..com.elarian.hera.proto" +
+      ".MessagingChannelNumber\0228\n\010messages\030\003 \003(" +
+      "\0132&.com.elarian.hera.proto.ChannelMessag" +
+      "e\022>\n\013reply_token\030\004 \001(\0132).com.elarian.her" +
+      "a.proto.MessageReplyToken\022B\n\010sessions\030\005 " +
+      "\003(\01320.com.elarian.hera.proto.CompleteMes" +
+      "sagingSession\022.\n\nallowed_at\030\006 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\022\n\nsession_id\030\007 \001(" +
+      "\t\022.\n\nstarted_at\030\010 \001(\0132\032.google.protobuf." +
+      "Timestamp\022.\n\nexpires_at\030\t \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022\017\n\007app_ids\030\n \003(\t\"\376\001\n\025M" +
+      "essagingChannelState\022G\n\007blocked\030\001 \001(\01324." +
+      "com.elarian.hera.proto.BlockedMessagingC" +
+      "hannelStateH\000\022E\n\006active\030\002 \001(\01323.com.elar" +
+      "ian.hera.proto.ActiveMessagingChannelSta" +
+      "teH\000\022L\n\nin_session\030\003 \001(\01326.com.elarian.h" +
+      "era.proto.InSessionMessagingChannelState" +
+      "H\000B\007\n\005state\"Q\n\016MessagingState\022?\n\010channel" +
+      "s\030\001 \003(\0132-.com.elarian.hera.proto.Messagi" +
+      "ngChannelStateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16835,13 +17447,13 @@ public final class MessagingStateOuterClass {
     internal_static_com_elarian_hera_proto_ReceivedMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReceivedMessage_descriptor,
-        new java.lang.String[] { "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "Parts", });
+        new java.lang.String[] { "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "Parts", "Cost", });
     internal_static_com_elarian_hera_proto_SentMessage_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_elarian_hera_proto_SentMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SentMessage_descriptor,
-        new java.lang.String[] { "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "UpdatedAt", "Status", "Reactions", "Message", });
+        new java.lang.String[] { "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "UpdatedAt", "Status", "Reactions", "Message", "Cost", });
     internal_static_com_elarian_hera_proto_MessageReactionState_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_elarian_hera_proto_MessageReactionState_fieldAccessorTable = new
@@ -16865,7 +17477,7 @@ public final class MessagingStateOuterClass {
     internal_static_com_elarian_hera_proto_CompleteMessagingSession_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CompleteMessagingSession_descriptor,
-        new java.lang.String[] { "SessionId", "StartedAt", "Duration", "AppIds", "EndReason", });
+        new java.lang.String[] { "SessionId", "StartedAt", "Duration", "AppIds", "EndReason", "Cost", });
     internal_static_com_elarian_hera_proto_BlockedMessagingChannelState_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_elarian_hera_proto_BlockedMessagingChannelState_fieldAccessorTable = new
